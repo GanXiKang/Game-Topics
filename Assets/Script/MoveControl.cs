@@ -23,6 +23,10 @@ public class MoveControl : MonoBehaviour
         {
             pointNum++;
         }
+        if (Input.GetKeyDown("h"))
+        {
+            pointNum += 2;
+        }
         if (pointNum == 1)
         {
             transform.position = Vector3.MoveTowards(transform.position, point1.transform.position + new Vector3(0, 6, 0), 0.05f);
