@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveControl : MonoBehaviour
 {
-    public int pointNum = 0;
+    public float pointNum = 0;
 
     public Transform point1;
     public Transform point2;
