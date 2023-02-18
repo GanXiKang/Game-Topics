@@ -426,6 +426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 416260930}
   - component: {fileID: 416260929}
+  - component: {fileID: 416260931}
   m_Layer: 0
   m_Name: DiceColliderZone
   m_TagString: DiceZone
@@ -444,7 +445,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 15, z: 100}
+  m_Size: {x: 200, y: 15, z: 200}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &416260930
 Transform:
@@ -461,6 +462,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &416260931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416260928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d2d564a21bc3548a2442d0a879ec9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &628966541
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,23 +866,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &727484568 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8238199297411664785, guid: e4afcd71444179341b13b19dd8a812ea, type: 3}
-  m_PrefabInstance: {fileID: 1273660602}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &727484574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727484568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb35de256661a4a42895ee3060fd3418, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
