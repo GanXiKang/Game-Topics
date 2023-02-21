@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DiceColliderZoneControl : MonoBehaviour
 {
+    public static float diceNumber = 0;
     Vector3 diceVelocity;
 
     void FixedUpdate()
@@ -17,22 +18,22 @@ public class DiceColliderZoneControl : MonoBehaviour
             switch (other.tag)
             {
                 case "Dice1":
-                    print("6");
+                    diceNumber = 6;
                     break;
                 case "Dice2":
-                    print("5");
+                    diceNumber = 5;
                     break;
                 case "Dice3":
-                    print("4");
+                    diceNumber = 4;
                     break;
                 case "Dice4":
-                    print("3");
+                    diceNumber = 3;
                     break;
                 case "Dice5":
-                    print("2");
+                    diceNumber = 2;
                     break;
                 case "Dice6":
-                    print("1");
+                    diceNumber = 1;
                     break;
             }
         }
