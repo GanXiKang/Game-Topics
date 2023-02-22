@@ -11,16 +11,20 @@ public class DiceControl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-    void Update()
+    void FixedUpdate()
     {
         diceVelocity = rb.velocity;
 
+        RollTheDice();
+    }
+    void RollTheDice()
+    {
         if (Input.GetKeyDown("space"))
         {
             float dirX = Random.Range(0, 1000);
             float dirY = Random.Range(0, 1000);
             float dirZ = Random.Range(0, 1000);
-            
+
             transform.rotation = Quaternion.identity;
             rb.AddForce(transform.up * 1000);
             rb.AddTorque(dirX, dirY, dirZ);

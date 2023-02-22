@@ -19,23 +19,34 @@ public class DiceColliderZoneControl : MonoBehaviour
             {
                 case "Dice1":
                     diceNumber = 6;
+                    gameObject.SetActive(false);
                     break;
                 case "Dice2":
                     diceNumber = 5;
+                    gameObject.SetActive(false);
                     break;
                 case "Dice3":
                     diceNumber = 4;
+                    gameObject.SetActive(false);
                     break;
                 case "Dice4":
                     diceNumber = 3;
+                    gameObject.SetActive(false);
                     break;
                 case "Dice5":
                     diceNumber = 2;
+                    gameObject.SetActive(false);
                     break;
                 case "Dice6":
                     diceNumber = 1;
+                    gameObject.SetActive(false);
                     break;
             }
+            print(diceNumber);
+        }
+        else 
+        {
+            gameObject.SetActive(true);
         }
     }
 }
