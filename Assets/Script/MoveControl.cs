@@ -3,19 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveControl : MonoBehaviour
-{ 
-    public Transform point1;
-    public Transform point2;
-    public Transform point3;
-    public Transform point4;
-    public Transform point5;
-    public Transform point6;
-    Transform[] point = new Transform[7];
+{
+    public Transform p0;
+    public Transform p1;
+    public Transform p2;
+    public Transform p3;
+    public Transform p4;
+    public Transform p5;
+    public Transform p6;
+    public Transform p7;
+    public Transform p8;
+    public Transform p9;
+    public Transform p10;
+    public Transform p11;
+    public Transform p12;
+
+    Transform[] p = new Transform[13];
 
     float pointNum = 0;
     void Start()
     {
-        
+        //p[0] = GameObject.Find("0");          //BUG
+        //for (int i = 0, i < 13, i++)          //BUG
+        //{ 
+        //}
     }
     void Update()
     {
