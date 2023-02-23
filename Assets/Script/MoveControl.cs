@@ -25,21 +25,10 @@ public class MoveControl : MonoBehaviour
     void Start()
     {
         //p[0] = GameObject.Find("0");          //BUG
-        //for (int i = 0, i < 13, i++)          //BUG
-        //{ 
-        //}
-        p[1] = p1;
-        p[2] = p2;
-        p[3] = p3;
-        p[4] = p4;
-        p[5] = p5;
-        p[6] = p6;
-        p[7] = p7;
-        p[8] = p8;
-        p[9] = p9;
-        p[10] = p10;
-        p[11] = p11;
-        p[12] = p12;
+        for (int i = 0; i < 13; i++)
+        {
+            
+        }
     }
     void Update()
     {
