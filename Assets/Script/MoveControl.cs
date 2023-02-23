@@ -10,7 +10,7 @@ public class MoveControl : MonoBehaviour
     public Transform point4;
     public Transform point5;
     public Transform point6;
-    //Transform[] point = new Transform[7];
+    Transform[] point = new Transform[7];
 
     float pointNum = 0;
     void Start()
