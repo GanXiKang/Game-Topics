@@ -20,15 +20,11 @@ public class MoveControl : MonoBehaviour
 
     public float recordNum = 0;
 
-    Transform[] p = new Transform[13];
+    public static GameObject[] p = new GameObject[13];
 
     void Start()
     {
-        //p[0] = GameObject.Find("0");          //BUG
-        for (int i = 0; i < 13; i++)
-        {
-            
-        }
+
     }
     void Update()
     {
