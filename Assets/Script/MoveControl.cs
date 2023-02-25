@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class MoveControl : MonoBehaviour
 {
+    public Transform p1;
+    public Transform p2;
+    public Transform p3;
     public float recordNum = 0;            
 
     public GameObject[] p;
@@ -20,9 +24,7 @@ public class MoveControl : MonoBehaviour
     {
         if (Dice.diceNum == 1)
         {
-            transform.position = Vector3.MoveTowards(transform.position, p[1].transform.position, 0.05f);
-            Dice.diceNum--;
-            Debug.Log(Dice.diceNum);
+            
         }
     }
 }
