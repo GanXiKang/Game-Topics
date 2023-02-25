@@ -44,9 +44,5 @@ public class DiceColliderZoneControl : MonoBehaviour
             }
             print(diceNumber);
         }
-        else 
-        {
-            gameObject.SetActive(true);
-        }
     }
 }
