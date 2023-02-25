@@ -12,6 +12,7 @@ public class MoveControl : MonoBehaviour
     void Start()
     {
         p = GameObject.FindGameObjectsWithTag("Point");
+        DOTween.SetTweensCapacity(500, 125);
     }
     void Update()
     {
