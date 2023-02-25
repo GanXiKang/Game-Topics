@@ -6,7 +6,7 @@ public class Point1 : MonoBehaviour
 {
     void Start()
     {
-        MoveControl.p[1] = transform.position;
+        
     }
     void Update()
     {

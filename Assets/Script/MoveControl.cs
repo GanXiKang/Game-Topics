@@ -20,7 +20,7 @@ public class MoveControl : MonoBehaviour
 
     public float recordNum = 0;
 
-    public static GameObject[] p = new GameObject[13];
+    public static GameObject[] p;
 
     void Start()
     {
