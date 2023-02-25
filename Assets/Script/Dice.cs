@@ -10,7 +10,7 @@ public class Dice : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            diceNum = Random.Range(1, 2);
+            diceNum = Random.Range(1, 7);
             Debug.Log(diceNum);
         }
     }
