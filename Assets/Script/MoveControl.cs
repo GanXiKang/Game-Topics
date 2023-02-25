@@ -4,27 +4,13 @@ using UnityEngine;
 
 public class MoveControl : MonoBehaviour
 {
-    public Transform p0;
-    public Transform p1;
-    public Transform p2;
-    public Transform p3;
-    public Transform p4;
-    public Transform p5;
-    public Transform p6;
-    public Transform p7;
-    public Transform p8;
-    public Transform p9;
-    public Transform p10;
-    public Transform p11;
-    public Transform p12;
-
     public float recordNum = 0;
 
-    public static GameObject[] p;
+    public GameObject[] p;
 
     void Start()
     {
-
+        p =  GameObject.FindGameObjectsWithTag("Point");
     }
     void Update()
     {
