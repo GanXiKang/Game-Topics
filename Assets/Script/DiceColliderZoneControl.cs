@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class DiceColliderZoneControl : MonoBehaviour
 {
-    public static float diceNumber = 0;
     Vector3 diceVelocity;
+    float diceNumber = 0;
 
+    public static float totalNum = 0;
+    
     void FixedUpdate()
     {
         diceVelocity = DiceControl.diceVelocity;
+
+        if (DiceControl.isThrow == true)
+        {
+            this.gameObject.SetActive(true);
+        }
     }
     private void OnTriggerStay(Collider other)
     {
@@ -43,6 +50,10 @@ public class DiceColliderZoneControl : MonoBehaviour
                     break;
             }
             print(diceNumber);
+            totalNum += diceNumber;
+            print(totalNum);
+            this.gameObject.SetActive(false);
+            DiceControl.isThrow = false;
         }
     }
 }

@@ -5,7 +5,9 @@ using UnityEngine;
 public class DiceControl : MonoBehaviour
 {
     Rigidbody rb;
+
     public static Vector3 diceVelocity;
+    public static bool isThrow;
 
     void Start()
     {
@@ -19,15 +21,16 @@ public class DiceControl : MonoBehaviour
     }
     void RollTheDice()
     {
-        //if (Input.GetKeyDown("space"))
-        //{
-        //    float dirX = Random.Range(0, 1000);
-        //    float dirY = Random.Range(0, 1000);
-        //    float dirZ = Random.Range(0, 1000);
+        if (Input.GetKeyDown("space"))
+        {
+            isThrow = true;
+            float dirX = Random.Range(0, 1000);
+            float dirY = Random.Range(0, 1000);
+            float dirZ = Random.Range(0, 1000);
 
-        //    transform.rotation = Quaternion.identity;
-        //    rb.AddForce(transform.up * 1000);
-        //    rb.AddTorque(dirX, dirY, dirZ);
-        //}
+            transform.rotation = Quaternion.identity;
+            rb.AddForce(transform.up * 1000);
+            rb.AddTorque(dirX, dirY, dirZ);
+        }
     }
 }

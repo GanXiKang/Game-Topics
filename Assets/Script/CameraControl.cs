@@ -12,11 +12,11 @@ public class CameraControl : MonoBehaviour
         {
             StartCoroutine(ChangeCamera());
         }
-        else 
+        else
         {
             StopCoroutine(ChangeCamera());
         }
-        
+
     }
     IEnumerator ChangeCamera()
     {
