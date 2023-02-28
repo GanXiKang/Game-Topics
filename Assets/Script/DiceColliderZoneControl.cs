@@ -15,6 +15,7 @@ public class DiceColliderZoneControl : MonoBehaviour
 
         if (DiceControl.isThrow == true)
         {
+            Debug.Log("Open");
             this.gameObject.SetActive(true);
         }
     }

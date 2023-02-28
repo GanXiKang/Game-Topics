@@ -24,6 +24,7 @@ public class DiceControl : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             isThrow = true;
+            Debug.Log(isThrow);
             float dirX = Random.Range(0, 1000);
             float dirY = Random.Range(0, 1000);
             float dirZ = Random.Range(0, 1000);
