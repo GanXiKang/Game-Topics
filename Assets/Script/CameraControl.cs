@@ -22,7 +22,7 @@ public class CameraControl : MonoBehaviour
     {
         Camera1.SetActive(false);
         Camera2.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.2f);
         Dice.isThrow = false;
         Camera1.SetActive(true);
         Camera2.SetActive(false);

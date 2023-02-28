@@ -16,8 +16,8 @@ public class MoveControl : MonoBehaviour
     }
     void Update()
     {
-        //MovePoint();                   //文字骰子用
-        MoveDicePoint();                 //3D骰子用
+        MovePoint();                   //文字骰子用
+        //MoveDicePoint();                 //3D骰子用
     }
     void MovePoint()
     {
