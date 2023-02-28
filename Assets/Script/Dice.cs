@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
-    public static float diceNum = 0;
+    public float diceNum = 0;
+    public static float totalNum = 0;
 
     void Update()
     {
@@ -12,6 +13,7 @@ public class Dice : MonoBehaviour
         {
             diceNum = Random.Range(1, 7);
             Debug.Log(diceNum);
+            totalNum += diceNum;
         }
     }
 }
