@@ -5,7 +5,6 @@ using UnityEngine;
 public class Dice : MonoBehaviour
 {
     float diceNum = 0;
-
     public static float totalNum = 0;
     public static bool isThrow = false;
 
@@ -13,10 +12,11 @@ public class Dice : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            diceNum = Random.Range(1, 7);
+            diceNum = Random.Range(3, 4);
             Debug.Log(diceNum);
             isThrow = true;
             totalNum += diceNum;
         }
+
     }
 }
