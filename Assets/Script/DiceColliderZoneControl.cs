@@ -6,8 +6,6 @@ public class DiceColliderZoneControl : MonoBehaviour
 {
     Vector3 diceVelocity;
     float diceNumber = 0;
-
-    public static float totalNum = 0;
     
     void FixedUpdate()
     {
@@ -15,7 +13,6 @@ public class DiceColliderZoneControl : MonoBehaviour
 
         if (DiceControl.isThrow == true)
         {
-            Debug.Log("Open");
             this.gameObject.SetActive(true);
         }
     }
@@ -26,34 +23,25 @@ public class DiceColliderZoneControl : MonoBehaviour
             switch (other.tag)
             {
                 case "Dice1":
-                    diceNumber = 6;
-                    gameObject.SetActive(false);
+                    diceNumber = 1;
                     break;
                 case "Dice2":
-                    diceNumber = 5;
-                    gameObject.SetActive(false);
+                    diceNumber = 2;
                     break;
                 case "Dice3":
-                    diceNumber = 4;
-                    gameObject.SetActive(false);
+                    diceNumber = 3;
                     break;
                 case "Dice4":
-                    diceNumber = 3;
-                    gameObject.SetActive(false);
+                    diceNumber = 4;
                     break;
                 case "Dice5":
-                    diceNumber = 2;
-                    gameObject.SetActive(false);
+                    diceNumber = 5;
                     break;
                 case "Dice6":
-                    diceNumber = 1;
-                    gameObject.SetActive(false);
+                    diceNumber = 6;
                     break;
             }
             print(diceNumber);
-            totalNum += diceNumber;
-            print(totalNum);
-            this.gameObject.SetActive(false);
             DiceControl.isThrow = false;
         }
     }

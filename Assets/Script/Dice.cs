@@ -17,6 +17,5 @@ public class Dice : MonoBehaviour
             isThrow = true;
             totalNum += diceNum;
         }
-
     }
 }

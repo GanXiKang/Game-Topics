@@ -21,17 +21,17 @@ public class DiceControl : MonoBehaviour
     }
     void RollTheDice()
     {
-        //if (Input.GetKeyDown("space"))
-        //{
-        //    isThrow = true;
-        //    Debug.Log(isThrow);
-        //    float dirX = Random.Range(0, 1000);
-        //    float dirY = Random.Range(0, 1000);
-        //    float dirZ = Random.Range(0, 1000);
+        if (Input.GetKeyDown("d"))
+        {
+            isThrow = true;
 
-        //    transform.rotation = Quaternion.identity;
-        //    rb.AddForce(transform.up * 1000);
-        //    rb.AddTorque(dirX, dirY, dirZ);
-        //}
+            float dirX = Random.Range(100, 500);
+            float dirY = Random.Range(100, 500);
+            float dirZ = Random.Range(100, 500);
+
+            transform.rotation = Quaternion.identity;
+            rb.AddForce(transform.up * 400);
+            rb.AddTorque(dirX, dirY, dirZ);
+        }
     }
 }
