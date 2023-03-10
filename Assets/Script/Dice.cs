@@ -12,7 +12,7 @@ public class Dice : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            diceNum = Random.Range(3, 4);
+            diceNum = Random.Range(1, 7);
             Debug.Log(diceNum);
             isThrow = true;
             totalNum += diceNum;

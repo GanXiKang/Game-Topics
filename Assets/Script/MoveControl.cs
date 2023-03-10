@@ -31,7 +31,7 @@ public class MoveControl : MonoBehaviour
         }
         if (Dice.totalNum == 3)
         {
-            transform.DOMove(p[3].transform.position, 3);
+            transform.DOMove(p[3].transform.position, 1);
         }
         if (Dice.totalNum == 4)
         {
