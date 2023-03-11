@@ -6,88 +6,119 @@ public class MiniGame1Control : MonoBehaviour
 {
     float playWhat = 0;                   // 1 = 剪刀; 2 = 石頭; 3 = 佈
     float AIplayWhat = 0;
+    float win = 0;
+    float i = 0;
     void Awake()
     {
         print("狸貓猜拳！");
     }
-    
     public void Button_Scissors()
     {
-        print("我出剪刀");
         playWhat = 1;
     }
     public void Button_Stone()
     {
-        print("我出石頭");
         playWhat = 2;
     }
     public void Button_Cloth()
     {
-        print("我出佈");
         playWhat = 3;
     }
     void Update()
     {
-        if (playWhat != 0)
+        if (i <= 5)
         {
-            AIplayWhat = Random.Range(1, 4);
-            if (AIplayWhat == 1)
+            if (playWhat != 0)
             {
-                print("AI出剪刀");
-                switch (playWhat)
+                AIplayWhat = Random.Range(1, 4);
+                if (AIplayWhat == 1)
                 {
-                    case 1:
-                        print("平局！");
-                        playWhat = 0;
-                        break;
-                    case 2:
-                        print("Win！");
-                        playWhat = 0;
-                        break;
-                    case 3:
-                        print("Lose！");
-                        playWhat = 0;
-                        break;
+                    print("AI出剪刀");
+                    switch (playWhat)
+                    {
+                        case 1:
+                            print("我出剪刀");
+                            print("平局！");
+                            playWhat = 0;
+                            break;
+                        case 2:
+                            print("我出石頭");
+                            print("Win！");
+                            i++;
+                            win++;
+                            playWhat = 0;
+                            break;
+                        case 3:
+                            print("我出佈");
+                            print("Lose！");
+                            i++;
+                            playWhat = 0;
+                            break;
+                    }
                 }
-            }
-            if (AIplayWhat == 2)
-            {
-                print("AI出石頭");
-                switch (playWhat)
+                if (AIplayWhat == 2)
                 {
-                    case 1:
-                        print("Lose！");
-                        playWhat = 0;
-                        break;
-                    case 2:
-                        print("平局！");
-                        playWhat = 0;
-                        break;
-                    case 3:
-                        print("Win！");
-                        playWhat = 0;
-                        break;
+                    print("AI出石頭");
+                    switch (playWhat)
+                    {
+                        case 1:
+                            print("我出剪刀");
+                            print("Lose！");
+                            i++;
+                            playWhat = 0;
+                            break;
+                        case 2:
+                            print("我出石頭");
+                            print("平局！");
+                            playWhat = 0;
+                            break;
+                        case 3:
+                            print("我出佈");
+                            print("Win！");
+                            i++;
+                            win++;
+                            playWhat = 0;
+                            break;
+                    }
                 }
-            }
-            if (AIplayWhat == 3)
-            {
-                print("AI出剪佈");
-                switch (playWhat)
+                if (AIplayWhat == 3)
                 {
-                    case 1:
-                        print("Win！");
-                        playWhat = 0;
-                        break;
-                    case 2:
-                        print("Lose");
-                        playWhat = 0;
-                        break;
-                    case 3:
-                        print("平局！");
-                        playWhat = 0;
-                        break;
+                    print("AI出剪佈");
+                    switch (playWhat)
+                    {
+                        case 1:
+                            print("我出剪刀");
+                            print("Win！");
+                            i++;
+                            win++;
+                            playWhat = 0;
+                            break;
+                        case 2:
+                            print("我出石頭");
+                            print("Lose");
+                            i++;
+                            playWhat = 0;
+                            break;
+                        case 3:
+                            print("我出佈");
+                            print("平局！");
+                            playWhat = 0;
+                            break;
+                    }
                 }
             }
         }
-    }
+        else 
+        {
+            print("游戲結束");
+            if (win >= 3)
+            {
+                print("獲得勝利！");
+            }
+            else
+            {
+                print("游戲失敗！");
+            }
+        }
+    }  
 }
