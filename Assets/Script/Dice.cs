@@ -8,11 +8,13 @@ public class Dice : MonoBehaviour
     public static float totalNum = 0;
     public static bool isThrow = false;
 
+    public float min = 1;
+    public float max = 7;
     void Update()
     {
         if (Input.GetKeyDown("space"))
         {
-            diceNum = Random.Range(1, 7);
+            diceNum = Random.Range(min, max);
             Debug.Log(diceNum);
             isThrow = true;
             totalNum += diceNum;
