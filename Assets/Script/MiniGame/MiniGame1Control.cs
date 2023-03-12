@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MiniGame1Control : MonoBehaviour
 {
     float playWhat = 0;                   // 1 = 剪刀; 2 = 石頭; 3 = 佈
     float AIplayWhat = 0;
     float win = 0;
+    float lose = 0;
     float i = 0;
     void Awake()
     {
@@ -26,7 +28,7 @@ public class MiniGame1Control : MonoBehaviour
     }
     void Update()
     {
-        if (i <= 5)
+        if (i <= 5 && win < 3 && lose < 3)
         {
             if (playWhat != 0)
             {
@@ -52,6 +54,7 @@ public class MiniGame1Control : MonoBehaviour
                             print("我出佈");
                             print("Lose！");
                             i++;
+                            lose++;
                             playWhat = 0;
                             break;
                     }
@@ -65,6 +68,7 @@ public class MiniGame1Control : MonoBehaviour
                             print("我出剪刀");
                             print("Lose！");
                             i++;
+                            lose++;
                             playWhat = 0;
                             break;
                         case 2:
@@ -97,6 +101,7 @@ public class MiniGame1Control : MonoBehaviour
                             print("我出石頭");
                             print("Lose");
                             i++;
+                            lose++;
                             playWhat = 0;
                             break;
                         case 3:
@@ -119,6 +124,7 @@ public class MiniGame1Control : MonoBehaviour
             {
                 print("游戲失敗！");
             }
+            SceneManager.LoadScene(0);
         }
     }  
 }
