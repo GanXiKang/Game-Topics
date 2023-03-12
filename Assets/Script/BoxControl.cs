@@ -9,7 +9,7 @@ public class BoxControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && Dice.totalNum == 3)
+        if (other.tag == "Player" && Dice.totalNum == 2)
         {
             print("¹§Ï²«@µÃ10ØˆØˆŽÅ£¡");
             Vector3.MoveTowards(unopen.transform.position, open.transform.position, 0.3f);
