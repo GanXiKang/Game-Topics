@@ -8,8 +8,8 @@ public class Dice : MonoBehaviour
     public static float totalNum = 0;
     public static bool isThrow = false;
 
-    public float min = 1;
-    public float max = 7;
+    public int min = 1;
+    public int max = 7;
     void Update()
     {
         if (Input.GetKeyDown("space"))
