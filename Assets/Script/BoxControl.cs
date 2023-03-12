@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class BoxControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform unopen;
+    public Transform open;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Player" && Dice.totalNum == 3)
+        {
+            print("¹§Ï²«@µÃ10ØˆØˆŽÅ£¡");
+            Vector3.MoveTowards(unopen.transform.position, open.transform.position, 0.3f);
+            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+        }
     }
 }
