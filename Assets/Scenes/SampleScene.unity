@@ -874,6 +874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ccccc7b20c68c4e93fcf82697da6bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  min: 2
+  max: 3
 --- !u!114 &634621365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,6 +994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 706449222}
   - component: {fileID: 706449223}
+  - component: {fileID: 706449224}
   m_Layer: 0
   m_Name: BoxCollider
   m_TagString: Untagged
@@ -1027,6 +1030,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18, y: 5, z: 18}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &706449224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706449221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f630806422937004d800ba73c87cb71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unopen: {fileID: 2051393846}
 --- !u!1 &749380067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,8 +2182,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642068798}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.01167146, y: 0.9765194, z: -0.43500346}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.092, z: -0.398}
   m_LocalScale: {x: 1, y: 0.104753025, z: 0.9253766}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2182,7 +2198,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642068798}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2701,7 +2717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051393845}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5465099, z: 0}
+  m_LocalPosition: {x: 0, y: 0.574, z: 0}
   m_LocalScale: {x: 1, y: 0.096935995, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2716,7 +2732,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051393845}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
