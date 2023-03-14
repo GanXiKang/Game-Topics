@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MG_BoxColliderControl : MonoBehaviour
 {
+    IEnumerator StartMiniGame()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(1);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && Dice.totalNum == 5)
         {
-            SceneManager.LoadScene(1);
+            StartCoroutine(StartMiniGame());
         }
     }
 }

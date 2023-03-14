@@ -874,8 +874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ccccc7b20c68c4e93fcf82697da6bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 2
-  max: 3
+  min: 5
+  max: 6
 --- !u!114 &634621365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,6 +1053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 749380068}
   - component: {fileID: 749380069}
+  - component: {fileID: 749380070}
   m_Layer: 0
   m_Name: MiniGame1Collider
   m_TagString: Untagged
@@ -1088,6 +1089,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18, y: 5, z: 18}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &749380070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749380067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12baf2b1b5bdaa244ad245c4d540338d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832009001
 GameObject:
   m_ObjectHideFlags: 0
