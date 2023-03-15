@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+//using UnityEngine.AI;
 
 public class MoveControl : MonoBehaviour
 {
@@ -10,9 +11,12 @@ public class MoveControl : MonoBehaviour
 
     private float pointNum = 0;
 
+    //NavMeshAgent agent;
+
     void Start()
     {
         DOTween.SetTweensCapacity(500, 125);
+        //agent = GetComponent<NavMeshAgent>();
     }
     void FixedUpdate()
     {
@@ -23,6 +27,7 @@ public class MoveControl : MonoBehaviour
     {
         if (Dice.totalNum == 1)
         {
+            //agent.SetDestination(p[1].transform.position);
             transform.DOMove(p[1].transform.position, 1);
         }
         if (Dice.totalNum == 2)
