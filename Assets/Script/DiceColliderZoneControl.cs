@@ -7,7 +7,7 @@ public class DiceColliderZoneControl : MonoBehaviour
     Vector3 diceVelocity;
     float diceNumber = 0;
     
-    void FixedUpdate()
+    void Update()
     {
         diceVelocity = DiceControl.diceVelocity;
 

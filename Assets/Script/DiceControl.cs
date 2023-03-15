@@ -13,7 +13,7 @@ public class DiceControl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-    void FixedUpdate()
+    void Update()
     {
         diceVelocity = rb.velocity;
 
