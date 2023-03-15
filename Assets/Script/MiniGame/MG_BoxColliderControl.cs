@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MG_BoxColliderControl : MonoBehaviour
 {
+    public static bool playGame = true;
     IEnumerator StartMiniGame()
     {
         yield return new WaitForSeconds(2f);
@@ -12,7 +13,7 @@ public class MG_BoxColliderControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && Dice.totalNum == 5)
+        if (other.tag == "Player" && Dice.totalNum == 5 && playGame == true)
         {
             StartCoroutine(StartMiniGame());
         }
