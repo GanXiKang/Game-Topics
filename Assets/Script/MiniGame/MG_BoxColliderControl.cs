@@ -18,4 +18,9 @@ public class MG_BoxColliderControl : MonoBehaviour
             StartCoroutine(StartMiniGame());
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        playGame = true;
+        print(playGame);
+    }
 }
