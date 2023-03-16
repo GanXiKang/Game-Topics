@@ -11,11 +11,13 @@ public class MoveControl : MonoBehaviour
 
     private float pointNum = 0;
 
+    Animator anim;
     //NavMeshAgent agent;
 
     void Start()
     {
         DOTween.SetTweensCapacity(500, 125);
+        anim = GetComponent<Animator>();
         //agent = GetComponent<NavMeshAgent>();
     }
     void FixedUpdate()
@@ -25,10 +27,16 @@ public class MoveControl : MonoBehaviour
     }
     void MovePoint()
     {
+        if (Dice.totalNum == 0)
+        {
+            transform.DOMove(p[0].transform.position, 1);
+        }
         if (Dice.totalNum == 1)
         {
+            anim.SetBool("Walk", true);
             //agent.SetDestination(p[1].transform.position);
-            transform.DOMove(p[1].transform.position, 1);
+            transform.DOMove(p[1].transform.position, 5);
+            anim.SetBool("Walk", false);
         }
         if (Dice.totalNum == 2)
         {
