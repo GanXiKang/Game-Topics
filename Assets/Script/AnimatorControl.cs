@@ -12,13 +12,37 @@ public class AnimatorControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Point")
         {
-            anim.SetBool("Walk", false);
+            if (MoveControl.Award == true)
+            {
+                StartCoroutine(YesAward());
+            }
+            if (MoveControl.Award == false)
+            {
+                StartCoroutine(NoAward());
+            }
         }
-        else 
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Point")
         {
-            anim.SetBool("Walk", false);
+            anim.SetBool("Walk", true);
         }
+    }
+    IEnumerator YesAward()
+    {
+        anim.SetBool("Jump", true);
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("Walk", false);
+        anim.SetBool("Jump", false);
+    }
+    IEnumerator NoAward()
+    {
+        anim.SetBool("Wave", true);
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("Walk", false);
+        anim.SetBool("Wave", false);
     }
 }
