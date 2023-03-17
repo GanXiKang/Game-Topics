@@ -11,13 +11,11 @@ public class MoveControl : MonoBehaviour
 
     private float pointNum = 0;
 
-    Animator anim;
     //NavMeshAgent agent;
 
     void Start()
     {
         DOTween.SetTweensCapacity(500, 125);
-        anim = GetComponent<Animator>();
         //agent = GetComponent<NavMeshAgent>();
     }
     void Update()
