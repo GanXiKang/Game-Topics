@@ -10,6 +10,7 @@ public class MoveControl : MonoBehaviour
 
     public static bool Award;                    //false : Wave , True : Jump
 
+    Rigidbody rb;
     //NavMeshAgent agent;
 
     void Start()
