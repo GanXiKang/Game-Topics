@@ -37,8 +37,7 @@ public class MoveControl : MonoBehaviour
         }
         if (Dice.totalNum == 2)
         {
-            //transform.DOMove(p[2].transform.position, 10);
-            Vector3.MoveTowards(transform.position, p[2].transform.position, 10);
+            transform.DOMove(p[2].transform.position, 10);
             Award = true;
         }
         if (Dice.totalNum == 3)
