@@ -448,6 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 794621025}
   - component: {fileID: 794621024}
+  - component: {fileID: 794621026}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -467,6 +468,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046bdf73e1f216f4abec3c6ed06183ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playWhat: 0
+  AIplayWhat: 0
+  win: 0
+  lose: 0
+  i: 0
 --- !u!4 &794621025
 Transform:
   m_ObjectHideFlags: 0
@@ -482,6 +488,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &794621026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794621023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c26e305cd7bfa14390321174a42e52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1113633328
 GameObject:
   m_ObjectHideFlags: 0

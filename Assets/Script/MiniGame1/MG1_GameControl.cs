@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MiniGame1Control : MonoBehaviour
+public class MG1_GameControl : MonoBehaviour
 {
     float playWhat = 0;                   // 1 = ºÙµ∂; 2 =  ØÓ^; 3 = Å—
     float AIplayWhat = 0;
@@ -113,7 +113,7 @@ public class MiniGame1Control : MonoBehaviour
                 }
             }
         }
-        else 
+        else
         {
             print("”ŒëÚΩY ¯");
             MG_BoxColliderControl.playGame = false;
@@ -127,5 +127,5 @@ public class MiniGame1Control : MonoBehaviour
             }
             SceneManager.LoadScene(0);
         }
-    }  
+    }
 }

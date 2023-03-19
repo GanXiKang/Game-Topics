@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MG_BoxColliderControl : MonoBehaviour
+public class MG1_BoxColliderControl : MonoBehaviour
 {
     public static bool playGame = true;
     IEnumerator StartMiniGame()
@@ -23,3 +23,4 @@ public class MG_BoxColliderControl : MonoBehaviour
         playGame = true;
     }
 }
+
