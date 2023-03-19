@@ -116,7 +116,7 @@ public class MG1_GameControl : MonoBehaviour
         else
         {
             print("”ќСтљY ш");
-            MG_BoxColliderControl.playGame = false;
+            MG1_BoxColliderControl.playGame = false;
             if (win >= 3)
             {
                 print("Ђ@µ√Дўјы£°");
