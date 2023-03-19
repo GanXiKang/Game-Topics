@@ -811,8 +811,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ccccc7b20c68c4e93fcf82697da6bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 1
-  max: 2
+  min: 2
+  max: 3
 --- !u!114 &634621365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2614,6 +2614,16 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: c4fab27616e32344e9f00fd8523cdbed, type: 3}
       propertyPath: m_CullingMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c4fab27616e32344e9f00fd8523cdbed, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'Bone'\n\tTransform 'Bone.005.L.001.R'\n\tTransform
+        'Bone.005.R'\n\tTransform 'Bone.004.L'\n\tTransform 'Bone.002'\n\tTransform
+        'Bone.013.L.001.L'\n\tTransform 'Bone.005.L'\n\tTransform 'Bone.004.R'\n\tTransform
+        'Bone.004'\n\tTransform 'Bone.013.R'\n\tand more ...\n\tFrom animation clip
+        'Scene'"
       objectReference: {fileID: 0}
     - target: {fileID: 8743813690021804245, guid: c4fab27616e32344e9f00fd8523cdbed, type: 3}
       propertyPath: m_Materials.Array.data[0]
