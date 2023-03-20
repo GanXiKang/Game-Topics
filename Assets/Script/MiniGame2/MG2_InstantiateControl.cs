@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MG2_InstantiateControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject apple;
+    public GameObject boom;
+
+    float x;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        x = Random.Range(-60, 60);
+        Instantiate(apple, new Vector3(x, 33.8f, 0), transform.rotation);
     }
 }
