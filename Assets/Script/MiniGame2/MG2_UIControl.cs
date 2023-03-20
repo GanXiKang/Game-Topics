@@ -9,7 +9,7 @@ public class MG2_UIControl : MonoBehaviour
     public Text Score;
 
     float gameTime = 30f;
-    float score = 3;
+    float score = 0;
 
     void Update()
     {
