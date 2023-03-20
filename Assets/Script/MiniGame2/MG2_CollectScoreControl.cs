@@ -18,10 +18,12 @@ public class MG2_CollectScoreControl : MonoBehaviour
         if (other.tag == "Apple")
         {
             score++;
+            Destroy(other.gameObject);
         }
         if (other.tag == "Boom")
         {
             score -= 5;
+            Destroy(other.gameObject);
         }
     }
 }
