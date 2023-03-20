@@ -5,24 +5,37 @@ using UnityEngine;
 public class MG2_InstantiateControl : MonoBehaviour
 {
     public GameObject apple;
+    public GameObject boom;
 
-    float timer = 0;
-    float timePeriod = 0.5f;
+    float appleTimer = 0;
+    float appleTimePeriod;
+
+    float boomTimer = 0;
+    float boomTimePeriod;
+
     float x;
-    void Start()
-    {
-        
-    }
+
     void Update()
     {
-        timer += Time.deltaTime;
+        appleTimer += Time.deltaTime;
+        boomTimer += Time.deltaTime;
 
-        if (timer > timePeriod)
+        appleTimePeriod = Random.Range(0.8f, 2f);
+        boomTimePeriod = Random.Range(1.8f, 4f);
+
+        if (appleTimer > appleTimePeriod)
         {
             x = Random.Range(-60, 60);
             Instantiate(apple, new Vector3(x, 33.8f, 0), transform.rotation);
 
-            timer = 0;
+            appleTimer = 0;
+        }
+        if (boomTimer > boomTimePeriod)
+        {
+            x = Random.Range(-60, 60);
+            Instantiate(boom, new Vector3(x, 33.8f, 0), transform.rotation);
+
+            boomTimer = 0;
         }
     }
 }
