@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class MG2_PlayerControl : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey("a"))
+        {
+            transform.Translate(-3, 0, 0);
+        }
+        if (Input.GetKey("d"))
+        {
+            transform.Translate(3, 0, 0);
+        }
     }
 }
