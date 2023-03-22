@@ -66,6 +66,7 @@ public class MoveControl : MonoBehaviour
             Award = false;
         }
     }
+
     //void MoveDicePoint()
     //{
     //    if (DiceColliderZoneControl.totalNum == 1)
