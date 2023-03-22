@@ -8,11 +8,11 @@ public class MG2_DestoryControl : MonoBehaviour
     {
         if (other.tag == "Apple")
         {
-            Destroy(other.gameObject, 0.3f);
+            Destroy(other.gameObject, 0.2f);
         }
         if (other.tag == "Boom")
         {
-            Destroy(other.gameObject, 0.3f);
+            Destroy(other.gameObject, 0.2f);
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MG2_PlayerControl : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 20f;
     void Start()
     {
         
@@ -12,6 +12,7 @@ public class MG2_PlayerControl : MonoBehaviour
 
     void Update()
     {
+        
         if (Input.GetKey("a"))
         {
             transform.Translate(-speed * Time.deltaTime, 0, 0);
