@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MG2_GameResultControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (MG2_UIControl.gameTime <= 0)
+        {
+            if (MG2_CollectScoreControl.score >= 40)
+            {
+                print("Win");
+            }
+            else 
+            {
+                print("Lose");
+            }
+            SceneManager.LoadScene(0);
+        }
     }
 }
