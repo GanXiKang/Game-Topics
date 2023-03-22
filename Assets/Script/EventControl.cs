@@ -13,7 +13,7 @@ public class EventControl : MonoBehaviour
     }
     IEnumerator EventHappened()
     {
-        print("ÍËºóƒÉ‚€£¡");
+        print("ÍËºóƒÉ¸ñ£¡");
         yield return new WaitForSeconds(2f);
         Dice.totalNum -= 2;
     }
