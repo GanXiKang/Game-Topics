@@ -12,6 +12,7 @@ public class MG3_ButtonControl : MonoBehaviour
     public void StartControl()
     {
         B_Start.gameObject.SetActive(false);
+        MG3_BoxMoveControl.PlayGameNum++;
     }
     public void OpenBox1()
     {
