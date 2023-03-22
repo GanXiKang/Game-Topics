@@ -22,7 +22,7 @@ public class MG2_CollectScoreControl : MonoBehaviour
         }
         if (other.tag == "Boom")
         {
-            score -= 3;
+            score -= 5;
             Destroy(other.gameObject);
         }
     }
