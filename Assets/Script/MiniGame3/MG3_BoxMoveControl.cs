@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class MG3_BoxMoveControl : MonoBehaviour
 {
+    public static float PlayGameNum = 0;
+
     public GameObject box1;
     public GameObject box2;
     public GameObject box3;
 
-    public static float PlayGameNum = 0;
+    Transform boxPoint1;
+    Transform boxPoint2;
+    Transform boxPoint3;
 
     void Update()
     {
