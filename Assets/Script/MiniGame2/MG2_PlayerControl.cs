@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class MG2_PlayerControl : MonoBehaviour
 {
-    public float speed = 20f;
+    Rigidbody rb;
+    public float speed = 100f;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
         if (MG2_UIControl.gameTime > 0)
         {
-            if (Input.GetKey("a"))
-            {
-                transform.Translate(-speed * Time.deltaTime, 0, 0);
-            }
-            if (Input.GetKey("d"))
-            {
-                transform.Translate(speed * Time.deltaTime, 0, 0);
-            }
+            float h = Input.GetAxis("Horizontal");
+
+            Vector3 push = new Vector3(h, 0, 0) * speed;
+            rb.AddForce(push * Time.deltaTime);
         }
     }
 }
