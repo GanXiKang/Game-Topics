@@ -23,7 +23,6 @@ public class MG3_BoxMoveControl : MonoBehaviour
         if (PlayGameNum == 1)
         {
             DownAllBox();
-            MoveBox();
         }
         if (openBox1 == true)
         {
@@ -43,11 +42,6 @@ public class MG3_BoxMoveControl : MonoBehaviour
         box1.transform.position = boxPoint1.transform.position;
         box2.transform.position = boxPoint2.transform.position;
         box3.transform.position = boxPoint3.transform.position;
-    }
-    void MoveBox()
-    {
-        box1.transform.position = boxPoint2.transform.position;
-        box2.transform.position = boxPoint1.transform.position;
     }
 }
 
