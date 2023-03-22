@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 195361305}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1158425040}
+        m_TargetAssemblyTypeName: MG3_ButtonControl, Assembly-CSharp
+        m_MethodName: OpenBox1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &195361305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,7 +534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 689842209}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1158425040}
+        m_TargetAssemblyTypeName: MG3_ButtonControl, Assembly-CSharp
+        m_MethodName: OpenBox3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &689842209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,7 +668,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 723800753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1158425040}
+        m_TargetAssemblyTypeName: MG3_ButtonControl, Assembly-CSharp
+        m_MethodName: OpenBox2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &723800753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,6 +1168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1158425039}
+  - component: {fileID: 1158425040}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -1154,6 +1191,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1158425040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158425038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e2fc5e978bd5f48b051e7695145a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  B_Start: {fileID: 1603549699}
+  B_Box1: {fileID: 195361302}
+  B_Box2: {fileID: 723800750}
+  B_Box3: {fileID: 689842206}
 --- !u!1 &1246441080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,7 +1845,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1603549702}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1158425040}
+        m_TargetAssemblyTypeName: MG3_ButtonControl, Assembly-CSharp
+        m_MethodName: StartControl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1603549702
 MonoBehaviour:
   m_ObjectHideFlags: 0
