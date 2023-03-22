@@ -12,14 +12,16 @@ public class MG2_PlayerControl : MonoBehaviour
 
     void Update()
     {
-        
-        if (Input.GetKey("a"))
+        if (MG2_UIControl.gameTime > 0)
         {
-            transform.Translate(-speed * Time.deltaTime, 0, 0);
-        }
-        if (Input.GetKey("d"))
-        {
-            transform.Translate(speed * Time.deltaTime, 0, 0);
+            if (Input.GetKey("a"))
+            {
+                transform.Translate(-speed * Time.deltaTime, 0, 0);
+            }
+            if (Input.GetKey("d"))
+            {
+                transform.Translate(speed * Time.deltaTime, 0, 0);
+            }
         }
     }
 }
