@@ -10,9 +10,9 @@ public class MG3_BoxMoveControl : MonoBehaviour
     public GameObject box2;
     public GameObject box3;
 
-    Transform boxPoint1;
-    Transform boxPoint2;
-    Transform boxPoint3;
+    public Transform boxPoint1;
+    public Transform boxPoint2;
+    public Transform boxPoint3;
 
     void Update()
     {
