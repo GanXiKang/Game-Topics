@@ -10,10 +10,6 @@ public class MG3_BoxMoveControl : MonoBehaviour
     public GameObject box2;
     public GameObject box3;
 
-    public Transform boxPoint1;
-    public Transform boxPoint2;
-    public Transform boxPoint3;
-
     public static bool openBox1;
     public static bool openBox2;
     public static bool openBox3;
@@ -39,9 +35,9 @@ public class MG3_BoxMoveControl : MonoBehaviour
     }
     void DownAllBox()
     {
-        box1.transform.position = boxPoint1.transform.position;
-        box2.transform.position = boxPoint2.transform.position;
-        box3.transform.position = boxPoint3.transform.position;
+        box1.transform.position = new Vector3(-6, 2.5f, -5);
+        box2.transform.position = new Vector3(0, 2.5f, -5);
+        box3.transform.position = new Vector3(6, 2.5f, -5);
     }
 }
 
