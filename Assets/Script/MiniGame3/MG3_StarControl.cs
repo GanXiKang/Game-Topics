@@ -31,5 +31,17 @@ public class MG3_StarControl : MonoBehaviour
             }
             insStar = false;
         }
+        if (MG3_ButtonControl.openBox == true)
+        {
+            if (MG3_ButtonControl.openWhyBox == x)
+            {
+                print("Win");
+            }
+            else
+            {
+                print("Lose");
+            }
+            MG3_ButtonControl.openBox = false;
+        }
     }
 }

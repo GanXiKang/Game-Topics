@@ -10,6 +10,7 @@ public class MG3_ButtonControl : MonoBehaviour
     public GameObject B_Box2;
     public GameObject B_Box3;
 
+    public static bool openBox;
     public static float openWhyBox;
     public static float whyRound;
 
@@ -26,6 +27,7 @@ public class MG3_ButtonControl : MonoBehaviour
     public void OpenBox1()
     {
         MG3_BoxMoveControl.openBox1 = true;
+        openBox = true;
         openWhyBox = 1;
         B_Box1.gameObject.SetActive(false);
         B_Box2.gameObject.SetActive(false);
@@ -34,6 +36,7 @@ public class MG3_ButtonControl : MonoBehaviour
     public void OpenBox2()
     {
         MG3_BoxMoveControl.openBox2 = true;
+        openBox = true;
         openWhyBox = 2;
         B_Box1.gameObject.SetActive(false);
         B_Box2.gameObject.SetActive(false);
@@ -42,6 +45,7 @@ public class MG3_ButtonControl : MonoBehaviour
     public void OpenBox3()
     {
         MG3_BoxMoveControl.openBox3 = true;
+        openBox = true;
         openWhyBox = 3;
         B_Box1.gameObject.SetActive(false);
         B_Box2.gameObject.SetActive(false);
