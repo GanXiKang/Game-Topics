@@ -16,15 +16,15 @@ public class MG3_BoxMoveControl : MonoBehaviour
     {
         if (openBox1 == true)
         {
-            box1.transform.position += new Vector3(0, 2.5f, 0);
+            box1.transform.position = new Vector3(-6, 5, -5);
         }
         if (openBox2 == true)
         {
-            box2.transform.position += new Vector3(0, 2.5f, 0);
+            box2.transform.position = new Vector3(0, 5, -5);
         }
         if (openBox3 == true)
         {
-            box3.transform.position += new Vector3(0, 2.5f, 0);
+            box3.transform.position = new Vector3(6, 5, -5);
         }
     }
 }
