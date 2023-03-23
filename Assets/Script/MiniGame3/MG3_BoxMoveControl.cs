@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MG3_BoxMoveControl : MonoBehaviour
 {
-    public static float PlayGameNum = 0;
-
     public GameObject box1;
     public GameObject box2;
     public GameObject box3;
@@ -16,10 +14,6 @@ public class MG3_BoxMoveControl : MonoBehaviour
 
     void Update()
     {
-        if (PlayGameNum == 1)
-        {
-            DownAllBox();
-        }
         if (openBox1 == true)
         {
             box1.transform.position += new Vector3(0, 2.5f, 0);
