@@ -16,6 +16,7 @@ public class MG3_ButtonControl : MonoBehaviour
         B_Box2.gameObject.SetActive(true);
         B_Box3.gameObject.SetActive(true);
         MG3_BoxMoveControl.PlayGameNum++;
+        MG3_StarControl.insStar = true;
     }
     public void OpenBox1()
     {
