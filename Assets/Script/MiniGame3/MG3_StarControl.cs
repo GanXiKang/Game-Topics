@@ -57,7 +57,12 @@ public class MG3_StarControl : MonoBehaviour
             {
                 print("ÓÎ‘òÊ§”¡£¡");
             }
-            SceneManager.LoadScene(0);
+            StartCoroutine(BackMainGame());
         }
+    }
+    IEnumerator BackMainGame()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
     }
 }
