@@ -122,7 +122,12 @@ public class MG1_GameControl : MonoBehaviour
             {
                 print("ÓÎ‘òÊ§”¡£¡");
             }
-            SceneManager.LoadScene(0);
+            StartCoroutine(BackMainGame());
         }
+    }
+    IEnumerator BackMainGame()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
     }
 }

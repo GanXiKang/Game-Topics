@@ -17,7 +17,12 @@ public class MG2_GameResultControl : MonoBehaviour
             {
                 print("Lose");
             }
-            SceneManager.LoadScene(0);
+            StartCoroutine(BackMainGame());
         }
+    }
+    IEnumerator BackMainGame()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
     }
 }
