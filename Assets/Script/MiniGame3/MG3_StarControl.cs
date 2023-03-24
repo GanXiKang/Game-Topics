@@ -14,34 +14,37 @@ public class MG3_StarControl : MonoBehaviour
 
     void Update()
     {
-        if (insStar == true)
+        if (MG3_ButtonControl.round <= 3)
         {
-            x = Random.Range(1, 4);
-            switch (x)
+            if (insStar == true)
             {
-                case 1:
-                    Instantiate(star, insPoint1.transform.position, insPoint1.transform.rotation);
-                    break;
-                case 2:
-                    Instantiate(star, insPoint2.transform.position, insPoint2.transform.rotation);
-                    break;
-                case 3:
-                    Instantiate(star, insPoint3.transform.position, insPoint3.transform.rotation);
-                    break;
+                x = Random.Range(1, 4);
+                switch (x)
+                {
+                    case 1:
+                        Instantiate(star, insPoint1.transform.position, insPoint1.transform.rotation);
+                        break;
+                    case 2:
+                        Instantiate(star, insPoint2.transform.position, insPoint2.transform.rotation);
+                        break;
+                    case 3:
+                        Instantiate(star, insPoint3.transform.position, insPoint3.transform.rotation);
+                        break;
+                }
+                insStar = false;
             }
-            insStar = false;
-        }
-        if (MG3_ButtonControl.openBox == true)
-        {
-            if (MG3_ButtonControl.openWhyBox == x)
+            if (MG3_ButtonControl.openBox == true)
             {
-                print("Win");
+                if (MG3_ButtonControl.openWhyBox == x)
+                {
+                    print("Win");
+                }
+                else
+                {
+                    print("Lose");
+                }
+                MG3_ButtonControl.openBox = false;
             }
-            else
-            {
-                print("Lose");
-            }
-            MG3_ButtonControl.openBox = false;
         }
     }
 }

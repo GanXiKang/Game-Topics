@@ -14,17 +14,20 @@ public class MG3_BoxMoveControl : MonoBehaviour
 
     void Update()
     {
-        if (openBox1 == true)
+        if (MG3_ButtonControl.round <= 3)
         {
-            box1.transform.position = new Vector3(-6, 6, -5);
-        }
-        if (openBox2 == true)
-        {
-            box2.transform.position = new Vector3(0, 6, -5);
-        }
-        if (openBox3 == true)
-        {
-            box3.transform.position = new Vector3(6, 6, -5);
+            if (openBox1 == true)
+            {
+                box1.transform.position = new Vector3(-6, 6, -5);
+            }
+            if (openBox2 == true)
+            {
+                box2.transform.position = new Vector3(0, 6, -5);
+            }
+            if (openBox3 == true)
+            {
+                box3.transform.position = new Vector3(6, 6, -5);
+            }
         }
     }
 }

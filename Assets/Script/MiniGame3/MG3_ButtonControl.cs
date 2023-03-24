@@ -12,6 +12,7 @@ public class MG3_ButtonControl : MonoBehaviour
 
     public static bool openBox;
     public static float openWhyBox;
+    public static float round;
 
     public void StartControl()
     {
@@ -20,6 +21,7 @@ public class MG3_ButtonControl : MonoBehaviour
         B_Box2.gameObject.SetActive(true);
         B_Box3.gameObject.SetActive(true);
         MG3_StarControl.insStar = true;
+        round++;
     }
     public void OpenBox1()
     {
