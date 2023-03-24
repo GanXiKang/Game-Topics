@@ -25,6 +25,7 @@ public class MG3_ButtonControl : MonoBehaviour
         MG3_StarControl.insStar = true;
         downCup = true;
         round++;
+        print("Round" + round);
     }
     public void OpenBox1()
     {

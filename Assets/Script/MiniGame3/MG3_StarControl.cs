@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MG3_StarControl : MonoBehaviour
 {
     public GameObject star;
-    public Transform insPoint1;
-    public Transform insPoint2;
-    public Transform insPoint3;
+    public Transform insPoint1, insPoint2, insPoint3;
 
     public static bool insStar;
-    float x;
+    float x,win,lose,result;
 
     void Update()
     {
@@ -37,14 +36,29 @@ public class MG3_StarControl : MonoBehaviour
             {
                 if (MG3_ButtonControl.openWhyBox == x)
                 {
+                    win++;
                     print("Win");
                 }
                 else
                 {
+                    lose++;
                     print("Lose");
                 }
+                result++;
                 MG3_ButtonControl.openBox = false;
             }
+        }
+        if (result == 3)
+        {
+            if (win >= 2)
+            {
+                print("ÓÎ‘ò„ÙÀû£¡");
+            }
+            else
+            {
+                print("ÓÎ‘òÊ§”¡£¡");
+            }
+            SceneManager.LoadScene(0);
         }
     }
 }
