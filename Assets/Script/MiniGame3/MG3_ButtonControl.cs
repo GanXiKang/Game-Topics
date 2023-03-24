@@ -62,6 +62,7 @@ public class MG3_ButtonControl : MonoBehaviour
         {
             if (startActive == true)
             {
+                startActive = false;
                 StartCoroutine(StartSetActice());
             }
         }
@@ -70,6 +71,5 @@ public class MG3_ButtonControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         B_Start.gameObject.SetActive(true);
-        startActive = false;
     }
 }
