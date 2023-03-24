@@ -14,6 +14,7 @@ public class MG3_ButtonControl : MonoBehaviour
     public static float openWhyBox;
     public static float round;
 
+    bool startActive = true;
     public void StartControl()
     {
         B_Start.gameObject.SetActive(false);
@@ -31,6 +32,7 @@ public class MG3_ButtonControl : MonoBehaviour
         B_Box1.gameObject.SetActive(false);
         B_Box2.gameObject.SetActive(false);
         B_Box3.gameObject.SetActive(false);
+        startActive = false;
     }
     public void OpenBox2()
     {
@@ -40,6 +42,7 @@ public class MG3_ButtonControl : MonoBehaviour
         B_Box1.gameObject.SetActive(false);
         B_Box2.gameObject.SetActive(false);
         B_Box3.gameObject.SetActive(false);
+        startActive = false;
     }
     public void OpenBox3()
     {
@@ -49,6 +52,22 @@ public class MG3_ButtonControl : MonoBehaviour
         B_Box1.gameObject.SetActive(false);
         B_Box2.gameObject.SetActive(false);
         B_Box3.gameObject.SetActive(false);
+        startActive = false;
     }
-
+    void Update()
+    {
+        if (round <= 3)
+        {
+            if (startActive == false)
+            {
+                StartCoroutine(StartSetActice());
+            }
+        }
+    }
+    IEnumerator StartSetActice()
+    {
+        yield return new WaitForSeconds(2f);
+        B_Start.gameObject.SetActive(true);
+        startActive = true;
+    }
 }
