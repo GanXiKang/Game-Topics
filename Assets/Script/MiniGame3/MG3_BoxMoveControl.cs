@@ -16,6 +16,10 @@ public class MG3_BoxMoveControl : MonoBehaviour
     {
         if (MG3_ButtonControl.round <= 3)
         {
+            if (MG3_ButtonControl.downCup == true)
+            {
+                DownCup();
+            }
             if (openBox1 == true)
             {
                 box1.transform.position = new Vector3(-6, 6, -5);
@@ -29,6 +33,13 @@ public class MG3_BoxMoveControl : MonoBehaviour
                 box3.transform.position = new Vector3(6, 6, -5);
             }
         }
+    }
+    void DownCup()
+    {
+        box1.transform.position = new Vector3(-6, 2.5f, -5);
+        box2.transform.position = new Vector3(0, 2.5f, -5);
+        box3.transform.position = new Vector3(6, 2.5f, -5);
+        MG3_ButtonControl.downCup = false;
     }
 }
 
