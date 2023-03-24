@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class MG3_BoxMoveControl : MonoBehaviour
 {
-    public GameObject box1;
-    public GameObject box2;
-    public GameObject box3;
+    public GameObject box1, box2,box3;
 
-    public static bool openBox1;
-    public static bool openBox2;
-    public static bool openBox3;
+    public static bool openBox1, openBox2, openBox3;
 
     void Update()
     {
