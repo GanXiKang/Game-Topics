@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MG1_GameControl : MonoBehaviour
 {
-    float playWhat = 0;                   // 1 = Ότµ¶; 2 = Κ―ξ^; 3 = Ρ
-    float AIplayWhat = 0;
-    float win = 0;
-    float lose = 0;
-    float i = 0;
+    float playWhat, AIplayWhat, win, lose, i;                   // 1 = Ότµ¶; 2 = Κ―ξ^; 3 = Ρ
+
     void Awake()
     {
         print("ΐκΨ²ΒΘ­£΅");
