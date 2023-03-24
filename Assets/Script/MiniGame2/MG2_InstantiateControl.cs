@@ -4,16 +4,9 @@ using UnityEngine;
 
 public class MG2_InstantiateControl : MonoBehaviour
 {
-    public GameObject apple;
-    public GameObject boom;
+    public GameObject apple, boom;
 
-    float appleTimer = 0;
-    float appleTimePeriod;
-
-    float boomTimer = 0;
-    float boomTimePeriod;
-
-    float x;
+    float appleTimer = 0, appleTimePeriod, boomTimer = 0, boomTimePeriod, x;
 
     void Update()
     {

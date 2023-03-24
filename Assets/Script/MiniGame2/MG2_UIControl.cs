@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class MG2_UIControl : MonoBehaviour
 {
-    public Text GameTime;
-    public Text Score;
+    public Text GameTime, Score;
 
     public  static float gameTime = 45f;
 
