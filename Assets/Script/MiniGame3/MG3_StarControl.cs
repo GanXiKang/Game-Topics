@@ -9,7 +9,7 @@ public class MG3_StarControl : MonoBehaviour
     public Transform insPoint1, insPoint2, insPoint3;
 
     public static bool insStar;
-    float x,win,lose,result;
+    float x,win,result;
 
     void Update()
     {
@@ -41,7 +41,6 @@ public class MG3_StarControl : MonoBehaviour
                 }
                 else
                 {
-                    lose++;
                     print("Lose");
                 }
                 result++;

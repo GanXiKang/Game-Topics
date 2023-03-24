@@ -5,15 +5,10 @@ using UnityEngine.UI;
 
 public class MG3_ButtonControl : MonoBehaviour
 {
-    public GameObject B_Start;
-    public GameObject B_Box1;
-    public GameObject B_Box2;
-    public GameObject B_Box3;
+    public GameObject B_Start, B_Box1, B_Box2, B_Box3;
 
-    public static bool downCup;
-    public static bool openBox;
-    public static float openWhyBox;
-    public static float round;
+    public static bool downCup, openBox;
+    public static float openWhyBox, round;
 
     bool startActive;
     public void StartControl()
