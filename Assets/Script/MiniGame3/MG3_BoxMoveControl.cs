@@ -18,20 +18,24 @@ public class MG3_BoxMoveControl : MonoBehaviour
         {
             if (MG3_ButtonControl.downCup == true)
             {
+                print("aaaaa");
                 MG3_ButtonControl.downCup = false;
                 DownCup();
             }
             if (openBox1 == true)
             {
                 box1.transform.position = new Vector3(-6, 6, -5);
+                openBox1 = false;
             }
             if (openBox2 == true)
             {
                 box2.transform.position = new Vector3(0, 6, -5);
+                openBox2 = false;
             }
             if (openBox3 == true)
             {
                 box3.transform.position = new Vector3(6, 6, -5);
+                openBox3 = false;
             }
         }
     }
