@@ -65,7 +65,7 @@ public class MG3_ButtonControl : MonoBehaviour
     }
     IEnumerator StartSetActice()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         B_Start.gameObject.SetActive(true);
     }
 }
