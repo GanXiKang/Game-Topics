@@ -14,7 +14,6 @@ public class MG3_BoxMoveControl : MonoBehaviour
         {
             if (MG3_ButtonControl.downCup == true)
             {
-                print("aaaaa");
                 MG3_ButtonControl.downCup = false;
                 DownCup();
             }
