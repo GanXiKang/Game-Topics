@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4778643681386516771}
   - component: {fileID: 7328993035514389993}
   - component: {fileID: 2019823244943777459}
+  - component: {fileID: 8365522621904595365}
   m_Layer: 0
   m_Name: Star
   m_TagString: Star
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9130252361242641468}
-  m_LocalRotation: {x: 0.6705661, y: 0.22436826, z: 0.22436827, w: 0.67056614}
+  m_LocalRotation: {x: 0.6705661, y: 0.22436836, z: 0.22436836, w: 0.6705661}
   m_LocalPosition: {x: 4.281229, y: 0, z: -16.046}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 53, y: 90, z: 90}
 --- !u!33 &4778643681386516771
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -97,3 +98,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.2409787
   m_Center: {x: 0.000000056610666, y: 0.26924235, z: 0.11456532}
+--- !u!114 &8365522621904595365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9130252361242641468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c345641fad96e54498779ae23d25b276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
