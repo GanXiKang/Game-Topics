@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UI_LoadingControl : MonoBehaviour
 {
-    float timer, timePeriod = 5;
-
+    public float timePeriod = 5;
+    float timer;
     void Update()
     {
         timer += 1 * Time.deltaTime;
