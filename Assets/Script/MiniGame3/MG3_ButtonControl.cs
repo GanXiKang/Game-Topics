@@ -7,7 +7,7 @@ public class MG3_ButtonControl : MonoBehaviour
 {
     public GameObject B_Start, B_Box1, B_Box2, B_Box3;
 
-    public static bool downCup, openBox;
+    public static bool downCup, openBox, destoryStar;
     public static float openWhyBox, round;
 
     bool startActive;
@@ -19,6 +19,7 @@ public class MG3_ButtonControl : MonoBehaviour
         B_Box3.gameObject.SetActive(true);
         MG3_StarControl.insStar = true;
         downCup = true;
+        destoryStar = true;
         round++;
         print("Round" + round);
     }
