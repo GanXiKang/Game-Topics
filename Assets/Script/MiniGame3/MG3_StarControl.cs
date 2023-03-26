@@ -42,6 +42,18 @@ public class MG3_StarControl : MonoBehaviour
                 else
                 {
                     print("Lose");
+                    if (x == 1)
+                    {
+                        MG3_BoxMoveControl.openBox1 = true;
+                    }
+                    if (x == 2)
+                    {
+                        MG3_BoxMoveControl.openBox2 = true;
+                    }
+                    if (x == 3)
+                    {
+                        MG3_BoxMoveControl.openBox3 = true;
+                    }
                 }
                 result++;
                 MG3_ButtonControl.openBox = false;
