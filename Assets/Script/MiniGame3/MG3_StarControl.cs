@@ -42,18 +42,7 @@ public class MG3_StarControl : MonoBehaviour
                 else
                 {
                     print("Lose");
-                    if (x == 1)
-                    {
-                        MG3_BoxMoveControl.openBox1 = true;
-                    }
-                    if (x == 2)
-                    {
-                        MG3_BoxMoveControl.openBox2 = true;
-                    }
-                    if (x == 3)
-                    {
-                        MG3_BoxMoveControl.openBox3 = true;
-                    }
+                    StartCoroutine(LoseRound());
                 }
                 result++;
                 MG3_ButtonControl.openBox = false;
@@ -70,6 +59,22 @@ public class MG3_StarControl : MonoBehaviour
                 print("ÓÎ‘òÊ§”¡£¡");
             }
             StartCoroutine(BackMainGame());
+        }
+    }
+    IEnumerator LoseRound()
+    {
+        yield return new WaitForSeconds(1f);
+        if (x == 1)
+        {
+            MG3_BoxMoveControl.openBox1 = true;
+        }
+        if (x == 2)
+        {
+            MG3_BoxMoveControl.openBox2 = true;
+        }
+        if (x == 3)
+        {
+            MG3_BoxMoveControl.openBox3 = true;
         }
     }
     IEnumerator BackMainGame()
