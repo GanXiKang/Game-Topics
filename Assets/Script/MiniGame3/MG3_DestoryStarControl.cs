@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class MG3_DestoryStarControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (MG3_ButtonControl.destoryStarNum >= 2 && MG3_ButtonControl.destoryStar == true)
+        {
+            MG3_ButtonControl.destoryStar = false;
+            Destroy(this.gameObject);
+        }
     }
 }
