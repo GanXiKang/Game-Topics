@@ -14,7 +14,8 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        transform.Translate(0, 0, speed * Time.deltaTime);
+        rb.AddForce(0, 0, speed * Time.deltaTime);
+        //transform.Translate(0, 0, speed * Time.deltaTime);
         if (Input.GetKeyDown("w"))
         {
             rb.velocity = Vector3.up * jump;
