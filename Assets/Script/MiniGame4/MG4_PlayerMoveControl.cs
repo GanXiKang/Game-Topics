@@ -13,6 +13,6 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        rb.velocity = transform.TransformDirection(new Vector3(0, 0, 1) * speed * Time.deltaTime);
+        transform.Translate(0, 0, speed * Time.deltaTime);
     }
 }
