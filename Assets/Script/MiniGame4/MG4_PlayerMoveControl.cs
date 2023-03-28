@@ -14,14 +14,10 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        Vector3 vSpeed = new Vector3(this.transform.forward.x, this.transform.forward.y, this.transform.position.z) * speed;
-        Vector3 jumpSpeed = new Vector3(this.transform.up.x, this.transform.position.y, this.transform.position.z) * jump;
-        this.transform.position += (vSpeed + jumpSpeed) * Time.deltaTime;
-        
-        //transform.Translate(0, 0, speed * Time.deltaTime);
-        //if (Input.GetKeyDown("w"))
-        //{
-        //    rb.velocity = Vector3.up * jump;
-        //}
+        transform.Translate(0, 0, speed * Time.deltaTime);
+        if (Input.GetKeyDown("w"))
+        {
+            rb.velocity = Vector3.up * jump;
+        }
     }
 }
