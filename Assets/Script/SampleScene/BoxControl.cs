@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class BoxControl : MonoBehaviour
 {
-    public Transform unopen;
-    int a;
+    public GameObject box;
+    Animation ani;
+    float a;
 
+    void Start()
+    {
+        ani = GetComponent<Animation>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && Dice.totalNum == 2)
@@ -35,8 +40,8 @@ public class BoxControl : MonoBehaviour
                     print("¿Õ£¡");
                     break;
             }
-            unopen.transform.Translate(0, 5, 0);
-            Destroy(this.gameObject, 2f);
+            ani.Play("OpenChest");
+            Destroy(box, 2f);
         }
     }
 }
