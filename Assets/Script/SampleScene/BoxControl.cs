@@ -11,6 +11,14 @@ public class BoxControl : MonoBehaviour
     {
         ani = GetComponent<Animation>();
     }
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.P))
+        {
+            print("ani");
+            ani.Play("Open");
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && Dice.totalNum == 2)
@@ -39,7 +47,6 @@ public class BoxControl : MonoBehaviour
                     print("¿Õ£¡");
                     break;
             }
-            ani.Play("OpenChest");
             Destroy(this.gameObject, 2f);
         }
     }
