@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BoxControl : MonoBehaviour
 {
-    public GameObject box;
     Animation ani;
     float a;
 
@@ -41,7 +40,7 @@ public class BoxControl : MonoBehaviour
                     break;
             }
             ani.Play("OpenChest");
-            Destroy(box, 2f);
+            Destroy(this.gameObject, 2f);
         }
     }
 }
