@@ -17,7 +17,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     {
         if (isFloor == true)
         {
-            rb.AddForce(speed * transform.forward);
+            rb.AddForce(transform.forward);
             if (Input.GetKeyDown("w"))
             {
                 transform.Translate(0, 0, speed * Time.deltaTime);
@@ -30,6 +30,11 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         if (other.tag == "Floor")
         {
             isFloor = true;
+        }
+        if (other.tag == "End")
+        {
+            isFloor = false;
+            //transform.position = new Vector3(20, 0.5f, 512);
         }
     }
     private void OnTriggerExit(Collider other)
