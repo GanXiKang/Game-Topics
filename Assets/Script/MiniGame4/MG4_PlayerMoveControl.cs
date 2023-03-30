@@ -12,10 +12,13 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        rb.AddForce(transform.forward);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector3.up * jump;
+        }
+        else
+        {
+            rb.AddForce(transform.forward); 
         }
     }
 }
