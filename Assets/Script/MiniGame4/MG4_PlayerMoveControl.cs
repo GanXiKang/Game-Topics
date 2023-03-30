@@ -6,7 +6,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
 {
     Rigidbody rb;
 
-    float speed = 5;
+    float speed = 20;
     float jump = 12;
     bool isFloor;
     void Start()
@@ -18,7 +18,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         if (isFloor == true)
         {
             rb.AddForce(transform.forward);
-            if (Input.GetKeyDown("w"))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 transform.Translate(0, 0, speed * Time.deltaTime);
                 rb.velocity = Vector3.up * jump;
@@ -34,7 +34,6 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         if (other.tag == "End")
         {
             isFloor = false;
-            //transform.position = new Vector3(20, 0.5f, 512);
         }
     }
     private void OnTriggerExit(Collider other)

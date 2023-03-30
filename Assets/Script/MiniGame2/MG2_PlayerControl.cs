@@ -15,19 +15,14 @@ public class MG2_PlayerControl : MonoBehaviour
     {
         if (MG2_UIControl.gameTime > 0)
         {
-            if (Input.GetKey("a"))
+            if (Input.GetKey(KeyCode.A))
             {
                 transform.Translate(-speed * Time.deltaTime, 0, 0);
             }
-            if (Input.GetKey("d"))
+            if (Input.GetKey(KeyCode.D))
             {
                 transform.Translate(speed * Time.deltaTime, 0, 0);
             }
-
-            //float h = Input.GetAxis("Horizontal");
-
-            //Vector3 push = new Vector3(h, 0, 0) * speed;
-            //rb.AddForce(push * Time.deltaTime);
         }
     }
 }
