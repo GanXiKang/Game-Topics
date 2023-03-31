@@ -11,18 +11,11 @@ public class BoxControl : MonoBehaviour
     {
         ani = GetComponent<Animation>();
     }
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.P))
-        {
-            print("ani");
-            ani.Play("Open");
-        }
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && Dice.totalNum == 2)
         {
+            ani.Play("Open");
             a = Random.Range(1, 11);
             switch (a) 
             {
