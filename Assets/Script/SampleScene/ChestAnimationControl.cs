@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class ChestAnimationControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animation ani;
+
     void Start()
     {
-        
+        ani = GetComponent<Animation>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (ChestColliderControl.isOpen == true)
+        {
+            ani.Play("Open");
+        }
     }
 }
