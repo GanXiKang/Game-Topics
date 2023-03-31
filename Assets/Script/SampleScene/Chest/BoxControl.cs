@@ -5,11 +5,80 @@ using UnityEngine;
 public class BoxControl : MonoBehaviour
 {
     Animation ani;
-    float a;
+    int a;
+    float isOpen;
 
     void Start()
     {
         ani = GetComponent<Animation>();
     }
-   
+    void Update()
+    {
+        if (ChestColliderControl.isOpen != 0)
+        {
+            ani.Play("Open");
+            ChestColliderControl.isOpen = 0;
+        }
+    }
+        private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player" && Dice.totalNum == 2)
+        {
+            isOpen = 1;
+            a = Random.Range(1, 11);
+            switch (a)
+            {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    print("獲得10個貓貓幣！");
+                    break;
+                case 5:
+                case 6:
+                    print("獲得20個貓貓幣！");
+                    break;
+                case 7:
+                case 8:
+                    print("獲得30個貓貓幣！");
+                    break;
+                case 9:
+                    print("獲得一個道具！");
+                    break;
+                case 10:
+                    print("空！");
+                    break;
+            }
+            Destroy(this.gameObject, 2f);
+        }
+        if (other.tag == "Player" && Dice.totalNum == 3)
+        {
+            isOpen = 1;
+            a = Random.Range(1, 11);
+            switch (a)
+            {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    print("獲得10個貓貓幣！");
+                    break;
+                case 5:
+                case 6:
+                    print("獲得20個貓貓幣！");
+                    break;
+                case 7:
+                case 8:
+                    print("獲得30個貓貓幣！");
+                    break;
+                case 9:
+                    print("獲得一個道具！");
+                    break;
+                case 10:
+                    print("空！");
+                    break;
+            }
+            Destroy(this.gameObject, 2f);
+        }
+    }
 }
