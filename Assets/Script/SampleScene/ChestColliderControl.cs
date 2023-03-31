@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChestColliderControl : MonoBehaviour
 {
     int a;
-    public static bool isOpen = false;
+    public static bool isOpen;
 
     private void OnTriggerEnter(Collider other)
     {
