@@ -5,7 +5,7 @@ using UnityEngine;
 public class MG4_PlayerMoveControl : MonoBehaviour
 {
     Rigidbody rb;
-    float speed = 20;
+    float speed = 10;
     float jump = 12;
     void Start()
     {
@@ -13,13 +13,14 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     }
     void FixedUpdate()
     {
+        rb.AddForce(transform.forward * 20);
+    }
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector3.up * jump;
         }
-        else
-        {
-            rb.AddForce(transform.forward * 20); 
-        }
     }
+
 }
