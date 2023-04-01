@@ -10,7 +10,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
