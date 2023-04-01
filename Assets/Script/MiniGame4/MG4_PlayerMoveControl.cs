@@ -5,6 +5,7 @@ using UnityEngine;
 public class MG4_PlayerMoveControl : MonoBehaviour
 {
     Rigidbody rb;
+    float speed = 20;
     float jump = 12;
     void Start()
     {
@@ -18,7 +19,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         }
         else
         {
-            rb.AddForce(transform.forward); 
+            rb.AddForce(transform.forward * 20); 
         }
     }
 }
