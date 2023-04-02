@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MG4_JumpComboControl : MonoBehaviour
 {
-    float combo = 0;
+    public static float combo = 0;
 
     private void OnTriggerEnter(Collider other)
     {
