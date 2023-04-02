@@ -633,7 +633,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.5}
 --- !u!1 &270874854
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296470944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.446768, y: -17.364807, z: 636.50696}
+  m_LocalPosition: {x: -18.446768, y: -17.364807, z: 636.507}
   m_LocalScale: {x: 20, y: 5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1160,7 +1160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626496741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.446768, y: -17.364807, z: 511.507}
+  m_LocalPosition: {x: -18.446768, y: -17.364807, z: 511.50702}
   m_LocalScale: {x: 20, y: 5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2223,6 +2223,7 @@ GameObject:
   - component: {fileID: 1730354163}
   - component: {fileID: 1730354165}
   - component: {fileID: 1730354164}
+  - component: {fileID: 1730354166}
   m_Layer: 0
   m_Name: RoadBlockCollider
   m_TagString: Untagged
@@ -2270,6 +2271,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0.1}
+--- !u!114 &1730354166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730354162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f78e4fb3d747ffc4aa457b99793d6012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1756275691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,7 +2297,6 @@ GameObject:
   - component: {fileID: 1756275697}
   - component: {fileID: 1756275699}
   - component: {fileID: 1756275700}
-  - component: {fileID: 1756275701}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2401,18 +2413,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1756275701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756275691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f78e4fb3d747ffc4aa457b99793d6012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1764713635
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,7 +3068,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078102291}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.446768, y: -17.364807, z: 711.307}
+  m_LocalPosition: {x: -18.446768, y: -17.364807, z: 711.30707}
   m_LocalScale: {x: 20, y: 5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
