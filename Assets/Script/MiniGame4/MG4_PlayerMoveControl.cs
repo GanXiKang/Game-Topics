@@ -22,6 +22,10 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     {
         rb.AddForce(transform.forward * speed);
 
+        ComboSpeed();
+    }
+    void ComboSpeed()
+    {
         if (MG4_RoadBlockControl.combo < 3)
         {
             speed = 10;
