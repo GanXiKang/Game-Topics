@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class MG4_RoadBlockControl : MonoBehaviour
 {
+    public static float combo = 0;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "RoadBlock")
         {
-            MG4_JumpComboControl.combo = 0;
-            print(MG4_JumpComboControl.combo);
+            combo = 0;
+            print(combo);
+        }
+        if (other.tag == "RecordJump")
+        {
+            combo++;
+            print(combo);
         }
     }
 }
