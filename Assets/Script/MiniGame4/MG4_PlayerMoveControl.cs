@@ -13,7 +13,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.AddForce(transform.forward * 20);
+        rb.AddForce(transform.forward * speed);
     }
     void Update()
     {
