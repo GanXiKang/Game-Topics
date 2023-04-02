@@ -19,17 +19,17 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         }
         if (MG4_RoadBlockControl.combo > 2)
         {
-            speed += 2;
+            speed = 12;
             print("speed" + speed);
         }
         if (MG4_RoadBlockControl.combo > 4)
         {
-            speed += 3;
+            speed = 15;
             print("speed" + speed);
         }
         if (MG4_RoadBlockControl.combo > 7)
         {
-            speed += 5;
+            speed = 20;
             print("speed" + speed);
         }
     }
