@@ -17,17 +17,22 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         {
             rb.velocity = Vector3.up * jump;
         }
-        if (MG4_RoadBlockControl.combo > 2)
+        if (MG4_RoadBlockControl.combo < 3)
+        {
+            speed = 10;
+            print("speed" + speed);
+        }
+        if (MG4_RoadBlockControl.combo >= 3 && MG4_RoadBlockControl.combo < 5)
         {
             speed = 12;
             print("speed" + speed);
         }
-        if (MG4_RoadBlockControl.combo > 4)
+        if (MG4_RoadBlockControl.combo >= 5 && MG4_RoadBlockControl.combo < 8)
         {
             speed = 15;
             print("speed" + speed);
         }
-        if (MG4_RoadBlockControl.combo > 7)
+        if (MG4_RoadBlockControl.combo >= 8)
         {
             speed = 20;
             print("speed" + speed);
