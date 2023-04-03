@@ -29,22 +29,18 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         if (MG4_RoadBlockControl.combo < 3)
         {
             speed = 10;
-            print("speed" + speed);
         }
         if (MG4_RoadBlockControl.combo >= 3 && MG4_RoadBlockControl.combo < 5)
         {
             speed = 15;
-            print("speed" + speed);
         }
         if (MG4_RoadBlockControl.combo >= 5 && MG4_RoadBlockControl.combo < 8)
         {
             speed = 18;
-            print("speed" + speed);
         }
         if (MG4_RoadBlockControl.combo >= 8)
         {
-            speed = 22;
-            print("speed" + speed);
+            speed = 20;
         }
     }
 }
