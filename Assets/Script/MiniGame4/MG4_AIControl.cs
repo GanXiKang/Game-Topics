@@ -6,7 +6,7 @@ public class MG4_AIControl : MonoBehaviour
 {
     Rigidbody rb;
 
-    float speed = 18;
+    float speed = 15;
     float jump = 10;
 
     void Start()
