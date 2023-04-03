@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MG4_AIControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody rb;
+
+    float speed = 18;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        rb.AddForce(transform.forward * speed);
     }
 }
