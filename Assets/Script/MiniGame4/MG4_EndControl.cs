@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MG4_EndControl : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class MG4_EndControl : MonoBehaviour
             {
                 print("Lose");
             }
+            StartCoroutine(BackMainGame());
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -34,5 +36,10 @@ public class MG4_EndControl : MonoBehaviour
             win = true;                         //PlayerÏÈµ½½Küc
             arriveEnd++;
         }
+    }
+    IEnumerator BackMainGame()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
     }
 }
