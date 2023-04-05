@@ -34,15 +34,15 @@ public class MG5_FishMoveControl : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x + 1.2f * Time.deltaTime, transform.position.y, transform.position.z);
 
-            Quaternion targetR = Quaternion.Euler(0, 180, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.6f);
+            Quaternion targetR = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.8f);
         }
         if (timer > 4f && timer < 8f)
         {
             transform.position = new Vector3(transform.position.x - 1.2f * Time.deltaTime, transform.position.y, transform.position.z);
 
-            Quaternion targetR = Quaternion.Euler(0, 0, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.6f);
+            Quaternion targetR = Quaternion.Euler(0, 180, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.8f);
         }
         if (timer > 8f)
         {
@@ -51,21 +51,21 @@ public class MG5_FishMoveControl : MonoBehaviour
     }
     void MoveModel2()
     {
-        if (timer < 3f)
+        if (timer < 6f)
         {
             transform.position = new Vector3(transform.position.x + 0.8f * Time.deltaTime, transform.position.y, transform.position.z);
 
-            Quaternion targetR = Quaternion.Euler(0, 0, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 1f);
+            Quaternion targetR = Quaternion.Euler(0, 180, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.9f);
         }
-        if (timer > 3f && timer < 6f)
+        if (timer > 6f && timer < 12f)
         {
             transform.position = new Vector3(transform.position.x - 0.8f * Time.deltaTime, transform.position.y, transform.position.z);
 
-            Quaternion targetR = Quaternion.Euler(0, 180, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 1f);
+            Quaternion targetR = Quaternion.Euler(0, 0, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.9f);
         }
-        if (timer > 6f)
+        if (timer > 12f)
         {
             timer = 0;
         }
@@ -76,14 +76,14 @@ public class MG5_FishMoveControl : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x + 1f * Time.deltaTime, transform.position.y, transform.position.z);
 
-            Quaternion targetR = Quaternion.Euler(0, 180, 0);
+            Quaternion targetR = Quaternion.Euler(0, 0, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.8f);
         }
         if (timer > 5f && timer < 10f)
         {
             transform.position = new Vector3(transform.position.x - 1f * Time.deltaTime, transform.position.y, transform.position.z);
 
-            Quaternion targetR = Quaternion.Euler(0, 0, 0);
+            Quaternion targetR = Quaternion.Euler(0, 180, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.8f);
         }
         if (timer > 5f)
