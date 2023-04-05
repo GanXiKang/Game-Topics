@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class MG5_HookControl : MonoBehaviour
 {
-    float depth;
-    float target;
-    float speed = 10;
+    float depth, distance,speed = 10;
     public static bool math = false;
-    Vector3 originalPosition;
+    Vector3 originalPosition, target;
 
     void Start()
     {
@@ -22,11 +20,13 @@ public class MG5_HookControl : MonoBehaviour
             {
                 depth = 300 * MG5_PowerBarControl.value / 5;
                 print("d:" + depth);
-                target = transform.position.y - depth;
+                distance = transform.position.y - depth;
                 print("t:" + target);
+                target = new Vector3(transform.position.x, distance, transform.position.z);
+                
                 math = false;
             }
-            gameObject.transform.localPosition = Vector3.MoveTowards(originalPosition, new Vector3(transform.position.x, target, transform.position.z), speed * Time.deltaTime);
+            gameObject.transform.localPosition = Vector3.MoveTowards(originalPosition, target, speed * Time.deltaTime);
         }
     }
 }
