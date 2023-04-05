@@ -7,6 +7,7 @@ public class MG5_HookControl : MonoBehaviour
     float depth;
     float target;
     float speed = 10;
+    public static bool math = false;
     Vector3 originalPosition;
 
     void Start()
@@ -17,11 +18,14 @@ public class MG5_HookControl : MonoBehaviour
     {
         if (MG5_CameraControl.watchPlayer == false)
         {
-            depth = 300 * MG5_PowerBarControl.value / 5;
-            print("d:" + depth);
-            target = transform.position.y - depth;
-            print("t:" + target);
-
+            if (math == true)
+            {
+                depth = 300 * MG5_PowerBarControl.value / 5;
+                print("d:" + depth);
+                target = transform.position.y - depth;
+                print("t:" + target);
+                math = false;
+            }
             gameObject.transform.localPosition = Vector3.MoveTowards(originalPosition, new Vector3(transform.position.x, target, transform.position.z), speed * Time.deltaTime);
         }
     }

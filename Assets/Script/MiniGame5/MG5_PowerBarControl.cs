@@ -54,6 +54,7 @@ public class MG5_PowerBarControl : MonoBehaviour
     IEnumerator ChangeCamera()
     {
         yield return new WaitForSeconds(1.5f);
+        MG5_HookControl.math = true;
         MG5_CameraControl.watchPlayer = false;
         powerBar.SetActive(false);
         powerButton.SetActive(false);
