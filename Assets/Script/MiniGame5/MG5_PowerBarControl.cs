@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class MG5_PowerBarControl : MonoBehaviour
 {
+    public GameObject powerButton;
     public GameObject powerBar;
     public Image power;
-    public Button powerButton;
 
     public static float value = 0;
     bool add = true;
@@ -20,6 +20,7 @@ public class MG5_PowerBarControl : MonoBehaviour
     public void ButtonUp()
     {
         isButtonDown = false;
+        StartCoroutine(ChangeCamera());
     }
     void Update()
     {
@@ -48,6 +49,14 @@ public class MG5_PowerBarControl : MonoBehaviour
                 value -= 0.1f;
             }
         }
+    }
+
+    IEnumerator ChangeCamera()
+    {
+        yield return new WaitForSeconds(2f);
+        MG5_CameraControl.watchPlayer = false;
+        powerBar.SetActive(false);
+        powerButton.SetActive(false);
     }
 }
 
