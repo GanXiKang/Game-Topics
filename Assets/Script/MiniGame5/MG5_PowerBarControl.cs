@@ -11,6 +11,14 @@ public class MG5_PowerBarControl : MonoBehaviour
     public static float value = 0;
     bool add = true;
 
+    public void ButtonDown()
+    {
+        print("yes");
+    }
+    public void ButtonUp()
+    {
+        print("no");
+    }
     void Update()
     {
         if (value >= 5)
@@ -41,7 +49,7 @@ public class MG5_PowerBarControl : MonoBehaviour
         }
         else 
         {
-            print(value);
+            //print(value);
         }
     }
 }
