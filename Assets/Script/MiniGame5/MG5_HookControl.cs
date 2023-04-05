@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MG5_HookControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform hookInSitu;
+    float depth;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (MG5_CameraControl.watchPlayer == false)
+        {
+            depth = 300 * MG5_PowerBarControl.value / 5;
+            print(depth);
+        }
     }
 }
