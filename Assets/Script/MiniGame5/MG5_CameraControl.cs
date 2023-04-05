@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class MG5_CameraControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static GameObject playerCamera;
+    public static GameObject hookCamera;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
