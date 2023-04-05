@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class MG5_CameraControl : MonoBehaviour
 {
-    public static GameObject playerCamera;
-    public static GameObject hookCamera;
-    void Start()
-    {
-        
-    }
+    public GameObject playerCamera;
+    public GameObject hookCamera;
+
+    public static bool watchPlayer = true;
     void Update()
     {
-        
+        if (watchPlayer == true)
+        {
+            playerCamera.SetActive(true);
+            hookCamera.SetActive(false);
+        }
+        else
+        {
+            playerCamera.SetActive(false);
+            hookCamera.SetActive(true);
+        }
     }
 }
