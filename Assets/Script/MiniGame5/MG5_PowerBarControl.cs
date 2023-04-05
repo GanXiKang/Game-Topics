@@ -39,6 +39,10 @@ public class MG5_PowerBarControl : MonoBehaviour
             }
 
         }
+        else 
+        {
+            print(value);
+        }
     }
 }
 
