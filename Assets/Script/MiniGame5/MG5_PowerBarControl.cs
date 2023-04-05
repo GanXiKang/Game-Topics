@@ -8,12 +8,9 @@ public class MG5_PowerBarControl : MonoBehaviour
     public GameObject powerBar;
     public Image power;
 
-    float value = 0;
+    public static float value = 0;
     bool add = true;
-    void Start()
-    {
-        
-    }
+
     void Update()
     {
         if (value >= 5)
@@ -34,11 +31,11 @@ public class MG5_PowerBarControl : MonoBehaviour
         {
             if (add == true)
             {
-                value += 0.2f;
+                value += 0.1f;
             }
             else
             {
-                value -= 0.2f;
+                value -= 0.1f;
             }
 
         }
