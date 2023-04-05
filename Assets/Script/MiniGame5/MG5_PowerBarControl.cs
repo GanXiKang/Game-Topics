@@ -29,6 +29,7 @@ public class MG5_PowerBarControl : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            powerBar.SetActive(true);
             if (add == true)
             {
                 value += 0.1f;
@@ -39,5 +40,15 @@ public class MG5_PowerBarControl : MonoBehaviour
             }
 
         }
+        else
+        {
+            StartCoroutine(PowerBarActive());
+        }
+    }
+    IEnumerator PowerBarActive()
+    {
+        yield return new WaitForSeconds(2f);
+        powerBar.SetActive(false);
     }
 }
+
