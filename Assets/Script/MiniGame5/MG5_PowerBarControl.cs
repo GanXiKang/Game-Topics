@@ -7,6 +7,7 @@ public class MG5_PowerBarControl : MonoBehaviour
 {
     public GameObject powerBar;
     public Image power;
+    public Button powerButton;
 
     public static float value = 0;
     bool add = true;
