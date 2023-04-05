@@ -10,14 +10,15 @@ public class MG5_PowerBarControl : MonoBehaviour
 
     public static float value = 0;
     bool add = true;
+    bool isButtonDown = false;
 
     public void ButtonDown()
     {
-        print("yes");
+        isButtonDown = true;
     }
     public void ButtonUp()
     {
-        print("no");
+        isButtonDown = false;
     }
     void Update()
     {
@@ -35,7 +36,7 @@ public class MG5_PowerBarControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (isButtonDown == true)
         {
             if (add == true)
             {
@@ -45,11 +46,6 @@ public class MG5_PowerBarControl : MonoBehaviour
             {
                 value -= 0.1f;
             }
-
-        }
-        else 
-        {
-            //print(value);
         }
     }
 }
