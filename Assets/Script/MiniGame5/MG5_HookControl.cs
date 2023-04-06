@@ -24,16 +24,12 @@ public class MG5_HookControl : MonoBehaviour
                 depth = 300 * MG5_PowerBarControl.value / 5;
                 print("d:" + depth);
                 distance = transform.position.y - depth;
-                print("t:" + target);
+                print("D:" + distance);
                 target = new Vector3(transform.position.x, distance, transform.position.z);
+                print("t:" + target);
                 
                 math = false;
             }
         }
-    }
-    private void FixedUpdate()
-    {
-        rb.AddForce(Vector3.down * 10f);
-        rb.velocity = Vector3.zero;
     }
 }
