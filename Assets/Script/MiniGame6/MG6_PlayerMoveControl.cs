@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class MG6_PlayerMoveControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody rb;
+    float speed = 10;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        rb.AddForce(transform.forward * speed);
     }
 }
