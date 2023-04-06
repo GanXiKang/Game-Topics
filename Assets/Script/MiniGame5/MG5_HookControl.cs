@@ -5,9 +5,10 @@ using UnityEngine;
 public class MG5_HookControl : MonoBehaviour
 {
     Rigidbody rb;
-    float depth, distance,speed = 10;
+    float depth, distance, value;
     Vector3 target;
     bool hookDown;
+
     public static bool math = false;
 
     void Start()
@@ -35,7 +36,7 @@ public class MG5_HookControl : MonoBehaviour
     {
         if (hookDown == true)
         {
-            rb.MovePosition(target);
+            value += 5f;
         }
     }
 }
