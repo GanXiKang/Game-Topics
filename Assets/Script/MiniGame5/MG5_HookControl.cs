@@ -36,7 +36,7 @@ public class MG5_HookControl : MonoBehaviour
     {
         if (hookDown == true)
         {
-            value += 5f;
+            rb.MovePosition(target);
         }
     }
 }
