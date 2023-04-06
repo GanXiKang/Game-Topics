@@ -29,7 +29,8 @@ public class MG5_HookControl : MonoBehaviour
                 
                 math = false;
             }
-            rb.MovePosition(transform.position - Vector3.up * Time.deltaTime);
+            rb.AddForce(Vector3.down * depth);
+            rb.velocity = Vector3.zero;
         }
     }
 }
