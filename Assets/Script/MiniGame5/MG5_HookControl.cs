@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class MG5_HookControl : MonoBehaviour
 {
+    Rigidbody rb;
     float depth, distance,speed = 10;
-    public static bool math = false;
     Vector3 originalPosition, target;
 
+    public static bool math = false;
+    
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         originalPosition = this.transform.position;
     }
     void Update()
@@ -26,7 +29,7 @@ public class MG5_HookControl : MonoBehaviour
                 
                 math = false;
             }
-            gameObject.transform.localPosition = Vector3.MoveTowards(originalPosition, target, speed * Time.deltaTime);
+            rb.MovePosition(transform.position - Vector3.up * Time.deltaTime);
         }
     }
 }
