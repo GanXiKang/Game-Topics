@@ -29,8 +29,11 @@ public class MG5_HookControl : MonoBehaviour
                 
                 math = false;
             }
-            rb.AddForce(Vector3.down * depth);
-            rb.velocity = Vector3.zero;
         }
+    }
+    private void FixedUpdate()
+    {
+        rb.AddForce(Vector3.down * 10f);
+        rb.velocity = Vector3.zero;
     }
 }
