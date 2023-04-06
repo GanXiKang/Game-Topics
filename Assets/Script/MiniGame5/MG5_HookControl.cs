@@ -6,14 +6,13 @@ public class MG5_HookControl : MonoBehaviour
 {
     Rigidbody rb;
     float depth, distance,speed = 10;
-    Vector3 originalPosition, target;
-
+    Vector3 target;
+    bool hookDown;
     public static bool math = false;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        originalPosition = this.transform.position;
     }
     void Update()
     {
@@ -27,9 +26,16 @@ public class MG5_HookControl : MonoBehaviour
                 print("D:" + distance);
                 target = new Vector3(transform.position.x, distance, transform.position.z);
                 print("t:" + target);
-                
+                hookDown = true;
                 math = false;
             }
+        }
+    }
+    void FixedUpdate()
+    {
+        if (hookDown == true)
+        {
+            rb.MovePosition(target);
         }
     }
 }
