@@ -1,26 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MG6_BalanceBarControl : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    public Image power;
+
+    float value = 0;
+    bool isAdd = false;
     void Update()
     {
+        if (value <= 0)
+        {
+            value = 0;
+        }
+        if (value >= 8)
+        {
+            value = 8;
+        }
         if (Input.GetMouseButton(0))
         {
-            print("0");
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            print("1");
+            isAdd = true;
         }
         if (Input.GetMouseButtonUp(0))
         {
-            print("no 1");
+            isAdd = false;
+        }
+        power.rectTransform.localScale = new Vector3(value, 0.5f, 1);
+    }
+    void FixedUpdate()
+    {
+        if (isAdd == true)
+        {
+            value += 0.5f;
+        }
+        else
+        {
+            value -= 1f;
         }
     }
 }
