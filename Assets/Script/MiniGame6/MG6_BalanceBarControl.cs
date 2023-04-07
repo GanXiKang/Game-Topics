@@ -8,15 +8,19 @@ public class MG6_BalanceBarControl : MonoBehaviour
     {
         
     }
-    void FixedUpdate()
+    void Update()
     {
         if (Input.GetMouseButton(0))
         {
-            print("yes");
+            print("0");
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            print("1");
         }
         if (Input.GetMouseButtonUp(0))
         {
-            print("no");
+            print("no 1");
         }
     }
 }
