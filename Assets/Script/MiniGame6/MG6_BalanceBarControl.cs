@@ -33,11 +33,11 @@ public class MG6_BalanceBarControl : MonoBehaviour
     {
         if (isAdd == true)
         {
-            value += 0.5f;
+            value += 0.2f;
         }
         else
         {
-            value -= 1f;
+            value -= 0.5f;
         }
     }
 }
