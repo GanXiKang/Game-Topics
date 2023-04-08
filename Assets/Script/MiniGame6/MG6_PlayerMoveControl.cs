@@ -5,7 +5,7 @@ using UnityEngine;
 public class MG6_PlayerMoveControl : MonoBehaviour
 {
     Rigidbody rb;
-    float speed = 10;
+    float speed = 5;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
