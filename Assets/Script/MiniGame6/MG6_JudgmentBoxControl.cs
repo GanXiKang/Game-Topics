@@ -8,13 +8,4 @@ public class MG6_JudgmentBoxControl : MonoBehaviour
     public Image left;
     public Image right;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }
