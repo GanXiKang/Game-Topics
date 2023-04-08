@@ -42,18 +42,32 @@ public class MG6_BalanceBarControl : MonoBehaviour
         }
 
         Judgment();
+        GameControl();
     }
     void Judgment()
     {
         if (value >= 2 && value <= 6)
         {
             isJudgment = true;
-            print("t");
         }
         else
         {
             isJudgment = false;
-            print("f");
+        }
+    }
+    void GameControl()
+    {
+        timer += Time.deltaTime;
+        if (isJudgment == false)
+        {
+            if (timer > 3)
+            {
+                print("GameOver");
+            }
+        }
+        else 
+        {
+            timer = 0;
         }
     }
 }
