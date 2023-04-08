@@ -65,8 +65,8 @@ public class MG6_BalanceBarControl : MonoBehaviour
             {
                 print("GameOver");
                 MG6_PlayerMoveControl.isMove = false;
-                player.transform.Translate(0, -1, 0);
-                player.transform.Rotate(0, 0, -5);
+                player.transform.Translate(0, -0.5f, 0);
+                player.transform.Rotate(0, 0, -0.5f);
                 Destroy(player, 2f);
             }
         }
