@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MG6_BalanceBarControl : MonoBehaviour
 {
+    public GameObject player;
     public Image power;
 
     float timer, value = 0;
@@ -63,6 +64,10 @@ public class MG6_BalanceBarControl : MonoBehaviour
             if (timer > 3)
             {
                 print("GameOver");
+                MG6_PlayerMoveControl.isMove = false;
+                player.transform.Translate(0, -1, 0);
+                player.transform.Rotate(0, 0, -5);
+                Destroy(player, 2f);
             }
         }
         else 
