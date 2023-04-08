@@ -6,12 +6,18 @@ public class MG6_PlayerMoveControl : MonoBehaviour
 {
     Rigidbody rb;
     float speed = 5;
+
+    public static bool isMove = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
     void FixedUpdate()
     {
-        rb.AddForce(transform.forward * speed);
+        if (isMove == true)
+        {
+            rb.AddForce(transform.forward * speed);
+        }
     }
 }
