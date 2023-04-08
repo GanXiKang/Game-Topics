@@ -7,8 +7,9 @@ public class MG6_BalanceBarControl : MonoBehaviour
 {
     public Image power;
 
-    float value = 0;
-    bool isAdd = false;
+    float timer, value = 0;
+    bool isJudgment, isAdd = false;
+
     void Update()
     {
         if (value <= 0)
@@ -38,6 +39,21 @@ public class MG6_BalanceBarControl : MonoBehaviour
         else
         {
             value -= 0.5f;
+        }
+
+        Judgment();
+    }
+    void Judgment()
+    {
+        if (value >= 2 && value <= 6)
+        {
+            isJudgment = true;
+            print("t");
+        }
+        else
+        {
+            isJudgment = false;
+            print("f");
         }
     }
 }
