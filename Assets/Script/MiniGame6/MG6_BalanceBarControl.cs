@@ -63,7 +63,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
         timer += Time.deltaTime;
         if (isJudgment == false)
         {
-            if (timer > 3)
+            if (timer > 3f)
             {
                 print("GameOver");
                 MG6_PlayerMoveControl.isMove = false;
