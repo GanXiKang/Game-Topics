@@ -8,7 +8,7 @@ public class MG6_JudgmentBoxControl : MonoBehaviour
     public Image left;
     public Image right;
 
-    int j = 1;
+    public static int j = 1;
 
     void Update()
     {
