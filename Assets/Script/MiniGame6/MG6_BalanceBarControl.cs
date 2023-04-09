@@ -50,10 +50,12 @@ public class MG6_BalanceBarControl : MonoBehaviour
         if (value >= 2 && value <= 6)
         {
             isJudgment = true;
+            power.color = Color.yellow;
         }
         else
         {
             isJudgment = false;
+            power.color = Color.red;
         }
     }
     void GameControl()
@@ -67,7 +69,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 MG6_PlayerMoveControl.isMove = false;
                 player.transform.Translate(0, -0.5f, 0);
                 player.transform.Rotate(0, 0, -0.5f);
-                Destroy(player, 2f);
+                Destroy(player, 1.5f);
             }
         }
         else 
