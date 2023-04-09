@@ -20,8 +20,8 @@ public class MG6_JudgmentBoxControl : MonoBehaviour
                 break;
 
             case 2:
-                left.rectTransform.anchoredPosition = new Vector3(-100, 370, 0);
-                right.rectTransform.anchoredPosition = new Vector3(100, 370, 0);
+                left.rectTransform.anchoredPosition = new Vector3(-300, 370, 0);
+                right.rectTransform.anchoredPosition = new Vector3(50, 370, 0);
                 break;
 
         }

@@ -47,16 +47,35 @@ public class MG6_BalanceBarControl : MonoBehaviour
     }
     void Judgment()
     {
-        if (value >= 2 && value <= 6)
+        switch(MG6_JudgmentBoxControl.j)
         {
-            isJudgment = true;
-            power.color = Color.yellow;
+            case 1:
+                if (value >= 2 && value <= 6)
+                {
+                    isJudgment = true;
+                    power.color = Color.yellow;
+                }
+                else
+                {
+                    isJudgment = false;
+                    power.color = Color.red;
+                }
+                break;
+
+            case 2:
+                if (value >= 1 && value <= 4.5f)
+                {
+                    isJudgment = true;
+                    power.color = Color.yellow;
+                }
+                else
+                {
+                    isJudgment = false;
+                    power.color = Color.red;
+                }
+                break;
         }
-        else
-        {
-            isJudgment = false;
-            power.color = Color.red;
-        }
+        
     }
     void GameControl()
     {
