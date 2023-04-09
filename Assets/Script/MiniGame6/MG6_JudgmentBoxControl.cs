@@ -10,7 +10,7 @@ public class MG6_JudgmentBoxControl : MonoBehaviour
 
     public static int j = 1;
 
-    void Update()
+    void FixedUpdate()
     {
         switch (j)
         {
@@ -31,7 +31,6 @@ public class MG6_JudgmentBoxControl : MonoBehaviour
         if (other.tag == "Player")
         {
             j++;
-            print(j);
         }
     }
 }
