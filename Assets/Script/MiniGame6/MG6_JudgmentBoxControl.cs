@@ -24,6 +24,20 @@ public class MG6_JudgmentBoxControl : MonoBehaviour
                 right.rectTransform.anchoredPosition = new Vector3(50, 370, 0);
                 break;
 
+            case 3:
+                left.rectTransform.anchoredPosition = new Vector3(100, 370, 0);
+                right.rectTransform.anchoredPosition = new Vector3(400, 370, 0);
+                break;
+
+            case 4:
+                left.rectTransform.anchoredPosition = new Vector3(-50, 370, 0);
+                right.rectTransform.anchoredPosition = new Vector3(150, 370, 0);
+                break;
+
+            case 5:
+                left.rectTransform.anchoredPosition = new Vector3(-350, 370, 0);
+                right.rectTransform.anchoredPosition = new Vector3(-100, 370, 0);
+                break;
         }
     }
     private void OnTriggerEnter(Collider other)

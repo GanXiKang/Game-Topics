@@ -74,6 +74,45 @@ public class MG6_BalanceBarControl : MonoBehaviour
                     power.color = Color.red;
                 }
                 break;
+
+            case 3:
+                if (value >= 5 && value <= 8)
+                {
+                    isJudgment = true;
+                    power.color = Color.yellow;
+                }
+                else
+                {
+                    isJudgment = false;
+                    power.color = Color.red;
+                }
+                break;
+
+            case 4:
+                if (value >= 3.5f && value <= 4.5f)
+                {
+                    isJudgment = true;
+                    power.color = Color.yellow;
+                }
+                else
+                {
+                    isJudgment = false;
+                    power.color = Color.red;
+                }
+                break;
+
+            case 5:
+                if (value >= 0.5f && value <= 3)
+                {
+                    isJudgment = true;
+                    power.color = Color.yellow;
+                }
+                else
+                {
+                    isJudgment = false;
+                    power.color = Color.red;
+                }
+                break;
         }
         
     }
