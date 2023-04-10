@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MG6_EndControl : MonoBehaviour
 {
-    bool back;
+    public static bool back;
     void Update()
     {
         if (back == true)
