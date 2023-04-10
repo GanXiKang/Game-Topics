@@ -28,7 +28,7 @@ public class MG6_JudgmentBoxControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "JudgmentBox")
         {
             j++;
         }
