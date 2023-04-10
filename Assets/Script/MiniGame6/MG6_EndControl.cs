@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MG6_EndControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "End")
+        {
+            print("Win!");
+            MG6_PlayerMoveControl.isMove = false;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    IEnumerator BackMainGame()
     {
-        
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
     }
 }
