@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MG6_BalanceBarControl : MonoBehaviour
 {
     public GameObject player;
+    public GameObject balanceBar;
     public Image power;
 
     float timer, value = 0;
@@ -21,6 +22,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
         {
             value = 8;
         }
+
         if (Input.GetMouseButton(0))
         {
             isAdd = true;
@@ -30,6 +32,11 @@ public class MG6_BalanceBarControl : MonoBehaviour
             isAdd = false;
         }
         power.rectTransform.localScale = new Vector3(value, 0.5f, 1);
+
+        if (MG6_EndControl.back == true)
+        {
+            balanceBar.SetActive(false);
+        }
     }
     void FixedUpdate()
     {

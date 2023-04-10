@@ -5,11 +5,19 @@ using UnityEngine.UI;
 
 public class MG6_JudgmentBoxControl : MonoBehaviour
 {
+    public GameObject judgmentBox;
     public Image left;
     public Image right;
 
     public static int j = 1;
 
+    void Update()
+    {
+        if (MG6_EndControl.back == true)
+        {
+            judgmentBox.SetActive(false);
+        }
+    }
     void FixedUpdate()
     {
         switch (j)
