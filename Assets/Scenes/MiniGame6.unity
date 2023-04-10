@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 51634383}
   - component: {fileID: 51634388}
   - component: {fileID: 51634389}
+  - component: {fileID: 51634390}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -252,6 +253,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811daa653bc5cee44a876e7c85d2cd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &51634390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51634382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d816deeea11bf40a556b2c186fda2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {fileID: 2135935455}
+  right: {fileID: 1481844294}
 --- !u!1 &518703835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,10 +1276,9 @@ GameObject:
   - component: {fileID: 1652883896}
   - component: {fileID: 1652883895}
   - component: {fileID: 1652883894}
-  - component: {fileID: 1652883898}
   m_Layer: 0
   m_Name: RecordBox
-  m_TagString: Untagged
+  m_TagString: JudgmentBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1347,20 +1361,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1652883898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652883893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0d816deeea11bf40a556b2c186fda2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  left: {fileID: 2135935455}
-  right: {fileID: 1481844294}
 --- !u!1 &1712079872
 GameObject:
   m_ObjectHideFlags: 0
