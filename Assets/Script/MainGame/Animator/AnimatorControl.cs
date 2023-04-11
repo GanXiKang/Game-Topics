@@ -14,11 +14,11 @@ public class AnimatorControl : MonoBehaviour
     {
         if (other.tag == "Point")
         {
-            if (MoveControl.Award == true)
+            if (P1_MoveControl.Award == true)
             {
                 StartCoroutine(YesAward());
             }
-            if (MoveControl.Award == false)
+            if (P1_MoveControl.Award == false)
             {
                 StartCoroutine(NoAward());
             }
