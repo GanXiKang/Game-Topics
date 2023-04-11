@@ -15,14 +15,9 @@ public class MG2_PlayerControl : MonoBehaviour
     {
         if (MG2_UIControl.gameTime > 0)
         {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            {
-                transform.Translate(-speed * Time.deltaTime, 0, 0);
-            }
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            {
-                transform.Translate(speed * Time.deltaTime, 0, 0);
-            }
+            float h = Input.GetAxis("Horizontal");
+            Vector3 movement = new Vector3(h, 0, 0) * speed * Time.deltaTime;
+            transform.position += movement;
         }
     }
 }
