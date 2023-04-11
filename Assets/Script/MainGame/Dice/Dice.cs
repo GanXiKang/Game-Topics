@@ -18,9 +18,7 @@ public class Dice : MonoBehaviour
             Debug.Log(diceNum);
 
             who = round % 4;
-            print(who);
             who++;
-            print("w:" + who);
             switch (who)
             {
                 case 1:
