@@ -13,9 +13,12 @@ public class MG1_BoxColliderControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && Dice.totalNum == 5 && playGame == true)
+        if (other.tag == "Player" && playGame == true)
         {
-            StartCoroutine(StartMiniGame());
+            if (Dice.P1_totalNum == 5 || Dice.P2_totalNum == 5 || Dice.P3_totalNum == 5 || Dice.P4_totalNum == 5)
+            {
+                StartCoroutine(StartMiniGame());
+            }
         }
     }
     private void OnTriggerExit(Collider other)
