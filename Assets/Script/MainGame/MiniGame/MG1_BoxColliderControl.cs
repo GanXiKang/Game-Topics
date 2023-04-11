@@ -13,11 +13,14 @@ public class MG1_BoxColliderControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && playGame == true)
+        if (playGame == true)
         {
-            if (Dice.P1_totalNum == 5 || Dice.P2_totalNum == 5 || Dice.P3_totalNum == 5 || Dice.P4_totalNum == 5)
+            if (other.tag == "P1" || other.tag == "P2" || other.tag == "P3" || other.tag == "P4")
             {
-                StartCoroutine(StartMiniGame());
+                if (Dice.P1_totalNum == 5 || Dice.P2_totalNum == 5 || Dice.P3_totalNum == 5 || Dice.P4_totalNum == 5)
+                {
+                    StartCoroutine(StartMiniGame());
+                }
             }
         }
     }
