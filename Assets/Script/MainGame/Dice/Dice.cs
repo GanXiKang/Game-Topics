@@ -30,12 +30,12 @@ public class Dice : MonoBehaviour
 
                 case 2:
                     P2_totalNum += diceNum;
-                    P3_isThrow = true;
+                    P2_isThrow = true;
                     break;
 
                 case 3:
                     P3_totalNum += diceNum;
-                    P4_isThrow = true;
+                    P3_isThrow = true;
                     break;
 
                 case 4:
