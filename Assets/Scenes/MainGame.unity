@@ -1564,32 +1564,6 @@ Transform:
   m_Father: {fileID: 2068800799}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &979892506 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5009988572312970408, guid: c7f72ef1d4cda0044a822ef09fd2a5c8, type: 3}
-  m_PrefabInstance: {fileID: 5280021818097774780}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &979892507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979892506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fefee4113a88ef4e983312f01c125c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  p:
-  - {fileID: 87042808}
-  - {fileID: 2141645621}
-  - {fileID: 1424091041}
-  - {fileID: 1255263042}
-  - {fileID: 530457904}
-  - {fileID: 832009002}
-  - {fileID: 919113461}
-  - {fileID: 1644681034}
 --- !u!1 &990238574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,6 +2739,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 979892507, guid: c7f72ef1d4cda0044a822ef09fd2a5c8, type: 3}
+      propertyPath: p.Array.data[0]
+      value: 
+      objectReference: {fileID: 87042808}
+    - target: {fileID: 979892507, guid: c7f72ef1d4cda0044a822ef09fd2a5c8, type: 3}
+      propertyPath: p.Array.data[1]
+      value: 
+      objectReference: {fileID: 2141645621}
+    - target: {fileID: 979892507, guid: c7f72ef1d4cda0044a822ef09fd2a5c8, type: 3}
+      propertyPath: p.Array.data[2]
+      value: 
+      objectReference: {fileID: 1424091041}
+    - target: {fileID: 979892507, guid: c7f72ef1d4cda0044a822ef09fd2a5c8, type: 3}
+      propertyPath: p.Array.data[3]
+      value: 
+      objectReference: {fileID: 1255263042}
+    - target: {fileID: 979892507, guid: c7f72ef1d4cda0044a822ef09fd2a5c8, type: 3}
+      propertyPath: p.Array.data[4]
+      value: 
+      objectReference: {fileID: 530457904}
+    - target: {fileID: 979892507, guid: c7f72ef1d4cda0044a822ef09fd2a5c8, type: 3}
+      propertyPath: p.Array.data[5]
+      value: 
+      objectReference: {fileID: 832009002}
+    - target: {fileID: 979892507, guid: c7f72ef1d4cda0044a822ef09fd2a5c8, type: 3}
+      propertyPath: p.Array.data[6]
+      value: 
+      objectReference: {fileID: 919113461}
+    - target: {fileID: 979892507, guid: c7f72ef1d4cda0044a822ef09fd2a5c8, type: 3}
+      propertyPath: p.Array.data[7]
+      value: 
+      objectReference: {fileID: 1644681034}
     - target: {fileID: 5009988572312970408, guid: c7f72ef1d4cda0044a822ef09fd2a5c8, type: 3}
       propertyPath: m_Name
       value: Mouse
