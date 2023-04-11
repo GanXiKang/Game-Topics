@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public GameObject P1_BackCamera, P1_FrontCamera, P2_BackCamera, P2_FrontCamera, P3_BackCamera, P3_FrontCamera, P4_BackCamera, P4_FrontCamera;
+    public GameObject P1_FrontCamera, P1_BackCamera, P2_FrontCamera, P2_BackCamera, P3_FrontCamera, P3_BackCamera, P4_FrontCamera, P4_BackCamera,;
 
     void Update()
     {
