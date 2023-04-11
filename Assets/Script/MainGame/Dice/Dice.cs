@@ -41,6 +41,7 @@ public class Dice : MonoBehaviour
                     P4_isThrow = true;
                     break;
             }
+            round++;
         }
     }
 }
