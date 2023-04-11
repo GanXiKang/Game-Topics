@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
-    float diceNum = 0, round = 0, who;
-    public static float P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0;
+    float diceNum = 0, who;
+    public static float P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0, round;
     public static bool P1_isThrow = false, P2_isThrow = false, P3_isThrow = false, P4_isThrow = false;
 
     public int min = 1;
