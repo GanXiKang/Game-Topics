@@ -9,7 +9,7 @@ public class MG2_GameResultControl : MonoBehaviour
     {
         if (MG2_UIControl.gameTime <= 0)
         {
-            if (MG2_CollectScoreControl.score >= 40)
+            if (MG2_CollectScoreControl.score >= 30)
             {
                 print("Win");
             }
