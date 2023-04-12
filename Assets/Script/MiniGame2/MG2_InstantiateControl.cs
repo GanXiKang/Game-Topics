@@ -21,14 +21,14 @@ public class MG2_InstantiateControl : MonoBehaviour
             if (appleTimer > appleTimePeriod)
             {
                 x = Random.Range(-30, 30);
-                Instantiate(apple, new Vector3(x, 23f, 0), transform.rotation);
+                Instantiate(apple, new Vector3(x, 27f, 0), transform.rotation);
 
                 appleTimer = 0;
             }
             if (boomTimer > boomTimePeriod)
             {
                 x = Random.Range(-30, 30);
-                Instantiate(boom, new Vector3(x, 23f, 0), transform.rotation);
+                Instantiate(boom, new Vector3(x, 27f, 0), transform.rotation);
 
                 boomTimer = 0;
             }
