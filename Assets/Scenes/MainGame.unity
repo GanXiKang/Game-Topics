@@ -231,7 +231,6 @@ GameObject:
   m_Component:
   - component: {fileID: 54056639}
   - component: {fileID: 54056641}
-  - component: {fileID: 54056640}
   m_Layer: 0
   m_Name: P3_FrontCamera
   m_TagString: Camera
@@ -254,14 +253,6 @@ Transform:
   m_Father: {fileID: 404783653}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 10, y: -180, z: 0}
---- !u!81 &54056640
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54056638}
-  m_Enabled: 1
 --- !u!20 &54056641
 Camera:
   m_ObjectHideFlags: 0
@@ -374,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2c7fe948a46646847b94dd0af8c0ca1d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2c7fe948a46646847b94dd0af8c0ca1d, type: 3}
       propertyPath: m_TagString
@@ -600,7 +591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ac73654722f52b54d8fa99acc58bc07c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ac73654722f52b54d8fa99acc58bc07c, type: 3}
       propertyPath: m_TagString
@@ -1079,7 +1070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b0908167e8343c74e9cdda2be7e48873, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b0908167e8343c74e9cdda2be7e48873, type: 3}
       propertyPath: m_TagString
@@ -1422,7 +1413,6 @@ GameObject:
   m_Component:
   - component: {fileID: 521498342}
   - component: {fileID: 521498344}
-  - component: {fileID: 521498343}
   m_Layer: 0
   m_Name: P3_BackCamera
   m_TagString: Untagged
@@ -1445,14 +1435,6 @@ Transform:
   m_Father: {fileID: 404783653}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &521498343
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521498341}
-  m_Enabled: 1
 --- !u!20 &521498344
 Camera:
   m_ObjectHideFlags: 0
@@ -1974,7 +1956,6 @@ GameObject:
   m_Component:
   - component: {fileID: 842096649}
   - component: {fileID: 842096651}
-  - component: {fileID: 842096650}
   m_Layer: 0
   m_Name: P2_BackCamera
   m_TagString: Untagged
@@ -1997,14 +1978,6 @@ Transform:
   m_Father: {fileID: 184861115}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &842096650
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842096648}
-  m_Enabled: 1
 --- !u!20 &842096651
 Camera:
   m_ObjectHideFlags: 0
@@ -2416,7 +2389,6 @@ GameObject:
   m_Component:
   - component: {fileID: 979955617}
   - component: {fileID: 979955616}
-  - component: {fileID: 979955615}
   m_Layer: 0
   m_Name: P2_FrontCamera
   m_TagString: Camera
@@ -2424,14 +2396,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!81 &979955615
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979955614}
-  m_Enabled: 1
 --- !u!20 &979955616
 Camera:
   m_ObjectHideFlags: 0
@@ -3246,7 +3210,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1811483986}
   - component: {fileID: 1811483988}
-  - component: {fileID: 1811483987}
   m_Layer: 0
   m_Name: P4_FrontCamera
   m_TagString: Camera
@@ -3269,14 +3232,6 @@ Transform:
   m_Father: {fileID: 62183022}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 10, y: 180, z: 0}
---- !u!81 &1811483987
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811483985}
-  m_Enabled: 1
 --- !u!20 &1811483988
 Camera:
   m_ObjectHideFlags: 0
@@ -3427,7 +3382,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1829309805}
   - component: {fileID: 1829309807}
-  - component: {fileID: 1829309806}
   m_Layer: 0
   m_Name: P4_BackCamera
   m_TagString: Untagged
@@ -3450,14 +3404,6 @@ Transform:
   m_Father: {fileID: 62183022}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1829309806
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829309804}
-  m_Enabled: 1
 --- !u!20 &1829309807
 Camera:
   m_ObjectHideFlags: 0
