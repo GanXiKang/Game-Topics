@@ -5,28 +5,55 @@ using UnityEngine.SceneManagement;
 
 public class MG1_BoxColliderControl : MonoBehaviour
 {
-    public static bool playGame = true;
-    IEnumerator StartMiniGame()
-    {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(1);
-    }
+    public static bool P1_playGame = true, P2_playGame = true, P3_playGame = true, P4_playGame = true;
+    public static float p;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (playGame == true)
+        if (other.tag == "P1" && P1_playGame == true)
         {
-            if (other.tag == "P1" || other.tag == "P2" || other.tag == "P3" || other.tag == "P4")
-            {
-                if (Dice.P1_totalNum == 5 || Dice.P2_totalNum == 5 || Dice.P3_totalNum == 5 || Dice.P4_totalNum == 5)
-                {
-                    StartCoroutine(StartMiniGame());
-                }
-            }
+            p = 1;
+            StartCoroutine(StartMiniGame());
+        }
+        if (other.tag == "P2" && P2_playGame == true)
+        {
+            p = 2;
+            StartCoroutine(StartMiniGame());
+        }
+        if (other.tag == "P3" && P3_playGame == true)
+        {
+            p = 3;
+            StartCoroutine(StartMiniGame());
+        }
+        if (other.tag == "P4" && P4_playGame == true)
+        {
+            p = 4;
+            StartCoroutine(StartMiniGame());
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        playGame = true;
+        if (other.tag == "P1")
+        {
+            P1_playGame = true;
+        }
+        if (other.tag == "P2")
+        {
+            P2_playGame = true;
+        }
+        if (other.tag == "P3")
+        {
+            P3_playGame = true;
+        }
+        if (other.tag == "P4")
+        {
+            P4_playGame = true;
+        }
+    }
+    IEnumerator StartMiniGame()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(1);
     }
 }
 

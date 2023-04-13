@@ -11,6 +11,7 @@ public class MG1_GameControl : MonoBehaviour
     {
         print("狸貓猜拳！");
     }
+
     public void Button_Scissors()
     {
         playWhat = 1;
@@ -23,6 +24,7 @@ public class MG1_GameControl : MonoBehaviour
     {
         playWhat = 3;
     }
+
     void Update()
     {
         if (i <= 5 && win < 3 && lose < 3)
@@ -113,7 +115,7 @@ public class MG1_GameControl : MonoBehaviour
         else
         {
             print("游戲結束");
-            MG1_BoxColliderControl.playGame = false;
+            PlayerPlayGameControl();
             if (win >= 3)
             {
                 print("獲得勝利！");
@@ -123,6 +125,29 @@ public class MG1_GameControl : MonoBehaviour
                 print("游戲失敗！");
             }
             StartCoroutine(BackMainGame());
+        }
+    }
+    void PlayerPlayGameControl()
+    {
+        if (MG1_BoxColliderControl.p == 1)
+        {
+            MG1_BoxColliderControl.P1_playGame = false;
+            MG1_BoxColliderControl.p = 0;
+        }
+        if (MG1_BoxColliderControl.p == 2)
+        {
+            MG1_BoxColliderControl.P2_playGame = false;
+            MG1_BoxColliderControl.p = 0;
+        }
+        if (MG1_BoxColliderControl.p == 3)
+        {
+            MG1_BoxColliderControl.P3_playGame = false;
+            MG1_BoxColliderControl.p = 0;
+        }
+        if (MG1_BoxColliderControl.p == 4)
+        {
+            MG1_BoxColliderControl.P4_playGame = false;
+            MG1_BoxColliderControl.p = 0;
         }
     }
     IEnumerator BackMainGame()
