@@ -9,7 +9,7 @@ public class UI_LoadingControl : MonoBehaviour
     {
         timer += 1 * Time.deltaTime;
 
-        if (timer >= 5)                           
+        if (timer >= 0.3f)                           
         {
             Destroy(this.gameObject);
         }
