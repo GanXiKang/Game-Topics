@@ -28,41 +28,53 @@ public class CameraControl : MonoBehaviour
 
     IEnumerator P1_ChangeCamera()
     {
-        P1_BackCamera.SetActive(false);
-        P1_FrontCamera.SetActive(true);
-        yield return new WaitForSeconds(5f);
         Dice.P1_isThrow = false;
+
+        P1_FrontCamera.SetActive(true);
+        P1_BackCamera.SetActive(false);
+        yield return new WaitForSeconds(4f);
         P1_BackCamera.SetActive(true);
         P1_FrontCamera.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        P2_BackCamera.SetActive(true);
     }
 
     IEnumerator P2_ChangeCamera()
     {
-        P2_BackCamera.SetActive(false);
-        P2_FrontCamera.SetActive(true);
-        yield return new WaitForSeconds(5f);
         Dice.P2_isThrow = false;
+
+        P2_FrontCamera.SetActive(true);
+        P2_BackCamera.SetActive(false);
+        yield return new WaitForSeconds(4f);
         P2_BackCamera.SetActive(true);
         P2_FrontCamera.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        P3_BackCamera.SetActive(true);
     }
 
     IEnumerator P3_ChangeCamera()
     {
-        P3_BackCamera.SetActive(false);
-        P3_FrontCamera.SetActive(true);
-        yield return new WaitForSeconds(5f);
         Dice.P3_isThrow = false;
+
+        P3_FrontCamera.SetActive(true);
+        P3_BackCamera.SetActive(false);
+        yield return new WaitForSeconds(4f);
         P3_BackCamera.SetActive(true);
         P3_FrontCamera.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        P4_BackCamera.SetActive(true);
     }
 
     IEnumerator P4_ChangeCamera()
     {
-        P4_BackCamera.SetActive(false);
-        P4_FrontCamera.SetActive(true);
-        yield return new WaitForSeconds(5f);
         Dice.P4_isThrow = false;
+
+        P4_FrontCamera.SetActive(true);
+        P4_BackCamera.SetActive(false);
+        yield return new WaitForSeconds(4f);
         P4_BackCamera.SetActive(true);
         P4_FrontCamera.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        P1_BackCamera.SetActive(true);
     }
 }
