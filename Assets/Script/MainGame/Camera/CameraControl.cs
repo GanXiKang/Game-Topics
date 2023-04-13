@@ -12,36 +12,17 @@ public class CameraControl : MonoBehaviour
         {
             StartCoroutine(P1_ChangeCamera());
         }
-        else
-        {
-            StopCoroutine(P1_ChangeCamera());
-        }
-
         if (Dice.P2_isThrow == true)
         {
             StartCoroutine(P2_ChangeCamera());
         }
-        else
-        {
-            StopCoroutine(P2_ChangeCamera());
-        }
-
         if (Dice.P3_isThrow == true)
         {
             StartCoroutine(P3_ChangeCamera());
         }
-        else
-        {
-            StopCoroutine(P3_ChangeCamera());
-        }
-
         if (Dice.P4_isThrow == true)
         {
             StartCoroutine(P4_ChangeCamera());
-        }
-        else
-        {
-            StopCoroutine(P4_ChangeCamera());
         }
     }
 
