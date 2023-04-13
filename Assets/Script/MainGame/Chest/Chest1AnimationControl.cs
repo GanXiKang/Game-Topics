@@ -12,7 +12,7 @@ public class Chest1AnimationControl : MonoBehaviour
     }
     void Update()
     {
-        if (ChestColliderControl.isOpen == 1)
+        if (ChestColliderControl.isOpen1 == true)
         {
             StartCoroutine(ChestActive());
         }
@@ -20,7 +20,7 @@ public class Chest1AnimationControl : MonoBehaviour
     IEnumerator ChestActive()
     {
         ani.Play("Open");
-        ChestColliderControl.isOpen = 0;
+        ChestColliderControl.isOpen1 = false;
         yield return new WaitForSeconds(3f);
         this.gameObject.SetActive(false);
     }
