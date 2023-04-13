@@ -44,7 +44,7 @@ public class ChestColliderControl : MonoBehaviour
                 isOpen1 = true;
                 Award();
             }
-            if (Dice.P1_totalNum == 1 || Dice.P2_totalNum == 1 || Dice.P3_totalNum == 1 || Dice.P4_totalNum == 1)
+            if (Dice.P1_totalNum == 3 || Dice.P2_totalNum == 3 || Dice.P3_totalNum == 3 || Dice.P4_totalNum == 3)
             {
                 isOpen2 = true;
                 Award();
