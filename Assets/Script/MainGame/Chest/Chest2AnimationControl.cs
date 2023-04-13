@@ -14,8 +14,14 @@ public class Chest2AnimationControl : MonoBehaviour
     {
         if (ChestColliderControl.isOpen2 == true)
         {
-            ani.Play("Open");
+            StartCoroutine(ChestActive());
             ChestColliderControl.isOpen2 = false;
         }
+    }
+    IEnumerator ChestActive()
+    {
+        ani.Play("Open");
+        yield return new WaitForSeconds(3f);
+        this.gameObject.SetActive(false);
     }
 }
