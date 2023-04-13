@@ -12,10 +12,10 @@ public class Chest1AnimationControl : MonoBehaviour
     }
     void Update()
     {
-        if (ChestColliderControl.isOpen == 1)
+        if (ChestColliderControl.isOpen1 == true)
         {
             ani.Play("Open");
-            ChestColliderControl.isOpen = 0;
+            ChestColliderControl.isOpen1 = false;
         }
     }
 }
