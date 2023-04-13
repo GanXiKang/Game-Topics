@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChestColliderControl : MonoBehaviour
 {
     int a;
-    public static bool isOpen1, isOpen2;
+    public static float isOpen;
 
     void Award()
     {
@@ -41,12 +41,12 @@ public class ChestColliderControl : MonoBehaviour
         {
             if (Dice.P1_totalNum == 2)
             {
-                isOpen1 = true;
+                isOpen = 1;
                 Award();
             }
             if (Dice.P1_totalNum == 1)
             {
-                isOpen2 = true;
+                isOpen = 2;
                 Award();
             }
         }
