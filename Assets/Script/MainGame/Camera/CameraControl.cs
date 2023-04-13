@@ -32,7 +32,7 @@ public class CameraControl : MonoBehaviour
         P1_FrontCamera.SetActive(true);
         yield return new WaitForSeconds(5f);
         Dice.P1_isThrow = false;
-        P2_BackCamera.SetActive(true);
+        P1_BackCamera.SetActive(true);
         P1_FrontCamera.SetActive(false);
     }
 
@@ -42,7 +42,7 @@ public class CameraControl : MonoBehaviour
         P2_FrontCamera.SetActive(true);
         yield return new WaitForSeconds(5f);
         Dice.P2_isThrow = false;
-        P3_BackCamera.SetActive(true);
+        P2_BackCamera.SetActive(true);
         P2_FrontCamera.SetActive(false);
     }
 
@@ -52,7 +52,7 @@ public class CameraControl : MonoBehaviour
         P3_FrontCamera.SetActive(true);
         yield return new WaitForSeconds(5f);
         Dice.P3_isThrow = false;
-        P4_BackCamera.SetActive(true);
+        P3_BackCamera.SetActive(true);
         P3_FrontCamera.SetActive(false);
     }
 
@@ -62,7 +62,7 @@ public class CameraControl : MonoBehaviour
         P4_FrontCamera.SetActive(true);
         yield return new WaitForSeconds(5f);
         Dice.P4_isThrow = false;
-        P1_BackCamera.SetActive(true);
+        P4_BackCamera.SetActive(true);
         P4_FrontCamera.SetActive(false);
     }
 }
