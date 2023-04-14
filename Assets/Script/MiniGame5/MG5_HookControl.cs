@@ -27,12 +27,8 @@ public class MG5_HookControl : MonoBehaviour
     {
         if (hookDown == true)
         {
-            rb.AddForce(Vector3.down * speed * Time.deltaTime);
-            //transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z);
-        }
-        else 
-        {
-            //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            //rb.AddForce(Vector3.down * speed * Time.deltaTime);
+            transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z);
         }
     }
 }
