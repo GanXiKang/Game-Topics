@@ -9,7 +9,7 @@ public class MG5_FishMoveControl : MonoBehaviour
 
      void Start()
     {
-        r = Random.Range(1, 4);
+        r = Random.Range(1, 2);
     }
     void FixedUpdate()
     {
@@ -53,14 +53,14 @@ public class MG5_FishMoveControl : MonoBehaviour
     {
         if (timer < 6f)
         {
-            transform.position = new Vector3(transform.position.x + 0.8f * Time.deltaTime, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - 0.8f * Time.deltaTime, transform.position.y, transform.position.z);
 
             Quaternion targetR = Quaternion.Euler(0, 180, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.9f);
         }
         if (timer > 6f && timer < 12f)
         {
-            transform.position = new Vector3(transform.position.x - 0.8f * Time.deltaTime, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + 0.8f * Time.deltaTime, transform.position.y, transform.position.z);
 
             Quaternion targetR = Quaternion.Euler(0, 0, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.9f);
