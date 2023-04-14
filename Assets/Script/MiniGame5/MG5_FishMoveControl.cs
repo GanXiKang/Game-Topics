@@ -86,7 +86,7 @@ public class MG5_FishMoveControl : MonoBehaviour
             Quaternion targetR = Quaternion.Euler(0, 180, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.8f);
         }
-        if (timer > 5f)
+        if (timer > 10f)
         {
             timer = 0;
         }
