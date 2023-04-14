@@ -5,7 +5,7 @@ using UnityEngine;
 public class MG5_HookControl : MonoBehaviour
 {
     Rigidbody rb;
-    float speed = 100;
+    float speed = 10;
     bool hookDown;
 
     void Start()
@@ -27,13 +27,7 @@ public class MG5_HookControl : MonoBehaviour
     {
         if (hookDown == true)
         {
-            print("yes");
-            rb.AddForce(Vector3.down * speed * Time.deltaTime);
-        }
-        if (hookDown == false)
-        {
-            print("NO");
-            rb.AddForce(Vector3.zero);
+            transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z);
         }
     }
 }
