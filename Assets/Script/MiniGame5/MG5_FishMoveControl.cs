@@ -9,7 +9,7 @@ public class MG5_FishMoveControl : MonoBehaviour
 
      void Start()
     {
-        r = Random.Range(3, 4);
+        r = Random.Range(1, 4);
     }
     void FixedUpdate()
     {
