@@ -5,11 +5,8 @@ using UnityEngine;
 public class MG5_HookControl : MonoBehaviour
 {
     Rigidbody rb;
-    float depth, distance, value;
-    Vector3 target;
+    float speed = 100;
     bool hookDown;
-
-    public static bool math = false;
 
     void Start()
     {
@@ -17,26 +14,26 @@ public class MG5_HookControl : MonoBehaviour
     }
     void Update()
     {
-        if (MG5_CameraControl.watchPlayer == false)
+        if (Input.GetKey(KeyCode.P))
         {
-            if (math == true)
-            {
-                depth = 300 * MG5_PowerBarControl.value / 5;
-                print("d:" + depth);
-                distance = transform.position.y - depth;
-                print("D:" + distance);
-                target = new Vector3(transform.position.x, distance, transform.position.z);
-                print("t:" + target);
-                hookDown = true;
-                math = false;
-            }
+            hookDown = true;
+        }
+        else 
+        {
+            hookDown = false;
         }
     }
     void FixedUpdate()
     {
         if (hookDown == true)
         {
-            rb.MovePosition(target);
+            print("yes");
+            rb.AddForce(Vector3.down * speed * Time.deltaTime);
+        }
+        if (hookDown == false)
+        {
+            print("NO");
+            rb.AddForce(Vector3.zero);
         }
     }
 }
