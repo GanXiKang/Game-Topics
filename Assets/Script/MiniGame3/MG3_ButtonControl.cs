@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MG3_ButtonControl : MonoBehaviour
 {
-    public GameObject startUI, B_Start, B_Box1, B_Box2, B_Box3;
+    public GameObject startUI, B_Next, B_Box1, B_Box2, B_Box3;
 
     public static bool downCup, openBox, destoryStar;
     public static float openWhyBox, round, destoryStarNum;
@@ -15,7 +15,6 @@ public class MG3_ButtonControl : MonoBehaviour
     public void Button_Start()
     {
         startUI.SetActive(false);
-        B_Start.gameObject.SetActive(false);
         B_Box1.gameObject.SetActive(true);
         B_Box2.gameObject.SetActive(true);
         B_Box3.gameObject.SetActive(true);
@@ -25,9 +24,9 @@ public class MG3_ButtonControl : MonoBehaviour
         round++;
         print("Round" + round);
     }
-    public void StartControl()
+    public void NextRound()
     {
-        B_Start.gameObject.SetActive(false);
+        B_Next.gameObject.SetActive(false);
         B_Box1.gameObject.SetActive(true);
         B_Box2.gameObject.SetActive(true);
         B_Box3.gameObject.SetActive(true);
@@ -82,6 +81,6 @@ public class MG3_ButtonControl : MonoBehaviour
     IEnumerator StartSetActice()
     {
         yield return new WaitForSeconds(2.5f);
-        B_Start.gameObject.SetActive(true);
+        B_Next.gameObject.SetActive(true);
     }
 }
