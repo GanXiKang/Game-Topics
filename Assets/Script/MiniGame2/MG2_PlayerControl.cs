@@ -13,11 +13,14 @@ public class MG2_PlayerControl : MonoBehaviour
 
     void Update()
     {
-        if (MG2_UIControl.gameTime > 0)
+        if (MG2_StartButtonControl.isStart == true)
         {
-            float h = Input.GetAxis("Horizontal");
-            Vector3 movement = new Vector3(h, 0, 0) * speed * Time.deltaTime;
-            transform.position += movement;
+            if (MG2_UIControl.gameTime > 0)
+            {
+                float h = Input.GetAxis("Horizontal");
+                Vector3 movement = new Vector3(h, 0, 0) * speed * Time.deltaTime;
+                transform.position += movement;
+            }
         }
     }
 }

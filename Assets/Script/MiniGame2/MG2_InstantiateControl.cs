@@ -10,27 +10,30 @@ public class MG2_InstantiateControl : MonoBehaviour
 
     void Update()
     {
-        if (MG2_UIControl.gameTime > 0)
+        if (MG2_StartButtonControl.isStart == true)
         {
-            appleTimer += Time.deltaTime;
-            boomTimer += Time.deltaTime;
-
-            appleTimePeriod = Random.Range(0.5f, 1f);
-            boomTimePeriod = Random.Range(1.8f, 4f);
-
-            if (appleTimer > appleTimePeriod)
+            if (MG2_UIControl.gameTime > 0)
             {
-                x = Random.Range(-30, 30);
-                Instantiate(apple, new Vector3(x, 27f, 0), transform.rotation);
+                appleTimer += Time.deltaTime;
+                boomTimer += Time.deltaTime;
 
-                appleTimer = 0;
-            }
-            if (boomTimer > boomTimePeriod)
-            {
-                x = Random.Range(-30, 30);
-                Instantiate(boom, new Vector3(x, 27f, 0), transform.rotation);
+                appleTimePeriod = Random.Range(0.5f, 1f);
+                boomTimePeriod = Random.Range(1.8f, 4f);
 
-                boomTimer = 0;
+                if (appleTimer > appleTimePeriod)
+                {
+                    x = Random.Range(-30, 30);
+                    Instantiate(apple, new Vector3(x, 27f, 0), transform.rotation);
+
+                    appleTimer = 0;
+                }
+                if (boomTimer > boomTimePeriod)
+                {
+                    x = Random.Range(-30, 30);
+                    Instantiate(boom, new Vector3(x, 27f, 0), transform.rotation);
+
+                    boomTimer = 0;
+                }
             }
         }
     }

@@ -11,15 +11,18 @@ public class MG2_UIControl : MonoBehaviour
 
     void Update()
     {
-        if (gameTime >= 0)
+        if (MG2_StartButtonControl.isStart == true)
         {
-            gameTime -= 1 * Time.deltaTime;
-            GameTime.text = "Time : " + gameTime.ToString("f0") + "s";
+            if (gameTime >= 0)
+            {
+                gameTime -= 1 * Time.deltaTime;
+                GameTime.text = "Time : " + gameTime.ToString("f0") + "s";
+            }
+            else
+            {
+                gameTime = 0;
+            }
+            Score.text = "Score : " + MG2_CollectScoreControl.score.ToString();
         }
-        else
-        {
-            gameTime = 0;
-        }
-        Score.text = "Score : " + MG2_CollectScoreControl.score.ToString();
     }
 }
