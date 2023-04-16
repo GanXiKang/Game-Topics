@@ -22,6 +22,7 @@ public class MG4_UIControl : MonoBehaviour
         if (MG4_RoadBlockControl.combo >= 3)
         {
             comboObject.SetActive(true);
+            combo.text = MG4_RoadBlockControl.combo + " Combo";
         }
         else
         {
