@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class MG4_UIControl : MonoBehaviour
 {
     public GameObject startUI;
+    public GameObject comboObject;
+    public Text combo;
 
     public static bool isStart;
 
@@ -17,6 +19,13 @@ public class MG4_UIControl : MonoBehaviour
 
     void Update()
     {
-        
+        if (MG4_RoadBlockControl.combo >= 3)
+        {
+            comboObject.SetActive(true);
+        }
+        else
+        {
+            comboObject.SetActive(false);
+        }
     }
 }
