@@ -15,6 +15,15 @@ public class MG3_ButtonControl : MonoBehaviour
     public void Button_Start()
     {
         startUI.SetActive(false);
+        B_Start.gameObject.SetActive(false);
+        B_Box1.gameObject.SetActive(true);
+        B_Box2.gameObject.SetActive(true);
+        B_Box3.gameObject.SetActive(true);
+        MG3_StarControl.insStar = true;
+        downCup = true;
+        destoryStarNum++;
+        round++;
+        print("Round" + round);
     }
     public void StartControl()
     {
