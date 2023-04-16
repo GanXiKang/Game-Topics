@@ -13,16 +13,22 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (MG4_UIControl.isStart == true)
         {
-            rb.velocity = Vector3.up * jump;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.velocity = Vector3.up * jump;
+            }
         }
     }
     void FixedUpdate()
     {
-        rb.AddForce(transform.forward * speed);
+        if (MG4_UIControl.isStart == true)
+        {
+            rb.AddForce(transform.forward * speed);
 
-        ComboSpeed();
+            ComboSpeed();
+        }
     }
     void ComboSpeed()
     {

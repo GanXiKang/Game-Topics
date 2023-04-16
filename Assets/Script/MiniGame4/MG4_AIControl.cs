@@ -15,7 +15,10 @@ public class MG4_AIControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.AddForce(transform.forward * speed);
+        if (MG4_UIControl.isStart == true)
+        {
+            rb.AddForce(transform.forward * speed);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
