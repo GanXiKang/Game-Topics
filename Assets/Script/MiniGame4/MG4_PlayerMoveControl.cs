@@ -5,8 +5,9 @@ using UnityEngine;
 public class MG4_PlayerMoveControl : MonoBehaviour
 {
     Rigidbody rb;
-    float speed = 10;
-    float jump = 12;
+
+    float speed = 10 , jump =12;
+    bool isJump;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -17,7 +18,11 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                rb.velocity = Vector3.up * jump;
+                if (isJump == true)
+                {
+                    rb.velocity = Vector3.up * jump;
+                    isJump = false;
+                }
             }
         }
     }
@@ -28,6 +33,13 @@ public class MG4_PlayerMoveControl : MonoBehaviour
             rb.AddForce(transform.forward * speed);
 
             ComboSpeed();
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Floor")
+        {
+            isJump = true;
         }
     }
     void ComboSpeed()
