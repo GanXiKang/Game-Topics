@@ -11,12 +11,10 @@ public class MG4_RoadBlockControl : MonoBehaviour
         if (other.tag == "RoadBlock")
         {
             combo = 0;
-            print(combo);
         }
         if (other.tag == "RecordJump")
         {
             combo++;
-            print(combo);
         }
     }
 }
