@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class MG3_ButtonControl : MonoBehaviour
 {
-    public GameObject B_Start, B_Box1, B_Box2, B_Box3;
+    public GameObject startUI, B_Start, B_Box1, B_Box2, B_Box3;
 
     public static bool downCup, openBox, destoryStar;
     public static float openWhyBox, round, destoryStarNum;
 
     bool startActive;
+
+    public void Button_Start()
+    {
+        startUI.SetActive(false);
+    }
     public void StartControl()
     {
         B_Start.gameObject.SetActive(false);
