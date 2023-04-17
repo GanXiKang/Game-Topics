@@ -5,7 +5,7 @@ using UnityEngine;
 public class MG2_PlayerControl : MonoBehaviour
 {
     Rigidbody rb;
-    public float speed = 20f;
+    public float speed = 10f;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
