@@ -5,14 +5,14 @@ using UnityEngine;
 public class MG2_PlayerControl : MonoBehaviour
 {
     Rigidbody rb;
-    public float speed = 10f;
+    public float speed = 20f;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
     void Update()
-    {
+    { 
         if (MG2_StartButtonControl.isStart == true)
         {
             if (MG2_UIControl.gameTime > 0)
