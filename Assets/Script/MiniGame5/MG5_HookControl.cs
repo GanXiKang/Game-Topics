@@ -5,15 +5,16 @@ using UnityEngine;
 public class MG5_HookControl : MonoBehaviour
 {
     Rigidbody rb;
-    float speed = 10;
+    float speed = 20, y;
     bool hookDown;
 
     void Start()
-    {
+    { 
         rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
+        y = transform.position.y;
         if (Input.GetKey(KeyCode.P))
         {
             hookDown = true;
@@ -27,8 +28,10 @@ public class MG5_HookControl : MonoBehaviour
     {
         if (hookDown == true)
         {
-            //rb.AddForce(Vector3.down * speed * Time.deltaTime);
-            transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z);
+            if (y >= 72)
+            {
+                transform.position = new Vector3(transform.position.x, y - speed * Time.deltaTime, transform.position.z);
+            }
         }
     }
 }
