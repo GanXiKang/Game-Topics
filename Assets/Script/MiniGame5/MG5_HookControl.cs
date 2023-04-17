@@ -15,11 +15,11 @@ public class MG5_HookControl : MonoBehaviour
     void Update()
     {
         y = transform.position.y;
-        if (Input.GetKey(KeyCode.P))
+        if (Input.GetMouseButton(0))
         {
             hookDown = true;
         }
-        else 
+        if (Input.GetMouseButtonUp(0))
         {
             hookDown = false;
         }
