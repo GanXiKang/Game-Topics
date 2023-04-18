@@ -60,6 +60,8 @@ public class MG5_HookControl : MonoBehaviour
             if (y < 155)
             {
                 transform.position += new Vector3(0, speed * 2 * Time.deltaTime, 0);
+                fishingLine.transform.position += new Vector3(0, 10 * 2 * Time.deltaTime, 0);
+                fishingLine.transform.localScale -= new Vector3(0, 0.04f * 2, 0);
             }
         }
     }
