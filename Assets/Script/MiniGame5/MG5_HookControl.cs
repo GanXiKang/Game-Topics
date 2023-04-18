@@ -6,7 +6,6 @@ public class MG5_HookControl : MonoBehaviour
 {
     public GameObject fishingLine;
     public static bool isFishing = false;
-    public static float score;
 
     Rigidbody rb;
     float y, speed = 20;
@@ -70,25 +69,9 @@ public class MG5_HookControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "SmallFish")
+        if (other.tag == "SmallFish" || other.tag == "MidFish" || other.tag == "BigFish" || other.tag == "Rubbish")
         {
             takeBack = true;
-            score++;
-        }
-        if (other.tag == "MidFish")
-        {
-            takeBack = true;
-            score += 3;
-        }
-        if (other.tag == "BigFish")
-        {
-            takeBack = true;
-            score += 5;
-        }
-        if (other.tag == "Rubbish")
-        {
-            takeBack = true;
-            score -= 5;
         }
         if (other.tag == "Finish")
         {
