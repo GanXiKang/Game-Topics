@@ -73,6 +73,9 @@ public class MG5_HookControl : MonoBehaviour
         {
             takeBack = true;
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
         if (other.tag == "Finish")
         {
             takeBack = false;
