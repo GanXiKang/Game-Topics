@@ -5,7 +5,7 @@ using UnityEngine;
 public class MG5_HookControl : MonoBehaviour
 {
     Rigidbody rb;
-    Vector3 originalLocation;
+    GameObject fishingLine;
 
     float speed = 20, y;
     bool hookDown, hookUp, takeBack;
@@ -13,7 +13,6 @@ public class MG5_HookControl : MonoBehaviour
     void Start()
     { 
         rb = GetComponent<Rigidbody>();
-        originalLocation = transform.position;
     }
     void Update()
     {
@@ -62,7 +61,7 @@ public class MG5_HookControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "SmallFish")
+        if (other.tag == "SmallFish" || other.tag == "MidFish" || other.tag == "BigFish" || other.tag == "Rubbish")
         {
             takeBack = true;
         }
