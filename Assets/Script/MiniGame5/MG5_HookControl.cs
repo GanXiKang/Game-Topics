@@ -8,7 +8,7 @@ public class MG5_HookControl : MonoBehaviour
     Vector3 originalLocation;
 
     float speed = 20, y;
-    bool hookDown, hookUp;
+    bool hookDown, hookUp, takeBack;
 
     void Start()
     { 
@@ -35,6 +35,10 @@ public class MG5_HookControl : MonoBehaviour
         {
             hookUp = false;
         }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            takeBack = true;
+        }
     }
     void FixedUpdate()
     {
@@ -50,6 +54,13 @@ public class MG5_HookControl : MonoBehaviour
             if (y < 155)
             {
                 transform.position = new Vector3(transform.position.x, y + speed * Time.deltaTime, transform.position.z);
+            }
+        }
+        if (takeBack == true)
+        {
+            if (y < 155)
+            {
+                transform.position = new Vector3(transform.position.x, y + speed *2 * Time.deltaTime, transform.position.z);
             }
         }
     }
