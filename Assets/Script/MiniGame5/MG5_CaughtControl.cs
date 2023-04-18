@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class MG5_CaughtControl : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
+    bool isCaught;
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Hook")
+        { 
+
+        }
     }
 }
