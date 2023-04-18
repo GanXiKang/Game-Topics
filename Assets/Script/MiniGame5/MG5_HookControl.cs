@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MG5_HookControl : MonoBehaviour
 {
-    Rigidbody rb;
-    GameObject fishingLine;
+    public GameObject fishingLine;
 
+    Rigidbody rb;
     float speed = 20, y;
     bool hookDown, hookUp, takeBack;
 
@@ -41,21 +41,25 @@ public class MG5_HookControl : MonoBehaviour
         {
             if (y > 72)
             {
-                transform.position = new Vector3(transform.position.x, y - speed * Time.deltaTime, transform.position.z);
+                transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
+                fishingLine.transform.position -= new Vector3(0, 10 * Time.deltaTime, 0);
+                fishingLine.transform.localScale += new Vector3(0, 0.04f, 0);
             }
         }
         if (hookUp == true)
         {
             if (y < 155)
             {
-                transform.position = new Vector3(transform.position.x, y + speed * Time.deltaTime, transform.position.z);
+                transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+                fishingLine.transform.position += new Vector3(0, 10 * Time.deltaTime, 0);
+                fishingLine.transform.localScale -= new Vector3(0, 0.04f, 0);
             }
         }
         if (takeBack == true)
         {
             if (y < 155)
             {
-                transform.position = new Vector3(transform.position.x, y + speed * 2 * Time.deltaTime, transform.position.z);
+                transform.position += new Vector3(0, speed * 2 * Time.deltaTime, 0);
             }
         }
     }
