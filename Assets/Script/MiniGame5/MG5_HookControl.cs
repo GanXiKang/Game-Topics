@@ -35,10 +35,6 @@ public class MG5_HookControl : MonoBehaviour
         {
             hookUp = false;
         }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            takeBack = true;
-        }
     }
     void FixedUpdate()
     {
@@ -60,8 +56,19 @@ public class MG5_HookControl : MonoBehaviour
         {
             if (y < 155)
             {
-                transform.position = new Vector3(transform.position.x, y + speed *2 * Time.deltaTime, transform.position.z);
+                transform.position = new Vector3(transform.position.x, y + speed * 2 * Time.deltaTime, transform.position.z);
             }
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "SmallFish")
+        {
+            takeBack = true;
+        }
+        if (other.tag == "Finish")
+        {
+            takeBack = false;
         }
     }
 }
