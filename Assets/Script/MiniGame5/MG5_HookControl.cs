@@ -5,9 +5,10 @@ using UnityEngine;
 public class MG5_HookControl : MonoBehaviour
 {
     public GameObject fishingLine;
+    public static bool isFishing = false;
 
     Rigidbody rb;
-    float speed = 20, y;
+    float y, speed = 20;
     bool hookDown, hookUp, takeBack;
 
     void Start()
@@ -21,6 +22,7 @@ public class MG5_HookControl : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             hookDown = true;
+            isFishing = true;
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -74,6 +76,7 @@ public class MG5_HookControl : MonoBehaviour
         if (other.tag == "Finish")
         {
             takeBack = false;
+            isFishing = false;
         }
     }
 }
