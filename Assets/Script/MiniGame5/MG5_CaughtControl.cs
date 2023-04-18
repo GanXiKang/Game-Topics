@@ -11,7 +11,6 @@ public class MG5_CaughtControl : MonoBehaviour
         if (isCaught == true)
         {
             transform.position += new Vector3(0, speed * Time.deltaTime, 0);
-
             Destroy(gameObject, 2f);
         }
     }
