@@ -11,11 +11,11 @@ public class MG5_PlayerMoveControl : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(0, -speed * Time.deltaTime, 0);
+            transform.Translate(-speed * Time.deltaTime, 0, 0);
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(0, speed * Time.deltaTime, 0);
+            transform.Translate(speed * Time.deltaTime, 0, 0);
         }
     }
 }
