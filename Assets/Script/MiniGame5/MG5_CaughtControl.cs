@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class MG5_CaughtControl : MonoBehaviour
 {
+    float speed = 20;
     bool isCaught;
     void Update()
     {
-        
+        if (isCaught == true)
+        {
+            transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Hook")
-        { 
-
+        {
+            isCaught = true;
         }
     }
 }
