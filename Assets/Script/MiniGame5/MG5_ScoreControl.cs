@@ -6,11 +6,12 @@ public class MG5_ScoreControl : MonoBehaviour
 {
     float score = 0;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "SmallFish")
         {
-            score += 3;
+            score++;
+            Destroy(other.gameObject);
         }
     }
 }

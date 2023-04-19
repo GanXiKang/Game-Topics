@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class MG5_CaughtControl : MonoBehaviour
 {
+    public static bool isCaught = false;
     float speed = 25;
-    bool isCaught;
     void Update()
     {
         if (isCaught == true)
         {
-            transform.position += new Vector3(0, speed * Time.deltaTime, 0);
-            Destroy(gameObject, 2f);
+            transform.Translate(0, speed * Time.deltaTime, 0);
         }
     }
     private void OnTriggerEnter(Collider other)
