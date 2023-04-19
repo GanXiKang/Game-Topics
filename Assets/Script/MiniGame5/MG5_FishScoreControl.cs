@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class MG5_FishScoreControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static float s;
+
+    void FixedUpdate()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "SmallFish")
+        {
+            s++;
+            Destroy(other.gameObject);
+        }
     }
 }
