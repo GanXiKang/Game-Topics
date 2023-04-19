@@ -85,7 +85,7 @@ public class MG5_HookControl : MonoBehaviour
         if (other.tag == "Rubbish")
         {
             takeBack = true;
-            score -= 5;
+            score -= 3;
         }
     }
     private void OnTriggerStay(Collider other)
