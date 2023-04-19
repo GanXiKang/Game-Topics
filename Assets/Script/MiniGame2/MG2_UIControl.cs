@@ -7,7 +7,7 @@ public class MG2_UIControl : MonoBehaviour
 {
     public Text GameTime, Score;
 
-    public  static float gameTime = 45f;
+    public static float gameTime = 45f;
 
     void Update()
     {
