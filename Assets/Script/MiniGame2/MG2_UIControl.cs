@@ -18,10 +18,6 @@ public class MG2_UIControl : MonoBehaviour
                 gameTime -= 1 * Time.deltaTime;
                 GameTime.text = "Time : " + gameTime.ToString("f0") + "s";
             }
-            else
-            {
-                gameTime = 0;
-            }
             Score.text = "Score : " + MG2_CollectScoreControl.score.ToString();
         }
     }
