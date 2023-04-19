@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MG5_CaughtControl : MonoBehaviour
 {
-    public static bool isCaught = false;
+    bool isCaught;
     float speed = 25;
     void Update()
     {
