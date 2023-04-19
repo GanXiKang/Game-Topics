@@ -6,16 +6,15 @@ public class MG5_HookControl : MonoBehaviour
 {
     public GameObject fishingLine;
     public static bool isFishing = false;
+    public static float score = 0;
 
     float y, speed = 20;
     bool hookDown, hookUp, takeBack;
 
-    Rigidbody rb;
     Collider col;
 
     void Start()
     { 
-        rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
     }
     void Update()
@@ -43,6 +42,8 @@ public class MG5_HookControl : MonoBehaviour
     }
     void FixedUpdate()
     {
+        print(score);
+
         if (hookDown == true && takeBack == false)
         {
             if (y > 72)
@@ -73,10 +74,29 @@ public class MG5_HookControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "SmallFish" || other.tag == "MidFish" || other.tag == "BigFish" || other.tag == "Rubbish")
+        if (other.tag == "SmallFish")
         {
             takeBack = true;
             col.enabled = false;
+            score++;
+        }
+        if (other.tag == "MidFish")
+        {
+            takeBack = true;
+            col.enabled = false;
+            score += 3;
+        }
+        if (other.tag == "BigFish")
+        {
+            takeBack = true;
+            col.enabled = false;
+            score += 5;
+        }
+        if (other.tag == "Rubbish")
+        {
+            takeBack = true;
+            col.enabled = false;
+            score -= 5;
         }
     }
     private void OnTriggerStay(Collider other)
