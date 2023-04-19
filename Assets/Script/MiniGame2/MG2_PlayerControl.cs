@@ -18,7 +18,7 @@ public class MG2_PlayerControl : MonoBehaviour
                 {
                     if (x >= -28)
                     {
-                        transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
+                        transform.Translate(-speed * Time.deltaTime, 0, 0);
                     }
                 }
                 if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
