@@ -11,12 +11,6 @@ public class MG5_HookControl : MonoBehaviour
     float y, speed = 20;
     bool hookDown, hookUp, takeBack;
 
-    Collider col;
-
-    void Start()
-    { 
-        col = GetComponent<Collider>();
-    }
     void Update()
     {
         y = transform.position.y;
@@ -25,7 +19,6 @@ public class MG5_HookControl : MonoBehaviour
         {
             hookDown = true;
             isFishing = true;
-            col.enabled = true;
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -77,25 +70,21 @@ public class MG5_HookControl : MonoBehaviour
         if (other.tag == "SmallFish")
         {
             takeBack = true;
-            col.enabled = false;
             score++;
         }
         if (other.tag == "MidFish")
         {
             takeBack = true;
-            col.enabled = false;
             score += 3;
         }
         if (other.tag == "BigFish")
         {
             takeBack = true;
-            col.enabled = false;
             score += 5;
         }
         if (other.tag == "Rubbish")
         {
             takeBack = true;
-            col.enabled = false;
             score -= 5;
         }
     }
