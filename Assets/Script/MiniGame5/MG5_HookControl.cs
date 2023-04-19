@@ -15,28 +15,29 @@ public class MG5_HookControl : MonoBehaviour
     {
         y = transform.position.y;
 
-        if (Input.GetMouseButton(0))
+        if (MG5_UIControl.gameTime > 0)
         {
-            hookDown = true;
-            isFishing = true;
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            hookDown = false;
-        }
-        if (Input.GetMouseButton(1))
-        {
-            hookUp = true;
-        }
-        if (Input.GetMouseButtonUp(1))
-        {
-            hookUp = false;
+            if (Input.GetMouseButton(0))
+            {
+                hookDown = true;
+                isFishing = true;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                hookDown = false;
+            }
+            if (Input.GetMouseButton(1))
+            {
+                hookUp = true;
+            }
+            if (Input.GetMouseButtonUp(1))
+            {
+                hookUp = false;
+            }
         }
     }
     void FixedUpdate()
     {
-        print(score);
-
         if (hookDown == true && takeBack == false)
         {
             if (y > 72)
