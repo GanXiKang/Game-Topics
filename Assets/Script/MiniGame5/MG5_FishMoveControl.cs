@@ -39,10 +39,10 @@ public class MG5_FishMoveControl : MonoBehaviour
         }
         if (timer > 4f && timer < 8f)
         {
-            transform.Translate(-1.2f * Time.deltaTime, 0, 0);
+            transform.Translate(1.2f * Time.deltaTime, 0, 0);
 
             Quaternion targetR = Quaternion.Euler(0, 180, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.8f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
         }
         if (timer > 8f)
         {
@@ -60,10 +60,10 @@ public class MG5_FishMoveControl : MonoBehaviour
         }
         if (timer > 6f && timer < 12f)
         {
-            transform.Translate(0.8f * Time.deltaTime, 0, 0);
+            transform.Translate(-0.8f * Time.deltaTime, 0, 0);
 
             Quaternion targetR = Quaternion.Euler(0, 0, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.9f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
         }
         if (timer > 12f)
         {
@@ -81,10 +81,10 @@ public class MG5_FishMoveControl : MonoBehaviour
         }
         if (timer > 5f && timer < 10f)
         {
-            transform.Translate(-1f * Time.deltaTime, 0, 0);
+            transform.Translate(1f * Time.deltaTime, 0, 0);
 
             Quaternion targetR = Quaternion.Euler(0, 180, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.8f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
         }
         if (timer > 10f)
         {
