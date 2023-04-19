@@ -4,22 +4,30 @@ using UnityEngine;
 
 public class MG2_PlayerControl : MonoBehaviour
 {
-    Rigidbody rb;
-    public float speed = 10f;
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    float x, speed = 20f;
 
     void Update()
-    { 
+    {
+        x = transform.position.x;
+
         if (MG2_StartButtonControl.isStart == true)
         {
             if (MG2_UIControl.gameTime > 0)
             {
-                float h = Input.GetAxis("Horizontal");
-                Vector3 movement = new Vector3(h, 0, 0) * speed * Time.deltaTime;
-                transform.position += movement;
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                {
+                    if (x >= -28)
+                    {
+                        transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
+                    }
+                }
+                if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                {
+                    if (x <= 28)
+                    {
+                        transform.Translate(speed * Time.deltaTime, 0, 0);
+                    }
+                }
             }
         }
     }
