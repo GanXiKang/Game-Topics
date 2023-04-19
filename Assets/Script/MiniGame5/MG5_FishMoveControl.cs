@@ -7,7 +7,7 @@ public class MG5_FishMoveControl : MonoBehaviour
     float timer;
     int r;
 
-     void Start()
+    void Start()
     {
         r = Random.Range(1, 4);
     }
