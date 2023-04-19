@@ -7,13 +7,16 @@ public class MG5_HookControl : MonoBehaviour
     public GameObject fishingLine;
     public static bool isFishing = false;
 
-    Rigidbody rb;
     float y, speed = 20;
     bool hookDown, hookUp, takeBack;
+
+    Rigidbody rb;
+    Collider col;
 
     void Start()
     { 
         rb = GetComponent<Rigidbody>();
+        col = GetComponent<Collider>();
     }
     void Update()
     {
@@ -23,6 +26,7 @@ public class MG5_HookControl : MonoBehaviour
         {
             hookDown = true;
             isFishing = true;
+            col.enabled = true;
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -39,7 +43,7 @@ public class MG5_HookControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (hookDown == true)
+        if (hookDown == true && takeBack == false)
         {
             if (y > 72)
             {
@@ -48,7 +52,7 @@ public class MG5_HookControl : MonoBehaviour
                 fishingLine.transform.localScale += new Vector3(0, 0.04f, 0);
             }
         }
-        if (hookUp == true)
+        if (hookUp == true && takeBack == false)
         {
             if (y < 155)
             {
@@ -72,6 +76,7 @@ public class MG5_HookControl : MonoBehaviour
         if (other.tag == "SmallFish" || other.tag == "MidFish" || other.tag == "BigFish" || other.tag == "Rubbish")
         {
             takeBack = true;
+            col.enabled = false;
         }
     }
     private void OnTriggerStay(Collider other)
