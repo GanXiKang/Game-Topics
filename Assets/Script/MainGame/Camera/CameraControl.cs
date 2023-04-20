@@ -37,6 +37,7 @@ public class CameraControl : MonoBehaviour
         P1_FrontCamera.SetActive(false);
         yield return new WaitForSeconds(2f);
         P2_BackCamera.SetActive(true);
+        P1_BackCamera.SetActive(false);
     }
 
     IEnumerator P2_ChangeCamera()
@@ -50,6 +51,7 @@ public class CameraControl : MonoBehaviour
         P2_FrontCamera.SetActive(false);
         yield return new WaitForSeconds(2f);
         P3_BackCamera.SetActive(true);
+        P2_BackCamera.SetActive(false);
     }
 
     IEnumerator P3_ChangeCamera()
@@ -63,6 +65,7 @@ public class CameraControl : MonoBehaviour
         P3_FrontCamera.SetActive(false);
         yield return new WaitForSeconds(2f);
         P4_BackCamera.SetActive(true);
+        P3_BackCamera.SetActive(false);
     }
 
     IEnumerator P4_ChangeCamera()
@@ -76,5 +79,6 @@ public class CameraControl : MonoBehaviour
         P4_FrontCamera.SetActive(false);
         yield return new WaitForSeconds(2f);
         P1_BackCamera.SetActive(true);
+        P4_BackCamera.SetActive(false);
     }
 }
