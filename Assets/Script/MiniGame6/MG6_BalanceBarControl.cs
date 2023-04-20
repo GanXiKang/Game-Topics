@@ -120,6 +120,19 @@ public class MG6_BalanceBarControl : MonoBehaviour
                     power.color = Color.red;
                 }
                 break;
+
+            case 6:
+                if (value >= 6 && value <= 7.5f)
+                {
+                    isJudgment = true;
+                    power.color = Color.yellow;
+                }
+                else
+                {
+                    isJudgment = false;
+                    power.color = Color.red;
+                }
+                break;
         }
         
     }
@@ -128,7 +141,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
         timer += Time.deltaTime;
         if (isJudgment == false)
         {
-            if (timer > 3f)
+            if (timer > 2f)
             {
                 print("GameOver");
                 MG6_PlayerMoveControl.isMove = false;
