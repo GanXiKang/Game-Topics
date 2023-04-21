@@ -33,21 +33,26 @@ public class MG1_CameraControl : MonoBehaviour
         if (MG1_GameControl.W == true)
         {
             UI_Win.SetActive(true);
+            MG1_GameControl.W = false;
         }
         if (MG1_GameControl.L == true)
         {
             UI_Lose.SetActive(true);
+            MG1_GameControl.L = false;
         }
         if (MG1_GameControl.D == true)
         {
             UI_Draw.SetActive(true);
+            MG1_GameControl.D = false;
         }
         yield return new WaitForSeconds(2f);
         mainCamera.SetActive(true);
         camera1.SetActive(false);
+
         UI_Scissors.SetActive(true);
         UI_Stone.SetActive(true);
         UI_Cloth.SetActive(true);
+
         UI_Win.SetActive(false);
         UI_Lose.SetActive(false);
         UI_Draw.SetActive(false);
