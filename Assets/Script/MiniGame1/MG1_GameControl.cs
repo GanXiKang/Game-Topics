@@ -7,7 +7,7 @@ public class MG1_GameControl : MonoBehaviour
 {
     float playWhat, AIplayWhat, win, lose, i;                   // 1 = 剪刀; 2 = 石頭; 3 = 佈
 
-    public static bool cameraC;
+    public static bool cameraC, W, L, D;
 
     public void Button_Scissors()
     {
@@ -40,6 +40,7 @@ public class MG1_GameControl : MonoBehaviour
                         case 1:
                             print("我出剪刀");
                             print("平局！");
+                            D = true;
                             playWhat = 0;
                             break;
                         case 2:
@@ -47,6 +48,7 @@ public class MG1_GameControl : MonoBehaviour
                             print("Win！");
                             i++;
                             win++;
+                            W = true;
                             playWhat = 0;
                             break;
                         case 3:
@@ -54,6 +56,7 @@ public class MG1_GameControl : MonoBehaviour
                             print("Lose！");
                             i++;
                             lose++;
+                            L = true;
                             playWhat = 0;
                             break;
                     }
@@ -68,11 +71,13 @@ public class MG1_GameControl : MonoBehaviour
                             print("Lose！");
                             i++;
                             lose++;
+                            L = true;
                             playWhat = 0;
                             break;
                         case 2:
                             print("我出石頭");
                             print("平局！");
+                            D = true;
                             playWhat = 0;
                             break;
                         case 3:
@@ -80,6 +85,7 @@ public class MG1_GameControl : MonoBehaviour
                             print("Win！");
                             i++;
                             win++;
+                            W = true;
                             playWhat = 0;
                             break;
                     }
@@ -94,6 +100,7 @@ public class MG1_GameControl : MonoBehaviour
                             print("Win！");
                             i++;
                             win++;
+                            W = true;
                             playWhat = 0;
                             break;
                         case 2:
@@ -101,11 +108,13 @@ public class MG1_GameControl : MonoBehaviour
                             print("Lose");
                             i++;
                             lose++;
+                            L = true;
                             playWhat = 0;
                             break;
                         case 3:
                             print("我出佈");
                             print("平局！");
+                            D = true;
                             playWhat = 0;
                             break;
                     }
