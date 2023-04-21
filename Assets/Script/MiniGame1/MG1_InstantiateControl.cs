@@ -26,27 +26,33 @@ public class MG1_InstantiateControl : MonoBehaviour
         if (MG1_GameControl.playWhat == 1)
         {
             Instantiate(scissors, playerBrand.transform.position, playerBrand.transform.rotation);
+            MG1_GameControl.playWhat = 0;
         }
         if (MG1_GameControl.playWhat == 2)
         {
             Instantiate(stone, playerBrand.transform.position, playerBrand.transform.rotation);
+            MG1_GameControl.playWhat = 0;
         }
         if (MG1_GameControl.playWhat == 3)
         {
             Instantiate(cloth, playerBrand.transform.position, playerBrand.transform.rotation);
+            MG1_GameControl.playWhat = 0;
         }
 
         if (MG1_GameControl.AIplayWhat == 1)
         {
             Instantiate(scissors, bossBrand.transform.position, bossBrand.transform.rotation);
+            MG1_GameControl.AIplayWhat = 0;
         }
         if (MG1_GameControl.AIplayWhat == 2)
         {
             Instantiate(stone, bossBrand.transform.position, bossBrand.transform.rotation);
+            MG1_GameControl.AIplayWhat = 0;
         }
         if (MG1_GameControl.AIplayWhat == 3)
         {
             Instantiate(cloth, bossBrand.transform.position, bossBrand.transform.rotation);
+            MG1_GameControl.AIplayWhat = 0;
         }
     }
 }
