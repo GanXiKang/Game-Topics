@@ -9,7 +9,7 @@ public class MG1_InstantiateControl : MonoBehaviour
 
     void Start()
     {
-
+        tiger.transform.localScale = new Vector3(2, 2, 2);
         Instantiate(tiger, playerIns.transform.position, playerIns.transform.rotation);
     }
     void Update()
