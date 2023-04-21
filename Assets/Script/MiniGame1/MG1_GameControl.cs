@@ -7,22 +7,22 @@ public class MG1_GameControl : MonoBehaviour
 {
     float playWhat, AIplayWhat, win, lose, i;                   // 1 = ºÙµ∂; 2 =  ØÓ^; 3 = Å—
 
-    void Awake()
-    {
-        print("¿Íÿà≤¬»≠£°");
-    }
+    public static bool cameraC;
 
     public void Button_Scissors()
     {
         playWhat = 1;
+        cameraC = true;
     }
     public void Button_Stone()
     {
         playWhat = 2;
+        cameraC = true;
     }
     public void Button_Cloth()
     {
         playWhat = 3;
+        cameraC = true;
     }
 
     void Update()
