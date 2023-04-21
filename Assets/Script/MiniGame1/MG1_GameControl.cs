@@ -39,19 +39,16 @@ public class MG1_GameControl : MonoBehaviour
                     {
                         case 1:
                             D = true;
-                            playWhat = 0;
                             break;
                         case 2:
                             i++;
                             win++;
                             W = true;
-                            playWhat = 0;
                             break;
                         case 3:
                             i++;
                             lose++;
                             L = true;
-                            playWhat = 0;
                             break;
                     }
                 }
@@ -63,17 +60,14 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             lose++;
                             L = true;
-                            playWhat = 0;
                             break;
                         case 2:
                             D = true;
-                            playWhat = 0;
                             break;
                         case 3:
                             i++;
                             win++;
                             W = true;
-                            playWhat = 0;
                             break;
                     }
                 }
@@ -85,17 +79,14 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             win++;
                             W = true;
-                            playWhat = 0;
                             break;
                         case 2:
                             i++;
                             lose++;
                             L = true;
-                            playWhat = 0;
                             break;
                         case 3:
                             D = true;
-                            playWhat = 0;
                             break;
                     }
                 }
