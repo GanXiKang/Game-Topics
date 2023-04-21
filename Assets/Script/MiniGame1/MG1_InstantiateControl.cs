@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class MG1_InstantiateControl : MonoBehaviour
 {
-    public GameObject mouse;
+    public GameObject tiger;
     public Transform playerIns;
 
     void Start()
     {
-        Instantiate(mouse, playerIns.transform.position, playerIns.transform.rotation);
+
+        Instantiate(tiger, playerIns.transform.position, playerIns.transform.rotation);
     }
     void Update()
     {
