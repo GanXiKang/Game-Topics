@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MG1_GameControl : MonoBehaviour
 {
-    public static float playWhat, AIplayWhat, win, lose, i;                   // 1 = 剪刀; 2 = 石頭; 3 = 佈
+    float win, lose, i;                                   // 1 = 剪刀; 2 = 石頭; 3 = 佈
+
+    public static float playWhat, AIplayWhat; 
     public static bool cameraC, W, L, D;
 
     public void Button_Scissors()
@@ -40,7 +42,6 @@ public class MG1_GameControl : MonoBehaviour
                             print("我出剪刀");
                             print("平局！");
                             D = true;
-                            playWhat = 0;
                             break;
                         case 2:
                             print("我出石頭");
@@ -48,7 +49,6 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             win++;
                             W = true;
-                            playWhat = 0;
                             break;
                         case 3:
                             print("我出佈");
@@ -56,7 +56,6 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             lose++;
                             L = true;
-                            playWhat = 0;
                             break;
                     }
                 }
