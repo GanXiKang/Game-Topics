@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class MG1_DestoryControl : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    void Start()
     {
-        if (other.tag == "Destory")
-        {
-            Destroy(this.gameObject, 3f);
-        }
+        Destroy(this.gameObject, 3f);
     }
 }
