@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class MG1_GameControl : MonoBehaviour
 {
     public static float playWhat, AIplayWhat, win, lose, i;                   // 1 = Ότµ¶; 2 = Κ―ξ^; 3 = Ρ
-
     public static bool cameraC, W, L, D;
 
     public void Button_Scissors()

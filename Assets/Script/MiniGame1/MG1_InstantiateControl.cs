@@ -23,6 +23,17 @@ public class MG1_InstantiateControl : MonoBehaviour
     }
     void Update()
     {
-        
+        if (MG1_GameControl.playWhat == 1)
+        {
+            Instantiate(scissors, playerBrand.transform.position, playerBrand.transform.rotation);
+        }
+        if (MG1_GameControl.playWhat == 2)
+        {
+            Instantiate(stone, playerBrand.transform.position, playerBrand.transform.rotation);
+        }
+        if (MG1_GameControl.playWhat == 3)
+        {
+            Instantiate(cloth, playerBrand.transform.position, playerBrand.transform.rotation);
+        }
     }
 }
