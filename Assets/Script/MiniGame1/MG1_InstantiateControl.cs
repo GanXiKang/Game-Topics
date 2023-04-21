@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MG1_InstantiateControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject mouse;
+    public Transform playerIns;
+
     void Start()
     {
-        
+        Instantiate(mouse, playerIns.transform.position, playerIns.transform.rotation);
     }
-
-    // Update is called once per frame
     void Update()
     {
         
