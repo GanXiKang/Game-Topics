@@ -35,5 +35,18 @@ public class MG1_InstantiateControl : MonoBehaviour
         {
             Instantiate(cloth, playerBrand.transform.position, playerBrand.transform.rotation);
         }
+
+        if (MG1_GameControl.AIplayWhat == 1)
+        {
+            Instantiate(scissors, bossBrand.transform.position, bossBrand.transform.rotation);
+        }
+        if (MG1_GameControl.AIplayWhat == 2)
+        {
+            Instantiate(stone, bossBrand.transform.position, bossBrand.transform.rotation);
+        }
+        if (MG1_GameControl.AIplayWhat == 3)
+        {
+            Instantiate(cloth, bossBrand.transform.position, bossBrand.transform.rotation);
+        }
     }
 }
