@@ -35,52 +35,41 @@ public class MG1_GameControl : MonoBehaviour
                 AIplayWhat = Random.Range(1, 4);
                 if (AIplayWhat == 1)
                 {
-                    print("AI出剪刀");
                     switch (playWhat)
                     {
                         case 1:
-                            print("我出剪刀");
-                            print("平局！");
                             D = true;
+                            playWhat = 0;
                             break;
                         case 2:
-                            print("我出石頭");
-                            print("Win！");
                             i++;
                             win++;
                             W = true;
+                            playWhat = 0;
                             break;
                         case 3:
-                            print("我出佈");
-                            print("Lose！");
                             i++;
                             lose++;
                             L = true;
+                            playWhat = 0;
                             break;
                     }
                 }
                 if (AIplayWhat == 2)
                 {
-                    print("AI出石頭");
                     switch (playWhat)
                     {
                         case 1:
-                            print("我出剪刀");
-                            print("Lose！");
                             i++;
                             lose++;
                             L = true;
                             playWhat = 0;
                             break;
                         case 2:
-                            print("我出石頭");
-                            print("平局！");
                             D = true;
                             playWhat = 0;
                             break;
                         case 3:
-                            print("我出佈");
-                            print("Win！");
                             i++;
                             win++;
                             W = true;
@@ -90,28 +79,21 @@ public class MG1_GameControl : MonoBehaviour
                 }
                 if (AIplayWhat == 3)
                 {
-                    print("AI出剪佈");
                     switch (playWhat)
                     {
                         case 1:
-                            print("我出剪刀");
-                            print("Win！");
                             i++;
                             win++;
                             W = true;
                             playWhat = 0;
                             break;
                         case 2:
-                            print("我出石頭");
-                            print("Lose");
                             i++;
                             lose++;
                             L = true;
                             playWhat = 0;
                             break;
                         case 3:
-                            print("我出佈");
-                            print("平局！");
                             D = true;
                             playWhat = 0;
                             break;
