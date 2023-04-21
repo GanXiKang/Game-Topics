@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class MG1_DestoryControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.tag == "Destory")
+        {
+            Destroy(this.gameObject, 3f);
+        }
     }
 }
