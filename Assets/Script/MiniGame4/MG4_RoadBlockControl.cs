@@ -11,6 +11,7 @@ public class MG4_RoadBlockControl : MonoBehaviour
         if (other.tag == "RoadBlock")
         {
             combo = 0;
+            Destroy(other.gameObject, 0.5f);
         }
         if (other.tag == "RecordJump")
         {
