@@ -10,7 +10,10 @@ public class MG1_InstantiateControl : MonoBehaviour
     public Transform playerBrand;
     public Transform bossBrand;
 
+    public GameObject mouse;
+    public GameObject cow;
     public GameObject tiger;
+    public GameObject rabbit;
     public Transform playerIns;
 
     void Start()
@@ -18,8 +21,26 @@ public class MG1_InstantiateControl : MonoBehaviour
         playerBrand.transform.Rotate(90, 0, 0);
         bossBrand.transform.Rotate(90, 0, 0);
 
-        tiger.transform.localScale = new Vector3(2, 2, 2);
-        Instantiate(tiger, playerIns.transform.position, playerIns.transform.rotation);
+        if (MG1_BoxColliderControl.p == 1)
+        {
+            mouse.transform.localScale = new Vector3(2, 2, 2);
+            Instantiate(mouse, playerIns.transform.position, playerIns.transform.rotation);
+        }
+        if (MG1_BoxColliderControl.p == 2)
+        {
+            cow.transform.localScale = new Vector3(2, 2, 2);
+            Instantiate(cow, playerIns.transform.position, playerIns.transform.rotation);
+        }
+        if (MG1_BoxColliderControl.p == 3)
+        {
+            tiger.transform.localScale = new Vector3(2, 2, 2);
+            Instantiate(tiger, playerIns.transform.position, playerIns.transform.rotation);
+        }
+        if (MG1_BoxColliderControl.p == 4)
+        {
+            rabbit.transform.localScale = new Vector3(2, 2, 2);
+            Instantiate(rabbit, playerIns.transform.position, playerIns.transform.rotation);
+        }
     }
     void Update()
     {
