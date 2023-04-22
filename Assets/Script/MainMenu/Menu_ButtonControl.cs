@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Menu_ButtonControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void B_Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public void B_Tutorial()
     {
         
+    }
+    public void B_Setting()
+    {
+
+    }
+    public void B_Exit()
+    {
+        Application.Quit();
     }
 }
