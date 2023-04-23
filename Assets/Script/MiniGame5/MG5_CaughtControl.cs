@@ -7,7 +7,7 @@ public class MG5_CaughtControl : MonoBehaviour
     Collider col;
 
     bool isCaught;
-    float speed = 25;
+    float speed = 35;
     void Start()
     {
         col = GetComponent<Collider>();
@@ -17,7 +17,7 @@ public class MG5_CaughtControl : MonoBehaviour
         if (isCaught == true)
         {
             transform.Translate(0, speed * Time.deltaTime, 0);
-            Destroy(gameObject, 2f);
+            Destroy(gameObject, 3f);
         }
     }
     private void OnTriggerEnter(Collider other)
