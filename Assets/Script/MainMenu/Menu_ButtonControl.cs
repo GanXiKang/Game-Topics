@@ -9,7 +9,8 @@ public class Menu_ButtonControl : MonoBehaviour
 
     public void B_Start()
     {
-        
+        menu1.SetActive(false);
+        menu2.SetActive(true);
     }
     public void B_Tutorial()
     {
