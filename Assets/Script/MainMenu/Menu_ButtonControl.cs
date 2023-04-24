@@ -24,6 +24,11 @@ public class Menu_ButtonControl : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Close()
+    {
+        menu1.SetActive(true);
+        menu2.SetActive(false);
+    }
     public void B_2p()
     {
         
