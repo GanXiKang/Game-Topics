@@ -15,11 +15,13 @@ public class Menu_ButtonControl : MonoBehaviour
     }
     public void B_Tutorial()
     {
-        
+        menu1.SetActive(false);
+        menu3.SetActive(true);
     }
     public void B_Setting()
     {
-
+        menu1.SetActive(false);
+        menu3.SetActive(true);
     }
     public void B_Exit()
     {
