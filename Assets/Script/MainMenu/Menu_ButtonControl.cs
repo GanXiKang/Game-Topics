@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Menu_ButtonControl : MonoBehaviour
 {
+    public GameObject menu1;
+    public GameObject menu2;
+
     public void B_Start()
     {
         
