@@ -31,7 +31,7 @@ public class Menu_ButtonControl : MonoBehaviour
     {
         menu1.SetActive(true);
         menu2.SetActive(false);
-        menu3.SetActive(false);
+        menu_t.SetActive(false);
     }
     public void B_2p()
     {
