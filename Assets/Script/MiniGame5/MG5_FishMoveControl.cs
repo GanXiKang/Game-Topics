@@ -33,16 +33,24 @@ public class MG5_FishMoveControl : MonoBehaviour
         if (timer < 4f)
         {
             transform.Translate(1.2f * Time.deltaTime, 0, 0);
-
-            Quaternion targetR = Quaternion.Euler(0, 0, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.8f);
+            
+            //Quaternion targetR = Quaternion.Euler(0, 180, 0);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
+        }
+        if (timer == 4f)
+        {
+            transform.rotation = new Vector3(transform.rotation.x, 180, 0);
         }
         if (timer > 4f && timer < 8f)
         {
             transform.Translate(1.2f * Time.deltaTime, 0, 0);
 
-            Quaternion targetR = Quaternion.Euler(0, 180, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
+            //Quaternion targetR = Quaternion.Euler(0, 0, 0);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
+        }
+        if (timer == 4f)
+        {
+            transform.Rotate(0, 0, 0);
         }
         if (timer > 8f)
         {
@@ -51,44 +59,44 @@ public class MG5_FishMoveControl : MonoBehaviour
     }
     void MoveModel2()
     {
-        if (timer < 6f)
-        {
-            transform.Translate(-0.8f * Time.deltaTime, 0, 0);
+        //if (timer < 6f)
+        //{
+        //    transform.Translate(-0.8f * Time.deltaTime, 0, 0);
 
-            Quaternion targetR = Quaternion.Euler(0, 180, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.9f);
-        }
-        if (timer > 6f && timer < 12f)
-        {
-            transform.Translate(-0.8f * Time.deltaTime, 0, 0);
+        //    Quaternion targetR = Quaternion.Euler(0, 180, 0);
+        //    transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
+        //}
+        //if (timer > 6f && timer < 12f)
+        //{
+        //    transform.Translate(-0.8f * Time.deltaTime, 0, 0);
 
-            Quaternion targetR = Quaternion.Euler(0, 0, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
-        }
-        if (timer > 12f)
-        {
-            timer = 0;
-        }
+        //    Quaternion targetR = Quaternion.Euler(0, 0, 0);
+        //    transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
+        //}
+        //if (timer > 12f)
+        //{
+        //    timer = 0;
+        //}
     }
     void MoveModel3()
     {
-        if (timer < 5f)
-        {
-            transform.Translate(1f * Time.deltaTime, 0, 0);
+        //if (timer < 5f)
+        //{
+        //    transform.Translate(1f * Time.deltaTime, 0, 0);
 
-            Quaternion targetR = Quaternion.Euler(0, 0, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 0.8f);
-        }
-        if (timer > 5f && timer < 10f)
-        {
-            transform.Translate(1f * Time.deltaTime, 0, 0);
+        //    Quaternion targetR = Quaternion.Euler(0, 180, 0);
+        //    transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
+        //}
+        //if (timer > 5f && timer < 10f)
+        //{
+        //    transform.Translate(1f * Time.deltaTime, 0, 0);
 
-            Quaternion targetR = Quaternion.Euler(0, 180, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
-        }
-        if (timer > 10f)
-        {
-            timer = 0;
-        }
+        //    Quaternion targetR = Quaternion.Euler(0, 0, 0);
+        //    transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 5f);
+        //}
+        //if (timer > 10f)
+        //{
+        //    timer = 0;
+        //}
     }
 }
