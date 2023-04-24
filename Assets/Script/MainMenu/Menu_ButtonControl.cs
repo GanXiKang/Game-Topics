@@ -6,6 +6,7 @@ public class Menu_ButtonControl : MonoBehaviour
 {
     public GameObject menu1;
     public GameObject menu2;
+    public GameObject menu3;
     public GameObject menu_t;
 
     public void B_Start()
@@ -35,14 +36,17 @@ public class Menu_ButtonControl : MonoBehaviour
     }
     public void B_2p()
     {
-        
+        menu2.SetActive(false);
+        menu3.SetActive(true);
     }
     public void B_3p()
     {
-
+        menu2.SetActive(false);
+        menu3.SetActive(true);
     }
     public void B_4p()
     {
-
+        menu2.SetActive(false);
+        menu3.SetActive(true);
     }
 }
