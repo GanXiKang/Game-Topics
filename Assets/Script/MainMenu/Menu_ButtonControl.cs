@@ -20,4 +20,16 @@ public class Menu_ButtonControl : MonoBehaviour
     {
         Application.Quit();
     }
+    public void B_2p()
+    {
+        
+    }
+    public void B_3p()
+    {
+
+    }
+    public void B_4p()
+    {
+
+    }
 }
