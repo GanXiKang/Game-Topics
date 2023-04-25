@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class MG6_RelayRotateControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void FixedUpdate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        transform.Rotate(0, 15, 0);
     }
 }
