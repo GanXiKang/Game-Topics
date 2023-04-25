@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Menu_ChoosePlayer : MonoBehaviour
 {
     public static float whoPlay, p, chooseP = 1;
     public static bool confirm;
 
+    public Image[] P1_animals = new Image[4];
+    public Image[] P2_animals = new Image[4];
+    public Image[] P3_animals = new Image[4];
+    public Image[] P4_animals = new Image[4];
     void Update()
     {
         if (chooseP > whoPlay)
