@@ -11,8 +11,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public GameObject[] P2_animals = new GameObject[4];
     public GameObject[] P3_animals = new GameObject[4];
     public GameObject[] P4_animals = new GameObject[4];
-    public GameObject[] OK = new GameObject[4];
-    public GameObject[] NO = new GameObject[4];
+    public GameObject OK;
+    public GameObject NO;
 
     void FixedUpdate()
     {
@@ -32,8 +32,10 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
         if (chooseP == 1)
         {
+            print("y");
             if (p == 1)
             {
+                print("yes");
                 P1_animals[0].SetActive(true);
             }
             if (p == 2)
