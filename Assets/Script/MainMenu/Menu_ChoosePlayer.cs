@@ -8,6 +8,13 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     void Update()
     {
-        
+        if (p < 1)
+        {
+            p = 4;
+        }
+        if (p > 4)
+        {
+            p = 1;
+        }
     }
 }
