@@ -62,10 +62,10 @@ public class Menu_ButtonControl : MonoBehaviour
     }
     public void B_Left()
     {
-        Menu_ChoosePlayer.p++;
+        Menu_ChoosePlayer.p--;
     }
     public void B_Right()
     {
-        Menu_ChoosePlayer.p--;
+        Menu_ChoosePlayer.p++;
     }
 }
