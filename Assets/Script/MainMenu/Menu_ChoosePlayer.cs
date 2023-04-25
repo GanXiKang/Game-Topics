@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Menu_ChoosePlayer : MonoBehaviour
 {
-    public static float whoPlay, p, chooseP;
+    public static float whoPlay, p, chooseP = 1;
 
     void Update()
     {
