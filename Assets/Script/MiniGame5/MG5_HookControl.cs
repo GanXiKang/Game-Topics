@@ -44,7 +44,7 @@ public class MG5_HookControl : MonoBehaviour
             {
                 transform.Translate(0, -speed * Time.deltaTime, 0);
                 fishingLine.transform.Translate(0, -10 * Time.deltaTime, 0);
-                fishingLine.transform.localScale += new Vector3(0, 0.04f, 0);
+                fishingLine.transform.localScale += new Vector3(0, 0.065f, 0);
             }
         }
         if (hookUp == true && takeBack == false)
@@ -53,7 +53,7 @@ public class MG5_HookControl : MonoBehaviour
             {
                 transform.Translate(0, speed * Time.deltaTime, 0);
                 fishingLine.transform.Translate(0, 10 * Time.deltaTime, 0);
-                fishingLine.transform.localScale -= new Vector3(0, 0.04f, 0);
+                fishingLine.transform.localScale -= new Vector3(0, 0.065f, 0);
             }
         }
         if (takeBack == true)
@@ -62,7 +62,7 @@ public class MG5_HookControl : MonoBehaviour
             {
                 transform.Translate(0, speed * 2 * Time.deltaTime, 0);
                 fishingLine.transform.Translate(0, 10 * 2 * Time.deltaTime, 0);
-                fishingLine.transform.localScale -= new Vector3(0, 0.04f * 2, 0);
+                fishingLine.transform.localScale -= new Vector3(0, 0.065f * 2, 0);
             }
         }
     }
