@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Menu_ChoosePlayer : MonoBehaviour
 {
     public static float whoPlay, p, chooseP = 1;
-    public static bool confirm;
+    public static bool confirm,cancel;
 
     public Image[] P1_animals = new Image[4];
     public Image[] P2_animals = new Image[4];
@@ -32,7 +32,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             if (chooseP == 1)
             {
-                
+                chooseP++;
+                confirm =
             }
             if (chooseP == 2)
             {
