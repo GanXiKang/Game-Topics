@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Menu_LightControl : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
     void Update()
     {
         
