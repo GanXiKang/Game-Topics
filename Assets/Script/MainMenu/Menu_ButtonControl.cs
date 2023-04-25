@@ -54,11 +54,11 @@ public class Menu_ButtonControl : MonoBehaviour
     }
     public void B_OK()
     {
-        
+        Menu_ChoosePlayer.confirm = true;
     }
     public void B_Cancel()
     {
-        
+        Menu_ChoosePlayer.confirm = false;
     }
     public void B_Left()
     {
