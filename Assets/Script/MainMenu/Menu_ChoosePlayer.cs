@@ -125,22 +125,30 @@ public class Menu_ChoosePlayer : MonoBehaviour
             {
                 chooseP++;
                 p = 0;
+                OK[0].SetActive(false);
+                NO[0].SetActive(true);
                 confirm = false;
             }
             if (chooseP == 2)
             {
                 chooseP++;
                 p = 0;
+                OK[1].SetActive(false);
+                NO[1].SetActive(true);
                 confirm = false;
             }
             if (chooseP == 3)
             {
                 chooseP++;
                 p = 0;
+                OK[2].SetActive(false);
+                NO[2].SetActive(true);
                 confirm = false;
             }
             if (chooseP == 4)
             {
+                OK[3].SetActive(false);
+                NO[3].SetActive(true);
                 confirm = false;
             }
         }
@@ -148,18 +156,29 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             if (chooseP == 1)
             {
+                OK[0].SetActive(true);
+                NO[0].SetActive(false);
                 cancel = false;
             }
             if (chooseP == 2)
             {
+                chooseP--;
+                OK[1].SetActive(true);
+                NO[1].SetActive(false);
                 cancel = false;
             }
             if (chooseP == 3)
             {
+                chooseP--;
+                OK[2].SetActive(true);
+                NO[2].SetActive(false);
                 cancel = false;
             }
             if (chooseP == 4)
             {
+                chooseP--;
+                OK[3].SetActive(true);
+                NO[3].SetActive(false);
                 cancel = false;
             }
         }
