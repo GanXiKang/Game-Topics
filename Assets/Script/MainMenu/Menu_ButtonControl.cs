@@ -28,7 +28,7 @@ public class Menu_ButtonControl : MonoBehaviour
     {
         Application.Quit();
     }
-    public void Close()
+    public void B_Close()
     {
         menu1.SetActive(true);
         menu2.SetActive(false);
@@ -48,5 +48,13 @@ public class Menu_ButtonControl : MonoBehaviour
     {
         menu2.SetActive(false);
         menu3.SetActive(true);
+    }
+    public void B_OK()
+    {
+        
+    }
+    public void B_Cancel()
+    {
+        
     }
 }
