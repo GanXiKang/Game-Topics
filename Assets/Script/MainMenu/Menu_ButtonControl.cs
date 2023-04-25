@@ -36,16 +36,19 @@ public class Menu_ButtonControl : MonoBehaviour
     }
     public void B_2p()
     {
+        Menu_ChoosePlayer.whoPlay = 2;
         menu2.SetActive(false);
         menu3.SetActive(true);
     }
     public void B_3p()
     {
+        Menu_ChoosePlayer.whoPlay = 3;
         menu2.SetActive(false);
         menu3.SetActive(true);
     }
     public void B_4p()
     {
+        Menu_ChoosePlayer.whoPlay = 4;
         menu2.SetActive(false);
         menu3.SetActive(true);
     }
