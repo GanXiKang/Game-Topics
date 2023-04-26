@@ -26,7 +26,7 @@ public class MG1_CameraControl : MonoBehaviour
         camera1.SetActive(true);
         UI_Button.SetActive(false);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         if (MG1_GameControl.W == true)
         {
             UI_Win.SetActive(true);
@@ -42,7 +42,7 @@ public class MG1_CameraControl : MonoBehaviour
             UI_Draw.SetActive(true);
             MG1_GameControl.D = false;
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         mainCamera.SetActive(true);
         camera1.SetActive(false);
 
