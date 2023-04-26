@@ -42,7 +42,7 @@ public class MG5_HookControl : MonoBehaviour
         {
             if (y > 72)
             {
-                transform.Translate(0, -speed * Time.deltaTime, 0);
+                transform.Translate(0, 0, speed * Time.deltaTime);
                 fishingLine.transform.Translate(0, -10 * Time.deltaTime, 0);
                 fishingLine.transform.localScale += new Vector3(0, 0.065f, 0);
             }
@@ -51,7 +51,7 @@ public class MG5_HookControl : MonoBehaviour
         {
             if (y < 155)
             {
-                transform.Translate(0, speed * Time.deltaTime, 0);
+                transform.Translate(0, 0, -speed * Time.deltaTime);
                 fishingLine.transform.Translate(0, 10 * Time.deltaTime, 0);
                 fishingLine.transform.localScale -= new Vector3(0, 0.065f, 0);
             }
@@ -60,7 +60,7 @@ public class MG5_HookControl : MonoBehaviour
         {
             if (y < 155)
             {
-                transform.Translate(0, speed * 2 * Time.deltaTime, 0);
+                transform.Translate(0, 0, -speed * 2 * Time.deltaTime);
                 fishingLine.transform.Translate(0, 10 * 2 * Time.deltaTime, 0);
                 fishingLine.transform.localScale -= new Vector3(0, 0.065f * 2, 0);
             }
