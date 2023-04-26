@@ -1120,6 +1120,7 @@ GameObject:
   - component: {fileID: 794621026}
   - component: {fileID: 794621027}
   - component: {fileID: 794621028}
+  - component: {fileID: 794621029}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -1185,6 +1186,26 @@ MonoBehaviour:
   UI_Win: {fileID: 938584847}
   UI_Lose: {fileID: 705648376}
   UI_Draw: {fileID: 1975421812}
+--- !u!114 &794621029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794621023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26d5b3a52c52d54f92476e83e30f5ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiScore:
+  - {fileID: 225001534}
+  - {fileID: 363730327}
+  - {fileID: 471195556}
+  playerScore:
+  - {fileID: 1744025466}
+  - {fileID: 166947534}
+  - {fileID: 1223179098}
 --- !u!1 &852676275
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MG1_GameControl : MonoBehaviour
 {
-    float win, lose, i;                                   // 1 = ºÙµ∂; 2 =  ØÓ^; 3 = Å—
+    float i, win, lose;                                   // 1 = ºÙµ∂; 2 =  ØÓ^; 3 = Å—
 
     public static float playWhat, AIplayWhat; 
     public static bool cameraC, W, L, D;
+
+    public GameObject[] aiScore = new GameObject[3];
+    public GameObject[] playerScore = new GameObject[3];
 
     public void Button_Scissors()
     {
@@ -105,6 +108,33 @@ public class MG1_GameControl : MonoBehaviour
                 print("”ŒëÚ ßî°£°");
             }
             StartCoroutine(BackMainGame());
+        }
+    }
+    void ScoreBoard()
+    {
+        if (MG1_GameControl.win == 1)
+        {
+            playerScore[0].SetActive(true);
+        }
+        if (MG1_GameControl.win == 2)
+        {
+            playerScore[1].SetActive(true);
+        }
+        if (MG1_GameControl.win == 3)
+        {
+            playerScore[2].SetActive(true);
+        }
+        if (MG1_GameControl.lose == 1)
+        {
+            aiScore[0].SetActive(true);
+        }
+        if (MG1_GameControl.lose == 2)
+        {
+            aiScore[1].SetActive(true);
+        }
+        if (MG1_GameControl.lose == 3)
+        {
+            aiScore[2].SetActive(true);
         }
     }
     void PlayerPlayGameControl()
