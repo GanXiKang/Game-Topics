@@ -7,6 +7,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
 {
     public static float whoPlay;
 
+    public GameObject[] Group = new GameObject[2];
     public GameObject[] P1_animals = new GameObject[4];
     public GameObject[] P2_animals = new GameObject[4];
     public GameObject[] P3_animals = new GameObject[4];
@@ -19,7 +20,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     void Update()
     {
-        if (confirm == 4)
+        if (whoPlay == 2)
+        {
+            Group[0].SetActive(false);
+            Group[1].SetActive(false);
+        }
+        else if (whoPlay == 3)
+        {
+            Group[1].SetActive(false);
+        }
+        if (confirm == whoPlay)
         {
             StartCoroutine(GoMainGame());
         }
