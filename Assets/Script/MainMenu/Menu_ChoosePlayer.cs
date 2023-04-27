@@ -251,7 +251,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void OK_4p()
     {
         confirm++;
-        print(confirm);
         OK[3].SetActive(false);
         NO[3].SetActive(true);
         button[6].SetActive(false);
