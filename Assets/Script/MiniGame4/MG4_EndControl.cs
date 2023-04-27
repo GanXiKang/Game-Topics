@@ -41,5 +41,7 @@ public class MG4_EndControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
+        MG4_UIControl.isStart = false;
+        MG4_RoadBlockControl.combo = 0;
     }
 }
