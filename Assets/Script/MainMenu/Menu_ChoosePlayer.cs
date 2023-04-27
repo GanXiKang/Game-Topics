@@ -30,4 +30,20 @@ public class Menu_ChoosePlayer : MonoBehaviour
             p = 1;
         }
     }
+    public void B_OK()
+    {
+        confirm = true;
+    }
+    public void B_Cancel()
+    {
+       cancel = false;
+    }
+    public void B_Left()
+    {
+        p--;
+    }
+    public void B_Right()
+    {
+       p++;
+    }
 }
