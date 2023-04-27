@@ -24,5 +24,7 @@ public class MG5_GameResultControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
+        MG5_HookControl.score = 0;
+        MG5_UIControl.gameTime = 45;
     }
 }
