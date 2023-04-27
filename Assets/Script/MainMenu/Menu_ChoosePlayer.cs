@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu_ChoosePlayer : MonoBehaviour
 {
-    public static float whoPlay;
+    public static float whoPlay = 0;
 
     public GameObject[] Group = new GameObject[2];
     public GameObject[] P1_animals = new GameObject[4];
@@ -29,7 +29,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             Group[1].SetActive(false);
         }
-        if (confirm == whoPlay)
+        if (confirm == 4)
         {
             StartCoroutine(GoMainGame());
         }
