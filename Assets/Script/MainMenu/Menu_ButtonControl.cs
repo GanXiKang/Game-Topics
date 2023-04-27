@@ -52,20 +52,4 @@ public class Menu_ButtonControl : MonoBehaviour
         menu2.SetActive(false);
         menu3.SetActive(true);
     }
-    public void B_OK()
-    {
-        Menu_ChoosePlayer.confirm = true;
-    }
-    public void B_Cancel()
-    {
-        Menu_ChoosePlayer.cancel = false;
-    }
-    public void B_Left()
-    {
-        Menu_ChoosePlayer.p--;
-    }
-    public void B_Right()
-    {
-        Menu_ChoosePlayer.p++;
-    }
 }
