@@ -26,6 +26,10 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     IEnumerator GoMainGame()
     {
+        NO[0].SetActive(false);
+        NO[1].SetActive(false);
+        NO[2].SetActive(false);
+        NO[3].SetActive(false);
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
     }
