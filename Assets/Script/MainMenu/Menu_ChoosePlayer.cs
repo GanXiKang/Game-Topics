@@ -161,8 +161,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Right_1p()
     {
-       p++;
-
+        p++;
         Limit();
         Choose1P();
     }
@@ -192,7 +191,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Right_2p()
     {
         p++;
-
         Limit();
         Choose2P();
     }
