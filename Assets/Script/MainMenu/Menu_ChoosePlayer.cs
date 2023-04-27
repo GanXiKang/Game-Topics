@@ -14,7 +14,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public GameObject[] OK = new GameObject[4];
     public GameObject[] NO = new GameObject[4];
 
-    void FixedUpdate()
+    void Update()
     {
         if (chooseP > whoPlay)
         {
@@ -29,7 +29,5 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             p = 1;
         }
-
-        
     }
 }
