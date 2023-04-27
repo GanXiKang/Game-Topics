@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MG6_EndControl : MonoBehaviour
 {
-    public static bool back;
+    public static bool back = false;
     void Update()
     {
-        if (back == true)
+        if (back)
         {
             StartCoroutine(BackMainGame());
         }
@@ -26,5 +26,6 @@ public class MG6_EndControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
+        back = false;
     }
 }
