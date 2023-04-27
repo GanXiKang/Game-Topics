@@ -24,10 +24,18 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             Group[0].SetActive(false);
             Group[1].SetActive(false);
+            if (confirm == 2)
+            {
+                StartCoroutine(GoMainGame());
+            }
         }
         else if (whoPlay == 3)
         {
             Group[1].SetActive(false);
+            if (confirm == 3)
+            {
+                StartCoroutine(GoMainGame());
+            }
         }
         if (confirm == 4)
         {
