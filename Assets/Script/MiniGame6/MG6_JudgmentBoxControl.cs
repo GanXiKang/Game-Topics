@@ -13,7 +13,7 @@ public class MG6_JudgmentBoxControl : MonoBehaviour
 
     void Update()
     {
-        if (MG6_EndControl.back == true)
+        if (MG6_EndControl.back)
         {
             judgmentBox.SetActive(false);
         }
