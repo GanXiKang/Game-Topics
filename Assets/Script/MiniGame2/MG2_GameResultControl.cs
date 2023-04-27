@@ -24,5 +24,8 @@ public class MG2_GameResultControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
+        MG2_StartButtonControl.isStart = false;
+        MG2_CollectScoreControl.score = 0;
+        MG2_UIControl.gameTime = 45;
     }
 }
