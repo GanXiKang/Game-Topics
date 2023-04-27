@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Menu_ChoosePlayer : MonoBehaviour
 {
-    public static float whoPlay, p = 0, chooseP = 1;
-    public static bool confirm, cancel;
+    public static float whoPlay;
 
     public GameObject[] P1_animals = new GameObject[4];
     public GameObject[] P2_animals = new GameObject[4];
@@ -14,13 +13,11 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public GameObject[] OK = new GameObject[4];
     public GameObject[] NO = new GameObject[4];
 
+    float p;
+    bool confirm;
+
     void Update()
     {
-        if (chooseP > whoPlay)
-        {
-            chooseP = whoPlay;
-        }
-
         if (p < 1)
         {
             p = 4;
@@ -30,19 +27,19 @@ public class Menu_ChoosePlayer : MonoBehaviour
             p = 1;
         }
     }
-    public void B_OK()
+    public void OK_1p()
     {
         confirm = true;
     }
-    public void B_Cancel()
+    public void Cancel_1p()
     {
        cancel = false;
     }
-    public void B_Left()
+    public void Left_1p()
     {
         p--;
     }
-    public void B_Right()
+    public void B_Right_1p()
     {
        p++;
     }
