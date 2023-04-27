@@ -82,5 +82,6 @@ public class MG3_StarControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
         MG3_ButtonControl.round = 0;
+        MG3_ButtonControl.destoryStarNum = 0;
     }
 }
