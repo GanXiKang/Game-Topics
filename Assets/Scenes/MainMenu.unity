@@ -1831,7 +1831,6 @@ GameObject:
   - component: {fileID: 407475805}
   - component: {fileID: 407475806}
   - component: {fileID: 407475808}
-  - component: {fileID: 407475807}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -1870,19 +1869,6 @@ MonoBehaviour:
   menu2: {fileID: 353224015}
   menu3: {fileID: 129690530}
   menu_t: {fileID: 1499153202}
---- !u!114 &407475807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407475804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1547e1ef36db64bbf90d31b6c54b88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightGroup: {fileID: 1423499773}
 --- !u!114 &407475808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1915,8 +1901,17 @@ MonoBehaviour:
   - {fileID: 2006873786}
   - {fileID: 193744576}
   - {fileID: 1049860804}
-  OK: {fileID: 264261871}
-  NO: {fileID: 1056103810}
+  OK: []
+  NO: []
+  button:
+  - {fileID: 545767812}
+  - {fileID: 93168756}
+  - {fileID: 570956432}
+  - {fileID: 1493468316}
+  - {fileID: 1163569054}
+  - {fileID: 889997045}
+  - {fileID: 1867013224}
+  - {fileID: 1583078241}
 --- !u!1 &411209799
 GameObject:
   m_ObjectHideFlags: 0
