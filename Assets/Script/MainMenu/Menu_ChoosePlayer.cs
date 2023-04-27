@@ -23,15 +23,9 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             StartCoroutine(GoMainGame());
         }
-        else
-        {
-            print("stop");
-            StopCoroutine(GoMainGame());
-        }
     }
     IEnumerator GoMainGame()
     {
-        print("start");
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
     }
