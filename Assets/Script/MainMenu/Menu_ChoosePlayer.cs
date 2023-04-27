@@ -194,4 +194,62 @@ public class Menu_ChoosePlayer : MonoBehaviour
         Limit();
         Choose2P();
     }
+
+    public void OK_3p()
+    {
+        confirm++;
+        OK[2].SetActive(false);
+        NO[2].SetActive(true);
+        button[4].SetActive(false);
+        button[5].SetActive(false);
+    }
+    public void Cancel_3p()
+    {
+        confirm--;
+        OK[2].SetActive(true);
+        NO[2].SetActive(false);
+        button[4].SetActive(true);
+        button[5].SetActive(true);
+    }
+    public void Left_3p()
+    {
+        p--;
+        Limit();
+        Choose3P();
+    }
+    public void Right_3p()
+    {
+        p++;
+        Limit();
+        Choose3P();
+    }
+
+    public void OK_4p()
+    {
+        confirm++;
+        OK[3].SetActive(false);
+        NO[3].SetActive(true);
+        button[6].SetActive(false);
+        button[7].SetActive(false);
+    }
+    public void Cancel_4p()
+    {
+        confirm--;
+        OK[3].SetActive(true);
+        NO[3].SetActive(false);
+        button[6].SetActive(true);
+        button[7].SetActive(true);
+    }
+    public void Left_4p()
+    {
+        p--;
+        Limit();
+        Choose4P();
+    }
+    public void Right_4p()
+    {
+        p++;
+        Limit();
+        Choose4P();
+    }
 }
