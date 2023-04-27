@@ -17,6 +17,13 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     float p, confirm;
 
+    void Update()
+    {
+        //if (confirm == 4)
+        //{
+            
+        //}
+    }
     void Limit()
     {
         if (p < 1)
@@ -244,6 +251,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void OK_4p()
     {
         confirm++;
+        print(confirm);
         OK[3].SetActive(false);
         NO[3].SetActive(true);
         button[6].SetActive(false);
