@@ -27,5 +27,7 @@ public class MG6_EndControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
         back = false;
+        MG6_PlayerMoveControl.isMove = true;
+        MG6_JudgmentBoxControl.j = 1;
     }
 }
