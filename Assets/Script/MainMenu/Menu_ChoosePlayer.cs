@@ -72,7 +72,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P1_animals[0].SetActive(false);
         }
     }
-    public void B_Right_1p()
+    public void Right_1p()
     {
        p++;
 
