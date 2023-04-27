@@ -16,7 +16,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     float p, confirm;
 
-    void Update()
+    void Limit()
     {
         if (p < 1)
         {
@@ -47,6 +47,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         p--;
 
+        Limit();
         if (p == 1)
         {
             P1_animals[3].SetActive(false);
@@ -76,6 +77,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
        p++;
 
+        Limit();
         if (p == 1)
         {
             P1_animals[3].SetActive(false);
