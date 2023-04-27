@@ -68,11 +68,11 @@ public class MG3_StarControl : MonoBehaviour
         {
             MG3_BoxMoveControl.openBox1 = true;
         }
-        if (x == 2)
+        else if (x == 2)
         {
             MG3_BoxMoveControl.openBox2 = true;
         }
-        if (x == 3)
+        else if (x == 3)
         {
             MG3_BoxMoveControl.openBox3 = true;
         }
@@ -81,5 +81,6 @@ public class MG3_StarControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
+        MG3_ButtonControl.round = 0;
     }
 }
