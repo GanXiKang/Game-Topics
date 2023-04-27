@@ -19,10 +19,21 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     void Update()
     {
-        //if (confirm == 4)
-        //{
-            
-        //}
+        if (confirm == 4)
+        {
+            StartCoroutine(GoMainGame());
+        }
+        else
+        {
+            print("stop");
+            StopCoroutine(GoMainGame());
+        }
+    }
+    IEnumerator GoMainGame()
+    {
+        print("start");
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
     }
     void Limit()
     {
