@@ -27,6 +27,33 @@ public class Menu_ChoosePlayer : MonoBehaviour
             p = 1;
         }
     }
+    void Choose1P()
+    {
+        if (p == 1)
+        {
+            P1_animals[3].SetActive(false);
+            P1_animals[0].SetActive(true);
+            P1_animals[1].SetActive(false);
+        }
+        else if (p == 2)
+        {
+            P1_animals[0].SetActive(false);
+            P1_animals[1].SetActive(true);
+            P1_animals[2].SetActive(false);
+        }
+        else if (p == 3)
+        {
+            P1_animals[1].SetActive(false);
+            P1_animals[2].SetActive(true);
+            P1_animals[3].SetActive(false);
+        }
+        else if (p == 4)
+        {
+            P1_animals[2].SetActive(false);
+            P1_animals[3].SetActive(true);
+            P1_animals[0].SetActive(false);
+        }
+    }
     public void OK_1p()
     {
         confirm++;
@@ -46,61 +73,14 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Left_1p()
     {
         p--;
-
         Limit();
-        if (p == 1)
-        {
-            P1_animals[3].SetActive(false);
-            P1_animals[0].SetActive(true);
-            P1_animals[1].SetActive(false);
-        }
-        else if (p == 2)
-        {
-            P1_animals[0].SetActive(false);
-            P1_animals[1].SetActive(true);
-            P1_animals[2].SetActive(false);
-        }
-        else if (p == 3)
-        {
-            P1_animals[1].SetActive(false);
-            P1_animals[2].SetActive(true);
-            P1_animals[3].SetActive(false);
-        }
-        else if (p == 4)
-        {
-            P1_animals[2].SetActive(false);
-            P1_animals[3].SetActive(true);
-            P1_animals[0].SetActive(false);
-        }
+        Choose1P();
     }
     public void Right_1p()
     {
        p++;
 
         Limit();
-        if (p == 1)
-        {
-            P1_animals[3].SetActive(false);
-            P1_animals[0].SetActive(true);
-            P1_animals[1].SetActive(false);
-        }
-        else if (p == 2)
-        {
-            P1_animals[0].SetActive(false);
-            P1_animals[1].SetActive(true);
-            P1_animals[2].SetActive(false);
-        }
-        else if (p == 3)
-        {
-            P1_animals[1].SetActive(false);
-            P1_animals[2].SetActive(true);
-            P1_animals[3].SetActive(false);
-        }
-        else if (p == 4)
-        {
-            P1_animals[2].SetActive(false);
-            P1_animals[3].SetActive(true);
-            P1_animals[0].SetActive(false);
-        }
+        Choose1P();
     }
 }
