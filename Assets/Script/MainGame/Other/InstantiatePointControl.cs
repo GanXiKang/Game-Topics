@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class InstantiatePointControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] insPoint = new GameObject[4];
+    public GameObject[] animals = new GameObject[4];
 
-    // Update is called once per frame
+    public static bool isInstantiate = false; 
     void Update()
     {
-        
+        if (isInstantiate)
+        {
+            isInstantiate = false;
+        }
     }
 }
