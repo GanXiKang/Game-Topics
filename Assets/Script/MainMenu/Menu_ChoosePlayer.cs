@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu_ChoosePlayer : MonoBehaviour
 {
-    public static float whoPlay = 0;
+    public static float whoPlay = 0, whyP1, whyP2, whyP3 , whyP4;
 
     public GameObject[] Group = new GameObject[2];
     public GameObject[] P1_animals = new GameObject[4];
@@ -70,6 +70,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P1_animals[1].SetActive(false);
             P1_animals[2].SetActive(false);
             P1_animals[3].SetActive(false);
+            whyP1 = 1;
         }
         else if (p == 2)
         {
@@ -77,6 +78,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P1_animals[1].SetActive(true);
             P1_animals[2].SetActive(false);
             P1_animals[3].SetActive(false);
+            whyP1 = 2;
         }
         else if (p == 3)
         {
@@ -84,6 +86,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P1_animals[1].SetActive(false);
             P1_animals[2].SetActive(true);
             P1_animals[3].SetActive(false);
+            whyP1 = 3;
         }
         else if (p == 4)
         {
@@ -91,6 +94,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P1_animals[1].SetActive(false);
             P1_animals[2].SetActive(false);
             P1_animals[3].SetActive(true);
+            whyP1 = 4;
         }
     }
     void Choose2P()
