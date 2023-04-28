@@ -1562,6 +1562,7 @@ GameObject:
   - component: {fileID: 634621363}
   - component: {fileID: 634621364}
   - component: {fileID: 634621365}
+  - component: {fileID: 634621366}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -1618,6 +1619,28 @@ MonoBehaviour:
   P3_BackCamera: {fileID: 521498341}
   P4_FrontCamera: {fileID: 1811483985}
   P4_BackCamera: {fileID: 1829309804}
+--- !u!114 &634621366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634621362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61df27693edb1374d91cf3ce0c740491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  insPoint:
+  - {fileID: 1933180184}
+  - {fileID: 1943698521}
+  - {fileID: 1375034401}
+  - {fileID: 359070479}
+  animals:
+  - {fileID: 919132149155446097, guid: 5dc05fce8dd815748a5761e791ed4c7f, type: 3}
+  - {fileID: 919132149155446097, guid: ac73654722f52b54d8fa99acc58bc07c, type: 3}
+  - {fileID: 919132149155446097, guid: b0908167e8343c74e9cdda2be7e48873, type: 3}
+  - {fileID: 919132149155446097, guid: 2c7fe948a46646847b94dd0af8c0ca1d, type: 3}
 --- !u!1 &667054054
 GameObject:
   m_ObjectHideFlags: 0
