@@ -105,6 +105,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P2_animals[1].SetActive(false);
             P2_animals[2].SetActive(false);
             P2_animals[3].SetActive(false);
+            whyP2 = 1;
         }
         else if (p == 2)
         {
@@ -112,6 +113,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P2_animals[1].SetActive(true);
             P2_animals[2].SetActive(false);
             P2_animals[3].SetActive(false);
+            whyP2 = 2;
         }
         else if (p == 3)
         {
@@ -119,6 +121,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P2_animals[1].SetActive(false);
             P2_animals[2].SetActive(true);
             P2_animals[3].SetActive(false);
+            whyP2 = 3;
         }
         else if (p == 4)
         {
@@ -126,6 +129,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P2_animals[1].SetActive(false);
             P2_animals[2].SetActive(false);
             P2_animals[3].SetActive(true);
+            whyP2 = 4;
         }
     }
     void Choose3P()
@@ -136,6 +140,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P3_animals[1].SetActive(false);
             P3_animals[2].SetActive(false);
             P3_animals[3].SetActive(false);
+            whyP3 = 1;
         }
         else if (p == 2)
         {
@@ -143,6 +148,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P3_animals[1].SetActive(true);
             P3_animals[2].SetActive(false);
             P3_animals[3].SetActive(false);
+            whyP3 = 2;
         }
         else if (p == 3)
         {
@@ -150,6 +156,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P3_animals[1].SetActive(false);
             P3_animals[2].SetActive(true);
             P3_animals[3].SetActive(false);
+            whyP3 = 3;
         }
         else if (p == 4)
         {
@@ -157,6 +164,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P3_animals[1].SetActive(false);
             P3_animals[2].SetActive(false);
             P3_animals[3].SetActive(true);
+            whyP3 = 4;
 
         }
     }
@@ -168,6 +176,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P4_animals[1].SetActive(false);
             P4_animals[2].SetActive(false);
             P4_animals[3].SetActive(false);
+            whyP4 = 1;
         }
         else if (p == 2)
         {
@@ -175,6 +184,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P4_animals[1].SetActive(true);
             P4_animals[2].SetActive(false);
             P4_animals[3].SetActive(false);
+            whyP4 = 2;
         }
         else if (p == 3)
         {
@@ -182,6 +192,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P4_animals[1].SetActive(false);
             P4_animals[2].SetActive(true);
             P4_animals[3].SetActive(false);
+            whyP4 = 3;
         }
         else if (p == 4)
         {
@@ -189,6 +200,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             P4_animals[1].SetActive(false);
             P4_animals[2].SetActive(false);
             P4_animals[3].SetActive(true);
+            whyP4 = 4;
         }
     }
 
