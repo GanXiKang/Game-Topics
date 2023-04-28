@@ -226,12 +226,14 @@ public class Menu_ChoosePlayer : MonoBehaviour
         p--;
         Limit();
         Choose1P();
+        OK[0].SetActive(true);
     }
     public void Right_1p()
     {
         p++;
         Limit();
         Choose1P();
+        OK[0].SetActive(true);
     }
 
     public void OK_2p()
@@ -255,12 +257,14 @@ public class Menu_ChoosePlayer : MonoBehaviour
         p--;
         Limit();
         Choose2P();
+        OK[1].SetActive(true);
     }
     public void Right_2p()
     {
         p++;
         Limit();
         Choose2P();
+        OK[1].SetActive(true);
     }
 
     public void OK_3p()
@@ -284,12 +288,14 @@ public class Menu_ChoosePlayer : MonoBehaviour
         p--;
         Limit();
         Choose3P();
+        OK[2].SetActive(true);
     }
     public void Right_3p()
     {
         p++;
         Limit();
         Choose3P();
+        OK[2].SetActive(true);
     }
 
     public void OK_4p()
@@ -313,11 +319,13 @@ public class Menu_ChoosePlayer : MonoBehaviour
         p--;
         Limit();
         Choose4P();
+        OK[3].SetActive(true);
     }
     public void Right_4p()
     {
         p++;
         Limit();
         Choose4P();
+        OK[3].SetActive(true);
     }
 }
