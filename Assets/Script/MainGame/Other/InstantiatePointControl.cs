@@ -7,7 +7,7 @@ public class InstantiatePointControl : MonoBehaviour
     public GameObject[] insPoint = new GameObject[4];
     public GameObject[] animals = new GameObject[4];
 
-    public static bool isInstantiate = false; 
+    public static bool isInstantiate; 
     void Update()
     {
         if (isInstantiate)
