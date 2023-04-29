@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class MG2_PlayerControl : MonoBehaviour
 {
+    Animator ani;
     float x, speed = 20f;
 
+    void Start()
+    {
+        ani = GetComponent<Animator>();
+    }
     void Update()
     {
         x = transform.position.x;
@@ -19,6 +24,7 @@ public class MG2_PlayerControl : MonoBehaviour
                     if (x >= -28)
                     {
                         transform.Translate(speed * Time.deltaTime, 0, 0);
+                        ani.SetBool("Walk", true);
                     }
                 }
                 if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
@@ -26,6 +32,7 @@ public class MG2_PlayerControl : MonoBehaviour
                     if (x <= 28)
                     {
                         transform.Translate(-speed * Time.deltaTime, 0, 0);
+                        ani.SetBool("Walk", true);
                     }
                 }
             }
