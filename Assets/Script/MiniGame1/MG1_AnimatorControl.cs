@@ -11,6 +11,13 @@ public class MG1_AnimatorControl : MonoBehaviour
     }
     void Update()
     {
-        
+        if (MG1_GameControl.playerAniWin)
+        {
+            ani.SetBool("Win", true);
+        }
+        if (MG1_GameControl.playerAniLose)
+        {
+            ani.SetBool("Lose", true);
+        }
     }
 }

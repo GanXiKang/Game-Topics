@@ -9,7 +9,7 @@ public class MG1_GameControl : MonoBehaviour
     float i, win, lose;                                   // 1 = 剪刀; 2 = 石頭; 3 = 佈
 
     public static float playWhat, AIplayWhat; 
-    public static bool cameraC, W, L, D;
+    public static bool cameraC, W, L, D, playerAniWin, playerAniLose;
 
     public GameObject[] aiScore = new GameObject[3];
     public GameObject[] playerScore = new GameObject[3];
@@ -108,10 +108,12 @@ public class MG1_GameControl : MonoBehaviour
             if (win >= 3)
             {
                 print("獲得勝利！");
+                playerAniWin = true;
             }
             else
             {
                 print("游戲失敗！");
+                playerAniLose = true;
             }
             StartCoroutine(BackMainGame());
         }
@@ -169,6 +171,8 @@ public class MG1_GameControl : MonoBehaviour
     IEnumerator BackMainGame()
     {
         yield return new WaitForSeconds(2f);
+        playerAniWin = false;
+        playerAniLose = false;
         SceneManager.LoadScene(0);
     }
 }
