@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MG2_GameResultControl : MonoBehaviour
 {
+    Animator ani;
+    void Start()
+    {
+        ani = GetComponent<Animator>();
+    }
     void Update()
     {
         if (MG2_UIControl.gameTime <= 0)
@@ -12,10 +17,14 @@ public class MG2_GameResultControl : MonoBehaviour
             if (MG2_CollectScoreControl.score >= 30)
             {
                 print("Win");
+                ani.SetBool("Walk", false);
+                ani.SetBool("Win", true);
             }
             else 
             {
                 print("Lose");
+                ani.SetBool("Walk", false);
+                ani.SetBool("Lose", true);
             }
             StartCoroutine(BackMainGame());
         }
