@@ -28,6 +28,6 @@ public class MG6_EndControl : MonoBehaviour
         SceneManager.LoadScene(0);
         back = false;
         MG6_PlayerMoveControl.isMove = true;
-        MG6_JudgmentBoxControl.j = 1;
+        MG6_PlayerMoveControl.j = 1;
     }
 }
