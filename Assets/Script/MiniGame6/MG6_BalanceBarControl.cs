@@ -54,7 +54,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
     }
     void Judgment()
     {
-        switch(MG6_JudgmentBoxControl.j)
+        switch(MG6_PlayerMoveControl.j)
         {
             case 1:
                 if (value >= 2 && value <= 6)
