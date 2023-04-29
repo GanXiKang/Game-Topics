@@ -49,16 +49,15 @@ public class MG1_CameraControl : MonoBehaviour
             UI_Lose.SetActive(false);
             UI_Draw.SetActive(false);
         }
-        else
-        {
-            yield return new WaitForSeconds(1f);
-            mainCamera.SetActive(true);
-            camera1.SetActive(false);
 
-            UI_Button.SetActive(true);
-            UI_Win.SetActive(false);
-            UI_Lose.SetActive(false);
-            UI_Draw.SetActive(false);
-        }
+        yield return new WaitForSeconds(1f);
+        mainCamera.SetActive(true);
+        camera1.SetActive(false);
+        camera2.SetActive(false);
+
+        UI_Button.SetActive(true);
+        UI_Win.SetActive(false);
+        UI_Lose.SetActive(false);
+        UI_Draw.SetActive(false);
     }
 }
