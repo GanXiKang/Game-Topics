@@ -9,7 +9,7 @@ public class MG1_GameControl : MonoBehaviour
     float i, win, lose;                                   // 1 = ¼ôµ¶; 2 = Ê¯î^; 3 = Ñ
 
     public static float playWhat, AIplayWhat; 
-    public static bool cameraC, W, L, D, playerAniWin, playerAniLose;
+    public static bool cameraC, cameraEnd, W, L, D, playerAniWin, playerAniLose;
 
     public GameObject[] aiScore = new GameObject[3];
     public GameObject[] playerScore = new GameObject[3];
@@ -104,6 +104,7 @@ public class MG1_GameControl : MonoBehaviour
         else
         {
             print("ÓÎ‘ò½YÊø");
+            cameraEnd = true;
             PlayerPlayGameControl();
             if (win >= 3)
             {
@@ -173,6 +174,7 @@ public class MG1_GameControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         playerAniWin = false;
         playerAniLose = false;
+        cameraEnd = false;
         SceneManager.LoadScene(0);
     }
 }

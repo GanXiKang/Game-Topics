@@ -12,10 +12,10 @@ public class MG1_CameraControl : MonoBehaviour
     {
         if (MG1_GameControl.cameraC)
         {
-            StartCoroutine(ChangeCamera1());
+            StartCoroutine(ChangeCamera());
         }
     }
-    IEnumerator ChangeCamera1()
+    IEnumerator ChangeCamera()
     {
         MG1_GameControl.cameraC = false;
         mainCamera.SetActive(false);
@@ -23,29 +23,42 @@ public class MG1_CameraControl : MonoBehaviour
         UI_Button.SetActive(false);
 
         yield return new WaitForSeconds(0.5f);
-        if (MG1_GameControl.W == true)
+        if (MG1_GameControl.W)
         {
             UI_Win.SetActive(true);
             MG1_GameControl.W = false;
         }
-        if (MG1_GameControl.L == true)
+        else if (MG1_GameControl.L)
         {
             UI_Lose.SetActive(true);
             MG1_GameControl.L = false;
         }
-        if (MG1_GameControl.D == true)
+        else if (MG1_GameControl.D)
         {
             UI_Draw.SetActive(true);
             MG1_GameControl.D = false;
         }
-        yield return new WaitForSeconds(1.5f);
-        mainCamera.SetActive(true);
-        camera1.SetActive(false);
 
-        UI_Button.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        if (MG1_GameControl.cameraEnd)
+        {
+            camera2.SetActive(true);
+            camera1.SetActive(false);
 
-        UI_Win.SetActive(false);
-        UI_Lose.SetActive(false);
-        UI_Draw.SetActive(false);
+            UI_Win.SetActive(false);
+            UI_Lose.SetActive(false);
+            UI_Draw.SetActive(false);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1f);
+            mainCamera.SetActive(true);
+            camera1.SetActive(false);
+
+            UI_Button.SetActive(true);
+            UI_Win.SetActive(false);
+            UI_Lose.SetActive(false);
+            UI_Draw.SetActive(false);
+        }
     }
 }
