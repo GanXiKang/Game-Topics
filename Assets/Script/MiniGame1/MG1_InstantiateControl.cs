@@ -19,22 +19,22 @@ public class MG1_InstantiateControl : MonoBehaviour
 
         if (MG1_BoxColliderControl.p == 1)
         {
-            //animals[0].transform.localScale = new Vector3(2, 2, 2);
+            animals[0].transform.localScale = new Vector3(2, 2, 2);
             Instantiate(animals[0], playerIns.transform.position, playerIns.transform.rotation);
         }
         if (MG1_BoxColliderControl.p == 2)
         {
-            //animals[1].transform.localScale = new Vector3(2, 2, 2);
+            animals[1].transform.localScale = new Vector3(2, 2, 2);
             Instantiate(animals[1], playerIns.transform.position, playerIns.transform.rotation);
         }
         if (MG1_BoxColliderControl.p == 3)
         {
-            //animals[2].transform.localScale = new Vector3(2, 2, 2);
+            animals[2].transform.localScale = new Vector3(2, 2, 2);
             Instantiate(animals[2], playerIns.transform.position, playerIns.transform.rotation);
         }
         if (MG1_BoxColliderControl.p == 4)
         {
-            //animals[3].transform.localScale = new Vector3(2, 2, 2);
+            animals[3].transform.localScale = new Vector3(2, 2, 2);
             Instantiate(animals[3], playerIns.transform.position, playerIns.transform.rotation);
         }
     }
