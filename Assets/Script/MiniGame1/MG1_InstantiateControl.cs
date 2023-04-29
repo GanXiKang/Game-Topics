@@ -7,13 +7,9 @@ public class MG1_InstantiateControl : MonoBehaviour
     public GameObject scissors;
     public GameObject stone;
     public GameObject cloth;
-    public Transform playerBrand;
-    public Transform bossBrand;
+    public Transform playerBrand, bossBrand;
 
-    public GameObject mouse;
-    public GameObject cow;
-    public GameObject tiger;
-    public GameObject rabbit;
+    public GameObject[] animals = new GameObject[4];
     public Transform playerIns;
 
     void Start()
@@ -23,23 +19,23 @@ public class MG1_InstantiateControl : MonoBehaviour
 
         if (MG1_BoxColliderControl.p == 1)
         {
-            mouse.transform.localScale = new Vector3(2, 2, 2);
-            Instantiate(mouse, playerIns.transform.position, playerIns.transform.rotation);
+            animals[0].transform.localScale = new Vector3(2, 2, 2);
+            Instantiate(animals[0], playerIns.transform.position, playerIns.transform.rotation);
         }
         if (MG1_BoxColliderControl.p == 2)
         {
-            cow.transform.localScale = new Vector3(2, 2, 2);
-            Instantiate(cow, playerIns.transform.position, playerIns.transform.rotation);
+            animals[1].transform.localScale = new Vector3(2, 2, 2);
+            Instantiate(animals[1], playerIns.transform.position, playerIns.transform.rotation);
         }
         if (MG1_BoxColliderControl.p == 3)
         {
-            tiger.transform.localScale = new Vector3(2, 2, 2);
-            Instantiate(tiger, playerIns.transform.position, playerIns.transform.rotation);
+            animals[2].transform.localScale = new Vector3(2, 2, 2);
+            Instantiate(animals[2], playerIns.transform.position, playerIns.transform.rotation);
         }
         if (MG1_BoxColliderControl.p == 4)
         {
-            rabbit.transform.localScale = new Vector3(2, 2, 2);
-            Instantiate(rabbit, playerIns.transform.position, playerIns.transform.rotation);
+            animals[3].transform.localScale = new Vector3(2, 2, 2);
+            Instantiate(animals[3], playerIns.transform.position, playerIns.transform.rotation);
         }
     }
     void Update()
