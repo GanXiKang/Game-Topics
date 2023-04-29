@@ -499,6 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 279193458}
   - component: {fileID: 279193457}
+  - component: {fileID: 279193459}
   m_Layer: 0
   m_Name: Camera2
   m_TagString: Untagged
@@ -557,13 +558,46 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279193455}
   m_LocalRotation: {x: -0.03047791, y: -0.9885399, z: 0.14513828, w: 0.028197385}
-  m_LocalPosition: {x: -2.79, y: 10.38, z: 4.3}
+  m_LocalPosition: {x: 6.6, y: 36.8, z: 21.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 16.573, y: -176.136, z: 4.095}
+--- !u!114 &279193459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279193455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &363730327
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +1022,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703185152}
   m_LocalRotation: {x: 0.2328215, y: -0, z: -0, w: 0.9725195}
-  m_LocalPosition: {x: 0, y: 15.46, z: -20.53}
+  m_LocalPosition: {x: 0, y: 43.5, z: -38.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1343,7 +1377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 915b68cbd5e97ab4f874d27e95885a63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.37
+      value: 8.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 915b68cbd5e97ab4f874d27e95885a63, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1618,7 +1652,7 @@ Transform:
   m_GameObject: {fileID: 1124040424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.7374294, y: -2.7399995, z: -5.0990553}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2014197069}
@@ -2282,6 +2316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1841319916}
   - component: {fileID: 1841319915}
+  - component: {fileID: 1841319917}
   m_Layer: 0
   m_Name: Camera1
   m_TagString: Untagged
@@ -2340,13 +2375,46 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841319913}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.20749187, y: 13.81, z: 2.68}
+  m_LocalPosition: {x: 19.1, y: 46.7, z: 17.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1841319917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841319913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1866255028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,7 +3084,7 @@ GameObject:
   - component: {fileID: 2114118126}
   - component: {fileID: 2114118127}
   m_Layer: 0
-  m_Name: InstantiatePlayer
+  m_Name: Instantiate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3030,8 +3098,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114118125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 15.9, y: 4.8, z: 7}
+  m_LocalScale: {x: 3.3297594, y: 3.3297594, z: 3.3297594}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1866255029}
