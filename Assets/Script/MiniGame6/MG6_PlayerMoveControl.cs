@@ -8,6 +8,7 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     float speed = 5;
 
     public static bool isMove = true;
+    public static int j = 1;
 
     void Start()
     {
@@ -18,6 +19,13 @@ public class MG6_PlayerMoveControl : MonoBehaviour
         if (isMove == true)
         {
             rb.AddForce(transform.forward * speed);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "JudgmentBox")
+        {
+            j++;
         }
     }
 }
