@@ -965,6 +965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 998842727}
   - component: {fileID: 998842726}
+  - component: {fileID: 998842728}
   m_Layer: 0
   m_Name: InstantiatePlayer
   m_TagString: Untagged
@@ -1000,6 +1001,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &998842728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998842725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08178d35d7f74114c9f417cac9362a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animals:
+  - {fileID: 371979167750697457, guid: 7b087795ebfc8ec42816c54c4532512b, type: 3}
+  - {fileID: 8762274513558647225, guid: 764f9ccd830a58946a8612d99bf7a92f, type: 3}
+  - {fileID: 8812546254143726264, guid: 36b2ed95eb4bd5c438ecff1c84981299, type: 3}
+  - {fileID: 1890553500186464464, guid: a03549e0ec47bbc47a109778992ed7b7, type: 3}
+  playerIns: {fileID: 998842727}
 --- !u!1 &1106019381
 GameObject:
   m_ObjectHideFlags: 0
