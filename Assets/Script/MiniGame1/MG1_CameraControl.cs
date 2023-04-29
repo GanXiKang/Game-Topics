@@ -14,7 +14,7 @@ public class MG1_CameraControl : MonoBehaviour
 
     void Update()
     {
-        if (MG1_GameControl.cameraC == true)
+        if (MG1_GameControl.cameraC)
         {
             StartCoroutine(ChangeCamera());
         }
