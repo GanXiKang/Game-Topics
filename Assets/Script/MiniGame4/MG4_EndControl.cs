@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MG4_EndControl : MonoBehaviour
 {
+    Animator ani;
+
     float arriveEnd = 0;
     bool win;
+    void Start()
+    {
+        ani = GetComponent<Animator>();
+    }
     void Update()
     {
         if (arriveEnd == 2)
@@ -14,10 +20,14 @@ public class MG4_EndControl : MonoBehaviour
             if (win == true)
             {
                 print("Win");
+                ani.SetBool("Walk", false);
+                ani.SetBool("Win", true);
             }
             else 
             {
                 print("Lose");
+                ani.SetBool("Walk", false);
+                ani.SetBool("Lose", true);
             }
             StartCoroutine(BackMainGame());
         }

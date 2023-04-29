@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class MG4_PlayerMoveControl : MonoBehaviour
 {
+    Animator ani;
     Rigidbody rb;
 
     float speed = 10 , jump =12;
     bool isJump;
     void Start()
     {
+        ani = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
     void Update()
@@ -21,6 +23,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
                 if (isJump == true)
                 {
                     rb.velocity = Vector3.up * jump;
+                    ani.SetBool("Hurldes", true);
                     isJump = false;
                 }
             }
@@ -31,7 +34,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         if (MG4_UIControl.isStart == true)
         {
             rb.AddForce(transform.forward * speed);
-
+            ani.SetBool("Walk", true);
             ComboSpeed();
         }
     }
@@ -40,6 +43,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         if (other.tag == "Floor")
         {
             isJump = true;
+            ani.SetBool("Hurldes", false);
         }
     }
     void ComboSpeed()
