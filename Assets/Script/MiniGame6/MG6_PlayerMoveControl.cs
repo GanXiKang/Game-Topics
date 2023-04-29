@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MG6_PlayerMoveControl : MonoBehaviour
 {
+    Animator ani;
     Rigidbody rb;
     float speed = 5;
 
@@ -12,10 +13,12 @@ public class MG6_PlayerMoveControl : MonoBehaviour
 
     void Start()
     {
+        ani = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
     void FixedUpdate()
     {
+        ani.SetBool("Surf", true);
         if (isMove == true)
         {
             rb.AddForce(transform.forward * speed);
