@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MG1_GameControl : MonoBehaviour
 {
+    Animator ani;
     float i, win, lose;                                   // 1 = 剪刀; 2 = 石頭; 3 = 佈
 
     public static float playWhat, AIplayWhat; 
@@ -29,6 +30,10 @@ public class MG1_GameControl : MonoBehaviour
         cameraC = true;
     }
 
+    void Start()
+    {
+        ani = GetComponent<Animator>();
+    }
     void Update()
     {
         if (i <= 5 && win < 3 && lose < 3)
@@ -103,10 +108,12 @@ public class MG1_GameControl : MonoBehaviour
             if (win >= 3)
             {
                 print("獲得勝利！");
+                ani.SetBool("Win", true);
             }
             else
             {
                 print("游戲失敗！");
+                ani.SetBool("Lose", true);
             }
             StartCoroutine(BackMainGame());
         }
@@ -165,5 +172,7 @@ public class MG1_GameControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
+        ani.SetBool("Win", false);
+        ani.SetBool("Lose", false);
     }
 }
