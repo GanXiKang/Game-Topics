@@ -5,21 +5,17 @@ using UnityEngine.UI;
 
 public class MG1_CameraControl : MonoBehaviour
 {
-    public GameObject mainCamera;
-    public GameObject camera1;
-    public GameObject UI_Button;
-    public GameObject UI_Win;
-    public GameObject UI_Lose;
-    public GameObject UI_Draw;
+    public GameObject mainCamera, camera1, camera2;
+    public GameObject UI_Button, UI_Win, UI_Lose, UI_Draw;
 
     void Update()
     {
         if (MG1_GameControl.cameraC)
         {
-            StartCoroutine(ChangeCamera());
+            StartCoroutine(ChangeCamera1());
         }
     }
-    IEnumerator ChangeCamera()
+    IEnumerator ChangeCamera1()
     {
         MG1_GameControl.cameraC = false;
         mainCamera.SetActive(false);
