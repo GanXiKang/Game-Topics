@@ -108,12 +108,10 @@ public class MG1_GameControl : MonoBehaviour
             if (win >= 3)
             {
                 print("«@µÃ„ÙÀû£¡");
-                ani.SetBool("Win", true);
             }
             else
             {
                 print("ÓÎ‘òÊ§”¡£¡");
-                ani.SetBool("Lose", true);
             }
             StartCoroutine(BackMainGame());
         }
@@ -172,7 +170,5 @@ public class MG1_GameControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
-        ani.SetBool("Win", false);
-        ani.SetBool("Lose", false);
     }
 }
