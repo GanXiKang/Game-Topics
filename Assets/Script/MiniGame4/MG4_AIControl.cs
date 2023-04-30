@@ -5,6 +5,7 @@ using UnityEngine;
 public class MG4_AIControl : MonoBehaviour
 {
     Rigidbody rb;
+    Animator ani;
 
     float speed = 14;
     float jump = 12;
@@ -12,6 +13,7 @@ public class MG4_AIControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        ani = GetComponent<Animator>();
     }
     void FixedUpdate()
     {
@@ -25,6 +27,14 @@ public class MG4_AIControl : MonoBehaviour
         if (other.tag == "RoadBlock")
         {
             rb.velocity = Vector3.up * jump;
+            ani.SetBool("Jump", true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "RoadBlock")
+        {
+            ani.SetBool("Jump", false);
         }
     }
 }
