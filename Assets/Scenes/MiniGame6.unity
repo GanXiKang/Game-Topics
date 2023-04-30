@@ -1754,6 +1754,7 @@ GameObject:
   - component: {fileID: 1640533807}
   - component: {fileID: 1640533808}
   - component: {fileID: 1640533809}
+  - component: {fileID: 1640533810}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -1806,6 +1807,21 @@ MonoBehaviour:
   judgmentBox: {fileID: 518703835}
   left: {fileID: 2135935455}
   right: {fileID: 1481844294}
+--- !u!114 &1640533810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640533806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478e0b017d0360841be7c5e0047170af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teach: {fileID: 629883548}
+  mouse1: {fileID: 16201564}
+  mouse2: {fileID: 2143386724}
 --- !u!1 &1647578027
 GameObject:
   m_ObjectHideFlags: 0
