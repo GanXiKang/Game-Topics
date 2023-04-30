@@ -5,6 +5,7 @@ using UnityEngine;
 public class MG6_PlayerMoveControl : MonoBehaviour
 {
     Animator ani;
+    Rigidbody rb;
     float speed = 25;
 
     public static int j = 1;
@@ -12,10 +13,11 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     void Start()
     {
         ani = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
     void FixedUpdate()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        rb.AddForce(transform.forward * speed);
 
         if (MG6_EndControl.back)
         {
