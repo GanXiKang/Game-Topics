@@ -31,22 +31,22 @@ public class MG5_PlayerMoveControl : MonoBehaviour
                     transform.Translate(-speed * Time.deltaTime, 0, 0);
                 }
             }
-            if (Input.GetMouseButton(0))
-            {
-                ani.SetBool("Throw", true);
-            }
-            if (Input.GetMouseButtonUp(0))
-            {
-                ani.SetBool("Throw", false);
-            }
-            if (Input.GetMouseButton(1))
-            {
-                ani.SetBool("Receive", true);
-            }
-            if (Input.GetMouseButtonUp(1))
-            {
-                ani.SetBool("Receive", false);
-            }
+            //if (Input.GetMouseButton(0))
+            //{
+            //    ani.SetBool("Throw", true);
+            //}
+            //if (Input.GetMouseButtonUp(0))
+            //{
+            //    ani.SetBool("Throw", false);
+            //}
+            //if (Input.GetMouseButton(1))
+            //{
+            //    ani.SetBool("Receive", true);
+            //}
+            //if (Input.GetMouseButtonUp(1))
+            //{
+            //    ani.SetBool("Receive", false);
+            //}
         }
     }
 }
