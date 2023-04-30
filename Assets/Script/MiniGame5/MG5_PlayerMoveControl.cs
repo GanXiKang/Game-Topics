@@ -52,9 +52,21 @@ public class MG5_PlayerMoveControl : MonoBehaviour
             {
                 ani.SetBool("Receive", true);
             }
-            else 
+            else
             {
                 ani.SetBool("Receive", false);
+            }
+        }
+        else
+        {
+            ani.SetBool("Boat", false);
+            if (MG5_HookControl.score >= 15)
+            {
+                ani.SetBool("Win", true);
+            }
+            else
+            {
+                ani.SetBool("Win", false);
             }
         }
     }
