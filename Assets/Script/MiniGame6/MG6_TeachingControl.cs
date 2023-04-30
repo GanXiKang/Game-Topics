@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class MG6_TeachingControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject teach, mouse1, mouse2;
+    bool isTeach = true;
+    void FixedUpdate()
     {
-        
+        if(isTeach)
+        {
+            StartCoroutine(CloseTeach());
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    IEnumerator CloseTeach()
     {
-        
+        isTeach = false;
+        yield return new WaitForSeconds(0.5f);
+        mouse1.SetActive(false);
+        mouse2.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        mouse1.SetActive(true);
+        mouse2.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        mouse1.SetActive(false);
+        mouse2.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        mouse1.SetActive(true);
+        mouse2.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        mouse1.SetActive(false);
+        mouse2.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        teach.SetActive(false);
     }
+   
 }
