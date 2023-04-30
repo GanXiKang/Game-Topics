@@ -20,6 +20,7 @@ public class MG6_PlayerMoveControl : MonoBehaviour
         if (MG6_EndControl.back)
         {
             ani.SetBool("Surf", false);
+            ani.SetBool("Win", true);
         }
         else 
         {
