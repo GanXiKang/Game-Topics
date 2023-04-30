@@ -16,14 +16,14 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        if (MG4_UIControl.isStart == true)
+        if (MG4_UIControl.isStart)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (isJump == true)
+                if (isJump)
                 {
-                    rb.velocity = Vector3.up * jump;
                     ani.SetBool("Hurldes", true);
+                    rb.velocity = Vector3.up * jump;
                     isJump = false;
                 }
             }
@@ -31,7 +31,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (MG4_UIControl.isStart == true)
+        if (MG4_UIControl.isStart)
         {
             rb.AddForce(transform.forward * speed);
             ani.SetBool("Walk", true);
