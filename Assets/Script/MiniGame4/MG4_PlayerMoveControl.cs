@@ -22,7 +22,8 @@ public class MG4_PlayerMoveControl : MonoBehaviour
             {
                 if (isJump == true)
                 {
-                    rb.velocity = Vector3.up * jump;
+                    //rb.velocity = Vector3.up * jump;
+                    transform.Translate(0, jump * Time.deltaTime, 0);
                     ani.SetBool("Hurldes", true);
                     isJump = false;
                 }
@@ -33,7 +34,8 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     {
         if (MG4_UIControl.isStart == true)
         {
-            rb.AddForce(transform.forward * speed);
+            //rb.AddForce(transform.forward * speed);
+            transform.Translate(0, 0, speed * Time.deltaTime);
             ani.SetBool("Walk", true);
             ComboSpeed();
         }
