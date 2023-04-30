@@ -6,7 +6,7 @@ public class MG6_PlayerMoveControl : MonoBehaviour
 {
     Animator ani;
     Rigidbody rb;
-    float speed = 5;
+    float speed = 25;
 
     public static int j = 1;
 
@@ -17,7 +17,8 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.AddForce(transform.forward * speed);
+        transform.Translate(speed * Time.deltaTime, 0, 0);
+
         ani.SetBool("Surf", true);
     }
     private void OnTriggerEnter(Collider other)
