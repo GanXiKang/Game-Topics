@@ -68,8 +68,6 @@ public class MG5_PlayerMoveControl : MonoBehaviour
             {
                 ani.SetBool("Lose", true);
             }
-            ani.SetBool("Win", false);
-            ani.SetBool("Lose", false);
         }
     }
 }
