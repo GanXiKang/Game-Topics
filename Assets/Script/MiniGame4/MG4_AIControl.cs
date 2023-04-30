@@ -21,6 +21,14 @@ public class MG4_AIControl : MonoBehaviour
         {
             rb.AddForce(transform.forward * speed);
         }
+        if (MG4_EndControl.losePlayer)
+        {
+            ani.SetBool("Win", false);
+        }
+        if (MG4_EndControl.winPlayer)
+        {
+            ani.SetBool("Lose", false);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

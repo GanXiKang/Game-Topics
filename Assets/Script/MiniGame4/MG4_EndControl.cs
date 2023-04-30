@@ -7,18 +7,21 @@ public class MG4_EndControl : MonoBehaviour
 {
     float arriveEnd = 0;
     bool win;
+    public static bool winPlayer, losePlayer;
 
     void Update()
     {
         if (arriveEnd == 2)
         {
-            if (win == true)
+            if (win)
             {
                 print("Win");
+                winPlayer = true;
             }
             else 
             {
                 print("Lose");
+                losePlayer = true;
             }
             StartCoroutine(BackMainGame());
         }
@@ -42,6 +45,8 @@ public class MG4_EndControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
+        winPlayer = false;
+        losePlayer = false;
         MG4_UIControl.isStart = false;
         MG4_RoadBlockControl.combo = 0;
     }
