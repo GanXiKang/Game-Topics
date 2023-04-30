@@ -1745,21 +1745,6 @@ CapsuleCollider:
   m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!111 &717902536
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717902530}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: -623603649343465320, guid: f3daf0835c08b284989b97c95c2bc201, type: 3}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &728870020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,8 +3022,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: f3daf0835c08b284989b97c95c2bc201, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: f3daf0835c08b284989b97c95c2bc201, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3bcac7500600519499dd7e0039092893, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3daf0835c08b284989b97c95c2bc201, type: 3}
 --- !u!1001 &1314040181
