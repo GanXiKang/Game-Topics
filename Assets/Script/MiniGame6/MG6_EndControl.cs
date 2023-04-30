@@ -8,7 +8,7 @@ public class MG6_EndControl : MonoBehaviour
     public static bool back = false;
     void Update()
     {
-        if (back)
+        if (back || MG6_BalanceBarControl.gameover)
         {
             StartCoroutine(BackMainGame());
         }
@@ -18,7 +18,6 @@ public class MG6_EndControl : MonoBehaviour
         if (other.tag == "End")
         {
             print("Win!");
-            MG6_PlayerMoveControl.isMove = false;
             back = true;
         }
     }
@@ -27,7 +26,7 @@ public class MG6_EndControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(0);
         back = false;
-        MG6_PlayerMoveControl.isMove = true;
+        MG6_BalanceBarControl.gameover = false;
         MG6_PlayerMoveControl.j = 1;
     }
 }

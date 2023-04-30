@@ -12,6 +12,8 @@ public class MG6_BalanceBarControl : MonoBehaviour
     float timer, value = 0;
     bool isJudgment, isAdd = false;
 
+    public static bool gameover;
+
     void Update()
     {
         if (value <= 0)
@@ -144,10 +146,9 @@ public class MG6_BalanceBarControl : MonoBehaviour
             if (timer > 2f)
             {
                 print("GameOver");
-                MG6_PlayerMoveControl.isMove = false;
                 player.transform.Translate(0, -0.5f, 0);
                 player.transform.Rotate(0, 0, -0.5f);
-                Destroy(player, 1.5f);
+                Destroy(player, 2f);
             }
         }
         else 

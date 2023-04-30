@@ -8,7 +8,6 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     Rigidbody rb;
     float speed = 5;
 
-    public static bool isMove = true;
     public static int j = 1;
 
     void Start()
@@ -18,11 +17,8 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     }
     void FixedUpdate()
     {
+        rb.AddForce(transform.forward * speed);
         ani.SetBool("Surf", true);
-        if (isMove == true)
-        {
-            rb.AddForce(transform.forward * speed);
-        }
     }
     private void OnTriggerEnter(Collider other)
     {
