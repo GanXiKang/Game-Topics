@@ -14,6 +14,11 @@ public class MG6_BalanceBarControl : MonoBehaviour
 
     public static bool gameover;
 
+    //void Start()
+    //{
+    //    player = FindObjectOfType("Player");
+    //}
+
     void Update()
     {
         if (value <= 0)
