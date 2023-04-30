@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MG5_HookControl : MonoBehaviour
 {
-    Animator ani;
     public GameObject fishingLine;
     public static bool isFishing = false;
     public static float score = 0;
@@ -12,10 +11,6 @@ public class MG5_HookControl : MonoBehaviour
     float y, speed = 20;
     bool hookDown, hookUp, takeBack;
 
-    void Start()
-    {
-        ani.GetComponent<Animator>();
-    }
     void Update()
     {
         y = transform.position.y;
@@ -26,22 +21,18 @@ public class MG5_HookControl : MonoBehaviour
             {
                 hookDown = true;
                 isFishing = true;
-                ani.SetBool("Throw", true);
             }
             if (Input.GetMouseButtonUp(0))
             {
                 hookDown = false;
-                ani.SetBool("Throw", false);
             }
             if (Input.GetMouseButton(1))
             {
                 hookUp = true;
-                ani.SetBool("Receive", true);
             }
             if (Input.GetMouseButtonUp(1))
             {
                 hookUp = false;
-                ani.SetBool("Receive", false);
             }
         }
     }
@@ -80,25 +71,21 @@ public class MG5_HookControl : MonoBehaviour
         if (other.tag == "SmallFish")
         {
             takeBack = true;
-            ani.SetBool("Receive", true);
             score++;
         }
         else if (other.tag == "MidFish")
         {
             takeBack = true;
-            ani.SetBool("Receive", true);
             score += 3;
         }
         else if (other.tag == "BigFish")
         {
             takeBack = true;
-            ani.SetBool("Receive", true);
             score += 5;
         }
         else if (other.tag == "Rubbish")
         {
             takeBack = true;
-            ani.SetBool("Receive", true);
             score -= 3;
         }
     }
@@ -108,7 +95,6 @@ public class MG5_HookControl : MonoBehaviour
         {
             takeBack = false;
             isFishing = false;
-            ani.SetBool("Receive", false);
         }
     }
 }
