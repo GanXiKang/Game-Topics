@@ -41,11 +41,11 @@ public class MG5_PlayerMoveControl : MonoBehaviour
             }
             if (Input.GetMouseButton(1))
             {
-                ani.SetBool("Receive", true);
+                ani.SetBool("Throw", true);
             }
             if (Input.GetMouseButtonUp(1))
             {
-                ani.SetBool("Receive", false);
+                ani.SetBool("Throw", false);
             }
 
             if (MG5_HookControl.takeBack)
