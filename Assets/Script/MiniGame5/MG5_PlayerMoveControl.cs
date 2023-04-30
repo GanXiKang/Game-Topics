@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class MG5_PlayerMoveControl : MonoBehaviour
 {
+    Animator ani;
     float x, speed = 20;
+    void Start()
+    {
+        ani = GetComponent<Animator>();
+    }
     void Update()
     {
         x = transform.position.x;
+        ani.SetBool("Boat", true);
 
         if (MG5_UIControl.gameTime > 0)
         {
