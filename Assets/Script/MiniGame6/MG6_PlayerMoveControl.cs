@@ -17,7 +17,7 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb.AddForce(transform.forward * speed);
+        transform.Translate(speed * Time.deltaTime, 0, 0);
 
         if (MG6_EndControl.back)
         {
