@@ -17,7 +17,15 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
 
-        ani.SetBool("Surf", true);
+        if (MG6_EndControl.back)
+        {
+            ani.SetBool("Surf", false);
+        }
+        else 
+        {
+            ani.SetBool("Surf", true);
+        }
+
     }
     private void OnTriggerEnter(Collider other)
     {
