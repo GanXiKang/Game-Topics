@@ -146,9 +146,9 @@ public class MG6_BalanceBarControl : MonoBehaviour
             if (timer > 2f)
             {
                 print("GameOver");
+                gameover = true;
                 player.transform.Translate(0, -0.5f, 0);
                 player.transform.Rotate(0, 0, -0.5f);
-                Destroy(player, 2f);
             }
         }
         else 
