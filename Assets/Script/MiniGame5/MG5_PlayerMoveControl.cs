@@ -47,6 +47,15 @@ public class MG5_PlayerMoveControl : MonoBehaviour
             {
                 ani.SetBool("Receive", false);
             }
+
+            if (MG5_HookControl.takeBack)
+            {
+                ani.SetBool("Receive", true);
+            }
+            else 
+            {
+                ani.SetBool("Receive", false);
+            }
         }
     }
 }

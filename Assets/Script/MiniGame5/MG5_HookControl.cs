@@ -5,11 +5,11 @@ using UnityEngine;
 public class MG5_HookControl : MonoBehaviour
 {
     public GameObject fishingLine;
-    public static bool isFishing = false;
+    public static bool isFishing = false, , takeBack = false;
     public static float score = 0;
 
     float y, speed = 20;
-    bool hookDown, hookUp, takeBack;
+    bool hookDown, hookUp;
 
     void Update()
     {
