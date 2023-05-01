@@ -21,33 +21,33 @@ public class MG6_JudgmentBoxControl : MonoBehaviour
         switch (MG6_PlayerMoveControl.j)
         {
             case 1:
-                left.rectTransform.anchoredPosition = new Vector3(-200, 370, 0);
-                right.rectTransform.anchoredPosition = new Vector3(200, 370, 0);
+                left.rectTransform.anchoredPosition = new Vector3(-200, 310, 0);
+                right.rectTransform.anchoredPosition = new Vector3(200, 310, 0);
                 break;
 
             case 2:
-                left.rectTransform.anchoredPosition = new Vector3(-300, 370, 0);
-                right.rectTransform.anchoredPosition = new Vector3(50, 370, 0);
+                left.rectTransform.anchoredPosition = new Vector3(-300, 310, 0);
+                right.rectTransform.anchoredPosition = new Vector3(50, 310, 0);
                 break;
 
             case 3:
-                left.rectTransform.anchoredPosition = new Vector3(100, 370, 0);
-                right.rectTransform.anchoredPosition = new Vector3(400, 370, 0);
+                left.rectTransform.anchoredPosition = new Vector3(100, 310, 0);
+                right.rectTransform.anchoredPosition = new Vector3(400, 310, 0);
                 break;
 
             case 4:
-                left.rectTransform.anchoredPosition = new Vector3(-50, 370, 0);
-                right.rectTransform.anchoredPosition = new Vector3(150, 370, 0);
+                left.rectTransform.anchoredPosition = new Vector3(-50, 310, 0);
+                right.rectTransform.anchoredPosition = new Vector3(150, 310, 0);
                 break;
 
             case 5:
-                left.rectTransform.anchoredPosition = new Vector3(-350, 370, 0);
-                right.rectTransform.anchoredPosition = new Vector3(-100, 370, 0);
+                left.rectTransform.anchoredPosition = new Vector3(-350, 310, 0);
+                right.rectTransform.anchoredPosition = new Vector3(-100, 310, 0);
                 break;
 
             case 6:
-                left.rectTransform.anchoredPosition = new Vector3(200, 370, 0);
-                right.rectTransform.anchoredPosition = new Vector3(350, 370, 0);
+                left.rectTransform.anchoredPosition = new Vector3(200, 310, 0);
+                right.rectTransform.anchoredPosition = new Vector3(350, 310, 0);
                 break;
         }
     }
