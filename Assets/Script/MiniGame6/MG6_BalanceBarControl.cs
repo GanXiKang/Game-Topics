@@ -30,30 +30,36 @@ public class MG6_BalanceBarControl : MonoBehaviour
             value = 8;
         }
 
-        if (Input.GetMouseButton(0))
+        if (MG6_UIControl.isStart)
         {
-            isAdd = true;
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            isAdd = false;
-        }
-        power.rectTransform.localScale = new Vector3(value, 0.5f, 1);
+            if (Input.GetMouseButton(0))
+            {
+                isAdd = true;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                isAdd = false;
+            }
+            power.rectTransform.localScale = new Vector3(value, 0.5f, 1);
 
-        if (MG6_EndControl.back == true)
-        {
-            balanceBar.SetActive(false);
+            if (MG6_EndControl.back == true)
+            {
+                balanceBar.SetActive(false);
+            }
         }
     }
     void FixedUpdate()
     {
-        if (isAdd == true)
+        if (MG6_UIControl.isStart)
         {
-            value += 0.2f;
-        }
-        else
-        {
-            value -= 0.5f;
+            if (isAdd == true)
+            {
+                value += 0.2f;
+            }
+            else
+            {
+                value -= 0.5f;
+            }
         }
 
         Judgment();

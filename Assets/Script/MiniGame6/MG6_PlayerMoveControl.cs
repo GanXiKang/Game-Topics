@@ -16,18 +16,20 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
-
-        if (MG6_EndControl.back)
+        if (MG6_UIControl.isStart)
         {
-            ani.SetBool("Surf", false);
-            ani.SetBool("Win", true);
-        }
-        else 
-        {
-            ani.SetBool("Surf", true);
-        }
+            transform.Translate(speed * Time.deltaTime, 0, 0);
 
+            if (MG6_EndControl.back)
+            {
+                ani.SetBool("Surf", false);
+                ani.SetBool("Win", true);
+            }
+            else
+            {
+                ani.SetBool("Surf", true);
+            }
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
