@@ -26,6 +26,7 @@ public class MG6_EndControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(7);
         back = false;
+        MG6_UIControl.isStart = false;
         MG6_BalanceBarControl.gameover = false;
         MG6_PlayerMoveControl.j = 1;
     }
