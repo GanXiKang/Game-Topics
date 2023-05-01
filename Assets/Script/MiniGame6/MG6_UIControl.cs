@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class MG6_UIControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject startUI;
+    bool isStart;
 
-    // Update is called once per frame
-    void Update()
+    public void Button_Start()
     {
-        
+        startUI.SetActive(false);
+        isStart = true;
     }
 }
