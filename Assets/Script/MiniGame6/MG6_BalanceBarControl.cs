@@ -151,20 +151,23 @@ public class MG6_BalanceBarControl : MonoBehaviour
     }
     void GameControl()
     {
-        timer += Time.deltaTime;
-        if (isJudgment == false)
+        if (MG6_UIControl.isStart)
         {
-            if (timer > 2f)
+            timer += Time.deltaTime;
+            if (isJudgment == false)
             {
-                print("GameOver");
-                gameover = true;
-                player.transform.Translate(0, -0.5f, 0);
-                player.transform.Rotate(0, 0, -0.5f);
+                if (timer > 2f)
+                {
+                    print("GameOver");
+                    gameover = true;
+                    player.transform.Translate(0, -0.5f, 0);
+                    player.transform.Rotate(0, 0, -0.5f);
+                }
             }
-        }
-        else 
-        {
-            timer = 0;
+            else
+            {
+                timer = 0;
+            }
         }
     }
 }
