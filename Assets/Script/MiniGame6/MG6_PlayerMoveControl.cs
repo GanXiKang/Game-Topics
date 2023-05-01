@@ -5,7 +5,7 @@ using UnityEngine;
 public class MG6_PlayerMoveControl : MonoBehaviour
 {
     Animator ani;
-    Rigidbody rb;
+
     float speed = 35;
 
     public static int j = 1;
@@ -13,7 +13,6 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     void Start()
     {
         ani = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
     }
     void FixedUpdate()
     {
