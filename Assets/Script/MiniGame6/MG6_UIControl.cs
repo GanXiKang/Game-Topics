@@ -5,7 +5,7 @@ using UnityEngine;
 public class MG6_UIControl : MonoBehaviour
 {
     public GameObject startUI;
-    bool isStart;
+    public static bool isStart = false;
 
     public void Button_Start()
     {
