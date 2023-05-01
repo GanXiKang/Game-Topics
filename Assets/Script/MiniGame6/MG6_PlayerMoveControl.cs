@@ -6,7 +6,7 @@ public class MG6_PlayerMoveControl : MonoBehaviour
 {
     Animator ani;
     Rigidbody rb;
-    float speed = 25;
+    float speed = 35;
 
     public static int j = 1;
 
