@@ -44,7 +44,7 @@ public class MG4_EndControl : MonoBehaviour
     IEnumerator BackMainGame()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(7);
         winPlayer = false;
         losePlayer = false;
         MG4_UIControl.isStart = false;

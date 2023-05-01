@@ -23,7 +23,7 @@ public class MG5_GameResultControl : MonoBehaviour
     IEnumerator BackMainGame()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(7);
         MG5_HookControl.score = 0;
         MG5_UIControl.gameTime = 45;
     }

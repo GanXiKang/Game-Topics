@@ -23,7 +23,7 @@ public class MG2_GameResultControl : MonoBehaviour
     IEnumerator BackMainGame()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(7);
         MG2_StartButtonControl.isStart = false;
         MG2_CollectScoreControl.score = 0;
         MG2_UIControl.gameTime = 45;

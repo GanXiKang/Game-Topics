@@ -175,6 +175,6 @@ public class MG1_GameControl : MonoBehaviour
         playerAniWin = false;
         playerAniLose = false;
         cameraEnd = false;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(7);
     }
 }

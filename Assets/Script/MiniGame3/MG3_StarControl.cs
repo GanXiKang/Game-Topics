@@ -80,7 +80,7 @@ public class MG3_StarControl : MonoBehaviour
     IEnumerator BackMainGame()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(7);
         MG3_ButtonControl.round = 0;
         MG3_ButtonControl.destoryStarNum = 0;
     }
