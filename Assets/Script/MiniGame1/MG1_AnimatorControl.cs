@@ -16,12 +16,12 @@ public class MG1_AnimatorControl : MonoBehaviour
         if (MG1_GameControl.playerAniWin)
         {
             ani.SetBool("Win", true);
-            BGM.PlayOneShot(win);
+            //BGM.PlayOneShot(win);
         }
         if (MG1_GameControl.playerAniLose)
         {
             ani.SetBool("Lose", true);
-            BGM.PlayOneShot(lose);
+            //BGM.PlayOneShot(lose);
         }
     }
 }
