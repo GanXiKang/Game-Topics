@@ -21,7 +21,7 @@ public class P4_MoveControl : MonoBehaviour
     {
         if (Dice.P4_totalNum == 0)
         {
-            transform.DOMove(p[0].transform.position, 1);
+            //transform.DOMove(p[0].transform.position, 1);
         }
         if (Dice.P4_totalNum == 1)
         {
