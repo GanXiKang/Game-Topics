@@ -42,13 +42,13 @@ public class MG1_CameraControl : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (MG1_GameControl.cameraEnd)
         {
-            camera2.SetActive(true);
-            camera1.SetActive(false);
-
+            UI_Score.SetActive(false);
             UI_Win.SetActive(false);
             UI_Lose.SetActive(false);
             UI_Draw.SetActive(false);
-            UI_Score.SetActive(false);
+
+            camera2.SetActive(true);
+            camera1.SetActive(false);
             yield return new WaitForSeconds(3f);
         }
 
