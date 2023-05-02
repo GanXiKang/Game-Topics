@@ -6,6 +6,9 @@ public class Chest1AnimationControl : MonoBehaviour
 {
     Animation ani;
 
+    public AudioSource BGM;
+    public AudioClip open;
+
     void Start()
     {
         ani = GetComponent<Animation>();
@@ -20,6 +23,7 @@ public class Chest1AnimationControl : MonoBehaviour
     IEnumerator ChestActive()
     {
         ani.Play("Open");
+        BGM.PlayOneShot(open);
         ChestColliderControl.isOpen1 = false;
         yield return new WaitForSeconds(3f);
         this.gameObject.SetActive(false);
