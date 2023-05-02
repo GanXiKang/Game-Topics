@@ -6,13 +6,19 @@ using UnityEngine.UI;
 public class MG2_UIControl : MonoBehaviour
 {
     public Text GameTime, Score;
+    public GameObject teach;
 
     public static float gameTime = 45f;
 
     void Update()
     {
-        if (MG2_StartButtonControl.isStart == true)
+        if (MG2_StartButtonControl.isStart)
         {
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                teach.SetActive(false);
+            }
+
             if (gameTime >= 0)
             {
                 gameTime -= 1 * Time.deltaTime;
