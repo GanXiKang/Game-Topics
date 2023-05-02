@@ -30,5 +30,4 @@ public class MG6_TeachingControl : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         teach.SetActive(false);
     }
-   
 }
