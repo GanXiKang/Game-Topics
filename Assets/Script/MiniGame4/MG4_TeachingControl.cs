@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class MG4_TeachingControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject teach, space1, space2;
 
-    // Update is called once per frame
+    void start()
+    {
+        StartCoroutine(CloseTeach());
+    }
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            teach.SetActive(false);
+        }
+    }
+    IEnumerator CloseTeach()
+    {
+        yield return new WaitForSeconds(0.5f);
+        space1.SetActive(false);
+        space2.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        space1.SetActive(true);
+        space2.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        space1.SetActive(false);
+        space2.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        space1.SetActive(true);
+        space2.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        space1.SetActive(false);
+        space2.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        teach.SetActive(false);
     }
 }
