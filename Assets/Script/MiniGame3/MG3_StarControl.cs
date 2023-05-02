@@ -9,7 +9,8 @@ public class MG3_StarControl : MonoBehaviour
     public Transform insPoint1, insPoint2, insPoint3;
 
     public static bool insStar;
-    float x,win,result;
+    public static float win;
+    float x, result;
 
     void Update()
     {
@@ -81,6 +82,7 @@ public class MG3_StarControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(7);
+        win = 0;
         MG3_ButtonControl.round = 0;
         MG3_ButtonControl.destoryStarNum = 0;
     }
