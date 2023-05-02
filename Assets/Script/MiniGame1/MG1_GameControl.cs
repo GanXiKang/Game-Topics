@@ -11,6 +11,7 @@ public class MG1_GameControl : MonoBehaviour
     public static float playWhat, AIplayWhat; 
     public static bool cameraC, cameraEnd, W, L, D, playerAniWin, playerAniLose;
 
+    public GameObject gameWinUI, gameLoseUI;
     public GameObject[] aiScore = new GameObject[3];
     public GameObject[] playerScore = new GameObject[3];
 
@@ -120,11 +121,13 @@ public class MG1_GameControl : MonoBehaviour
             if (win >= 3)
             {
                 playerAniWin = true;
+                gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
             }
             else
             {
                 playerAniLose = true;
+                gameLoseUI.SetActive(true);
                 BGM.PlayOneShot(gameLose);
             }
             StartCoroutine(BackMainGame());
