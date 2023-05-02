@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class AudioControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public AudioSource m;
     void Start()
     {
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
         
