@@ -115,18 +115,15 @@ public class MG1_GameControl : MonoBehaviour
         }
         else
         {
-            print("游戲結束");
             cameraEnd = true;
             PlayerPlayGameControl();
             if (win >= 3)
             {
-                print("獲得勝利！");
                 playerAniWin = true;
                 BGM.PlayOneShot(gameWin);
             }
             else
             {
-                print("游戲失敗！");
                 playerAniLose = true;
                 BGM.PlayOneShot(gameLose);
             }
