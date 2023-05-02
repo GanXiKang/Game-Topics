@@ -11,7 +11,7 @@ public class MG5_TeachingControl : MonoBehaviour
     }
     void Update()
     {
-        if (MG2_StartButtonControl.isStart)
+        if (MG5_UIControl.isStart)
         {
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
             {
