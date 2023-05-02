@@ -26,5 +26,6 @@ public class MG5_GameResultControl : MonoBehaviour
         SceneManager.LoadScene(7);
         MG5_HookControl.score = 0;
         MG5_UIControl.gameTime = 45;
+        MG5_UIControl.isStart = false;
     }
 }

@@ -5,9 +5,16 @@ using UnityEngine.UI;
 
 public class MG5_UIControl : MonoBehaviour
 {
+    public GameObject startUI;
     public Text timer, score;
     public static float gameTime = 45f;
-    
+    public static bool isStart = false;
+
+    public void Button_Start()
+    {
+        startUI.SetActive(false);
+        isStart = true;
+    }
     void Update()
     {
         if (gameTime >= 0)
