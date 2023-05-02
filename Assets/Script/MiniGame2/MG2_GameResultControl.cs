@@ -5,17 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class MG2_GameResultControl : MonoBehaviour
 {
+    Animator ani;
+    public AudioSource BGM;
+    public AudioClip gameWin, gameLose;
+
+    void Start()
+    {
+        ani = GetComponent<Animator>();
+    }
     void Update()
     {
         if (MG2_UIControl.gameTime <= 0)
         {
             if (MG2_CollectScoreControl.score >= 30)
             {
-                print("Win");
+                ani.SetBool("Basket", false);
+                ani.SetBool("Win", true);
+                BGM.PlayOneShot(gameWin);
             }
             else 
             {
-                print("Lose");
+                ani.SetBool("Basket", false);
+                ani.SetBool("Lose", true);
+                BGM.PlayOneShot(gameLose);
             }
             StartCoroutine(BackMainGame());
         }
