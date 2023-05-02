@@ -6,7 +6,7 @@ public class MG4_TeachingControl : MonoBehaviour
 {
     public GameObject teach, space1, space2;
 
-    void start()
+    private void Start()
     {
         StartCoroutine(CloseTeach());
     }
