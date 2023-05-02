@@ -14,20 +14,26 @@ public class MG1_GameControl : MonoBehaviour
     public GameObject[] aiScore = new GameObject[3];
     public GameObject[] playerScore = new GameObject[3];
 
+    public AudioSource BGM;
+    public AudioClip button, winM, loseM, gameWin, gameLose;
+
     public void Button_Scissors()
     {
         playWhat = 1;
         cameraC = true;
+        BGM.PlayOneShot(button);
     }
     public void Button_Stone()
     {
         playWhat = 2;
         cameraC = true;
+        BGM.PlayOneShot(button);
     }
     public void Button_Cloth()
     {
         playWhat = 3;
         cameraC = true;
+        BGM.PlayOneShot(button);
     }
 
     void Start()
@@ -52,11 +58,13 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             win++;
                             W = true;
+                            BGM.PlayOneShot(winM);
                             break;
                         case 3:
                             i++;
                             lose++;
                             L = true;
+                            BGM.PlayOneShot(loseM);
                             break;
                     }
                 }
@@ -68,6 +76,7 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             lose++;
                             L = true;
+                            BGM.PlayOneShot(loseM);
                             break;
                         case 2:
                             D = true;
@@ -76,6 +85,7 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             win++;
                             W = true;
+                            BGM.PlayOneShot(winM);
                             break;
                     }
                 }
@@ -87,11 +97,13 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             win++;
                             W = true;
+                            BGM.PlayOneShot(winM);
                             break;
                         case 2:
                             i++;
                             lose++;
                             L = true;
+                            BGM.PlayOneShot(loseM);
                             break;
                         case 3:
                             D = true;
