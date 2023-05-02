@@ -16,6 +16,9 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public GameObject[] NO = new GameObject[4];
     public GameObject[] button = new GameObject[8];
 
+    public AudioSource BGM;
+    public AudioClip ok, cancel, change;
+
     float p, confirm;
 
     void Update()
@@ -212,6 +215,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[0].SetActive(true);
         button[0].SetActive(false);
         button[1].SetActive(false);
+        BGM.PlayOneShot(ok);
     }
     public void Cancel_1p()
     {
@@ -220,6 +224,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[0].SetActive(false);
         button[0].SetActive(true);
         button[1].SetActive(true);
+        BGM.PlayOneShot(cancel);
     }
     public void Left_1p()
     {
@@ -227,6 +232,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         Limit();
         Choose1P();
         OK[0].SetActive(true);
+        BGM.PlayOneShot(change);
     }
     public void Right_1p()
     {
@@ -234,6 +240,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         Limit();
         Choose1P();
         OK[0].SetActive(true);
+        BGM.PlayOneShot(change);
     }
 
     public void OK_2p()
@@ -243,6 +250,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[1].SetActive(true);
         button[2].SetActive(false);
         button[3].SetActive(false);
+        BGM.PlayOneShot(ok);
     }
     public void Cancel_2p()
     {
@@ -251,6 +259,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[1].SetActive(false);
         button[2].SetActive(true);
         button[3].SetActive(true);
+        BGM.PlayOneShot(cancel);
     }
     public void Left_2p()
     {
@@ -258,6 +267,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         Limit();
         Choose2P();
         OK[1].SetActive(true);
+        BGM.PlayOneShot(change);
     }
     public void Right_2p()
     {
@@ -265,6 +275,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         Limit();
         Choose2P();
         OK[1].SetActive(true);
+        BGM.PlayOneShot(change);
     }
 
     public void OK_3p()
@@ -274,6 +285,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[2].SetActive(true);
         button[4].SetActive(false);
         button[5].SetActive(false);
+        BGM.PlayOneShot(ok);
     }
     public void Cancel_3p()
     {
@@ -282,6 +294,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[2].SetActive(false);
         button[4].SetActive(true);
         button[5].SetActive(true);
+        BGM.PlayOneShot(cancel);
     }
     public void Left_3p()
     {
@@ -289,6 +302,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         Limit();
         Choose3P();
         OK[2].SetActive(true);
+        BGM.PlayOneShot(change);
     }
     public void Right_3p()
     {
@@ -296,6 +310,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         Limit();
         Choose3P();
         OK[2].SetActive(true);
+        BGM.PlayOneShot(change);
     }
 
     public void OK_4p()
@@ -305,6 +320,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[3].SetActive(true);
         button[6].SetActive(false);
         button[7].SetActive(false);
+        BGM.PlayOneShot(ok);
     }
     public void Cancel_4p()
     {
@@ -313,6 +329,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[3].SetActive(false);
         button[6].SetActive(true);
         button[7].SetActive(true);
+        BGM.PlayOneShot(cancel);
     }
     public void Left_4p()
     {
@@ -320,6 +337,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         Limit();
         Choose4P();
         OK[3].SetActive(true);
+        BGM.PlayOneShot(change);
     }
     public void Right_4p()
     {
@@ -327,5 +345,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
         Limit();
         Choose4P();
         OK[3].SetActive(true);
+        BGM.PlayOneShot(change);
     }
 }
