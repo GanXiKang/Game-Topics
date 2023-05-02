@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MG1_CameraControl : MonoBehaviour
 {
     public GameObject mainCamera, camera1, camera2;
-    public GameObject UI_Button, UI_Win, UI_Lose, UI_Draw, UI_Score;
+    public GameObject UI_Button, UI_Win, UI_Lose, UI_Draw, UI_Score, UI_GameWin, UI_GameLose;
 
     void Update()
     {
@@ -49,6 +49,15 @@ public class MG1_CameraControl : MonoBehaviour
 
             camera2.SetActive(true);
             camera1.SetActive(false);
+
+            if (MG1_GameControl.playerAniWin)
+            {
+                UI_GameWin.SetActive(true);
+            }
+            else if (MG1_GameControl.playerAniLose)
+            {
+                UI_GameLose.SetActive(true);
+            }
             yield return new WaitForSeconds(3f);
         }
 
