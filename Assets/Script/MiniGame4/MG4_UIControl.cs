@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class MG4_UIControl : MonoBehaviour
 {
     public GameObject startUI;
-    public GameObject comboObject;
-    public Text combo;
+    public GameObject[] comboImage = new GameObject[10];
 
     public static bool isStart;
 
@@ -19,14 +18,54 @@ public class MG4_UIControl : MonoBehaviour
 
     void Update()
     {
-        if (MG4_RoadBlockControl.combo >= 3)
+        if (MG4_RoadBlockControl.combo == 3)
         {
-            comboObject.SetActive(true);
-            combo.text = MG4_RoadBlockControl.combo + " Combo";
+            comboImage[0].SetActive(true);
         }
-        else
+        else if (MG4_RoadBlockControl.combo == 4)
         {
-            comboObject.SetActive(false);
+            comboImage[0].SetActive(false);
+            comboImage[1].SetActive(true);
+        }
+        else if (MG4_RoadBlockControl.combo == 5)
+        {
+            comboImage[1].SetActive(false);
+            comboImage[2].SetActive(true);
+        }
+        else if (MG4_RoadBlockControl.combo == 6)
+        {
+            comboImage[2].SetActive(false);
+            comboImage[3].SetActive(true);
+        }
+        else if (MG4_RoadBlockControl.combo == 7)
+        {
+            comboImage[3].SetActive(false);
+            comboImage[4].SetActive(true);
+        }
+        else if (MG4_RoadBlockControl.combo == 8)
+        {
+            comboImage[4].SetActive(false);
+            comboImage[5].SetActive(true);
+        }
+        else if (MG4_RoadBlockControl.combo == 9)
+        {
+            comboImage[5].SetActive(false);
+            comboImage[6].SetActive(true);
+        }
+        else if (MG4_RoadBlockControl.combo == 10)
+        {
+            comboImage[6].SetActive(false);
+            comboImage[7].SetActive(true);
+        }
+        else if (MG4_RoadBlockControl.combo == 11)
+        {
+            comboImage[7].SetActive(false);
+            comboImage[8].SetActive(true);
+        }
+        else if (MG4_RoadBlockControl.combo == 12)
+        {
+            comboImage[8].SetActive(false);
+            comboImage[9].SetActive(true);
         }
     }
 }
