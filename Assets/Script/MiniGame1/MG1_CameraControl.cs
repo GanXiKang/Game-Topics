@@ -48,6 +48,7 @@ public class MG1_CameraControl : MonoBehaviour
             UI_Win.SetActive(false);
             UI_Lose.SetActive(false);
             UI_Draw.SetActive(false);
+            yield return new WaitForSeconds(3f);
         }
 
         yield return new WaitForSeconds(1f);
