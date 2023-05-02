@@ -10,6 +10,6 @@ public class MG1_StartButtonControl : MonoBehaviour
     public void Button_Start()
     {
         startUI.SetActive(false);
-        BGM.PlayOneShot(button)£»
+        BGM.PlayOneShot(button);
     }
 }
