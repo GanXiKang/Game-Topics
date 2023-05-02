@@ -2857,7 +2857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1195563579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2926,6 +2926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198120881}
   - component: {fileID: 1198120880}
+  - component: {fileID: 1198120882}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -2963,6 +2964,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1198120882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198120879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43c0e5b1dd95ad41941dd3f916a2283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teach: {fileID: 215884418}
+  space1: {fileID: 1971499598}
+  space2: {fileID: 1195563578}
 --- !u!1001 &1212175343
 PrefabInstance:
   m_ObjectHideFlags: 0
