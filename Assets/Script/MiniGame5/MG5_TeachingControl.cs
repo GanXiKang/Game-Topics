@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MG5_TeachingControl : MonoBehaviour
 {
-    public GameObject teach, mouse1, mouse2, mouse3;
+    public GameObject TeachGroup,teach, mouse1, mouse2, mouse3;
     void Start()
     {
         StartCoroutine(CloseTeach());
@@ -43,6 +43,6 @@ public class MG5_TeachingControl : MonoBehaviour
         mouse2.SetActive(false);
         mouse3.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        teach.SetActive(false);
+        TeachGroup.SetActive(false);
     }
 }
