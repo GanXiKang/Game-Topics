@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MG3_ButtonControl : MonoBehaviour
 {
     public GameObject startUI, B_Next, B_Box1, B_Box2, B_Box3;
+    public Text score;
 
     public static bool downCup, openBox, destoryStar;
     public static float openWhyBox, round, destoryStarNum;
@@ -76,6 +77,7 @@ public class MG3_ButtonControl : MonoBehaviour
                 startActive = false;
                 StartCoroutine(StartSetActice());
             }
+            score.text = " " + MG3_StarControl.win;
         }
     }
     IEnumerator StartSetActice()
