@@ -10,10 +10,15 @@ public class Dice : MonoBehaviour
 
     public int min = 1;
     public int max = 7;
+
+    public AudioSource BGM;
+    public AudioClip roll;
+
     void Update()
     {
         if (Input.GetKeyDown("space"))
         {
+            BGM.PlayOneShot(roll);
             diceNum = Random.Range(min, max);
             Debug.Log(diceNum);
 
