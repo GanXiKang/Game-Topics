@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MG1_CameraControl : MonoBehaviour
 {
     public GameObject mainCamera, camera1, camera2;
-    public GameObject UI_Button, UI_Win, UI_Lose, UI_Draw;
+    public GameObject UI_Button, UI_Win, UI_Lose, UI_Draw, UI_Score;
 
     void Update()
     {
@@ -48,6 +48,7 @@ public class MG1_CameraControl : MonoBehaviour
             UI_Win.SetActive(false);
             UI_Lose.SetActive(false);
             UI_Draw.SetActive(false);
+            UI_Score.SetActive(false);
             yield return new WaitForSeconds(3f);
         }
 
