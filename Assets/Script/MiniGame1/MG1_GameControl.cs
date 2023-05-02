@@ -122,11 +122,13 @@ public class MG1_GameControl : MonoBehaviour
             {
                 print("«@µÃ„ÙÀû£¡");
                 playerAniWin = true;
+                BGM.PlayOneShot(gameWin);
             }
             else
             {
                 print("ÓÎ‘òÊ§”¡£¡");
                 playerAniLose = true;
+                BGM.PlayOneShot(gameLose);
             }
             StartCoroutine(BackMainGame());
         }
