@@ -67,5 +67,12 @@ public class MG4_UIControl : MonoBehaviour
             comboImage[8].SetActive(false);
             comboImage[9].SetActive(true);
         }
+        else if (MG4_RoadBlockControl.combo == 0)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                comboImage[i].SetActive(false);
+            }
+        }
     }
 }
