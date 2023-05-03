@@ -1285,6 +1285,7 @@ GameObject:
   - component: {fileID: 1074927924}
   - component: {fileID: 1074927923}
   - component: {fileID: 1074927922}
+  - component: {fileID: 1074927926}
   m_Layer: 0
   m_Name: End
   m_TagString: End
@@ -1370,6 +1371,21 @@ Transform:
   m_Father: {fileID: 36190289}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1074927926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074927921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de15308f6c4dc604bb28553e07abb8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameWinUI: {fileID: 420586689}
+  BGM: {fileID: 1640533812}
+  gameWin: {fileID: 8300000, guid: b81f66bc17853cb4dbb3927febc10259, type: 3}
 --- !u!1 &1103961640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,6 +2353,8 @@ MonoBehaviour:
   judgmentBox: {fileID: 518703835}
   left: {fileID: 2135935455}
   right: {fileID: 1481844294}
+  BGM: {fileID: 1640533812}
+  point: {fileID: 8300000, guid: aa39d78368ea146449f2117a5972a4da, type: 3}
 --- !u!114 &1640533810
 MonoBehaviour:
   m_ObjectHideFlags: 0

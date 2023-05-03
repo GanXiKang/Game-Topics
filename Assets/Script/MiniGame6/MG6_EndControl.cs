@@ -19,7 +19,7 @@ public class MG6_EndControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "End")
+        if (other.tag == "Player")
         {
             gameWinUI.SetActive(true);
             BGM.PlayOneShot(gameWin);
