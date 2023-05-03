@@ -34,7 +34,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         if (MG4_UIControl.isStart)
         {
             rb.AddForce(transform.forward * speed);
-            ani.SetBool("Walk", true);
+            ani.SetBool("Run", true);
             ComboSpeed();
         }
     }
