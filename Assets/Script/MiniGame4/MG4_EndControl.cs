@@ -27,6 +27,8 @@ public class MG4_EndControl : MonoBehaviour
         if (arriveEnd == 2)
         {
             MG4_RoadBlockControl.combo = 0;
+            MG4_UIControl.isStart = false;
+
             if (win)
             {
                 gameWinUI.SetActive(true);
@@ -63,6 +65,5 @@ public class MG4_EndControl : MonoBehaviour
         SceneManager.LoadScene(7);
         winPlayer = false;
         losePlayer = false;
-        MG4_UIControl.isStart = false;
     }
 }
