@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MG4_EndControl : MonoBehaviour
 {
     float arriveEnd = 0;
-    bool win;
+    bool win, clap = true;
     public static bool winPlayer, losePlayer;
 
     public AudioSource BGM;
@@ -16,7 +16,11 @@ public class MG4_EndControl : MonoBehaviour
     {
         if (arriveEnd == 1)
         {
-            BGM.PlayOneShot(rewards);
+            if (clap)
+            {
+                clap = false;
+                BGM.PlayOneShot(rewards);
+            }
         }
         if (arriveEnd == 2)
         {
