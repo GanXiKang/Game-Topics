@@ -13,6 +13,7 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     void Start()
     {
         ani = GetComponent<Animator>();
+        ani.SetBool("Surf", true);
     }
     void FixedUpdate()
     {
@@ -25,10 +26,12 @@ public class MG6_PlayerMoveControl : MonoBehaviour
                 ani.SetBool("Surf", false);
                 ani.SetBool("Win", true);
             }
-            else
+            if (MG6_BalanceBarControl.gameover)
             {
-                ani.SetBool("Surf", true);
+                transform.Translate(0, 0.5f * Time.deltaTime, 0);
+                transform.Rotate(0, 0, 0.2f * Time.deltaTime);
             }
+                
         }
     }
     private void OnTriggerEnter(Collider other)
