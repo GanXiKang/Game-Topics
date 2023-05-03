@@ -8,7 +8,7 @@ public class MG4_EndControl : MonoBehaviour
     float arriveEnd = 0;
     bool win, clap = true;
 
-    public GameObject comboGroup, gameWinUI, gameLoseUI;
+    public GameObject gameWinUI, gameLoseUI;
     public AudioSource BGM;
     public AudioClip end, gameWin, gameLose, rewards;
 
@@ -26,7 +26,7 @@ public class MG4_EndControl : MonoBehaviour
         }
         if (arriveEnd == 2)
         {
-            comboGroup.SetActive(true);
+            MG4_RoadBlockControl.combo = 0;
             if (win)
             {
                 gameWinUI.SetActive(true);
@@ -46,14 +46,12 @@ public class MG4_EndControl : MonoBehaviour
     {                                           //判斷誰最后到
         if (other.tag == "Player")              
         {
-            print("1");
             win = false;                        //AI先到終點
             arriveEnd++;
             BGM.PlayOneShot(end);
         }
         if (other.tag == "AI")
         {
-            print("2");
             win = true;                         //Player先到終點
             arriveEnd++;
             BGM.PlayOneShot(end);
@@ -66,6 +64,5 @@ public class MG4_EndControl : MonoBehaviour
         winPlayer = false;
         losePlayer = false;
         MG4_UIControl.isStart = false;
-        MG4_RoadBlockControl.combo = 0;
     }
 }
