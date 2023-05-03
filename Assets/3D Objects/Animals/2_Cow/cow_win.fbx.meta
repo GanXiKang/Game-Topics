@@ -22,7 +22,9 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Scene' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Bone' has translation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -113,18 +115,18 @@ ModelImporter:
     serializedVersion: 3
     human: []
     skeleton:
-    - name: cow_win(Clone)
+    - name: Cow_Win(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Cube.001
-      parentName: cow_win(Clone)
+      parentName: Cow_Win(Clone)
       position: {x: -0, y: 1.1836245, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1.2342545, y: 1.1446344, z: 1.1529189}
     - name: Armature
-      parentName: cow_win(Clone)
+      parentName: Cow_Win(Clone)
       position: {x: -0, y: -0.13655943, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
       scale: {x: 36.052002, y: 36.052002, z: 36.052002}
@@ -422,7 +424,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
