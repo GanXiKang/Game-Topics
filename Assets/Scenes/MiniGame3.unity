@@ -1269,6 +1269,7 @@ GameObject:
   - component: {fileID: 1077830769}
   - component: {fileID: 1077830768}
   - component: {fileID: 1077830767}
+  - component: {fileID: 1077830770}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1342,6 +1343,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 38.234, y: 0, z: 0}
+--- !u!114 &1077830770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077830766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &1109076841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1494,6 +1528,10 @@ MonoBehaviour:
   B_Box2: {fileID: 723800750}
   B_Box3: {fileID: 689842206}
   score: {fileID: 732340695}
+  BGM: {fileID: 1158425043}
+  button: {fileID: 8300000, guid: b3da8f6d66219914cbb5689c3e028d5a, type: 3}
+  openCup: {fileID: 8300000, guid: f9c0c38a6903d84478abb6e04c2fc501, type: 3}
+  closeCup: {fileID: 8300000, guid: 0ee0d362120ebc549a41251de7aa6443, type: 3}
 --- !u!114 &1158425041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1525,6 +1563,11 @@ MonoBehaviour:
   insPoint1: {fileID: 727607098}
   insPoint2: {fileID: 2051680109}
   insPoint3: {fileID: 8753360}
+  BGM: {fileID: 1158425043}
+  gameWin: {fileID: 8300000, guid: b81f66bc17853cb4dbb3927febc10259, type: 3}
+  gameLose: {fileID: 8300000, guid: 36ea3eea9ee59944abdc5469490155cf, type: 3}
+  starCup: {fileID: 8300000, guid: 23fa156414607fd4a8a3a61760179dfe, type: 3}
+  notStarCup: {fileID: 8300000, guid: 89fa641f4d26bf84a822fc990c743c36, type: 3}
 --- !u!82 &1158425043
 AudioSource:
   m_ObjectHideFlags: 0
