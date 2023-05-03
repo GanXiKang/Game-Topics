@@ -12,6 +12,8 @@ public class MG4_UIControl : MonoBehaviour
 
     public static bool isStart;
 
+    bool jumpMusia = true;
+
     public void Button_Start()
     {
         startUI.SetActive(false);
@@ -26,10 +28,16 @@ public class MG4_UIControl : MonoBehaviour
         if (MG4_RoadBlockControl.hit)
         {
             BGM.PlayOneShot(hit);
+            MG4_RoadBlockControl.hit = false;
         }
-        if (MG4_PlayerMoveControl.isJump == false)
+        if (MG4_PlayerMoveControl.isJump == false && jumpMusia)
         {
             BGM.PlayOneShot(jump);
+            jumpMusia = false;
+        }
+        if (MG4_PlayerMoveControl.isJump && jumpMusia == false)
+        {
+            jumpMusia = true;
         }
     }
     void combo()
