@@ -22,42 +22,45 @@ public class MG5_UIControl : MonoBehaviour
     }
     void Update()
     {
-        if (gameTime >= 0)
+        if (isStart)
         {
-            gameTime -= 1 * Time.deltaTime;
-            timer.text = "Time:" + gameTime.ToString("f0") + "s";
+            if (gameTime >= 0)
+            {
+                gameTime -= 1 * Time.deltaTime;
+                timer.text = "Time:" + gameTime.ToString("f0") + "s";
 
-            if (MG5_HookControl.isFishing && throwMusia)
-            {
-                BGM.PlayOneShot(throwM);
-                throwMusia = false;
-            }
-            if (MG5_HookControl.isFishing == false && throwMusia == false)
-            {
-                throwMusia = true;
-            }
-            if (MG5_HookControl.takeBack && receiveMusia)
-            {
-                BGM.PlayOneShot(receiveM);
-                receiveMusia = false;
-            }
-            if (MG5_HookControl.takeBack == false && receiveMusia == false)
-            {
-                receiveMusia = true;
-            }
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
-            {
-                if (moveMusia)
+                if (MG5_HookControl.isFishing && throwMusia)
                 {
-                    BGM.PlayOneShot(move);
-                    moveMusia = false;
+                    BGM.PlayOneShot(throwM);
+                    throwMusia = false;
+                }
+                if (MG5_HookControl.isFishing == false && throwMusia == false)
+                {
+                    throwMusia = true;
+                }
+                if (MG5_HookControl.takeBack && receiveMusia)
+                {
+                    BGM.PlayOneShot(receiveM);
+                    receiveMusia = false;
+                }
+                if (MG5_HookControl.takeBack == false && receiveMusia == false)
+                {
+                    receiveMusia = true;
+                }
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+                {
+                    if (moveMusia)
+                    {
+                        BGM.PlayOneShot(move);
+                        moveMusia = false;
+                    }
+                }
+                else
+                {
+                    moveMusia = true;
                 }
             }
-            else 
-            {
-                moveMusia = true;
-            }
+            score.text = "Score:" + MG5_HookControl.score;
         }
-        score.text = "Score:" + MG5_HookControl.score;
     }
 }
