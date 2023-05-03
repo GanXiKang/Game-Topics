@@ -5,17 +5,26 @@ using DG.Tweening;
 
 public class P1_MoveControl : MonoBehaviour
 {
-    public Transform[] p = new Transform[8];
+    GameObject[] p = new GameObject[8];
 
     public static bool Award;                    //false : Wave , True : Jump
 
     void Start()
     {
         DOTween.SetTweensCapacity(500, 125);
+        
     }
     void Update()
     {
         MovePoint();                        //ÎÄ×Ö÷»×ÓÓÃ
+        p[1] = GameObject.FindGameObjectWithTag("Point1");
+        p[2] = GameObject.FindGameObjectWithTag("Point2");
+        p[3] = GameObject.FindGameObjectWithTag("Point3");
+        p[4] = GameObject.FindGameObjectWithTag("Point4");
+        p[5] = GameObject.FindGameObjectWithTag("Point5");
+        p[6] = GameObject.FindGameObjectWithTag("Point6");
+        p[7] = GameObject.FindGameObjectWithTag("Point7");
+
     }
     void MovePoint()
     {
