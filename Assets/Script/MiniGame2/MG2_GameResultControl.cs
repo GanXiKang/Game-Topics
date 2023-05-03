@@ -5,44 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class MG2_GameResultControl : MonoBehaviour
 {
-    Animator ani;
-
     public GameObject gameWinUI, gameLoseUI;
     public AudioSource BGM;
     public AudioClip gameWin, gameLose, goodApple, badApple;
 
-    void Start()
-    {
-        ani = GetComponent<Animator>();
-    }
     void Update()
     {
-        if (MG2_CollectScoreControl.goodA)
-        {
-            BGM.PlayOneShot(goodApple);
-            MG2_CollectScoreControl.goodA = false;
-        }
-        if (MG2_CollectScoreControl.badA)
-        {
-            BGM.PlayOneShot(badApple);
-            MG2_CollectScoreControl.badA = false;
-        }
-
         if (MG2_UIControl.gameTime <= 0)
         {
             if (MG2_CollectScoreControl.score >= 30)
             {
-                ani.SetBool("Basket", false);
-                ani.SetBool("Win", true);
+                gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
             }
-            else 
+            else
             {
-                ani.SetBool("Basket", false);
-                ani.SetBool("Lose", true);
+                gameLoseUI.SetActive(true);
                 BGM.PlayOneShot(gameLose);
             }
             StartCoroutine(BackMainGame());
+        }
+        else 
+        {
+            if (MG2_CollectScoreControl.goodA)
+            {
+                BGM.PlayOneShot(goodApple);
+                MG2_CollectScoreControl.goodA = false;
+            }
+            if (MG2_CollectScoreControl.badA)
+            {
+                BGM.PlayOneShot(badApple);
+                MG2_CollectScoreControl.badA = false;
+            }
         }
     }
     IEnumerator BackMainGame()
