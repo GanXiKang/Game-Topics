@@ -7,6 +7,8 @@ public class MG4_UIControl : MonoBehaviour
 {
     public GameObject startUI;
     public GameObject[] comboImage = new GameObject[10];
+    public AudioSource BGM;
+    public AudioClip button;
 
     public static bool isStart;
 
@@ -14,9 +16,14 @@ public class MG4_UIControl : MonoBehaviour
     {
         startUI.SetActive(false);
         isStart = true;
+        BGM.PlayOneShot(button);
     }
 
     void Update()
+    {
+        combo();
+    }
+    void combo()
     {
         if (MG4_RoadBlockControl.combo == 3)
         {

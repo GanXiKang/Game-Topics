@@ -9,6 +9,9 @@ public class MG4_EndControl : MonoBehaviour
     bool win;
     public static bool winPlayer, losePlayer;
 
+    public AudioSource BGM;
+    public AudioClip end;
+
     void Update()
     {
         if (arriveEnd == 2)
@@ -33,17 +36,19 @@ public class MG4_EndControl : MonoBehaviour
             print("1");
             win = false;                        //AI先到終點
             arriveEnd++;
+            BGM.PlayOneShot(end);
         }
         if (other.tag == "AI")
         {
             print("2");
             win = true;                         //Player先到終點
             arriveEnd++;
+            BGM.PlayOneShot(end);
         }
     }
     IEnumerator BackMainGame()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(7);
         winPlayer = false;
         losePlayer = false;
