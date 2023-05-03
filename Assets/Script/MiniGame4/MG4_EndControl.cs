@@ -12,7 +12,7 @@ public class MG4_EndControl : MonoBehaviour
     public AudioSource BGM;
     public AudioClip end, gameWin, gameLose, rewards;
 
-    public static bool winPlayer, losePlayer;
+    public static bool winPlayer, losePlayer, move;
 
     void Update()
     {
@@ -29,6 +29,7 @@ public class MG4_EndControl : MonoBehaviour
         {
             MG4_RoadBlockControl.combo = 0;
             MG4_UIControl.isStart = false;
+            move = true;
             camera1.SetActive(false);
             camera2.SetActive(true);
 

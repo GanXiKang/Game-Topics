@@ -10,6 +10,8 @@ public class MG4_AIControl : MonoBehaviour
     float speed = 14;
     float jump = 12;
 
+    public Transform point;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,13 +23,21 @@ public class MG4_AIControl : MonoBehaviour
         {
             rb.AddForce(transform.forward * speed);
         }
-        if (MG4_EndControl.losePlayer)
+        else
         {
-            ani.SetBool("Win", false);
-        }
-        if (MG4_EndControl.winPlayer)
-        {
-            ani.SetBool("Lose", false);
+            if (MG4_EndControl.move)
+            {
+                transform.position = point.transform.position;
+
+                if (MG4_EndControl.losePlayer)
+                {
+                    ani.SetBool("Win", false);
+                }
+                if (MG4_EndControl.winPlayer)
+                {
+                    ani.SetBool("Lose", false);
+                }
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
