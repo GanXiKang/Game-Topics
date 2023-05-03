@@ -8,7 +8,9 @@ public class MG4_PlayerMoveControl : MonoBehaviour
     Rigidbody rb;
 
     float speed = 10 , jump =12;
-    bool isJump;
+    
+    public static bool isJump;
+
     void Start()
     {
         ani = GetComponent<Animator>();
