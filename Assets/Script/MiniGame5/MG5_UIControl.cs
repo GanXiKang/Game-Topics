@@ -13,6 +13,7 @@ public class MG5_UIControl : MonoBehaviour
     public static float gameTime = 45f;
     public static bool isStart = false;
 
+    bool throwMusia = true, receiveMusia = true, moveMusia = true ;
     public void Button_Start()
     {
         startUI.SetActive(false);
@@ -26,23 +27,37 @@ public class MG5_UIControl : MonoBehaviour
             gameTime -= 1 * Time.deltaTime;
             timer.text = "Time:" + gameTime.ToString("f0") + "s";
 
-            if (MG5_PlayerMoveControl.throwMusia)
+            if (MG5_HookControl.isFishing && throwMusia)
             {
                 BGM.PlayOneShot(throwM);
-                MG5_PlayerMoveControl.throwMusia = false;
+                throwMusia = false;
             }
-            if (MG5_PlayerMoveControl.receiveMusia)
+            if (MG5_HookControl.isFishing == false && throwMusia == false)
+            {
+                throwMusia = true;
+            }
+            if (MG5_HookControl.takeBack && receiveMusia)
             {
                 BGM.PlayOneShot(receiveM);
-                MG5_PlayerMoveControl.receiveMusia = false;
+                receiveMusia = false;
             }
-            if (MG5_PlayerMoveControl.moveMusia)
+            if (MG5_HookControl.takeBack == false && receiveMusia == false)
             {
-                BGM.PlayOneShot(move);
-                MG5_PlayerMoveControl.moveMusia = false;
+                receiveMusia = true;
+            }
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+            {
+                if (moveMusia)
+                {
+                    BGM.PlayOneShot(move);
+                    moveMusia = false;
+                }
+            }
+            else 
+            {
+                moveMusia = true;
             }
         }
-
         score.text = "Score:" + MG5_HookControl.score;
     }
 }

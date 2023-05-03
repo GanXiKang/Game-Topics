@@ -6,8 +6,7 @@ public class MG5_PlayerMoveControl : MonoBehaviour
 {
     Animator ani;
     float x, speed = 20;
-    bool again = true;
-    public static bool throwMusia = false, receiveMusia = false, moveMusia = false; 
+
     void Start()
     {
         ani = GetComponent<Animator>();
@@ -24,7 +23,6 @@ public class MG5_PlayerMoveControl : MonoBehaviour
                 if (MG5_HookControl.isFishing == false && x >= -66)
                 {
                     transform.Translate(speed * Time.deltaTime, 0, 0);
-                    moveMusia = true;
                 }
             }
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
@@ -32,19 +30,12 @@ public class MG5_PlayerMoveControl : MonoBehaviour
                 if (MG5_HookControl.isFishing == false && x <= 66)
                 {
                     transform.Translate(-speed * Time.deltaTime, 0, 0);
-                    moveMusia = true;
                 }
             }
-            moveMusia = false;
 
             if (Input.GetMouseButton(0))
             {
                 ani.SetBool("Throw", true);
-                if (again)
-                {
-                    throwMusia = true;
-                    again = false;
-                }
             }
             if (Input.GetMouseButtonUp(0))
             {
@@ -62,8 +53,6 @@ public class MG5_PlayerMoveControl : MonoBehaviour
             if (MG5_HookControl.takeBack)
             {
                 ani.SetBool("Receive", true);
-                receiveMusia = true;
-                again = true;
             }
             else
             {
