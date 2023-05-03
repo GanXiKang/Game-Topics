@@ -7,6 +7,8 @@ public class MG3_StarControl : MonoBehaviour
 {
     public GameObject star;
     public Transform insPoint1, insPoint2, insPoint3;
+    public AudioSource BGM;
+    public AudioClip gameWin, gameLose, starCup, notStarCup;
 
     public static bool insStar;
     public static float win;
@@ -38,11 +40,10 @@ public class MG3_StarControl : MonoBehaviour
                 if (MG3_ButtonControl.openWhyBox == x)
                 {
                     win++;
-                    print("Win");
+                    BGM.PlayOneShot(starCup);
                 }
                 else
                 {
-                    print("Lose");
                     StartCoroutine(LoseRound());
                 }
                 result++;
@@ -53,17 +54,18 @@ public class MG3_StarControl : MonoBehaviour
         {
             if (win >= 2)
             {
-                print("ÓÎ‘ò„ÙÀû£¡");
+                BGM.PlayOneShot(gameWin);
             }
             else
             {
-                print("ÓÎ‘òÊ§”¡£¡");
+                BGM.PlayOneShot(gameLose);
             }
             StartCoroutine(BackMainGame());
         }
     }
     IEnumerator LoseRound()
     {
+        BGM.PlayOneShot(notStarCup);
         yield return new WaitForSeconds(1f);
         if (x == 1)
         {
@@ -80,7 +82,7 @@ public class MG3_StarControl : MonoBehaviour
     }
     IEnumerator BackMainGame()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(7);
         win = 0;
         MG3_ButtonControl.round = 0;

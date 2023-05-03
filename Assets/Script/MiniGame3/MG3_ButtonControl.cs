@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MG3_ButtonControl : MonoBehaviour
-{
+{ 
     public GameObject startUI, B_Next, B_Box1, B_Box2, B_Box3;
     public Text score;
+    public AudioSource BGM;
+    public AudioClip button, openCup, closeCup;
 
     public static bool downCup, openBox, destoryStar;
     public static float openWhyBox, round, destoryStarNum;
@@ -15,12 +17,14 @@ public class MG3_ButtonControl : MonoBehaviour
 
     public void Button_Start()
     {
+        BGM.PlayOneShot(button);
         startUI.SetActive(false);
         B_Box1.gameObject.SetActive(true);
         B_Box2.gameObject.SetActive(true);
         B_Box3.gameObject.SetActive(true);
         MG3_StarControl.insStar = true;
         downCup = true;
+        BGM.PlayOneShot(closeCup);
         destoryStarNum++;
         round++;
         print("Round" + round);
@@ -33,6 +37,7 @@ public class MG3_ButtonControl : MonoBehaviour
         B_Box3.gameObject.SetActive(true);
         MG3_StarControl.insStar = true;
         downCup = true;
+        BGM.PlayOneShot(closeCup);
         destoryStar = true;
         destoryStarNum++;
         round++;
@@ -47,6 +52,7 @@ public class MG3_ButtonControl : MonoBehaviour
         B_Box2.gameObject.SetActive(false);
         B_Box3.gameObject.SetActive(false);
         startActive = true;
+        BGM.PlayOneShot(openCup);
     }
     public void OpenBox2()
     {
@@ -57,6 +63,7 @@ public class MG3_ButtonControl : MonoBehaviour
         B_Box2.gameObject.SetActive(false);
         B_Box3.gameObject.SetActive(false);
         startActive = true;
+        BGM.PlayOneShot(openCup);
     }
     public void OpenBox3()
     {
@@ -67,6 +74,7 @@ public class MG3_ButtonControl : MonoBehaviour
         B_Box2.gameObject.SetActive(false);
         B_Box3.gameObject.SetActive(false);
         startActive = true;
+        BGM.PlayOneShot(openCup);
     }
     void Update()
     {
