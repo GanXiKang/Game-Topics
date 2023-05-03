@@ -23,7 +23,7 @@ public class MG6_EndControl : MonoBehaviour
     }
     IEnumerator BackMainGame()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(7);
         back = false;
         MG6_UIControl.isStart = false;
