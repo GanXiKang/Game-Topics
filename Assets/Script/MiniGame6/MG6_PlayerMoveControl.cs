@@ -28,10 +28,9 @@ public class MG6_PlayerMoveControl : MonoBehaviour
             }
             if (MG6_BalanceBarControl.gameover)
             {
-                transform.Translate(0, 0.5f * Time.deltaTime, 0);
-                transform.Rotate(0, 0, 0.2f * Time.deltaTime);
+                ani.SetBool("Surf", false);
+                transform.position += new Vector3(0, 0.5f * Time.deltaTime, 0);
             }
-                
         }
     }
     private void OnTriggerEnter(Collider other)
