@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MG6_EndControl : MonoBehaviour
 {
+    public GameObject gameWinUI;
+    public AudioSource BGM;
+    public AudioClip gameWin;
+
     public static bool back = false;
     void Update()
     {
@@ -17,7 +21,8 @@ public class MG6_EndControl : MonoBehaviour
     {
         if (other.tag == "End")
         {
-            print("Win!");
+            gameWinUI.SetActive(true);
+            BGM.PlayOneShot(gameWin);
             back = true;
         }
     }
