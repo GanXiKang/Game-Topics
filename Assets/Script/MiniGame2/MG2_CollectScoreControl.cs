@@ -5,6 +5,7 @@ using UnityEngine;
 public class MG2_CollectScoreControl : MonoBehaviour
 {
     public static float score = 0;
+    public static bool goodA, badA;
 
     void Update()
     {
@@ -18,11 +19,13 @@ public class MG2_CollectScoreControl : MonoBehaviour
         if (other.tag == "Apple")
         {
             score++;
+            goodA = true;
             Destroy(other.gameObject);
         }
         if (other.tag == "Boom")
         {
             score -= 5;
+            badA = true;
             Destroy(other.gameObject);
         }
     }

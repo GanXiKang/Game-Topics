@@ -7,7 +7,7 @@ public class MG2_GameResultControl : MonoBehaviour
 {
     Animator ani;
     public AudioSource BGM;
-    public AudioClip gameWin, gameLose;
+    public AudioClip gameWin, gameLose, goodApple, badApple;
 
     void Start()
     {
@@ -15,6 +15,17 @@ public class MG2_GameResultControl : MonoBehaviour
     }
     void Update()
     {
+        if (MG2_CollectScoreControl.goodA)
+        {
+            BGM.PlayOneShot(goodApple);
+            MG2_CollectScoreControl.goodA = false;
+        }
+        if (MG2_CollectScoreControl.badA)
+        {
+            BGM.PlayOneShot(badApple);
+            MG2_CollectScoreControl.badA = false;
+        }
+
         if (MG2_UIControl.gameTime <= 0)
         {
             if (MG2_CollectScoreControl.score >= 30)
