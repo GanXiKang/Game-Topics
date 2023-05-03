@@ -36,6 +36,19 @@ public class MG2_PlayerControl : MonoBehaviour
                     }
                 }
             }
+            else 
+            {
+                if (MG2_GameResultControl.win)
+                {
+                    ani.SetBool("Basket", false);
+                    ani.SetBool("Win", true);
+                }
+                if (MG2_GameResultControl.lose)
+                {
+                    ani.SetBool("Basket", false);
+                    ani.SetBool("Lose", true);
+                }
+            }
         }
     }
 }

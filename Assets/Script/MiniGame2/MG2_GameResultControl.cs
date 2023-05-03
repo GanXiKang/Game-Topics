@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MG2_GameResultControl : MonoBehaviour
 {
+    public static bool win, lose;
+
     public GameObject gameWinUI, gameLoseUI;
     public AudioSource BGM;
     public AudioClip gameWin, gameLose, goodApple, badApple;
@@ -15,11 +17,13 @@ public class MG2_GameResultControl : MonoBehaviour
         {
             if (MG2_CollectScoreControl.score >= 30)
             {
+                win = true;
                 gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
             }
             else
             {
+                lose = true;
                 gameLoseUI.SetActive(true);
                 BGM.PlayOneShot(gameLose);
             }
@@ -43,6 +47,8 @@ public class MG2_GameResultControl : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(7);
+        win = false;
+        lose = false;
         MG2_StartButtonControl.isStart = false;
         MG2_CollectScoreControl.score = 0;
         MG2_UIControl.gameTime = 45;
