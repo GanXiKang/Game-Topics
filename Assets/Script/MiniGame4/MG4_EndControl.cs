@@ -8,7 +8,7 @@ public class MG4_EndControl : MonoBehaviour
     float arriveEnd = 0;
     bool win, clap = true;
 
-    public GameObject gameWinUI, gameLoseUI;
+    public GameObject gameWinUI, gameLoseUI, camera1, camera2;
     public AudioSource BGM;
     public AudioClip end, gameWin, gameLose, rewards;
 
@@ -23,11 +23,14 @@ public class MG4_EndControl : MonoBehaviour
                 clap = false;
                 BGM.PlayOneShot(rewards);
             }
+            camera1.SetActive(true);
         }
         if (arriveEnd == 2)
         {
             MG4_RoadBlockControl.combo = 0;
             MG4_UIControl.isStart = false;
+            camera1.SetActive(false);
+            camera2.SetActive(true);
 
             if (win)
             {
