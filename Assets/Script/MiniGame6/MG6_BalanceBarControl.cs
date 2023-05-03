@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MG6_BalanceBarControl : MonoBehaviour
 {
     public GameObject balanceBar;
+    public GameObject[] gameLoseUI = new GameObject[4];
     public Image power;
 
     float timer, value = 0;
@@ -151,7 +152,6 @@ public class MG6_BalanceBarControl : MonoBehaviour
             {
                 if (timer > 2f)
                 {
-                    print("GameOver");
                     gameover = true;
                 }
             }
