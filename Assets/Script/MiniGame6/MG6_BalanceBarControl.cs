@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class MG6_BalanceBarControl : MonoBehaviour
 {
-    public GameObject player;
     public GameObject balanceBar;
     public Image power;
 
@@ -13,11 +12,6 @@ public class MG6_BalanceBarControl : MonoBehaviour
     bool isJudgment, isAdd = false;
 
     public static bool gameover;
-
-    //void Start()
-    //{
-    //    player = FindObjectOfType("Player");
-    //}
 
     void Update()
     {
@@ -160,8 +154,6 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 {
                     print("GameOver");
                     gameover = true;
-                    player.transform.Translate(0, -0.5f, 0);
-                    player.transform.Rotate(0, 0, -0.5f);
                 }
             }
             else
