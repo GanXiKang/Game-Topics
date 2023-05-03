@@ -1440,7 +1440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &633407114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2871,7 +2871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1391185976
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3197,6 +3197,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73df931aeb7f9044cb1a22cf17804d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameWinUI: {fileID: 633407113}
+  gameLoseUI: {fileID: 1391185975}
+  BGM: {fileID: 1896107839}
+  gameWin: {fileID: 8300000, guid: b81f66bc17853cb4dbb3927febc10259, type: 3}
+  gameLose: {fileID: 8300000, guid: 36ea3eea9ee59944abdc5469490155cf, type: 3}
 --- !u!114 &1896107838
 MonoBehaviour:
   m_ObjectHideFlags: 0
