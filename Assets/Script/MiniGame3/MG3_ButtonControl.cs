@@ -91,6 +91,9 @@ public class MG3_ButtonControl : MonoBehaviour
     IEnumerator StartSetActice()
     {
         yield return new WaitForSeconds(2.5f);
-        B_Next.gameObject.SetActive(true);
+        if (round < 3)
+        {
+            B_Next.gameObject.SetActive(true);
+        }
     }
 }
