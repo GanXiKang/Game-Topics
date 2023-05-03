@@ -53,7 +53,7 @@ public class MG1_BoxColliderControl : MonoBehaviour
     IEnumerator StartMiniGame()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(6);
     }
 }
 
