@@ -8,6 +8,8 @@ public class MG6_BalanceBarControl : MonoBehaviour
     public GameObject balanceBar;
     public GameObject[] gameLoseUI = new GameObject[4];
     public Image power;
+    public AudioSource BGM;
+    public AudioClip gameLose, drowing;
 
     float timer, value = 0;
     bool isJudgment, isAdd = false;
@@ -153,6 +155,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 if (timer > 2f)
                 {
                     gameover = true;
+                    BGM.PlayOneShot(drowing);
                 }
             }
             else
