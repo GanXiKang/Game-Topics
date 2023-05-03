@@ -19,7 +19,7 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     {
         if (MG6_UIControl.isStart)
         {
-            transform.Translate(speed * Time.deltaTime, 0, 0);
+            transform.Translate(0, 0, speed * Time.deltaTime);
 
             if (MG6_EndControl.back)
             {
