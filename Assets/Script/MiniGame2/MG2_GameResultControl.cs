@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MG2_GameResultControl : MonoBehaviour
 {
     Animator ani;
+
+    public GameObject gameWinUI, gameLoseUI;
     public AudioSource BGM;
     public AudioClip gameWin, gameLose, goodApple, badApple;
 
@@ -45,7 +47,7 @@ public class MG2_GameResultControl : MonoBehaviour
     }
     IEnumerator BackMainGame()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(7);
         MG2_StartButtonControl.isStart = false;
         MG2_CollectScoreControl.score = 0;
