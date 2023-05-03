@@ -10,7 +10,7 @@ public class Menu_ButtonControl : MonoBehaviour
     public GameObject menu_t;
 
     public AudioSource BGM;
-    public AudioClip onClick;
+    public AudioClip onClick, close;
 
     public void B_Start()
     {
@@ -40,7 +40,7 @@ public class Menu_ButtonControl : MonoBehaviour
         menu1.SetActive(true);
         menu2.SetActive(false);
         menu_t.SetActive(false);
-        BGM.PlayOneShot(onClick);
+        BGM.PlayOneShot(close);
     }
     public void B_2p()
     {
