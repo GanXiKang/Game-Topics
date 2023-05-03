@@ -12,7 +12,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
     public AudioClip gameLose, drowing;
 
     float timer, value = 0;
-    bool isJudgment, isAdd = false;
+    bool isJudgment, isAdd = false, M1 = true, M2 = true;
 
     public static bool gameover;
 
@@ -168,7 +168,11 @@ public class MG6_BalanceBarControl : MonoBehaviour
     }
     IEnumerator GameOver()
     {
-        BGM.PlayOneShot(drowing);
+        if (M1)
+        {
+            BGM.PlayOneShot(drowing);
+            M1 = false;
+        }
         yield return new WaitForSeconds(2f);
         if (MG1_BoxColliderControl.p == 1)
         {
@@ -186,6 +190,10 @@ public class MG6_BalanceBarControl : MonoBehaviour
         {
             gameLoseUI[3].SetActive(true);
         }
-        BGM.PlayOneShot(gameLose);
+        if (M2)
+        {
+            BGM.PlayOneShot(gameLose);
+            M2 = false;
+        }
     }
 }
