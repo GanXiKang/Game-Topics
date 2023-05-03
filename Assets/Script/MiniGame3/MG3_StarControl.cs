@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MG3_StarControl : MonoBehaviour
 {
-    public GameObject star;
+    public GameObject star, gameWinUI, gameLoseUI;
     public Transform insPoint1, insPoint2, insPoint3;
     public AudioSource BGM;
     public AudioClip gameWin, gameLose, starCup, notStarCup;
@@ -54,10 +54,12 @@ public class MG3_StarControl : MonoBehaviour
         {
             if (win >= 2)
             {
+                gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
             }
             else
             {
+                gameLoseUI.SetActive(true);
                 BGM.PlayOneShot(gameLose);
             }
             StartCoroutine(BackMainGame());
