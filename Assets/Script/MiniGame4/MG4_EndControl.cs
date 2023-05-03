@@ -23,7 +23,10 @@ public class MG4_EndControl : MonoBehaviour
                 clap = false;
                 BGM.PlayOneShot(rewards);
             }
-            camera1.SetActive(true);
+            if (win == false)
+            {
+                camera1.SetActive(true);
+            }
         }
         if (arriveEnd == 2)
         {
