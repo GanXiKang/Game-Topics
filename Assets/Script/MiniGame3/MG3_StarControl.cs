@@ -35,7 +35,7 @@ public class MG3_StarControl : MonoBehaviour
                 }
                 insStar = false;
             }
-            if (MG3_ButtonControl.openBox == true)
+            if (MG3_ButtonControl.openBox)
             {
                 if (MG3_ButtonControl.openWhyBox == x)
                 {

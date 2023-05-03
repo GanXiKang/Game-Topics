@@ -6,7 +6,7 @@ public class MG3_DestoryStarControl : MonoBehaviour
 {
     void Update()
     {
-        if (MG3_ButtonControl.destoryStarNum >= 2 && MG3_ButtonControl.destoryStar == true)
+        if (MG3_ButtonControl.destoryStarNum >= 2 && MG3_ButtonControl.destoryStar)
         {
             MG3_ButtonControl.destoryStar = false;
             Destroy(this.gameObject);
