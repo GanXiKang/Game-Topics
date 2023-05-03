@@ -168,6 +168,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
     }
     IEnumerator GameOver()
     {
+        BGM.PlayOneShot(drowing);
         yield return new WaitForSeconds(2f);
         if (MG1_BoxColliderControl.p == 1)
         {
