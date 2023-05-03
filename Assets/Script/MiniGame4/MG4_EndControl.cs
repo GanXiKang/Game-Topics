@@ -7,10 +7,12 @@ public class MG4_EndControl : MonoBehaviour
 {
     float arriveEnd = 0;
     bool win, clap = true;
-    public static bool winPlayer, losePlayer;
 
+    public GameObject comboGroup, gameWinUI, gameLoseUI;
     public AudioSource BGM;
     public AudioClip end, gameWin, gameLose, rewards;
+
+    public static bool winPlayer, losePlayer;
 
     void Update()
     {
@@ -24,13 +26,16 @@ public class MG4_EndControl : MonoBehaviour
         }
         if (arriveEnd == 2)
         {
+            comboGroup.SetActive(true);
             if (win)
             {
+                gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
                 winPlayer = true;
             }
             else 
             {
+                gameLoseUI.SetActive(false);
                 BGM.PlayOneShot(gameLose);
                 losePlayer = true;
             }
