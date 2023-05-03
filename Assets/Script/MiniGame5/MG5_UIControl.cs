@@ -7,6 +7,9 @@ public class MG5_UIControl : MonoBehaviour
 {
     public GameObject startUI;
     public Text timer, score;
+    public AudioSource BGM;
+    public AudioClip button;
+
     public static float gameTime = 45f;
     public static bool isStart = false;
 
@@ -14,6 +17,7 @@ public class MG5_UIControl : MonoBehaviour
     {
         startUI.SetActive(false);
         isStart = true;
+        BGM.PlayOneShot(button);
     }
     void Update()
     {
