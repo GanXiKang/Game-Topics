@@ -12,13 +12,13 @@ public class Dice : MonoBehaviour
     public int max = 7;
 
     public AudioSource BGM;
-    public AudioClip roll;
+    public AudioClip dice;
 
     void Update()
     {
         if (Input.GetKeyDown("space"))
         {
-            BGM.PlayOneShot(roll);
+            BGM.PlayOneShot(dice);
             diceNum = Random.Range(min, max);
             Debug.Log(diceNum);
 
