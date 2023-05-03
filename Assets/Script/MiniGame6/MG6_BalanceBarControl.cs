@@ -153,12 +153,11 @@ public class MG6_BalanceBarControl : MonoBehaviour
         if (MG6_UIControl.isStart)
         {
             timer += Time.deltaTime;
-            if (isJudgment == false)
+            if (isJudgment == false && MG6_EndControl.back == false)
             {
                 if (timer > 2f)
                 {
                     gameover = true;
-                    BGM.PlayOneShot(drowing);
                 }
             }
             else
