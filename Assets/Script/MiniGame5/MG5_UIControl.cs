@@ -8,7 +8,7 @@ public class MG5_UIControl : MonoBehaviour
     public GameObject startUI;
     public Text timer, score;
     public AudioSource BGM;
-    public AudioClip button;
+    public AudioClip button, throwM, receiveM, move;
 
     public static float gameTime = 45f;
     public static bool isStart = false;
@@ -26,7 +26,21 @@ public class MG5_UIControl : MonoBehaviour
             gameTime -= 1 * Time.deltaTime;
             timer.text = "Time:" + gameTime.ToString("f0") + "s";
 
-
+            if (MG5_PlayerMoveControl.throwMusia)
+            {
+                BGM.PlayOneShot(throwM);
+                MG5_PlayerMoveControl.throwMusia = false;
+            }
+            if (MG5_PlayerMoveControl.receiveMusia)
+            {
+                BGM.PlayOneShot(receiveM);
+                MG5_PlayerMoveControl.receiveMusia = false;
+            }
+            if (MG5_PlayerMoveControl.moveMusia)
+            {
+                BGM.PlayOneShot(move);
+                MG5_PlayerMoveControl.moveMusia = false;
+            }
         }
 
         score.text = "Score:" + MG5_HookControl.score;
