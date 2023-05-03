@@ -25,6 +25,8 @@ public class MG5_UIControl : MonoBehaviour
         {
             gameTime -= 1 * Time.deltaTime;
             timer.text = "Time:" + gameTime.ToString("f0") + "s";
+
+
         }
 
         score.text = "Score:" + MG5_HookControl.score;

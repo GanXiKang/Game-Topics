@@ -6,6 +6,9 @@ public class MG5_CaughtControl : MonoBehaviour
 {
     Collider col;
 
+    public AudioSource BGM;
+    public AudioClip caught;
+
     bool isCaught;
     float speed = 35;
     void Start()
@@ -26,6 +29,7 @@ public class MG5_CaughtControl : MonoBehaviour
         {
             isCaught = true;
             col.enabled = false;
+            BGM.PlayOneShot(caught);
         }
     }
 }
