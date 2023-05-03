@@ -36,6 +36,7 @@ public class MG6_PlayerMoveControl : MonoBehaviour
         if (other.tag == "JudgmentBox")
         {
             j++;
+            MG6_JudgmentBoxControl.musia = true;
         }
     }
 }

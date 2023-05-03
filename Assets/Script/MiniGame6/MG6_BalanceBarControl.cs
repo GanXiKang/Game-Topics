@@ -141,7 +141,6 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 }
                 break;
         }
-        
     }
     void GameControl()
     {
