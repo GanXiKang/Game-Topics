@@ -10,20 +10,24 @@ public class MG4_EndControl : MonoBehaviour
     public static bool winPlayer, losePlayer;
 
     public AudioSource BGM;
-    public AudioClip end;
+    public AudioClip end, gameWin, gameLose, rewards;
 
     void Update()
     {
+        if (arriveEnd == 1)
+        {
+            BGM.PlayOneShot(rewards);
+        }
         if (arriveEnd == 2)
         {
             if (win)
             {
-                print("Win");
+                BGM.PlayOneShot(gameWin);
                 winPlayer = true;
             }
             else 
             {
-                print("Lose");
+                BGM.PlayOneShot(gameLose);
                 losePlayer = true;
             }
             StartCoroutine(BackMainGame());
