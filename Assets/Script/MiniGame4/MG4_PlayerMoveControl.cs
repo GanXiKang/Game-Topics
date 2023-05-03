@@ -30,6 +30,23 @@ public class MG4_PlayerMoveControl : MonoBehaviour
                 }
             }
         }
+        else 
+        {
+            if (MG4_EndControl.move)
+            {
+                transform.position = new Vector3(-20, 5.2f, 540);
+
+                ani.SetBool("Run", false);
+                if (MG4_EndControl.winPlayer)
+                {
+                    ani.SetBool("Win", false);
+                }
+                if (MG4_EndControl.losePlayer)
+                {
+                    ani.SetBool("Lose", false);
+                }
+            }
+        }
     }
     void FixedUpdate()
     {

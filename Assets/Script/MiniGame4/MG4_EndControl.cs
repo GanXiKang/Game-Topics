@@ -69,5 +69,6 @@ public class MG4_EndControl : MonoBehaviour
         SceneManager.LoadScene(7);
         winPlayer = false;
         losePlayer = false;
+        move = false;
     }
 }
