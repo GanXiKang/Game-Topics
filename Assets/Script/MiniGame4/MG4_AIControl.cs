@@ -29,13 +29,14 @@ public class MG4_AIControl : MonoBehaviour
             {
                 transform.position = point.transform.position;
 
+                ani.SetBool("Run", false);
                 if (MG4_EndControl.losePlayer)
                 {
-                    ani.SetBool("Win", false);
+                    ani.SetBool("Win", true);
                 }
                 if (MG4_EndControl.winPlayer)
                 {
-                    ani.SetBool("Lose", false);
+                    ani.SetBool("Lose", true);
                 }
             }
         }

@@ -39,11 +39,11 @@ public class MG4_PlayerMoveControl : MonoBehaviour
                 ani.SetBool("Run", false);
                 if (MG4_EndControl.winPlayer)
                 {
-                    ani.SetBool("Win", false);
+                    ani.SetBool("Win", true);
                 }
                 if (MG4_EndControl.losePlayer)
                 {
-                    ani.SetBool("Lose", false);
+                    ani.SetBool("Lose", true);
                 }
             }
         }
