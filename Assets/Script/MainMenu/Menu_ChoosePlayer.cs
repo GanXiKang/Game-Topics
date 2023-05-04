@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu_ChoosePlayer : MonoBehaviour
 {
-    public static float whoPlay = 0, whyP1, whyP2, whyP3, whyP4;
+    public static int whoPlay = 0, whyP1, whyP2, whyP3, whyP4;
 
     public GameObject[] Group = new GameObject[2];
     public GameObject[] P1_animals = new GameObject[4];
