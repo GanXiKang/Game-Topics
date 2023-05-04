@@ -19,11 +19,7 @@ public class P1_MoveControl : MonoBehaviour
     }
     void Update()
     {
-        if (Dice.isThrow)
-        {
-            Dice.isThrow = false;
-            MovePoint();
-        }
+        MovePoint();
     }
     void MovePoint()
     {
