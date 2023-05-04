@@ -34,6 +34,11 @@ public class P1_MoveControl : MonoBehaviour
                 agent.SetDestination(p[i].transform.position);
             }
         }
+
+        if (Dice.P1_totalNum > 10)
+        {
+            agent.SetDestination(p[10].transform.position);
+        }
     }
     void TransformPoint()
     {
