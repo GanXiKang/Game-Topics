@@ -111,9 +111,9 @@ public class InstantiatePointControl : MonoBehaviour
         c--;
         d--;
 
-        animals[a].gameObject.tag = "P1";
-        animals[b].gameObject.tag = "P2";
-        animals[c].gameObject.tag = "P3";
-        animals[d].gameObject.tag = "P4";
+        animals[a].tag = "P1";
+        animals[b].tag = "P2";
+        animals[c].tag = "P3";
+        animals[d].tag = "P4";
     } 
 }
