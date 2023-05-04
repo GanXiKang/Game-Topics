@@ -7,10 +7,11 @@ using UnityEngine.AI;
 public class P1_MoveControl : MonoBehaviour
 {
     NavMeshAgent agent;
-
     GameObject[] p = new GameObject[11];
 
-    public static bool Award;                    //false : Wave , True : Jump
+    public static bool Award;                    
+
+    bool isPoint;
 
     void Start()
     {
@@ -20,13 +21,14 @@ public class P1_MoveControl : MonoBehaviour
     }
     void Update()
     {
-        MovePoint();                        //ÎÄ×Ö÷»×ÓÓÃ
-        
-
+        MovePoint();                       
     }
     void MovePoint()
     {
-        
+        if (Dice.P1_totalNum == 1 && isPoint == false)
+        {
+            agent.SetDestination(p[1].transform.position);
+        }
     }
     void TransformPoint()
     {
