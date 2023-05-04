@@ -11,8 +11,6 @@ public class P1_MoveControl : MonoBehaviour
 
     public static bool Award;                    
 
-    bool isPoint = false;
-
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -21,13 +19,18 @@ public class P1_MoveControl : MonoBehaviour
     }
     void Update()
     {
-        MovePoint();                       
+        if (Dice.isThrow)
+        {
+            Dice.isThrow = false;
+            MovePoint();
+        }
     }
     void MovePoint()
     {
+        print("try");
         for (int i = 1; i < p.Length; i++)
         {
-            if (Dice.P1_totalNum == i && isPoint == false)
+            if (Dice.P1_totalNum == i)
             {
                 agent.SetDestination(p[i].transform.position);
             }
