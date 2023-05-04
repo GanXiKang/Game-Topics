@@ -16,16 +16,7 @@ public class P1_MoveControl : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        p[1] = GameObject.Find("Point1");
-        p[2] = GameObject.Find("Point2");
-        p[3] = GameObject.Find("Point3");
-        p[4] = GameObject.Find("Point4");
-        p[5] = GameObject.Find("Point5");
-        p[6] = GameObject.Find("Point6");
-        p[7] = GameObject.Find("Point7");
-        p[8] = GameObject.Find("Point8");
-        p[9] = GameObject.Find("Point9");
-        p[10] = GameObject.Find("Point10");
+        TransformPoint();
     }
     void Update()
     {
@@ -36,5 +27,18 @@ public class P1_MoveControl : MonoBehaviour
     void MovePoint()
     {
         
+    }
+    void TransformPoint()
+    {
+        p[1] = GameObject.Find("Point1");
+        p[2] = GameObject.Find("Point2");
+        p[3] = GameObject.Find("Point3");
+        p[4] = GameObject.Find("Point4");
+        p[5] = GameObject.Find("Point5");
+        p[6] = GameObject.Find("Point6");
+        p[7] = GameObject.Find("Point7");
+        p[8] = GameObject.Find("Point8");
+        p[9] = GameObject.Find("Point9");
+        p[10] = GameObject.Find("Point10");
     }
 }

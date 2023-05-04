@@ -22,7 +22,7 @@ public class Dice : MonoBehaviour
             diceNum = Random.Range(min, max);
             Debug.Log(diceNum);
 
-            who = round % 4;
+            who = round % Menu_ChoosePlayer.whoPlay;
             who++;
             switch (who)
             {
