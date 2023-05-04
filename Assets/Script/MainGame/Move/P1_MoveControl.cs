@@ -27,7 +27,6 @@ public class P1_MoveControl : MonoBehaviour
     }
     void MovePoint()
     {
-        print("try");
         for (int i = 1; i < p.Length; i++)
         {
             if (Dice.P1_totalNum == i)
