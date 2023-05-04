@@ -25,8 +25,32 @@ public class MG5_GameResultControl : MonoBehaviour
             StartCoroutine(BackMainGame());
         }
     }
+    void PlayerPlayGameControl()
+    {
+        if (MiniGameColliderControl.p == 1)
+        {
+            MiniGameColliderControl.P1_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 2)
+        {
+            MiniGameColliderControl.P2_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 3)
+        {
+            MiniGameColliderControl.P3_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 4)
+        {
+            MiniGameColliderControl.P4_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+    }
     IEnumerator BackMainGame()
     {
+        PlayerPlayGameControl();
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(7);
         MG5_HookControl.score = 0;

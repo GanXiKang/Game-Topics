@@ -116,7 +116,6 @@ public class MG1_GameControl : MonoBehaviour
         else
         {
             cameraEnd = true;
-            PlayerPlayGameControl();
             if (win >= 3)
             {
                 playerAniWin = true;
@@ -182,6 +181,7 @@ public class MG1_GameControl : MonoBehaviour
     }
     IEnumerator BackMainGame()
     {
+        PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
         playerAniWin = false;
         playerAniLose = false;

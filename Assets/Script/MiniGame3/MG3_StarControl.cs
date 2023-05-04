@@ -65,6 +65,29 @@ public class MG3_StarControl : MonoBehaviour
             StartCoroutine(BackMainGame());
         }
     }
+    void PlayerPlayGameControl()
+    {
+        if (MiniGameColliderControl.p == 1)
+        {
+            MiniGameColliderControl.P1_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 2)
+        {
+            MiniGameColliderControl.P2_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 3)
+        {
+            MiniGameColliderControl.P3_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 4)
+        {
+            MiniGameColliderControl.P4_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+    }
     IEnumerator LoseRound()
     {
         BGM.PlayOneShot(notStarCup);
@@ -84,6 +107,7 @@ public class MG3_StarControl : MonoBehaviour
     }
     IEnumerator BackMainGame()
     {
+        PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(7);
         win = 0;

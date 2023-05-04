@@ -43,8 +43,32 @@ public class MG2_GameResultControl : MonoBehaviour
             }
         }
     }
+    void PlayerPlayGameControl()
+    {
+        if (MiniGameColliderControl.p == 1)
+        {
+            MiniGameColliderControl.P1_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 2)
+        {
+            MiniGameColliderControl.P2_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 3)
+        {
+            MiniGameColliderControl.P3_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 4)
+        {
+            MiniGameColliderControl.P4_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+    }
     IEnumerator BackMainGame()
     {
+        PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(7);
         win = false;

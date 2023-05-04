@@ -19,17 +19,17 @@ public class MiniGameColliderControl : MonoBehaviour
                 p = 1;
                 StartCoroutine(StartMiniGame());
             }
-            if (other.tag == "P2" && P2_playGame)
+            else if (other.tag == "P2" && P2_playGame)
             {
                 p = 2;
                 StartCoroutine(StartMiniGame());
             }
-            if (other.tag == "P3" && P3_playGame)
+            else if (other.tag == "P3" && P3_playGame)
             {
                 p = 3;
                 StartCoroutine(StartMiniGame());
             }
-            if (other.tag == "P4" && P4_playGame)
+            else if (other.tag == "P4" && P4_playGame)
             {
                 p = 4;
                 StartCoroutine(StartMiniGame());
