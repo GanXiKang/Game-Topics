@@ -39,12 +39,12 @@ public class ChestColliderControl : MonoBehaviour
     {
         if (other.tag == "P1" || other.tag == "P2" || other.tag == "P3" || other.tag == "P4")
         {
-            if (Dice.P1_totalNum == 2 || Dice.P2_totalNum == 2 || Dice.P3_totalNum == 2 || Dice.P4_totalNum == 2)
+            if (Dice.P1_totalNum == 4 || Dice.P2_totalNum == 4 || Dice.P3_totalNum == 4 || Dice.P4_totalNum == 4)
             {
                 isOpen1 = true;
                 Award();
             }
-            if (Dice.P1_totalNum == 3 || Dice.P2_totalNum == 3 || Dice.P3_totalNum == 3 || Dice.P4_totalNum == 3)
+            if (Dice.P1_totalNum == 0 || Dice.P2_totalNum == 0 || Dice.P3_totalNum == 0 || Dice.P4_totalNum == 0)
             {
                 isOpen2 = true;
                 Award();

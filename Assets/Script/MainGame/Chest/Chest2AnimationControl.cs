@@ -15,7 +15,7 @@ public class Chest2AnimationControl : MonoBehaviour
     }
     void Update()
     {
-        if (ChestColliderControl.isOpen2 == true)
+        if (ChestColliderControl.isOpen2)
         {
             StartCoroutine(ChestActive());
         }
