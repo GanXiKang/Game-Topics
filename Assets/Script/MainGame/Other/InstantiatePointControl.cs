@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class InstantiatePointControl : MonoBehaviour
 {
-    int a, b, c, d;
-
     public GameObject[] insPoint = new GameObject[4];
     public GameObject[] animals = new GameObject[4];
 
@@ -19,7 +17,6 @@ public class InstantiatePointControl : MonoBehaviour
             insP2();
             insP3();
             insP4();
-            ConfirmTag();
             isInstantiate = false;
         }
     }
@@ -99,21 +96,4 @@ public class InstantiatePointControl : MonoBehaviour
             Instantiate(animals[3], insPoint[3].transform.position, insPoint[3].transform.rotation);
         }
     }
-    void ConfirmTag()
-    {
-        a = Menu_ChoosePlayer.whyP1;
-        b = Menu_ChoosePlayer.whyP2;
-        c = Menu_ChoosePlayer.whyP3;
-        d = Menu_ChoosePlayer.whyP4;
-
-        a--;
-        b--;
-        c--;
-        d--;
-
-        animals[a].tag = "P1";
-        animals[b].tag = "P2";
-        animals[c].tag = "P3";
-        animals[d].tag = "P4";
-    } 
 }
