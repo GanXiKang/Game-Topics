@@ -174,19 +174,19 @@ public class MG6_BalanceBarControl : MonoBehaviour
             M1 = false;
         }
         yield return new WaitForSeconds(2f);
-        if (MG1_BoxColliderControl.p == 1)
+        if (MiniGameColliderControl.p == 1)
         {
             gameLoseUI[0].SetActive(true);
         }
-        else if (MG1_BoxColliderControl.p == 2)
+        else if (MiniGameColliderControl.p == 2)
         {
             gameLoseUI[1].SetActive(true);
         }
-        else if (MG1_BoxColliderControl.p == 3)
+        else if (MiniGameColliderControl.p == 3)
         {
             gameLoseUI[2].SetActive(true);
         }
-        else if (MG1_BoxColliderControl.p == 4)
+        else if (MiniGameColliderControl.p == 4)
         {
             gameLoseUI[3].SetActive(true);
         }
