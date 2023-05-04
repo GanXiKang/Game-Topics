@@ -11,7 +11,7 @@ public class P1_MoveControl : MonoBehaviour
 
     public static bool Award;                    
 
-    bool isPoint;
+    bool isPoint = false;
 
     void Start()
     {
@@ -25,9 +25,12 @@ public class P1_MoveControl : MonoBehaviour
     }
     void MovePoint()
     {
-        if (Dice.P1_totalNum == 1 && isPoint == false)
+        for (int i = 1; i < p.Length; i++)
         {
-            agent.SetDestination(p[1].transform.position);
+            if (Dice.P1_totalNum == i && isPoint == false)
+            {
+                agent.SetDestination(p[i].transform.position);
+            }
         }
     }
     void TransformPoint()
