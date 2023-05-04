@@ -14,9 +14,11 @@ public class MiniGameColliderControl : MonoBehaviour
     {
         if (Dice.P1_totalNum == pointN)
         {
+            print("1 yes");
             if (other.tag == "P1" && P1_playGame)
             {
                 p = 1;
+                print("2 Yes");
                 StartCoroutine(StartMiniGame());
             }
             if (other.tag == "P2" && P2_playGame)
