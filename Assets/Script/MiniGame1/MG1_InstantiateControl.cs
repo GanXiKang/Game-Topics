@@ -17,19 +17,19 @@ public class MG1_InstantiateControl : MonoBehaviour
         playerBrand.transform.Rotate(90, 0, 0);
         bossBrand.transform.Rotate(90, 0, 0);
 
-        if (MG1_BoxColliderControl.p == 1)
+        if (MiniGameColliderControl.p == 1)
         {
             Instantiate(animals[0], playerIns.transform.position, playerIns.transform.rotation);
         }
-        if (MG1_BoxColliderControl.p == 2)
+        if (MiniGameColliderControl.p == 2)
         {
             Instantiate(animals[1], playerIns.transform.position, playerIns.transform.rotation);
         }
-        if (MG1_BoxColliderControl.p == 3)
+        if (MiniGameColliderControl.p == 3)
         {
             Instantiate(animals[2], playerIns.transform.position, playerIns.transform.rotation);
         }
-        if (MG1_BoxColliderControl.p == 4)
+        if (MiniGameColliderControl.p == 4)
         {
             Instantiate(animals[3], playerIns.transform.position, playerIns.transform.rotation);
         }

@@ -159,25 +159,25 @@ public class MG1_GameControl : MonoBehaviour
     }
     void PlayerPlayGameControl()
     {
-        if (MG1_BoxColliderControl.p == 1)
+        if (MiniGameColliderControl.p == 1)
         {
-            MG1_BoxColliderControl.P1_playGame = false;
-            MG1_BoxColliderControl.p = 0;
+            MiniGameColliderControl.P1_playGame = false;
+            MiniGameColliderControl.p = 0;
         }
-        if (MG1_BoxColliderControl.p == 2)
+        if (MiniGameColliderControl.p == 2)
         {
-            MG1_BoxColliderControl.P2_playGame = false;
-            MG1_BoxColliderControl.p = 0;
+            MiniGameColliderControl.P2_playGame = false;
+            MiniGameColliderControl.p = 0;
         }
-        if (MG1_BoxColliderControl.p == 3)
+        if (MiniGameColliderControl.p == 3)
         {
-            MG1_BoxColliderControl.P3_playGame = false;
-            MG1_BoxColliderControl.p = 0;
+            MiniGameColliderControl.P3_playGame = false;
+            MiniGameColliderControl.p = 0;
         }
-        if (MG1_BoxColliderControl.p == 4)
+        if (MiniGameColliderControl.p == 4)
         {
-            MG1_BoxColliderControl.P4_playGame = false;
-            MG1_BoxColliderControl.p = 0;
+            MiniGameColliderControl.P4_playGame = false;
+            MiniGameColliderControl.p = 0;
         }
     }
     IEnumerator BackMainGame()
