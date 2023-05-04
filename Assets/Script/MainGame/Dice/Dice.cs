@@ -6,6 +6,7 @@ public class Dice : MonoBehaviour
 {
     float diceNum = 0, who;
     public static float P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0, round;
+    public static bool isThrow;
 
     public int min = 1;
     public int max = 7;
@@ -19,6 +20,7 @@ public class Dice : MonoBehaviour
         {
             BGM.PlayOneShot(dice);
             diceNum = Random.Range(min, max);
+            isThrow = true;
             Debug.Log(diceNum);
 
             //who = round % Menu_ChoosePlayer.whoPlay;
