@@ -31,7 +31,14 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
             if (confirm == 2)
             {
-                StartCoroutine(GoMainGame());
+                if (whyP1 != whyP2)
+                {
+                    StartCoroutine(GoMainGame());
+                }
+                else
+                {
+                    ErrorMenu.SetActive(true);
+                }
             }
         }
         else if (whoPlay == 3)
@@ -40,7 +47,14 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
             if (confirm == 3)
             {
-                StartCoroutine(GoMainGame());
+                if (whyP1 != whyP2 && whyP1 != whyP3 && whyP2 != whyP3)
+                {
+                    StartCoroutine(GoMainGame());
+                }
+                else
+                {
+                    ErrorMenu.SetActive(true);
+                }
             }
         }
 
@@ -364,5 +378,18 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Close_ErrorMenu()
     {
         ErrorMenu.SetActive(false);
+        confirm = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            OK[i].SetActive(true);
+        }
+        for (int j = 0; j < 5; j++)
+        {
+            NO[j].SetActive(false);
+        }
+        for (int k = 0; k < 9; k++)
+        {
+            button[k].SetActive(true);
+        }
     }
 }
