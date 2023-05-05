@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChestColliderControl : MonoBehaviour
 {
-    int a, box1Point = 2, box2Point = 6;
+
+    int a;
+    int[] boxPoint = new int[3];
     public static bool isOpen1, isOpen2;
 
+    void start()
+    {
+        boxPoint[1] = 2;
+        boxPoint[2] = 6;
+    }
     void Award()
     {
         a = Random.Range(1, 11);
@@ -39,12 +47,12 @@ public class ChestColliderControl : MonoBehaviour
     {
         if (other.tag == "P1" || other.tag == "P2" || other.tag == "P3" || other.tag == "P4")
         { 
-            if (Dice.P1_totalNum == box1Point || Dice.P2_totalNum == box1Point || Dice.P3_totalNum == box1Point || Dice.P4_totalNum == box1Point)
+            if (Dice.P1_totalNum == boxPoint[1] || Dice.P2_totalNum == boxPoint[1] || Dice.P3_totalNum == boxPoint[1] || Dice.P4_totalNum == boxPoint[1])
             {
                 isOpen1 = true;
                 Award();
             }
-            if (Dice.P1_totalNum == box2Point || Dice.P2_totalNum == box2Point || Dice.P3_totalNum == box2Point || Dice.P4_totalNum == box2Point)
+            if (Dice.P1_totalNum == boxPoint[2] || Dice.P2_totalNum == boxPoint[2] || Dice.P3_totalNum == boxPoint[2] || Dice.P4_totalNum == boxPoint[2])
             {
                 isOpen2 = true;
                 Award();
