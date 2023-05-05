@@ -7,11 +7,13 @@ public class SystemTestTextControl : MonoBehaviour
 {
     float timer = 0;
     public Text systemText;
-    void Update()
+    void FixedUpdate()
     {
+        timer += 1 * Time.deltaTime;
         if (timer > 3)
         {
             systemText.text = " ";
+            timer = 0;
         }
     }
 }
