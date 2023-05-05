@@ -24,6 +24,18 @@ public class PointJudgeControl : MonoBehaviour
             {
                 transform.position = p[a].transform.position;
             }
+            if (gameObject.tag == "P2")
+            {
+                transform.position = p[b].transform.position;
+            }
+            if (gameObject.tag == "P3")
+            {
+                transform.position = p[c].transform.position;
+            }
+            if (gameObject.tag == "P4")
+            {
+                transform.position = p[d].transform.position;
+            }
             changeScene = false;
         }
     }
