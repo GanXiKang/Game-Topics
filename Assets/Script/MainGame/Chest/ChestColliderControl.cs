@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class ChestColliderControl : MonoBehaviour
 {
-
     int a;
     int[] boxPoint = new int[3];
+    Text systemTest;
+
     public static bool isOpen1, isOpen2;
 
     void Start()
@@ -24,21 +25,21 @@ public class ChestColliderControl : MonoBehaviour
             case 2:
             case 3:
             case 4:
-                print("獲得10個貓貓幣！");
+                systemTest.text = "獲得10個貓貓幣！";
                 break;
             case 5:
             case 6:
-                print("獲得20個貓貓幣！");
+                systemTest.text = "獲得20個貓貓幣！";
                 break;
             case 7:
             case 8:
-                print("獲得30個貓貓幣！");
+                systemTest.text = "獲得30個貓貓幣！";
                 break;
             case 9:
-                print("獲得一個道具！");
+                systemTest.text = "獲得一個道具！";
                 break;
             case 10:
-                print("空！");
+                systemTest.text = "空！";
                 break;
         }
         Destroy(this.gameObject, 2f);
