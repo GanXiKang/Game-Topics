@@ -379,17 +379,22 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         ErrorMenu.SetActive(false);
         confirm = 0;
-        for (int i = 0; i < 5; i++)
-        {
-            OK[i].SetActive(true);
-        }
-        for (int j = 0; j < 5; j++)
-        {
-            NO[j].SetActive(false);
-        }
-        for (int k = 0; k < 9; k++)
-        {
-            button[k].SetActive(true);
-        }
+
+        button[0].SetActive(true);
+        button[1].SetActive(true);
+        button[2].SetActive(true);
+        button[3].SetActive(true);
+        button[4].SetActive(true);
+        button[5].SetActive(true);
+        button[6].SetActive(true);
+        button[7].SetActive(true);
+        OK[0].SetActive(true);
+        OK[1].SetActive(true);
+        OK[2].SetActive(true);
+        OK[3].SetActive(true);
+        NO[0].SetActive(false);
+        NO[1].SetActive(false);
+        NO[2].SetActive(false);
+        NO[3].SetActive(false);   
     }
 }
