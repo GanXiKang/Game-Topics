@@ -44,17 +44,19 @@ public class Menu_ChoosePlayer : MonoBehaviour
             }
         }
 
-        if (whyP1 != whyP2 && whyP1 != whyP3 && whyP1 != whyP4 && whyP2 != whyP3 && whyP2 != whyP4 && whyP3 != whyP4)
+
+        if (confirm == 4)
         {
-            if (confirm == 4)
+            if (whyP1 != whyP2 && whyP1 != whyP3 && whyP1 != whyP4 && whyP2 != whyP3 && whyP2 != whyP4 && whyP3 != whyP4)
             {
                 StartCoroutine(GoMainGame());
             }
+            else
+            {
+                ErrorMenu.SetActive(true);
+            }
         }
-        else
-        {
-            ErrorMenu.SetActive(true);
-        }
+
     }
     IEnumerator GoMainGame()
     {
