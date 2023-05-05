@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGame: 1
-  pointN: 1
+  MGPoint: 1
 --- !u!1 &127978254
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGame: 6
-  pointN: 9
+  MGPoint: 9
 --- !u!65 &260876180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2640,7 +2640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGame: 5
-  pointN: 8
+  MGPoint: 8
 --- !u!65 &527474516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5512,7 +5512,8 @@ Transform:
   m_LocalPosition: {x: 142, y: 19.5, z: 17}
   m_LocalScale: {x: 3, y: 0.5, z: 3}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1671778186}
   m_Father: {fileID: 735870193}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7674,7 +7675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGame: 2
-  pointN: 3
+  MGPoint: 3
 --- !u!65 &1470158413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8026,7 +8027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGame: 4
-  pointN: 7
+  MGPoint: 7
 --- !u!65 &1526532298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8504,6 +8505,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7612565570390053363, guid: d05246fde3d982b4793d1a2229a441bc, type: 3}
   m_PrefabInstance: {fileID: 1644070529}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1671778185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671778186}
+  - component: {fileID: 1671778187}
+  m_Layer: 0
+  m_Name: EndCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1671778186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671778185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 0.6, y: 1, z: 0.6}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1106601646}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1671778187
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671778185}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1680916530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8855,7 +8901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGame: 3
-  pointN: 5
+  MGPoint: 5
 --- !u!65 &1714508066
 BoxCollider:
   m_ObjectHideFlags: 0
