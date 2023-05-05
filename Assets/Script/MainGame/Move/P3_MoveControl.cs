@@ -1,62 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
+using UnityEngine.AI;
 
 public class P3_MoveControl : MonoBehaviour
 {
-    public Transform[] p = new Transform[8];
+    NavMeshAgent agent;
+    GameObject[] p = new GameObject[11];
 
-    public static bool Award;                    //false : Wave , True : Jump
+    public static bool Award;
 
     void Start()
     {
-        DOTween.SetTweensCapacity(500, 125);
+        agent = GetComponent<NavMeshAgent>();
+
+        TransformPoint();
     }
     void Update()
     {
-        MovePoint();                        //ÎÄ×Ö÷»×ÓÓÃ
+        MovePoint();
     }
     void MovePoint()
     {
-        if (Dice.P3_totalNum == 0)
+        for (int i = 1; i < p.Length; i++)
         {
-            //transform.DOMove(p[0].transform.position, 1);
+            if (Dice.P3_totalNum == i)
+            {
+                agent.SetDestination(p[i].transform.position);
+            }
         }
-        if (Dice.P3_totalNum == 1)
+
+        if (Dice.P3_totalNum > 10)
         {
-            transform.DOMove(p[1].transform.position, 3);
-            Award = false;
+            agent.SetDestination(p[10].transform.position);
         }
-        if (Dice.P3_totalNum == 2)
-        {
-            transform.DOMove(p[2].transform.position, 3);
-            Award = true;
-        }
-        if (Dice.P3_totalNum == 3)
-        {
-            transform.DOMove(p[3].transform.position, 3);
-            Award = false;
-        }
-        if (Dice.P3_totalNum == 4)
-        {
-            transform.DOMove(p[4].transform.position, 3);
-            Award = false;
-        }
-        if (Dice.P3_totalNum == 5)
-        {
-            transform.DOMove(p[5].transform.position, 3);
-            Award = true;
-        }
-        if (Dice.P3_totalNum == 6)
-        {
-            transform.DOMove(p[6].transform.position, 3);
-            Award = false;
-        }
-        if (Dice.P3_totalNum > 6)
-        {
-            transform.DOMove(p[7].transform.position, 3);
-            Award = false;
-        }
+    }
+    void TransformPoint()
+    {
+        p[1] = GameObject.Find("Point1");
+        p[2] = GameObject.Find("Point2");
+        p[3] = GameObject.Find("Point3");
+        p[4] = GameObject.Find("Point4");
+        p[5] = GameObject.Find("Point5");
+        p[6] = GameObject.Find("Point6");
+        p[7] = GameObject.Find("Point7");
+        p[8] = GameObject.Find("Point8");
+        p[9] = GameObject.Find("Point9");
+        p[10] = GameObject.Find("Point10");
     }
 }
