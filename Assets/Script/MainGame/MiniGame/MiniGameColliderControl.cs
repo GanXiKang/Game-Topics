@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MiniGameColliderControl : MonoBehaviour
 {
-   public static bool P1_playGame = true, P2_playGame = true, P3_playGame = true, P4_playGame = true, isMiniGamePoint = false;
+    public static bool P1_playGame = true, P2_playGame = true, P3_playGame = true, P4_playGame = true, isMiniGamePoint = false;
     public static float p;
 
-    public int miniGame, pointN;
+    public int miniGame, MGPoint;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Dice.P1_totalNum == pointN)
+        if (Dice.P1_totalNum == MGPoint || Dice.P2_totalNum == MGPoint || Dice.P3_totalNum == MGPoint || Dice.P4_totalNum == MGPoint)
         {
             if (other.tag == "P1" && P1_playGame)
             {
