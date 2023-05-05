@@ -15,13 +15,12 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public GameObject[] OK = new GameObject[4];
     public GameObject[] NO = new GameObject[4];
     public GameObject[] button = new GameObject[8];
+    public GameObject ErrorMenu;
 
     public AudioSource BGM;
     public AudioClip ok, cancel, change;
 
     float p, confirm;
-    bool p1OK, p2OK, p3Ok, p4OK;
-    int a = whyP1, b = whyP2, c = whyP3, d = whyP4;
 
     void Update()
     {
@@ -29,6 +28,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             Group[0].SetActive(false);
             Group[1].SetActive(false);
+
             if (confirm == 2)
             {
                 StartCoroutine(GoMainGame());
@@ -37,14 +37,23 @@ public class Menu_ChoosePlayer : MonoBehaviour
         else if (whoPlay == 3)
         {
             Group[1].SetActive(false);
+
             if (confirm == 3)
             {
                 StartCoroutine(GoMainGame());
             }
         }
-        if (confirm == 4)
+
+        if (whyP1 != whyP2 && whyP1 != whyP3 && whyP1 != whyP4 && whyP2 != whyP3 && whyP2 != whyP4 && whyP3 != whyP4)
         {
-            StartCoroutine(GoMainGame());
+            if (confirm == 4)
+            {
+                StartCoroutine(GoMainGame());
+            }
+        }
+        else
+        {
+            ErrorMenu.SetActive(true);
         }
     }
     IEnumerator GoMainGame()
@@ -213,7 +222,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void OK_1p()
     {
         confirm++;
-        p1OK = true;
         OK[0].SetActive(false);
         NO[0].SetActive(true);
         button[0].SetActive(false);
@@ -223,7 +231,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Cancel_1p()
     {
         confirm--;
-        p1OK = false;
         OK[0].SetActive(true);
         NO[0].SetActive(false);
         button[0].SetActive(true);
@@ -350,5 +357,10 @@ public class Menu_ChoosePlayer : MonoBehaviour
         Choose4P();
         OK[3].SetActive(true);
         BGM.PlayOneShot(change);
+    }
+
+    public void Close_ErrorMenu()
+    {
+        ErrorMenu.SetActive(false);
     }
 }
