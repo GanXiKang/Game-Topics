@@ -10,7 +10,7 @@ public class ChestColliderControl : MonoBehaviour
     int[] boxPoint = new int[3];
     public static bool isOpen1, isOpen2;
 
-    void start()
+    void Start()
     {
         boxPoint[1] = 2;
         boxPoint[2] = 6;
