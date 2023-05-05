@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
-    float diceNum = 0, who;
+    int diceNum = 0, who;
     public static int P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0, round;
     public static bool isThrow;
 
