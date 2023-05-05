@@ -109,9 +109,10 @@ public class MG3_StarControl : MonoBehaviour
     {
         PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(7);
         win = 0;
         MG3_ButtonControl.round = 0;
         MG3_ButtonControl.destoryStarNum = 0;
+        SceneManager.LoadScene(7);
+        PointJudgeControl.changeScene = true;
     }
 }

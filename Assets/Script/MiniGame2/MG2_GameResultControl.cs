@@ -70,11 +70,12 @@ public class MG2_GameResultControl : MonoBehaviour
     {
         PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(7);
         win = false;
         lose = false;
         MG2_StartButtonControl.isStart = false;
         MG2_CollectScoreControl.score = 0;
         MG2_UIControl.gameTime = 45;
+        SceneManager.LoadScene(7);
+        PointJudgeControl.changeScene = true;
     }
 }

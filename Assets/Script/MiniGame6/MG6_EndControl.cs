@@ -53,10 +53,11 @@ public class MG6_EndControl : MonoBehaviour
     {
         PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(7);
-        back = false;
+        MG6_PlayerMoveControl.j = 1;
         MG6_UIControl.isStart = false;
         MG6_BalanceBarControl.gameover = false;
-        MG6_PlayerMoveControl.j = 1;
+        back = false;
+        SceneManager.LoadScene(7);
+        PointJudgeControl.changeScene = true;
     }
 }

@@ -51,10 +51,11 @@ public class MG5_GameResultControl : MonoBehaviour
     IEnumerator BackMainGame()
     {
         PlayerPlayGameControl();
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(7);
+        yield return new WaitForSeconds(5f);
         MG5_HookControl.score = 0;
         MG5_UIControl.gameTime = 45;
         MG5_UIControl.isStart = false;
+        SceneManager.LoadScene(7);
+        PointJudgeControl.changeScene = true;
     }
 }

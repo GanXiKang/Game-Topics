@@ -93,9 +93,10 @@ public class MG4_EndControl : MonoBehaviour
     {
         PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(7);
         winPlayer = false;
         losePlayer = false;
         move = false;
+        SceneManager.LoadScene(7);
+        PointJudgeControl.changeScene = true;
     }
 }
