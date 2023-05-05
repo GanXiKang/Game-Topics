@@ -22,10 +22,10 @@ public class Dice : MonoBehaviour
         isThrow = true;
         Debug.Log(diceNum);
 
-        //who = round % Menu_ChoosePlayer.whoPlay;
-        //who++;
+        who = round % Menu_ChoosePlayer.whoPlay;
+        who++;
 
-        who = 1;
+        //who = 1;
         switch (who)
         {
             case 1:
