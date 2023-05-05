@@ -20,6 +20,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public AudioClip ok, cancel, change;
 
     float p, confirm;
+    bool p1OK, p2OK, p3Ok, p4OK;
+    int a = whyP1, b = whyP2, c = whyP3, d = whyP4;
 
     void Update()
     {
@@ -44,6 +46,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             StartCoroutine(GoMainGame());
         }
+
+        Judge();
     }
     IEnumerator GoMainGame()
     {
@@ -64,6 +68,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
         if (p > 4)
         {
             p = 1;
+        }
+    }
+    void Judge()
+    {
+        if (whyP1 == a && p1OK) 
+        {
+            a--;
+            P2_animals[a].SetActive(false);
+            P3_animals[a].SetActive(false);
+            P4_animals[a].SetActive(false);
         }
     }
     void Choose1P()
@@ -211,6 +225,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void OK_1p()
     {
         confirm++;
+        p1OK = true;
         OK[0].SetActive(false);
         NO[0].SetActive(true);
         button[0].SetActive(false);
@@ -220,6 +235,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Cancel_1p()
     {
         confirm--;
+        p1OK = false;
         OK[0].SetActive(true);
         NO[0].SetActive(false);
         button[0].SetActive(true);
