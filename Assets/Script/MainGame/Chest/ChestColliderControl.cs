@@ -7,7 +7,7 @@ public class ChestColliderControl : MonoBehaviour
 {
     int a;
     int[] boxPoint = new int[3];
-    Text systemTest;
+    public Text systemTest;
 
     public static bool isOpen1, isOpen2;
 
