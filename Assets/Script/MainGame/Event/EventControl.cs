@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EventControl : MonoBehaviour
 {
+    public Text systemTest;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "P1")
@@ -25,25 +28,25 @@ public class EventControl : MonoBehaviour
     }
     IEnumerator P1_EventHappened()
     {
-        print("退后兩格！");
+        systemTest.text = "退后兩格！";
         yield return new WaitForSeconds(2f);
         Dice.P1_totalNum -= 2;
     }
     IEnumerator P2_EventHappened()
     {
-        print("退后兩格！");
+        systemTest.text = "退后兩格！";
         yield return new WaitForSeconds(2f);
         Dice.P2_totalNum -= 2;
     }
     IEnumerator P3_EventHappened()
     {
-        print("退后兩格！");
+        systemTest.text = "退后兩格！";
         yield return new WaitForSeconds(2f);
         Dice.P3_totalNum -= 2;
     }
     IEnumerator P4_EventHappened()
     {
-        print("退后兩格！");
+        systemTest.text = "退后兩格！";
         yield return new WaitForSeconds(2f);
         Dice.P4_totalNum -= 2;
     }
