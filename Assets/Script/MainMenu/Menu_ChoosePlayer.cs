@@ -46,8 +46,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             StartCoroutine(GoMainGame());
         }
-
-        Judge();
     }
     IEnumerator GoMainGame()
     {
@@ -68,16 +66,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
         if (p > 4)
         {
             p = 1;
-        }
-    }
-    void Judge()
-    {
-        if (whyP1 == a && p1OK) 
-        {
-            a--;
-            P2_animals[a].SetActive(false);
-            P3_animals[a].SetActive(false);
-            P4_animals[a].SetActive(false);
         }
     }
     void Choose1P()
