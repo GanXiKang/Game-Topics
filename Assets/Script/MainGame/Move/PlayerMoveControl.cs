@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-
-public class P1_MoveControl : MonoBehaviour
+public class PlayerMoveControl : MonoBehaviour
 {
     NavMeshAgent agent;
     GameObject[] p = new GameObject[11];
 
-    public static bool Award;                    
+    public static bool Award;
 
     void Start()
     {
