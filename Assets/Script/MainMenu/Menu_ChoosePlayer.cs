@@ -18,7 +18,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public GameObject ErrorMenu;
 
     public AudioSource BGM;
-    public AudioClip ok, cancel, change;
+    public AudioClip ok, cancel, change, error, close;
 
     float p, confirm;
 
@@ -38,6 +38,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
                 else
                 {
                     ErrorMenu.SetActive(true);
+                    BGM.PlayOneShot(error);
                 }
             }
         }
@@ -54,6 +55,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
                 else
                 {
                     ErrorMenu.SetActive(true);
+                    BGM.PlayOneShot(error);
                 }
             }
         }
@@ -68,6 +70,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             else
             {
                 ErrorMenu.SetActive(true);
+                BGM.PlayOneShot(error);
             }
         }
 
@@ -379,7 +382,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         ErrorMenu.SetActive(false);
         confirm = 0;
-
+        BGM.PlayOneShot(close);
         button[0].SetActive(true);
         button[1].SetActive(true);
         button[2].SetActive(true);
