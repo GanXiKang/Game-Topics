@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class EventControl : MonoBehaviour
 {
     public Text systemTest;
+    public int EventPoint;
 
     private void OnTriggerEnter(Collider other)
     {
+        if (Dice.P1_totalNum == EventPoint || Dice.P2_totalNum == EventPoint || Dice.P3_totalNum == EventPoint || Dice.P4_totalNum == EventPoint)
         if (other.tag == "P1")
         {
             StartCoroutine(P1_EventHappened());
