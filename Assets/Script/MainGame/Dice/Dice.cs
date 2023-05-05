@@ -14,38 +14,36 @@ public class Dice : MonoBehaviour
     public AudioSource BGM;
     public AudioClip dice;
 
-    void Update()
+    public void Button_Dice()
     {
-        if (Input.GetKeyDown("space"))
+
+        BGM.PlayOneShot(dice);
+        diceNum = Random.Range(min, max);
+        isThrow = true;
+        Debug.Log(diceNum);
+
+        //who = round % Menu_ChoosePlayer.whoPlay;
+        //who++;
+
+        who = 1;
+        switch (who)
         {
-            BGM.PlayOneShot(dice);
-            diceNum = Random.Range(min, max);
-            isThrow = true;
-            Debug.Log(diceNum);
+            case 1:
+                P1_totalNum += diceNum;
+                break;
 
-            //who = round % Menu_ChoosePlayer.whoPlay;
-            //who++;
+            case 2:
+                P2_totalNum += diceNum;
+                break;
 
-            who = 1;
-            switch (who)
-            {
-                case 1:
-                    P1_totalNum += diceNum;
-                    break;
+            case 3:
+                P3_totalNum += diceNum;
+                break;
 
-                case 2:
-                    P2_totalNum += diceNum;
-                    break;
-
-                case 3:
-                    P3_totalNum += diceNum;
-                    break;
-
-                case 4:
-                    P4_totalNum += diceNum;
-                    break;
-            }
-            round++;
+            case 4:
+                P4_totalNum += diceNum;
+                break;
         }
+        round++;
     }
 }
