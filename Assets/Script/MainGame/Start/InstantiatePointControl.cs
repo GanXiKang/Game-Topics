@@ -12,7 +12,6 @@ public class InstantiatePointControl : MonoBehaviour
     {
         if (isInstantiate)
         {
-            print("yes");
             insP1();
             insP2();
             insP3();
