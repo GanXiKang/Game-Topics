@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
+    GameObject[] PlayerCamera = new GameObject[5];
+
     bool closeCamera = true;
+
     void Update()
     {
-        if (gameObject.tag == "P2Camera" && closeCamera || gameObject.tag == "P3Camera" && closeCamera || gameObject.tag == "P4Camera" && closeCamera)
+        if (closeCamera)
         {
-            gameObject.SetActive(false);
-            closeCamera = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            if (gameObject.tag == "P2Camera")
-            {
-                gameObject.SetActive(true);
-            }
-            if (gameObject.tag == "P1Camera")
+            if (gameObject.tag == "P2Camera"|| gameObject.tag == "P3Camera"|| gameObject.tag == "P4Camera")
             {
                 gameObject.SetActive(false);
+                closeCamera = false;
             }
         }
     }
