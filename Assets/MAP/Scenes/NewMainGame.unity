@@ -1824,14 +1824,13 @@ GameObject:
   - component: {fileID: 348777115}
   - component: {fileID: 348777117}
   - component: {fileID: 348777116}
-  - component: {fileID: 348777118}
   m_Layer: 0
   m_Name: BoxCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &348777115
 Transform:
   m_ObjectHideFlags: 0
@@ -1873,20 +1872,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &348777118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348777114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9970c1568b221f74794480d0b0b9df39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Interactive_UI: {fileID: 803940596}
-  pointNum: 2
 --- !u!1 &360452239
 GameObject:
   m_ObjectHideFlags: 0
@@ -10818,8 +10803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994665064}
   - component: {fileID: 1994665067}
-  - component: {fileID: 1994665066}
-  - component: {fileID: 1994665065}
+  - component: {fileID: 1994665068}
   m_Layer: 0
   m_Name: PointCollider
   m_TagString: Untagged
@@ -10842,33 +10826,6 @@ Transform:
   m_Father: {fileID: 116029792}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1994665065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994665063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9970c1568b221f74794480d0b0b9df39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Interactive_UI: {fileID: 803940596}
-  pointNum: 2
---- !u!114 &1994665066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994665063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53d8163258586cc4e8131964467c552d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  systemTest: {fileID: 462964630}
 --- !u!65 &1994665067
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10882,6 +10839,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1994665068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994665063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9970c1568b221f74794480d0b0b9df39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interactive_UI: {fileID: 803940596}
+  pointNum: 2
 --- !u!1001 &2002902231
 PrefabInstance:
   m_ObjectHideFlags: 0
