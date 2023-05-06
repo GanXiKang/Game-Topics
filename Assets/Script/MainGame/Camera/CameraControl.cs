@@ -23,10 +23,6 @@ public class CameraControl : MonoBehaviour
                 PlayerCamera[3] = GameObject.FindGameObjectWithTag("P3Camera");
                 PlayerCamera[4] = GameObject.FindGameObjectWithTag("P4Camera");
 
-                print(PlayerCamera[1].tag);
-                print(PlayerCamera[2].tag);
-                print(PlayerCamera[3].tag);
-                print(PlayerCamera[4].tag);
                 findCamera = false;
             }
             closeCamera = false;
