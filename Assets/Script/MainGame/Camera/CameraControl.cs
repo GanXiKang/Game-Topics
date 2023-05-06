@@ -15,6 +15,7 @@ public class CameraControl : MonoBehaviour
         if (findCamera)
         {
             OpeningSet();
+            findCamera = false;
         }
         ChangeCamera();
     }
