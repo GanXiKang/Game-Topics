@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GiveTagCameraControl : MonoBehaviour
 {
-    void Update()
+    void Start()
     {
         if (gameObject.tag == "Mouse")
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GiveTagControl : MonoBehaviour
 {
-    void Update()
+    void Start()
     {
         if (gameObject.tag == "Mouse")
         {
