@@ -15,6 +15,7 @@ public class CameraControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             changeCameraNum++;
+            print(changeCameraNum);
         }
 
         ChangeCamera();
