@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IsPointColliderControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject Interactive_UI;
+
     void Start()
     {
-        
+        Interactive_UI = GameObject.Find("InteractiveUI");
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.tag == "Point")
+        {
+            
+        }
+    }
+    IEnumerator NextPlayer()
+    {
+        yield return new WaitForSeconds(3f);
+        Interactive_UI.SetActive(true);
+        CameraControl.changeCamera++;
     }
 }
+
