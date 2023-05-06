@@ -27,11 +27,6 @@ public class CameraControl : MonoBehaviour
                 closeCamera = false;
             }
         }
-
-        print(PlayerCamera[1].tag);
-        print(PlayerCamera[2].tag);
-        print(PlayerCamera[3].tag);
-        print(PlayerCamera[4].tag);
         if (Input.GetKeyDown(KeyCode.C))
         {
             PlayerCamera[1].SetActive(false);
