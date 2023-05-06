@@ -24,30 +24,23 @@ public class Dice : MonoBehaviour
 
         who = round % Menu_ChoosePlayer.whoPlay;
         who++;
-        print("round " + round);
-        print("whoPlay " + Menu_ChoosePlayer.whoPlay);
-        print("who " + who);
 
         switch (who)
         {
             case 1:
                 P1_totalNum += diceNum;
-                print("P1_totalNum " + P1_totalNum);
                 break;
 
             case 2:
                 P2_totalNum += diceNum;
-                print("P2_totalNum " + P2_totalNum);
                 break;
 
             case 3:
                 P3_totalNum += diceNum;
-                print("P3_totalNum " + P3_totalNum);
                 break;
 
             case 4:
                 P4_totalNum += diceNum;
-                print("P4_totalNum " + P4_totalNum);
                 break;
         }
         round++;
