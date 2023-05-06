@@ -81,7 +81,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[1].SetActive(false);
         NO[2].SetActive(false);
         NO[3].SetActive(false);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(7);
     }
     void Limit()
