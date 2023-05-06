@@ -30,7 +30,7 @@ public class IsPointColliderControl : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         Interactive_UI.SetActive(true);
-        ChangeCameraControl.changeCamera++;
+        CameraControl.changeCameraNum++;
     }
 }
 
