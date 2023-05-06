@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dice : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Dice : MonoBehaviour
     public int min = 1;
     public int max = 7;
 
+    public Text systemText;
     public AudioSource BGM;
     public AudioClip dice;
 
@@ -20,7 +22,7 @@ public class Dice : MonoBehaviour
         BGM.PlayOneShot(dice);
         diceNum = Random.Range(min, max);
         isThrow = true;
-        Debug.Log(diceNum);
+        systemText.text = " " + diceNum;
 
         who = round % Menu_ChoosePlayer.whoPlay;
         who++;
