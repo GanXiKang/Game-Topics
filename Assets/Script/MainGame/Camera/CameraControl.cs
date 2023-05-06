@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public static bool findCamera;
-
     bool closeCamera = true;
     void Update()
     {
@@ -15,8 +13,6 @@ public class CameraControl : MonoBehaviour
             {
                 this.gameObject.SetActive(false);
             }
-
-            findCamera = true;
             closeCamera = false;
         }
     }
