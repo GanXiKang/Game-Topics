@@ -77,6 +77,5 @@ public class MG2_GameResultControl : MonoBehaviour
         MG2_UIControl.gameTime = 45;
         SceneManager.LoadScene(7);
         PointJudgeControl.changeScene = true;
-        ChangeCameraControl.changeCameraNum++;
     }
 }

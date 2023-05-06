@@ -57,6 +57,5 @@ public class MG5_GameResultControl : MonoBehaviour
         MG5_UIControl.isStart = false;
         SceneManager.LoadScene(7);
         PointJudgeControl.changeScene = true;
-        ChangeCameraControl.changeCameraNum++;
     }
 }

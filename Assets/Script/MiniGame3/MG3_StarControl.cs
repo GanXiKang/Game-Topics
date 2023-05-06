@@ -114,6 +114,5 @@ public class MG3_StarControl : MonoBehaviour
         MG3_ButtonControl.destoryStarNum = 0;
         SceneManager.LoadScene(7);
         PointJudgeControl.changeScene = true;
-        ChangeCameraControl.changeCameraNum++;
     }
 }

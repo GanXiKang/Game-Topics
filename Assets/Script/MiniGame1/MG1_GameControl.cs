@@ -188,6 +188,5 @@ public class MG1_GameControl : MonoBehaviour
         cameraEnd = false;
         SceneManager.LoadScene(7);
         PointJudgeControl.changeScene = true;
-        ChangeCameraControl.changeCameraNum++;
     }
 }

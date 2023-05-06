@@ -98,6 +98,5 @@ public class MG4_EndControl : MonoBehaviour
         move = false;
         SceneManager.LoadScene(7);
         PointJudgeControl.changeScene = true;
-        ChangeCameraControl.changeCameraNum++;
     }
 }
