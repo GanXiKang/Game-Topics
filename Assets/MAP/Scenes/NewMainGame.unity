@@ -1828,6 +1828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d8163258586cc4e8131964467c552d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  b_NextR: {fileID: 2119306284}
   systemTest: {fileID: 462964630}
 --- !u!65 &348777117
 BoxCollider:
@@ -7640,6 +7641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d8163258586cc4e8131964467c552d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  b_NextR: {fileID: 2119306284}
   systemTest: {fileID: 462964630}
 --- !u!65 &1376169802
 BoxCollider:
@@ -8036,6 +8038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 1
   max: 7
+  b_dice: {fileID: 1311192169}
   systemText: {fileID: 462964630}
   BGM: {fileID: 1414603035}
   dice: {fileID: 8300000, guid: 45da222dad02fa940ae0c4d0d69f2fed, type: 3}
@@ -8113,8 +8116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5f06bff60774a4b981c4211e9598dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  b_dice: {fileID: 1311192169}
-  b_NextR: {fileID: 2119306284}
+  b_dice: {fileID: 0}
+  b_NextR: {fileID: 0}
 --- !u!1 &1418507951
 GameObject:
   m_ObjectHideFlags: 0
@@ -11506,7 +11509,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2119306287}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414603041}
+        m_TargetAssemblyTypeName: UI_RoundControl, Assembly-CSharp
+        m_MethodName: Button_NextRound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2119306287
 MonoBehaviour:
   m_ObjectHideFlags: 0
