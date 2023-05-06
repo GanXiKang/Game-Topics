@@ -18,30 +18,41 @@ public class PointJudgeControl : MonoBehaviour
     {
         RecordPoint();
 
-        if (changeScene)
+
+        if (gameObject.tag == "P1")
         {
-            for (int i = 0; i < 5; i++)
+            if (changeScene)
             {
-                if (gameObject.tag == "P1")
-                {
-                    transform.position = p[a].transform.position;
-                }
-                if (gameObject.tag == "P2")
-                {
-                    transform.position = p[b].transform.position;
-                }
-                if (gameObject.tag == "P3")
-                {
-                    transform.position = p[c].transform.position;
-                }
-                if (gameObject.tag == "P4")
-                {
-                    transform.position = p[d].transform.position;
-                }
+                transform.position = p[a].transform.position;
+                changeScene = false;
             }
-            changeScene = false;
+        }
+        if (gameObject.tag == "P2")
+        {
+            if (changeScene)
+            {
+                transform.position = p[b].transform.position;
+                changeScene = false;
+            }
+        }
+        if (gameObject.tag == "P3")
+        {
+            if (changeScene)
+            {
+                transform.position = p[c].transform.position;
+                changeScene = false;
+            }
+        }
+        if (gameObject.tag == "P4")
+        {
+            if (changeScene)
+            {
+                transform.position = p[d].transform.position;
+                changeScene = false;
+            }
         }
     }
+
     void TransformPoint()
     {
         p[1] = GameObject.Find("Point1");
@@ -63,3 +74,4 @@ public class PointJudgeControl : MonoBehaviour
         d = Dice.P4_totalNum;
     }
 }
+
