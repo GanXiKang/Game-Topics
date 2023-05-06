@@ -5,13 +5,9 @@ using UnityEngine.UI;
 
 public class IsPointColliderControl : MonoBehaviour
 {
-    GameObject Interactive_UI;
+    public GameObject Interactive_UI;
     public int pointNum;
 
-    void Start()
-    {
-        Interactive_UI = GameObject.Find("InteractiveUI");
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "P1" && Dice.P1_totalNum == pointNum)
