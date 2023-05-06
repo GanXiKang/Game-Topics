@@ -46,5 +46,6 @@ public class Dice : MonoBehaviour
                 break;
         }
         round++;
+        CameraControl.changeCamera++;
     }
 }
