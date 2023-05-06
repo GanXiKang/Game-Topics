@@ -7918,6 +7918,7 @@ GameObject:
   - component: {fileID: 1414603038}
   - component: {fileID: 1414603039}
   - component: {fileID: 1414603040}
+  - component: {fileID: 1414603041}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -8035,7 +8036,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 1
   max: 7
-  Interactive_UI: {fileID: 803940596}
   systemText: {fileID: 462964630}
   BGM: {fileID: 1414603035}
   dice: {fileID: 8300000, guid: 45da222dad02fa940ae0c4d0d69f2fed, type: 3}
@@ -8101,6 +8101,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a991c408ce6833e40b7c1690aa55578c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1414603041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414603034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c5f06bff60774a4b981c4211e9598dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  b_dice: {fileID: 1311192169}
+  b_NextR: {fileID: 2119306284}
 --- !u!1 &1418507951
 GameObject:
   m_ObjectHideFlags: 0
@@ -11427,7 +11441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2119306285
 RectTransform:
   m_ObjectHideFlags: 0

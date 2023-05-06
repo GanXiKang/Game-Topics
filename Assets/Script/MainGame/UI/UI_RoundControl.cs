@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_RoundControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject b_dice, b_NextR;
     void Start()
     {
         
