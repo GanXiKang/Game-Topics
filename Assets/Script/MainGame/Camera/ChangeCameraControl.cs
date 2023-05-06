@@ -7,17 +7,24 @@ public class ChangeCameraControl : MonoBehaviour
     GameObject[] PlayerCamera = new GameObject[5];
 
     public static int changeCamera = 1;
-    void Start()
-    {
-        PlayerCamera[1] = GameObject.FindGameObjectWithTag("P1Camera");
-        PlayerCamera[2] = GameObject.FindGameObjectWithTag("P2Camera");
-        PlayerCamera[3] = GameObject.FindGameObjectWithTag("P3Camera");
-        PlayerCamera[4] = GameObject.FindGameObjectWithTag("P4Camera");
 
-        print(PlayerCamera[1].tag);
-    }
     void Update()
     {
+        if (CameraControl.findCamera)
+        {
+            PlayerCamera[1] = GameObject.FindGameObjectWithTag("P1Camera");
+            PlayerCamera[2] = GameObject.FindGameObjectWithTag("P2Camera");
+            PlayerCamera[3] = GameObject.FindGameObjectWithTag("P3Camera");
+            PlayerCamera[4] = GameObject.FindGameObjectWithTag("P4Camera");
+            CameraControl.findCamera = false;
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            print(PlayerCamera[1]);
+            print(PlayerCamera[2]);
+            print(PlayerCamera[3]);
+            print(PlayerCamera[4]);
+        }
         if (Input.GetKeyDown(KeyCode.C))
         {
             changeCamera++;
