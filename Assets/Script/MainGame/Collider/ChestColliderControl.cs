@@ -7,6 +7,8 @@ public class ChestColliderControl : MonoBehaviour
 {
     int a;
     int[] boxPoint = new int[3];
+
+    public GameObject b_NextR;
     public Text systemTest;
 
     public static bool isOpen1, isOpen2;
@@ -51,11 +53,13 @@ public class ChestColliderControl : MonoBehaviour
             if (Dice.P1_totalNum == boxPoint[1] || Dice.P2_totalNum == boxPoint[1] || Dice.P3_totalNum == boxPoint[1] || Dice.P4_totalNum == boxPoint[1])
             {
                 isOpen1 = true;
+                b_NextR.SetActive(true);
                 Award();
             }
             if (Dice.P1_totalNum == boxPoint[2] || Dice.P2_totalNum == boxPoint[2] || Dice.P3_totalNum == boxPoint[2] || Dice.P4_totalNum == boxPoint[2])
             {
                 isOpen2 = true;
+                b_NextR.SetActive(true);
                 Award();
             }
         }
