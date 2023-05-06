@@ -8,7 +8,7 @@ public class CameraControl : MonoBehaviour
 
     void Update()
     {
-        print("yes");
+        print(closeCamera);
         if (closeCamera)
         {
             if (gameObject.tag == "P2Camera" || gameObject.tag == "P3Camera" || gameObject.tag == "P4Camera")
@@ -18,7 +18,7 @@ public class CameraControl : MonoBehaviour
             }
 
             findCamera = true;
-            closeCamera = false;
+            //closeCamera = false;
         }
     }
 }

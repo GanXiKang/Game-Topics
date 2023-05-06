@@ -85,6 +85,6 @@ public class GiveTagCameraControl : MonoBehaviour
                 gameObject.tag = "P4Camera";
             }
         }
-        CameraControl.closeCamera = true;
+        //CameraControl.closeCamera = true;
     }
 }
