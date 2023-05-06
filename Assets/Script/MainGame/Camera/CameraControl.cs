@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public static bool findCamera, closeCamera;
+    public static bool findCamera;
 
+    bool closeCamera = true;
     void Update()
     {
         print(closeCamera);
@@ -13,7 +14,7 @@ public class CameraControl : MonoBehaviour
         {
             if (gameObject.tag == "P2Camera" || gameObject.tag == "P3Camera" || gameObject.tag == "P4Camera")
             {
-                print("false");
+                print("close");
                 this.gameObject.SetActive(false);
             }
 
