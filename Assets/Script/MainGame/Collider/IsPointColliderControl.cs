@@ -33,7 +33,6 @@ public class IsPointColliderControl : MonoBehaviour
     }
     IEnumerator NextPlayer()
     {
-        print("yes");
         yield return new WaitForSeconds(3f);
         Interactive_UI.SetActive(true);
         CameraControl.changeCamera++;
