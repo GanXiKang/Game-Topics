@@ -11,19 +11,43 @@ public class MG4_InsPlayerControl : MonoBehaviour
     {
         if (MiniGameColliderControl.p == 1)
         {
-            Instantiate(animals[0], playerIns.transform.position, playerIns.transform.rotation);
+            for (int i = 1; i < animals.Length; i++)
+            {
+                if (Menu_ChoosePlayer.whyP1 == i)
+                {
+                    Instantiate(animals[i - 1], playerIns.transform.position, playerIns.transform.rotation);
+                }
+            }
         }
         if (MiniGameColliderControl.p == 2)
         {
-            Instantiate(animals[1], playerIns.transform.position, playerIns.transform.rotation);
+            for (int i = 1; i < animals.Length; i++)
+            {
+                if (Menu_ChoosePlayer.whyP2 == i)
+                {
+                    Instantiate(animals[i - 1], playerIns.transform.position, playerIns.transform.rotation);
+                }
+            }
         }
         if (MiniGameColliderControl.p == 3)
         {
-            Instantiate(animals[2], playerIns.transform.position, playerIns.transform.rotation);
+            for (int i = 1; i < animals.Length; i++)
+            {
+                if (Menu_ChoosePlayer.whyP3 == i)
+                {
+                    Instantiate(animals[i - 1], playerIns.transform.position, playerIns.transform.rotation);
+                }
+            }
         }
         if (MiniGameColliderControl.p == 4)
         {
-            Instantiate(animals[3], playerIns.transform.position, playerIns.transform.rotation);
+            for (int i = 1; i < animals.Length; i++)
+            {
+                if (Menu_ChoosePlayer.whyP4 == i)
+                {
+                    Instantiate(animals[i - 1], playerIns.transform.position, playerIns.transform.rotation);
+                }
+            }
         }
     }
 }
