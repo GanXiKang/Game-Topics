@@ -4,28 +4,68 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public static GameObject[] PlayerCamera = new GameObject[5];
+    public static int changeCameraNum = 1;
 
-    bool closeCamera = true, findCamera = true;
     void Update()
     {
-        if (closeCamera)
+        if (changeCameraNum > Menu_ChoosePlayer.whoPlay)
         {
-            if (gameObject.tag == "P2Camera" || gameObject.tag == "P3Camera" || gameObject.tag == "P4Camera")
-            {
-                this.gameObject.SetActive(false);
-            }
+            changeCameraNum = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            changeCameraNum++;
+        }
 
-            if (findCamera)
-            {
-                PlayerCamera[1] = GameObject.FindGameObjectWithTag("P1Camera");
-                PlayerCamera[2] = GameObject.FindGameObjectWithTag("P2Camera");
-                PlayerCamera[3] = GameObject.FindGameObjectWithTag("P3Camera");
-                PlayerCamera[4] = GameObject.FindGameObjectWithTag("P4Camera");
+        ChangeCamera();
+    }
+    void ChangeCamera()
+    {
+        switch (changeCameraNum)
+        {
+            case 1:
+                if (gameObject.tag == "P2Camera" || gameObject.tag == "P3Camera" || gameObject.tag == "P4Camera")
+                {
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    gameObject.SetActive(true);
+                }
+                break;
 
-                findCamera = false;
-            }
-            closeCamera = false;
+            case 2:
+                if (gameObject.tag == "P1Camera" || gameObject.tag == "P3Camera" || gameObject.tag == "P4Camera")
+                {
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    gameObject.SetActive(true);
+                }
+                break;
+
+            case 3:
+                if (gameObject.tag == "P1Camera" || gameObject.tag == "P2Camera" || gameObject.tag == "P4Camera")
+                {
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    gameObject.SetActive(true);
+                }
+                break;
+
+            case 4:
+                if (gameObject.tag == "P1Camera" || gameObject.tag == "P2Camera" || gameObject.tag == "P3Camera")
+                {
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    gameObject.SetActive(true);
+                }
+                break;
         }
     }
 }
