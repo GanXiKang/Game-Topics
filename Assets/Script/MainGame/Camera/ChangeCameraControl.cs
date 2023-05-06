@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChangeCameraControl : MonoBehaviour
 {
     
-    public static int changeCamera = 1;
+    public static int changeCamera = 0;
 
 
     void Update()
