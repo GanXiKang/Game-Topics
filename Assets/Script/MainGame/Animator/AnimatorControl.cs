@@ -14,11 +14,11 @@ public class AnimatorControl : MonoBehaviour
     {
         if (other.tag == "Point")
         {
-            if (P1_MoveControl.Award == true || P2_MoveControl.Award == true || P3_MoveControl.Award == true || P4_MoveControl.Award == true)
+            if (PlayerMoveControl.Award == true || PlayerMoveControl.Award == true || PlayerMoveControl.Award == true || PlayerMoveControl.Award == true)
             {
                 StartCoroutine(YesAward());
             }
-            if (P1_MoveControl.Award == false || P2_MoveControl.Award == false || P3_MoveControl.Award == false || P4_MoveControl.Award == false)
+            if (PlayerMoveControl.Award == false || PlayerMoveControl.Award == false || PlayerMoveControl.Award == false || PlayerMoveControl.Award == false)
             {
                 StartCoroutine(NoAward());
             }
