@@ -20,21 +20,24 @@ public class PointJudgeControl : MonoBehaviour
 
         if (changeScene)
         {
-            if (gameObject.tag == "P1")
+            for (int i = 0; i < 5; i++)
             {
-                transform.position = p[a].transform.position;
-            }
-            if (gameObject.tag == "P2")
-            {
-                transform.position = p[b].transform.position;
-            }
-            if (gameObject.tag == "P3")
-            {
-                transform.position = p[c].transform.position;
-            }
-            if (gameObject.tag == "P4")
-            {
-                transform.position = p[d].transform.position;
+                if (gameObject.tag == "P1")
+                {
+                    transform.position = p[a].transform.position;
+                }
+                if (gameObject.tag == "P2")
+                {
+                    transform.position = p[b].transform.position;
+                }
+                if (gameObject.tag == "P3")
+                {
+                    transform.position = p[c].transform.position;
+                }
+                if (gameObject.tag == "P4")
+                {
+                    transform.position = p[d].transform.position;
+                }
             }
             changeScene = false;
         }
