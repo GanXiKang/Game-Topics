@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class ChangeCameraControl : MonoBehaviour
 {
-    public static int changeCameraNum;
+    public static int changeCameraNum = 1;
 
-    void Start()
-    {
-        changeCameraNum = 1;
-    }
     void Update()
     {
         if (changeCameraNum > Menu_ChoosePlayer.whoPlay)
