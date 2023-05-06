@@ -9,17 +9,15 @@ public class CameraControl : MonoBehaviour
     bool closeCamera = true;
     void Update()
     {
-        print(closeCamera);
         if (closeCamera)
         {
             if (gameObject.tag == "P2Camera" || gameObject.tag == "P3Camera" || gameObject.tag == "P4Camera")
             {
-                print("close");
                 this.gameObject.SetActive(false);
             }
 
             findCamera = true;
-            //closeCamera = false;
+            closeCamera = false;
         }
     }
 }
