@@ -82,7 +82,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[2].SetActive(false);
         NO[3].SetActive(false);
         yield return new WaitForSeconds(2f);
-        InstantiatePointControl.isInstantiate = true;
         SceneManager.LoadScene(7);
     }
     void Limit()
