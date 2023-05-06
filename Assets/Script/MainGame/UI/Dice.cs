@@ -11,7 +11,6 @@ public class Dice : MonoBehaviour
     public int min = 1;
     public int max = 7;
 
-    public GameObject b_Dice;
     public Text systemText;
     public AudioSource BGM;
     public AudioClip dice;
@@ -20,13 +19,12 @@ public class Dice : MonoBehaviour
     {
         diceNum = Random.Range(min, max);
 
-        b_Dice.SetActive(false);
         systemText.text = " " + diceNum;
         BGM.PlayOneShot(dice);
 
         who = round % Menu_ChoosePlayer.whoPlay;
         who++;
-
+        ChangeCameraControl.changeCameraNum = who;
         switch (who)
         {
             case 1:
