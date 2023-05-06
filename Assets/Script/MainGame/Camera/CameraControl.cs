@@ -6,6 +6,10 @@ public class CameraControl : MonoBehaviour
 {
     public static int changeCameraNum;
 
+    void Start()
+    {
+        changeCameraNum = 1;
+    }
     void Update()
     {
         print("changeCameraNum" + changeCameraNum);
