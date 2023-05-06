@@ -27,31 +27,31 @@ public class ChangeCameraControl : MonoBehaviour
         switch (changeCamera)
         {
             case 1:
-                CameraControl.PlayerCamera[1].SetActive(true);
+                CameraControl.PlayerCamera[0].SetActive(true);
+                CameraControl.PlayerCamera[1].SetActive(false);
                 CameraControl.PlayerCamera[2].SetActive(false);
                 CameraControl.PlayerCamera[3].SetActive(false);
-                CameraControl.PlayerCamera[4].SetActive(false);
                 break;
 
             case 2:
-                CameraControl.PlayerCamera[1].SetActive(false);
-                CameraControl.PlayerCamera[2].SetActive(true);
+                CameraControl.PlayerCamera[0].SetActive(false);
+                CameraControl.PlayerCamera[1].SetActive(true);
+                CameraControl.PlayerCamera[2].SetActive(false);
                 CameraControl.PlayerCamera[3].SetActive(false);
-                CameraControl.PlayerCamera[4].SetActive(false);
                 break;
 
             case 3:
+                CameraControl.PlayerCamera[0].SetActive(false);
                 CameraControl.PlayerCamera[1].SetActive(false);
-                CameraControl.PlayerCamera[2].SetActive(false);
-                CameraControl.PlayerCamera[3].SetActive(true);
-                CameraControl.PlayerCamera[4].SetActive(false);
+                CameraControl.PlayerCamera[2].SetActive(true);
+                CameraControl.PlayerCamera[3].SetActive(false);
                 break;
 
             case 4:
+                CameraControl.PlayerCamera[0].SetActive(false);
                 CameraControl.PlayerCamera[1].SetActive(false);
                 CameraControl.PlayerCamera[2].SetActive(false);
-                CameraControl.PlayerCamera[3].SetActive(false);
-                CameraControl.PlayerCamera[4].SetActive(true);
+                CameraControl.PlayerCamera[3].SetActive(true);
                 break;
         }
     }
