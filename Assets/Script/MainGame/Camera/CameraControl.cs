@@ -8,19 +8,17 @@ public class CameraControl : MonoBehaviour
 
     void Update()
     {
+        print("yes");
         if (closeCamera)
         {
-            OpeningSet();
+            if (gameObject.tag == "P2Camera" || gameObject.tag == "P3Camera" || gameObject.tag == "P4Camera")
+            {
+                print("false");
+                this.gameObject.SetActive(false);
+            }
+
             findCamera = true;
             closeCamera = false;
         }
     }
-    void OpeningSet()
-    {
-        if (gameObject.tag == "P2Camera" || gameObject.tag == "P3Camera" || gameObject.tag == "P4Camera")
-        {
-            this.gameObject.SetActive(false);
-        }
-    }
-   
 }
