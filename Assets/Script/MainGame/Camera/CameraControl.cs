@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
+    public static int changeCamera = 1;
+
     GameObject[] PlayerCamera = new GameObject[5];
 
     bool closeCamera = false, findCamera = true;
 
     void Update()
+    {
+        OpeningSet();
+        ChangeCamera();
+    }
+    void OpeningSet()
     {
         if (findCamera)
         {
@@ -21,16 +28,49 @@ public class CameraControl : MonoBehaviour
         }
         if (closeCamera)
         {
-            if (gameObject.tag == "P2Camera"|| gameObject.tag == "P3Camera"|| gameObject.tag == "P4Camera")
+            if (gameObject.tag == "P2Camera" || gameObject.tag == "P3Camera" || gameObject.tag == "P4Camera")
             {
                 gameObject.SetActive(false);
                 closeCamera = false;
             }
         }
-        if (Input.GetKeyDown(KeyCode.C))
+    }
+    void ChangeCamera()
+    {
+        if (changeCamera > Menu_ChoosePlayer.whoPlay)
         {
-            PlayerCamera[1].SetActive(false);
-            PlayerCamera[2].SetActive(true);
+            changeCamera = 1;
+        }
+
+        switch (changeCamera) 
+        {
+            case 1:
+                PlayerCamera[1].SetActive(true);
+                PlayerCamera[2].SetActive(false);
+                PlayerCamera[3].SetActive(false);
+                PlayerCamera[4].SetActive(false);
+                break;
+
+            case 2:
+                PlayerCamera[1].SetActive(false);
+                PlayerCamera[2].SetActive(true);
+                PlayerCamera[3].SetActive(false);
+                PlayerCamera[4].SetActive(false);
+                break;
+
+            case 3:
+                PlayerCamera[1].SetActive(false);
+                PlayerCamera[2].SetActive(false);
+                PlayerCamera[3].SetActive(true);
+                PlayerCamera[4].SetActive(false);
+                break;
+
+            case 4:
+                PlayerCamera[1].SetActive(false);
+                PlayerCamera[2].SetActive(false);
+                PlayerCamera[3].SetActive(false);
+                PlayerCamera[4].SetActive(true);
+                break;
         }
     }
 }
