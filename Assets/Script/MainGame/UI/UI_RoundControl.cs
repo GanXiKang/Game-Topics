@@ -6,14 +6,11 @@ using UnityEngine.UI;
 public class UI_RoundControl : MonoBehaviour
 {
     public GameObject b_dice, b_NextR;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void Button_NextRound()
     {
-        
+        b_dice.SetActive(true);
+        b_NextR.SetActive(false);
+        ChangeCameraControl.changeCameraNum++;
     }
 }
