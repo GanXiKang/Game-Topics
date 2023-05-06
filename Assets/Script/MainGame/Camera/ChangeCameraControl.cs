@@ -12,14 +12,9 @@ public class ChangeCameraControl : MonoBehaviour
     }
     void Update()
     {
-        print("changeCameraNum" + changeCameraNum);
         if (changeCameraNum > Menu_ChoosePlayer.whoPlay)
         {
             changeCameraNum = 1;
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            changeCameraNum++;
         }
     }
 }
