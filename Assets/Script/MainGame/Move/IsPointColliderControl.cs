@@ -15,7 +15,7 @@ public class IsPointColliderControl : MonoBehaviour
     {
         if (collision.gameObject.tag == "Point")
         {
-            
+            StartCoroutine(NextPlayer());
         }
     }
     IEnumerator NextPlayer()
