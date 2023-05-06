@@ -15,7 +15,7 @@ public class UI_LoadingControl : MonoBehaviour
     {
         timer += 1 * Time.deltaTime;
 
-        if (timer >= 0.3f)                           
+        if (timer >= 3f)                           
         {
             LoadingUI.SetActive(false);
         }
