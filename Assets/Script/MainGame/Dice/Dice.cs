@@ -11,7 +11,6 @@ public class Dice : MonoBehaviour
     public int min = 1;
     public int max = 7;
 
-    public GameObject Interactive_UI;
     public Text systemText;
     public AudioSource BGM;
     public AudioClip dice;
@@ -20,7 +19,6 @@ public class Dice : MonoBehaviour
     {
         diceNum = Random.Range(min, max);
 
-        Interactive_UI.SetActive(false);
         systemText.text = " " + diceNum;
         BGM.PlayOneShot(dice);
 
