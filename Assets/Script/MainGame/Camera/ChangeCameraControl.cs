@@ -16,5 +16,6 @@ public class ChangeCameraControl : MonoBehaviour
         {
             changeCameraNum = 1;
         }
+        print("changeCameraNum " + changeCameraNum);
     }
 }
