@@ -5,13 +5,21 @@ using UnityEngine;
 public class Chest1AnimationControl : MonoBehaviour
 {
     Animation ani;
+
     public GameObject effects;
     public AudioSource BGM;
     public AudioClip open;
 
+    public static bool openedBox2 = false;
+
     void Start()
     {
         ani = GetComponent<Animation>();
+
+        if (openedBox2)
+        {
+            Destroy(this.gameObject);
+        }
     }
     void Update()
     {
@@ -22,6 +30,7 @@ public class Chest1AnimationControl : MonoBehaviour
     }
     IEnumerator ChestActive()
     {
+        openedBox2 = true;
         ani.Play("Open");
         BGM.PlayOneShot(open);
         Instantiate(effects, transform.position, transform.rotation);
