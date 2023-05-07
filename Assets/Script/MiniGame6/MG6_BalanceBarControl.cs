@@ -174,22 +174,49 @@ public class MG6_BalanceBarControl : MonoBehaviour
             M1 = false;
         }
         yield return new WaitForSeconds(2f);
+
         if (MiniGameColliderControl.p == 1)
         {
-            gameLoseUI[0].SetActive(true);
+            for (int i = 1; i < gameLoseUI.Length; i++)
+            {
+                if (Menu_ChoosePlayer.whyP1 == i)
+                {
+                    gameLoseUI[i - 1].SetActive(true);
+                }
+            }
         }
         else if (MiniGameColliderControl.p == 2)
         {
-            gameLoseUI[1].SetActive(true);
+            for (int i = 1; i < gameLoseUI.Length; i++)
+            {
+                if (Menu_ChoosePlayer.whyP2 == i)
+                {
+                    gameLoseUI[i - 1].SetActive(true);
+                }
+            }
         }
         else if (MiniGameColliderControl.p == 3)
         {
-            gameLoseUI[2].SetActive(true);
+            for (int i = 1; i < gameLoseUI.Length; i++)
+            {
+                if (Menu_ChoosePlayer.whyP3 == i)
+                {
+                    gameLoseUI[i - 1].SetActive(true);
+                }
+            }
         }
         else if (MiniGameColliderControl.p == 4)
         {
-            gameLoseUI[3].SetActive(true);
+            for (int i = 1; i < gameLoseUI.Length; i++)
+            {
+                if (Menu_ChoosePlayer.whyP4 == i)
+                {
+                    gameLoseUI[i - 1].SetActive(true);
+                }
+            }
         }
+
+
         if (M2)
         {
             BGM.PlayOneShot(gameLose);
