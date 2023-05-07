@@ -62,7 +62,7 @@ public class MG1_InstantiateControl : MonoBehaviour
     {
         if (MiniGameColliderControl.p == 1)
         {
-            for (int i = 1; i < animals.Length; i++)
+            for (int i = 1; i <= animals.Length; i++)
             {
                 if (Menu_ChoosePlayer.whyP1 == i)
                 {
@@ -72,7 +72,7 @@ public class MG1_InstantiateControl : MonoBehaviour
         }
         if (MiniGameColliderControl.p == 2)
         {
-            for (int i = 1; i < animals.Length; i++)
+            for (int i = 1; i <= animals.Length; i++)
             {
                 if (Menu_ChoosePlayer.whyP2 == i)
                 {
@@ -82,7 +82,7 @@ public class MG1_InstantiateControl : MonoBehaviour
         }
         if (MiniGameColliderControl.p == 3)
         {
-            for (int i = 1; i < animals.Length; i++)
+            for (int i = 1; i <= animals.Length; i++)
             {
                 if (Menu_ChoosePlayer.whyP3 == i)
                 {
@@ -92,7 +92,7 @@ public class MG1_InstantiateControl : MonoBehaviour
         }
         if (MiniGameColliderControl.p == 4)
         {
-            for (int i = 1; i < animals.Length; i++)
+            for (int i = 1; i <= animals.Length; i++)
             {
                 if (Menu_ChoosePlayer.whyP4 == i)
                 {
