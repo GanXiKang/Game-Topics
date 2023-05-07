@@ -47,7 +47,6 @@ public class ChestColliderControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        print("yes");
         if (other.tag == "P1" || other.tag == "P2" || other.tag == "P3" || other.tag == "P4")
         { 
             if (Dice.P1_totalNum == boxPoint[1] || Dice.P2_totalNum == boxPoint[1] || Dice.P3_totalNum == boxPoint[1] || Dice.P4_totalNum == boxPoint[1])
