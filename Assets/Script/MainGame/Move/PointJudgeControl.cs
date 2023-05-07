@@ -22,8 +22,10 @@ public class PointJudgeControl : MonoBehaviour
 
         if (changeScene)
         {
+            print("要傳送");
             if (a != 0)
             {
+                print("開始傳送");
                 A.transform.position = p[a].transform.position;
             }
             if (b != 0)
@@ -43,6 +45,7 @@ public class PointJudgeControl : MonoBehaviour
     }
     void TransformPoint()
     {
+        print("找point");
         p[1] = GameObject.Find("Point1");
         p[2] = GameObject.Find("Point2");
         p[3] = GameObject.Find("Point3");
@@ -56,6 +59,7 @@ public class PointJudgeControl : MonoBehaviour
     }
     void RecordPoint()
     {
+        print("更新位置")；
         a = Dice.P1_totalNum;
         b = Dice.P2_totalNum;
         c = Dice.P3_totalNum;
@@ -63,6 +67,7 @@ public class PointJudgeControl : MonoBehaviour
     }
     void FindTarget()
     {
+        print("找人");
         A = GameObject.FindGameObjectWithTag("P1");
         B = GameObject.FindGameObjectWithTag("P2");
         C = GameObject.FindGameObjectWithTag("P3");
