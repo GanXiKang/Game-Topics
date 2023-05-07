@@ -9,9 +9,15 @@ public class Chest2AnimationControl : MonoBehaviour
     public AudioSource BGM;
     public AudioClip open;
 
+    bool opened;
     void Start()
     {
         ani = GetComponent<Animation>();
+
+        if (opened)
+        {
+            Destroy(this.gameObject);
+        }
     }
     void Update()
     {
@@ -22,6 +28,7 @@ public class Chest2AnimationControl : MonoBehaviour
     }
     IEnumerator ChestActive()
     {
+        opened = true;
         ani.Play("Open");
         BGM.PlayOneShot(open);
         Instantiate(effects, transform.position, transform.rotation);
