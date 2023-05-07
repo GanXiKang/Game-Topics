@@ -5,7 +5,8 @@ using UnityEngine;
 public class MG1_InstantiateControl : MonoBehaviour
 {
     public GameObject scissors, stone, cloth;
-    public Transform playerBrand, bossBrand;
+    public GameObject winEffects;
+    public Transform playerBrand, bossBrand, pointEffects;
 
     public GameObject[] animals = new GameObject[4];
     public Transform playerIns;
@@ -49,6 +50,11 @@ public class MG1_InstantiateControl : MonoBehaviour
         {
             Instantiate(cloth, bossBrand.transform.position, bossBrand.transform.rotation);
             MG1_GameControl.AIplayWhat = 0;
+        }
+
+        if (MG1_GameControl.playerAniWin)
+        {
+            Instantiate(winEffects, pointEffects.transform.position, pointEffects.transform.rotation);
         }
     }
     void InsPlayer()
