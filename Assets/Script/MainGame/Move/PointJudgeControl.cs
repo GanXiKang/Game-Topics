@@ -8,6 +8,7 @@ public class PointJudgeControl : MonoBehaviour
 
     GameObject[] p = new GameObject[11];
 
+    GameObject A, B, C, D;
     int a, b, c, d;
 
     void Start()
@@ -17,42 +18,17 @@ public class PointJudgeControl : MonoBehaviour
     void Update()
     {
         RecordPoint();
+        FindTarget();
 
-
-        if (gameObject.tag == "P1")
+        if (changeScene)
         {
-            if (changeScene)
-            {
-                transform.position = p[a].transform.position;
-                changeScene = false;
-            }
-        }
-        if (gameObject.tag == "P2")
-        {
-            if (changeScene)
-            {
-                transform.position = p[b].transform.position;
-                changeScene = false;
-            }
-        }
-        if (gameObject.tag == "P3")
-        {
-            if (changeScene)
-            {
-                transform.position = p[c].transform.position;
-                changeScene = false;
-            }
-        }
-        if (gameObject.tag == "P4")
-        {
-            if (changeScene)
-            {
-                transform.position = p[d].transform.position;
-                changeScene = false;
-            }
+            A.transform.position = p[a].transform.position;
+            B.transform.position = p[b].transform.position;
+            C.transform.position = p[c].transform.position;
+            D.transform.position = p[d].transform.position;
+            changeScene = false;
         }
     }
-
     void TransformPoint()
     {
         p[1] = GameObject.Find("Point1");
@@ -72,6 +48,25 @@ public class PointJudgeControl : MonoBehaviour
         b = Dice.P2_totalNum;
         c = Dice.P3_totalNum;
         d = Dice.P4_totalNum;
+    }
+    void FindTarget()
+    {
+        if (gameObject.tag == "P1")
+        {
+            A = this.gameObject;
+        }
+        if (gameObject.tag == "P2")
+        {
+            B = this.gameObject;
+        }
+        if (gameObject.tag == "P3")
+        {
+            C = this.gameObject;
+        }
+        if (gameObject.tag == "P4")
+        {
+            D = this.gameObject;
+        }
     }
 }
 
