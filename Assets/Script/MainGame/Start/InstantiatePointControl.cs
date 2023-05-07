@@ -13,6 +13,7 @@ public class InstantiatePointControl : MonoBehaviour
         insP2();
         insP3();
         insP4();
+        AnimatorControl.isWave = true;
     }
     void insP1()
     {

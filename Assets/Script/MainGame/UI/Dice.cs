@@ -22,6 +22,8 @@ public class Dice : MonoBehaviour
         systemText.text = " " + diceNum;
         BGM.PlayOneShot(dice);
 
+        AnimatorControl.isMove = true;
+
         who = round % Menu_ChoosePlayer.whoPlay;
         who++;
         ChangeCameraControl.changeCameraNum = who;
