@@ -24,6 +24,7 @@ public class AnimatorControl : MonoBehaviour
         if (isWave)
         {
             anim.SetBool("Wave", true);
+            isWave = false;
         }
         else
         {
