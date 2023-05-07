@@ -5,7 +5,7 @@ using UnityEngine;
 public class Chest1AnimationControl : MonoBehaviour
 {
     Animation ani;
-
+    public GameObject effects;
     public AudioSource BGM;
     public AudioClip open;
 
@@ -24,6 +24,7 @@ public class Chest1AnimationControl : MonoBehaviour
     {
         ani.Play("Open");
         BGM.PlayOneShot(open);
+        Instantiate(effects, transform.position, transform.rotation);
         ChestColliderControl.isOpen1 = false;
         yield return new WaitForSeconds(3f);
         this.gameObject.SetActive(false);
