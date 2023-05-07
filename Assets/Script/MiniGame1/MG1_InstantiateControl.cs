@@ -5,7 +5,8 @@ using UnityEngine;
 public class MG1_InstantiateControl : MonoBehaviour
 {
     public GameObject scissors, stone, cloth;
-    public Transform playerBrand, bossBrand;
+    public GameObject scissorsEffects, stoneEffects, clothEffects;
+    public Transform playerBrand, bossBrand , playerEff, bossEff;
 
     public GameObject[] animals = new GameObject[4];
     public Transform playerIns;
@@ -22,32 +23,38 @@ public class MG1_InstantiateControl : MonoBehaviour
         if (MG1_GameControl.playWhat == 1)
         {
             Instantiate(scissors, playerBrand.transform.position, playerBrand.transform.rotation);
+            Instantiate(scissorsEffects, playerEff.transform.position, playerEff.transform.rotation);
             MG1_GameControl.playWhat = 0;
         }
         if (MG1_GameControl.playWhat == 2)
         {
             Instantiate(stone, playerBrand.transform.position, playerBrand.transform.rotation);
+            Instantiate(stoneEffects, playerEff.transform.position, playerEff.transform.rotation);
             MG1_GameControl.playWhat = 0;
         }
         if (MG1_GameControl.playWhat == 3)
         {
             Instantiate(cloth, playerBrand.transform.position, playerBrand.transform.rotation);
+            Instantiate(clothEffects, playerEff.transform.position, playerEff.transform.rotation);
             MG1_GameControl.playWhat = 0;
         }
 
         if (MG1_GameControl.AIplayWhat == 1)
         {
             Instantiate(scissors, bossBrand.transform.position, bossBrand.transform.rotation);
+            Instantiate(scissorsEffects, bossEff.transform.position, bossEff.transform.rotation);
             MG1_GameControl.AIplayWhat = 0;
         }
         if (MG1_GameControl.AIplayWhat == 2)
         {
             Instantiate(stone, bossBrand.transform.position, bossBrand.transform.rotation);
+            Instantiate(stoneEffects, bossEff.transform.position, bossEff.transform.rotation);
             MG1_GameControl.AIplayWhat = 0;
         }
         if (MG1_GameControl.AIplayWhat == 3)
         {
             Instantiate(cloth, bossBrand.transform.position, bossBrand.transform.rotation);
+            Instantiate(clothEffects, bossEff.transform.position, bossEff.transform.rotation);
             MG1_GameControl.AIplayWhat = 0;
         }
     }
