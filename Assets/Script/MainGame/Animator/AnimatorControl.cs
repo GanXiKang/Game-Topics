@@ -14,6 +14,13 @@ public class AnimatorControl : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        Wave();
+
+        Move();
+    }
+
+    void Wave()
+    {
         if (isWave)
         {
             anim.SetBool("Wave", true);
@@ -22,18 +29,16 @@ public class AnimatorControl : MonoBehaviour
         {
             anim.SetBool("Wave", false);
         }
-
+    }
+    void Move()
+    {
         if (isMove)
         {
             anim.SetBool("Walk", true);
         }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Point")
+        else
         {
             anim.SetBool("Walk", false);
-            isMove = false;
         }
     }
 }
