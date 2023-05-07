@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MG5_GameResultControl : MonoBehaviour
 {
+    public static bool isEffects;
     public GameObject gameWinUI, gameLoseUI;
     public AudioSource BGM;
     public AudioClip gameWin, gameLose;
@@ -14,6 +15,7 @@ public class MG5_GameResultControl : MonoBehaviour
         {
             if (MG5_HookControl.score >= 15)
             {
+                isEffects = true;
                 gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
             }
