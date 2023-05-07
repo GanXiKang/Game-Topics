@@ -44,7 +44,7 @@ public class MG4_EndControl : MonoBehaviour
             }
             else 
             {
-                gameLoseUI.SetActive(false);
+                gameLoseUI.SetActive(true);
                 BGM.PlayOneShot(gameLose);
                 losePlayer = true;
             }
