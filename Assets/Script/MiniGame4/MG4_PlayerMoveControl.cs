@@ -24,7 +24,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
             {
                 if (isJump)
                 {
-                    ani.SetBool("Hurldes", true);
+                    ani.SetBool("Hurdles", true);
                     rb.velocity = Vector3.up * jump;
                     isJump = false;
                 }
@@ -62,7 +62,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
         if (other.tag == "Floor")
         {
             isJump = true;
-            ani.SetBool("Hurldes", false);
+            ani.SetBool("Hurdles", false);
         }
     }
     void ComboSpeed()
