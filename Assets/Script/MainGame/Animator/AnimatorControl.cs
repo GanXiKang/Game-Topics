@@ -23,8 +23,7 @@ public class AnimatorControl : MonoBehaviour
     {
         if (isWave)
         {
-            anim.SetBool("Wave", true);
-            isWave = false;
+            StartCoroutine(NotWave());
         }
         else
         {
@@ -41,5 +40,11 @@ public class AnimatorControl : MonoBehaviour
         {
             anim.SetBool("Walk", false);
         }
+    }
+    IEnumerator NotWave()
+    {
+        anim.SetBool("Wave", true);
+        yield return new WaitForSeconds(5f);
+        isWave = false;
     }
 }
