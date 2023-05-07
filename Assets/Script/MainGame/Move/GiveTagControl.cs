@@ -26,7 +26,7 @@ public class GiveTagControl : MonoBehaviour
             }
         }
 
-        if (gameObject.tag == "Cow")
+        else if (gameObject.tag == "Cow")
         {
             if (Menu_ChoosePlayer.whyP1 == 2)
             {
@@ -46,7 +46,7 @@ public class GiveTagControl : MonoBehaviour
             }
         }
 
-        if (gameObject.tag == "Tiger")
+        else if (gameObject.tag == "Tiger")
         {
             if (Menu_ChoosePlayer.whyP1 == 3)
             {
@@ -66,7 +66,7 @@ public class GiveTagControl : MonoBehaviour
             }
         }
 
-        if (gameObject.tag == "Rabbit")
+        else if (gameObject.tag == "Rabbit")
         {
             if (Menu_ChoosePlayer.whyP1 == 4)
             {
