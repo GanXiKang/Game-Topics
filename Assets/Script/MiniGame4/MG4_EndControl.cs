@@ -12,7 +12,7 @@ public class MG4_EndControl : MonoBehaviour
     public AudioSource BGM;
     public AudioClip end, gameWin, gameLose, rewards;
 
-    public static bool winPlayer, losePlayer, move;
+    public static bool winPlayer, losePlayer, move, isEffects;
 
     void Update()
     {
@@ -91,6 +91,7 @@ public class MG4_EndControl : MonoBehaviour
     }
     IEnumerator BackMainGame()
     {
+        isEffects = true;
         PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
         winPlayer = false;
