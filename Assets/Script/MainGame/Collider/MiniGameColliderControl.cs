@@ -14,6 +14,7 @@ public class MiniGameColliderControl : MonoBehaviour
     {
         if (Dice.P1_totalNum == MGPoint || Dice.P2_totalNum == MGPoint || Dice.P3_totalNum == MGPoint || Dice.P4_totalNum == MGPoint)
         {
+            AnimatorControl.isMove = false;
             if (other.tag == "P1" && P1_playGame)
             {
                 p = 1;

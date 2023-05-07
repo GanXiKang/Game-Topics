@@ -12,6 +12,7 @@ public class EventControl : MonoBehaviour
     {
         if (Dice.P1_totalNum == EventPoint || Dice.P2_totalNum == EventPoint || Dice.P3_totalNum == EventPoint || Dice.P4_totalNum == EventPoint)
         {
+            AnimatorControl.isMove = false;
             if (other.tag == "P1")
             {
                 StartCoroutine(P1_EventHappened());
@@ -35,23 +36,27 @@ public class EventControl : MonoBehaviour
         systemTest.text = "退后兩格！";
         yield return new WaitForSeconds(2f);
         Dice.P1_totalNum -= 2;
+        AnimatorControl.isMove = true;
     }
     IEnumerator P2_EventHappened()
     {
         systemTest.text = "退后兩格！";
         yield return new WaitForSeconds(2f);
         Dice.P2_totalNum -= 2;
+        AnimatorControl.isMove = true;
     }
     IEnumerator P3_EventHappened()
     {
         systemTest.text = "退后兩格！";
         yield return new WaitForSeconds(2f);
         Dice.P3_totalNum -= 2;
+        AnimatorControl.isMove = true;
     }
     IEnumerator P4_EventHappened()
     {
         systemTest.text = "退后兩格！";
         yield return new WaitForSeconds(2f);
         Dice.P4_totalNum -= 2;
+        AnimatorControl.isMove = true;
     }
 }
