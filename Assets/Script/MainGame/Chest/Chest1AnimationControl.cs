@@ -7,6 +7,7 @@ public class Chest1AnimationControl : MonoBehaviour
     Animation ani;
 
     public GameObject effects;
+    public Transform pointEff;
     public AudioSource BGM;
     public AudioClip open;
 
@@ -33,7 +34,7 @@ public class Chest1AnimationControl : MonoBehaviour
         openedBox1 = true;
         ani.Play("Open");
         BGM.PlayOneShot(open);
-        Instantiate(effects, transform.position, transform.rotation);
+        Instantiate(effects, pointEff.transform.position, pointEff.transform.rotation);
         ChestColliderControl.isOpen1 = false;
         yield return new WaitForSeconds(3f);
         this.gameObject.SetActive(false);
