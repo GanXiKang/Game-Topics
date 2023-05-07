@@ -44,7 +44,7 @@ public class AnimatorControl : MonoBehaviour
     IEnumerator NotWave()
     {
         anim.SetBool("Wave", true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         isWave = false;
     }
 }
