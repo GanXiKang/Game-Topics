@@ -5,7 +5,6 @@ using UnityEngine;
 public class MG1_InstantiateControl : MonoBehaviour
 {
     public GameObject scissors, stone, cloth;
-
     public Transform playerBrand, bossBrand;
 
     public GameObject[] animals = new GameObject[4];
