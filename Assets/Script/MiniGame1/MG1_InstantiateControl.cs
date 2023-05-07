@@ -12,8 +12,8 @@ public class MG1_InstantiateControl : MonoBehaviour
 
     void Start()
     {
-        playerBrand.transform.Rotate(-90, 0, 0);
-        bossBrand.transform.Rotate(-90, 0, 0);
+        playerBrand.transform.Rotate(90, 0, 0);
+        bossBrand.transform.Rotate(90, 0, 0);
 
         InsPlayer();
     }
