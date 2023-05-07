@@ -5,11 +5,9 @@ using UnityEngine;
 public class PointJudgeControl : MonoBehaviour
 {
     public static bool changeScene = false;
-
-    GameObject[] p = new GameObject[11];
-
-    GameObject A, B, C, D;
-    int a, b, c, d;
+    public static int a, b, c, d;
+    public static GameObject A, B, C, D;
+    public static GameObject[] p = new GameObject[11];
 
     void Start()
     {
@@ -59,7 +57,7 @@ public class PointJudgeControl : MonoBehaviour
     }
     void RecordPoint()
     {
-        print("更新位置")；
+        print("更新位置");
         a = Dice.P1_totalNum;
         b = Dice.P2_totalNum;
         c = Dice.P3_totalNum;
