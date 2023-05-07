@@ -8,7 +8,7 @@ public class MG2_GameEffectsControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (MG2_GameResultControl.lose)
+        if (MG2_GameResultControl.win)
         {
             Instantiate(effects, transform.position, transform.rotation);
         }
