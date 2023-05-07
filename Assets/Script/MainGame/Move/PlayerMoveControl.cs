@@ -8,8 +8,6 @@ public class PlayerMoveControl : MonoBehaviour
     NavMeshAgent agent;
     GameObject[] p = new GameObject[11];
 
-    public static bool Award;
-
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
