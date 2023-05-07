@@ -9,7 +9,7 @@ public class MG1_GameControl : MonoBehaviour
     float i, win, lose;                                   // 1 = Ότµ¶; 2 = Κ―ξ^; 3 = Ρ
 
     public static float playWhat, AIplayWhat; 
-    public static bool cameraC, cameraEnd, W, L, D, playerAniWin, playerAniLose;
+    public static bool cameraC, cameraEnd, W, L, D, playerAniWin, playerAniLose, isEffects;
 
     public GameObject[] aiScore = new GameObject[3];
     public GameObject[] playerScore = new GameObject[3];
@@ -118,6 +118,7 @@ public class MG1_GameControl : MonoBehaviour
             cameraEnd = true;
             if (win >= 3)
             {
+                isEffects = true;
                 playerAniWin = true;
                 BGM.PlayOneShot(gameWin);
             }

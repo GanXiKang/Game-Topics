@@ -52,9 +52,10 @@ public class MG1_InstantiateControl : MonoBehaviour
             MG1_GameControl.AIplayWhat = 0;
         }
 
-        if (MG1_GameControl.playerAniWin)
+        if (MG1_GameControl.isEffects)
         {
             Instantiate(winEffects, pointEffects.transform.position, pointEffects.transform.rotation);
+            MG1_GameControl.isEffects = false;
         }
     }
     void InsPlayer()
