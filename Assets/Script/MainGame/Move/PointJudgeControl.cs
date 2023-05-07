@@ -24,19 +24,19 @@ public class PointJudgeControl : MonoBehaviour
         {
             if (a != 0)
             {
-                A.transform.position = p[a].transform.position + new Vector3(0, 3, 0);
+                A.transform.position = p[a].transform.position;
             }
             if (b != 0)
             {
-                B.transform.position = p[b].transform.position + new Vector3(0, 3, 0);
+                B.transform.position = p[b].transform.position;
             }
             if (c != 0)
             {
-                C.transform.position = p[c].transform.position + new Vector3(0, 3, 0);
+                C.transform.position = p[c].transform.position;
             }
             if (d != 0)
             {
-                D.transform.position = p[d].transform.position + new Vector3(0, 3, 0);
+                D.transform.position = p[d].transform.position;
             }
             changeScene = false;
         }
