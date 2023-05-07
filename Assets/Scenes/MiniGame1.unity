@@ -840,6 +840,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471195556}
   m_CullTransparentMesh: 1
+--- !u!1 &477465133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477465134}
+  - component: {fileID: 477465135}
+  m_Layer: 0
+  m_Name: PlayerEff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &477465134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477465133}
+  m_LocalRotation: {x: 0.021814892, y: 0, z: 0.999762, w: 0}
+  m_LocalPosition: {x: 0.89, y: 5.98, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114118126}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 2.5, z: 180}
+--- !u!65 &477465135
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477465133}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1, z: 2.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &492685841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,6 +1859,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223179098}
   m_CullTransparentMesh: 1
+--- !u!1 &1223257097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223257098}
+  - component: {fileID: 1223257099}
+  m_Layer: 0
+  m_Name: BossEff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1223257098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223257097}
+  m_LocalRotation: {x: 0.9996596, y: 0, z: -0.026089692, w: 0}
+  m_LocalPosition: {x: 3.32, y: 5.98, z: 4.36}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2114118126}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 182.99, z: 180}
+--- !u!65 &1223257099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223257097}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1, z: 2.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1226311960
 GameObject:
   m_ObjectHideFlags: 0
@@ -3470,6 +3560,8 @@ Transform:
   - {fileID: 1866255029}
   - {fileID: 1752549110}
   - {fileID: 852676276}
+  - {fileID: 477465134}
+  - {fileID: 1223257098}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3488,8 +3580,13 @@ MonoBehaviour:
   scissors: {fileID: 4461654447648519841, guid: 9b9dd7fcd9ca7c342bfa160e9aaf26ba, type: 3}
   stone: {fileID: 141014734912527875, guid: 9d201dbd9c517084686d3cfa1be08930, type: 3}
   cloth: {fileID: 482503667034744320, guid: 2b4b7fef2eda6f34c893620efe815c1e, type: 3}
+  scissorsEffects: {fileID: 996757574214850181, guid: 9a7e32b66223720488c74af34e1cc860, type: 3}
+  stoneEffects: {fileID: 6243569917318128070, guid: 749a0fbdf3852fa449fb994c48d81102, type: 3}
+  clothEffects: {fileID: 4053112265530454928, guid: 8cb01adedc60a2248b8aaabc4df0b293, type: 3}
   playerBrand: {fileID: 1752549110}
   bossBrand: {fileID: 852676276}
+  playerEff: {fileID: 477465134}
+  bossEff: {fileID: 1223257098}
   animals:
   - {fileID: 4224175311226989997, guid: e3ee477bdcd2bbb4797d424c528df148, type: 3}
   - {fileID: 8199635326109563581, guid: f9b1aa7041fbe164eb4cda117eb309b7, type: 3}
