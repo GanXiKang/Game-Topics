@@ -13,7 +13,7 @@ public class MG4_RoadBlockControl : MonoBehaviour
         {
             combo = 0;
             hit = true;
-            Destroy(other.gameObject, 0.3f);
+            Destroy(other.gameObject);
         }
         if (other.tag == "RecordJump")
         {
