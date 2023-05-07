@@ -14,11 +14,11 @@ public class PointJudgeControl : MonoBehaviour
     void Start()
     {
         TransformPoint();
+        FindTarget();
     }
     void Update()
     {
         RecordPoint();
-        FindTarget();
 
         if (changeScene)
         {
@@ -63,22 +63,10 @@ public class PointJudgeControl : MonoBehaviour
     }
     void FindTarget()
     {
-        if (gameObject.tag == "P1")
-        {
-            A = this.gameObject;
-        }
-        if (gameObject.tag == "P2")
-        {
-            B = this.gameObject;
-        }
-        if (gameObject.tag == "P3")
-        {
-            C = this.gameObject;
-        }
-        if (gameObject.tag == "P4")
-        {
-            D = this.gameObject;
-        }
+        A = GameObject.FindGameObjectWithTag("P1");
+        B = GameObject.FindGameObjectWithTag("P2");
+        C = GameObject.FindGameObjectWithTag("P3");
+        D = GameObject.FindGameObjectWithTag("P4");
     }
 }
 
