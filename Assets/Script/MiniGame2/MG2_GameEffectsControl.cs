@@ -5,7 +5,6 @@ using UnityEngine;
 public class MG2_GameEffectsControl : MonoBehaviour
 {
     public GameObject effects;
-
     void FixedUpdate()
     {
         if (MG2_GameResultControl.win)
