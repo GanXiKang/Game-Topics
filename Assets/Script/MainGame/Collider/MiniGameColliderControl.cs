@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MiniGameColliderControl : MonoBehaviour
 {
-    public static bool P1_playGame = true, P2_playGame = true, P3_playGame = true, P4_playGame = true, isMiniGamePoint = false;
+    public static bool P1_playGame = true, P2_playGame = true, P3_playGame = true, P4_playGame = true;
     public static float p;
 
     public int miniGame, MGPoint;
@@ -39,8 +39,6 @@ public class MiniGameColliderControl : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        isMiniGamePoint = false;
-
         if (other.tag == "P1")
         {
             P1_playGame = true;
