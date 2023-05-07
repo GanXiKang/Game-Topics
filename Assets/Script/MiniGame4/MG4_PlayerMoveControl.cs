@@ -26,7 +26,6 @@ public class MG4_PlayerMoveControl : MonoBehaviour
                 {
                     ani.SetBool("Hurdles", true);
                     rb.velocity = Vector3.up * jump;
-                    rb.AddForce(transform.forward * 10);
                     isJump = false;
                 }
             }
