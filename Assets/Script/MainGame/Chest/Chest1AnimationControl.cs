@@ -10,13 +10,13 @@ public class Chest1AnimationControl : MonoBehaviour
     public AudioSource BGM;
     public AudioClip open;
 
-    public static bool openedBox2 = false;
+    public static bool openedBox1 = false;
 
     void Start()
     {
         ani = GetComponent<Animation>();
 
-        if (openedBox2)
+        if (openedBox1)
         {
             Destroy(this.gameObject);
         }
@@ -30,7 +30,7 @@ public class Chest1AnimationControl : MonoBehaviour
     }
     IEnumerator ChestActive()
     {
-        openedBox2 = true;
+        openedBox1 = true;
         ani.Play("Open");
         BGM.PlayOneShot(open);
         Instantiate(effects, transform.position, transform.rotation);
