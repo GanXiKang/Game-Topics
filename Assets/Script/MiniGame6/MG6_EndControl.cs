@@ -22,22 +22,18 @@ public class MG6_EndControl : MonoBehaviour
         if (MiniGameColliderControl.p == 1)
         {
             MiniGameColliderControl.P1_playGame = false;
-            MiniGameColliderControl.p = 0;
         }
         if (MiniGameColliderControl.p == 2)
         {
             MiniGameColliderControl.P2_playGame = false;
-            MiniGameColliderControl.p = 0;
         }
         if (MiniGameColliderControl.p == 3)
         {
             MiniGameColliderControl.P3_playGame = false;
-            MiniGameColliderControl.p = 0;
         }
         if (MiniGameColliderControl.p == 4)
         {
             MiniGameColliderControl.P4_playGame = false;
-            MiniGameColliderControl.p = 0;
         }
     }
     private void OnTriggerEnter(Collider other)
