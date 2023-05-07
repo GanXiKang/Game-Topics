@@ -223,7 +223,7 @@ RectTransform:
   - {fileID: 477854612}
   - {fileID: 1716717095}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -355,7 +355,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &182315513
 MonoBehaviour:
@@ -736,6 +736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 518956618}
+  - component: {fileID: 518956619}
   m_Layer: 0
   m_Name: WinE2
   m_TagString: Untagged
@@ -758,6 +759,20 @@ Transform:
   m_Father: {fileID: 1473936336}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+--- !u!114 &518956619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518956617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6b56afcdf679748ad531b4c2bc3a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects: {fileID: 8895797047371637223, guid: 58ef8bbde80d5924a84be69c974f34d5, type: 3}
+  pointEffects: {fileID: 0}
 --- !u!1 &519732078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1192,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &937243306
 MonoBehaviour:
@@ -1350,7 +1365,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &998842728
 MonoBehaviour:
@@ -1647,6 +1662,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1370308788}
+  - component: {fileID: 1370308789}
   m_Layer: 0
   m_Name: WinE1
   m_TagString: Untagged
@@ -1669,6 +1685,20 @@ Transform:
   m_Father: {fileID: 1473936336}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+--- !u!114 &1370308789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370308787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6b56afcdf679748ad531b4c2bc3a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects: {fileID: 8895797047371637223, guid: 58ef8bbde80d5924a84be69c974f34d5, type: 3}
+  pointEffects: {fileID: 0}
 --- !u!1 &1429606200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,6 +1881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1473936336}
+  - component: {fileID: 1473936337}
   m_Layer: 0
   m_Name: GameEffects
   m_TagString: Untagged
@@ -1873,8 +1904,22 @@ Transform:
   - {fileID: 1370308788}
   - {fileID: 518956618}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1473936337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473936335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6b56afcdf679748ad531b4c2bc3a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects: {fileID: 0}
+  pointEffects: {fileID: 0}
 --- !u!1 &1545802461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,7 +2155,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1859488209
 MonoBehaviour:
