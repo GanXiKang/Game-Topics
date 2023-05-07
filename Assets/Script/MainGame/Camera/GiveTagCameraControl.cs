@@ -6,7 +6,7 @@ public class GiveTagCameraControl : MonoBehaviour
 {
     void Start()
     {
-        if (gameObject.tag == "Mouse")
+        if (this.gameObject.tag == "Mouse")
         {
             if (Menu_ChoosePlayer.whyP1 == 1)
             {
@@ -14,11 +14,11 @@ public class GiveTagCameraControl : MonoBehaviour
             }
             else if (Menu_ChoosePlayer.whyP2 == 1)
             {
-                gameObject.tag = "P2Camrea";
+                gameObject.tag = "P2Camera";
             }
             else if (Menu_ChoosePlayer.whyP3 == 1)
             {
-                gameObject.tag = "P3Camrea";
+                gameObject.tag = "P3Camera";
             }
             else if (Menu_ChoosePlayer.whyP4 == 1)
             {
@@ -26,7 +26,7 @@ public class GiveTagCameraControl : MonoBehaviour
             }
         }
 
-        if (gameObject.tag == "Cow")
+        else if (this.gameObject.tag == "Cow")
         {
             if (Menu_ChoosePlayer.whyP1 == 2)
             {
@@ -46,7 +46,7 @@ public class GiveTagCameraControl : MonoBehaviour
             }
         }
 
-        if (gameObject.tag == "Tiger")
+        else if (this.gameObject.tag == "Tiger")
         {
             if (Menu_ChoosePlayer.whyP1 == 3)
             {
@@ -66,7 +66,7 @@ public class GiveTagCameraControl : MonoBehaviour
             }
         }
 
-        if (gameObject.tag == "Rabbit")
+        else if (this.gameObject.tag == "Rabbit")
         {
             if (Menu_ChoosePlayer.whyP1 == 4)
             {
