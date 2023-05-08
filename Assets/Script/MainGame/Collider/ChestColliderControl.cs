@@ -77,6 +77,7 @@ public class ChestColliderControl : MonoBehaviour
     }
     IEnumerator ChangeCamera()
     {
+        print("ok");
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         Dice.isDiceUI = true;
