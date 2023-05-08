@@ -61,24 +61,21 @@ public class ChestColliderControl : MonoBehaviour
         {
             if (Dice.P1_totalNum == boxPoint[1] || Dice.P2_totalNum == boxPoint[1] || Dice.P3_totalNum == boxPoint[1] || Dice.P4_totalNum == boxPoint[1])
             {
-                isOpen1 = true;
-                Award();
-                AnimatorControl.isMove = false;
                 StartCoroutine(ChangeCamera());
+                isOpen1 = true;
             }
             if (Dice.P1_totalNum == boxPoint[2] || Dice.P2_totalNum == boxPoint[2] || Dice.P3_totalNum == boxPoint[2] || Dice.P4_totalNum == boxPoint[2])
             {
-                isOpen2 = true;
-                Award();
-                AnimatorControl.isMove = false;
                 StartCoroutine(ChangeCamera());
+                isOpen2 = true;
             }
         }
     }
     IEnumerator ChangeCamera()
     {
-        print("ok");
-        yield return new WaitForSeconds(2f);
+        Award();
+        AnimatorControl.isMove = false;
+        yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         print(ChangeCameraControl.changeCameraNum);
         Dice.isDiceUI = true;
