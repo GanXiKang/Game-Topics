@@ -58,6 +58,7 @@ public class MiniGameColliderControl : MonoBehaviour
     }
     IEnumerator StartMiniGame()
     {
+        PlayerMoveControl.isMiniGame = true;
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(miniGame);
     }
