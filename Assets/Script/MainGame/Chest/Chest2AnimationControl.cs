@@ -38,5 +38,6 @@ public class Chest2AnimationControl : MonoBehaviour
         ChestColliderControl.isOpen2 = false;
         yield return new WaitForSeconds(5f);
         this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
     }
 }

@@ -53,7 +53,6 @@ public class ChestColliderControl : MonoBehaviour
                 SystemTestTextControl.isTimer = true;
                 break;
         }
-        Destroy(this.gameObject, 2f);
     }
     private void OnTriggerEnter(Collider other)
     {
