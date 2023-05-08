@@ -4412,19 +4412,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 735870192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61df27693edb1374d91cf3ce0c740491, type: 3}
+  m_Script: {fileID: 11500000, guid: 137292e41a1ab064e8acf0a16cc5c413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  insPoint:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  animals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &757835433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5846,6 +5836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 984581548}
+  - component: {fileID: 984581549}
   m_Layer: 0
   m_Name: InsPlayer
   m_TagString: Untagged
@@ -5872,6 +5863,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &984581549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984581547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61df27693edb1374d91cf3ce0c740491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  insPoint:
+  - {fileID: 231302161}
+  - {fileID: 1267540502}
+  - {fileID: 862779548}
+  - {fileID: 654003971}
+  animals:
+  - {fileID: 7657198161940171670, guid: a91893544c4098f46b759133fcf40cf1, type: 3}
+  - {fileID: 5056086684247149213, guid: d2e8a7f8c034b354eb1109a270d5c1cf, type: 3}
+  - {fileID: 682612426089253847, guid: 67da6ca2eb780304ead331b3472833e4, type: 3}
+  - {fileID: 4101317083984687545, guid: 41b124b043ecd7346a91704de59ee775, type: 3}
 --- !u!1 &1002134271
 GameObject:
   m_ObjectHideFlags: 0
@@ -7364,7 +7377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1301780972
 Transform:
   m_ObjectHideFlags: 0
@@ -8082,7 +8095,6 @@ GameObject:
   - component: {fileID: 1414603037}
   - component: {fileID: 1414603035}
   - component: {fileID: 1414603036}
-  - component: {fileID: 1414603038}
   - component: {fileID: 1414603039}
   - component: {fileID: 1414603040}
   m_Layer: 0
@@ -8220,28 +8232,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1414603038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414603034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61df27693edb1374d91cf3ce0c740491, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  insPoint:
-  - {fileID: 231302161}
-  - {fileID: 1267540502}
-  - {fileID: 862779548}
-  - {fileID: 654003971}
-  animals:
-  - {fileID: 7657198161940171670, guid: a91893544c4098f46b759133fcf40cf1, type: 3}
-  - {fileID: 5056086684247149213, guid: d2e8a7f8c034b354eb1109a270d5c1cf, type: 3}
-  - {fileID: 682612426089253847, guid: 67da6ca2eb780304ead331b3472833e4, type: 3}
-  - {fileID: 4101317083984687545, guid: 41b124b043ecd7346a91704de59ee775, type: 3}
 --- !u!114 &1414603039
 MonoBehaviour:
   m_ObjectHideFlags: 0
