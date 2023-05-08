@@ -80,6 +80,8 @@ public class ChestColliderControl : MonoBehaviour
         print("ok");
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
+        print(ChangeCameraControl.changeCameraNum);
         Dice.isDiceUI = true;
+        print(Dice.isDiceUI);
     }
 }
