@@ -19,7 +19,6 @@ public class Dice : MonoBehaviour
 
     void Update()
     {
-        print("Dice" + isDiceUI);
         if (isDiceUI)
         {
             diceUI.SetActive(true);
