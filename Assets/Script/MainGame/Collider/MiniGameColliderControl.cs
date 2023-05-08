@@ -61,5 +61,7 @@ public class MiniGameColliderControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(miniGame);
         isMiniGame = true;
+        ChangeCameraControl.changeCameraNum++;
+        Dice.isDiceUI = true;
     }
 }
