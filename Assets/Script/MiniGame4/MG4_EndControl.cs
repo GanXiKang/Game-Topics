@@ -97,7 +97,6 @@ public class MG4_EndControl : MonoBehaviour
         losePlayer = false;
         move = false;
         SceneManager.LoadScene(7);
-        PointJudgeControl.changeScene = true;
-        PlayerMoveControl.isMiniGame = false;
+        MiniGameColliderControl.isMiniGame = false;
     }
 }

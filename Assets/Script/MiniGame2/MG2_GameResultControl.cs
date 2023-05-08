@@ -76,7 +76,6 @@ public class MG2_GameResultControl : MonoBehaviour
         MG2_CollectScoreControl.score = 0;
         MG2_UIControl.gameTime = 45;
         SceneManager.LoadScene(7);
-        PointJudgeControl.changeScene = true;
-        PlayerMoveControl.isMiniGame = false;
+        MiniGameColliderControl.isMiniGame = false;
     }
 }

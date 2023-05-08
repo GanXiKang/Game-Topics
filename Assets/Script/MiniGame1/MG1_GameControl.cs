@@ -188,7 +188,6 @@ public class MG1_GameControl : MonoBehaviour
         playerAniLose = false;
         cameraEnd = false;
         SceneManager.LoadScene(7);
-        PointJudgeControl.changeScene = true;
-        PlayerMoveControl.isMiniGame = false;
+        MiniGameColliderControl.isMiniGame = false;
     }
 }

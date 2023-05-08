@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MiniGameColliderControl : MonoBehaviour
 {
-    public static bool P1_playGame = true, P2_playGame = true, P3_playGame = true, P4_playGame = true;
+    public static bool P1_playGame = true, P2_playGame = true, P3_playGame = true, P4_playGame = true ,isMiniGame = false;
     public static float p;
 
     public int miniGame, MGPoint;
@@ -60,6 +60,6 @@ public class MiniGameColliderControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(miniGame);
-        PlayerMoveControl.isMiniGame = true;
+        isMiniGame = true;
     }
 }

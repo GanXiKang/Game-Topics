@@ -54,7 +54,6 @@ public class MG6_EndControl : MonoBehaviour
         MG6_BalanceBarControl.gameover = false;
         back = false;
         SceneManager.LoadScene(7);
-        PointJudgeControl.changeScene = true;
-        PlayerMoveControl.isMiniGame = false;
+        MiniGameColliderControl.isMiniGame = false;
     }
 }
