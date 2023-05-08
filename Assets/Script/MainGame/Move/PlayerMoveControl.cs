@@ -8,8 +8,6 @@ public class PlayerMoveControl : MonoBehaviour
     NavMeshAgent agent;
     GameObject[] p = new GameObject[11];
 
-    public static bool isMiniGame = false;
-
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -18,24 +16,21 @@ public class PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        if (isMiniGame == false)
+        if (gameObject.tag == "P1")
         {
-            if (gameObject.tag == "P1")
-            {
-                P1MovePoint();
-            }
-            if (gameObject.tag == "P2")
-            {
-                P2MovePoint();
-            }
-            if (gameObject.tag == "P3")
-            {
-                P3MovePoint();
-            }
-            if (gameObject.tag == "P4")
-            {
-                P4MovePoint();
-            }
+            P1MovePoint();
+        }
+        if (gameObject.tag == "P2")
+        {
+            P2MovePoint();
+        }
+        if (gameObject.tag == "P3")
+        {
+            P3MovePoint();
+        }
+        if (gameObject.tag == "P4")
+        {
+            P4MovePoint();
         }
     }
     void P1MovePoint()
