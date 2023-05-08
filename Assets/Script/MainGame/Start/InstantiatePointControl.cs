@@ -7,13 +7,18 @@ public class InstantiatePointControl : MonoBehaviour
     public GameObject[] insPoint = new GameObject[4];
     public GameObject[] animals = new GameObject[4];
 
+    public static bool isStart = true;
     void Start()
     {
-        insP1();
-        insP2();
-        insP3();
-        insP4();
-        AnimatorControl.isWave = true;
+        if (isStart)
+        {
+            insP1();
+            insP2();
+            insP3();
+            insP4();
+            AnimatorControl.isWave = true;
+            isStart = false;
+        }
     }
     void insP1()
     {
