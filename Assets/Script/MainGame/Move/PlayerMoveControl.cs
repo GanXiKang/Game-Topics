@@ -16,21 +16,24 @@ public class PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        if (gameObject.tag == "P1")
+        if (MiniGameColliderControl.isMiniGame == false)
         {
-            P1MovePoint();
-        }
-        if (gameObject.tag == "P2")
-        {
-            P2MovePoint();
-        }
-        if (gameObject.tag == "P3")
-        {
-            P3MovePoint();
-        }
-        if (gameObject.tag == "P4")
-        {
-            P4MovePoint();
+            if (gameObject.tag == "P1")
+            {
+                P1MovePoint();
+            }
+            if (gameObject.tag == "P2")
+            {
+                P2MovePoint();
+            }
+            if (gameObject.tag == "P3")
+            {
+                P3MovePoint();
+            }
+            if (gameObject.tag == "P4")
+            {
+                P4MovePoint();
+            }
         }
     }
     void P1MovePoint()
