@@ -1,14 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ChestColliderControl : MonoBehaviour
 {
-    int a;
     int[] boxPoint = new int[3];
-
-    public Text systemTest;
 
     public static bool isOpen1, isOpen2;
 
@@ -16,43 +12,6 @@ public class ChestColliderControl : MonoBehaviour
     {
         boxPoint[1] = 2;
         boxPoint[2] = 6;        
-    }
-    void Award()
-    {
-        a = Random.Range(1, 11);
-        switch (a)
-        {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-                systemTest.text = "獲得10個貓貓幣！";
-                systemTest.color = Color.yellow;
-                SystemTestTextControl.isTimer = true;
-                break;
-            case 5:
-            case 6:
-                systemTest.text = "獲得20個貓貓幣！";
-                systemTest.color = Color.yellow;
-                SystemTestTextControl.isTimer = true;
-                break;
-            case 7:
-            case 8:
-                systemTest.text = "獲得30個貓貓幣！";
-                systemTest.color = Color.yellow;
-                SystemTestTextControl.isTimer = true;
-                break;
-            case 9:
-                systemTest.text = "獲得一個道具！";
-                systemTest.color = Color.yellow;
-                SystemTestTextControl.isTimer = true;
-                break;
-            case 10:
-                systemTest.text = "空！";
-                systemTest.color = Color.black;
-                SystemTestTextControl.isTimer = true;
-                break;
-        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -72,7 +31,6 @@ public class ChestColliderControl : MonoBehaviour
     }
     IEnumerator ChangeCamera()
     {
-        Award();
         AnimatorControl.isMove = false;
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
