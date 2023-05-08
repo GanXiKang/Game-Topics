@@ -32,7 +32,6 @@ public class ChestColliderControl : MonoBehaviour
     IEnumerator ChangeCamera()
     {
         OpenBoxJudge();
-        AnimatorControl.isMove = false;
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         Dice.isDiceUI = true;
