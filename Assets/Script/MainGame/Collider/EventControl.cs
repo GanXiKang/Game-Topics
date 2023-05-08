@@ -34,6 +34,8 @@ public class EventControl : MonoBehaviour
     IEnumerator P1_EventHappened()
     {
         systemTest.text = "退后兩格！";
+        systemTest.color = Color.red;
+        SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         Dice.P1_totalNum -= 2;
         AnimatorControl.isMove = true;
@@ -41,6 +43,8 @@ public class EventControl : MonoBehaviour
     IEnumerator P2_EventHappened()
     {
         systemTest.text = "退后兩格！";
+        systemTest.color = Color.red;
+        SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         Dice.P2_totalNum -= 2;
         AnimatorControl.isMove = true;
@@ -48,6 +52,8 @@ public class EventControl : MonoBehaviour
     IEnumerator P3_EventHappened()
     {
         systemTest.text = "退后兩格！";
+        systemTest.color = Color.red;
+        SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         Dice.P3_totalNum -= 2;
         AnimatorControl.isMove = true;
@@ -55,6 +61,8 @@ public class EventControl : MonoBehaviour
     IEnumerator P4_EventHappened()
     {
         systemTest.text = "退后兩格！";
+        systemTest.color = Color.red;
+        SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         Dice.P4_totalNum -= 2;
         AnimatorControl.isMove = true;

@@ -20,6 +20,8 @@ public class Dice : MonoBehaviour
         diceNum = Random.Range(min, max);
 
         systemText.text = " " + diceNum;
+        systemText.color = Color.green;
+        SystemTestTextControl.isTimer = true;
         BGM.PlayOneShot(dice);
 
         AnimatorControl.isMove = true;

@@ -27,20 +27,30 @@ public class ChestColliderControl : MonoBehaviour
             case 3:
             case 4:
                 systemTest.text = "獲得10個貓貓幣！";
+                systemTest.color = Color.yellow;
+                SystemTestTextControl.isTimer = true;
                 break;
             case 5:
             case 6:
                 systemTest.text = "獲得20個貓貓幣！";
+                systemTest.color = Color.yellow;
+                SystemTestTextControl.isTimer = true;
                 break;
             case 7:
             case 8:
                 systemTest.text = "獲得30個貓貓幣！";
+                systemTest.color = Color.yellow;
+                SystemTestTextControl.isTimer = true;
                 break;
             case 9:
                 systemTest.text = "獲得一個道具！";
+                systemTest.color = Color.yellow;
+                SystemTestTextControl.isTimer = true;
                 break;
             case 10:
                 systemTest.text = "空！";
+                systemTest.color = Color.black;
+                SystemTestTextControl.isTimer = true;
                 break;
         }
         Destroy(this.gameObject, 2f);

@@ -15,6 +15,8 @@ public class GameEndControl : MonoBehaviour
     IEnumerator BackMainMenu()
     {
         systemTest.text = "ÓÎ‘ò½YÊø£¡";
+        systemTest.color = Color.blue;
+        SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(0);
     }
