@@ -15,7 +15,7 @@ public class ChestColliderControl : MonoBehaviour
     void Start()
     {
         boxPoint[1] = 2;
-        boxPoint[2] = 6;
+        boxPoint[2] = 6;        
     }
     void Award()
     {
