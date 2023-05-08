@@ -77,8 +77,6 @@ public class ChestColliderControl : MonoBehaviour
         AnimatorControl.isMove = false;
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
-        print(ChangeCameraControl.changeCameraNum);
         Dice.isDiceUI = true;
-        print(Dice.isDiceUI);
     }
 }
