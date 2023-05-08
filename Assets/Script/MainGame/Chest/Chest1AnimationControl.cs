@@ -35,6 +35,7 @@ public class Chest1AnimationControl : MonoBehaviour
     void Award()
     {
         a = Random.Range(1, 11);
+        print(a);
         switch (a)
         {
             case 1:
