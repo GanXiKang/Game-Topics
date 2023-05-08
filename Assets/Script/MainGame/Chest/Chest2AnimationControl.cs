@@ -78,5 +78,6 @@ public class Chest2AnimationControl : MonoBehaviour
         Instantiate(effects, pointEff.transform.position, pointEff.transform.rotation);
         ChestColliderControl.isOpen2 = false;
         yield return new WaitForSeconds(5f);
+        Destroy(this.gameObject);
     }
 }
