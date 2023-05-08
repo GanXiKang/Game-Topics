@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MG5_GameResultControl : MonoBehaviour
 {
-    public static bool isEffects;
+    public static bool isEffects = false;
     public GameObject gameWinUI, gameLoseUI;
     public AudioSource BGM;
     public AudioClip gameWin, gameLose;
