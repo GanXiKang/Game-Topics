@@ -21,7 +21,7 @@ public class MG5_GameResultControl : MonoBehaviour
             }
             else
             {
-                gameLoseUI.SetActive(false);
+                gameLoseUI.SetActive(true);
                 BGM.PlayOneShot(gameLose);
             }
             StartCoroutine(BackMainGame());
