@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class UIIsMiniGameControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public GameObject UI_MainGame;
+    
     void Update()
     {
-        
+        if (MiniGameColliderControl.isMiniGame)
+        {
+            UI_MainGame.SetActive(false);
+        }
+        else
+        {
+            UI_MainGame.SetActive(true);
+        }
     }
 }
