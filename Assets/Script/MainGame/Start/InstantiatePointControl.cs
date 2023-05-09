@@ -10,15 +10,15 @@ public class InstantiatePointControl : MonoBehaviour
     public static bool isStart = true;
     void Start()
     {
-        //if (isStart)
-        //{
+        if (isStart)
+        {
             insP1();
             insP2();
             insP3();
             insP4();
             AnimatorControl.isWave = true;
             isStart = false;
-        //}
+        }
     }
     void insP1()
     {
