@@ -15,12 +15,12 @@ public class UIIsMiniGameControl : MonoBehaviour
         if (MiniGameColliderControl.isMiniGame)
         {
             UI_MainGame.SetActive(false);
-            BGM.Stop();
+            BGM.enabled = false;
         }
         else
         {
             UI_MainGame.SetActive(true);
-            BGM.Play();
+            BGM.enabled = true;
         }
     }
 }
