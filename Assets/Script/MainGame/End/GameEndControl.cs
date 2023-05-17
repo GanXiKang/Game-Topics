@@ -20,5 +20,6 @@ public class GameEndControl : MonoBehaviour
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(0);
         Menu_ChoosePlayer.whoPlay = 0;
+        DontDestroyOnLoadControl.newGame = true;
     }
 }
