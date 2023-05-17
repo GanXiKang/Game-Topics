@@ -22,7 +22,7 @@ public class DontDestroyOnLoadControl : MonoBehaviour
     {
         if (newGame)
         {
-            DontDestroyOnLoad(this.gameObject);
+            Destroy(this.gameObject);
             newGame = false;
         }
     }
