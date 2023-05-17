@@ -22,7 +22,8 @@ public class DontDestroyOnLoadControl : MonoBehaviour
     {
         if (newGame)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            instance = null;
             newGame = false;
         }
     }
