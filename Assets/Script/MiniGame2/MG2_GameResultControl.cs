@@ -11,11 +11,13 @@ public class MG2_GameResultControl : MonoBehaviour
     public AudioSource BGM;
     public AudioClip gameWin, gameLose, goodApple, badApple;
 
+    bool gameResult = true;
+
     void Update()
     {
         if (MG2_UIControl.gameTime <= 0)
         {
-            if (MG2_CollectScoreControl.score >= 30)
+            if (MG2_CollectScoreControl.score >= 30 && gameResult)
             {
                 win = true;
                 gameWinUI.SetActive(true);
@@ -27,6 +29,7 @@ public class MG2_GameResultControl : MonoBehaviour
                 gameLoseUI.SetActive(true);
                 BGM.PlayOneShot(gameLose);
             }
+            gameResult = false;
             StartCoroutine(BackMainGame());
         }
         else 
