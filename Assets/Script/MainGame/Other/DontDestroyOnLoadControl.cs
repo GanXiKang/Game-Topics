@@ -23,7 +23,7 @@ public class DontDestroyOnLoadControl : MonoBehaviour
         if (newGame)
         {
             //Destroy(this.gameObject);
-            instance = null;
+            //instance = null;
             newGame = false;
         }
     }
