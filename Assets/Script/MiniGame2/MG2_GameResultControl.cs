@@ -29,7 +29,6 @@ public class MG2_GameResultControl : MonoBehaviour
                 gameLoseUI.SetActive(true);
                 BGM.PlayOneShot(gameLose);
             }
-            gameResult = false;
             StartCoroutine(BackMainGame());
         }
         else 
@@ -71,6 +70,7 @@ public class MG2_GameResultControl : MonoBehaviour
     }
     IEnumerator BackMainGame()
     {
+        gameResult = false;
         PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
         win = false;
