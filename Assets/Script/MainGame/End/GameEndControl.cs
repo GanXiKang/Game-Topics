@@ -19,5 +19,6 @@ public class GameEndControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(0);
+        Menu_ChoosePlayer.whoPlay = 0;
     }
 }
