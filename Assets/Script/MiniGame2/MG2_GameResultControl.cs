@@ -15,9 +15,9 @@ public class MG2_GameResultControl : MonoBehaviour
 
     void Update()
     {
-        if (MG2_UIControl.gameTime <= 0)
+        if (MG2_UIControl.gameTime <= 0 && gameResult)
         {
-            if (MG2_CollectScoreControl.score >= 30 && gameResult)
+            if (MG2_CollectScoreControl.score >= 30)
             {
                 win = true;
                 gameWinUI.SetActive(true);
