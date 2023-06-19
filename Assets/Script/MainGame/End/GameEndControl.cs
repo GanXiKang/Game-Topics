@@ -20,6 +20,11 @@ public class GameEndControl : MonoBehaviour
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(0);
         Menu_ChoosePlayer.whoPlay = 0;
+        Dice.P1_totalNum = 0;
+        Dice.P2_totalNum = 0;
+        Dice.P3_totalNum = 0;
+        Dice.P4_totalNum = 0;
+        Dice.round = 0;
         DontDestroyOnLoadControl.newGame = true;
     }
 }
