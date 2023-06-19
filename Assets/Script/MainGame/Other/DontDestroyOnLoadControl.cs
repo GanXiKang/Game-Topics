@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DontDestroyOnLoadControl : MonoBehaviour
 {
-    public static bool newGame;
     static DontDestroyOnLoadControl instance;
     void Start()
     {
@@ -16,15 +15,6 @@ public class DontDestroyOnLoadControl : MonoBehaviour
         else if (this != instance)
         {
             Destroy(gameObject);
-        }
-    }
-    void FixedUpdate()
-    {
-        if (newGame)
-        {
-            //Destroy(this.gameObject);
-            //instance = null;
-            newGame = false;
         }
     }
 }

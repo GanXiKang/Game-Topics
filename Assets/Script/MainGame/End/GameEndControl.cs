@@ -25,6 +25,5 @@ public class GameEndControl : MonoBehaviour
         Dice.P3_totalNum = 0;
         Dice.P4_totalNum = 0;
         Dice.round = 0;
-        DontDestroyOnLoadControl.newGame = true;
     }
 }
