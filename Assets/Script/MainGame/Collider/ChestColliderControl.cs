@@ -21,9 +21,34 @@ public class ChestColliderControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "P1" || other.tag == "P2" || other.tag == "P3" || other.tag == "P4")
+        if (other.tag == "P1")
         {
-            if (Dice.P1_totalNum == boxPoint || Dice.P2_totalNum == boxPoint || Dice.P3_totalNum == boxPoint || Dice.P4_totalNum == boxPoint)
+            AnimatorControl.isP1Move = false;
+            if (Dice.P1_totalNum == boxPoint)
+            {
+                StartCoroutine(ChangeCamera());
+            }
+        }
+        else if (other.tag == "P2")
+        {
+            AnimatorControl.isP2Move = false;
+            if (Dice.P2_totalNum == boxPoint)
+            {
+                StartCoroutine(ChangeCamera());
+            }
+        }
+        else if (other.tag == "P3")
+        {
+            AnimatorControl.isP3Move = false;
+            if (Dice.P3_totalNum == boxPoint)
+            {
+                StartCoroutine(ChangeCamera());
+            }
+        }
+        else if (other.tag == "P4")
+        {
+            AnimatorControl.isP4Move = false;
+            if (Dice.P4_totalNum == boxPoint)
             {
                 StartCoroutine(ChangeCamera());
             }
