@@ -14,25 +14,28 @@ public class MiniGameColliderControl : MonoBehaviour
     {
         if (Dice.P1_totalNum == MGPoint || Dice.P2_totalNum == MGPoint || Dice.P3_totalNum == MGPoint || Dice.P4_totalNum == MGPoint)
         {
-            AnimatorControl.isMove = false;
             if (other.tag == "P1" && P1_playGame)
             {
                 p = 1;
+                AnimatorControl.isP1Move = false;
                 StartCoroutine(StartMiniGame());
             }
             else if (other.tag == "P2" && P2_playGame)
             {
                 p = 2;
+                AnimatorControl.isP2Move = false;
                 StartCoroutine(StartMiniGame());
             }
             else if (other.tag == "P3" && P3_playGame)
             {
                 p = 3;
+                AnimatorControl.isP3Move = false;
                 StartCoroutine(StartMiniGame());
             }
             else if (other.tag == "P4" && P4_playGame)
             {
                 p = 4;
+                AnimatorControl.isP4Move = false;
                 StartCoroutine(StartMiniGame());
             }
         }

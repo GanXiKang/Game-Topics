@@ -38,8 +38,6 @@ public class Dice : MonoBehaviour
         systemText.color = Color.green;
         SystemTestTextControl.isTimer = true;
 
-        AnimatorControl.isMove = true;
-
         who = round % Menu_ChoosePlayer.whoPlay;
         who++;
         ChangeCameraControl.changeCameraNum = who;
@@ -47,18 +45,22 @@ public class Dice : MonoBehaviour
         {
             case 1:
                 P1_totalNum += diceNum;
+                AnimatorControl.isP1Move = true;
                 break;
 
             case 2:
                 P2_totalNum += diceNum;
+                AnimatorControl.isP2Move = true;
                 break;
 
             case 3:
                 P3_totalNum += diceNum;
+                AnimatorControl.isP3Move = true;
                 break;
 
             case 4:
                 P4_totalNum += diceNum;
+                AnimatorControl.isP4Move = true;
                 break;
         }
         round++;

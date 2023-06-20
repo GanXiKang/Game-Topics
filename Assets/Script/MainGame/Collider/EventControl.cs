@@ -12,7 +12,6 @@ public class EventControl : MonoBehaviour
     {
         if (Dice.P1_totalNum == EventPoint || Dice.P2_totalNum == EventPoint || Dice.P3_totalNum == EventPoint || Dice.P4_totalNum == EventPoint)
         {
-            AnimatorControl.isMove = false;
             if (other.tag == "P1")
             {
                 StartCoroutine(P1_EventHappened());
@@ -33,38 +32,42 @@ public class EventControl : MonoBehaviour
     }
     IEnumerator P1_EventHappened()
     {
+        AnimatorControl.isP1Move = false;
         systemTest.text = "退后兩格！";
         systemTest.color = Color.red;
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         Dice.P1_totalNum -= 2;
-        AnimatorControl.isMove = true;
+        AnimatorControl.isP1Move = true;
     }
     IEnumerator P2_EventHappened()
     {
+        AnimatorControl.isP2Move = false;
         systemTest.text = "退后兩格！";
         systemTest.color = Color.red;
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         Dice.P2_totalNum -= 2;
-        AnimatorControl.isMove = true;
+        AnimatorControl.isP2Move = true;
     }
     IEnumerator P3_EventHappened()
     {
+        AnimatorControl.isP3Move = false;
         systemTest.text = "退后兩格！";
         systemTest.color = Color.red;
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         Dice.P3_totalNum -= 2;
-        AnimatorControl.isMove = true;
+        AnimatorControl.isP3Move = true;
     }
     IEnumerator P4_EventHappened()
     {
+        AnimatorControl.isP4Move = false;
         systemTest.text = "退后兩格！";
         systemTest.color = Color.red;
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         Dice.P4_totalNum -= 2;
-        AnimatorControl.isMove = true;
+        AnimatorControl.isP4Move = true;
     }
 }
