@@ -32,52 +32,52 @@ public class AnimatorControl : MonoBehaviour
     }
     void Move()
     {
-        if (isP1Move)
+        if (gameObject.tag == "P1")
         {
-            if (gameObject.tag == "P1")
+            if (isP1Move)
             {
                 anim.SetBool("Walk", true);
             }
-        }
-        else
-        {
-            anim.SetBool("Walk", false);
+            else
+            {
+                anim.SetBool("Walk", false);
+            }
         }
 
-        if (isP2Move)
+        if (gameObject.tag == "P2")
         {
-            if (gameObject.tag == "P2")
+            if (isP2Move)
             {
                 anim.SetBool("Walk", true);
             }
-        }
-        else
-        {
-            anim.SetBool("Walk", false);
+            else
+            {
+                anim.SetBool("Walk", false);
+            }
         }
 
-        if (isP3Move)
+        if (gameObject.tag == "P3")
         {
-            if (gameObject.tag == "P3")
+            if (isP3Move)
             {
                 anim.SetBool("Walk", true);
             }
-        }
-        else
-        {
-            anim.SetBool("Walk", false);
+            else
+            {
+                anim.SetBool("Walk", false);
+            }
         }
 
-        if (isP4Move)
+        if (gameObject.tag == "P4")
         {
-            if (gameObject.tag == "P4")
+            if (isP4Move)
             {
                 anim.SetBool("Walk", true);
             }
-        }
-        else
-        {
-            anim.SetBool("Walk", false);
+            else
+            {
+                anim.SetBool("Walk", false);
+            }
         }
     }
     IEnumerator NotWave()
