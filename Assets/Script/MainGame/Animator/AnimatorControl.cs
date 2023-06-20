@@ -43,8 +43,7 @@ public class AnimatorControl : MonoBehaviour
                 anim.SetBool("Walk", false);
             }
         }
-
-        if (gameObject.tag == "P2")
+        else if (gameObject.tag == "P2")
         {
             if (isP2Move)
             {
@@ -55,8 +54,7 @@ public class AnimatorControl : MonoBehaviour
                 anim.SetBool("Walk", false);
             }
         }
-
-        if (gameObject.tag == "P3")
+        else if (gameObject.tag == "P3")
         {
             if (isP3Move)
             {
@@ -67,8 +65,7 @@ public class AnimatorControl : MonoBehaviour
                 anim.SetBool("Walk", false);
             }
         }
-
-        if (gameObject.tag == "P4")
+        else if (gameObject.tag == "P4")
         {
             if (isP4Move)
             {

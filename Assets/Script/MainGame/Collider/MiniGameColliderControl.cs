@@ -46,15 +46,15 @@ public class MiniGameColliderControl : MonoBehaviour
         {
             P1_playGame = true;
         }
-        if (other.tag == "P2")
+        else if (other.tag == "P2")
         {
             P2_playGame = true;
         }
-        if (other.tag == "P3")
+        else if (other.tag == "P3")
         {
             P3_playGame = true;
         }
-        if (other.tag == "P4")
+        else if (other.tag == "P4")
         {
             P4_playGame = true;
         }

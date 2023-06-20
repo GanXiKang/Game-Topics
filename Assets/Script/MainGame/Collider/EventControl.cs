@@ -16,15 +16,15 @@ public class EventControl : MonoBehaviour
             {
                 StartCoroutine(P1_EventHappened());
             }
-            if (other.tag == "P2")
+            else if (other.tag == "P2")
             {
                 StartCoroutine(P2_EventHappened());
             }
-            if (other.tag == "P3")
+            else if (other.tag == "P3")
             {
                 StartCoroutine(P3_EventHappened());
             }
-            if (other.tag == "P4")
+            else if (other.tag == "P4")
             {
                 StartCoroutine(P4_EventHappened());
             }
