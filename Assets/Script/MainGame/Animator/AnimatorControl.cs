@@ -6,7 +6,7 @@ public class AnimatorControl : MonoBehaviour
 {
     Animator anim;
 
-    public static bool isMove, isWave;
+    public static bool isP1Move, isP2Move, isP3Move, isP4Move, isWave;
 
     void Start()
     {
@@ -32,9 +32,48 @@ public class AnimatorControl : MonoBehaviour
     }
     void Move()
     {
-        if (isMove)
+        if (isP1Move)
         {
-            anim.SetBool("Walk", true);
+            if (gameObject.tag == "P1")
+            {
+                anim.SetBool("Walk", true);
+            }
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+        }
+
+        if (isP2Move)
+        {
+            if (gameObject.tag == "P2")
+            {
+                anim.SetBool("Walk", true);
+            }
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+        }
+
+        if (isP3Move)
+        {
+            if (gameObject.tag == "P3")
+            {
+                anim.SetBool("Walk", true);
+            }
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+        }
+
+        if (isP4Move)
+        {
+            if (gameObject.tag == "P4")
+            {
+                anim.SetBool("Walk", true);
+            }
         }
         else
         {
