@@ -23,33 +23,33 @@ public class ChestColliderControl : MonoBehaviour
     {
         if (other.tag == "P1")
         {
-            AnimatorControl.isP1Move = false;
             if (Dice.P1_totalNum == boxPoint)
             {
+                AnimatorControl.isP1Move = false;
                 StartCoroutine(ChangeCamera());
             }
         }
         else if (other.tag == "P2")
         {
-            AnimatorControl.isP2Move = false;
             if (Dice.P2_totalNum == boxPoint)
             {
+                AnimatorControl.isP2Move = false;
                 StartCoroutine(ChangeCamera());
             }
         }
         else if (other.tag == "P3")
         {
-            AnimatorControl.isP3Move = false;
             if (Dice.P3_totalNum == boxPoint)
             {
+                AnimatorControl.isP3Move = false;
                 StartCoroutine(ChangeCamera());
             }
         }
         else if (other.tag == "P4")
         {
-            AnimatorControl.isP4Move = false;
             if (Dice.P4_totalNum == boxPoint)
             {
+                AnimatorControl.isP4Move = false;
                 StartCoroutine(ChangeCamera());
             }
         }
