@@ -6,7 +6,7 @@ public class CameraControl : MonoBehaviour
 {
     void Update()
     {
-        if (MiniGameColliderControl.isMiniGame)
+        if (MiniGameColliderControl.isMiniGame || GameEndControl.isEnd)
         {
             gameObject.GetComponent<Camera>().enabled = false;
             gameObject.GetComponent<AudioListener>().enabled = false;

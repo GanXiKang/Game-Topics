@@ -10,6 +10,7 @@ public class GameEndControl : MonoBehaviour
     public int endPoint;
 
     public static int whoWin;
+    public static bool isEnd = false;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -50,6 +51,7 @@ public class GameEndControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(8);
+        isEnd = true;
         Menu_ChoosePlayer.whoPlay = 0;
         Dice.P1_totalNum = 0;
         Dice.P2_totalNum = 0;
