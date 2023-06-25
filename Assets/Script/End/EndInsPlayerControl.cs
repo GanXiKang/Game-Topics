@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class EndInsPlayerControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject[] point = new GameObject[4];
+    public GameObject[] animals = new GameObject[4];
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
