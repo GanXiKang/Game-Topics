@@ -17,8 +17,8 @@ public class GameEndControl : MonoBehaviour
         systemTest.text = "ÓÎ‘ò½YÊø£¡";
         systemTest.color = Color.blue;
         SystemTestTextControl.isTimer = true;
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(0);
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(8);
         Menu_ChoosePlayer.whoPlay = 0;
         Dice.P1_totalNum = 0;
         Dice.P2_totalNum = 0;
