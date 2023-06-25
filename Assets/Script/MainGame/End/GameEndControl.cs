@@ -7,10 +7,41 @@ using UnityEngine.SceneManagement;
 public class GameEndControl : MonoBehaviour
 {
     public Text systemTest;
+    public int endPoint;
 
+    public static int whoWin;
+    
     private void OnTriggerEnter(Collider other)
     {
         StartCoroutine(BackMainMenu());
+        if (other.tag == "P1")
+        {
+            if (Dice.P1_totalNum == endPoint)
+            {
+                whoWin = 1;
+            }
+        }
+        else if (other.tag == "P2")
+        {
+            if (Dice.P2_totalNum == endPoint)
+            {
+                whoWin = 2;
+            }
+        }
+        else if (other.tag == "P3")
+        {
+            if (Dice.P3_totalNum == endPoint)
+            {
+                whoWin = 3;
+            }
+        }
+        else if (other.tag == "P4")
+        {
+            if (Dice.P4_totalNum == endPoint)
+            {
+                whoWin = 4;
+            }
+        }
     }
     IEnumerator BackMainMenu()
     {
