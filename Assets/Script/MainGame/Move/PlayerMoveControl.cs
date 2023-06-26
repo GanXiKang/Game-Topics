@@ -16,7 +16,7 @@ public class PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        if (MiniGameColliderControl.isMiniGame == false)
+        if (!MiniGameColliderControl.isMiniGame)
         {
             if (gameObject.tag == "P1")
             {
