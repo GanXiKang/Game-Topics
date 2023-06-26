@@ -9,7 +9,7 @@ public class EndAnimalsAnimatorControl : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    void Update()
+    void FixedUpdate()
     {
         if (gameObject.tag == "P1")
         {
