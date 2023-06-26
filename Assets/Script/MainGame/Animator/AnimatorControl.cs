@@ -12,7 +12,7 @@ public class AnimatorControl : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         Wave();
 
