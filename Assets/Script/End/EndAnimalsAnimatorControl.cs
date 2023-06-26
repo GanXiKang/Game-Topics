@@ -4,15 +4,64 @@ using UnityEngine;
 
 public class EndAnimalsAnimatorControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator anim;
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (gameObject.tag == "P1")
+        {
+            if (GameEndControl.whoWin == 1)
+            {
+                Win();
+            }
+            else 
+            {
+                Lose();
+            }
+        }
+        if (gameObject.tag == "P2")
+        {
+            if (GameEndControl.whoWin == 2)
+            {
+                Win();
+            }
+            else
+            {
+                Lose();
+            }
+        }
+        if (gameObject.tag == "P3")
+        {
+            if (GameEndControl.whoWin == 3)
+            {
+                Win();
+            }
+            else
+            {
+                Lose();
+            }
+        }
+        if (gameObject.tag == "P4")
+        {
+            if (GameEndControl.whoWin == 4)
+            {
+                Win();
+            }
+            else
+            {
+                Lose();
+            }
+        }
+    }
+    void Win()
+    {
+        anim.SetBool("Win", true);
+    }
+    void Lose()
+    {
+        anim.SetBool("Lose", true);
     }
 }
