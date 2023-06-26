@@ -12,7 +12,7 @@ public class UIIsMiniGameControl : MonoBehaviour
     }
     void Update()
     {
-        if (MiniGameColliderControl.isMiniGame)
+        if (MiniGameColliderControl.isMiniGame || GameEndControl.isEnd)
         {
             UI_MainGame.SetActive(false);
             BGM.enabled = false;
