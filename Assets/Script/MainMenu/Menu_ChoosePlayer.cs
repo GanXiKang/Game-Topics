@@ -73,7 +73,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
                 BGM.PlayOneShot(error);
             }
         }
-
     }
     IEnumerator GoMainGame()
     {
