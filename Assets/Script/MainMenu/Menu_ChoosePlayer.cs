@@ -8,6 +8,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public static int whoPlay = 0, whyP1, whyP2, whyP3, whyP4;
 
     public GameObject[] Group = new GameObject[2];
+    public GameObject[] animals = new GameObject[4];
+    public GameObject[] insPoint = new GameObject[4];
     public GameObject[] P1_animals = new GameObject[4];
     public GameObject[] P2_animals = new GameObject[4];
     public GameObject[] P3_animals = new GameObject[4];
