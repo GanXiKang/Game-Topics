@@ -17,7 +17,7 @@ public class Menu_AnimalsTagControl : MonoBehaviour
         {
             if (Menu_ChoosePlayer.isDestoryP1)
             {
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
                 Menu_ChoosePlayer.isDestoryP1 = false;
             }
             else if(Menu_ChoosePlayer.isOkP1)
