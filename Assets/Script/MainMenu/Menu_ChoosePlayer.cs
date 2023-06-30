@@ -223,8 +223,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_1p()
     {
-        whyP1--;
         isDestoryP1 = true;
+        whyP1--;
         Limit1P();
         Choose1P();
         OK[0].SetActive(true);
@@ -232,8 +232,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Right_1p()
     {
-        whyP1++;
         isDestoryP1 = true;
+        whyP1++;
         Limit1P();
         Choose1P();
         OK[0].SetActive(true);
@@ -261,8 +261,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_2p()
     {
-        whyP2--;
         isDestoryP2 = true;
+        whyP2--; 
         Limit2P();
         Choose2P();
         OK[1].SetActive(true);
@@ -270,8 +270,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Right_2p()
     {
-        whyP2++;
         isDestoryP2 = true;
+        whyP2++;
         Limit2P();
         Choose2P();
         OK[1].SetActive(true);
@@ -299,8 +299,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_3p()
     {
-        whyP3--;
         isDestoryP3 = true;
+        whyP3--;
         Limit3P();
         Choose3P();
         OK[2].SetActive(true);
@@ -308,8 +308,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Right_3p()
     {
-        whyP3++;
         isDestoryP3 = true;
+        whyP3++;
         Limit3P();
         Choose3P();
         OK[2].SetActive(true);
@@ -337,8 +337,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_4p()
     {
-        whyP4--;
         isDestoryP4 = true;
+        whyP4--;
         Limit4P();
         Choose4P();
         OK[3].SetActive(true);
@@ -346,8 +346,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Right_4p()
     {
-        whyP4++;
         isDestoryP4 = true;
+        whyP4++;
         Limit4P();
         Choose4P();
         OK[3].SetActive(true);
