@@ -23,7 +23,7 @@ public class Menu_AnimalsTagControl : MonoBehaviour
                 //Destroy(this.gameObject);
                 Menu_ChoosePlayer.isDestoryP1 = false;
             }
-            else if(Menu_ChoosePlayer.isOkP1)
+            if(Menu_ChoosePlayer.isOkP1)
             {
                 Menu_ChoosePlayer.isOkP1 = false;
                 StartCoroutine(AnimatorJumpControl());
@@ -33,10 +33,10 @@ public class Menu_AnimalsTagControl : MonoBehaviour
         {
             if (Menu_ChoosePlayer.isDestoryP2)
             {
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
                 Menu_ChoosePlayer.isDestoryP2 = false;
             }
-            else if (Menu_ChoosePlayer.isOkP2)
+            if (Menu_ChoosePlayer.isOkP2)
             {
                 Menu_ChoosePlayer.isOkP2 = false;
                 StartCoroutine(AnimatorJumpControl());
@@ -46,10 +46,10 @@ public class Menu_AnimalsTagControl : MonoBehaviour
         {
             if (Menu_ChoosePlayer.isDestoryP3)
             {
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
                 Menu_ChoosePlayer.isDestoryP3 = false;
             }
-            else if (Menu_ChoosePlayer.isOkP3)
+            if (Menu_ChoosePlayer.isOkP3)
             {
                 Menu_ChoosePlayer.isOkP3 = false;
                 StartCoroutine(AnimatorJumpControl());
@@ -59,10 +59,10 @@ public class Menu_AnimalsTagControl : MonoBehaviour
         {
             if (Menu_ChoosePlayer.isDestoryP4)
             {
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
                 Menu_ChoosePlayer.isDestoryP4 = false;
             }
-            else if (Menu_ChoosePlayer.isOkP4)
+            if (Menu_ChoosePlayer.isOkP4)
             {
                 Menu_ChoosePlayer.isOkP4 = false;
                 StartCoroutine(AnimatorJumpControl());
