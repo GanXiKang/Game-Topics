@@ -18,7 +18,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public AudioSource BGM;
     public AudioClip ok, cancel, change, error, close;
 
-    float p, confirm;
+    float confirm;
 
     void Update()
     {
