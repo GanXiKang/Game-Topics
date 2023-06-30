@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class Menu_AnimalsTagControl : MonoBehaviour
 {
+    Animator anim;
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+
+        StartCoroutine(AnimatorControl());
+    }
+    void Update()
+    {
+        
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "P1InsPoint")
@@ -22,5 +33,11 @@ public class Menu_AnimalsTagControl : MonoBehaviour
         {
             gameObject.tag = "P4";
         }
+    }
+    IEnumerator AnimatorControl()
+    {
+        anim.SetBool("Wave", true);
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("Wave", false);
     }
 }
