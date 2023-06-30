@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu_ChoosePlayer : MonoBehaviour
 {
     public static int whoPlay = 0, whyP1 = 0, whyP2 = 0, whyP3 = 0, whyP4 = 0;
-    public static bool isDestoryP1, isDestoryP2, isDestoryP3, isDestoryP4;
+    public static int isDestoryP1 = 0, isDestoryP2 = 0, isDestoryP3 = 0, isDestoryP4 = 0;
     public static bool isOkP1, isOkP2, isOkP3, isOkP4;
 
     public GameObject[] Group = new GameObject[2];
@@ -223,7 +223,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_1p()
     {
-        isDestoryP1 = true;
+        isDestoryP1++;
         whyP1--;
         Limit1P();
         Choose1P();
@@ -232,7 +232,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Right_1p()
     {
-        isDestoryP1 = true;
+        isDestoryP1++;
         whyP1++;
         Limit1P();
         Choose1P();
@@ -261,7 +261,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_2p()
     {
-        isDestoryP2 = true;
+        isDestoryP2++;
         whyP2--; 
         Limit2P();
         Choose2P();
@@ -270,7 +270,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Right_2p()
     {
-        isDestoryP2 = true;
+        isDestoryP2++;
         whyP2++;
         Limit2P();
         Choose2P();
@@ -299,7 +299,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_3p()
     {
-        isDestoryP3 = true;
+        isDestoryP3++;
         whyP3--;
         Limit3P();
         Choose3P();
@@ -308,7 +308,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Right_3p()
     {
-        isDestoryP3 = true;
+        isDestoryP3++;
         whyP3++;
         Limit3P();
         Choose3P();
@@ -337,7 +337,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_4p()
     {
-        isDestoryP4 = true;
+        isDestoryP4++;
         whyP4--;
         Limit4P();
         Choose4P();
@@ -346,7 +346,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Right_4p()
     {
-        isDestoryP4 = true;
+        isDestoryP4++;
         whyP4++;
         Limit4P();
         Choose4P();
