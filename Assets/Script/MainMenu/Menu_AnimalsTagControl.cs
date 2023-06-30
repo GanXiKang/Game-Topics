@@ -9,11 +9,62 @@ public class Menu_AnimalsTagControl : MonoBehaviour
     {
         anim = GetComponent<Animator>();
 
-        StartCoroutine(AnimatorControl());
+        StartCoroutine(AnimatorWaveControl());
     }
     void Update()
     {
-        
+        if (gameObject.tag == "P1")
+        {
+            if (Menu_ChoosePlayer.isDestoryP1)
+            {
+                Destroy(this.gameObject);
+                Menu_ChoosePlayer.isDestoryP1 = false;
+            }
+            else if(Menu_ChoosePlayer.isOkP1)
+            {
+                Menu_ChoosePlayer.isOkP1 = false;
+                StartCoroutine(AnimatorJumpControl());
+            }
+        }
+        else if (gameObject.tag == "P2")
+        {
+            if (Menu_ChoosePlayer.isDestoryP2)
+            {
+                Destroy(this.gameObject);
+                Menu_ChoosePlayer.isDestoryP2 = false;
+            }
+            else if (Menu_ChoosePlayer.isOkP2)
+            {
+                Menu_ChoosePlayer.isOkP2 = false;
+                StartCoroutine(AnimatorJumpControl());
+            }
+        }
+        else if (gameObject.tag == "P3")
+        {
+            if (Menu_ChoosePlayer.isDestoryP3)
+            {
+                Destroy(this.gameObject);
+                Menu_ChoosePlayer.isDestoryP3 = false;
+            }
+            else if (Menu_ChoosePlayer.isOkP3)
+            {
+                Menu_ChoosePlayer.isOkP3 = false;
+                StartCoroutine(AnimatorJumpControl());
+            }
+        }
+        else if (gameObject.tag == "P4")
+        {
+            if (Menu_ChoosePlayer.isDestoryP4)
+            {
+                Destroy(this.gameObject);
+                Menu_ChoosePlayer.isDestoryP4 = false;
+            }
+            else if (Menu_ChoosePlayer.isOkP4)
+            {
+                Menu_ChoosePlayer.isOkP4 = false;
+                StartCoroutine(AnimatorJumpControl());
+            }
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -34,10 +85,18 @@ public class Menu_AnimalsTagControl : MonoBehaviour
             gameObject.tag = "P4";
         }
     }
-    IEnumerator AnimatorControl()
+    IEnumerator AnimatorWaveControl()
     {
         anim.SetBool("Wave", true);
         yield return new WaitForSeconds(2f);
         anim.SetBool("Wave", false);
+    }
+    IEnumerator AnimatorJumpControl()
+    {
+        anim.SetBool("Walk", true);
+        anim.SetBool("Jump", true);
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("Walk", false);
+        anim.SetBool("Jump", false);
     }
 }
