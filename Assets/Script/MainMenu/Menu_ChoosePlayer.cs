@@ -147,72 +147,56 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     void Choose2P()
     {
-        if (p == 1)
+        switch (whyP2)
         {
-            Instantiate(animals[0], insPoint[2].transform.position, insPoint[2].transform.rotation);
-            whyP2 = 1;
-        }
-        else if (p == 2)
-        {
-            Instantiate(animals[1], insPoint[2].transform.position, insPoint[2].transform.rotation);
-            whyP2 = 2;
-        }
-        else if (p == 3)
-        {
-            Instantiate(animals[2], insPoint[2].transform.position, insPoint[2].transform.rotation);
-            whyP2 = 3;
-        }
-        else if (p == 4)
-        {
-            Instantiate(animals[3], insPoint[2].transform.position, insPoint[2].transform.rotation);
-            whyP2 = 4;
+            case 1:
+                Instantiate(animals[0], insPoint[2].transform.position, insPoint[2].transform.rotation);
+                break;
+            case 2:
+                Instantiate(animals[1], insPoint[2].transform.position, insPoint[2].transform.rotation);
+                break;
+            case 3:
+                Instantiate(animals[2], insPoint[2].transform.position, insPoint[2].transform.rotation);
+                break;
+            case 4:
+                Instantiate(animals[3], insPoint[2].transform.position, insPoint[2].transform.rotation);
+                break;
         }
     }
     void Choose3P()
     {
-        if (p == 1)
+        switch (whyP3)
         {
-            Instantiate(animals[0], insPoint[3].transform.position, insPoint[3].transform.rotation);
-            whyP3 = 1;
-        }
-        else if (p == 2)
-        {
-            Instantiate(animals[1], insPoint[3].transform.position, insPoint[3].transform.rotation);
-            whyP3 = 2;
-        }
-        else if (p == 3)
-        {
-            Instantiate(animals[2], insPoint[3].transform.position, insPoint[3].transform.rotation);
-            whyP3 = 3;
-        }
-        else if (p == 4)
-        {
-            Instantiate(animals[3], insPoint[3].transform.position, insPoint[3].transform.rotation);
-            whyP3 = 4;
-
+            case 1:
+                Instantiate(animals[0], insPoint[3].transform.position, insPoint[3].transform.rotation);
+                break;
+            case 2:
+                Instantiate(animals[1], insPoint[3].transform.position, insPoint[3].transform.rotation);
+                break;
+            case 3:
+                Instantiate(animals[2], insPoint[3].transform.position, insPoint[3].transform.rotation);
+                break;
+            case 4:
+                Instantiate(animals[3], insPoint[3].transform.position, insPoint[3].transform.rotation);
+                break;
         }
     }
     void Choose4P()
     {
-        if (p == 1)
+        switch (whyP4)
         {
-            Instantiate(animals[0], insPoint[4].transform.position, insPoint[4].transform.rotation);
-            whyP4 = 1;
-        }
-        else if (p == 2)
-        {
-            Instantiate(animals[1], insPoint[4].transform.position, insPoint[4].transform.rotation);
-            whyP4 = 2;
-        }
-        else if (p == 3)
-        {
-            Instantiate(animals[2], insPoint[4].transform.position, insPoint[4].transform.rotation);
-            whyP4 = 3;
-        }
-        else if (p == 4)
-        {
-            Instantiate(animals[3], insPoint[4].transform.position, insPoint[4].transform.rotation);
-            whyP4 = 4;
+            case 1:
+                Instantiate(animals[0], insPoint[4].transform.position, insPoint[4].transform.rotation);
+                break;
+            case 2:
+                Instantiate(animals[1], insPoint[4].transform.position, insPoint[4].transform.rotation);
+                break;
+            case 3:
+                Instantiate(animals[2], insPoint[4].transform.position, insPoint[4].transform.rotation);
+                break;
+            case 4:
+                Instantiate(animals[3], insPoint[4].transform.position, insPoint[4].transform.rotation);
+                break;
         }
     }
 
