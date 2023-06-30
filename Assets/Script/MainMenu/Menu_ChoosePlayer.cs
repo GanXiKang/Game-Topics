@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu_ChoosePlayer : MonoBehaviour
 {
-    public static int whoPlay = 0, whyP1, whyP2, whyP3, whyP4;
+    public static int whoPlay = 0, whyP1 = 0, whyP2 = 0, whyP3 = 0, whyP4 = 0;
 
     public GameObject[] Group = new GameObject[2];
     public GameObject[] animals = new GameObject[4];
@@ -58,7 +58,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
             }
         }
 
-
         if (confirm == 4)
         {
             if (whyP1 != whyP2 && whyP1 != whyP3 && whyP1 != whyP4 && whyP2 != whyP3 && whyP2 != whyP4 && whyP3 != whyP4)
@@ -82,38 +81,68 @@ public class Menu_ChoosePlayer : MonoBehaviour
         InstantiatePointControl.isStart = true;
         SceneManager.LoadScene(7);
     }
-    void Limit()
+
+    void Limit1P()
     {
-        if (p < 1)
+        if (whyP1 < 1)
         {
-            p = 4;
+            whyP1 = 4;
         }
-        if (p > 4)
+        if (whyP1 > 4)
         {
-            p = 1;
-        }
-    }
-    void Choose1P()
-    {
-        if (p == 1)
-        {
-            Instantiate(animals[0], insPoint[1].transform.position, insPoint[1].transform.rotation);
             whyP1 = 1;
         }
-        else if (p == 2)
+    }
+    void Limit2P()
+    {
+        if (whyP2 < 1)
         {
-            Instantiate(animals[1], insPoint[1].transform.position, insPoint[1].transform.rotation);
-            whyP1 = 2;
+            whyP2 = 4;
         }
-        else if (p == 3)
+        if (whyP2 > 4)
         {
-            Instantiate(animals[2], insPoint[1].transform.position, insPoint[1].transform.rotation);
-            whyP1 = 3;
+            whyP2 = 1;
         }
-        else if (p == 4)
+    }
+    void Limit3P()
+    {
+        if (whyP3 < 1)
         {
-            Instantiate(animals[3], insPoint[1].transform.position, insPoint[1].transform.rotation);
-            whyP1 = 4;
+            whyP3 = 4;
+        }
+        if (whyP3 > 4)
+        {
+            whyP3 = 1;
+        }
+    }
+    void Limit4P()
+    {
+        if (whyP4 < 1)
+        {
+            whyP4 = 4;
+        }
+        if (whyP4 > 4)
+        {
+            whyP4 = 1;
+        }
+    }
+
+    void Choose1P()
+    {
+        switch (whyP1)
+        {
+            case 1:
+                Instantiate(animals[0], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 2:
+                Instantiate(animals[1], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 3:
+                Instantiate(animals[2], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 4:
+                Instantiate(animals[3], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
         }
     }
     void Choose2P()
@@ -207,16 +236,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_1p()
     {
-        p--;
-        Limit();
+        whyP1--;
+        Limit1P();
         Choose1P();
         OK[0].SetActive(true);
         BGM.PlayOneShot(change);
     }
     public void Right_1p()
     {
-        p++;
-        Limit();
+        whyP1++;
+        Limit1P();
         Choose1P();
         OK[0].SetActive(true);
         BGM.PlayOneShot(change);
@@ -242,16 +271,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_2p()
     {
-        p--;
-        Limit();
+        whyP2--;
+        Limit2P();
         Choose2P();
         OK[1].SetActive(true);
         BGM.PlayOneShot(change);
     }
     public void Right_2p()
     {
-        p++;
-        Limit();
+        whyP2++;
+        Limit2P();
         Choose2P();
         OK[1].SetActive(true);
         BGM.PlayOneShot(change);
@@ -277,16 +306,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_3p()
     {
-        p--;
-        Limit();
+        whyP3--;
+        Limit3P();
         Choose3P();
         OK[2].SetActive(true);
         BGM.PlayOneShot(change);
     }
     public void Right_3p()
     {
-        p++;
-        Limit();
+        whyP3++;
+        Limit3P();
         Choose3P();
         OK[2].SetActive(true);
         BGM.PlayOneShot(change);
@@ -312,16 +341,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Left_4p()
     {
-        p--;
-        Limit();
+        whyP4--;
+        Limit4P();
         Choose4P();
         OK[3].SetActive(true);
         BGM.PlayOneShot(change);
     }
     public void Right_4p()
     {
-        p++;
-        Limit();
+        whyP4++;
+        Limit4P();
         Choose4P();
         OK[3].SetActive(true);
         BGM.PlayOneShot(change);
