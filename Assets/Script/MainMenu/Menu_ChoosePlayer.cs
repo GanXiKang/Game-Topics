@@ -9,7 +9,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     public GameObject[] Group = new GameObject[2];
     public GameObject[] animals = new GameObject[4];
-    public GameObject[] insPoint = new GameObject[4];
+    public GameObject[] insPoint = new GameObject[5];
     //public GameObject[] P1_animals = new GameObject[4];
     //public GameObject[] P2_animals = new GameObject[4];
     //public GameObject[] P3_animals = new GameObject[4];
