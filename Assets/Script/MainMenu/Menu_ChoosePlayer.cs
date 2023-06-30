@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Menu_ChoosePlayer : MonoBehaviour
 {
     public static int whoPlay = 0, whyP1 = 0, whyP2 = 0, whyP3 = 0, whyP4 = 0;
+    public static bool isDestoryP1, isDestoryP2, isDestoryP3, isDestoryP4;
+    public static bool isOkP1, isOkP2, isOkP3, isOkP4;
 
     public GameObject[] Group = new GameObject[2];
     public GameObject[] animals = new GameObject[4];
@@ -203,6 +205,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void OK_1p()
     {
         confirm++;
+        isOkP1 = true;
         OK[0].SetActive(false);
         NO[0].SetActive(true);
         button[0].SetActive(false);
@@ -221,6 +224,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Left_1p()
     {
         whyP1--;
+        isDestoryP1 = true;
         Limit1P();
         Choose1P();
         OK[0].SetActive(true);
@@ -229,6 +233,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Right_1p()
     {
         whyP1++;
+        isDestoryP1 = true;
         Limit1P();
         Choose1P();
         OK[0].SetActive(true);
@@ -238,6 +243,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void OK_2p()
     {
         confirm++;
+        isOkP2 = true;
         OK[1].SetActive(false);
         NO[1].SetActive(true);
         button[2].SetActive(false);
@@ -256,6 +262,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Left_2p()
     {
         whyP2--;
+        isDestoryP2 = true;
         Limit2P();
         Choose2P();
         OK[1].SetActive(true);
@@ -264,6 +271,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Right_2p()
     {
         whyP2++;
+        isDestoryP2 = true;
         Limit2P();
         Choose2P();
         OK[1].SetActive(true);
@@ -273,6 +281,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void OK_3p()
     {
         confirm++;
+        isOkP3 = true;
         OK[2].SetActive(false);
         NO[2].SetActive(true);
         button[4].SetActive(false);
@@ -291,6 +300,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Left_3p()
     {
         whyP3--;
+        isDestoryP3 = true;
         Limit3P();
         Choose3P();
         OK[2].SetActive(true);
@@ -299,6 +309,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Right_3p()
     {
         whyP3++;
+        isDestoryP3 = true;
         Limit3P();
         Choose3P();
         OK[2].SetActive(true);
@@ -308,6 +319,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void OK_4p()
     {
         confirm++;
+        isOkP4 = true;
         OK[3].SetActive(false);
         NO[3].SetActive(true);
         button[6].SetActive(false);
@@ -326,6 +338,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Left_4p()
     {
         whyP4--;
+        isDestoryP4 = true;
         Limit4P();
         Choose4P();
         OK[3].SetActive(true);
@@ -334,6 +347,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Right_4p()
     {
         whyP4++;
+        isDestoryP4 = true;
         Limit4P();
         Choose4P();
         OK[3].SetActive(true);
