@@ -110,6 +110,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 2)
         {
+            Instantiate(animals[1], insPoint[1].transform.position, insPoint[1].transform.rotation);
             //P1_animals[0].SetActive(false);
             //P1_animals[1].SetActive(true);
             //P1_animals[2].SetActive(false);
@@ -118,6 +119,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 3)
         {
+            Instantiate(animals[2], insPoint[1].transform.position, insPoint[1].transform.rotation);
             //P1_animals[0].SetActive(false);
             //P1_animals[1].SetActive(false);
             //P1_animals[2].SetActive(true);
@@ -126,6 +128,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 4)
         {
+            Instantiate(animals[3], insPoint[1].transform.position, insPoint[1].transform.rotation);
             //P1_animals[0].SetActive(false);
             //P1_animals[1].SetActive(false);
             //P1_animals[2].SetActive(false);
@@ -137,6 +140,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (p == 1)
         {
+            Instantiate(animals[0], insPoint[2].transform.position, insPoint[2].transform.rotation);
             //P2_animals[0].SetActive(true);
             //P2_animals[1].SetActive(false);
             //P2_animals[2].SetActive(false);
@@ -145,6 +149,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 2)
         {
+            Instantiate(animals[1], insPoint[2].transform.position, insPoint[2].transform.rotation);
             //P2_animals[0].SetActive(false);
             //P2_animals[1].SetActive(true);
             //P2_animals[2].SetActive(false);
@@ -153,6 +158,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 3)
         {
+            Instantiate(animals[2], insPoint[2].transform.position, insPoint[2].transform.rotation);
             //P2_animals[0].SetActive(false);
             //P2_animals[1].SetActive(false);
             //P2_animals[2].SetActive(true);
@@ -161,6 +167,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 4)
         {
+            Instantiate(animals[3], insPoint[2].transform.position, insPoint[2].transform.rotation);
             //P2_animals[0].SetActive(false);
             //P2_animals[1].SetActive(false);
             //P2_animals[2].SetActive(false);
@@ -172,6 +179,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (p == 1)
         {
+            Instantiate(animals[0], insPoint[3].transform.position, insPoint[3].transform.rotation);
             //P3_animals[0].SetActive(true);
             //P3_animals[1].SetActive(false);
             //P3_animals[2].SetActive(false);
@@ -180,6 +188,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 2)
         {
+            Instantiate(animals[1], insPoint[3].transform.position, insPoint[3].transform.rotation);
             //P3_animals[0].SetActive(false);
             //P3_animals[1].SetActive(true);
             //P3_animals[2].SetActive(false);
@@ -188,6 +197,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 3)
         {
+            Instantiate(animals[2], insPoint[3].transform.position, insPoint[3].transform.rotation);
             //P3_animals[0].SetActive(false);
             //P3_animals[1].SetActive(false);
             //P3_animals[2].SetActive(true);
@@ -196,6 +206,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 4)
         {
+            Instantiate(animals[3], insPoint[3].transform.position, insPoint[3].transform.rotation);
             //P3_animals[0].SetActive(false);
             //P3_animals[1].SetActive(false);
             //P3_animals[2].SetActive(false);
@@ -208,6 +219,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (p == 1)
         {
+            Instantiate(animals[0], insPoint[4].transform.position, insPoint[4].transform.rotation);
             //P4_animals[0].SetActive(true);
             //P4_animals[1].SetActive(false);
             //P4_animals[2].SetActive(false);
@@ -216,6 +228,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 2)
         {
+            Instantiate(animals[1], insPoint[4].transform.position, insPoint[4].transform.rotation);
             //P4_animals[0].SetActive(false);
             //P4_animals[1].SetActive(true);
             //P4_animals[2].SetActive(false);
@@ -224,6 +237,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 3)
         {
+            Instantiate(animals[2], insPoint[4].transform.position, insPoint[4].transform.rotation);
             //P4_animals[0].SetActive(false);
             //P4_animals[1].SetActive(false);
             //P4_animals[2].SetActive(true);
@@ -232,6 +246,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (p == 4)
         {
+            Instantiate(animals[3], insPoint[4].transform.position, insPoint[4].transform.rotation);
             //P4_animals[0].SetActive(false);
             //P4_animals[1].SetActive(false);
             //P4_animals[2].SetActive(false);
