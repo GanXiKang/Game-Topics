@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Menu_AnimalsTagControl : MonoBehaviour
 {
+    Rigidbody rb;
     Animator anim;
+
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 
         StartCoroutine(AnimatorWaveControl());
@@ -22,6 +25,7 @@ public class Menu_AnimalsTagControl : MonoBehaviour
             }
             else if(Menu_ChoosePlayer.isOkP1)
             {
+                Jump();
                 Menu_ChoosePlayer.isOkP1 = false;
                 StartCoroutine(AnimatorJumpControl());
             }
@@ -66,6 +70,10 @@ public class Menu_AnimalsTagControl : MonoBehaviour
             }
         }
     }
+    void Jump()
+    {
+        rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "P1InsPoint")
@@ -88,15 +96,13 @@ public class Menu_AnimalsTagControl : MonoBehaviour
     IEnumerator AnimatorWaveControl()
     {
         anim.SetBool("Wave", true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         anim.SetBool("Wave", false);
     }
     IEnumerator AnimatorJumpControl()
     {
-        anim.SetBool("Walk", true);
         anim.SetBool("Jump", true);
-        yield return new WaitForSeconds(2f);
-        anim.SetBool("Walk", false);
+        yield return new WaitForSeconds(1f);
         anim.SetBool("Jump", false);
     }
 }
