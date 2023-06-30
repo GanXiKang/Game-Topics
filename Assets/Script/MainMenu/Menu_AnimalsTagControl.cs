@@ -18,10 +18,10 @@ public class Menu_AnimalsTagControl : MonoBehaviour
     {
         if (gameObject.tag == "P1")
         {
-            if (Menu_ChoosePlayer.isDestoryP1)
+            if (Menu_ChoosePlayer.isDestoryP1 >= 2)
             {
-                //Destroy(this.gameObject);
-                Menu_ChoosePlayer.isDestoryP1 = false;
+                Destroy(this.gameObject);
+                Menu_ChoosePlayer.isDestoryP1 = 1;
             }
             if(Menu_ChoosePlayer.isOkP1)
             {
@@ -31,10 +31,10 @@ public class Menu_AnimalsTagControl : MonoBehaviour
         }
         else if (gameObject.tag == "P2")
         {
-            if (Menu_ChoosePlayer.isDestoryP2)
+            if (Menu_ChoosePlayer.isDestoryP2 >= 2)
             {
-                //Destroy(this.gameObject);
-                Menu_ChoosePlayer.isDestoryP2 = false;
+                Destroy(this.gameObject);
+                Menu_ChoosePlayer.isDestoryP2 = 1;
             }
             if (Menu_ChoosePlayer.isOkP2)
             {
@@ -44,10 +44,10 @@ public class Menu_AnimalsTagControl : MonoBehaviour
         }
         else if (gameObject.tag == "P3")
         {
-            if (Menu_ChoosePlayer.isDestoryP3)
+            if (Menu_ChoosePlayer.isDestoryP3 >= 2)
             {
-                //Destroy(this.gameObject);
-                Menu_ChoosePlayer.isDestoryP3 = false;
+                Destroy(this.gameObject);
+                Menu_ChoosePlayer.isDestoryP3 = 1;
             }
             if (Menu_ChoosePlayer.isOkP3)
             {
@@ -57,10 +57,10 @@ public class Menu_AnimalsTagControl : MonoBehaviour
         }
         else if (gameObject.tag == "P4")
         {
-            if (Menu_ChoosePlayer.isDestoryP4)
+            if (Menu_ChoosePlayer.isDestoryP4 >= 2)
             {
-                //Destroy(this.gameObject);
-                Menu_ChoosePlayer.isDestoryP4 = false;
+                Destroy(this.gameObject);
+                Menu_ChoosePlayer.isDestoryP4 = 1;
             }
             if (Menu_ChoosePlayer.isOkP4)
             {
