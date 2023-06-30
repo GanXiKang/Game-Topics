@@ -25,7 +25,6 @@ public class Menu_AnimalsTagControl : MonoBehaviour
             }
             else if(Menu_ChoosePlayer.isOkP1)
             {
-                Jump();
                 Menu_ChoosePlayer.isOkP1 = false;
                 StartCoroutine(AnimatorJumpControl());
             }
@@ -101,6 +100,7 @@ public class Menu_AnimalsTagControl : MonoBehaviour
     }
     IEnumerator AnimatorJumpControl()
     {
+        Jump();
         anim.SetBool("Jump", true);
         yield return new WaitForSeconds(1f);
         anim.SetBool("Jump", false);
