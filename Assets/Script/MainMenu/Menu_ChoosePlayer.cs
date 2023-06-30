@@ -101,6 +101,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (p == 1)
         {
+            Instantiate(animals[0], insPoint[1].transform.position, insPoint[1].transform.rotation);
             //P1_animals[0].SetActive(true);
             //P1_animals[1].SetActive(false);
             //P1_animals[2].SetActive(false);
