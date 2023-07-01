@@ -7,6 +7,8 @@ public class Menu_AnimalsTagControl : MonoBehaviour
     Rigidbody rb;
     Animator anim;
 
+    bool isJump;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -91,6 +93,10 @@ public class Menu_AnimalsTagControl : MonoBehaviour
         {
             gameObject.tag = "P4";
         }
+        if (other.tag == "Floor")
+        {
+            isJump = true;
+        }
     }
     IEnumerator AnimatorWaveControl()
     {
@@ -100,7 +106,11 @@ public class Menu_AnimalsTagControl : MonoBehaviour
     }
     IEnumerator AnimatorJumpControl()
     {
-        Jump();
+        if (isJump)
+        {
+            Jump();
+            isJump = false;
+        }
         anim.SetBool("Jump", true);
         yield return new WaitForSeconds(1f);
         anim.SetBool("Jump", false);
