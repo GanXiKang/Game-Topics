@@ -40,7 +40,8 @@ public class PlayerMoveControl : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-                rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+            print("Yes");
+            rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
         }
     }
     void P1MovePoint()
