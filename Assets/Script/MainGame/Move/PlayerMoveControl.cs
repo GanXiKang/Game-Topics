@@ -6,14 +6,12 @@ using UnityEngine.AI;
 public class PlayerMoveControl : MonoBehaviour
 {
     NavMeshAgent agent;
-    Rigidbody rb;
 
     GameObject[] p = new GameObject[11];
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        rb = GetComponent<Rigidbody>();
 
         TransformPoint();
     }
@@ -37,11 +35,6 @@ public class PlayerMoveControl : MonoBehaviour
             {
                 P4MovePoint();
             }
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            print("Yes");
-            rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
         }
     }
     void P1MovePoint()
