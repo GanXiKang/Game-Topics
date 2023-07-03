@@ -9,6 +9,7 @@ public class DiceControl : MonoBehaviour
     public float rotationForce;
     public Vector3 rotationForce3;
 
+    int randomNum;
     bool isRoll;
     void Start()
     {
@@ -24,8 +25,7 @@ public class DiceControl : MonoBehaviour
         }
         else
         {
-            rb.angularVelocity = Vector3.zero;
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            DiceRandomDice();
         }
     }
     void Update()
@@ -41,6 +41,33 @@ public class DiceControl : MonoBehaviour
             {
                 isRoll = true;
             }
+        }
+    }
+    void DiceRandomDice()
+    {
+        rb.angularVelocity = Vector3.zero;
+        randomNum = Random.Range(1, 7);
+        switch (randomNum)
+        {
+            case 1:
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                break;
+            case 2:
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                break;
+            case 3:
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                break;
+            case 4:
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                break;
+            case 5:
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                break;
+            case 6:
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                break;
+
         }
     }
 }
