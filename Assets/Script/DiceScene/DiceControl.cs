@@ -25,6 +25,7 @@ public class DiceControl : MonoBehaviour
         else
         {
             rb.angularVelocity = Vector3.zero;
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
     }
     void Update()
