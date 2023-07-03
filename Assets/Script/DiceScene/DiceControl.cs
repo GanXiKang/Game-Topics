@@ -8,12 +8,26 @@ public class DiceControl : MonoBehaviour
 
     public Vector3 rotationForce;
 
+    bool isRoll;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        isRoll = true;
     }
     void FixedUpdate()
     {
-        rb.AddTorque(rotationForce);
+        if (isRoll)
+        {
+            rb.AddTorque(rotationForce);
+        }
+        else
+        {
+            
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            isRoll = false;
+        }
     }
 }
