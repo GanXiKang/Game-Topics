@@ -19,8 +19,8 @@ public class DiceControl : MonoBehaviour
     {
         if (isRoll)
         {
-            rb.AddTorque(Random.insideUnitSphere * rotationForce);
-            //rb.AddTorque(rotationForce3);
+            //rb.AddTorque(Random.insideUnitSphere * rotationForce);
+            rb.AddTorque(rotationForce3);
         }
         else
         {
