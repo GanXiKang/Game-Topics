@@ -22,7 +22,7 @@ public class DiceControl : MonoBehaviour
         }
         else
         {
-            
+            rb.angularVelocity = Vector3.zero;
         }
 
         if(Input.GetMouseButtonDown(0))
