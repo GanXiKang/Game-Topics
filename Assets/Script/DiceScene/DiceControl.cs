@@ -6,7 +6,7 @@ public class DiceControl : MonoBehaviour
 {
     Rigidbody rb;
 
-    public Vector3 rotationForce;
+    public float rotationForce;
 
     bool isRoll;
     void Start()
@@ -18,7 +18,7 @@ public class DiceControl : MonoBehaviour
     {
         if (isRoll)
         {
-            rb.AddTorque(rotationForce);
+            rb.AddTorque(Random.insideUnitSphere * rotationForce);
         }
         else
         {
