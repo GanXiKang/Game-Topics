@@ -50,22 +50,22 @@ public class DiceControl : MonoBehaviour
         switch (randomNum)
         {
             case 1:
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                transform.rotation = Quaternion.Euler(0f, 270f, 0f);
                 break;
             case 2:
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                 break;
             case 3:
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                transform.rotation = Quaternion.Euler(90f, 0f, 0f);
                 break;
             case 4:
                 transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 break;
             case 5:
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                transform.rotation = Quaternion.Euler(270f, 0f, 0f);
                 break;
             case 6:
-                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                transform.rotation = Quaternion.Euler(0f, 90f, 0f);
                 break;
 
         }
