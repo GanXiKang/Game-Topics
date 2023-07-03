@@ -17,6 +17,7 @@ public class DiceControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        FindQuaternionEuler();
         isRoll = true;
     }
     void FixedUpdate()
