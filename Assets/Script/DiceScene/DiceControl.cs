@@ -25,7 +25,7 @@ public class DiceControl : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             print("Yes");
             if (isRoll)
