@@ -53,29 +53,35 @@ public class DiceControl : MonoBehaviour
     void DiceRandomDice()
     {
         result = false;
-        stopQ = Quaternion.identity;
+        //stopQ = Quaternion.identity;
         rb.angularVelocity = Vector3.zero;
         randomNum = Random.Range(1, 7);
         print(randomNum);
         switch (randomNum)
         {
             case 1:
-                transform.rotation = Quaternion.Lerp(stopQ, q[1], 2f);
+                //transform.rotation = Quaternion.Lerp(stopQ, q[1], 2f);
+                transform.rotation = Quaternion.Euler(0f, 270f, 0f);
                 break;
             case 2:
-                transform.rotation = Quaternion.Lerp(stopQ, q[2], 2f);
+                //transform.rotation = Quaternion.Lerp(stopQ, q[2], 2f);
+                transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                 break;
             case 3:
-                transform.rotation = Quaternion.Lerp(stopQ, q[3], 2f);
+                //transform.rotation = Quaternion.Lerp(stopQ, q[3], 2f);
+                transform.rotation = Quaternion.Euler(90f, 0f, 0f);
                 break;
             case 4:
-                transform.rotation = Quaternion.Lerp(stopQ, q[4], 2f);
+                //transform.rotation = Quaternion.Lerp(stopQ, q[4], 2f);
+                transform.rotation = Quaternion.Euler(270f, 0f, 0f);
                 break;
             case 5:
-                transform.rotation = Quaternion.Lerp(stopQ, q[5], 2f);
+                //transform.rotation = Quaternion.Lerp(stopQ, q[5], 2f);
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 break;
             case 6:
-                transform.rotation = Quaternion.Lerp(stopQ, q[6], 2f);
+                //transform.rotation = Quaternion.Lerp(stopQ, q[6], 2f);
+                transform.rotation = Quaternion.Euler(0f, 90f, 0f);
                 break;
         }
     }
@@ -86,6 +92,6 @@ public class DiceControl : MonoBehaviour
         q[3] = transform.rotation = Quaternion.Euler(90f, 0f, 0f);
         q[4] = transform.rotation = Quaternion.Euler(270f, 0f, 0f);
         q[5] = transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-        q[6] = transform.rotation = Quaternion.Euler(0f, 900f, 0f);
+        q[6] = transform.rotation = Quaternion.Euler(0f, 90f, 0f);
     }
 }
