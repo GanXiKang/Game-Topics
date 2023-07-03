@@ -27,6 +27,7 @@ public class DiceControl : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
+            print("Yes");
             isRoll = false;
         }
     }
