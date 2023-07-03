@@ -60,27 +60,27 @@ public class DiceControl : MonoBehaviour
         switch (randomNum)
         {
             case 1:
-                transform.rotation = Quaternion.Lerp(stopQ, q[1], 5f);
+                transform.rotation = Quaternion.Slerp(stopQ, q[1], 5f);
                 //transform.rotation = Quaternion.Euler(0f, 270f, 0f);
                 break;
             case 2:
-                transform.rotation = Quaternion.Lerp(stopQ, q[2], 5f);
+                transform.rotation = Quaternion.Slerp(stopQ, q[2], 5f);
                 //transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                 break;
             case 3:
-                transform.rotation = Quaternion.Lerp(stopQ, q[3], 5f);
+                transform.rotation = Quaternion.Slerp(stopQ, q[3], 5f);
                 //transform.rotation = Quaternion.Euler(90f, 0f, 0f);
                 break;
             case 4:
-                transform.rotation = Quaternion.Lerp(stopQ, q[4], 5f);
+                transform.rotation = Quaternion.Slerp(stopQ, q[4], 5f);
                 //transform.rotation = Quaternion.Euler(270f, 0f, 0f);
                 break;
             case 5:
-                transform.rotation = Quaternion.Lerp(stopQ, q[5], 5f);
+                transform.rotation = Quaternion.Slerp(stopQ, q[5], 5f);
                 //transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 break;
             case 6:
-                transform.rotation = Quaternion.Lerp(stopQ, q[6], 5f);
+                transform.rotation = Quaternion.Slerp(stopQ, q[6], 5f);
                 //transform.rotation = Quaternion.Euler(0f, 90f, 0f);
                 break;
         }
