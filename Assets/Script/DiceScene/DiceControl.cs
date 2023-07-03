@@ -73,16 +73,16 @@ public class DiceControl : MonoBehaviour
                 //transform.rotation = Quaternion.Euler(90f, 0f, 0f);
                 break;
             case 4:
-                transform.rotation = Quaternion.Lerp(stopQ, q[4], 2f);
-                //transform.rotation = Quaternion.Euler(270f, 0f, 0f);
+                //transform.rotation = Quaternion.Lerp(stopQ, q[4], 2f);
+                transform.rotation = Quaternion.Euler(270f, 0f, 0f);
                 break;
             case 5:
-                transform.rotation = Quaternion.Lerp(stopQ, q[5], 2f);
-                //transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                //transform.rotation = Quaternion.Lerp(stopQ, q[5], 2f);
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 break;
             case 6:
-                transform.rotation = Quaternion.Lerp(stopQ, q[6], 2f);
-                //transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+                //transform.rotation = Quaternion.Lerp(stopQ, q[6], 2f);
+                transform.rotation = Quaternion.Euler(0f, 90f, 0f);
                 break;
         }
     }
