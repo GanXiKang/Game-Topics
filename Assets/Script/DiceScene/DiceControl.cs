@@ -10,7 +10,7 @@ public class DiceControl : MonoBehaviour
     public Vector3 rotationForce3;
 
     int randomNum;
-    bool isRoll;
+    bool isRoll, result;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -22,10 +22,14 @@ public class DiceControl : MonoBehaviour
         {
             //rb.AddTorque(Random.insideUnitSphere * rotationForce);
             rb.AddTorque(rotationForce3);
+            result = true;
         }
         else
         {
-            DiceRandomDice();
+            if (result)
+            {
+                DiceRandomDice();
+            }
         }
     }
     void Update()
@@ -45,6 +49,7 @@ public class DiceControl : MonoBehaviour
     }
     void DiceRandomDice()
     {
+        result = false;
         rb.angularVelocity = Vector3.zero;
         randomNum = Random.Range(1, 7);
         switch (randomNum)
