@@ -82,6 +82,10 @@ public class Menu_ChoosePlayer : MonoBehaviour
         yield return new WaitForSeconds(1f);
         InstantiatePointControl.isStart = true;
         SceneManager.LoadScene(7);
+        isDestoryP1 = 0;
+        isDestoryP2 = 0;
+        isDestoryP3 = 0;
+        isDestoryP4 = 0;
     }
 
     void Limit1P()
