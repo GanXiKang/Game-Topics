@@ -7,7 +7,6 @@ public class DiceControl : MonoBehaviour
     Rigidbody rb;
 
     public float rotationForce;
-    public Vector3 rotationForce3;
 
     Quaternion stopQ;
     Quaternion[] q = new Quaternion[7];
@@ -24,8 +23,7 @@ public class DiceControl : MonoBehaviour
     {
         if (isRoll)
         {
-            //rb.AddTorque(Random.insideUnitSphere * rotationForce);
-            rb.AddTorque(rotationForce3);
+            rb.AddTorque(Random.insideUnitSphere * rotationForce);
             result = true;
         }
         else
