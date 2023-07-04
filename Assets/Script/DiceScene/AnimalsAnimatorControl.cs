@@ -20,6 +20,7 @@ public class AnimalsAnimatorControl : MonoBehaviour
         {
             rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
             anim.SetBool("Jump", true);
+            isJump = false;
         }
         else
         {
