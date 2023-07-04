@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class AnimalsAnimatorControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody rb;
+    Animator anim;
+
+    public static bool isJump;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isJump)
+        {
+            rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+            anim.SetBool("Jump", true);
+        }
+        else
+        {
+            anim.SetBool("Jump", false);
+        }
     }
 }
