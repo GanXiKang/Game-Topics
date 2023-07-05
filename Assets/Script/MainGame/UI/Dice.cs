@@ -9,9 +9,6 @@ public class Dice : MonoBehaviour
     public static int who;
     public static bool isDiceUI = true, isDiceScene = false;
 
-    public int min;
-    public int max;
-
     public GameObject diceUI;
     public Text systemText;
     public AudioSource BGM;
@@ -30,23 +27,18 @@ public class Dice : MonoBehaviour
     }
     public void Button_Dice()
     {
+        StartCoroutine(GoDiceScene());
+ 
+    }
+    IEnumerator GoDiceScene()
+    {
         BGM.PlayOneShot(dice);
         isDiceUI = false;
 
-        SceneManager.LoadScene(9);
-        isDiceScene = true;
-
         who = DiceControl.round % Menu_ChoosePlayer.whoPlay;
         who++;
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(9);
+        isDiceScene = true;
     }
-    //void TestUse()
-    //{
-    //    diceNum = Random.Range(min, max);
-    //    BGM.PlayOneShot(dice);
-    //    isDiceUI = false;
-
-    //    systemText.text = " " + diceNum;
-    //    systemText.color = Color.green;
-    //    SystemTestTextControl.isTimer = true;
-    //}
 }
