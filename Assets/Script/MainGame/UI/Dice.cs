@@ -37,10 +37,10 @@ public class Dice : MonoBehaviour
         SceneManager.LoadScene(9);
         isDiceScene = true;
 
-        //testUse();
+        //TestUse();
     }
 
-    void testUse()
+    void TestUse()
     {
         diceNum = Random.Range(min, max);
         BGM.PlayOneShot(dice);
@@ -50,6 +50,10 @@ public class Dice : MonoBehaviour
         systemText.color = Color.green;
         SystemTestTextControl.isTimer = true;
 
+        Calculate();
+    }
+    void Calculate()
+    {
         who = round % Menu_ChoosePlayer.whoPlay;
         who++;
         ChangeCameraControl.changeCameraNum = who;
