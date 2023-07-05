@@ -37,7 +37,7 @@ public class Dice : MonoBehaviour
 
         who = DiceControl.round % Menu_ChoosePlayer.whoPlay;
         who++;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(9);
         isDiceScene = true;
     }
