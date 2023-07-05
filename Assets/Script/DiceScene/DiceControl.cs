@@ -6,9 +6,11 @@ public class DiceControl : MonoBehaviour
 {
     Rigidbody rb;
 
+    public static int P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0, round;
+
     public float rotationForce;
 
-    int randomNum;
+    int randomNum, who;
     bool isRoll, result;
 
     void Start()
@@ -54,6 +56,8 @@ public class DiceControl : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
         randomNum = Random.Range(1, 7);
         print(randomNum);
+        Calculate();
+        
         switch (randomNum)
         {
             case 1:
@@ -75,5 +79,34 @@ public class DiceControl : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, 90f, 0f);
                 break;
         }
+    }
+    void Calculate()
+    {
+        who = round % Menu_ChoosePlayer.whoPlay;
+        who++;
+        ChangeCameraControl.changeCameraNum = who;
+        switch (who)
+        {
+            case 1:
+                P1_totalNum += randomNum;
+                AnimatorControl.isP1Move = true;
+                break;
+
+            case 2:
+                P2_totalNum += randomNum;
+                AnimatorControl.isP2Move = true;
+                break;
+
+            case 3:
+                P3_totalNum += randomNum;
+                AnimatorControl.isP3Move = true;
+                break;
+
+            case 4:
+                P4_totalNum += randomNum;
+                AnimatorControl.isP4Move = true;
+                break;
+        }
+        round++;
     }
 }
