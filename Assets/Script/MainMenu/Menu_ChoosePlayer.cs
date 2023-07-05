@@ -79,7 +79,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         NO[1].SetActive(false);
         NO[2].SetActive(false);
         NO[3].SetActive(false);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         InstantiatePointControl.isStart = true;
         SceneManager.LoadScene(7);
         isDestoryP1 = 0;
