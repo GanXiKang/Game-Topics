@@ -23,7 +23,7 @@ public class ChestColliderControl : MonoBehaviour
     {
         if (other.tag == "P1")
         {
-            if (Dice.P1_totalNum == boxPoint)
+            if (DiceControl.P1_totalNum == boxPoint)
             {
                 AnimatorControl.isP1Move = false;
                 StartCoroutine(ChangeCamera());
@@ -31,7 +31,7 @@ public class ChestColliderControl : MonoBehaviour
         }
         else if (other.tag == "P2")
         {
-            if (Dice.P2_totalNum == boxPoint)
+            if (DiceControl.P2_totalNum == boxPoint)
             {
                 AnimatorControl.isP2Move = false;
                 StartCoroutine(ChangeCamera());
@@ -39,7 +39,7 @@ public class ChestColliderControl : MonoBehaviour
         }
         else if (other.tag == "P3")
         {
-            if (Dice.P3_totalNum == boxPoint)
+            if (DiceControl.P3_totalNum == boxPoint)
             {
                 AnimatorControl.isP3Move = false;
                 StartCoroutine(ChangeCamera());
@@ -47,7 +47,7 @@ public class ChestColliderControl : MonoBehaviour
         }
         else if (other.tag == "P4")
         {
-            if (Dice.P4_totalNum == boxPoint)
+            if (DiceControl.P4_totalNum == boxPoint)
             {
                 AnimatorControl.isP4Move = false;
                 StartCoroutine(ChangeCamera());

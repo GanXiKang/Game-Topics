@@ -10,7 +10,7 @@ public class EventControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Dice.P1_totalNum == EventPoint || Dice.P2_totalNum == EventPoint || Dice.P3_totalNum == EventPoint || Dice.P4_totalNum == EventPoint)
+        if (DiceControl.P1_totalNum == EventPoint || DiceControl.P2_totalNum == EventPoint || DiceControl.P3_totalNum == EventPoint || DiceControl.P4_totalNum == EventPoint)
         {
             if (other.tag == "P1")
             {
@@ -37,7 +37,7 @@ public class EventControl : MonoBehaviour
         systemTest.color = Color.red;
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        Dice.P1_totalNum -= 2;
+        DiceControl.P1_totalNum -= 2;
         AnimatorControl.isP1Move = true;
     }
     IEnumerator P2_EventHappened()
@@ -47,7 +47,7 @@ public class EventControl : MonoBehaviour
         systemTest.color = Color.red;
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        Dice.P2_totalNum -= 2;
+        DiceControl.P2_totalNum -= 2;
         AnimatorControl.isP2Move = true;
     }
     IEnumerator P3_EventHappened()
@@ -57,7 +57,7 @@ public class EventControl : MonoBehaviour
         systemTest.color = Color.red;
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        Dice.P3_totalNum -= 2;
+        DiceControl.P3_totalNum -= 2;
         AnimatorControl.isP3Move = true;
     }
     IEnumerator P4_EventHappened()
@@ -67,7 +67,7 @@ public class EventControl : MonoBehaviour
         systemTest.color = Color.red;
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        Dice.P4_totalNum -= 2;
+        DiceControl.P4_totalNum -= 2;
         AnimatorControl.isP4Move = true;
     }
 }

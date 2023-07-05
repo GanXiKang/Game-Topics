@@ -12,7 +12,7 @@ public class MiniGameColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Dice.P1_totalNum == MGPoint || Dice.P2_totalNum == MGPoint || Dice.P3_totalNum == MGPoint || Dice.P4_totalNum == MGPoint)
+        if (DiceControl.P1_totalNum == MGPoint || DiceControl.P2_totalNum == MGPoint || DiceControl.P3_totalNum == MGPoint || DiceControl.P4_totalNum == MGPoint)
         {
             if (other.tag == "P1" && P1_playGame)
             {

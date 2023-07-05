@@ -41,13 +41,13 @@ public class PlayerMoveControl : MonoBehaviour
     {
         for (int i = 1; i < p.Length; i++)
         {
-            if (Dice.P1_totalNum == i)
+            if (DiceControl.P1_totalNum == i)
             {
                 agent.SetDestination(p[i].transform.position);
             }
         }
 
-        if (Dice.P1_totalNum > 10)
+        if (DiceControl.P1_totalNum > 10)
         {
             agent.SetDestination(p[10].transform.position);
         }
@@ -56,13 +56,13 @@ public class PlayerMoveControl : MonoBehaviour
     {
         for (int i = 1; i < p.Length; i++)
         {
-            if (Dice.P2_totalNum == i)
+            if (DiceControl.P2_totalNum == i)
             {
                 agent.SetDestination(p[i].transform.position);
             }
         }
 
-        if (Dice.P2_totalNum > 10)
+        if (DiceControl.P2_totalNum > 10)
         {
             agent.SetDestination(p[10].transform.position);
         }
@@ -71,13 +71,13 @@ public class PlayerMoveControl : MonoBehaviour
     {
         for (int i = 1; i < p.Length; i++)
         {
-            if (Dice.P3_totalNum == i)
+            if (DiceControl.P3_totalNum == i)
             {
                 agent.SetDestination(p[i].transform.position);
             }
         }
 
-        if (Dice.P3_totalNum > 10)
+        if (DiceControl.P3_totalNum > 10)
         {
             agent.SetDestination(p[10].transform.position);
         }
@@ -86,13 +86,13 @@ public class PlayerMoveControl : MonoBehaviour
     {
         for (int i = 1; i < p.Length; i++)
         {
-            if (Dice.P4_totalNum == i)
+            if (DiceControl.P4_totalNum == i)
             {
                 agent.SetDestination(p[i].transform.position);
             }
         }
 
-        if (Dice.P4_totalNum > 10)
+        if (DiceControl.P4_totalNum > 10)
         {
             agent.SetDestination(p[10].transform.position);
         }
