@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Dice : MonoBehaviour
 {
@@ -30,13 +31,16 @@ public class Dice : MonoBehaviour
     }
     public void Button_Dice()
     {
-        diceNum = Random.Range(min, max);
+        //diceNum = Random.Range(min, max);
         BGM.PlayOneShot(dice);
         isDiceUI = false;
 
-        systemText.text = " " + diceNum;
-        systemText.color = Color.green;
-        SystemTestTextControl.isTimer = true;
+        SceneManager.LoadScene(9);
+        isDiceScene = true;
+
+        //systemText.text = " " + diceNum;
+        //systemText.color = Color.green;
+        //SystemTestTextControl.isTimer = true;
 
         who = round % Menu_ChoosePlayer.whoPlay;
         who++;
