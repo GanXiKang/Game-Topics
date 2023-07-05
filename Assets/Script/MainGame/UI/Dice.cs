@@ -7,7 +7,7 @@ public class Dice : MonoBehaviour
 {
     int diceNum = 0, who;
     public static int P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0, round;
-    public static bool isDiceUI = true;
+    public static bool isDiceUI = true, isDiceScene = false;
 
     public int min = 1;
     public int max = 7;
