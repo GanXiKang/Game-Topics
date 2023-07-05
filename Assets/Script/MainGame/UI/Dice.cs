@@ -31,16 +31,24 @@ public class Dice : MonoBehaviour
     }
     public void Button_Dice()
     {
-        //diceNum = Random.Range(min, max);
         BGM.PlayOneShot(dice);
         isDiceUI = false;
 
         SceneManager.LoadScene(9);
         isDiceScene = true;
 
-        //systemText.text = " " + diceNum;
-        //systemText.color = Color.green;
-        //SystemTestTextControl.isTimer = true;
+        //testUse();
+    }
+
+    void testUse()
+    {
+        diceNum = Random.Range(min, max);
+        BGM.PlayOneShot(dice);
+        isDiceUI = false;
+
+        systemText.text = " " + diceNum;
+        systemText.color = Color.green;
+        SystemTestTextControl.isTimer = true;
 
         who = round % Menu_ChoosePlayer.whoPlay;
         who++;
