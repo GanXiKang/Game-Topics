@@ -17,28 +17,28 @@ public class GameEndControl : MonoBehaviour
         StartCoroutine(BackMainMenu());
         if (other.tag == "P1")
         {
-            if (Dice.P1_totalNum == endPoint)
+            if (DiceControl.P1_totalNum == endPoint)
             {
                 whoWin = 1;
             }
         }
         else if (other.tag == "P2")
         {
-            if (Dice.P2_totalNum == endPoint)
+            if (DiceControl.P2_totalNum == endPoint)
             {
                 whoWin = 2;
             }
         }
         else if (other.tag == "P3")
         {
-            if (Dice.P3_totalNum == endPoint)
+            if (DiceControl.P3_totalNum == endPoint)
             {
                 whoWin = 3;
             }
         }
         else if (other.tag == "P4")
         {
-            if (Dice.P4_totalNum == endPoint)
+            if (DiceControl.P4_totalNum == endPoint)
             {
                 whoWin = 4;
             }
@@ -53,10 +53,10 @@ public class GameEndControl : MonoBehaviour
         SceneManager.LoadScene(8);
         isEnd = true;
         Menu_ChoosePlayer.whoPlay = 0;
-        Dice.P1_totalNum = 0;
-        Dice.P2_totalNum = 0;
-        Dice.P3_totalNum = 0;
-        Dice.P4_totalNum = 0;
-        Dice.round = 0;
+        DiceControl.P1_totalNum = 0;
+        DiceControl.P2_totalNum = 0;
+        DiceControl.P3_totalNum = 0;
+        DiceControl.P4_totalNum = 0;
+        DiceControl.round = 0;
     }
 }
