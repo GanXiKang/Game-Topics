@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DiceControl : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class DiceControl : MonoBehaviour
             {
                 isRoll = false;
                 AnimalsAnimatorControl.isJump = true;
+                StartCoroutine(GoMainGame());
             }
             else
             {
@@ -106,5 +108,13 @@ public class DiceControl : MonoBehaviour
                 AnimatorControl.isP4Move = true;
                 break;
         }
+    }
+    IEnumerator GoMainGame()
+    {
+        Dice.isDiceScene = false;
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(7);
+        yield return new WaitForSeconds(1f);
+        Calculate();
     }
 }
