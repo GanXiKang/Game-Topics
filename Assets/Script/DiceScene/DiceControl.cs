@@ -6,11 +6,11 @@ public class DiceControl : MonoBehaviour
 {
     Rigidbody rb;
 
-    public static int P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0, round;
+    public static int P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0, round = 0;
 
     public float rotationForce;
 
-    int randomNum, who;
+    int randomNum;
     bool isRoll, result;
 
     void Start()
@@ -79,13 +79,12 @@ public class DiceControl : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, 90f, 0f);
                 break;
         }
+        round++;
     }
     void Calculate()
     {
-        who = round % Menu_ChoosePlayer.whoPlay;
-        who++;
-        ChangeCameraControl.changeCameraNum = who;
-        switch (who)
+        ChangeCameraControl.changeCameraNum = Dice.who;
+        switch (Dice.who)
         {
             case 1:
                 P1_totalNum += randomNum;
@@ -107,6 +106,5 @@ public class DiceControl : MonoBehaviour
                 AnimatorControl.isP4Move = true;
                 break;
         }
-        round++;
     }
 }

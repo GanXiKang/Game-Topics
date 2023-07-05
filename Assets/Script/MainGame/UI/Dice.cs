@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Dice : MonoBehaviour
 {
+    public static int who;
     public static bool isDiceUI = true, isDiceScene = false;
 
     public int min;
@@ -34,6 +35,9 @@ public class Dice : MonoBehaviour
 
         SceneManager.LoadScene(9);
         isDiceScene = true;
+
+        who = DiceControl.round % Menu_ChoosePlayer.whoPlay;
+        who++;
     }
     //void TestUse()
     //{
