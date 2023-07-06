@@ -29,7 +29,7 @@ public class EndInsPlayerControl : MonoBehaviour
                 }
             }
         }
-        if (GameEndControl.whoWin == 2)
+        else if (GameEndControl.whoWin == 2)
         {
             for (int i = 1; i <= animals.Length; i++)
             {
@@ -39,7 +39,7 @@ public class EndInsPlayerControl : MonoBehaviour
                 }
             }
         }
-        if (GameEndControl.whoWin == 3)
+        else if (GameEndControl.whoWin == 3)
         {
             for (int i = 1; i <= animals.Length; i++)
             {
@@ -49,7 +49,7 @@ public class EndInsPlayerControl : MonoBehaviour
                 }
             }
         }
-        if (GameEndControl.whoWin == 4)
+        else if (GameEndControl.whoWin == 4)
         {
             for (int i = 1; i <= animals.Length; i++)
             {
