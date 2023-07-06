@@ -17,28 +17,28 @@ public class GameEndControl : MonoBehaviour
         StartCoroutine(BackMainMenu());
         if (other.tag == "P1")
         {
-            if (DiceControl.P1_totalNum == endPoint)
+            if (DiceControl.P1_totalNum >= endPoint)
             {
                 whoWin = 1;
             }
         }
         else if (other.tag == "P2")
         {
-            if (DiceControl.P2_totalNum == endPoint)
+            if (DiceControl.P2_totalNum >= endPoint)
             {
                 whoWin = 2;
             }
         }
         else if (other.tag == "P3")
         {
-            if (DiceControl.P3_totalNum == endPoint)
+            if (DiceControl.P3_totalNum >= endPoint)
             {
                 whoWin = 3;
             }
         }
         else if (other.tag == "P4")
         {
-            if (DiceControl.P4_totalNum == endPoint)
+            if (DiceControl.P4_totalNum >= endPoint)
             {
                 whoWin = 4;
             }
