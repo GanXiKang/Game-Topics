@@ -23,15 +23,15 @@ public class PlayerMoveControl : MonoBehaviour
             {
                 P1MovePoint();
             }
-            if (gameObject.tag == "P2")
+            else if (gameObject.tag == "P2")
             {
                 P2MovePoint();
             }
-            if (gameObject.tag == "P3")
+            else if (gameObject.tag == "P3")
             {
                 P3MovePoint();
             }
-            if (gameObject.tag == "P4")
+            else if (gameObject.tag == "P4")
             {
                 P4MovePoint();
             }
