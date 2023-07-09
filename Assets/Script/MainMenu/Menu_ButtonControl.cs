@@ -9,6 +9,14 @@ public class Menu_ButtonControl : MonoBehaviour
     public AudioSource BGM;
     public AudioClip onClick, close;
 
+    void Start()
+    {
+        menu[0].SetActive(true);
+        menu[1].SetActive(false);
+        menu[2].SetActive(false);
+        menu[3].SetActive(false);
+        menu[4].SetActive(false);
+    }
     public void B_Start()
     {
         menu[0].SetActive(false);
