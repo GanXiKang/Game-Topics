@@ -9,7 +9,7 @@ public class Menu_VolumeSetting : MonoBehaviour
     [SerializeField] private Slider sliderBGM;
     [SerializeField] private Slider sliderEffects;
 
-    float VolumeBGM, VolumeEffects;
+    public static float VolumeBGM, VolumeEffects;
 
     public void Volume_BGM()
     {
@@ -17,6 +17,6 @@ public class Menu_VolumeSetting : MonoBehaviour
     }
     public void Volume_Effects()
     {
-
+        VolumeEffects = VolumeEffects;
     }
 }
