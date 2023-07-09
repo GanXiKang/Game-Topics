@@ -1266,10 +1266,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61ae34c09d843f4fb2195b796e4cebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu1: {fileID: 385505818}
-  menu2: {fileID: 353224015}
-  menu3: {fileID: 129690530}
-  menu_t: {fileID: 1499153202}
+  menu:
+  - {fileID: 385505818}
+  - {fileID: 353224015}
+  - {fileID: 129690530}
+  - {fileID: 1499153202}
+  - {fileID: 493923349}
   BGM: {fileID: 407475809}
   onClick: {fileID: 8300000, guid: 462e67c85a62691428b730e4f59e9d02, type: 3}
   close: {fileID: 8300000, guid: 61efd3c443ec32249bdcd59eaae5de6f, type: 3}
@@ -4235,7 +4237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1499153203
 RectTransform:
   m_ObjectHideFlags: 0
