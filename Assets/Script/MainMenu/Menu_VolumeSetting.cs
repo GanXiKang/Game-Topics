@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Audio;
 
 public class Menu_VolumeSetting : MonoBehaviour
 {
@@ -11,14 +10,19 @@ public class Menu_VolumeSetting : MonoBehaviour
 
     public static float VolumeBGM = 0.7f, VolumeEffects = 0.7f;
 
+    AudioSource audio;
+
     void Start()
     {
+        audio = GetComponent<AudioSource>();
+
         sliderBGM.value = VolumeBGM;
         sliderEffects.value = VolumeEffects;
     }
     public void Volume_BGM()
     {
         VolumeBGM = sliderBGM.value;
+        audio.volume = VolumeBGM;
     }
     public void Volume_Effects()
     {
