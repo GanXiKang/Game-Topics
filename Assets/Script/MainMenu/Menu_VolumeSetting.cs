@@ -7,14 +7,12 @@ public class Menu_VolumeSetting : MonoBehaviour
     [SerializeField] private GameObject sliderBGM;
     [SerializeField] private GameObject sliderEffects;
 
-    void Start()
+    public void Volume_BGM()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    }
+    public void Volume_Effects()
     {
-        
+
     }
 }
