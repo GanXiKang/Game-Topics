@@ -11,12 +11,18 @@ public class Menu_VolumeSetting : MonoBehaviour
 
     public static float VolumeBGM, VolumeEffects;
 
+    private void Start()
+    {
+        sliderBGM.value = 70f;
+        sliderEffects.value = 70f;
+    }
+
     public void Volume_BGM()
     {
         VolumeBGM = sliderBGM.value;
     }
     public void Volume_Effects()
     {
-        VolumeEffects = VolumeEffects;
+        VolumeEffects = sliderEffects.value;
     }
 }
