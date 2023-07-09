@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Menu_VolumeSetting : MonoBehaviour
 {
-    [SerializeField] private GameObject sliderBGM;
-    [SerializeField] private GameObject sliderEffects;
+    [SerializeField] private Slider sliderBGM;
+    [SerializeField] private Slider sliderEffects;
+
+    float VolumeBGM, VolumeEffects;
 
     public void Volume_BGM()
     {
-
+        VolumeBGM = sliderBGM.value;
     }
     public void Volume_Effects()
     {
