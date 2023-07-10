@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Menu_VolumeSetting : MonoBehaviour
 {
-    [SerializeField] private Slider sliderBGM;
+    public Slider sliderBGM;
+    public Dropdown quality;
 
     public static float VolumeBGM = 0.7f;
 
@@ -21,5 +22,9 @@ public class Menu_VolumeSetting : MonoBehaviour
     {
         VolumeBGM = sliderBGM.value;
         audio.volume = VolumeBGM;
+    }
+    public void Quality(int index)
+    {
+        QualitySettings.SetQualityLevel(index, false);
     }
 }
