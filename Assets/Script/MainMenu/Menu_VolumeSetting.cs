@@ -27,4 +27,8 @@ public class Menu_VolumeSetting : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(index, false);
     }
+    public void FullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
+    }
 }
