@@ -6322,7 +6322,7 @@ RectTransform:
   - {fileID: 994238850}
   - {fileID: 2019371831}
   m_Father: {fileID: 1640314018}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6376,7 +6376,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1640314019}
         m_TargetAssemblyTypeName: Menu_VolumeSetting, Assembly-CSharp
         m_MethodName: FullScreen
         m_Mode: 0
@@ -7159,7 +7159,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1640314018}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8821,7 +8821,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1640314019}
         m_TargetAssemblyTypeName: Menu_VolumeSetting, Assembly-CSharp
         m_MethodName: Quality
         m_Mode: 0
@@ -9327,7 +9327,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1640314019}
         m_TargetAssemblyTypeName: Menu_VolumeSetting, Assembly-CSharp
         m_MethodName: Volume_BGM
         m_Mode: 1
@@ -11855,6 +11855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1640314018}
+  - component: {fileID: 1640314019}
   m_Layer: 0
   m_Name: StopGame
   m_TagString: Untagged
@@ -11879,13 +11880,27 @@ Transform:
   - {fileID: 1293762817}
   - {fileID: 592930261}
   - {fileID: 1238958508}
-  - {fileID: 831752422}
   - {fileID: 959872442}
+  - {fileID: 831752422}
   - {fileID: 571628672}
   - {fileID: 1660189635}
   m_Father: {fileID: 374591036}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1640314019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640314017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1a9083115a24442a21d3615c4813ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderBGM: {fileID: 1293762818}
+  quality: {fileID: 1238958509}
 --- !u!1001 &1641483994
 PrefabInstance:
   m_ObjectHideFlags: 0
