@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UI_StopGameControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject stopGameUI;
     void Start()
     {
-        
+        stopGameUI.SetActive(false);
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            stopGameUI.SetActive(true);
+        }
+    }
+    public void ContinueGame()
+    {
+        stopGameUI.SetActive(false);
+    }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
