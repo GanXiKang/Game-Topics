@@ -7,9 +7,10 @@ public class Menu_VolumeSetting : MonoBehaviour
 {
     public Slider sliderBGM;
     public Dropdown quality;
+    public Toggle fullScreen;
 
-    public static int index_record = 4;
-    public static bool isFullS_record = false;
+    public static int index_record;
+    public static bool isFullS_record;
     public static float VolumeBGM = 0.7f;
     
     AudioSource audio;
@@ -18,7 +19,9 @@ public class Menu_VolumeSetting : MonoBehaviour
     {
         audio = GetComponent<AudioSource>();
 
-        //sliderBGM.value = VolumeBGM;
+        sliderBGM.value = VolumeBGM;
+        quality.value = index_record;
+        fullScreen.isOn = isFullS_record;
     }
     public void Volume_BGM()
     {
