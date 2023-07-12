@@ -18,9 +18,7 @@ public class Menu_VolumeSetting : MonoBehaviour
     {
         audio = GetComponent<AudioSource>();
 
-        sliderBGM.value = VolumeBGM;
-        QualitySettings.SetQualityLevel(index_record);
-        Screen.fullScreen = isFullS_record;
+        //sliderBGM.value = VolumeBGM;
     }
     public void Volume_BGM()
     {
