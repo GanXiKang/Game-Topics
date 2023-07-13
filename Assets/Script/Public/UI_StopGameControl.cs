@@ -14,15 +14,18 @@ public class UI_StopGameControl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Time.timeScale = 0f;
             stopGameUI.SetActive(true);
         }
     }
     public void ContinueGame()
     {
+        Time.timeScale = 1f;
         stopGameUI.SetActive(false);
     }
     public void BackToMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
 }
