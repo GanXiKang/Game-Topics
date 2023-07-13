@@ -5,13 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class EndInsPlayerControl : MonoBehaviour
 {
+    AudioSource audio;
+
     public GameObject[] point = new GameObject[4];
     public GameObject[] animals = new GameObject[4];
     public GameObject[] animalsWin = new GameObject[4];
 
     bool isLose1, isLose2;
+
     void Start()
     {
+        audio = GetComponent<AudioSource>();
+        audio.volume = Menu_VolumeSetting.VolumeBGM;
+
         StartCoroutine(EndGameTime());
         insWinPlayer();
         insLosePlayer1();
