@@ -59,6 +59,7 @@ public class EndAnimalsAnimatorControl : MonoBehaviour
     void Win()
     {
         anim.SetBool("Win", true);
+        anim.SetFloat("WinWhy", 1f);
     }
     void Lose()
     {
