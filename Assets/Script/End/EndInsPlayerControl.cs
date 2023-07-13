@@ -36,7 +36,7 @@ public class EndInsPlayerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP2 == i)
                 {
-                    Instantiate(animals[i - 1], point[0].transform.position, point[0].transform.rotation);
+                    Instantiate(animalsWin[i - 1], point[0].transform.position, point[0].transform.rotation);
                 }
             }
         }
@@ -46,7 +46,7 @@ public class EndInsPlayerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP3 == i)
                 {
-                    Instantiate(animals[i - 1], point[0].transform.position, point[0].transform.rotation);
+                    Instantiate(animalsWin[i - 1], point[0].transform.position, point[0].transform.rotation);
                 }
             }
         }
@@ -56,7 +56,7 @@ public class EndInsPlayerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP4 == i)
                 {
-                    Instantiate(animals[i - 1], point[0].transform.position, point[0].transform.rotation);
+                    Instantiate(animalsWin[i - 1], point[0].transform.position, point[0].transform.rotation);
                 }
             }
         }
