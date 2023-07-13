@@ -7,6 +7,7 @@ public class EndInsPlayerControl : MonoBehaviour
 {
     public GameObject[] point = new GameObject[4];
     public GameObject[] animals = new GameObject[4];
+    public GameObject[] animalsWin = new GameObject[4];
 
     bool isLose1, isLose2;
     void Start()
@@ -25,7 +26,7 @@ public class EndInsPlayerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP1 == i)
                 {
-                    Instantiate(animals[i - 1], point[0].transform.position, point[0].transform.rotation);
+                    Instantiate(animalsWin[i - 1], point[0].transform.position, point[0].transform.rotation);
                 }
             }
         }
