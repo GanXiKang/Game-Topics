@@ -28,7 +28,6 @@ public class Dice : MonoBehaviour
     public void Button_Dice()
     {
         StartCoroutine(GoDiceScene());
- 
     }
     IEnumerator GoDiceScene()
     {
