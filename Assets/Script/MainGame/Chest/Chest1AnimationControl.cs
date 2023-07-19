@@ -35,38 +35,162 @@ public class Chest1AnimationControl : MonoBehaviour
     void Award()
     {
         a = Random.Range(1, 11);
-        print(a);
-        switch (a)
+        switch (ChestColliderControl.whoReward)
         {
             case 1:
+                switch (a)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        systemTest.text = "獲得10個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P1CoinTotal += 10;
+                        break;
+                    case 5:
+                    case 6:
+                        systemTest.text = "獲得20個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P1CoinTotal += 20;
+                        break;
+                    case 7:
+                    case 8:
+                        systemTest.text = "獲得30個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P1CoinTotal += 30;
+                        break;
+                    case 9:
+                        systemTest.text = "獲得一個道具！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                    case 10:
+                        systemTest.text = "空！";
+                        systemTest.color = Color.black;
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                }
+                break;
+
             case 2:
+                switch (a)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        systemTest.text = "獲得10個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P2CoinTotal += 10;
+                        break;
+                    case 5:
+                    case 6:
+                        systemTest.text = "獲得20個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P2CoinTotal += 20;
+                        break;
+                    case 7:
+                    case 8:
+                        systemTest.text = "獲得30個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P2CoinTotal += 30;
+                        break;
+                    case 9:
+                        systemTest.text = "獲得一個道具！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                    case 10:
+                        systemTest.text = "空！";
+                        systemTest.color = Color.black;
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                }
+                break;
+
             case 3:
+                switch (a)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        systemTest.text = "獲得10個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P3CoinTotal += 10;
+                        break;
+                    case 5:
+                    case 6:
+                        systemTest.text = "獲得20個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P3CoinTotal += 20;
+                        break;
+                    case 7:
+                    case 8:
+                        systemTest.text = "獲得30個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P3CoinTotal += 30;
+                        break;
+                    case 9:
+                        systemTest.text = "獲得一個道具！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                    case 10:
+                        systemTest.text = "空！";
+                        systemTest.color = Color.black;
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                }
+                break;
+
             case 4:
-                systemTest.text = "獲得10個貓貓幣！";
-                systemTest.color = Color.yellow;
-                SystemTestTextControl.isTimer = true;
-                break;
-            case 5:
-            case 6:
-                systemTest.text = "獲得20個貓貓幣！";
-                systemTest.color = Color.yellow;
-                SystemTestTextControl.isTimer = true;
-                break;
-            case 7:
-            case 8:
-                systemTest.text = "獲得30個貓貓幣！";
-                systemTest.color = Color.yellow;
-                SystemTestTextControl.isTimer = true;
-                break;
-            case 9:
-                systemTest.text = "獲得一個道具！";
-                systemTest.color = Color.yellow;
-                SystemTestTextControl.isTimer = true;
-                break;
-            case 10:
-                systemTest.text = "空！";
-                systemTest.color = Color.black;
-                SystemTestTextControl.isTimer = true;
+                switch (a)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        systemTest.text = "獲得10個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P4CoinTotal += 10;
+                        break;
+                    case 5:
+                    case 6:
+                        systemTest.text = "獲得20個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P4CoinTotal += 20;
+                        break;
+                    case 7:
+                    case 8:
+                        systemTest.text = "獲得30個貓貓幣！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        CoinControl.P4CoinTotal += 30;
+                        break;
+                    case 9:
+                        systemTest.text = "獲得一個道具！";
+                        systemTest.color = Color.yellow;
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                    case 10:
+                        systemTest.text = "空！";
+                        systemTest.color = Color.black;
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                }
                 break;
         }
     }
