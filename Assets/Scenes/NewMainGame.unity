@@ -5443,11 +5443,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1414603037}
+  - {fileID: 984581548}
   - {fileID: 735870193}
   - {fileID: 1623169645}
   - {fileID: 1837865634}
-  - {fileID: 984581548}
+  - {fileID: 1414603037}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7338,7 +7338,7 @@ Transform:
   - {fileID: 654003972}
   - {fileID: 231302162}
   m_Father: {fileID: 734974418}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &984581549
 MonoBehaviour:
@@ -9995,6 +9995,7 @@ GameObject:
   - component: {fileID: 1414603041}
   - component: {fileID: 1414603042}
   - component: {fileID: 1414603043}
+  - component: {fileID: 1414603044}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -10127,7 +10128,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 734974418}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1414603039
 MonoBehaviour:
@@ -10195,6 +10196,18 @@ MonoBehaviour:
   sliderBGM: {fileID: 1293762818}
   quality: {fileID: 1238958509}
   fullScreen: {fileID: 831752423}
+--- !u!114 &1414603044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414603034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ea14d9985e1484b9b19a59b4ba26b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1418507951
 GameObject:
   m_ObjectHideFlags: 0
