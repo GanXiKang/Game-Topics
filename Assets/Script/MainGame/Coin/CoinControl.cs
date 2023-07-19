@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class CoinControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static int P1CoinTotal;
+    public static int P2CoinTotal;
+    public static int P3CoinTotal;
+    public static int P4CoinTotal;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        P1CoinTotal = 20;
+        P2CoinTotal = 20;
+        P3CoinTotal = 20;
+        P4CoinTotal = 20;
     }
 }
