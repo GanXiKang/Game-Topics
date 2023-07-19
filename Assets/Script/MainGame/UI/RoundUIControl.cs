@@ -21,7 +21,10 @@ public class RoundUIControl : MonoBehaviour
         {
             FindCamera();
         }
-
+        if (P1Camera.GetComponent<Camera>().enabled)
+        {
+            print("Yes");
+        }
     }
     void FindCamera()
     {
