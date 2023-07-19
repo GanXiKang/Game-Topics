@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class UI_LoadingControl : MonoBehaviour
 {
-    GameObject LoadingUI;
-    float timer;
+    public static bool isLoading = true;
 
-    private void Start()
+    GameObject LoadingUI;
+
+    void Start()
     {
         LoadingUI = GameObject.Find("Loading");
+        StartCoroutine(LoadingNow());
     }
-    void Update()
-    {
-        timer += 1 * Time.deltaTime;
 
-        if (timer >= 3f)                           
-        {
-            LoadingUI.SetActive(false);
-        }
+    IEnumerator LoadingNow()
+    {
+        yield return new WaitForSeconds(3f);
+        LoadingUI.SetActive(false);
+        isLoading = false;
     }
 }
