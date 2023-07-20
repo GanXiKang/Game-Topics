@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class UI_StopGameControl : MonoBehaviour
 {
-    GameObject stopGameUI, mainGameUI, miniGameUI;
+    GameObject stopGameUI;
+
+    public static GameObject miniGameUI;
 
     void Start()
     {
-        mainGameUI = GameObject.Find("UI");
         stopGameUI = GameObject.Find("StopGameUI");
+       
         stopGameUI.SetActive(false);
-        print(stopGameUI);
-        print(mainGameUI);
     }
     void Update()
     {
@@ -33,7 +33,6 @@ public class UI_StopGameControl : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Time.timeScale = 0f;
-                mainGameUI.SetActive(false);
                 stopGameUI.SetActive(true);
             }
         }
@@ -45,11 +44,7 @@ public class UI_StopGameControl : MonoBehaviour
 
         if (MiniGameColliderControl.isMiniGame)
         {
-                miniGameUI.SetActive(true);
-        }
-        else
-        {
-                mainGameUI.SetActive(true);
+            miniGameUI.SetActive(true);
         }
     }
     public void BackToMenu()
