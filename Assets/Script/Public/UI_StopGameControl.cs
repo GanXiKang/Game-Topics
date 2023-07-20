@@ -24,7 +24,7 @@ public class UI_StopGameControl : MonoBehaviour
     }
     void BackToMainGame()
     {
-        if (!MiniGameColliderControl.isMiniGame)
+        if (!MiniGameColliderControl.isMiniGame || !Dice.isDiceScene)
         {
             if (isSettingClose)
             {
