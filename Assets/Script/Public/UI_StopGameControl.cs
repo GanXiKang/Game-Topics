@@ -15,7 +15,7 @@ public class UI_StopGameControl : MonoBehaviour
     }
     void Update()
     {
-        BackToMainGame();
+        //BackToMainGame();
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Time.timeScale = 0f;
