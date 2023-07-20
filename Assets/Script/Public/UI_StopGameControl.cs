@@ -6,41 +6,49 @@ using UnityEngine.SceneManagement;
 public class UI_StopGameControl : MonoBehaviour
 {
     public GameObject stopGameUI;
-
-    bool isSettingClose = false;
+    GameObject MainGameUI, MiniGameUI;
 
     void Start()
     {
+        MainGameUI = GameObject.Find("UI");
         stopGameUI.SetActive(false);
     }
     void Update()
     {
-        //BackToMainGame();
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (MiniGameColliderControl.isMiniGame)
         {
-            Time.timeScale = 0f;
-            stopGameUI.SetActive(true);
-        }
-    }
-    void BackToMainGame()
-    {
-        if (!MiniGameColliderControl.isMiniGame || !Dice.isDiceScene)
-        {
-            if (isSettingClose)
+            MiniGameUI = GameObject.Find("MGUI");
+
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                stopGameUI.SetActive(false);
-                isSettingClose = false;
+                Time.timeScale = 0f;
+                MiniGameUI.SetActive(false);
+                stopGameUI.SetActive(true);
             }
         }
-        else
+        else 
         {
-            isSettingClose = true;
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Time.timeScale = 0f;
+                MainGameUI.SetActive(false);
+                stopGameUI.SetActive(true);
+            }
         }
     }
     public void ContinueGame()
     {
         Time.timeScale = 1f;
         stopGameUI.SetActive(false);
+
+        if (MiniGameColliderControl.isMiniGame)
+        {
+                MiniGameUI.SetActive(true);
+        }
+        else
+        {
+                MainGameUI.SetActive(true);
+        }
     }
     public void BackToMenu()
     {
