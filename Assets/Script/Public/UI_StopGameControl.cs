@@ -9,6 +9,8 @@ public class UI_StopGameControl : MonoBehaviour
 
     public static GameObject miniGameUI;
 
+    bool isFind = true;
+
     void Start()
     {
         stopGameUI = GameObject.Find("StopGameUI");
@@ -19,7 +21,11 @@ public class UI_StopGameControl : MonoBehaviour
     {
         if (MiniGameColliderControl.isMiniGame)
         {
-            miniGameUI = GameObject.Find("MGUI");
+            if (isFind)
+            {
+                miniGameUI = GameObject.Find("MGUI");
+                isFind = false;
+            }
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
