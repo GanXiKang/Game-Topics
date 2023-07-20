@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class UI_StopGameControl : MonoBehaviour
 {
-    public GameObject stopGameUI;
-    GameObject MainGameUI, MiniGameUI;
+    GameObject stopGameUI, MainGameUI, MiniGameUI;
 
     void Start()
     {
         MainGameUI = GameObject.Find("UI");
+        stopGameUI = GameObject.Find("StopGameUI");
         stopGameUI.SetActive(false);
     }
     void Update()
