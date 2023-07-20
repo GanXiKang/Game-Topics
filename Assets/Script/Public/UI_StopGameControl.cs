@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UI_StopGameControl : MonoBehaviour
 {
-    GameObject stopGameUI;
-
-    public static GameObject miniGameUI;
+    GameObject stopGameUI, miniGameUI;
 
     bool isFind = true;
 
