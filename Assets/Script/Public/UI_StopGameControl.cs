@@ -7,7 +7,7 @@ public class UI_StopGameControl : MonoBehaviour
 {
     GameObject stopGameUI, miniGameUI;
 
-    bool isFind = true;
+    bool isFind;
 
     void Start()
     {
@@ -34,6 +34,8 @@ public class UI_StopGameControl : MonoBehaviour
         }
         else 
         {
+            isFind = true;
+
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Time.timeScale = 0f;
