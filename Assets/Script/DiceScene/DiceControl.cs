@@ -39,7 +39,6 @@ public class DiceControl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            print("Yes");
             if (isRoll)
             {
                 isRoll = false;
