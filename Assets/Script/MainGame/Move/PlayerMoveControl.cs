@@ -7,12 +7,11 @@ public class PlayerMoveControl : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    GameObject[] p = new GameObject[11];
+    GameObject[] p = new GameObject[21];
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        print(p.Length);
         TransformPoint();
     }
     void Update()
@@ -108,17 +107,17 @@ public class PlayerMoveControl : MonoBehaviour
         p[7] = GameObject.Find("Point7");
         p[8] = GameObject.Find("Point8");
         p[9] = GameObject.Find("Point9");
-        //p[10] = GameObject.Find("Point10");
-        //p[11] = GameObject.Find("Point11");
-        //p[12] = GameObject.Find("Point12");
-        //p[13] = GameObject.Find("Point13");
-        //p[14] = GameObject.Find("Point14");
-        //p[15] = GameObject.Find("Point15");
-        //p[16] = GameObject.Find("Point16");
-        //p[17] = GameObject.Find("Point17");
-        //p[18] = GameObject.Find("Point18");
-        //p[19] = GameObject.Find("Point19");
-        //p[20] = GameObject.Find("Point20");
+        p[10] = GameObject.Find("Point10");
+        p[11] = GameObject.Find("Point11");
+        p[12] = GameObject.Find("Point12");
+        p[13] = GameObject.Find("Point13");
+        p[14] = GameObject.Find("Point14");
+        p[15] = GameObject.Find("Point15");
+        p[16] = GameObject.Find("Point16");
+        p[17] = GameObject.Find("Point17");
+        p[18] = GameObject.Find("Point18");
+        p[19] = GameObject.Find("Point19");
+        p[20] = GameObject.Find("Point20");
         //p[21] = GameObject.Find("Point21");
         //p[22] = GameObject.Find("Point22");
         //p[23] = GameObject.Find("Point23");
