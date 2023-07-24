@@ -7,7 +7,7 @@ public class PlayerMoveControl : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    GameObject[] p = new GameObject[11];
+    GameObject[] p = new GameObject[21];
 
     void Start()
     {
