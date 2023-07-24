@@ -47,9 +47,9 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
-        if (DiceControl.P1_totalNum > 10)
+        if (DiceControl.P1_totalNum > p.Length)
         {
-            agent.SetDestination(p[10].transform.position);
+            agent.SetDestination(p[p.Length].transform.position);
         }
     }
     void P2MovePoint()
@@ -62,9 +62,9 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
-        if (DiceControl.P2_totalNum > 10)
+        if (DiceControl.P2_totalNum > p.Length)
         {
-            agent.SetDestination(p[10].transform.position);
+            agent.SetDestination(p[p.Length].transform.position);
         }
     }
     void P3MovePoint()
@@ -77,9 +77,9 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
-        if (DiceControl.P3_totalNum > 10)
+        if (DiceControl.P3_totalNum > p.Length)
         {
-            agent.SetDestination(p[10].transform.position);
+            agent.SetDestination(p[p.Length].transform.position);
         }
     }
     void P4MovePoint()
@@ -92,9 +92,9 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
-        if (DiceControl.P4_totalNum > 10)
+        if (DiceControl.P4_totalNum > p.Length)
         {
-            agent.SetDestination(p[10].transform.position);
+            agent.SetDestination(p[p.Length].transform.position);
         }
     }
     void TransformPoint()
