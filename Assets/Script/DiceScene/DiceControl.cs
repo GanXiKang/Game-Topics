@@ -79,6 +79,10 @@ public class DiceControl : MonoBehaviour
             case 6:
                 transform.rotation = Quaternion.Euler(0f, 90f, 0f);
                 break;
+
+            default :
+                transform.rotation = Quaternion.Euler(0f, 95f, 0f);
+                break;
         }
         round++;
     }
