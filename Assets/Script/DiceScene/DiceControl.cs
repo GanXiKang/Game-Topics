@@ -55,7 +55,7 @@ public class DiceControl : MonoBehaviour
     {
         result = false;
         rb.angularVelocity = Vector3.zero;
-        randomNum = Random.Range(1, 7);
+        randomNum = Random.Range(6, 7);
         Calculate();
         
         switch (randomNum)
