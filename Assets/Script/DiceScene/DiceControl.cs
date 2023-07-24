@@ -9,6 +9,7 @@ public class DiceControl : MonoBehaviour
 
     public static int P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0, round = 0;
 
+    public int MinNum, MaxNum;
     public float rotationForce;
 
     int randomNum;
@@ -55,7 +56,7 @@ public class DiceControl : MonoBehaviour
     {
         result = false;
         rb.angularVelocity = Vector3.zero;
-        randomNum = Random.Range(6, 7);
+        randomNum = Random.Range(MinNum, MaxNum);
         Calculate();
         
         switch (randomNum)
