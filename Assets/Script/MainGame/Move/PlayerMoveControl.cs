@@ -7,7 +7,7 @@ public class PlayerMoveControl : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    GameObject[] p = new GameObject[21];
+    GameObject[] p = new GameObject[31];
 
     void Start()
     {
@@ -46,9 +46,9 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
-        if (DiceControl.P1_totalNum > 20)
+        if (DiceControl.P1_totalNum > 30)
         {
-            agent.SetDestination(p[20].transform.position);
+            agent.SetDestination(p[30].transform.position);
         }
     }
     void P2MovePoint()
@@ -118,16 +118,16 @@ public class PlayerMoveControl : MonoBehaviour
         p[18] = GameObject.Find("Point18");
         p[19] = GameObject.Find("Point19");
         p[20] = GameObject.Find("Point20");
-        //p[21] = GameObject.Find("Point21");
-        //p[22] = GameObject.Find("Point22");
-        //p[23] = GameObject.Find("Point23");
-        //p[24] = GameObject.Find("Point24");
-        //p[25] = GameObject.Find("Point25");
-        //p[26] = GameObject.Find("Point26");
-        //p[27] = GameObject.Find("Point27");
-        //p[28] = GameObject.Find("Point28");
-        //p[29] = GameObject.Find("Point29");
-        //p[30] = GameObject.Find("Point30");
+        p[21] = GameObject.Find("Point21");
+        p[22] = GameObject.Find("Point22");
+        p[23] = GameObject.Find("Point23");
+        p[24] = GameObject.Find("Point24");
+        p[25] = GameObject.Find("Point25");
+        p[26] = GameObject.Find("Point26");
+        p[27] = GameObject.Find("Point27");
+        p[28] = GameObject.Find("Point28");
+        p[29] = GameObject.Find("Point29");
+        p[30] = GameObject.Find("Point30");
         //p[31] = GameObject.Find("Point31");
         //p[32] = GameObject.Find("Point32");
         //p[33] = GameObject.Find("Point33");
