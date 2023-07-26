@@ -13,7 +13,6 @@ public class PlayerMoveControl : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         TransformPoint();
-        ResetLocation();
     }
     void Update()
     {
@@ -159,9 +158,5 @@ public class PlayerMoveControl : MonoBehaviour
         //p[58] = GameObject.Find("Point58");
         //p[59] = GameObject.Find("Point59");
         //p[60] = GameObject.Find("Point60");
-    }
-    void ResetLocation()
-    {
-        p[21].transform.position += new Vector3(5, 0, 0);
     }
 }
