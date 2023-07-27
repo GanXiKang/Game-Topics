@@ -7,7 +7,7 @@ public class PlayerMoveControl : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    GameObject[] p = new GameObject[31];
+    GameObject[] p = new GameObject[61];
 
     void Start()
     {
@@ -46,9 +46,9 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
-        if (DiceControl.P1_totalNum > 30)
+        if (DiceControl.P1_totalNum > 60)
         {
-            agent.SetDestination(p[30].transform.position);
+            agent.SetDestination(p[60].transform.position);
         }
     }
     void P2MovePoint()
@@ -61,9 +61,9 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
-        if (DiceControl.P2_totalNum > 20)
+        if (DiceControl.P2_totalNum > 60)
         {
-            agent.SetDestination(p[20].transform.position);
+            agent.SetDestination(p[60].transform.position);
         }
     }
     void P3MovePoint()
@@ -76,9 +76,9 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
-        if (DiceControl.P3_totalNum > 20)
+        if (DiceControl.P3_totalNum > 60)
         {
-            agent.SetDestination(p[20].transform.position);
+            agent.SetDestination(p[60].transform.position);
         }
     }
     void P4MovePoint()
@@ -91,9 +91,9 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
-        if (DiceControl.P4_totalNum > 20)
+        if (DiceControl.P4_totalNum > 60)
         {
-            agent.SetDestination(p[20].transform.position);
+            agent.SetDestination(p[60].transform.position);
         }
     }
     void TransformPoint()
@@ -128,35 +128,35 @@ public class PlayerMoveControl : MonoBehaviour
         p[28] = GameObject.Find("Point28");
         p[29] = GameObject.Find("Point29");
         p[30] = GameObject.Find("Point30");
-        //p[31] = GameObject.Find("Point31");
-        //p[32] = GameObject.Find("Point32");
-        //p[33] = GameObject.Find("Point33");
-        //p[34] = GameObject.Find("Point34");
-        //p[35] = GameObject.Find("Point35");
-        //p[36] = GameObject.Find("Point36");
-        //p[37] = GameObject.Find("Point37");
-        //p[38] = GameObject.Find("Point38");
-        //p[39] = GameObject.Find("Point39");
-        //p[40] = GameObject.Find("Point40");
-        //p[41] = GameObject.Find("Point41");
-        //p[42] = GameObject.Find("Point42");
-        //p[43] = GameObject.Find("Point43");
-        //p[44] = GameObject.Find("Point44");
-        //p[45] = GameObject.Find("Point45");
-        //p[46] = GameObject.Find("Point46");
-        //p[47] = GameObject.Find("Point47");
-        //p[48] = GameObject.Find("Point48");
-        //p[49] = GameObject.Find("Point49");
-        //p[50] = GameObject.Find("Point50");
-        //p[51] = GameObject.Find("Point51");
-        //p[52] = GameObject.Find("Point52");
-        //p[53] = GameObject.Find("Point53");
-        //p[54] = GameObject.Find("Point54");
-        //p[55] = GameObject.Find("Point55");
-        //p[56] = GameObject.Find("Point56");
-        //p[57] = GameObject.Find("Point57");
-        //p[58] = GameObject.Find("Point58");
-        //p[59] = GameObject.Find("Point59");
-        //p[60] = GameObject.Find("Point60");
+        p[31] = GameObject.Find("Point31");
+        p[32] = GameObject.Find("Point32");
+        p[33] = GameObject.Find("Point33");
+        p[34] = GameObject.Find("Point34");
+        p[35] = GameObject.Find("Point35");
+        p[36] = GameObject.Find("Point36");
+        p[37] = GameObject.Find("Point37");
+        p[38] = GameObject.Find("Point38");
+        p[39] = GameObject.Find("Point39");
+        p[40] = GameObject.Find("Point40");
+        p[41] = GameObject.Find("Point41");
+        p[42] = GameObject.Find("Point42");
+        p[43] = GameObject.Find("Point43");
+        p[44] = GameObject.Find("Point44");
+        p[45] = GameObject.Find("Point45");
+        p[46] = GameObject.Find("Point46");
+        p[47] = GameObject.Find("Point47");
+        p[48] = GameObject.Find("Point48");
+        p[49] = GameObject.Find("Point49");
+        p[50] = GameObject.Find("Point50");
+        p[51] = GameObject.Find("Point51");
+        p[52] = GameObject.Find("Point52");
+        p[53] = GameObject.Find("Point53");
+        p[54] = GameObject.Find("Point54");
+        p[55] = GameObject.Find("Point55");
+        p[56] = GameObject.Find("Point56");
+        p[57] = GameObject.Find("Point57");
+        p[58] = GameObject.Find("Point58");
+        p[59] = GameObject.Find("Point59");
+        p[60] = GameObject.Find("Point60");
     }
 }
