@@ -36,12 +36,12 @@ public class EventControl : MonoBehaviour
         AnimatorControl.isP1Move = false;
         if (forward != 0)
         {
-            systemTest.text = "前進兩格！";
+            systemTest.text = "前進" + forward + "格！";
             systemTest.color = Color.green;
         }
         else if (backward != 0)
         {
-            systemTest.text = "后退兩格！";
+            systemTest.text = "后退" + backward + "格！";
             systemTest.color = Color.red;
         }
         SystemTestTextControl.isTimer = true;
@@ -55,12 +55,12 @@ public class EventControl : MonoBehaviour
         AnimatorControl.isP2Move = false;
         if (forward != 0)
         {
-            systemTest.text = "前進兩格！";
+            systemTest.text = "前進" + forward + "格！";
             systemTest.color = Color.green;
         }
         else if (backward != 0)
         {
-            systemTest.text = "后退兩格！";
+            systemTest.text = "后退" + backward + "格！";
             systemTest.color = Color.red;
         }
         SystemTestTextControl.isTimer = true;
@@ -74,12 +74,12 @@ public class EventControl : MonoBehaviour
         AnimatorControl.isP3Move = false;
         if (forward != 0)
         {
-            systemTest.text = "前進兩格！";
+            systemTest.text = "前進" + forward + "格！";
             systemTest.color = Color.green;
         }
         else if (backward != 0)
         {
-            systemTest.text = "后退兩格！";
+            systemTest.text = "后退" + backward + "格！";
             systemTest.color = Color.red;
         }
         SystemTestTextControl.isTimer = true;
@@ -93,12 +93,12 @@ public class EventControl : MonoBehaviour
         AnimatorControl.isP4Move = false;
         if (forward != 0)
         {
-            systemTest.text = "前進兩格！";
+            systemTest.text = "前進" + forward + "格！";
             systemTest.color = Color.green;
         }
         else if (backward != 0)
         {
-            systemTest.text = "后退兩格！";
+            systemTest.text = "后退" + backward + "格！";
             systemTest.color = Color.red;
         }
         SystemTestTextControl.isTimer = true;
