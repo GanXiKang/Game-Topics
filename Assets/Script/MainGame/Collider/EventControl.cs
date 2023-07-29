@@ -7,6 +7,7 @@ public class EventControl : MonoBehaviour
 {
     public Text systemTest;
     public int EventPoint;
+    public int forward, backward;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,41 +34,77 @@ public class EventControl : MonoBehaviour
     IEnumerator P1_EventHappened()
     {
         AnimatorControl.isP1Move = false;
-        systemTest.text = "前進兩格！";
-        systemTest.color = Color.green;
+        if (forward != 0)
+        {
+            systemTest.text = "前進兩格！";
+            systemTest.color = Color.green;
+        }
+        else if (backward != 0)
+        {
+            systemTest.text = "后退兩格！";
+            systemTest.color = Color.red;
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        DiceControl.P1_totalNum += 2;
+        DiceControl.P1_totalNum += forward;
+        DiceControl.P1_totalNum -= backward;
         AnimatorControl.isP1Move = true;
     }
     IEnumerator P2_EventHappened()
     {
         AnimatorControl.isP2Move = false;
-        systemTest.text = "前進兩格！";
-        systemTest.color = Color.green;
+        if (forward != 0)
+        {
+            systemTest.text = "前進兩格！";
+            systemTest.color = Color.green;
+        }
+        else if (backward != 0)
+        {
+            systemTest.text = "后退兩格！";
+            systemTest.color = Color.red;
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        DiceControl.P2_totalNum += 2;
+        DiceControl.P2_totalNum += forward;
+        DiceControl.P2_totalNum -= backward;
         AnimatorControl.isP2Move = true;
     }
     IEnumerator P3_EventHappened()
     {
         AnimatorControl.isP3Move = false;
-        systemTest.text = "前進兩格！";
-        systemTest.color = Color.green;
+        if (forward != 0)
+        {
+            systemTest.text = "前進兩格！";
+            systemTest.color = Color.green;
+        }
+        else if (backward != 0)
+        {
+            systemTest.text = "后退兩格！";
+            systemTest.color = Color.red;
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        DiceControl.P3_totalNum += 2;
+        DiceControl.P3_totalNum += forward;
+        DiceControl.P3_totalNum -= backward;
         AnimatorControl.isP3Move = true;
     }
     IEnumerator P4_EventHappened()
     {
         AnimatorControl.isP4Move = false;
-        systemTest.text = "前進兩格！";
-        systemTest.color = Color.green;
+        if (forward != 0)
+        {
+            systemTest.text = "前進兩格！";
+            systemTest.color = Color.green;
+        }
+        else if (backward != 0)
+        {
+            systemTest.text = "后退兩格！";
+            systemTest.color = Color.red;
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        DiceControl.P4_totalNum += 2;
+        DiceControl.P4_totalNum += forward;
+        DiceControl.P4_totalNum -= backward;
         AnimatorControl.isP4Move = true;
     }
 }
