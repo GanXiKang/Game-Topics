@@ -10,6 +10,6 @@ public class SceneAnimalsAnimationControl : MonoBehaviour
     {
         ani = GetComponent<Animation>();
 
-        ani.Play("Squirrel_Happy");
+        //ani.Play("Squirrel_Happy");
     }
 }
