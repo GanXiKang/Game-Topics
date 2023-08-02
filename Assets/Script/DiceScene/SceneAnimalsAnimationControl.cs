@@ -4,19 +4,11 @@ using UnityEngine;
 
 public class SceneAnimalsAnimationControl : MonoBehaviour
 {
-    Animation ani;
+    Animator anim;
 
-    bool once = true;
     void Start()
     {
-        ani = GetComponent<Animation>();
-    }
-    void Update()
-    {
-        if (once)
-        {
-            
-            once = false;
-        }
+        anim = GetComponent<Animator>();
+        anim.SetBool("Happy", true);
     }
 }
