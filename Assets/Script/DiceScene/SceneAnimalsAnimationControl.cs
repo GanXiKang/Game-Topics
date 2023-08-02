@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class SceneAnimalsAnimationControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animation ani;
+    
     void Start()
     {
-        
-    }
+        ani = GetComponent<Animation>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ani.Play("Squirrel_Happy");
     }
 }
