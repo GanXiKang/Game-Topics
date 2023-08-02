@@ -5,11 +5,18 @@ using UnityEngine;
 public class SceneAnimalsAnimationControl : MonoBehaviour
 {
     Animation ani;
-    
+
+    bool once = true;
     void Start()
     {
         ani = GetComponent<Animation>();
-
-        //ani.Play("Squirrel_Happy");
+    }
+    void Update()
+    {
+        if (once)
+        {
+            
+            once = false;
+        }
     }
 }
