@@ -114,7 +114,7 @@ public class DiceControl : MonoBehaviour
     }
     IEnumerator GoMainGame()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(7);
         Dice.isDiceScene = false;
         yield return new WaitForSeconds(1.5f);
