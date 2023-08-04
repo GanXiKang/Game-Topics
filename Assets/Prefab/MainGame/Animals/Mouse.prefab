@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1496255935}
   - component: {fileID: 1496255937}
-  - component: {fileID: 1496255936}
   m_Layer: 0
   m_Name: InsKickboard
   m_TagString: Untagged
@@ -46,19 +45,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1496255936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496255934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5072d7421c0a5ee4381831a9beb3d980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kickboard: {fileID: 3526992022454153223, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
 --- !u!1 &241252459463621871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,6 +2056,7 @@ GameObject:
   - component: {fileID: 4627437940787760860}
   - component: {fileID: 1105131333}
   - component: {fileID: 3568266017251144574}
+  - component: {fileID: 763743672}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Mouse
@@ -2204,6 +2191,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa062d578af5b3246a9c0e602ed76320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &763743672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7657198161940171670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5072d7421c0a5ee4381831a9beb3d980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kickboard: {fileID: 3526992022454153223, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
+  insPoint: {fileID: 1496255934}
 --- !u!1 &7722083400083569675
 GameObject:
   m_ObjectHideFlags: 0
