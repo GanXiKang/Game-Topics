@@ -19,7 +19,7 @@ public class InsKickboardControl : MonoBehaviour
         }
         else
         {
-            Destroy(kickboard, 2f);
+            Destroy(kickboardFollow, 1f);
         }
     }
     private void OnTriggerEnter(Collider other)
