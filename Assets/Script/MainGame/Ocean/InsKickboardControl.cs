@@ -13,7 +13,6 @@ public class InsKickboardControl : MonoBehaviour
     {
         if (other.tag == "Ocean")
         {
-            print("ok");
             Instantiate(kickboard, insPoint.transform.position, insPoint.transform.rotation);
             isFollow = true;
         }
