@@ -7,14 +7,15 @@ public class InsKickboardControl : MonoBehaviour
     public GameObject kickboard;
     public GameObject insPoint;
 
+    GameObject kickboardFollow;
+
     bool isFollow;
 
     void Update()
     {
         if (isFollow)
         {
-            print("Ok");
-            kickboard.transform.position = insPoint.transform.position;
+            kickboardFollow.transform.position = insPoint.transform.position;
         }
         else
         {
@@ -25,7 +26,7 @@ public class InsKickboardControl : MonoBehaviour
     {
         if (other.tag == "Ocean")
         {
-            Instantiate(kickboard, insPoint.transform.position, insPoint.transform.rotation);
+            kickboardFollow = Instantiate(kickboard, insPoint.transform.position, insPoint.transform.rotation);
             isFollow = true;
         }
     }
