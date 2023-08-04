@@ -8,7 +8,7 @@ public class KickboardControl : MonoBehaviour
 
     void Start()
     {
-        insKickboardPoint = GameObject.Find("InsKickPoint");
+        insKickboardPoint = GameObject.Find("InsKickboard");
     }
 
     void Update()
