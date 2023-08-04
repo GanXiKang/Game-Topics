@@ -7,7 +7,7 @@ public class InsKickboardControl : MonoBehaviour
     public GameObject kickboard;
     public GameObject insPoint;
 
-    public static bool isFollow;
+    bool isFollow;
 
     void Update()
     {
