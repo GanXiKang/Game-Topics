@@ -13,14 +13,13 @@ public class KickboardControl : MonoBehaviour
 
     void Update()
     {
-        if (InsKickboardControl.isFollow)
-        {
-            transform.position = insKickboardPoint.transform.position;
-        }
-        else 
-        {
-            Destroy(this.gameObject, 2f);
-        }
-      
+        //if (InsKickboardControl.isFollow)
+        //{
+        //    transform.position = insKickboardPoint.transform.position;
+        //}
+        //else 
+        //{
+        //    Destroy(this.gameObject, 2f);
+        //}
     }
 }
