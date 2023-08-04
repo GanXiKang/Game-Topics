@@ -13,6 +13,7 @@ public class InsKickboardControl : MonoBehaviour
     {
         if (isFollow)
         {
+            print("Ok");
             kickboard.transform.position = insPoint.transform.position;
         }
         else
