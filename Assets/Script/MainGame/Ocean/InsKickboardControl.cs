@@ -17,4 +17,11 @@ public class InsKickboardControl : MonoBehaviour
             isFollow = true;
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Ocean")
+        { 
+            isFollow = false;
+        }
+    }
 }
