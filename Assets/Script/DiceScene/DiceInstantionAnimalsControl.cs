@@ -47,6 +47,5 @@ public class DiceInstantionAnimalsControl : MonoBehaviour
                 }
             }
         }
-
     }
 }
