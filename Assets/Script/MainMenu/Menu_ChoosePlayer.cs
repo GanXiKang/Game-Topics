@@ -35,6 +35,25 @@ public class Menu_ChoosePlayer : MonoBehaviour
             Limit();
         }
 
+        Process();
+    }
+    IEnumerator GoMainGame()
+    {
+        NO[0].SetActive(false);
+        NO[1].SetActive(false);
+        NO[2].SetActive(false);
+        NO[3].SetActive(false);
+        yield return new WaitForSeconds(1.5f);
+        InstantiatePointControl.isStart = true;
+        SceneManager.LoadScene(7);
+        isDestoryP1 = 0;
+        isDestoryP2 = 0;
+        isDestoryP3 = 0;
+        isDestoryP4 = 0;
+    }
+
+    void Process()
+    {
         if (whoPlay == 2)
         {
             Group[0].SetActive(false);
@@ -89,21 +108,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
             }
         }
     }
-    IEnumerator GoMainGame()
-    {
-        NO[0].SetActive(false);
-        NO[1].SetActive(false);
-        NO[2].SetActive(false);
-        NO[3].SetActive(false);
-        yield return new WaitForSeconds(1.5f);
-        InstantiatePointControl.isStart = true;
-        SceneManager.LoadScene(7);
-        isDestoryP1 = 0;
-        isDestoryP2 = 0;
-        isDestoryP3 = 0;
-        isDestoryP4 = 0;
-    }
-
     void Limit()
     {
         if (whoPlay > 4)
