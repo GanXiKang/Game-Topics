@@ -28,13 +28,11 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             whoPlay++;
             Limit();
-            print(whoPlay);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             whoPlay--;
             Limit();
-            print(whoPlay);
         }
 
         if (whoPlay == 2)
@@ -108,11 +106,11 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     void Limit()
     {
-        if (whoPlay >= 4)
+        if (whoPlay > 4)
         {
             whoPlay = 4;
         }
-        if (whoPlay <= 2)
+        if (whoPlay < 2)
         {
             whoPlay = 2;
         }
