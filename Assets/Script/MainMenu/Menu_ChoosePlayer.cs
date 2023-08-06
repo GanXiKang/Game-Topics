@@ -24,6 +24,9 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     void Update()
     {
+        Limit();
+        ButtonControlwhoPlay();
+
         if (whoPlay == 2)
         {
             Group[0].SetActive(false);
@@ -88,6 +91,28 @@ public class Menu_ChoosePlayer : MonoBehaviour
         isDestoryP4 = 0;
     }
 
+    void ButtonControlwhoPlay()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            whoPlay++;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            whoPlay--;
+        }
+    }
+    void Limit()
+    {
+        if (whoPlay > 4)
+        {
+            whoPlay = 4;
+        }
+        if (whoPlay < 2)
+        {
+            whoPlay = 2;
+        }
+    }
     void Limit1P()
     {
         if (whyP1 < 1)
