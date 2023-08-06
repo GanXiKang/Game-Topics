@@ -24,8 +24,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     void Update()
     {
-        Limit();
-        ButtonControlwhoPlay();
+        //Limit();
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            whoPlay++;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            whoPlay--;
+        }
 
         if (whoPlay == 2)
         {
@@ -91,17 +99,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
         isDestoryP4 = 0;
     }
 
-    void ButtonControlwhoPlay()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            whoPlay++;
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            whoPlay--;
-        }
-    }
     void Limit()
     {
         if (whoPlay > 4)
