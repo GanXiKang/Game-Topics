@@ -24,15 +24,17 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     void Update()
     {
-        //Limit();
-
         if (Input.GetKeyDown(KeyCode.A))
         {
             whoPlay++;
+            Limit();
+            print(whoPlay);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             whoPlay--;
+            Limit();
+            print(whoPlay);
         }
 
         if (whoPlay == 2)
@@ -55,6 +57,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (whoPlay == 3)
         {
+            Group[0].SetActive(true);
             Group[1].SetActive(false);
 
             if (confirm == 3)
@@ -70,17 +73,21 @@ public class Menu_ChoosePlayer : MonoBehaviour
                 }
             }
         }
-
-        if (confirm == 4)
+        else if (whoPlay == 4)
         {
-            if (whyP1 != whyP2 && whyP1 != whyP3 && whyP1 != whyP4 && whyP2 != whyP3 && whyP2 != whyP4 && whyP3 != whyP4)
+            Group[1].SetActive(true);
+
+            if (confirm == 4)
             {
-                StartCoroutine(GoMainGame());
-            }
-            else
-            {
-                ErrorMenu.SetActive(true);
-                BGM.PlayOneShot(error);
+                if (whyP1 != whyP2 && whyP1 != whyP3 && whyP1 != whyP4 && whyP2 != whyP3 && whyP2 != whyP4 && whyP3 != whyP4)
+                {
+                    StartCoroutine(GoMainGame());
+                }
+                else
+                {
+                    ErrorMenu.SetActive(true);
+                    BGM.PlayOneShot(error);
+                }
             }
         }
     }
@@ -101,11 +108,11 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     void Limit()
     {
-        if (whoPlay > 4)
+        if (whoPlay >= 4)
         {
             whoPlay = 4;
         }
-        if (whoPlay < 2)
+        if (whoPlay <= 2)
         {
             whoPlay = 2;
         }
