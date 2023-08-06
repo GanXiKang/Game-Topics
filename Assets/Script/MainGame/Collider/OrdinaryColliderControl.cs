@@ -8,24 +8,33 @@ public class OrdinaryColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (DiceControl.P1_totalNum == pointNum || DiceControl.P2_totalNum == pointNum || DiceControl.P3_totalNum == pointNum || DiceControl.P4_totalNum == pointNum)
+        if (other.tag == "P1")
         {
-            if (other.tag == "P1")
+            if (DiceControl.P1_totalNum == pointNum)
             {
                 AnimatorControl.isP1Move = false;
                 StartCoroutine(ChangeCamera());
             }
-            else if (other.tag == "P2")
+        }
+        else if (other.tag == "P2")
+        {
+            if (DiceControl.P2_totalNum == pointNum)
             {
                 AnimatorControl.isP2Move = false;
                 StartCoroutine(ChangeCamera());
             }
-            else if (other.tag == "P3")
+        }
+        else if (other.tag == "P3")
+        {
+            if (DiceControl.P3_totalNum == pointNum)
             {
                 AnimatorControl.isP3Move = false;
                 StartCoroutine(ChangeCamera());
             }
-            else if (other.tag == "P4")
+        }
+        else if (other.tag == "P4")
+        {
+            if (DiceControl.P4_totalNum == pointNum)
             {
                 AnimatorControl.isP4Move = false;
                 StartCoroutine(ChangeCamera());

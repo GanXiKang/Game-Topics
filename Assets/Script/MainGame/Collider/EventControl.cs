@@ -11,21 +11,30 @@ public class EventControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (DiceControl.P1_totalNum == EventPoint || DiceControl.P2_totalNum == EventPoint || DiceControl.P3_totalNum == EventPoint || DiceControl.P4_totalNum == EventPoint)
+        if (other.tag == "P1")
         {
-            if (other.tag == "P1")
+            if (DiceControl.P1_totalNum == EventPoint)
             {
                 StartCoroutine(P1_EventHappened());
             }
-            else if (other.tag == "P2")
+        }
+        else if (other.tag == "P2")
+        {
+            if (DiceControl.P2_totalNum == EventPoint)
             {
                 StartCoroutine(P2_EventHappened());
             }
-            else if (other.tag == "P3")
+        }
+        else if (other.tag == "P3")
+        {
+            if (DiceControl.P3_totalNum == EventPoint)
             {
                 StartCoroutine(P3_EventHappened());
             }
-            else if (other.tag == "P4")
+        }
+        else if (other.tag == "P4")
+        {
+            if (DiceControl.P4_totalNum == EventPoint)
             {
                 StartCoroutine(P4_EventHappened());
             }
