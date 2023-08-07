@@ -5,7 +5,7 @@ using UnityEngine;
 public class StoreColliderControl : MonoBehaviour
 {
     public int pointNum;
-    public GameObject storeManager;
+    public Transform target;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class StoreColliderControl : MonoBehaviour
             if (DiceControl.P1_totalNum == pointNum)
             {
                 AnimatorControl.isP1Move = false;
-                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, storeManager.transform.rotation, 2f * Time.deltaTime);
+                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, target.transform.rotation, 2f * Time.deltaTime);
             }
         }
         else if (other.tag == "P2")
