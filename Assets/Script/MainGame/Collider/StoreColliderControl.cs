@@ -24,6 +24,7 @@ public class StoreColliderControl : MonoBehaviour
             if (DiceControl.P1_totalNum == pointNum)
             {
                 AnimatorControl.isP1Move = false;
+                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, target.transform.rotation, 2f * Time.deltaTime);
             }
         }
         else if (other.tag == "P2")
@@ -51,14 +52,14 @@ public class StoreColliderControl : MonoBehaviour
             }
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "P1")
-        {
-            if (DiceControl.P1_totalNum == pointNum)
-            {
-                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, target.transform.rotation, 2f * Time.deltaTime);
-            }
-        }
-    }
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.tag == "P1")
+    //    {
+    //        if (DiceControl.P1_totalNum == pointNum)
+    //        {
+    //            other.transform.rotation = Quaternion.Lerp(other.transform.rotation, target.transform.rotation, 2f * Time.deltaTime);
+    //        }
+    //    }
+    //}
 }
