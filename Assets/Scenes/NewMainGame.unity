@@ -22484,9 +22484,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1447963431}
   - component: {fileID: 1447963433}
-  - component: {fileID: 1447963432}
+  - component: {fileID: 1447963434}
   m_Layer: 0
-  m_Name: OrdinaryCollider
+  m_Name: StoreCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22507,19 +22507,6 @@ Transform:
   m_Father: {fileID: 791531403}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1447963432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447963430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb2062665cfc4b243a1a74afc28d7198, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointNum: 17
 --- !u!65 &1447963433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22533,6 +22520,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1447963434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447963430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dae012598a2cf469a840970822c816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNum: 17
+  target: {fileID: 2009472657}
 --- !u!1001 &1448793573
 PrefabInstance:
   m_ObjectHideFlags: 0
