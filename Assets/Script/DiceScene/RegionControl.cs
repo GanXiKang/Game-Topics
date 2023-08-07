@@ -14,35 +14,25 @@ public class RegionControl : MonoBehaviour
                 if (DiceControl.P1_totalNum <= 10)
                 {
                     region[1].SetActive(true);
-                    region[2].SetActive(false);
                 }
                 else if (DiceControl.P1_totalNum <= 20)
                 {
-                    region[1].SetActive(false);
                     region[2].SetActive(true);
-                    region[3].SetActive(false);
                 }
                 else if (DiceControl.P1_totalNum <= 30)
                 {
-                    region[2].SetActive(false);
                     region[3].SetActive(true);
-                    region[4].SetActive(false);
                 }
                 else if (DiceControl.P1_totalNum <= 40)
                 {
-                    region[3].SetActive(false);
                     region[4].SetActive(true);
-                    region[5].SetActive(false);
                 }
                 else if (DiceControl.P1_totalNum <= 50)
                 {
-                    region[4].SetActive(false);
                     region[5].SetActive(true);
-                    region[6].SetActive(false);
                 }
                 else if (DiceControl.P1_totalNum <= 60)
                 {
-                    region[5].SetActive(false);
                     region[6].SetActive(true);
                 }
                 break;
@@ -51,35 +41,25 @@ public class RegionControl : MonoBehaviour
                 if (DiceControl.P2_totalNum <= 10)
                 {
                     region[1].SetActive(true);
-                    region[2].SetActive(false);
                 }
                 else if (DiceControl.P2_totalNum <= 20)
                 {
-                    region[1].SetActive(false);
                     region[2].SetActive(true);
-                    region[3].SetActive(false);
                 }
                 else if (DiceControl.P2_totalNum <= 30)
                 {
-                    region[2].SetActive(false);
                     region[3].SetActive(true);
-                    region[4].SetActive(false);
                 }
                 else if (DiceControl.P2_totalNum <= 40)
                 {
-                    region[3].SetActive(false);
                     region[4].SetActive(true);
-                    region[5].SetActive(false);
                 }
                 else if (DiceControl.P2_totalNum <= 50)
                 {
-                    region[4].SetActive(false);
                     region[5].SetActive(true);
-                    region[6].SetActive(false);
                 }
                 else if (DiceControl.P2_totalNum <= 60)
                 {
-                    region[5].SetActive(false);
                     region[6].SetActive(true);
                 }
                 break;
@@ -88,35 +68,25 @@ public class RegionControl : MonoBehaviour
                 if (DiceControl.P3_totalNum <= 10)
                 {
                     region[1].SetActive(true);
-                    region[2].SetActive(false);
                 }
                 else if (DiceControl.P3_totalNum <= 20)
                 {
-                    region[1].SetActive(false);
                     region[2].SetActive(true);
-                    region[3].SetActive(false);
                 }
                 else if (DiceControl.P3_totalNum <= 30)
                 {
-                    region[2].SetActive(false);
                     region[3].SetActive(true);
-                    region[4].SetActive(false);
                 }
                 else if (DiceControl.P3_totalNum <= 40)
                 {
-                    region[3].SetActive(false);
                     region[4].SetActive(true);
-                    region[5].SetActive(false);
                 }
                 else if (DiceControl.P3_totalNum <= 50)
                 {
-                    region[4].SetActive(false);
                     region[5].SetActive(true);
-                    region[6].SetActive(false);
                 }
                 else if (DiceControl.P3_totalNum <= 60)
                 {
-                    region[5].SetActive(false);
                     region[6].SetActive(true);
                 }
                 break;
@@ -125,35 +95,25 @@ public class RegionControl : MonoBehaviour
                 if (DiceControl.P4_totalNum <= 10)
                 {
                     region[1].SetActive(true);
-                    region[2].SetActive(false);
                 }
                 else if (DiceControl.P4_totalNum <= 20)
                 {
-                    region[1].SetActive(false);
                     region[2].SetActive(true);
-                    region[3].SetActive(false);
                 }
                 else if (DiceControl.P4_totalNum <= 30)
                 {
-                    region[2].SetActive(false);
                     region[3].SetActive(true);
-                    region[4].SetActive(false);
                 }
                 else if (DiceControl.P4_totalNum <= 40)
                 {
-                    region[3].SetActive(false);
                     region[4].SetActive(true);
-                    region[5].SetActive(false);
                 }
                 else if (DiceControl.P4_totalNum <= 50)
                 {
-                    region[4].SetActive(false);
                     region[5].SetActive(true);
-                    region[6].SetActive(false);
                 }
                 else if (DiceControl.P4_totalNum <= 60)
                 {
-                    region[5].SetActive(false);
                     region[6].SetActive(true);
                 }
                 break;
