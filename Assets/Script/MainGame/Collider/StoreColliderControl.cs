@@ -24,7 +24,11 @@ public class StoreColliderControl : MonoBehaviour
             if (DiceControl.P1_totalNum == pointNum)
             {
                 AnimatorControl.isP1Move = false;
-                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, target.transform.rotation, 2f * Time.deltaTime);
+                print(other.transform.rotation);
+
+                Vector3 targetDirection = target.position - other.transform.position;
+                Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
             }
         }
         else if (other.tag == "P2")
