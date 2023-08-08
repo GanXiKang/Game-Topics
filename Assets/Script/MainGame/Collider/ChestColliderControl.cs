@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChestColliderControl : MonoBehaviour
 {
     public int boxPoint, isOpenNumber;
+    public Transform target;
 
     public static bool isOpen1, isOpen2;
     public static int whoReward;
@@ -57,10 +58,72 @@ public class ChestColliderControl : MonoBehaviour
             }
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "P1")
+        {
+            if (DiceControl.P1_totalNum == boxPoint)
+            {
+                if (!PlayerMoveControl.isMove)
+                {
+                    AnimatorControl.isP1Move = false;
+
+                    Vector3 targetDirection = target.position - other.transform.position;
+                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                }
+            }
+        }
+        else if (other.tag == "P2")
+        {
+            if (DiceControl.P2_totalNum == boxPoint)
+            {
+                if (!PlayerMoveControl.isMove)
+                {
+                    AnimatorControl.isP2Move = false;
+
+                    Vector3 targetDirection = target.position - other.transform.position;
+                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                }
+            }
+        }
+        else if (other.tag == "P3")
+        {
+            if (DiceControl.P3_totalNum == boxPoint)
+            {
+                if (!PlayerMoveControl.isMove)
+                {
+                    AnimatorControl.isP3Move = false;
+
+                    Vector3 targetDirection = target.position - other.transform.position;
+                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                }
+            }
+        }
+        else if (other.tag == "P4")
+        {
+            if (DiceControl.P4_totalNum == boxPoint)
+            {
+                if (!PlayerMoveControl.isMove)
+                {
+                    AnimatorControl.isP4Move = false;
+
+                    Vector3 targetDirection = target.position - other.transform.position;
+                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                }
+            }
+        }
+    }
     IEnumerator ChangeCamera()
     {
+        yield return new WaitForSeconds(1f);
+        PlayerMoveControl.isMove = false;
+        yield return new WaitForSeconds(1f);
         OpenBoxJudge();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         Dice.isDiceUI = true;
     }
