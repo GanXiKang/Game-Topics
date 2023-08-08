@@ -24,7 +24,7 @@ public class StoreColliderControl : MonoBehaviour
             if (DiceControl.P1_totalNum == pointNum)
             {
                 AnimatorControl.isP1Move = false;
-                print(other.transform.rotation);
+                PlayerMoveControl.isMove = false;
 
                 //Vector3 targetDirection = target.position - other.transform.position;
                 //Quaternion targetRotation = Quaternion.LookRotation(targetDirection);

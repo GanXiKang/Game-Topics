@@ -9,6 +9,8 @@ public class PlayerMoveControl : MonoBehaviour
 
     GameObject[] p = new GameObject[61];
 
+    public static bool isMove;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -16,7 +18,7 @@ public class PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        if (!MiniGameColliderControl.isMiniGame)
+        if (!MiniGameColliderControl.isMiniGame || !isMove)
         {
             if (gameObject.tag == "P1")
             {
