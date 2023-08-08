@@ -70,7 +70,7 @@ public class StoreColliderControl : MonoBehaviour
 
     IEnumerator LookTarget()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         PlayerMoveControl.isMove = false;
     }
 }
