@@ -64,7 +64,7 @@ public class StoreColliderControl : MonoBehaviour
                 }
             }
         }
-        if (other.tag == "P2")
+        else if (other.tag == "P2")
         {
             if (DiceControl.P2_totalNum == pointNum)
             {
@@ -78,7 +78,7 @@ public class StoreColliderControl : MonoBehaviour
                 }
             }
         }
-        if (other.tag == "P3")
+        else if (other.tag == "P3")
         {
             if (DiceControl.P3_totalNum == pointNum)
             {
@@ -92,7 +92,7 @@ public class StoreColliderControl : MonoBehaviour
                 }
             }
         }
-        if (other.tag == "P4")
+        else if (other.tag == "P4")
         {
             if (DiceControl.P4_totalNum == pointNum)
             {
