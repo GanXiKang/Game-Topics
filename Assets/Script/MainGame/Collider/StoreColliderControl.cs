@@ -23,6 +23,7 @@ public class StoreColliderControl : MonoBehaviour
         {
             if (DiceControl.P1_totalNum == pointNum)
             {
+                AnimatorControl.isP1Move = false;
                 StartCoroutine(LookTarget());
             }
         }
@@ -30,6 +31,7 @@ public class StoreColliderControl : MonoBehaviour
         {
             if (DiceControl.P2_totalNum == pointNum)
             {
+                AnimatorControl.isP2Move = false;
                 StartCoroutine(LookTarget());
             }
         }
@@ -37,6 +39,7 @@ public class StoreColliderControl : MonoBehaviour
         {
             if (DiceControl.P3_totalNum == pointNum)
             {
+                AnimatorControl.isP3Move = false;
                 StartCoroutine(LookTarget());
             }
         }
@@ -44,6 +47,7 @@ public class StoreColliderControl : MonoBehaviour
         {
             if (DiceControl.P4_totalNum == pointNum)
             {
+                AnimatorControl.isP4Move = false;
                 StartCoroutine(LookTarget());
             }
         }
@@ -56,8 +60,6 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    AnimatorControl.isP1Move = false;
-
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
@@ -70,8 +72,6 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    AnimatorControl.isP2Move = false;
-
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
@@ -84,8 +84,6 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    AnimatorControl.isP3Move = false;
-
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
@@ -98,8 +96,6 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    AnimatorControl.isP4Move = false;
-
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
