@@ -116,6 +116,7 @@ public class DiceControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(7);
+        PlayerMoveControl.isMove = true;
         Dice.isDiceScene = false;
         yield return new WaitForSeconds(1.5f);
         Calculate();
