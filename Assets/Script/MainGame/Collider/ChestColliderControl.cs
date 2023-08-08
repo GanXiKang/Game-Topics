@@ -11,13 +11,15 @@ public class ChestColliderControl : MonoBehaviour
 
     void OpenBoxJudge()
     {
-        if (isOpenNumber == 1)
+        switch (isOpenNumber)
         {
-            isOpen1 = true;
-        }
-        else if (isOpenNumber == 2)
-        {
-            isOpen2 = true;
+            case 1:
+                isOpen1 = true;
+                break;
+
+            case 2:
+                isOpen2 = true;
+                break;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -27,7 +29,6 @@ public class ChestColliderControl : MonoBehaviour
             if (DiceControl.P1_totalNum == boxPoint)
             {
                 whoReward = 1;
-                AnimatorControl.isP1Move = false;
                 StartCoroutine(ChangeCamera());
             }
         }
@@ -36,7 +37,6 @@ public class ChestColliderControl : MonoBehaviour
             if (DiceControl.P2_totalNum == boxPoint)
             {
                 whoReward = 2;
-                AnimatorControl.isP2Move = false;
                 StartCoroutine(ChangeCamera());
             }
         }
@@ -45,7 +45,6 @@ public class ChestColliderControl : MonoBehaviour
             if (DiceControl.P3_totalNum == boxPoint)
             {
                 whoReward = 3;
-                AnimatorControl.isP3Move = false;
                 StartCoroutine(ChangeCamera());
             }
         }
@@ -54,7 +53,6 @@ public class ChestColliderControl : MonoBehaviour
             if (DiceControl.P4_totalNum == boxPoint)
             {
                 whoReward = 4;
-                AnimatorControl.isP4Move = false;
                 StartCoroutine(ChangeCamera());
             }
         }
