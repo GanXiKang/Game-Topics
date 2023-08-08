@@ -56,7 +56,7 @@ public class MiniGameColliderControl : MonoBehaviour
                 {
                     AnimatorControl.isP1Move = false;
 
-                    Vector3 targetDirection = other.transform.position - target.transform.position;
+                    Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
                 }
@@ -70,7 +70,7 @@ public class MiniGameColliderControl : MonoBehaviour
                 {
                     AnimatorControl.isP2Move = false;
 
-                    Vector3 targetDirection = other.transform.position - target.transform.position;
+                    Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
                 }
@@ -84,7 +84,7 @@ public class MiniGameColliderControl : MonoBehaviour
                 {
                     AnimatorControl.isP3Move = false;
 
-                    Vector3 targetDirection = other.transform.position - target.transform.position;
+                    Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
                 }
@@ -98,7 +98,7 @@ public class MiniGameColliderControl : MonoBehaviour
                 {
                     AnimatorControl.isP4Move = false;
 
-                    Vector3 targetDirection = other.transform.position - target.transform.position;
+                    Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
                 }
