@@ -58,9 +58,12 @@ public class StoreColliderControl : MonoBehaviour
         {
             if (DiceControl.P1_totalNum == pointNum)
             {
-                //Vector3 targetDirection = target.position - other.transform.position;
-                //Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                //other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                if (!PlayerMoveControl.isMove)
+                {
+                    Vector3 targetDirection = target.position - other.transform.position;
+                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                }
             }
         }
     }
@@ -69,9 +72,6 @@ public class StoreColliderControl : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         PlayerMoveControl.isMove = false;
-        Vector3 targetDirection = target.position - other.transform.position;
-        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
     }
 }
-}
+
