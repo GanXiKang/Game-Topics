@@ -9,6 +9,7 @@ public class MiniGameColliderControl : MonoBehaviour
     public static float p;
 
     public int miniGame, MGPoint;
+    public Transform target;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,7 +18,6 @@ public class MiniGameColliderControl : MonoBehaviour
             if (DiceControl.P1_totalNum == MGPoint)
             {
                 p = 1;
-                AnimatorControl.isP1Move = false;
                 StartCoroutine(StartMiniGame());
             }
         }
@@ -26,7 +26,6 @@ public class MiniGameColliderControl : MonoBehaviour
             if (DiceControl.P2_totalNum == MGPoint)
             {
                 p = 2;
-                AnimatorControl.isP2Move = false;
                 StartCoroutine(StartMiniGame());
             }
         }
@@ -35,7 +34,6 @@ public class MiniGameColliderControl : MonoBehaviour
             if (DiceControl.P3_totalNum == MGPoint)
             {
                 p = 3;
-                AnimatorControl.isP3Move = false;
                 StartCoroutine(StartMiniGame());
             }
         }
@@ -44,8 +42,66 @@ public class MiniGameColliderControl : MonoBehaviour
             if (DiceControl.P4_totalNum == MGPoint)
             {
                 p = 4;
-                AnimatorControl.isP4Move = false;
                 StartCoroutine(StartMiniGame());
+            }
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "P1")
+        {
+            if (DiceControl.P1_totalNum == MGPoint)
+            {
+                if (!PlayerMoveControl.isMove)
+                {
+                    AnimatorControl.isP1Move = false;
+
+                    Vector3 targetDirection = other.transform.position - target.transform.position;
+                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                }
+            }
+        }
+        else if (other.tag == "P2")
+        {
+            if (DiceControl.P2_totalNum == MGPoint)
+            {
+                if (!PlayerMoveControl.isMove)
+                {
+                    AnimatorControl.isP2Move = false;
+
+                    Vector3 targetDirection = other.transform.position - target.transform.position;
+                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                }
+            }
+        }
+        else if (other.tag == "P3")
+        {
+            if (DiceControl.P3_totalNum == MGPoint)
+            {
+                if (!PlayerMoveControl.isMove)
+                {
+                    AnimatorControl.isP3Move = false;
+
+                    Vector3 targetDirection = other.transform.position - target.transform.position;
+                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                }
+            }
+        }
+        else if (other.tag == "P4")
+        {
+            if (DiceControl.P4_totalNum == MGPoint)
+            {
+                if (!PlayerMoveControl.isMove)
+                {
+                    AnimatorControl.isP4Move = false;
+
+                    Vector3 targetDirection = other.transform.position - target.transform.position;
+                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                }
             }
         }
     }
@@ -70,7 +126,9 @@ public class MiniGameColliderControl : MonoBehaviour
     }
     IEnumerator StartMiniGame()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
+        PlayerMoveControl.isMove = false;
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(miniGame);
         isMiniGame = true;
         ChangeCameraControl.changeCameraNum++;
