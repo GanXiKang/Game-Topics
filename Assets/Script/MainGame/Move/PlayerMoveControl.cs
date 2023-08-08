@@ -9,7 +9,7 @@ public class PlayerMoveControl : MonoBehaviour
 
     GameObject[] p = new GameObject[61];
 
-    public static bool isMove;
+    public static bool isMove = true;
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class PlayerMoveControl : MonoBehaviour
     }
     void Update()
     {
-        if (!MiniGameColliderControl.isMiniGame || !isMove)
+        if (!MiniGameColliderControl.isMiniGame || isMove)
         {
             if (gameObject.tag == "P1")
             {
