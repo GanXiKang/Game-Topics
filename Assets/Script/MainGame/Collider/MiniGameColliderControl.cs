@@ -18,6 +18,7 @@ public class MiniGameColliderControl : MonoBehaviour
             if (DiceControl.P1_totalNum == MGPoint)
             {
                 p = 1;
+                AnimatorControl.isP1Move = false;
                 StartCoroutine(StartMiniGame());
             }
         }
@@ -26,6 +27,7 @@ public class MiniGameColliderControl : MonoBehaviour
             if (DiceControl.P2_totalNum == MGPoint)
             {
                 p = 2;
+                AnimatorControl.isP2Move = false;
                 StartCoroutine(StartMiniGame());
             }
         }
@@ -34,6 +36,7 @@ public class MiniGameColliderControl : MonoBehaviour
             if (DiceControl.P3_totalNum == MGPoint)
             {
                 p = 3;
+                AnimatorControl.isP3Move = false;
                 StartCoroutine(StartMiniGame());
             }
         }
@@ -42,6 +45,7 @@ public class MiniGameColliderControl : MonoBehaviour
             if (DiceControl.P4_totalNum == MGPoint)
             {
                 p = 4;
+                AnimatorControl.isP4Move = false;
                 StartCoroutine(StartMiniGame());
             }
         }
@@ -54,8 +58,6 @@ public class MiniGameColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    AnimatorControl.isP1Move = false;
-
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
@@ -68,8 +70,6 @@ public class MiniGameColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    AnimatorControl.isP2Move = false;
-
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
@@ -82,8 +82,6 @@ public class MiniGameColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    AnimatorControl.isP3Move = false;
-
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
@@ -96,8 +94,6 @@ public class MiniGameColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    AnimatorControl.isP4Move = false;
-
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
