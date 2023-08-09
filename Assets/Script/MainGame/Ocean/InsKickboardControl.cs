@@ -8,8 +8,9 @@ public class InsKickboardControl : MonoBehaviour
     public GameObject insPoint;
 
     GameObject kickboardFollow;
-
     bool isFollow;
+
+    public static bool insKickboard, destoryKickboard;
 
     void Update()
     {
@@ -28,13 +29,15 @@ public class InsKickboardControl : MonoBehaviour
         {
             kickboardFollow = Instantiate(kickboard, insPoint.transform.position, insPoint.transform.rotation);
             isFollow = true;
+            insKickboard = true;
         }
     }
     private void OnTriggerExit(Collider other)
-    {
+    { 
         if (other.tag == "Ocean")
         { 
             isFollow = false;
+            destoryKickboard = true;
         }
     }
 }
