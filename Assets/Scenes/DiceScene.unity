@@ -1542,6 +1542,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8ca7633c88b1ea6408e18950e33a2134, type: 3}
   m_PrefabInstance: {fileID: 917028242}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1035899927
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1674063178}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7515429101286732190, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2040254050740271484, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 678653037a32e684da610e259f7923f0, type: 3}
+      propertyPath: m_Name
+      value: River_Dice_Scene
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 678653037a32e684da610e259f7923f0, type: 3}
+--- !u!4 &1035899928 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 678653037a32e684da610e259f7923f0, type: 3}
+  m_PrefabInstance: {fileID: 1035899927}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050355096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,8 +1857,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc4ec20fa126b442a97f80fb588c1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinNum: 40
-  MaxNum: 50
+  MinNum: 10
+  MaxNum: 20
   rotationForce: 120
 --- !u!1 &1317298615
 GameObject:
@@ -2062,7 +2132,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1674063178}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1548786898
 BoxCollider:
@@ -2436,6 +2506,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1035899928}
   - {fileID: 1548786897}
   m_Father: {fileID: 1050355097}
   m_RootOrder: 1
