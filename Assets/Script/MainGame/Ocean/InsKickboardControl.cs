@@ -5,29 +5,34 @@ using UnityEngine;
 public class InsKickboardControl : MonoBehaviour
 {
     public GameObject kickboard;
-    public GameObject insPoint;
+    //public GameObject insPoint;
 
-    GameObject kickboardFollow;
+    //GameObject kickboardFollow;
     bool isFollow;
 
     public static bool insKickboard, destoryKickboard;
-
+    void Start()
+    {
+        kickboard.SetActive(false);
+    }
     void Update()
     {
         if (isFollow)
         {
-            kickboardFollow.transform.position = insPoint.transform.position;
+            //kickboardFollow.transform.position = insPoint.transform.position;
+            kickboard.SetActive(true);
         }
         else
         {
-            Destroy(kickboardFollow, 1f);
+            //Destroy(kickboardFollow, 1f);
+            kickboard.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Ocean")
         {
-            kickboardFollow = Instantiate(kickboard, insPoint.transform.position, insPoint.transform.rotation);
+            //kickboardFollow = Instantiate(kickboard, insPoint.transform.position, insPoint.transform.rotation);
             isFollow = true;
             insKickboard = true;
         }
