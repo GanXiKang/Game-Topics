@@ -13,6 +13,18 @@ public class StoreUIControl : MonoBehaviour
 
     int[] howMuchCoin = new int[7];
     int whyProps, buyQuantity = 1;
+
+    void Start()
+    {
+        howMuchCoin[0] = 100;
+        howMuchCoin[1] = 90;
+        howMuchCoin[2] = 80;
+        howMuchCoin[3] = 70;
+        howMuchCoin[4] = 60;
+        howMuchCoin[5] = 50;
+        howMuchCoin[6] = 40;
+
+    }
     void Update()
     {
         if (isStore)
