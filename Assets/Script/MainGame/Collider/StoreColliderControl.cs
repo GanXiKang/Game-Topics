@@ -56,7 +56,7 @@ public class StoreColliderControl : MonoBehaviour
                         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                         other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
                     }
-                    else 
+                    else
                     {
                         Vector3 buyingDirection = buying.position - other.transform.position;
                         Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
@@ -71,9 +71,18 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    Vector3 targetDirection = target.position - other.transform.position;
-                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                    if (!StoreUIControl.isBuying)
+                    {
+                        Vector3 targetDirection = target.position - other.transform.position;
+                        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                    }
+                    else
+                    {
+                        Vector3 buyingDirection = buying.position - other.transform.position;
+                        Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
+                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                    }
                 }
             }
         }
@@ -83,9 +92,18 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    Vector3 targetDirection = target.position - other.transform.position;
-                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                    if (!StoreUIControl.isBuying)
+                    {
+                        Vector3 targetDirection = target.position - other.transform.position;
+                        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                    }
+                    else
+                    {
+                        Vector3 buyingDirection = buying.position - other.transform.position;
+                        Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
+                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                    }
                 }
             }
         }
@@ -95,9 +113,18 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    Vector3 targetDirection = target.position - other.transform.position;
-                    Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                    other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                    if (!StoreUIControl.isBuying)
+                    {
+                        Vector3 targetDirection = target.position - other.transform.position;
+                        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                    }
+                    else
+                    {
+                        Vector3 buyingDirection = buying.position - other.transform.position;
+                        Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
+                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                    }
                 }
             }
         }
