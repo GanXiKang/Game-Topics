@@ -7,12 +7,15 @@ public class StoreColliderControl : MonoBehaviour
     public int pointNum;
     public Transform target, buying;
 
+    public static int who;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "P1")
         {
             if (DiceControl.P1_totalNum == pointNum)
             {
+                who = 1;
                 AnimatorControl.isP1Move = false;
                 StartCoroutine(LookTarget());
             }
@@ -21,6 +24,7 @@ public class StoreColliderControl : MonoBehaviour
         {
             if (DiceControl.P2_totalNum == pointNum)
             {
+                who = 2;
                 AnimatorControl.isP2Move = false;
                 StartCoroutine(LookTarget());
             }
@@ -29,6 +33,7 @@ public class StoreColliderControl : MonoBehaviour
         {
             if (DiceControl.P3_totalNum == pointNum)
             {
+                who = 3;
                 AnimatorControl.isP3Move = false;
                 StartCoroutine(LookTarget());
             }
@@ -37,6 +42,7 @@ public class StoreColliderControl : MonoBehaviour
         {
             if (DiceControl.P4_totalNum == pointNum)
             {
+                who = 4;
                 AnimatorControl.isP4Move = false;
                 StartCoroutine(LookTarget());
             }
