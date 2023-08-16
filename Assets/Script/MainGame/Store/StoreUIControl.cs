@@ -7,23 +7,20 @@ public class StoreUIControl : MonoBehaviour
 {
     public GameObject[] StoreUI = new GameObject[4];
     public Text[] PorpsCoin = new Text[7];
-    public Text[] group3Text = new Text[5];
+    public Text[] group3Text = new Text[4];
 
     public static bool isStore = false, isBuying = false;
 
-    int[] howMuchCoin = new int[7];
     int whyProps, buyQuantity = 1;
+    int[] howMuchCoin = new int[7];
+    string[] propsName = new string[7];
+    string[] propsUse = new string[7];
 
     void Start()
     {
-        howMuchCoin[0] = 100;
-        howMuchCoin[1] = 90;
-        howMuchCoin[2] = 80;
-        howMuchCoin[3] = 70;
-        howMuchCoin[4] = 60;
-        howMuchCoin[5] = 50;
-        howMuchCoin[6] = 40;
-
+        InitialHowMuchCoin();
+        InitialPropsName();
+        InitialPropsUse();
     }
     void Update()
     {
@@ -316,5 +313,36 @@ public class StoreUIControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         Dice.isDiceUI = true;
+    }
+
+    void InitialHowMuchCoin()
+    {
+        howMuchCoin[0] = 100;
+        howMuchCoin[1] = 90;
+        howMuchCoin[2] = 80;
+        howMuchCoin[3] = 70;
+        howMuchCoin[4] = 60;
+        howMuchCoin[5] = 50;
+        howMuchCoin[6] = 40;
+    }
+    void InitialPropsName()
+    {
+        propsName[0] = "A道具";
+        propsName[1] = "B道具";
+        propsName[2] = "C道具";
+        propsName[3] = "D道具";
+        propsName[4] = "E道具";
+        propsName[5] = "F道具";
+        propsName[6] = "G道具";
+    }
+    void InitialPropsUse()
+    {
+        propsUse[0] = "A用途";
+        propsUse[1] = "B用途";
+        propsUse[2] = "C用途";
+        propsUse[3] = "D用途";
+        propsUse[4] = "E用途";
+        propsUse[5] = "F用途";
+        propsUse[6] = "G用途";
     }
 }
