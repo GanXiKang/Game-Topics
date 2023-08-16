@@ -11,13 +11,14 @@ public class StoreUIControl : MonoBehaviour
 
     public static bool isStore = false, isBuying = false;
 
-    int whyProps, buyQuantity = 1;
+    int whyProps, buyQuantity = 1, limitQuantity = 3;
     int[] howMuchCoin = new int[7];
     string[] propsName = new string[7];
     string[] propsUse = new string[7];
 
     void Start()
     {
+        //道具數量和書包系統一同製作
         InitialHowMuchCoin();
         InitialPropsName();
         InitialPropsUse();
