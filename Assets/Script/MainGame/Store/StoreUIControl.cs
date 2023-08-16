@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StoreUIControl : MonoBehaviour
 {
     public GameObject[] StoreUI = new GameObject[4];
-    public Text[] howMuchCoin = new Text[6];
+    public Text[] howMuchCoin = new Text[7];
 
     public static bool isStore = false, isBuying = false;
 
