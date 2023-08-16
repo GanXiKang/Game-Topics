@@ -4141,7 +4141,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 239819837}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414603047}
+        m_TargetAssemblyTypeName: StoreUIControl, Assembly-CSharp
+        m_MethodName: Button_Reduce
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &239819837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19835,7 +19847,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1154971826}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414603047}
+        m_TargetAssemblyTypeName: StoreUIControl, Assembly-CSharp
+        m_MethodName: Button_Add
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1154971826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25011,6 +25035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ea14d9985e1484b9b19a59b4ba26b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialCoin: 80
 --- !u!114 &1414603045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25070,6 +25095,12 @@ MonoBehaviour:
   - {fileID: 1897415279}
   - {fileID: 1593806481}
   - {fileID: 311473739}
+  group3Text:
+  - {fileID: 1122184517}
+  - {fileID: 1545302892}
+  - {fileID: 220576287}
+  - {fileID: 1898340190}
+  - {fileID: 75834034}
 --- !u!1 &1416896649
 GameObject:
   m_ObjectHideFlags: 0
