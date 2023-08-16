@@ -5,6 +5,7 @@ using UnityEngine;
 public class DiceInstantionAnimalsControl : MonoBehaviour
 {
     public GameObject[] animals = new GameObject[4];
+
     void Start()
     {
         if (Dice.who == 1)
