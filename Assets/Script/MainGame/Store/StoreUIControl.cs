@@ -7,6 +7,8 @@ public class StoreUIControl : MonoBehaviour
 {
     public GameObject[] StoreUI = new GameObject[4];
 
+    public static bool isStore;
+
     void Start()
     {
         
