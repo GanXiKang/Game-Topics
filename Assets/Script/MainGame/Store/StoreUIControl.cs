@@ -7,7 +7,7 @@ public class StoreUIControl : MonoBehaviour
 {
     public GameObject[] StoreUI = new GameObject[4];
 
-    public static bool isStore, isBuying;
+    public static bool isStore = false, isBuying = false;
 
     void Update()
     {
