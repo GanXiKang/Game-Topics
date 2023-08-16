@@ -276,7 +276,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[0].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
-                    //howMuchCoin[0] *
+                    howMuchCoin[0] *= buyQuantity;
                     group3Text[4].text = howMuchCoin[0].ToString();
                     break;
 
@@ -285,6 +285,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[1].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    howMuchCoin[1] *= buyQuantity;
                     group3Text[4].text = howMuchCoin[1].ToString();
                     break;
 
@@ -293,6 +294,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[2].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    howMuchCoin[2] *= buyQuantity;
                     group3Text[4].text = howMuchCoin[2].ToString();
                     break;
 
@@ -301,6 +303,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[3].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    howMuchCoin[3] *= buyQuantity;
                     group3Text[4].text = howMuchCoin[3].ToString();
                     break;
 
@@ -309,6 +312,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[4].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    howMuchCoin[4] *= buyQuantity;
                     group3Text[4].text = howMuchCoin[4].ToString();
                     break;
 
@@ -317,6 +321,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[5].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    howMuchCoin[5] *= buyQuantity;
                     group3Text[4].text = howMuchCoin[5].ToString();
                     break;
 
@@ -325,6 +330,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[6].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    howMuchCoin[6] *= buyQuantity;
                     group3Text[4].text = howMuchCoin[6].ToString();
                     break;
             }
