@@ -7,7 +7,7 @@ public class StoreUIControl : MonoBehaviour
 {
     public GameObject[] StoreUI = new GameObject[4];
     public Text[] PorpsCoin = new Text[7];
-    public Text[] group3Text = new Text[4];
+    public Text[] group3Text = new Text[5];
 
     public static bool isStore = false, isBuying = false;
 
@@ -270,6 +270,17 @@ public class StoreUIControl : MonoBehaviour
                     }
                     break;
             }
+            switch (whyProps)
+            {
+                case 1:
+                    group3Text[0].text = propsName[0].ToString();
+                    //group2Text[1].text =
+                    group3Text[2].text = propsUse[0].ToString();
+                    group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    group3Text[4].text = howMuchCoin[0].ToString();
+                    break;
+                    
+            }
         }
     }
 
@@ -292,10 +303,12 @@ public class StoreUIControl : MonoBehaviour
     public void Button_Add()
     {
         buyQuantity++;
+        Limit();
     }
     public void Button_Reduce()
     {
         buyQuantity--;
+        Limit();
     }
     public void Button_Cancel()
     {
@@ -316,6 +329,17 @@ public class StoreUIControl : MonoBehaviour
         Dice.isDiceUI = true;
     }
 
+    void Limit()
+    {
+        if (buyQuantity > limitQuantity)
+        {
+            buyQuantity = limitQuantity;
+        }
+        else if (buyQuantity < 1)
+        {
+            buyQuantity = 1;
+        }
+    }
     void InitialHowMuchCoin()
     {
         howMuchCoin[0] = 100;
