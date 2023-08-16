@@ -29,6 +29,21 @@ public class StoreUIControl : MonoBehaviour
     {
         StartCoroutine(ChangeCamera());
     }
+    public void Button_Porps(int why)
+    {
+        StoreUI[2].SetActive(false);
+        StoreUI[3].SetActive(true);
+    }
+    public void Button_Cancel()
+    {
+        StoreUI[2].SetActive(true);
+        StoreUI[3].SetActive(false);
+    }
+    public void Button_Buy()
+    {
+        StoreUI[2].SetActive(true);
+        StoreUI[3].SetActive(false);
+    }
     IEnumerator ChangeCamera()
     {
         StoreUI[1].SetActive(false);
