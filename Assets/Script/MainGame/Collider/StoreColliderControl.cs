@@ -56,13 +56,13 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
-                    if (!StoreUIControl.isBuying)
+                    if (StoreUIControl.isStore)
                     {
                         Vector3 targetDirection = target.position - other.transform.position;
                         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                         other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
                     }
-                    else
+                    if (StoreUIControl.isBuying)
                     {
                         Vector3 buyingDirection = buying.position - other.transform.position;
                         Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
