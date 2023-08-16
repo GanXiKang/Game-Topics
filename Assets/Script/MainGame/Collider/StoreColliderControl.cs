@@ -5,17 +5,7 @@ using UnityEngine;
 public class StoreColliderControl : MonoBehaviour
 {
     public int pointNum;
-    public Transform target;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    public Transform target, buying;
 
     private void OnTriggerEnter(Collider other)
     {
