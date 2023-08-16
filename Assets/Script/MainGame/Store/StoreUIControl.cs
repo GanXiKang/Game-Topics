@@ -28,7 +28,6 @@ public class StoreUIControl : MonoBehaviour
         if (isStore)
         {
             StoreUI[1].SetActive(true);
-            isStore = false;
         }
         else if (isBuying)
         {
@@ -277,9 +276,57 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[0].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    //howMuchCoin[0] *
                     group3Text[4].text = howMuchCoin[0].ToString();
                     break;
-                    
+
+                case 2:
+                    group3Text[0].text = propsName[1].ToString();
+                    //group2Text[1].text =
+                    group3Text[2].text = propsUse[1].ToString();
+                    group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    group3Text[4].text = howMuchCoin[1].ToString();
+                    break;
+
+                case 3:
+                    group3Text[0].text = propsName[2].ToString();
+                    //group2Text[1].text =
+                    group3Text[2].text = propsUse[2].ToString();
+                    group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    group3Text[4].text = howMuchCoin[2].ToString();
+                    break;
+
+                case 4:
+                    group3Text[0].text = propsName[3].ToString();
+                    //group2Text[1].text =
+                    group3Text[2].text = propsUse[3].ToString();
+                    group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    group3Text[4].text = howMuchCoin[3].ToString();
+                    break;
+
+                case 5:
+                    group3Text[0].text = propsName[4].ToString();
+                    //group2Text[1].text =
+                    group3Text[2].text = propsUse[4].ToString();
+                    group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    group3Text[4].text = howMuchCoin[4].ToString();
+                    break;
+
+                case 6:
+                    group3Text[0].text = propsName[5].ToString();
+                    //group2Text[1].text =
+                    group3Text[2].text = propsUse[5].ToString();
+                    group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    group3Text[4].text = howMuchCoin[5].ToString();
+                    break;
+
+                case 7:
+                    group3Text[0].text = propsName[6].ToString();
+                    //group2Text[1].text =
+                    group3Text[2].text = propsUse[6].ToString();
+                    group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
+                    group3Text[4].text = howMuchCoin[6].ToString();
+                    break;
             }
         }
     }
@@ -287,6 +334,7 @@ public class StoreUIControl : MonoBehaviour
     public void Button_Yes()
     {
         isBuying = true;
+        isStore = false;
         StoreUI[1].SetActive(false);
         StoreUI[2].SetActive(true);
     }
@@ -322,6 +370,8 @@ public class StoreUIControl : MonoBehaviour
     }
     IEnumerator ChangeCamera()
     {
+        isStore = false;
+        isBuying = false;
         StoreUI[1].SetActive(false);
         StoreUI[2].SetActive(false);
         yield return new WaitForSeconds(1f);
