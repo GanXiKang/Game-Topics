@@ -401,6 +401,25 @@ public class StoreUIControl : MonoBehaviour
     {
         StoreUI[2].SetActive(true);
         StoreUI[3].SetActive(false);
+        switch (StoreColliderControl.who)
+        {
+            case 1:
+                CoinControl.P1CoinTotal -= totalCoin;
+                break;
+
+            case 2:
+                CoinControl.P2CoinTotal -= totalCoin;
+                break;
+
+            case 3:
+                CoinControl.P3CoinTotal -= totalCoin;
+                break;
+
+            case 4:
+                CoinControl.P4CoinTotal -= totalCoin;
+                break;
+        }
+
     }
     IEnumerator ChangeCamera()
     {
