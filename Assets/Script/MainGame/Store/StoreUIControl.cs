@@ -7,15 +7,21 @@ public class StoreUIControl : MonoBehaviour
 {
     public GameObject[] StoreUI = new GameObject[4];
     public Text[] howMuchCoin = new Text[7];
+    public Text[] group3Text = new Text[5];
 
     public static bool isStore = false, isBuying = false;
 
+    int whyProps, buyQuantity = 1;
     void Update()
     {
         if (isStore)
         {
             StoreUI[1].SetActive(true);
             isStore = false;
+        }
+        else if (isBuying)
+        {
+            
         }
     }
 
@@ -33,6 +39,15 @@ public class StoreUIControl : MonoBehaviour
     {
         StoreUI[2].SetActive(false);
         StoreUI[3].SetActive(true);
+        whyProps = why;
+    }
+    public void Button_Add()
+    {
+        buyQuantity++;
+    }
+    public void Button_Reduce()
+    {
+        buyQuantity--;
     }
     public void Button_Cancel()
     {
