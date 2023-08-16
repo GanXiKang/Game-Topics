@@ -11,7 +11,7 @@ public class StoreUIControl : MonoBehaviour
 
     public static bool isStore = false, isBuying = false;
 
-    int whyProps, buyQuantity = 1, limitQuantity = 3;
+    int whyProps, totalCoin, buyQuantity = 1, limitQuantity = 3;
     int[] howMuchCoin = new int[7];
     string[] propsName = new string[7];
     string[] propsUse = new string[7];
@@ -90,6 +90,14 @@ public class StoreUIControl : MonoBehaviour
                     {
                         PorpsCoin[6].color = Color.green;
                     }
+                    if (CoinControl.P1CoinTotal < totalCoin)
+                    {
+                        group3Text[4].color = Color.red;
+                    }
+                    else
+                    {
+                        group3Text[4].color = Color.green;
+                    }
                     break;
 
                 case 2:
@@ -148,6 +156,14 @@ public class StoreUIControl : MonoBehaviour
                     else
                     {
                         PorpsCoin[6].color = Color.green;
+                    }
+                    if (CoinControl.P2CoinTotal < totalCoin)
+                    {
+                        group3Text[4].color = Color.red;
+                    }
+                    else
+                    {
+                        group3Text[4].color = Color.green;
                     }
                     break;
 
@@ -208,6 +224,14 @@ public class StoreUIControl : MonoBehaviour
                     {
                         PorpsCoin[6].color = Color.green;
                     }
+                    if (CoinControl.P3CoinTotal < totalCoin)
+                    {
+                        group3Text[4].color = Color.red;
+                    }
+                    else
+                    {
+                        group3Text[4].color = Color.green;
+                    }
                     break;
 
                 case 4:
@@ -267,6 +291,14 @@ public class StoreUIControl : MonoBehaviour
                     {
                         PorpsCoin[6].color = Color.green;
                     }
+                    if (CoinControl.P4CoinTotal < totalCoin)
+                    {
+                        group3Text[4].color = Color.red;
+                    }
+                    else
+                    {
+                        group3Text[4].color = Color.green;
+                    }
                     break;
             }
             switch (whyProps)
@@ -276,8 +308,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[0].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
-                    howMuchCoin[0] *= buyQuantity;
-                    group3Text[4].text = howMuchCoin[0].ToString();
+                    group3Text[4].text = totalCoin.ToString();
                     break;
 
                 case 2:
@@ -285,8 +316,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[1].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
-                    howMuchCoin[1] *= buyQuantity;
-                    group3Text[4].text = howMuchCoin[1].ToString();
+                    group3Text[4].text = totalCoin.ToString();
                     break;
 
                 case 3:
@@ -294,8 +324,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[2].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
-                    howMuchCoin[2] *= buyQuantity;
-                    group3Text[4].text = howMuchCoin[2].ToString();
+                    group3Text[4].text = totalCoin.ToString();
                     break;
 
                 case 4:
@@ -303,8 +332,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[3].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
-                    howMuchCoin[3] *= buyQuantity;
-                    group3Text[4].text = howMuchCoin[3].ToString();
+                    group3Text[4].text = totalCoin.ToString();
                     break;
 
                 case 5:
@@ -312,8 +340,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[4].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
-                    howMuchCoin[4] *= buyQuantity;
-                    group3Text[4].text = howMuchCoin[4].ToString();
+                    group3Text[4].text = totalCoin.ToString();
                     break;
 
                 case 6:
@@ -321,8 +348,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[5].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
-                    howMuchCoin[5] *= buyQuantity;
-                    group3Text[4].text = howMuchCoin[5].ToString();
+                    group3Text[4].text = totalCoin.ToString();
                     break;
 
                 case 7:
@@ -330,8 +356,7 @@ public class StoreUIControl : MonoBehaviour
                     //group2Text[1].text =
                     group3Text[2].text = propsUse[6].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
-                    howMuchCoin[6] *= buyQuantity;
-                    group3Text[4].text = howMuchCoin[6].ToString();
+                    group3Text[4].text = totalCoin.ToString();
                     break;
             }
         }
@@ -353,16 +378,19 @@ public class StoreUIControl : MonoBehaviour
         StoreUI[2].SetActive(false);
         StoreUI[3].SetActive(true);
         whyProps = why;
+        BalanceTotal();
     }
     public void Button_Add()
     {
         buyQuantity++;
         Limit();
+        BalanceTotal();
     }
     public void Button_Reduce()
     {
         buyQuantity--;
         Limit();
+        BalanceTotal();
     }
     public void Button_Cancel()
     {
@@ -394,6 +422,39 @@ public class StoreUIControl : MonoBehaviour
         else if (buyQuantity < 1)
         {
             buyQuantity = 1;
+        }
+    }
+    void BalanceTotal()
+    {
+        switch (whyProps)
+        {
+            case 1:
+                totalCoin = howMuchCoin[0] * buyQuantity;
+                break;
+
+            case 2:
+                totalCoin = howMuchCoin[1] * buyQuantity;
+                break;
+
+            case 3:
+                totalCoin = howMuchCoin[2] * buyQuantity;
+                break;
+
+            case 4:
+                totalCoin = howMuchCoin[3] * buyQuantity;
+                break;
+
+            case 5:
+                totalCoin = howMuchCoin[4] * buyQuantity;
+                break;
+
+            case 6:
+                totalCoin = howMuchCoin[5] * buyQuantity;
+                break;
+
+            case 7:
+                totalCoin = howMuchCoin[6] * buyQuantity;
+                break;
         }
     }
     void InitialHowMuchCoin()
