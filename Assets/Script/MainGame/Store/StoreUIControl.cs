@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class StoreUIControl : MonoBehaviour
 {
     public GameObject[] StoreUI = new GameObject[4];
+    public Text[] howMuchCoin = new Text[6];
 
     public static bool isStore = false, isBuying = false;
 
@@ -31,6 +32,7 @@ public class StoreUIControl : MonoBehaviour
     IEnumerator ChangeCamera()
     {
         StoreUI[1].SetActive(false);
+        StoreUI[2].SetActive(false);
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         Dice.isDiceUI = true;
