@@ -8,6 +8,7 @@ public class StoreUIControl : MonoBehaviour
     public GameObject[] StoreUI = new GameObject[4];
     public Text[] PorpsCoin = new Text[7];
     public Text[] group3Text = new Text[5];
+    public Button buttonBuy;
 
     public static bool isStore = false, isBuying = false;
 
@@ -370,6 +371,15 @@ public class StoreUIControl : MonoBehaviour
                     break;
             }
         }
+
+        if (buyOK)
+        {
+            buttonBuy.interactable = true;
+        }
+        else 
+        {
+            buttonBuy.interactable = false;
+        }
     }
 
     public void Button_Yes()
@@ -410,31 +420,28 @@ public class StoreUIControl : MonoBehaviour
     }
     public void Button_Buy()
     {
-        if (buyOK)
+        StoreUI[2].SetActive(true);
+        StoreUI[3].SetActive(false);
+        switch (StoreColliderControl.who)
         {
-            StoreUI[2].SetActive(true);
-            StoreUI[3].SetActive(false);
-            switch (StoreColliderControl.who)
-            {
-                case 1:
-                    CoinControl.P1CoinTotal -= totalCoin;
-                    break;
+            case 1:
+                CoinControl.P1CoinTotal -= totalCoin;
+                break;
 
-                case 2:
-                    CoinControl.P2CoinTotal -= totalCoin;
-                    break;
+            case 2:
+                CoinControl.P2CoinTotal -= totalCoin;
+                break;
 
-                case 3:
-                    CoinControl.P3CoinTotal -= totalCoin;
-                    break;
+            case 3:
+                CoinControl.P3CoinTotal -= totalCoin;
+                break;
 
-                case 4:
-                    CoinControl.P4CoinTotal -= totalCoin;
-                    break;
-            }
-            haveBuy = true;
-            CatAnimatorControl.isHappy = true;
+            case 4:
+                CoinControl.P4CoinTotal -= totalCoin;
+                break;
         }
+        haveBuy = true;
+        CatAnimatorControl.isHappy = true;
     }
     IEnumerator ChangeCamera()
     {
