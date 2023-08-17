@@ -56,6 +56,7 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
+                    print(StoreUIControl.isStore);
                     if (StoreUIControl.isStore)
                     {
                         Vector3 targetDirection = target.position - other.transform.position;
