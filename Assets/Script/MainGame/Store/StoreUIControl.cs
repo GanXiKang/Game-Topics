@@ -11,7 +11,7 @@ public class StoreUIControl : MonoBehaviour
 
     public static bool isStore = false, isBuying = false;
 
-    bool haveBuy = false;
+    bool haveBuy = false, buyOK = false;
     int whyProps, totalCoin, buyQuantity = 1, limitQuantity = 3;
     int[] howMuchCoin = new int[7];
     string[] propsName = new string[7];
@@ -95,10 +95,12 @@ public class StoreUIControl : MonoBehaviour
                     if (CoinControl.P1CoinTotal < totalCoin)
                     {
                         group3Text[4].color = Color.red;
+                        buyOK = false;
                     }
                     else
                     {
                         group3Text[4].color = Color.green;
+                        buyOK = true;
                     }
                     break;
 
@@ -162,10 +164,12 @@ public class StoreUIControl : MonoBehaviour
                     if (CoinControl.P2CoinTotal < totalCoin)
                     {
                         group3Text[4].color = Color.red;
+                        buyOK = false;
                     }
                     else
                     {
                         group3Text[4].color = Color.green;
+                        buyOK = true;
                     }
                     break;
 
@@ -229,10 +233,12 @@ public class StoreUIControl : MonoBehaviour
                     if (CoinControl.P3CoinTotal < totalCoin)
                     {
                         group3Text[4].color = Color.red;
+                        buyOK = false;
                     }
                     else
                     {
                         group3Text[4].color = Color.green;
+                        buyOK = true;
                     }
                     break;
 
@@ -296,10 +302,12 @@ public class StoreUIControl : MonoBehaviour
                     if (CoinControl.P4CoinTotal < totalCoin)
                     {
                         group3Text[4].color = Color.red;
+                        buyOK = false;
                     }
                     else
                     {
                         group3Text[4].color = Color.green;
+                        buyOK = true;
                     }
                     break;
             }
@@ -402,28 +410,31 @@ public class StoreUIControl : MonoBehaviour
     }
     public void Button_Buy()
     {
-        StoreUI[2].SetActive(true);
-        StoreUI[3].SetActive(false);
-        switch (StoreColliderControl.who)
+        if (buyOK)
         {
-            case 1:
-                CoinControl.P1CoinTotal -= totalCoin;
-                break;
+            StoreUI[2].SetActive(true);
+            StoreUI[3].SetActive(false);
+            switch (StoreColliderControl.who)
+            {
+                case 1:
+                    CoinControl.P1CoinTotal -= totalCoin;
+                    break;
 
-            case 2:
-                CoinControl.P2CoinTotal -= totalCoin;
-                break;
+                case 2:
+                    CoinControl.P2CoinTotal -= totalCoin;
+                    break;
 
-            case 3:
-                CoinControl.P3CoinTotal -= totalCoin;
-                break;
+                case 3:
+                    CoinControl.P3CoinTotal -= totalCoin;
+                    break;
 
-            case 4:
-                CoinControl.P4CoinTotal -= totalCoin;
-                break;
+                case 4:
+                    CoinControl.P4CoinTotal -= totalCoin;
+                    break;
+            }
+            haveBuy = true;
+            CatAnimatorControl.isHappy = true;
         }
-        haveBuy = true;
-        CatAnimatorControl.isHappy = true;
     }
     IEnumerator ChangeCamera()
     {
