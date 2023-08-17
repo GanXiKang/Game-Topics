@@ -21,6 +21,7 @@ public class CatAnimatorControl : MonoBehaviour
         if (isHappy)
         {
             ani.SetBool("Happy", true);
+            isHappy = false;
         }
         else 
         {
@@ -30,6 +31,7 @@ public class CatAnimatorControl : MonoBehaviour
         if (isSad)
         {
             ani.SetBool("Sad", true);
+            isSad = false;
         }
         else
         {
@@ -48,6 +50,7 @@ public class CatAnimatorControl : MonoBehaviour
         if (isBye)
         {
             ani.SetBool("Bye", true);
+            isBye = false;
         }
         else
         {

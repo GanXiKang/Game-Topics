@@ -11,6 +11,7 @@ public class StoreUIControl : MonoBehaviour
 
     public static bool isStore = false, isBuying = false;
 
+    bool haveBuy = false;
     int whyProps, totalCoin, buyQuantity = 1, limitQuantity = 3;
     int[] howMuchCoin = new int[7];
     string[] propsName = new string[7];
@@ -28,6 +29,7 @@ public class StoreUIControl : MonoBehaviour
         if (isStore)
         {
             StoreUI[1].SetActive(true);
+            CatAnimatorControl.isWave = true;
         }
         else if (isBuying)
         {
@@ -368,6 +370,7 @@ public class StoreUIControl : MonoBehaviour
         isStore = false;
         StoreUI[1].SetActive(false);
         StoreUI[2].SetActive(true);
+        CatAnimatorControl.isWave = false;
     }
     public void Button_NO()
     {
@@ -419,7 +422,8 @@ public class StoreUIControl : MonoBehaviour
                 CoinControl.P4CoinTotal -= totalCoin;
                 break;
         }
-
+        haveBuy = true;
+        CatAnimatorControl.isHappy = true;
     }
     IEnumerator ChangeCamera()
     {
@@ -427,6 +431,14 @@ public class StoreUIControl : MonoBehaviour
         isBuying = false;
         StoreUI[1].SetActive(false);
         StoreUI[2].SetActive(false);
+        if (haveBuy)
+        {
+            CatAnimatorControl.isBye = true;
+        }
+        else
+        {
+            CatAnimatorControl.isSad = true;
+        }
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         Dice.isDiceUI = true;
