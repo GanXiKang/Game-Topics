@@ -449,6 +449,7 @@ public class StoreUIControl : MonoBehaviour
     }
     IEnumerator ChangeCamera()
     {
+
         isStore = false;
         isBuying = false;
         StoreUI[1].SetActive(false);
@@ -461,7 +462,7 @@ public class StoreUIControl : MonoBehaviour
         {
             CatAnimatorControl.isSad = true;
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         Dice.isDiceUI = true;
     }
