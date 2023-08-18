@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StoreUIControl : MonoBehaviour
 {
     AudioSource BGM;
-    public AudioClip buy, cancel, close, getCoin, select, sure
+    public AudioClip buy, cancel, close, getCoin, select, sure;
 
     public GameObject[] StoreUI = new GameObject[4];
     public Text[] PorpsCoin = new Text[7];
