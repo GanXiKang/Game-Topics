@@ -9,6 +9,8 @@ public class StoreUIControl : MonoBehaviour
     public Text[] PorpsCoin = new Text[7];
     public Text[] group3Text = new Text[5];
     public Button buttonBuy;
+    public AudioSource BGM;
+    public AudioSource buy, cancel, close, getCoin, select, sure;
 
     public static bool isStore = false, isBuying = false;
 
