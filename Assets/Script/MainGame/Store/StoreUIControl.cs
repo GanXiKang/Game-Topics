@@ -388,6 +388,7 @@ public class StoreUIControl : MonoBehaviour
 
     public void Button_Yes()
     {
+        BGM.PlayOneShot(sure);
         isBuying = true;
         isStore = false;
         StoreUI[1].SetActive(false);
@@ -400,6 +401,7 @@ public class StoreUIControl : MonoBehaviour
     }
     public void Button_Porps(int why)
     {
+        BGM.PlayOneShot(getCoin);
         StoreUI[2].SetActive(false);
         StoreUI[3].SetActive(true);
         whyProps = why;
@@ -419,11 +421,13 @@ public class StoreUIControl : MonoBehaviour
     }
     public void Button_Cancel()
     {
+        BGM.PlayOneShot(cancel);
         StoreUI[2].SetActive(true);
         StoreUI[3].SetActive(false);
     }
     public void Button_Buy()
     {
+        BGM.PlayOneShot(buy);
         StoreUI[2].SetActive(true);
         StoreUI[3].SetActive(false);
         switch (StoreColliderControl.who)
@@ -449,7 +453,7 @@ public class StoreUIControl : MonoBehaviour
     }
     IEnumerator ChangeCamera()
     {
-
+        BGM.PlayOneShot(close);
         isStore = false;
         isBuying = false;
         StoreUI[1].SetActive(false);
@@ -469,6 +473,7 @@ public class StoreUIControl : MonoBehaviour
 
     void Limit()
     {
+        BGM.PlayOneShot(select);
         if (buyQuantity > limitQuantity)
         {
             buyQuantity = limitQuantity;
