@@ -88,8 +88,8 @@ public class DiceControl : MonoBehaviour
     }
     void Calculate()
     {
-        ChangeCameraControl.changeCameraNum = Dice.who;
-        switch (Dice.who)
+        ChangeCameraControl.changeCameraNum = DiceUIControl.who;
+        switch (DiceUIControl.who)
         {
             case 1:
                 P1_totalNum += randomNum;
@@ -117,7 +117,7 @@ public class DiceControl : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(7);
         PlayerMoveControl.isMove = true;
-        Dice.isDiceScene = false;
+        DiceUIControl.isDiceScene = false;
         yield return new WaitForSeconds(1.5f);
         Calculate();
     }

@@ -128,6 +128,6 @@ public class MiniGameColliderControl : MonoBehaviour
         SceneManager.LoadScene(miniGame);
         isMiniGame = true;
         ChangeCameraControl.changeCameraNum++;
-        Dice.isDiceUI = true;
+        DiceUIControl.isDiceUI = true;
     }
 }

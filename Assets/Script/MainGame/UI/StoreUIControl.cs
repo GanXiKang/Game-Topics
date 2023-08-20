@@ -714,7 +714,7 @@ public class StoreUIControl : MonoBehaviour
         }
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
-        Dice.isDiceUI = true;
+        DiceUIControl.isDiceUI = true;
     }
 
     void Limit()

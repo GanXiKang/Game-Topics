@@ -8,7 +8,7 @@ public class DiceInstantionAnimalsControl : MonoBehaviour
 
     void Start()
     {
-        if (Dice.who == 1)
+        if (DiceUIControl.who == 1)
         {
             for (int i = 1; i <= animals.Length; i++)
             {
@@ -18,7 +18,7 @@ public class DiceInstantionAnimalsControl : MonoBehaviour
                 }
             }
         }
-        else if (Dice.who == 2)
+        else if (DiceUIControl.who == 2)
         {
             for (int i = 1; i <= animals.Length; i++)
             {
@@ -28,7 +28,7 @@ public class DiceInstantionAnimalsControl : MonoBehaviour
                 }
             }
         }
-        else if (Dice.who == 3)
+        else if (DiceUIControl.who == 3)
         {
             for (int i = 1; i <= animals.Length; i++)
             {
@@ -38,7 +38,7 @@ public class DiceInstantionAnimalsControl : MonoBehaviour
                 }
             }
         }
-        else if (Dice.who == 4)
+        else if (DiceUIControl.who == 4)
         {
             for (int i = 1; i <= animals.Length; i++)
             {

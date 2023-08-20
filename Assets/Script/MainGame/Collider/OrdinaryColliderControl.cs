@@ -45,6 +45,6 @@ public class OrdinaryColliderControl : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
-        Dice.isDiceUI = true;
+        DiceUIControl.isDiceUI = true;
     }
 }
