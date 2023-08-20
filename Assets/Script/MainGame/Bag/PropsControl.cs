@@ -16,7 +16,7 @@ public class PropsControl : MonoBehaviour
 
     void Update()
     {
-      
+
     }
     void Initial()
     {
