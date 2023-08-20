@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class BagUIControl : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    public GameObject bagUI;
+    public GameObject interactiveUI;
 
-    void Update()
+    public void Button_Bag()
     {
-        
+        bagUI.SetActive(true);
+        interactiveUI.SetActive(false);
+    }
+    public void Button_Close()
+    {
+        bagUI.SetActive(false);
+        interactiveUI.SetActive(true);
     }
 }
