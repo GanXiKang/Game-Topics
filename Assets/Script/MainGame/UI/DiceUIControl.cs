@@ -17,7 +17,7 @@ public class DiceUIControl : MonoBehaviour
 
     void Start()
     {
-        BGM.GetComponent<AudioSource>();
+        BGM = GetComponent<AudioSource>();
     }
     void Update()
     {
