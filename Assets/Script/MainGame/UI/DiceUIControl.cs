@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DiceUIControl : MonoBehaviour
 {
     AudioSource BGM;
+
     public AudioClip dice;
     public GameObject interactiveUI;
     public Text systemText;
