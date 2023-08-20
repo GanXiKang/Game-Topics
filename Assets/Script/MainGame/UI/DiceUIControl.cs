@@ -6,23 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class DiceUIControl : MonoBehaviour
 {
+    AudioSource BGM;
+    public AudioClip dice;
+    public GameObject interactiveUI;
+    public Text systemText;
+
     public static int who;
     public static bool isDiceUI = true, isDiceScene = false;
 
-    public GameObject diceUI;
-    public Text systemText;
-    public AudioSource BGM;
-    public AudioClip dice;
-
+    void Start()
+    {
+        BGM.GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (isDiceUI)
         {
-            diceUI.SetActive(true);
+            interactiveUI.SetActive(true);
         }
         else
         {
-            diceUI.SetActive(false);
+            interactiveUI.SetActive(false);
         }
     }
     public void Button_Dice()
