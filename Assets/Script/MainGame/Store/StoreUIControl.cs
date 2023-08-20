@@ -320,7 +320,25 @@ public class StoreUIControl : MonoBehaviour
             {
                 case 1:
                     group3Text[0].text = propsName[0].ToString();
-                    //group2Text[1].text =
+                    switch (StoreColliderControl.who)
+                    {
+                        case 1:
+                            group3Text[1].text = PropsControl.P1Props[0].ToString();
+                            break;
+
+                        case 2:
+                            group3Text[1].text = PropsControl.P2Props[0].ToString();
+                            break;
+
+                        case 3:
+                            group3Text[1].text = PropsControl.P3Props[0].ToString();
+                            break;
+
+
+                        case 4:
+                            group3Text[1].text = PropsControl.P4Props[0].ToString();
+                            break;
+                    }
                     group3Text[2].text = propsUse[0].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
                     group3Text[4].text = totalCoin.ToString();
@@ -328,7 +346,25 @@ public class StoreUIControl : MonoBehaviour
 
                 case 2:
                     group3Text[0].text = propsName[1].ToString();
-                    //group2Text[1].text =
+                    switch (StoreColliderControl.who)
+                    {
+                        case 1:
+                            group3Text[1].text = PropsControl.P1Props[1].ToString();
+                            break;
+
+                        case 2:
+                            group3Text[1].text = PropsControl.P2Props[1].ToString();
+                            break;
+
+                        case 3:
+                            group3Text[1].text = PropsControl.P3Props[1].ToString();
+                            break;
+
+
+                        case 4:
+                            group3Text[1].text = PropsControl.P4Props[1].ToString();
+                            break;
+                    }
                     group3Text[2].text = propsUse[1].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
                     group3Text[4].text = totalCoin.ToString();
@@ -336,7 +372,25 @@ public class StoreUIControl : MonoBehaviour
 
                 case 3:
                     group3Text[0].text = propsName[2].ToString();
-                    //group2Text[1].text =
+                    switch (StoreColliderControl.who)
+                    {
+                        case 1:
+                            group3Text[1].text = PropsControl.P1Props[2].ToString();
+                            break;
+
+                        case 2:
+                            group3Text[1].text = PropsControl.P2Props[2].ToString();
+                            break;
+
+                        case 3:
+                            group3Text[1].text = PropsControl.P3Props[2].ToString();
+                            break;
+
+
+                        case 4:
+                            group3Text[1].text = PropsControl.P4Props[2].ToString();
+                            break;
+                    }
                     group3Text[2].text = propsUse[2].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
                     group3Text[4].text = totalCoin.ToString();
@@ -344,7 +398,25 @@ public class StoreUIControl : MonoBehaviour
 
                 case 4:
                     group3Text[0].text = propsName[3].ToString();
-                    //group2Text[1].text =
+                    switch (StoreColliderControl.who)
+                    {
+                        case 1:
+                            group3Text[1].text = PropsControl.P1Props[3].ToString();
+                            break;
+
+                        case 2:
+                            group3Text[1].text = PropsControl.P2Props[3].ToString();
+                            break;
+
+                        case 3:
+                            group3Text[1].text = PropsControl.P3Props[3].ToString();
+                            break;
+
+
+                        case 4:
+                            group3Text[1].text = PropsControl.P4Props[3].ToString();
+                            break;
+                    }
                     group3Text[2].text = propsUse[3].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
                     group3Text[4].text = totalCoin.ToString();
@@ -352,7 +424,25 @@ public class StoreUIControl : MonoBehaviour
 
                 case 5:
                     group3Text[0].text = propsName[4].ToString();
-                    //group2Text[1].text =
+                    switch (StoreColliderControl.who)
+                    {
+                        case 1:
+                            group3Text[1].text = PropsControl.P1Props[4].ToString();
+                            break;
+
+                        case 2:
+                            group3Text[1].text = PropsControl.P2Props[4].ToString();
+                            break;
+
+                        case 3:
+                            group3Text[1].text = PropsControl.P3Props[4].ToString();
+                            break;
+
+
+                        case 4:
+                            group3Text[1].text = PropsControl.P4Props[4].ToString();
+                            break;
+                    }
                     group3Text[2].text = propsUse[4].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
                     group3Text[4].text = totalCoin.ToString();
@@ -360,7 +450,25 @@ public class StoreUIControl : MonoBehaviour
 
                 case 6:
                     group3Text[0].text = propsName[5].ToString();
-                    //group2Text[1].text =
+                    switch (StoreColliderControl.who)
+                    {
+                        case 1:
+                            group3Text[1].text = PropsControl.P1Props[5].ToString();
+                            break;
+
+                        case 2:
+                            group3Text[1].text = PropsControl.P2Props[5].ToString();
+                            break;
+
+                        case 3:
+                            group3Text[1].text = PropsControl.P3Props[5].ToString();
+                            break;
+
+
+                        case 4:
+                            group3Text[1].text = PropsControl.P4Props[5].ToString();
+                            break;
+                    }
                     group3Text[2].text = propsUse[5].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
                     group3Text[4].text = totalCoin.ToString();
@@ -368,7 +476,25 @@ public class StoreUIControl : MonoBehaviour
 
                 case 7:
                     group3Text[0].text = propsName[6].ToString();
-                    //group2Text[1].text =
+                    switch (StoreColliderControl.who)
+                    {
+                        case 1:
+                            group3Text[1].text = PropsControl.P1Props[6].ToString();
+                            break;
+
+                        case 2:
+                            group3Text[1].text = PropsControl.P2Props[6].ToString();
+                            break;
+
+                        case 3:
+                            group3Text[1].text = PropsControl.P3Props[6].ToString();
+                            break;
+
+
+                        case 4:
+                            group3Text[1].text = PropsControl.P4Props[6].ToString();
+                            break;
+                    }
                     group3Text[2].text = propsUse[6].ToString();
                     group3Text[3].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
                     group3Text[4].text = totalCoin.ToString();
@@ -434,18 +560,138 @@ public class StoreUIControl : MonoBehaviour
         {
             case 1:
                 CoinControl.P1CoinTotal -= totalCoin;
+                switch (whyProps)
+                {
+                    case 1:
+                        PropsControl.P1Props[0] += buyQuantity;
+                        break;
+
+                    case 2:
+                        PropsControl.P1Props[1] += buyQuantity;
+                        break;
+
+                    case 3:
+                        PropsControl.P1Props[2] += buyQuantity;
+                        break;
+
+                    case 4:
+                        PropsControl.P1Props[3] += buyQuantity;
+                        break;
+
+                    case 5:
+                        PropsControl.P1Props[4] += buyQuantity;
+                        break;
+
+                    case 6:
+                        PropsControl.P1Props[5] += buyQuantity;
+                        break;
+
+                    case 7:
+                        PropsControl.P1Props[6] += buyQuantity;
+                        break;
+                }
                 break;
 
             case 2:
                 CoinControl.P2CoinTotal -= totalCoin;
+                switch (whyProps)
+                {
+                    case 1:
+                        PropsControl.P2Props[0] += buyQuantity;
+                        break;
+
+                    case 2:
+                        PropsControl.P2Props[1] += buyQuantity;
+                        break;
+
+                    case 3:
+                        PropsControl.P2Props[2] += buyQuantity;
+                        break;
+
+                    case 4:
+                        PropsControl.P2Props[3] += buyQuantity;
+                        break;
+
+                    case 5:
+                        PropsControl.P2Props[4] += buyQuantity;
+                        break;
+
+                    case 6:
+                        PropsControl.P2Props[5] += buyQuantity;
+                        break;
+
+                    case 7:
+                        PropsControl.P2Props[6] += buyQuantity;
+                        break;
+                }
                 break;
 
             case 3:
                 CoinControl.P3CoinTotal -= totalCoin;
+                switch (whyProps)
+                {
+                    case 1:
+                        PropsControl.P3Props[0] += buyQuantity;
+                        break;
+
+                    case 2:
+                        PropsControl.P3Props[1] += buyQuantity;
+                        break;
+
+                    case 3:
+                        PropsControl.P3Props[2] += buyQuantity;
+                        break;
+
+                    case 4:
+                        PropsControl.P3Props[3] += buyQuantity;
+                        break;
+
+                    case 5:
+                        PropsControl.P3Props[4] += buyQuantity;
+                        break;
+
+                    case 6:
+                        PropsControl.P3Props[5] += buyQuantity;
+                        break;
+
+                    case 7:
+                        PropsControl.P3Props[6] += buyQuantity;
+                        break;
+                }
                 break;
 
             case 4:
                 CoinControl.P4CoinTotal -= totalCoin;
+                switch (whyProps)
+                {
+                    case 1:
+                        PropsControl.P4Props[0] += buyQuantity;
+                        break;
+
+                    case 2:
+                        PropsControl.P4Props[1] += buyQuantity;
+                        break;
+
+                    case 3:
+                        PropsControl.P4Props[2] += buyQuantity;
+                        break;
+
+                    case 4:
+                        PropsControl.P4Props[3] += buyQuantity;
+                        break;
+
+                    case 5:
+                        PropsControl.P4Props[4] += buyQuantity;
+                        break;
+
+                    case 6:
+                        PropsControl.P4Props[5] += buyQuantity;
+                        break;
+
+                    case 7:
+                        PropsControl.P4Props[6] += buyQuantity;
+                        break;
+                }
                 break;
         }
         haveBuy = true;
