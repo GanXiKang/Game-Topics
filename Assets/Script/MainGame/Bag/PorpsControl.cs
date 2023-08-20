@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class PorpsControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static int[] P1Porps = new int[7];
+    public static int[] P2Porps = new int[7];
+    public static int[] P3Porps = new int[7];
+    public static int[] P4Porps = new int[7];
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
