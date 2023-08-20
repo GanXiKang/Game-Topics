@@ -6,7 +6,6 @@ public class BagUIControl : MonoBehaviour
 {
     AudioSource BGM;
 
-
     public GameObject bagUI;
     public GameObject interactiveUI;
 
