@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PorpsControl : MonoBehaviour
+public class PropsControl : MonoBehaviour
 {
     public static int[] P1Porps = new int[7];
     public static int[] P2Porps = new int[7];
@@ -16,7 +16,7 @@ public class PorpsControl : MonoBehaviour
 
     void Update()
     {
-        
+
     }
     void Initial()
     {
