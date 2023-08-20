@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Dice : MonoBehaviour
 {
-    public static int who;
-    public static bool isDiceUI = true, isDiceScene = false;
+    //public static int who;
+    //public static bool isDiceUI = true, isDiceScene = false;
 
     public GameObject diceUI;
     public Text systemText;
