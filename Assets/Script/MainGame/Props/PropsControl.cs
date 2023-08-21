@@ -64,10 +64,10 @@ public class PropsControl : MonoBehaviour
     }
     void Initial()
     {
-        P1Props[0] = 0;
-        P1Props[1] = 0;
-        P1Props[2] = 0;
-        P1Props[3] = 0;
+        P1Props[0] = 1;
+        P1Props[1] = 2;
+        P1Props[2] = 5;
+        P1Props[3] = 4;
         P1Props[4] = 0;
         P1Props[5] = 0;
         P1Props[6] = 0;
