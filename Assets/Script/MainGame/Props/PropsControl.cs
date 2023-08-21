@@ -15,9 +15,6 @@ public class PropsControl : MonoBehaviour
     void Start()
     {
         Initial();
-        P1Props[2] = 1;
-        P2Props[0] = 3;
-        P2Props[6] = 2;
     }
 
     void Update()
