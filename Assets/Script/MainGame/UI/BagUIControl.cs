@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BagUIControl : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class BagUIControl : MonoBehaviour
 
     public GameObject bagUI;
     public GameObject interactiveUI;
+    public Button[] use = new Button[7];
 
     void Start()
     {
