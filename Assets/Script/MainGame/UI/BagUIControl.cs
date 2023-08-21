@@ -11,6 +11,9 @@ public class BagUIControl : MonoBehaviour
     public GameObject interactiveUI;
     public Button[] use = new Button[7];
 
+    int whyUseProps;
+    bool useProps;
+
     void Start()
     {
         BGM = GetComponent<AudioSource>();
@@ -255,6 +258,144 @@ public class BagUIControl : MonoBehaviour
                 }
                 break;
         }
+        if (useProps)
+        {
+            switch (ChangeCameraControl.changeCameraNum)
+            {
+                case 1:
+                    switch (whyUseProps)
+                    {
+                        case 1:
+                            PropsControl.P1Props[0] -= 1;
+                            break;
+
+                        case 2:
+                            PropsControl.P1Props[1] -= 1;
+                            break;
+
+                        case 3:
+                            PropsControl.P1Props[2] -= 1;
+                            break;
+
+                        case 4:
+                            PropsControl.P1Props[3] -= 1;
+                            break;
+
+                        case 5:
+                            PropsControl.P1Props[4] -= 1;
+                            break;
+
+                        case 6:
+                            PropsControl.P1Props[5] -= 1;
+                            break;
+
+                        case 7:
+                            PropsControl.P1Props[6] -= 1;
+                            break;
+                    }
+                    break;
+
+                case 2:
+                    switch (whyUseProps)
+                    {
+                        case 1:
+                            PropsControl.P2Props[0] -= 1;
+                            break;
+
+                        case 2:
+                            PropsControl.P2Props[1] -= 1;
+                            break;
+
+                        case 3:
+                            PropsControl.P2Props[2] -= 1;
+                            break;
+
+                        case 4:
+                            PropsControl.P2Props[3] -= 1;
+                            break;
+
+                        case 5:
+                            PropsControl.P2Props[4] -= 1;
+                            break;
+
+                        case 6:
+                            PropsControl.P2Props[5] -= 1;
+                            break;
+
+                        case 7:
+                            PropsControl.P2Props[6] -= 1;
+                            break;
+                    }
+                    break;
+
+                case 3:
+                    switch (whyUseProps)
+                    {
+                        case 1:
+                            PropsControl.P3Props[0] -= 1;
+                            break;
+
+                        case 2:
+                            PropsControl.P3Props[1] -= 1;
+                            break;
+
+                        case 3:
+                            PropsControl.P3Props[2] -= 1;
+                            break;
+
+                        case 4:
+                            PropsControl.P3Props[3] -= 1;
+                            break;
+
+                        case 5:
+                            PropsControl.P3Props[4] -= 1;
+                            break;
+
+                        case 6:
+                            PropsControl.P3Props[5] -= 1;
+                            break;
+
+                        case 7:
+                            PropsControl.P3Props[6] -= 1;
+                            break;
+                    }
+                    break;
+
+                case 4:
+                    switch (whyUseProps)
+                    {
+                        case 1:
+                            PropsControl.P4Props[0] -= 1;
+                            break;
+
+                        case 2:
+                            PropsControl.P4Props[1] -= 1;
+                            break;
+
+                        case 3:
+                            PropsControl.P4Props[2] -= 1;
+                            break;
+
+                        case 4:
+                            PropsControl.P4Props[3] -= 1;
+                            break;
+
+                        case 5:
+                            PropsControl.P4Props[4] -= 1;
+                            break;
+
+                        case 6:
+                            PropsControl.P4Props[5] -= 1;
+                            break;
+
+                        case 7:
+                            PropsControl.P4Props[6] -= 1;
+                            break;
+                    }
+                    break;
+            }
+            useProps = false;
+        }
     }
     public void Button_Bag()
     {
@@ -265,5 +406,10 @@ public class BagUIControl : MonoBehaviour
     {
         bagUI.SetActive(false);
         interactiveUI.SetActive(true);
+    }
+    public void Button_Use(int why)
+    {
+        whyUseProps = why;
+        useProps = true;
     }
 }
