@@ -65,14 +65,18 @@ public class EventControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         DiceControl.P1_totalNum += forward;
         DiceControl.P1_totalNum -= backward;
+        if (stop == 0)
+        {
+            AnimatorControl.isP1Move = true;
+        }
+        yield return new WaitForSeconds(1f);
         if (stop != 0)
         {
             ChangeCameraControl.changeCameraNum++;
-            interactiveUI.SetActive(true);
+            DiceUIControl.isDiceUI = true;
             isStopP1 = true;
             IsStopUIControl.isStopUI = true;
         }
-        AnimatorControl.isP1Move = true;
     }
     IEnumerator P2_EventHappened()
     {
