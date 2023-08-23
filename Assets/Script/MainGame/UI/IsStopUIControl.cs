@@ -8,7 +8,7 @@ public class IsStopUIControl : MonoBehaviour
     public GameObject interactiveUI;
     public Text systemText;
 
-    public static bool isStopUI;
+    public static bool isStopUI = false;
 
     void Update()
     {

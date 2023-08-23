@@ -9,7 +9,7 @@ public class EventControl : MonoBehaviour
     public int EventPoint;
     public int forward, backward, stop;
 
-    public static bool isStopP1, isStopP2, isStopP3, isStopP4;
+    public static bool isStopP1 = false, isStopP2 = false, isStopP3 = false, isStopP4 = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -58,6 +58,7 @@ public class EventControl : MonoBehaviour
         else if (stop != 0)
         {
             isStopP1 = true;
+            IsStopUIControl.isStopUI = true;
             systemTest.text = "Õ£¡Ù" + stop + "ªÿ∫œ£°";
             systemTest.color = Color.cyan;
         }
