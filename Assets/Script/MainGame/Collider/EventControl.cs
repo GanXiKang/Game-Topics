@@ -9,7 +9,7 @@ public class EventControl : MonoBehaviour
     public int EventPoint;
     public int forward, backward, stop;
 
-    public static bool isStopP1, isStopP2;
+    public static bool isStopP1, isStopP2, isStopP3, isStopP4;
 
     private void OnTriggerEnter(Collider other)
     {
