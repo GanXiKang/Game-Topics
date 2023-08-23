@@ -13,7 +13,7 @@ public class SystemTestTextControl : MonoBehaviour
         if (isTimer)
         {
             timer += 1 * Time.deltaTime;
-            if (timer > 3)
+            if (timer > 2.5f)
             {
                 systemText.text = " ";
                 timer = 0;
