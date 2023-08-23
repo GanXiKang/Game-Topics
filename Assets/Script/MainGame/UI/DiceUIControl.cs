@@ -12,7 +12,6 @@ public class DiceUIControl : MonoBehaviour
     public GameObject interactiveUI;
     public Text systemText;
 
-    public static int who;
     public static bool isDiceUI = true, isDiceScene = false;
 
     void Start()
@@ -38,8 +37,6 @@ public class DiceUIControl : MonoBehaviour
     {
         BGM.PlayOneShot(dice);
         isDiceUI = false;
-
-        who = ChangeCameraControl.changeCameraNum;
         yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene(9);
         isDiceScene = true;

@@ -88,8 +88,7 @@ public class DiceControl : MonoBehaviour
     }
     void Calculate()
     {
-        ChangeCameraControl.changeCameraNum = DiceUIControl.who;
-        switch (DiceUIControl.who)
+        switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
                 P1_totalNum += randomNum;

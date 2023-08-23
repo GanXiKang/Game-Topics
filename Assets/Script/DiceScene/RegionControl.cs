@@ -8,7 +8,7 @@ public class RegionControl : MonoBehaviour
 
     void Start()
     {
-        switch (DiceUIControl.who)
+        switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
                 if (DiceControl.P1_totalNum <= 10)
