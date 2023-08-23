@@ -39,8 +39,7 @@ public class DiceUIControl : MonoBehaviour
         BGM.PlayOneShot(dice);
         isDiceUI = false;
 
-        who = DiceControl.round % Menu_ChoosePlayer.whoPlay;
-        who++;
+        who = ChangeCameraControl.changeCameraNum;
         yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene(9);
         isDiceScene = true;
