@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class IsStopUIControl : MonoBehaviour
 {
-    public GameObject interactiveUI;
     public Text systemText;
 
     public static int isStopUI = 0;
