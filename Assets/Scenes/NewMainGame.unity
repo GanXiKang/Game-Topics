@@ -8749,6 +8749,7 @@ MonoBehaviour:
   EventPoint: 4
   forward: 0
   backward: 2
+  stop: 0
 --- !u!65 &512076619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26836,6 +26837,7 @@ GameObject:
   - component: {fileID: 1414603048}
   - component: {fileID: 1414603049}
   - component: {fileID: 1414603050}
+  - component: {fileID: 1414603051}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -27161,6 +27163,20 @@ MonoBehaviour:
   - {fileID: 398072489}
   - {fileID: 1658630657}
   - {fileID: 896721174}
+--- !u!114 &1414603051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414603034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49dd183e18a0a9841875c95965ffc406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactiveUI: {fileID: 803940596}
+  systemText: {fileID: 462964630}
 --- !u!1 &1416896649
 GameObject:
   m_ObjectHideFlags: 0
