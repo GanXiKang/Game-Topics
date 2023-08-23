@@ -51,6 +51,7 @@ public class IsStopUIControl : MonoBehaviour
         isStopUI = false;
         DiceUIControl.isDiceUI = false;
         systemText.text = "�˻غϕ�ͣ";
+        systemText.color = Color.cyan;
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
