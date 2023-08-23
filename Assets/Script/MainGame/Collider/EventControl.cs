@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class EventControl : MonoBehaviour
 {
-    public GameObject interactiveUI;
     public Text systemTest;
     public int EventPoint;
     public int forward, backward, stop;
@@ -108,7 +107,7 @@ public class EventControl : MonoBehaviour
         if (stop != 0)
         {
             ChangeCameraControl.changeCameraNum++;
-            interactiveUI.SetActive(true);
+            DiceUIControl.isDiceUI = true;
             isStopP2 = true;
             IsStopUIControl.isStopUI++;
         }
@@ -143,7 +142,7 @@ public class EventControl : MonoBehaviour
         if (stop != 0)
         {
             ChangeCameraControl.changeCameraNum++;
-            interactiveUI.SetActive(true);
+            DiceUIControl.isDiceUI = true;
             isStopP3 = true;
             IsStopUIControl.isStopUI++;
         }
@@ -178,7 +177,7 @@ public class EventControl : MonoBehaviour
         if (stop != 0)
         {
             ChangeCameraControl.changeCameraNum++;
-            interactiveUI.SetActive(true);
+            DiceUIControl.isDiceUI = true;
             isStopP4 = true;
             IsStopUIControl.isStopUI++;
         }
