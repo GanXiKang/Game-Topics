@@ -74,7 +74,7 @@ public class EventControl : MonoBehaviour
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
             isStopP1 = true;
-            IsStopUIControl.isStopUI++;
+            IsStopUIControl.isStopUI += stop;
         }
     }
     IEnumerator P2_EventHappened()
@@ -109,7 +109,7 @@ public class EventControl : MonoBehaviour
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
             isStopP2 = true;
-            IsStopUIControl.isStopUI++;
+            IsStopUIControl.isStopUI += stop;
         }
     }
     IEnumerator P3_EventHappened()
@@ -144,7 +144,7 @@ public class EventControl : MonoBehaviour
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
             isStopP3 = true;
-            IsStopUIControl.isStopUI++;
+            IsStopUIControl.isStopUI += stop;
         }
     }
     IEnumerator P4_EventHappened()
@@ -179,7 +179,7 @@ public class EventControl : MonoBehaviour
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
             isStopP4 = true;
-            IsStopUIControl.isStopUI++;
+            IsStopUIControl.isStopUI += stop;
         }
     }
 }
