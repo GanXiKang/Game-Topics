@@ -145,7 +145,7 @@ public class EventControl : MonoBehaviour
             ChangeCameraControl.changeCameraNum++;
             interactiveUI.SetActive(true);
             isStopP3 = true;
-            IsStopUIControl.isStopUI--;
+            IsStopUIControl.isStopUI++;
         }
     }
     IEnumerator P4_EventHappened()
@@ -180,7 +180,7 @@ public class EventControl : MonoBehaviour
             ChangeCameraControl.changeCameraNum++;
             interactiveUI.SetActive(true);
             isStopP4 = true;
-            IsStopUIControl.isStopUI--;
+            IsStopUIControl.isStopUI++;
         }
     }
 }
