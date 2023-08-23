@@ -57,8 +57,6 @@ public class EventControl : MonoBehaviour
         }
         else if (stop != 0)
         {
-            isStopP1 = true;
-            IsStopUIControl.isStopUI = true;
             systemTest.text = "停留" + stop + "回合！";
             systemTest.color = Color.cyan;
         }
@@ -66,6 +64,11 @@ public class EventControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         DiceControl.P1_totalNum += forward;
         DiceControl.P1_totalNum -= backward;
+        if (stop != 0)
+        {
+            isStopP1 = true;
+            IsStopUIControl.isStopUI = true;
+        }
         AnimatorControl.isP1Move = true;
     }
     IEnumerator P2_EventHappened()
@@ -83,8 +86,6 @@ public class EventControl : MonoBehaviour
         }
         else if (stop != 0)
         {
-            isStopP2 = true;
-            IsStopUIControl.isStopUI = true;
             systemTest.text = "停留" + stop + "回合！";
             systemTest.color = Color.cyan;
         }
@@ -92,6 +93,11 @@ public class EventControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         DiceControl.P2_totalNum += forward;
         DiceControl.P2_totalNum -= backward;
+        if (stop != 0)
+        {
+            isStopP2 = true;
+            IsStopUIControl.isStopUI = true;
+        }
         AnimatorControl.isP2Move = true;
     }
     IEnumerator P3_EventHappened()
@@ -109,8 +115,6 @@ public class EventControl : MonoBehaviour
         }
         else if (stop != 0)
         {
-            isStopP3 = true;
-            IsStopUIControl.isStopUI = true;
             systemTest.text = "停留" + stop + "回合！";
             systemTest.color = Color.cyan;
         }
@@ -118,6 +122,11 @@ public class EventControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         DiceControl.P3_totalNum += forward;
         DiceControl.P3_totalNum -= backward;
+        if (stop != 0)
+        {
+            isStopP3 = true;
+            IsStopUIControl.isStopUI = true;
+        }
         AnimatorControl.isP3Move = true;
     }
     IEnumerator P4_EventHappened()
@@ -135,8 +144,6 @@ public class EventControl : MonoBehaviour
         }
         else if (stop != 0)
         {
-            isStopP4 = true;
-            IsStopUIControl.isStopUI = true;
             systemTest.text = "停留" + stop + "回合！";
             systemTest.color = Color.cyan;
         }
@@ -144,6 +151,11 @@ public class EventControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         DiceControl.P4_totalNum += forward;
         DiceControl.P4_totalNum -= backward;
+        if (stop != 0)
+        {
+            isStopP4 = true;
+            IsStopUIControl.isStopUI = true;
+        }
         AnimatorControl.isP4Move = true;
     }
 }
