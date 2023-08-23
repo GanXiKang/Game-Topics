@@ -19,7 +19,10 @@ public class IsStopUIControl : MonoBehaviour
                     if (EventControl.isStopP1)
                     {
                         StartCoroutine(StopThisRound());
-                        EventControl.isStopP1 = false;
+                        if (isStopUI == 0)
+                        {
+                            EventControl.isStopP1 = false;
+                        }
                     }
                     break;
 
