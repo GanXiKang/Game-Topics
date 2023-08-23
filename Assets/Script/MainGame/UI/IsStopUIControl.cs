@@ -8,11 +8,11 @@ public class IsStopUIControl : MonoBehaviour
     public GameObject interactiveUI;
     public Text systemText;
 
-    public static bool isStopUI = false;
+    public static int isStopUI = 0;
 
     void Update()
     {
-        if (isStopUI)
+        if (isStopUI != 0)
         {
             switch (ChangeCameraControl.changeCameraNum)
             {
@@ -20,6 +20,7 @@ public class IsStopUIControl : MonoBehaviour
                     if (EventControl.isStopP1)
                     {
                         StartCoroutine(StopThisRound());
+                        EventControl.isStopP1 = false;
                     }
                     break;
 
@@ -27,6 +28,7 @@ public class IsStopUIControl : MonoBehaviour
                     if (EventControl.isStopP2)
                     {
                         StartCoroutine(StopThisRound());
+                        EventControl.isStopP2 = false;
                     }
                     break;
 
@@ -34,6 +36,7 @@ public class IsStopUIControl : MonoBehaviour
                     if (EventControl.isStopP3)
                     {
                         StartCoroutine(StopThisRound());
+                        EventControl.isStopP3 = false;
                     }
                     break;
 
@@ -41,6 +44,7 @@ public class IsStopUIControl : MonoBehaviour
                     if (EventControl.isStopP4)
                     {
                         StartCoroutine(StopThisRound());
+                        EventControl.isStopP4 = false;
                     }
                     break;
             }
@@ -48,7 +52,7 @@ public class IsStopUIControl : MonoBehaviour
     }
     IEnumerator StopThisRound()
     {
-        isStopUI = false;
+        isStopUI--;
         DiceUIControl.isDiceUI = false;
         systemText.text = "�˻غϕ�ͣ";
         systemText.color = Color.cyan;
