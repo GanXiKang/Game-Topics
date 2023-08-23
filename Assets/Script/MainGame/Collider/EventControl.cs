@@ -75,7 +75,7 @@ public class EventControl : MonoBehaviour
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
             isStopP1 = true;
-            IsStopUIControl.isStopUI = true;
+            IsStopUIControl.isStopUI++;
         }
     }
     IEnumerator P2_EventHappened()
@@ -100,14 +100,18 @@ public class EventControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         DiceControl.P2_totalNum += forward;
         DiceControl.P2_totalNum -= backward;
+        if (stop == 0)
+        {
+            AnimatorControl.isP2Move = true;
+        }
+        yield return new WaitForSeconds(1f);
         if (stop != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             interactiveUI.SetActive(true);
             isStopP2 = true;
-            IsStopUIControl.isStopUI = true;
+            IsStopUIControl.isStopUI++;
         }
-        AnimatorControl.isP2Move = true;
     }
     IEnumerator P3_EventHappened()
     {
@@ -131,14 +135,18 @@ public class EventControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         DiceControl.P3_totalNum += forward;
         DiceControl.P3_totalNum -= backward;
+        if (stop == 0)
+        {
+            AnimatorControl.isP3Move = true;
+        }
+        yield return new WaitForSeconds(1f);
         if (stop != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             interactiveUI.SetActive(true);
             isStopP3 = true;
-            IsStopUIControl.isStopUI = true;
+            IsStopUIControl.isStopUI--;
         }
-        AnimatorControl.isP3Move = true;
     }
     IEnumerator P4_EventHappened()
     {
@@ -162,13 +170,17 @@ public class EventControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         DiceControl.P4_totalNum += forward;
         DiceControl.P4_totalNum -= backward;
+        if (stop == 0)
+        {
+            AnimatorControl.isP2Move = true;
+        }
+        yield return new WaitForSeconds(1f);
         if (stop != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             interactiveUI.SetActive(true);
             isStopP4 = true;
-            IsStopUIControl.isStopUI = true;
+            IsStopUIControl.isStopUI--;
         }
-        AnimatorControl.isP4Move = true;
     }
 }
