@@ -81,6 +81,13 @@ public class EventControl : MonoBehaviour
             systemTest.text = "后退" + backward + "格！";
             systemTest.color = Color.red;
         }
+        else if (stop != 0)
+        {
+            isStopP2 = true;
+            IsStopUIControl.isStopUI = true;
+            systemTest.text = "停留" + stop + "回合！";
+            systemTest.color = Color.cyan;
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         DiceControl.P2_totalNum += forward;
@@ -100,6 +107,13 @@ public class EventControl : MonoBehaviour
             systemTest.text = "后退" + backward + "格！";
             systemTest.color = Color.red;
         }
+        else if (stop != 0)
+        {
+            isStopP3 = true;
+            IsStopUIControl.isStopUI = true;
+            systemTest.text = "停留" + stop + "回合！";
+            systemTest.color = Color.cyan;
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         DiceControl.P3_totalNum += forward;
@@ -118,6 +132,13 @@ public class EventControl : MonoBehaviour
         {
             systemTest.text = "后退" + backward + "格！";
             systemTest.color = Color.red;
+        }
+        else if (stop != 0)
+        {
+            isStopP4 = true;
+            IsStopUIControl.isStopUI = true;
+            systemTest.text = "停留" + stop + "回合！";
+            systemTest.color = Color.cyan;
         }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
