@@ -7,7 +7,9 @@ public class EventControl : MonoBehaviour
 {
     public Text systemTest;
     public int EventPoint;
-    public int forward, backward;
+    public int forward, backward, stop;
+
+    public static bool isStopP1, isStopP2;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -52,6 +54,12 @@ public class EventControl : MonoBehaviour
         {
             systemTest.text = "后退" + backward + "格！";
             systemTest.color = Color.red;
+        }
+        else if (stop != 0)
+        {
+            isStopP1 = true;
+            systemTest.text = "停留" + stop + "回合！";
+            systemTest.color = Color.cyan;
         }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
