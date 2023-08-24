@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class MGAnimalsAnimatorControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator ani;
+
+    public static bool isWave = false;
+    public static bool isBye = false;
     void Start()
     {
-        
+        ani = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isWave)
+        {
+            ani.SetBool("Wave", true);
+            isWave = false;
+        }
+        else
+        {
+            ani.SetBool("Wave", false);
+        }
+
+        if (isBye)
+        {
+            ani.SetBool("Bye", true);
+            isBye = false;
+        }
+        else
+        {
+            ani.SetBool("Bye", false);
+        }
     }
 }
