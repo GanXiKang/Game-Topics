@@ -58,6 +58,7 @@ public class MiniGameColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
+                    MGAnimalsAnimatorControl.isWave = true;
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
@@ -70,6 +71,7 @@ public class MiniGameColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
+                    MGAnimalsAnimatorControl.isWave = true;
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
@@ -82,6 +84,7 @@ public class MiniGameColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
+                    MGAnimalsAnimatorControl.isWave = true;
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
@@ -94,6 +97,7 @@ public class MiniGameColliderControl : MonoBehaviour
             {
                 if (!PlayerMoveControl.isMove)
                 {
+                    MGAnimalsAnimatorControl.isWave = true;
                     Vector3 targetDirection = target.position - other.transform.position;
                     Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
@@ -106,18 +110,22 @@ public class MiniGameColliderControl : MonoBehaviour
         if (other.tag == "P1")
         {
             P1_playGame = true;
+            MGAnimalsAnimatorControl.isBye = true;
         }
         else if (other.tag == "P2")
         {
             P2_playGame = true;
+            MGAnimalsAnimatorControl.isBye = true;
         }
         else if (other.tag == "P3")
         {
             P3_playGame = true;
+            MGAnimalsAnimatorControl.isBye = true;
         }
         else if (other.tag == "P4")
         {
             P4_playGame = true;
+            MGAnimalsAnimatorControl.isBye = true;
         }
     }
     IEnumerator StartMiniGame()
