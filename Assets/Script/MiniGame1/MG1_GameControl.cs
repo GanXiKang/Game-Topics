@@ -58,12 +58,14 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             win++;
                             W = true;
+                            MG1_AIAnimatorControl.isLose = true;
                             BGM.PlayOneShot(winM);
                             break;
                         case 3:
                             i++;
                             lose++;
                             L = true;
+                            MG1_AIAnimatorControl.isWin = true;
                             BGM.PlayOneShot(loseM);
                             break;
                     }
@@ -76,6 +78,7 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             lose++;
                             L = true;
+                            MG1_AIAnimatorControl.isWin = true;
                             BGM.PlayOneShot(loseM);
                             break;
                         case 2:
@@ -85,6 +88,7 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             win++;
                             W = true;
+                            MG1_AIAnimatorControl.isLose = true;
                             BGM.PlayOneShot(winM);
                             break;
                     }
@@ -97,12 +101,14 @@ public class MG1_GameControl : MonoBehaviour
                             i++;
                             win++;
                             W = true;
+                            MG1_AIAnimatorControl.isLose = true;
                             BGM.PlayOneShot(winM);
                             break;
                         case 2:
                             i++;
                             lose++;
                             L = true;
+                            MG1_AIAnimatorControl.isWin = true;
                             BGM.PlayOneShot(loseM);
                             break;
                         case 3:
@@ -120,11 +126,13 @@ public class MG1_GameControl : MonoBehaviour
             {
                 isEffects = true;
                 playerAniWin = true;
+                MG1_AIAnimatorControl.isLose = true;
                 BGM.PlayOneShot(gameWin);
             }
             else
             {
                 playerAniLose = true;
+                MG1_AIAnimatorControl.isWin = true;
                 BGM.PlayOneShot(gameLose);
             }
             StartCoroutine(BackMainGame());
