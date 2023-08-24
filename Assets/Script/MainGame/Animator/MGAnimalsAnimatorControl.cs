@@ -8,6 +8,7 @@ public class MGAnimalsAnimatorControl : MonoBehaviour
 
     public static bool isWave = false;
     public static bool isBye = false;
+
     void Start()
     {
         ani = GetComponent<Animator>();

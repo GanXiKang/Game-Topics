@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class MG1_AIAnimatorControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator ani;
+
+    public static bool isWin = false;
+    public static bool isLose = false;
+
     void Start()
     {
-        
+        ani = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isWin)
+        {
+            ani.SetBool("Win", true);
+            isWin = false;
+        }
+        else
+        {
+            ani.SetBool("Win", false);
+        }
+
+        if (isLose)
+        {
+            ani.SetBool("Lose", true);
+            isLose = false;
+        }
+        else
+        {
+            ani.SetBool("Lose", false);
+        }
     }
 }
