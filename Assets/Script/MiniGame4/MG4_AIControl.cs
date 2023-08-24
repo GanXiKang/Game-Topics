@@ -16,6 +16,8 @@ public class MG4_AIControl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         ani = GetComponent<Animator>();
+
+        ani.SetBool("Run", true);
     }
     void FixedUpdate()
     {
@@ -28,8 +30,6 @@ public class MG4_AIControl : MonoBehaviour
             if (MG4_EndControl.move)
             {
                 transform.position = point.transform.position;
-
-                ani.SetBool("Run", false);
                 if (MG4_EndControl.losePlayer)
                 {
                     ani.SetBool("Win", true);
