@@ -9,7 +9,7 @@ public class StoreUIControl : MonoBehaviour
     public AudioClip buy, cancel, close, getCoin, select, sure;
 
     public GameObject[] StoreUI = new GameObject[4];
-    public Text[] PorpsCoin = new Text[7];
+    public Text[] PorpsCoin = new Text[6];
     public Text[] group3Text = new Text[5];
     public Button buttonBuy;
 
