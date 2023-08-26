@@ -89,14 +89,6 @@ public class StoreUIControl : MonoBehaviour
                     {
                         PorpsCoin[5].color = Color.green;
                     }
-                    if (CoinControl.P1CoinTotal < howMuchCoin[6])
-                    {
-                        PorpsCoin[6].color = Color.red;
-                    }
-                    else
-                    {
-                        PorpsCoin[6].color = Color.green;
-                    }
                     if (CoinControl.P1CoinTotal < totalCoin)
                     {
                         group3Text[4].color = Color.red;
@@ -157,14 +149,6 @@ public class StoreUIControl : MonoBehaviour
                     else
                     {
                         PorpsCoin[5].color = Color.green;
-                    }
-                    if (CoinControl.P2CoinTotal < howMuchCoin[6])
-                    {
-                        PorpsCoin[6].color = Color.red;
-                    }
-                    else
-                    {
-                        PorpsCoin[6].color = Color.green;
                     }
                     if (CoinControl.P2CoinTotal < totalCoin)
                     {
@@ -227,14 +211,6 @@ public class StoreUIControl : MonoBehaviour
                     {
                         PorpsCoin[5].color = Color.green;
                     }
-                    if (CoinControl.P3CoinTotal < howMuchCoin[6])
-                    {
-                        PorpsCoin[6].color = Color.red;
-                    }
-                    else
-                    {
-                        PorpsCoin[6].color = Color.green;
-                    }
                     if (CoinControl.P3CoinTotal < totalCoin)
                     {
                         group3Text[4].color = Color.red;
@@ -295,14 +271,6 @@ public class StoreUIControl : MonoBehaviour
                     else
                     {
                         PorpsCoin[5].color = Color.green;
-                    }
-                    if (CoinControl.P4CoinTotal < howMuchCoin[6])
-                    {
-                        PorpsCoin[6].color = Color.red;
-                    }
-                    else
-                    {
-                        PorpsCoin[6].color = Color.green;
                     }
                     if (CoinControl.P4CoinTotal < totalCoin)
                     {
