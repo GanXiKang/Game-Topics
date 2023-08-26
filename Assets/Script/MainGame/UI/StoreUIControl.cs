@@ -17,9 +17,9 @@ public class StoreUIControl : MonoBehaviour
 
     bool haveBuy = false, buyOK = false;
     int whyProps, totalCoin, buyQuantity = 1, limitQuantity = 3;
-    int[] howMuchCoin = new int[7];
-    string[] propsName = new string[7];
-    string[] propsUse = new string[7];
+    int[] howMuchCoin = new int[6];
+    string[] propsName = new string[6];
+    string[] propsUse = new string[6];
 
     void Start()
     {
@@ -780,7 +780,6 @@ public class StoreUIControl : MonoBehaviour
         propsName[3] = "D道具";
         propsName[4] = "E道具";
         propsName[5] = "F道具";
-        propsName[6] = "G道具";
     }
     void InitialPropsUse()
     {
