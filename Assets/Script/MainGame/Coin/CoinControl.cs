@@ -6,7 +6,7 @@ public class CoinControl : MonoBehaviour
 {
     public static int P1CoinTotal, P2CoinTotal, P3CoinTotal, P4CoinTotal;
 
-    public int initialCoin = 80;
+    public int initialCoin = 20;
 
     private void Start()
     {
