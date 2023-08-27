@@ -118,8 +118,5 @@ public class DiceControl : MonoBehaviour
         SceneManager.LoadScene(7);
         PlayerMoveControl.isMove = true;
         DiceUIControl.isDiceScene = false;
-        yield return new WaitForSeconds(1.5f);
-        Calculate();
-        print("yes");
     }
 }
