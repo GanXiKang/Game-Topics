@@ -57,7 +57,6 @@ public class DiceControl : MonoBehaviour
         result = false;
         rb.angularVelocity = Vector3.zero;
         randomNum = Random.Range(MinNum, MaxNum);
-        print(randomNum);
         switch (randomNum)
         {
             case 1:
@@ -84,13 +83,23 @@ public class DiceControl : MonoBehaviour
                 break;
         }
         Calculate();
+        print(randomNum);
     }
     void Calculate()
     {
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
-                P1_totalNum += randomNum;
+                if (BagUIControl.isDoubleDice)
+                {
+                    randomNum *= 2;
+                    P1_totalNum += randomNum;
+                    BagUIControl.isDoubleDice = false;
+                }
+                else 
+                {
+                    P1_totalNum += randomNum;
+                }
                 AnimatorControl.isP1Move = true;
                 break;
 
