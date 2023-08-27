@@ -11,6 +11,8 @@ public class BagUIControl : MonoBehaviour
     public GameObject interactiveUI;
     public Button[] use = new Button[7];
 
+    public static bool isRenewDice, isDoubleDice, isCustomDice, isBomb, isSnatch, isTransposition, isThief;
+
     int whyUseProps;
     bool useProps;
 
@@ -411,5 +413,42 @@ public class BagUIControl : MonoBehaviour
     {
         whyUseProps = why;
         useProps = true;
+        switch (whyUseProps)
+        {
+            case 1:
+                isRenewDice = true;
+                print("isRenewDice");
+                break;
+
+            case 2:
+                isDoubleDice = true;
+                print("isDoubleDice");
+                break;
+
+            case 3:
+                isCustomDice = true;
+                print("isCustomDice");
+                break;
+
+            case 4:
+                isBomb = true;
+                print("isBomb");
+                break;
+
+            case 5:
+                isSnatch = true;
+                print("isSnatch");
+                break;
+
+            case 6:
+                isTransposition = true;
+                print("isTransposition");
+                break;
+
+            case 7:
+                isThief = true;
+                print("isThief");
+                break;
+        }
     }
 }
