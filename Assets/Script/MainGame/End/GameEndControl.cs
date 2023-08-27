@@ -57,6 +57,5 @@ public class GameEndControl : MonoBehaviour
         DiceControl.P2_totalNum = 0;
         DiceControl.P3_totalNum = 0;
         DiceControl.P4_totalNum = 0;
-        DiceControl.round = 0;
     }
 }

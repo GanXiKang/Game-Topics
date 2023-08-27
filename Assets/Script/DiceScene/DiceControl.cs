@@ -7,7 +7,7 @@ public class DiceControl : MonoBehaviour
 {
     Rigidbody rb;
 
-    public static int P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0, round = 0;
+    public static int P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0;
 
     public int MinNum, MaxNum;
     public float rotationForce;
@@ -83,9 +83,7 @@ public class DiceControl : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, 100f, 0f);
                 break;
         }
-        
         Calculate();
-        round++;
     }
     void Calculate()
     {
