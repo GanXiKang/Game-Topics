@@ -57,8 +57,7 @@ public class DiceControl : MonoBehaviour
         result = false;
         rb.angularVelocity = Vector3.zero;
         randomNum = Random.Range(MinNum, MaxNum);
-        Calculate();
-        
+        print(randomNum);
         switch (randomNum)
         {
             case 1:
@@ -84,6 +83,8 @@ public class DiceControl : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, 100f, 0f);
                 break;
         }
+        
+        Calculate();
         round++;
     }
     void Calculate()
@@ -119,5 +120,6 @@ public class DiceControl : MonoBehaviour
         DiceUIControl.isDiceScene = false;
         yield return new WaitForSeconds(1.5f);
         Calculate();
+        print("yes");
     }
 }
