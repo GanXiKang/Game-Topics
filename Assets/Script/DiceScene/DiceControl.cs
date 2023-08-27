@@ -104,17 +104,44 @@ public class DiceControl : MonoBehaviour
                 break;
 
             case 2:
-                P2_totalNum += randomNum;
+                if (BagUIControl.isDoubleDice)
+                {
+                    randomNum *= 2;
+                    P2_totalNum += randomNum;
+                    BagUIControl.isDoubleDice = false;
+                }
+                else
+                {
+                    P2_totalNum += randomNum;
+                }
                 AnimatorControl.isP2Move = true;
                 break;
 
             case 3:
-                P3_totalNum += randomNum;
+                if (BagUIControl.isDoubleDice)
+                {
+                    randomNum *= 2;
+                    P3_totalNum += randomNum;
+                    BagUIControl.isDoubleDice = false;
+                }
+                else
+                {
+                    P3_totalNum += randomNum;
+                }
                 AnimatorControl.isP3Move = true;
                 break;
 
             case 4:
-                P4_totalNum += randomNum;
+                if (BagUIControl.isDoubleDice)
+                {
+                    randomNum *= 2;
+                    P4_totalNum += randomNum;
+                    BagUIControl.isDoubleDice = false;
+                }
+                else
+                {
+                    P4_totalNum += randomNum;
+                }
                 AnimatorControl.isP4Move = true;
                 break;
         }
