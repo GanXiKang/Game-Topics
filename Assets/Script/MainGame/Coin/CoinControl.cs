@@ -35,8 +35,8 @@ public class CoinControl : MonoBehaviour
                         case 1:
                             stealQuantity = P2CoinTotal * howMuchSteal / 10;
                             systemText.text = "Íµ×ß" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "åX£¡";
-                            systemText.fontSize = 12;
-                            systemText.color = Color.red;
+                            //systemText.fontSize = 15;
+                            systemText.color = Color.black;
                             SystemTestTextControl.isTimer = true;
                             P2CoinTotal -= stealQuantity;
                             P1CoinTotal += stealQuantity;
