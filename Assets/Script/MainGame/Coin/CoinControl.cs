@@ -35,7 +35,6 @@ public class CoinControl : MonoBehaviour
                         case 1:
                             stealQuantity = P2CoinTotal * howMuchSteal / 10;
                             systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "錢！";
-                            //systemText.fontSize = 15;
                             systemText.color = Color.black;
                             SystemTestTextControl.isTimer = true;
                             P2CoinTotal -= stealQuantity;
@@ -44,12 +43,18 @@ public class CoinControl : MonoBehaviour
 
                         case 2:
                             stealQuantity = P3CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P3CoinTotal -= stealQuantity;
                             P1CoinTotal += stealQuantity;
                             break;
 
                         case 3:
                             stealQuantity = P4CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P4CoinTotal -= stealQuantity;
                             P1CoinTotal += stealQuantity;
                             break;
@@ -62,18 +67,27 @@ public class CoinControl : MonoBehaviour
                     {
                         case 1:
                             stealQuantity = P1CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P1CoinTotal -= stealQuantity;
                             P2CoinTotal += stealQuantity;
                             break;
 
                         case 2:
                             stealQuantity = P3CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P3CoinTotal -= stealQuantity;
                             P2CoinTotal += stealQuantity;
                             break;
 
                         case 3:
                             stealQuantity = P4CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P4CoinTotal -= stealQuantity;
                             P2CoinTotal += stealQuantity;
                             break;
@@ -86,18 +100,27 @@ public class CoinControl : MonoBehaviour
                     {
                         case 1:
                             stealQuantity = P1CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P1CoinTotal -= stealQuantity;
                             P3CoinTotal += stealQuantity;
                             break;
 
                         case 2:
                             stealQuantity = P2CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P2CoinTotal -= stealQuantity;
                             P3CoinTotal += stealQuantity;
                             break;
 
                         case 3:
                             stealQuantity = P4CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P4CoinTotal -= stealQuantity;
                             P3CoinTotal += stealQuantity;
                             break;
@@ -110,18 +133,27 @@ public class CoinControl : MonoBehaviour
                     {
                         case 1:
                             stealQuantity = P1CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P1CoinTotal -= stealQuantity;
                             P4CoinTotal += stealQuantity;
                             break;
 
                         case 2:
                             stealQuantity = P2CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P2CoinTotal -= stealQuantity;
                             P4CoinTotal += stealQuantity;
                             break;
 
                         case 3:
                             stealQuantity = P3CoinTotal * howMuchSteal / 10;
+                            systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + " " + stealQuantity.ToString() + "錢！";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P3CoinTotal -= stealQuantity;
                             P4CoinTotal += stealQuantity;
                             break;
