@@ -443,5 +443,7 @@ public class BagUIControl : MonoBehaviour
                 isThief = true;
                 break;
         }
+        bagUI.SetActive(false);
+        interactiveUI.SetActive(true);
     }
 }
