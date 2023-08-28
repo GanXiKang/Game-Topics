@@ -8,7 +8,7 @@ public class RoundUIControl : MonoBehaviour
     public Text whoRound;
     public Text CoinTotal;
 
-    public string[] Player = new string[5];
+    public static string[] Player = new string[5];
 
     void Start()
     {
