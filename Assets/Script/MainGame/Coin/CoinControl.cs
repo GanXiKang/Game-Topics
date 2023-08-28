@@ -32,6 +32,7 @@ public class CoinControl : MonoBehaviour
                     {
                         case 1:
                             stealQuantity = P2CoinTotal * howMuchSteal / 100;
+                            print(stealQuantity);
                             P2CoinTotal -= stealQuantity;
                             P1CoinTotal += stealQuantity;
                             break;
