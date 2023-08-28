@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinControl : MonoBehaviour
 {
     public static int P1CoinTotal, P2CoinTotal, P3CoinTotal, P4CoinTotal;
 
     public int initialCoin = 20;
+    public Text systemText;
 
     int howMuchSteal, stealWho, stealQuantity = 0;
 
@@ -32,6 +34,9 @@ public class CoinControl : MonoBehaviour
                     {
                         case 1:
                             stealQuantity = P2CoinTotal * howMuchSteal / 10;
+                            systemText.text = "ÕµµΩ¡À " + stealQuantity.ToString() + " ÂX£°";
+                            systemText.color = Color.black;
+                            SystemTestTextControl.isTimer = true;
                             P2CoinTotal -= stealQuantity;
                             P1CoinTotal += stealQuantity;
                             break;
