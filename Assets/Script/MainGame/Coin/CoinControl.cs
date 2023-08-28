@@ -22,7 +22,7 @@ public class CoinControl : MonoBehaviour
     {
         if (BagUIControl.isThief)
         {
-            howMuchSteal = Random.Range(40, 60);
+            howMuchSteal = Random.Range(4, 6);
 
             switch (ChangeCameraControl.changeCameraNum)
             {
@@ -31,7 +31,7 @@ public class CoinControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
-                            stealQuantity = P2CoinTotal * howMuchSteal / 100;
+                            stealQuantity = P2CoinTotal * howMuchSteal / 10;
                             print(stealQuantity);
                             P2CoinTotal -= stealQuantity;
                             P1CoinTotal += stealQuantity;
