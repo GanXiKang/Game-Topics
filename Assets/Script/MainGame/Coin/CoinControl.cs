@@ -37,24 +37,89 @@ public class CoinControl : MonoBehaviour
                             break;
 
                         case 2:
-                       
+                            stealQuantity = P3CoinTotal * howMuchSteal / 10;
+                            P3CoinTotal -= stealQuantity;
+                            P1CoinTotal += stealQuantity;
                             break;
 
                         case 3:
+                            stealQuantity = P4CoinTotal * howMuchSteal / 10;
+                            P4CoinTotal -= stealQuantity;
+                            P1CoinTotal += stealQuantity;
                             break;
                     }
                     break;
 
                 case 2:
-                    
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+                            stealQuantity = P1CoinTotal * howMuchSteal / 10;
+                            P1CoinTotal -= stealQuantity;
+                            P2CoinTotal += stealQuantity;
+                            break;
+
+                        case 2:
+                            stealQuantity = P3CoinTotal * howMuchSteal / 10;
+                            P3CoinTotal -= stealQuantity;
+                            P2CoinTotal += stealQuantity;
+                            break;
+
+                        case 3:
+                            stealQuantity = P4CoinTotal * howMuchSteal / 10;
+                            P4CoinTotal -= stealQuantity;
+                            P2CoinTotal += stealQuantity;
+                            break;
+                    }
                     break;
 
                 case 3:
-                    
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+                            stealQuantity = P1CoinTotal * howMuchSteal / 10;
+                            P1CoinTotal -= stealQuantity;
+                            P3CoinTotal += stealQuantity;
+                            break;
+
+                        case 2:
+                            stealQuantity = P2CoinTotal * howMuchSteal / 10;
+                            P2CoinTotal -= stealQuantity;
+                            P3CoinTotal += stealQuantity;
+                            break;
+
+                        case 3:
+                            stealQuantity = P4CoinTotal * howMuchSteal / 10;
+                            P4CoinTotal -= stealQuantity;
+                            P3CoinTotal += stealQuantity;
+                            break;
+                    }
                     break;
 
                 case 4:
-                    
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+                            stealQuantity = P1CoinTotal * howMuchSteal / 10;
+                            P1CoinTotal -= stealQuantity;
+                            P4CoinTotal += stealQuantity;
+                            break;
+
+                        case 2:
+                            stealQuantity = P2CoinTotal * howMuchSteal / 10;
+                            P2CoinTotal -= stealQuantity;
+                            P4CoinTotal += stealQuantity;
+                            break;
+
+                        case 3:
+                            stealQuantity = P3CoinTotal * howMuchSteal / 10;
+                            P3CoinTotal -= stealQuantity;
+                            P4CoinTotal += stealQuantity;
+                            break;
+                    }
                     break;
             }
             BagUIControl.isThief = false;
