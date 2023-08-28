@@ -24,7 +24,7 @@ public class CoinControl : MonoBehaviour
     {
         if (BagUIControl.isThief)
         {
-            howMuchSteal = Random.Range(4, 6);
+            howMuchSteal = Random.Range(3, 6);
 
             switch (ChangeCameraControl.changeCameraNum)
             {
