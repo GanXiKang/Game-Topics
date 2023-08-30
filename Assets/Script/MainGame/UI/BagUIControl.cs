@@ -412,7 +412,13 @@ public class BagUIControl : MonoBehaviour
     public void Button_Use(int why)
     {
         whyUseProps = why;
+        StartCoroutine(UseProps());
+    }
+
+    IEnumerator UseProps()
+    {
         useProps = true;
+        yield return new WaitForSeconds(0.5f);
         switch (whyUseProps)
         {
             case 1:
