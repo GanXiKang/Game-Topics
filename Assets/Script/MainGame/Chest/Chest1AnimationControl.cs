@@ -12,22 +12,17 @@ public class Chest1AnimationControl : MonoBehaviour
     public Text systemTest;
     public AudioSource BGM;
     public AudioClip open;
-
-    //public static bool openedBox1 = false;
+    public int checkIsOpenNum;
 
     int a;
     void Start()
     {
         ani = GetComponent<Animation>();
 
-        //if (openedBox1)
-        //{
-        //    Destroy(this.gameObject);
-        //}
     }
     void Update()
     {
-        if (ChestColliderControl.isOpen1)
+        if (checkIsOpenNum == ChestColliderControl.isOpen)
         {
             StartCoroutine(ChestActive());
         }
@@ -201,12 +196,11 @@ public class Chest1AnimationControl : MonoBehaviour
     IEnumerator ChestActive()
     {
         Award();
-        //openedBox1 = true;
         ani.Play("Open");
         BGM.PlayOneShot(open);
         Instantiate(effects, pointEff.transform.position, pointEff.transform.rotation);
-        ChestColliderControl.isOpen1 = false;
         yield return new WaitForSeconds(3f);
+        ChestColliderControl.isOpen = 0;
         Destroy(this.gameObject);
     }
 }
