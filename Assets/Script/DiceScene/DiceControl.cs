@@ -151,7 +151,7 @@ public class DiceControl : MonoBehaviour
 
     IEnumerator GoMainGame()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
         Calculate();
         SceneManager.LoadScene(7);
         PlayerMoveControl.isMove = true;
@@ -202,6 +202,7 @@ public class DiceControl : MonoBehaviour
     }
     public void Button_Renew()
     {
+        isRoll = true;
         BagUIControl.isRenewDice = false;
         normalUI.SetActive(true);
         renewUI.SetActive(false);
