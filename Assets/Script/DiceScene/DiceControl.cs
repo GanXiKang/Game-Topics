@@ -156,6 +156,7 @@ public class DiceControl : MonoBehaviour
 
     public void Button_Back()
     {
+        DiceUIControl.isDiceScene = false;
         DiceUIControl.isDiceUI = true;
         SceneManager.LoadScene(7);
     }
