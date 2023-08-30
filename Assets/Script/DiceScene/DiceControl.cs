@@ -148,24 +148,29 @@ public class DiceControl : MonoBehaviour
     }
     IEnumerator GoMainGame()
     {
+        isRoll = false;
+        AnimalsAnimatorControl.isJump = true;
         yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(7);
         PlayerMoveControl.isMove = true;
         DiceUIControl.isDiceScene = false;
     }
-
-    public void Button_Back()
+    IEnumerator BackMainGame()
     {
         DiceUIControl.isDiceScene = false;
         DiceUIControl.isDiceUI = true;
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(7);
+    }
+
+    public void Button_Back()
+    {
+        StartCoroutine(BackMainGame());
     }
     public void Button_Dice()
     {
         if (isRoll)
         {
-            isRoll = false;
-            AnimalsAnimatorControl.isJump = true;
             StartCoroutine(GoMainGame());
         }
         else
