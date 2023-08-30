@@ -209,6 +209,25 @@ public class DiceControl : MonoBehaviour
     }
     public void Button_Cancel()
     {
+        BagUIControl.isRenewDice = false;
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                PropsControl.P1Props[0] += 1;
+                break;
+
+            case 2:
+                PropsControl.P2Props[0] += 1;
+                break;
+
+            case 3:
+                PropsControl.P3Props[0] += 1;
+                break;
+
+            case 4:
+                PropsControl.P4Props[0] += 1;
+                break;
+        }
         renewUI.SetActive(false);
         StartCoroutine(GoMainGame());
     }
