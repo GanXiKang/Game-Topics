@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 118010030}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1313874818}
+        m_TargetAssemblyTypeName: DiceControl, Assembly-CSharp
+        m_MethodName: Button_Dice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &118010030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2225,6 +2237,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b45de56994d9c14fa62779dfcfa256c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2b45de56994d9c14fa62779dfcfa256c, type: 3}
       propertyPath: m_Name
       value: dice2
@@ -3279,7 +3295,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 912275415}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1313874818}
+        m_TargetAssemblyTypeName: DiceControl, Assembly-CSharp
+        m_MethodName: Button_Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &912275415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4159,6 +4187,7 @@ GameObject:
   - component: {fileID: 1317298617}
   - component: {fileID: 1317298618}
   - component: {fileID: 1317298619}
+  - component: {fileID: 1317298620}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -4309,6 +4338,22 @@ MonoBehaviour:
   - {fileID: 181317373}
   - {fileID: 552514239}
   - {fileID: 1608389944}
+--- !u!114 &1317298620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317298615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706965d55f26d244c8bc2fad113efc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalUI: {fileID: 727281707}
+  renewUI: {fileID: 774892047}
+  doubleUI: {fileID: 1357376263}
+  customUI: {fileID: 1070358072}
 --- !u!1001 &1317849046
 PrefabInstance:
   m_ObjectHideFlags: 0
