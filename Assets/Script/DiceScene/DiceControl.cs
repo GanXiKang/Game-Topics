@@ -198,5 +198,13 @@ public class DiceControl : MonoBehaviour
     {
         customUI.SetActive(false);
         randomNum = Num;
+        if (isRoll)
+        {
+            StartCoroutine(GoMainGame());
+        }
+        else
+        {
+            isRoll = true;
+        }
     }
 }
