@@ -47,20 +47,6 @@ public class DiceControl : MonoBehaviour
             }
         }
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (isRoll)
-            {
-                StartCoroutine(GoMainGame());
-            }
-            else
-            {
-                isRoll = true;
-            }
-        }
-    }
     void DiceRandomDice()
     {
         result = false;
