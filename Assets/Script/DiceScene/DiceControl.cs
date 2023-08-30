@@ -184,7 +184,6 @@ public class DiceControl : MonoBehaviour
             {
                 renewUI.SetActive(true);
             }
-            
         }
         normalUI.SetActive(false);
     }
