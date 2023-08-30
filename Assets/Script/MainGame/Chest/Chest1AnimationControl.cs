@@ -18,7 +18,6 @@ public class Chest1AnimationControl : MonoBehaviour
     void Start()
     {
         ani = GetComponent<Animation>();
-
     }
     void Update()
     {
