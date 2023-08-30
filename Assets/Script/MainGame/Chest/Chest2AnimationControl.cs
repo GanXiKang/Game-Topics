@@ -13,17 +13,17 @@ public class Chest2AnimationControl : MonoBehaviour
     public AudioSource BGM;
     public AudioClip open;
 
-    public static bool openedBox2 = false;
+    //public static bool openedBox2 = false;
 
     int a;
     void Start()
     {
         ani = GetComponent<Animation>();
 
-        if (openedBox2)
-        {
-            Destroy(this.gameObject);
-        }
+        //if (openedBox2)
+        //{
+        //    Destroy(this.gameObject);
+        //}
     }
     void Update()
     {
@@ -35,7 +35,7 @@ public class Chest2AnimationControl : MonoBehaviour
     void Award()
     {
         a = Random.Range(1, 11);
-        switch (ChestColliderControl.whoReward)
+        switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
                 switch (a)
@@ -197,7 +197,7 @@ public class Chest2AnimationControl : MonoBehaviour
     IEnumerator ChestActive()
     {
         Award();
-        openedBox2 = true;
+        //openedBox2 = true;
         ani.Play("Open");
         BGM.PlayOneShot(open);
         Instantiate(effects, pointEff.transform.position, pointEff.transform.rotation);
