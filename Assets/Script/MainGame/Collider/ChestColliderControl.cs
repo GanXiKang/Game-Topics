@@ -8,7 +8,7 @@ public class ChestColliderControl : MonoBehaviour
     public Transform target;
 
     public static bool isOpen1, isOpen2;
-    public static int whoReward;
+    //public static int whoReward;
 
     void OpenBoxJudge()
     {
@@ -29,7 +29,7 @@ public class ChestColliderControl : MonoBehaviour
         {
             if (DiceControl.P1_totalNum == boxPoint)
             {
-                whoReward = 1;
+                //whoReward = 1;
                 AnimatorControl.isP1Move = false;
                 StartCoroutine(ChangeCamera());
             }
@@ -38,7 +38,7 @@ public class ChestColliderControl : MonoBehaviour
         {
             if (DiceControl.P2_totalNum == boxPoint)
             {
-                whoReward = 2;
+                //whoReward = 2;
                 AnimatorControl.isP2Move = false;
                 StartCoroutine(ChangeCamera());
             }
@@ -47,7 +47,7 @@ public class ChestColliderControl : MonoBehaviour
         {
             if (DiceControl.P3_totalNum == boxPoint)
             {
-                whoReward = 3;
+                //whoReward = 3;
                 AnimatorControl.isP3Move = false;
                 StartCoroutine(ChangeCamera());
             }
@@ -56,7 +56,7 @@ public class ChestColliderControl : MonoBehaviour
         {
             if (DiceControl.P4_totalNum == boxPoint)
             {
-                whoReward = 4;
+                //whoReward = 4;
                 AnimatorControl.isP4Move = false;
                 StartCoroutine(ChangeCamera());
             }
