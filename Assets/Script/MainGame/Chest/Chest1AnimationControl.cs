@@ -198,8 +198,8 @@ public class Chest1AnimationControl : MonoBehaviour
         ani.Play("Open");
         BGM.PlayOneShot(open);
         Instantiate(effects, pointEff.transform.position, pointEff.transform.rotation);
-        yield return new WaitForSeconds(3f);
         ChestColliderControl.isOpen = 0;
+        yield return new WaitForSeconds(3f);
         Destroy(this.gameObject);
     }
 }
