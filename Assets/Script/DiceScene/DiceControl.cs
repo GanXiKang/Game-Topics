@@ -157,9 +157,9 @@ public class DiceControl : MonoBehaviour
     }
     IEnumerator BackMainGame()
     {
-        DiceUIControl.isDiceScene = false;
+        yield return new WaitForSeconds(0.5f);
         DiceUIControl.isDiceUI = true;
-        yield return new WaitForSeconds(1f);
+        DiceUIControl.isDiceScene = false;
         SceneManager.LoadScene(7);
     }
 
