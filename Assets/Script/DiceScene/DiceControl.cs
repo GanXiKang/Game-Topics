@@ -11,6 +11,7 @@ public class DiceControl : MonoBehaviour
 
     public int MinNum, MaxNum;
     public float rotationForce;
+    public GameObject normalUI, renewUI, doubleUI, customUI;
 
     int randomNum;
     bool isRoll, result;
@@ -20,6 +21,16 @@ public class DiceControl : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         isRoll = true;
+
+        if (BagUIControl.isDoubleDice)
+        {
+            doubleUI.SetActive(true);
+        }
+        if (BagUIControl.isCustomDice)
+        {
+            customUI.SetActive(true);
+            normalUI.SetActive(false);
+        }
     }
     void FixedUpdate()
     {
@@ -54,7 +65,14 @@ public class DiceControl : MonoBehaviour
     {
         result = false;
         rb.angularVelocity = Vector3.zero;
-        randomNum = Random.Range(MinNum, MaxNum);
+        if (!BagUIControl.isCustomDice)
+        {
+            randomNum = Random.Range(MinNum, MaxNum);
+        }
+        else 
+        {
+            BagUIControl.isCustomDice = false;
+        }
         switch (randomNum)
         {
             case 1:
@@ -175,5 +193,10 @@ public class DiceControl : MonoBehaviour
         {
             isRoll = true;
         }
+    }
+    public void Button_Custom(int Num)
+    {
+        customUI.SetActive(false);
+        randomNum = Num;
     }
 }
