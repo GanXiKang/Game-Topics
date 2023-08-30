@@ -42,8 +42,6 @@ public class DiceControl : MonoBehaviour
         {
             if (isRoll)
             {
-                isRoll = false;
-                AnimalsAnimatorControl.isJump = true;
                 StartCoroutine(GoMainGame());
             }
             else
