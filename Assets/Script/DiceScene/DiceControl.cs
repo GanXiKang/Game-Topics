@@ -14,7 +14,7 @@ public class DiceControl : MonoBehaviour
     public GameObject normalUI, renewUI, doubleUI, customUI;
 
     int randomNum;
-    bool isRoll, result, isRenew;
+    bool isRoll, result;
 
     void Start()
     {
@@ -44,12 +44,13 @@ public class DiceControl : MonoBehaviour
             if (result)
             {
                 DiceRandomDice();
+                result = false;
             }
         }
     }
+
     void DiceRandomDice()
     {
-        result = false;
         rb.angularVelocity = Vector3.zero;
         if (!BagUIControl.isCustomDice)
         {
@@ -147,38 +148,15 @@ public class DiceControl : MonoBehaviour
                 break;
         }
     }
+
     IEnumerator GoMainGame()
     {
-        isRoll = false;
-        AnimalsAnimatorControl.isJump = true;
-        if (BagUIControl.isRenewDice)
-        {
-            renewUI.SetActive(true);
-            normalUI.SetActive(false);
-            if (isRenew)
-            {
-                isRoll = true;
-                BagUIControl.isRenewDice = false;
-            }
-            else
-            {
-                yield return new WaitForSeconds(2.5f);
-                Calculate();
-                SceneManager.LoadScene(7);
-                PlayerMoveControl.isMove = true;
-                DiceUIControl.isDiceScene = false;
-            }
-        }
-        else
-        {
-            yield return new WaitForSeconds(2.5f);
-            Calculate();
-            SceneManager.LoadScene(7);
-            PlayerMoveControl.isMove = true;
-            DiceUIControl.isDiceScene = false;
-        }
+        yield return new WaitForSeconds(2.5f);
+        Calculate();
+        SceneManager.LoadScene(7);
+        PlayerMoveControl.isMove = true;
+        DiceUIControl.isDiceScene = false;
     }
-    
     IEnumerator BackMainGame()
     {
         normalUI.SetActive(false);
@@ -196,12 +174,22 @@ public class DiceControl : MonoBehaviour
     {
         if (isRoll)
         {
-            StartCoroutine(GoMainGame());
+            isRoll = false;
+            AnimalsAnimatorControl.isJump = true;
+            if (!BagUIControl.isRenewDice)
+            {
+                StartCoroutine(GoMainGame());
+            }
+            else 
+            {
+                renewUI.SetActive(true);
+            }
+            
         }
-        else
-        {
-            isRoll = true;
-        }
+        //else
+        //{
+        //    isRoll = true;
+        //}
         normalUI.SetActive(false);
     }
     public void Button_Custom(int Num)
@@ -219,13 +207,13 @@ public class DiceControl : MonoBehaviour
     }
     public void Button_Renew()
     {
-        isRenew = true;
+        BagUIControl.isRenewDice = false;
         normalUI.SetActive(true);
         renewUI.SetActive(false);
     }
     public void Button_NoRenew()
     {
-        isRenew = false;
         renewUI.SetActive(false);
+        StartCoroutine(GoMainGame());
     }
 }
