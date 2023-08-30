@@ -153,4 +153,22 @@ public class DiceControl : MonoBehaviour
         PlayerMoveControl.isMove = true;
         DiceUIControl.isDiceScene = false;
     }
+
+    public void Button_Back()
+    {
+        SceneManager.LoadScene(7);
+    }
+    public void Button_Dice()
+    {
+        if (isRoll)
+        {
+            isRoll = false;
+            AnimalsAnimatorControl.isJump = true;
+            StartCoroutine(GoMainGame());
+        }
+        else
+        {
+            isRoll = true;
+        }
+    }
 }
