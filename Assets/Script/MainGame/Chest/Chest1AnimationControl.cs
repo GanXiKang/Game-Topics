@@ -13,17 +13,17 @@ public class Chest1AnimationControl : MonoBehaviour
     public AudioSource BGM;
     public AudioClip open;
 
-    public static bool openedBox1 = false;
+    //public static bool openedBox1 = false;
 
     int a;
     void Start()
     {
         ani = GetComponent<Animation>();
 
-        if (openedBox1)
-        {
-            Destroy(this.gameObject);
-        }
+        //if (openedBox1)
+        //{
+        //    Destroy(this.gameObject);
+        //}
     }
     void Update()
     {
@@ -35,7 +35,7 @@ public class Chest1AnimationControl : MonoBehaviour
     void Award()
     {
         a = Random.Range(1, 11);
-        switch (ChestColliderControl.whoReward)
+        switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
                 switch (a)
@@ -64,9 +64,10 @@ public class Chest1AnimationControl : MonoBehaviour
                         CoinControl.P1CoinTotal += 30;
                         break;
                     case 9:
-                        systemTest.text = "獲得一個道具！";
+                        systemTest.text = "獲得一個黃金竊手道具！";
                         systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
+                        PropsControl.P1Props[6] += 1;
                         break;
                     case 10:
                         systemTest.text = "空！";
@@ -103,9 +104,10 @@ public class Chest1AnimationControl : MonoBehaviour
                         CoinControl.P2CoinTotal += 30;
                         break;
                     case 9:
-                        systemTest.text = "獲得一個道具！";
+                        systemTest.text = "獲得一個黃金竊手道具！";
                         systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
+                        PropsControl.P2Props[6] += 1;
                         break;
                     case 10:
                         systemTest.text = "空！";
@@ -142,9 +144,10 @@ public class Chest1AnimationControl : MonoBehaviour
                         CoinControl.P3CoinTotal += 30;
                         break;
                     case 9:
-                        systemTest.text = "獲得一個道具！";
+                        systemTest.text = "獲得一個黃金竊手道具！";
                         systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
+                        PropsControl.P3Props[6] += 1;
                         break;
                     case 10:
                         systemTest.text = "空！";
@@ -181,9 +184,10 @@ public class Chest1AnimationControl : MonoBehaviour
                         CoinControl.P4CoinTotal += 30;
                         break;
                     case 9:
-                        systemTest.text = "獲得一個道具！";
+                        systemTest.text = "獲得一個黃金竊手道具！";
                         systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
+                        PropsControl.P4Props[6] += 1;
                         break;
                     case 10:
                         systemTest.text = "空！";
@@ -197,7 +201,7 @@ public class Chest1AnimationControl : MonoBehaviour
     IEnumerator ChestActive()
     {
         Award();
-        openedBox1 = true;
+        //openedBox1 = true;
         ani.Play("Open");
         BGM.PlayOneShot(open);
         Instantiate(effects, pointEff.transform.position, pointEff.transform.rotation);
