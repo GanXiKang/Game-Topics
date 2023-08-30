@@ -206,7 +206,7 @@ public class DiceControl : MonoBehaviour
         normalUI.SetActive(true);
         renewUI.SetActive(false);
     }
-    public void Button_NoRenew()
+    public void Button_Cancel()
     {
         renewUI.SetActive(false);
         StartCoroutine(GoMainGame());
