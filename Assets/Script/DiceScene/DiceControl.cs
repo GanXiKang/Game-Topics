@@ -14,7 +14,7 @@ public class DiceControl : MonoBehaviour
     public GameObject normalUI, renewUI, doubleUI, customUI;
 
     int randomNum;
-    bool isRoll, result;
+    bool isRoll, result, isRenew;
 
     void Start()
     {
@@ -98,7 +98,6 @@ public class DiceControl : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, 100f, 0f);
                 break;
         }
-        Calculate();
         print(randomNum);
     }
     void Calculate()
@@ -166,13 +165,37 @@ public class DiceControl : MonoBehaviour
     {
         isRoll = false;
         AnimalsAnimatorControl.isJump = true;
-        yield return new WaitForSeconds(2.5f);
-        SceneManager.LoadScene(7);
-        PlayerMoveControl.isMove = true;
-        DiceUIControl.isDiceScene = false;
+        if (BagUIControl.isRenewDice)
+        {
+            renewUI.SetActive(true);
+            normalUI.SetActive(false);
+            if (isRenew)
+            {
+                isRoll = true;
+                BagUIControl.isRenewDice = false;
+            }
+            else
+            {
+                yield return new WaitForSeconds(2.5f);
+                Calculate();
+                SceneManager.LoadScene(7);
+                PlayerMoveControl.isMove = true;
+                DiceUIControl.isDiceScene = false;
+            }
+        }
+        else
+        {
+            yield return new WaitForSeconds(2.5f);
+            Calculate();
+            SceneManager.LoadScene(7);
+            PlayerMoveControl.isMove = true;
+            DiceUIControl.isDiceScene = false;
+        }
     }
+    
     IEnumerator BackMainGame()
     {
+        normalUI.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         DiceUIControl.isDiceUI = true;
         DiceUIControl.isDiceScene = false;
@@ -193,6 +216,7 @@ public class DiceControl : MonoBehaviour
         {
             isRoll = true;
         }
+        normalUI.SetActive(false);
     }
     public void Button_Custom(int Num)
     {
@@ -206,5 +230,16 @@ public class DiceControl : MonoBehaviour
         {
             isRoll = true;
         }
+    }
+    public void Button_Renew()
+    {
+        isRenew = true;
+        normalUI.SetActive(true);
+        renewUI.SetActive(false);
+    }
+    public void Button_NoRenew()
+    {
+        isRenew = false;
+        renewUI.SetActive(false);
     }
 }
