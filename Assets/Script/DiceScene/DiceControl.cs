@@ -186,10 +186,6 @@ public class DiceControl : MonoBehaviour
             }
             
         }
-        //else
-        //{
-        //    isRoll = true;
-        //}
         normalUI.SetActive(false);
     }
     public void Button_Custom(int Num)
