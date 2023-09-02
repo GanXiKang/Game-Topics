@@ -93,9 +93,9 @@ public class PropsControl : MonoBehaviour
                                     P2Props[i]--;
                                     P1Props[i]++;
                                     isStealProps = true;
-                                    //systemText.text = "Íµ×ß" + RoundUIControl.Player[2].ToString() + " " + .ToString() + "åX£¡";
-                                    //systemText.color = Color.black;
-                                    //SystemTestTextControl.isTimer = true;
+                                    systemText.text = "Íµ×ß" + RoundUIControl.Player[2].ToString() + "µÄ" + propsName[i].ToString();
+                                    systemText.color = Color.black;
+                                    SystemTestTextControl.isTimer = true;
                                     break;
                                 }
                             }
