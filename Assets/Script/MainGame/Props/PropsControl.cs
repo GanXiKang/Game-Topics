@@ -12,9 +12,13 @@ public class PropsControl : MonoBehaviour
 
     public Text[] PropsQuantity = new Text[7];
 
+    int stealWho;
+    GameObject P1, P2, P3, P4;
+
     void Start()
     {
         Initial();
+        FindPlayer();
     }
 
     void Update()
@@ -61,6 +65,164 @@ public class PropsControl : MonoBehaviour
                 PropsQuantity[6].text = P4Props[6].ToString();
                 break;
         }
+
+        if (BagUIControl.isSnatch)
+        {
+            switch (ChangeCameraControl.changeCameraNum)
+            {
+                case 1:
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+
+                            break;
+
+                        case 2:
+
+                            break;
+
+                        case 3:
+
+                            break;
+                    }
+                    break;
+
+                case 2:
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+
+                            break;
+
+                        case 2:
+
+                            break;
+
+                        case 3:
+
+                            break;
+                    }
+                    break;
+
+                case 3:
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+
+                            break;
+
+                        case 2:
+
+                            break;
+
+                        case 3:
+
+                            break;
+                    }
+                    break;
+
+                case 4:
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+
+                            break;
+
+                        case 2:
+
+                            break;
+
+                        case 3:
+
+                            break;
+                    }
+                    break;
+            }
+            BagUIControl.isSnatch = false;
+        }
+
+        if (BagUIControl.isTransposition)
+        {
+            switch (ChangeCameraControl.changeCameraNum)
+            {
+                case 1:
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+                            
+                            break;
+
+                        case 2:
+                            
+                            break;
+
+                        case 3:
+                            
+                            break;
+                    }
+                    break;
+
+                case 2:
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+
+                            break;
+
+                        case 2:
+
+                            break;
+
+                        case 3:
+
+                            break;
+                    }
+                    break;
+
+                case 3:
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+
+                            break;
+
+                        case 2:
+
+                            break;
+
+                        case 3:
+
+                            break;
+                    }
+                    break;
+
+                case 4:
+                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    switch (stealWho)
+                    {
+                        case 1:
+
+                            break;
+
+                        case 2:
+
+                            break;
+
+                        case 3:
+
+                            break;
+                    }
+                    break;
+            }
+            BagUIControl.isTransposition = false;
+        }
     }
     void Initial()
     {
@@ -92,5 +254,12 @@ public class PropsControl : MonoBehaviour
         P4Props[4] = 0;
         P4Props[5] = 0;
         P4Props[6] = 0;
+    }
+    void FindPlayer()
+    {
+        P1 = GameObject.FindGameObjectWithTag("P1");
+        P2 = GameObject.FindGameObjectWithTag("P2");
+        P3 = GameObject.FindGameObjectWithTag("P3");
+        P4 = GameObject.FindGameObjectWithTag("P4");
     }
 }
