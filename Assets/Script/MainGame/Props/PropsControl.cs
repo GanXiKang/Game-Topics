@@ -15,8 +15,11 @@ public class PropsControl : MonoBehaviour
 
     int stealWho, totalNum;
     bool isStealProps;
-    bool[] isHavePropsP1, isHavePropsP2, isHavePropsP3, isHavePropsP4;
-    string[] propsName;
+    bool[] isHavePropsP1 = new bool[7];
+    bool[] isHavePropsP2 = new bool[7];
+    bool[] isHavePropsP3 = new bool[7];
+    bool[] isHavePropsP4 = new bool[7];
+    string[] propsName = new string[7];
     Vector3 transposition;
     GameObject P1, P2, P3, P4;
 
