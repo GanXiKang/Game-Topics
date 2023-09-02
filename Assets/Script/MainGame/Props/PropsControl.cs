@@ -261,13 +261,13 @@ public class PropsControl : MonoBehaviour
         P4Props[4] = 0;
         P4Props[5] = 0;
         P4Props[6] = 0;
-        propsName[0] = "";
-        propsName[1] = "";
-        propsName[2] = "";
-        propsName[3] = "";
-        propsName[4] = "";
-        propsName[5] = "";
-        propsName[6] = "";
+        propsName[0] = "重來骰子";
+        propsName[1] = "雙倍骰子";
+        propsName[2] = "自訂骰子";
+        propsName[3] = "定格炸彈";
+        propsName[4] = "搶奪魔杖";
+        propsName[5] = "換位魔杖";
+        propsName[6] = "黃金竊手";
     }
     void HaveProps()
     {
