@@ -96,6 +96,7 @@ public class PropsControl : MonoBehaviour
                                     //systemText.text = "Íµ×ß" + RoundUIControl.Player[2].ToString() + " " + .ToString() + "åX£¡";
                                     //systemText.color = Color.black;
                                     //SystemTestTextControl.isTimer = true;
+                                    break;
                                 }
                             }
                             break;
