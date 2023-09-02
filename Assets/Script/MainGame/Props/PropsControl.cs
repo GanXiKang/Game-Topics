@@ -13,12 +13,17 @@ public class PropsControl : MonoBehaviour
     public Text[] PropsQuantity = new Text[7];
 
     int stealWho, totalNum;
+    bool isHavePropsP1, isHavePropsP2, isHavePropsP3, isHavePropsP4;
     Vector3 transposition;
     GameObject P1, P2, P3, P4;
 
     void Start()
     {
         Initial();
+    }
+    void FixedUpdate()
+    {
+        HaveProps();
     }
 
     void Update()
@@ -75,15 +80,24 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
-
+                            if (isHavePropsP2)
+                            {
+                                
+                            }
                             break;
 
                         case 2:
+                            if (isHavePropsP3)
+                            {
 
+                            }
                             break;
 
                         case 3:
+                            if (isHavePropsP4)
+                            {
 
+                            }
                             break;
                     }
                     break;
@@ -93,15 +107,24 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
+                            if (isHavePropsP1)
+                            {
 
+                            }
                             break;
 
                         case 2:
+                            if (isHavePropsP3)
+                            {
 
+                            }
                             break;
 
                         case 3:
+                            if (isHavePropsP4)
+                            {
 
+                            }
                             break;
                     }
                     break;
@@ -111,15 +134,24 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
+                            if (isHavePropsP1)
+                            {
 
+                            }
                             break;
 
                         case 2:
+                            if (isHavePropsP2)
+                            {
 
+                            }
                             break;
 
                         case 3:
+                            if (isHavePropsP4)
+                            {
 
+                            }
                             break;
                     }
                     break;
@@ -129,15 +161,24 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
+                            if (isHavePropsP1)
+                            {
 
+                            }
                             break;
 
                         case 2:
+                            if (isHavePropsP2)
+                            {
 
+                            }
                             break;
 
                         case 3:
+                            if (isHavePropsP3)
+                            {
 
+                            }
                             break;
                     }
                     break;
@@ -327,6 +368,51 @@ public class PropsControl : MonoBehaviour
         P4Props[4] = 0;
         P4Props[5] = 0;
         P4Props[6] = 0;
+    }
+    void HaveProps()
+    {
+        for (int i = 0; i < 7; i++)
+        {
+            if (P1Props[i] != 0)
+            {
+                isHavePropsP1 = true;
+            }
+            else
+            {
+                isHavePropsP1 = false;
+            }
+
+            if (P2Props[i] != 0)
+            {
+                isHavePropsP2 = true;
+            }
+            else
+            {
+                isHavePropsP2 = false;
+            }
+
+            if (P3Props[i] != 0)
+            {
+                isHavePropsP3 = true;
+            }
+            else
+            {
+                isHavePropsP3 = false;
+            }
+
+            if (P4Props[i] != 0)
+            {
+                isHavePropsP4 = true;
+            }
+            else
+            {
+                isHavePropsP4 = false;
+            }
+        }
+    }
+    void SnatchProps()
+    {
+        
     }
     void FindPlayer()
     {
