@@ -13,7 +13,9 @@ public class PropsControl : MonoBehaviour
     public Text[] PropsQuantity = new Text[7];
 
     int stealWho, totalNum;
-    bool isHavePropsP1, isHavePropsP2, isHavePropsP3, isHavePropsP4;
+    bool isStealProps;
+    bool[] isHavePropsP1, isHavePropsP2, isHavePropsP3, isHavePropsP4;
+    string[] propsName;
     Vector3 transposition;
     GameObject P1, P2, P3, P4;
 
@@ -73,116 +75,7 @@ public class PropsControl : MonoBehaviour
 
         if (BagUIControl.isSnatch)
         {
-            switch (ChangeCameraControl.changeCameraNum)
-            {
-                case 1:
-                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                    switch (stealWho)
-                    {
-                        case 1:
-                            if (isHavePropsP2)
-                            {
-                                
-                            }
-                            break;
-
-                        case 2:
-                            if (isHavePropsP3)
-                            {
-
-                            }
-                            break;
-
-                        case 3:
-                            if (isHavePropsP4)
-                            {
-
-                            }
-                            break;
-                    }
-                    break;
-
-                case 2:
-                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                    switch (stealWho)
-                    {
-                        case 1:
-                            if (isHavePropsP1)
-                            {
-
-                            }
-                            break;
-
-                        case 2:
-                            if (isHavePropsP3)
-                            {
-
-                            }
-                            break;
-
-                        case 3:
-                            if (isHavePropsP4)
-                            {
-
-                            }
-                            break;
-                    }
-                    break;
-
-                case 3:
-                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                    switch (stealWho)
-                    {
-                        case 1:
-                            if (isHavePropsP1)
-                            {
-
-                            }
-                            break;
-
-                        case 2:
-                            if (isHavePropsP2)
-                            {
-
-                            }
-                            break;
-
-                        case 3:
-                            if (isHavePropsP4)
-                            {
-
-                            }
-                            break;
-                    }
-                    break;
-
-                case 4:
-                    stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                    switch (stealWho)
-                    {
-                        case 1:
-                            if (isHavePropsP1)
-                            {
-
-                            }
-                            break;
-
-                        case 2:
-                            if (isHavePropsP2)
-                            {
-
-                            }
-                            break;
-
-                        case 3:
-                            if (isHavePropsP3)
-                            {
-
-                            }
-                            break;
-                    }
-                    break;
-            }
+            SnatchProps();
             BagUIControl.isSnatch = false;
         }
 
@@ -368,6 +261,13 @@ public class PropsControl : MonoBehaviour
         P4Props[4] = 0;
         P4Props[5] = 0;
         P4Props[6] = 0;
+        propsName[0] = "";
+        propsName[1] = "";
+        propsName[2] = "";
+        propsName[3] = "";
+        propsName[4] = "";
+        propsName[5] = "";
+        propsName[6] = "";
     }
     void HaveProps()
     {
@@ -375,44 +275,245 @@ public class PropsControl : MonoBehaviour
         {
             if (P1Props[i] != 0)
             {
-                isHavePropsP1 = true;
+                isHavePropsP1[i] = true;
             }
             else
             {
-                isHavePropsP1 = false;
+                isHavePropsP1[i] = false;
             }
 
             if (P2Props[i] != 0)
             {
-                isHavePropsP2 = true;
+                isHavePropsP2[i] = true;
             }
             else
             {
-                isHavePropsP2 = false;
+                isHavePropsP2[i] = false;
             }
 
             if (P3Props[i] != 0)
             {
-                isHavePropsP3 = true;
+                isHavePropsP3[i] = true;
             }
             else
             {
-                isHavePropsP3 = false;
+                isHavePropsP3[i] = false;
             }
 
             if (P4Props[i] != 0)
             {
-                isHavePropsP4 = true;
+                isHavePropsP4[i] = true;
             }
             else
             {
-                isHavePropsP4 = false;
+                isHavePropsP4[i] = false;
             }
         }
     }
     void SnatchProps()
     {
-        
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                switch (stealWho)
+                {
+                    case 1:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP2[i])
+                            {
+                                P2Props[i]--;
+                                P1Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                         break;
+
+                    case 2:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP3[i])
+                            {
+                                P3Props[i]--;
+                                P1Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+
+                    case 3:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP4[i])
+                            {
+                                P4Props[i]--;
+                                P1Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+                }
+                if (!isStealProps)
+                {
+                    print("Íµ±IÊ§”¡£¡");
+                }
+                else
+                {
+                    isStealProps = false;
+                }
+                break;
+
+            case 2:
+                stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                switch (stealWho)
+                {
+                    case 1:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP1[i])
+                            {
+                                P1Props[i]--;
+                                P2Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+
+                    case 2:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP3[i])
+                            {
+                                P3Props[i]--;
+                                P2Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+
+                    case 3:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP4[i])
+                            {
+                                P4Props[i]--;
+                                P1Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+                }
+                if (!isStealProps)
+                {
+                    print("Íµ±IÊ§”¡£¡");
+                }
+                else
+                {
+                    isStealProps = false;
+                }
+                break;
+
+            case 3:
+                stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                switch (stealWho)
+                {
+                    case 1:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP1[i])
+                            {
+                                P1Props[i]--;
+                                P3Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+
+                    case 2:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP2[i])
+                            {
+                                P2Props[i]--;
+                                P3Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+
+                    case 3:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP4[i])
+                            {
+                                P4Props[i]--;
+                                P3Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+                }
+                if (!isStealProps)
+                {
+                    print("Íµ±IÊ§”¡£¡");
+                }
+                else
+                {
+                    isStealProps = false;
+                }
+                break;
+
+            case 4:
+                stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                switch (stealWho)
+                {
+                    case 1:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP1[i])
+                            {
+                                P1Props[i]--;
+                                P4Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+
+                    case 2:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP2[i])
+                            {
+                                P2Props[i]--;
+                                P4Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+
+                    case 3:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            if (isHavePropsP3[i])
+                            {
+                                P3Props[i]--;
+                                P3Props[i]++;
+                                isStealProps = true;
+                            }
+                        }
+                        break;
+                }
+                if (!isStealProps)
+                {
+                    print("Íµ±IÊ§”¡£¡");
+                }
+                else
+                {
+                    isStealProps = false;
+                }
+                break;
+        }
     }
     void FindPlayer()
     {
