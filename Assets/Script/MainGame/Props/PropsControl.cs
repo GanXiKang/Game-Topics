@@ -19,7 +19,6 @@ public class PropsControl : MonoBehaviour
     void Start()
     {
         Initial();
-        FindPlayer();
     }
 
     void Update()
@@ -148,6 +147,7 @@ public class PropsControl : MonoBehaviour
 
         if (BagUIControl.isTransposition)
         {
+            FindPlayer();
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
@@ -158,17 +158,30 @@ public class PropsControl : MonoBehaviour
                             transposition = P1.transform.position;
                             P1.transform.position = P2.transform.position;
                             P2.transform.position = transposition;
+
                             totalNum = DiceControl.P1_totalNum;
                             DiceControl.P1_totalNum = DiceControl.P2_totalNum;
                             DiceControl.P2_totalNum = totalNum;
                             break;
 
                         case 2:
-                            
+                            transposition = P1.transform.position;
+                            P1.transform.position = P3.transform.position;
+                            P3.transform.position = transposition;
+
+                            totalNum = DiceControl.P1_totalNum;
+                            DiceControl.P1_totalNum = DiceControl.P3_totalNum;
+                            DiceControl.P3_totalNum = totalNum;
                             break;
 
                         case 3:
-                            
+                            transposition = P1.transform.position;
+                            P1.transform.position = P4.transform.position;
+                            P4.transform.position = transposition;
+
+                            totalNum = DiceControl.P1_totalNum;
+                            DiceControl.P1_totalNum = DiceControl.P4_totalNum;
+                            DiceControl.P4_totalNum = totalNum;
                             break;
                     }
                     break;
@@ -178,15 +191,33 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
+                            transposition = P2.transform.position;
+                            P2.transform.position = P1.transform.position;
+                            P1.transform.position = transposition;
 
+                            totalNum = DiceControl.P2_totalNum;
+                            DiceControl.P2_totalNum = DiceControl.P1_totalNum;
+                            DiceControl.P1_totalNum = totalNum;
                             break;
 
                         case 2:
+                            transposition = P2.transform.position;
+                            P2.transform.position = P3.transform.position;
+                            P3.transform.position = transposition;
 
+                            totalNum = DiceControl.P2_totalNum;
+                            DiceControl.P2_totalNum = DiceControl.P3_totalNum;
+                            DiceControl.P3_totalNum = totalNum;
                             break;
 
                         case 3:
+                            transposition = P2.transform.position;
+                            P2.transform.position = P4.transform.position;
+                            P4.transform.position = transposition;
 
+                            totalNum = DiceControl.P2_totalNum;
+                            DiceControl.P2_totalNum = DiceControl.P4_totalNum;
+                            DiceControl.P4_totalNum = totalNum;
                             break;
                     }
                     break;
@@ -196,15 +227,33 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
+                            transposition = P3.transform.position;
+                            P3.transform.position = P1.transform.position;
+                            P1.transform.position = transposition;
 
+                            totalNum = DiceControl.P3_totalNum;
+                            DiceControl.P3_totalNum = DiceControl.P1_totalNum;
+                            DiceControl.P1_totalNum = totalNum;
                             break;
 
                         case 2:
+                            transposition = P3.transform.position;
+                            P3.transform.position = P2.transform.position;
+                            P2.transform.position = transposition;
 
+                            totalNum = DiceControl.P3_totalNum;
+                            DiceControl.P3_totalNum = DiceControl.P2_totalNum;
+                            DiceControl.P2_totalNum = totalNum;
                             break;
 
                         case 3:
+                            transposition = P3.transform.position;
+                            P3.transform.position = P4.transform.position;
+                            P4.transform.position = transposition;
 
+                            totalNum = DiceControl.P3_totalNum;
+                            DiceControl.P3_totalNum = DiceControl.P4_totalNum;
+                            DiceControl.P4_totalNum = totalNum;
                             break;
                     }
                     break;
@@ -214,15 +263,33 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
+                            transposition = P4.transform.position;
+                            P4.transform.position = P1.transform.position;
+                            P1.transform.position = transposition;
 
+                            totalNum = DiceControl.P4_totalNum;
+                            DiceControl.P4_totalNum = DiceControl.P1_totalNum;
+                            DiceControl.P1_totalNum = totalNum;
                             break;
 
                         case 2:
+                            transposition = P4.transform.position;
+                            P4.transform.position = P2.transform.position;
+                            P2.transform.position = transposition;
 
+                            totalNum = DiceControl.P4_totalNum;
+                            DiceControl.P4_totalNum = DiceControl.P2_totalNum;
+                            DiceControl.P2_totalNum = totalNum;
                             break;
 
                         case 3:
+                            transposition = P4.transform.position;
+                            P4.transform.position = P3.transform.position;
+                            P3.transform.position = transposition;
 
+                            totalNum = DiceControl.P4_totalNum;
+                            DiceControl.P4_totalNum = DiceControl.P3_totalNum;
+                            DiceControl.P3_totalNum = totalNum;
                             break;
                     }
                     break;
