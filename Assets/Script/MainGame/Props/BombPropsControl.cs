@@ -15,9 +15,8 @@ public class BombPropsControl : MonoBehaviour
             {
                 if (DiceControl.P1_totalNum == pointNum)
                 {
-                    IsStopUIControl.isStopUI++;
                     isBoomStopP1 = true;
-                    Destroy(this.gameObject, 2f);
+                    StartCoroutine(StopTiming());
                 }
             }
             else 
@@ -31,9 +30,8 @@ public class BombPropsControl : MonoBehaviour
             {
                 if (DiceControl.P2_totalNum == pointNum)
                 {
-                    IsStopUIControl.isStopUI++;
                     isBoomStopP2 = true;
-                    Destroy(this.gameObject, 2f);
+                    StartCoroutine(StopTiming());
                 }
             }
             else
@@ -47,9 +45,8 @@ public class BombPropsControl : MonoBehaviour
             {
                 if (DiceControl.P3_totalNum == pointNum)
                 {
-                    IsStopUIControl.isStopUI++;
                     isBoomStopP3 = true;
-                    Destroy(this.gameObject, 2f);
+                    StartCoroutine(StopTiming());
                 }
             }
             else
@@ -63,9 +60,8 @@ public class BombPropsControl : MonoBehaviour
             {
                 if (DiceControl.P4_totalNum == pointNum)
                 {
-                    IsStopUIControl.isStopUI++;
                     isBoomStopP4 = true;
-                    Destroy(this.gameObject, 2f);
+                    StartCoroutine(StopTiming());
                 }
             }
             else
@@ -73,5 +69,12 @@ public class BombPropsControl : MonoBehaviour
                 InsBombControl.isP4InsBomb = true;
             }
         }
+    }
+    IEnumerator StopTiming()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(this.gameObject);
+        yield return new WaitForSeconds(3f);
+        IsStopUIControl.isStopUI++;
     }
 }
