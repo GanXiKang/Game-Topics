@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class InsBoomControl : MonoBehaviour
 {
-    public GameObject boomProps;
-    public Transform insBoomPoint;
+    public GameObject bombProps;
+    public Transform insBombPoint;
 
-    void Start()
-    {
-        
-    }
     void Update()
     {
-        
+        if (BagUIControl.isBomb)
+        {
+            
+        }
     }
 }
