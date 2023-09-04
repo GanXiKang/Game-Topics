@@ -5,6 +5,7 @@ using UnityEngine;
 public class BombPropsControl : MonoBehaviour
 {
     public static int pointNum;
+    public static bool isBoomStopP1, isBoomStopP2, isBoomStopP3, isBoomStopP4;
 
     void FixedUpdate()
     {
@@ -13,6 +14,7 @@ public class BombPropsControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        IsStopUIControl.isStopUI++;
+        isBoomStopP1 = true;
     }
 }
