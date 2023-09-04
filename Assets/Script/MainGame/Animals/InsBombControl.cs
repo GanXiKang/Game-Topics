@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InsBoomControl : MonoBehaviour
+public class InsBombControl : MonoBehaviour
 {
     public GameObject bombProps;
     public Transform insBombPoint;
@@ -11,7 +11,7 @@ public class InsBoomControl : MonoBehaviour
     {
         if (BagUIControl.isBomb)
         {
-            
+
         }
     }
 }
