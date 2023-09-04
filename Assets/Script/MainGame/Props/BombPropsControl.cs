@@ -9,7 +9,7 @@ public class BombPropsControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == "P1")
+        if (other.tag == "P1")
         {
             if (DiceControl.P1_totalNum == pointNum)
             { 
@@ -18,7 +18,7 @@ public class BombPropsControl : MonoBehaviour
                 Destroy(this.gameObject, 2f);
             }
         }
-        else if (gameObject.tag == "P2")
+        else if (other.tag == "P2")
         {
             if (DiceControl.P2_totalNum == pointNum)
             {
@@ -27,7 +27,7 @@ public class BombPropsControl : MonoBehaviour
                 Destroy(this.gameObject, 2f);
             }
         }
-        else if (gameObject.tag == "P3")
+        else if (other.tag == "P3")
         {
             if (DiceControl.P3_totalNum == pointNum)
             {
@@ -36,7 +36,7 @@ public class BombPropsControl : MonoBehaviour
                 Destroy(this.gameObject, 2f);
             }
         }
-        else if (gameObject.tag == "P4")
+        else if (other.tag == "P4")
         {
             if (DiceControl.P4_totalNum == pointNum)
             {
