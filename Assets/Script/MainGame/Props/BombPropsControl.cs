@@ -11,30 +11,39 @@ public class BombPropsControl : MonoBehaviour
     {
         if (gameObject.tag == "P1")
         {
-            //if (!InsBombControl.isP1InsBomb)
-            //{
+            if (DiceControl.P1_totalNum == pointNum)
+            { 
                 IsStopUIControl.isStopUI++;
                 isBoomStopP1 = true;
                 Destroy(this.gameObject, 2f);
-            //}
+            }
         }
         else if (gameObject.tag == "P2")
         {
-            IsStopUIControl.isStopUI++;
-            isBoomStopP2 = true;
-            Destroy(this.gameObject, 2f);
+            if (DiceControl.P2_totalNum == pointNum)
+            {
+                IsStopUIControl.isStopUI++;
+                isBoomStopP2 = true;
+                Destroy(this.gameObject, 2f);
+            }
         }
         else if (gameObject.tag == "P3")
         {
-            IsStopUIControl.isStopUI++;
-            isBoomStopP3 = true;
-            Destroy(this.gameObject, 2f);
+            if (DiceControl.P3_totalNum == pointNum)
+            {
+                IsStopUIControl.isStopUI++;
+                isBoomStopP3 = true;
+                Destroy(this.gameObject, 2f);
+            }
         }
         else if (gameObject.tag == "P4")
         {
-            IsStopUIControl.isStopUI++;
-            isBoomStopP4 = true;
-            Destroy(this.gameObject, 2f);
+            if (DiceControl.P4_totalNum == pointNum)
+            {
+                IsStopUIControl.isStopUI++;
+                isBoomStopP4 = true;
+                Destroy(this.gameObject, 2f);
+            }
         }
     }
 }
