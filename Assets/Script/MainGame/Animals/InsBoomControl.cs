@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class InsBoomControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject boomProps;
+    public Transform insBoomPoint;
+
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
