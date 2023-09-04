@@ -15,6 +15,22 @@ public class BombPropsControl : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         IsStopUIControl.isStopUI++;
-        isBoomStopP1 = true;
+        if (gameObject.tag == "P1")
+        {
+            isBoomStopP1 = true;
+        }
+        else if (gameObject.tag == "P2")
+        {
+            isBoomStopP2 = true;
+        }
+        else if (gameObject.tag == "P3")
+        {
+            isBoomStopP3 = true;
+        }
+        else if (gameObject.tag == "P4")
+        {
+            isBoomStopP4 = true;
+        }
+        Destroy(this.gameObject, 2f);
     }
 }
