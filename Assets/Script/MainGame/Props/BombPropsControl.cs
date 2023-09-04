@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BombPropsControl : MonoBehaviour
 {
+    public static int pointNum;
+
     void FixedUpdate()
     {
         transform.Rotate(0, -1, 0);
@@ -11,6 +13,6 @@ public class BombPropsControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        
     }
 }
