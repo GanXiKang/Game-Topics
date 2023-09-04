@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1466386132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466386133}
+  m_Layer: 0
+  m_Name: InsBombPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466386133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466386132}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6991844486985257260}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &241252459463621871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,6 +2043,7 @@ GameObject:
   - component: {fileID: 1105131333}
   - component: {fileID: 3568266017251144574}
   - component: {fileID: 763743672}
+  - component: {fileID: 1315992457}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Mouse
@@ -2034,6 +2066,7 @@ Transform:
   - {fileID: 2141691243798479282}
   - {fileID: 1245673907605037089}
   - {fileID: 4050818831436379504}
+  - {fileID: 1466386133}
   - {fileID: 4628118198994959988}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2159,6 +2192,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kickboard: {fileID: 5436320115994731726}
+--- !u!114 &1315992457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7657198161940171670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5765a5902f9400246b080eb3a750ffa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombProps: {fileID: 8502122719005367469, guid: 9e31686979e34b340a2da8fd13f51a52, type: 3}
+  insBombPoint: {fileID: 1466386133}
 --- !u!1 &7722083400083569675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,7 +2608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_LocalPosition.x

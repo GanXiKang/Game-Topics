@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &440853501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 440853502}
+  m_Layer: 0
+  m_Name: InsBombPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &440853502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440853501}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3720288323304270595}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &107294138864151475
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,6 +783,7 @@ GameObject:
   - component: {fileID: 1602468099}
   - component: {fileID: 4637674654805055264}
   - component: {fileID: 6675508679973663666}
+  - component: {fileID: 280196383}
   m_Layer: 0
   m_Name: Rabbit
   m_TagString: Rabbit
@@ -774,6 +806,7 @@ Transform:
   - {fileID: 5697559123889912733}
   - {fileID: 900760954905597253}
   - {fileID: 5227579097858064169}
+  - {fileID: 440853502}
   - {fileID: 4303668978950287093}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -899,6 +932,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kickboard: {fileID: 3526992023183914063}
+--- !u!114 &280196383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4101317083984687545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5765a5902f9400246b080eb3a750ffa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombProps: {fileID: 8502122719005367469, guid: 9e31686979e34b340a2da8fd13f51a52, type: 3}
+  insBombPoint: {fileID: 440853502}
 --- !u!1 &4115854761860772882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,7 +2184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_LocalScale.x
