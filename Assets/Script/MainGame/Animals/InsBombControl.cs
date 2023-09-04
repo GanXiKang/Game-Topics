@@ -18,7 +18,7 @@ public class InsBombControl : MonoBehaviour
                     if (gameObject.tag == "P1")
                     {
                         isP1InsBomb = true;
-                        DiceControl.P1_totalNum = BombPropsControl.pointNum;
+                        BombPropsControl.pointNum = DiceControl.P1_totalNum;
                         Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
                     }
                     break;
@@ -27,7 +27,7 @@ public class InsBombControl : MonoBehaviour
                     if (gameObject.tag == "P2")
                     {
                         isP2InsBomb = true;
-                        DiceControl.P2_totalNum = BombPropsControl.pointNum;
+                        BombPropsControl.pointNum = DiceControl.P2_totalNum;
                         Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
                     }
                     break;
@@ -36,7 +36,7 @@ public class InsBombControl : MonoBehaviour
                     if (gameObject.tag == "P3")
                     {
                         isP3InsBomb = true;
-                        DiceControl.P3_totalNum = BombPropsControl.pointNum;
+                        BombPropsControl.pointNum = DiceControl.P3_totalNum;
                         Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
                     }
                     break;
@@ -45,7 +45,7 @@ public class InsBombControl : MonoBehaviour
                     if (gameObject.tag == "P4")
                     {
                         isP4InsBomb = true;
-                        DiceControl.P4_totalNum = BombPropsControl.pointNum;
+                        BombPropsControl.pointNum = DiceControl.P4_totalNum; 
                         Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
                     }
                     break;
