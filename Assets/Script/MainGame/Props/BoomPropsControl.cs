@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class BoomPropsControl : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
-
     void FixedUpdate()
     {
         transform.Rotate(0, -1, 0);
     }
-    void Update()
+
+    private void OnTriggerEnter(Collider other)
     {
         
     }
