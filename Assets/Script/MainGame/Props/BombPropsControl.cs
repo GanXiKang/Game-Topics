@@ -11,38 +11,66 @@ public class BombPropsControl : MonoBehaviour
     {
         if (other.tag == "P1")
         {
-            if (DiceControl.P1_totalNum == pointNum)
-            { 
-                IsStopUIControl.isStopUI++;
-                isBoomStopP1 = true;
-                Destroy(this.gameObject, 2f);
+            if (!InsBombControl.isP1InsBomb)
+            {
+                if (DiceControl.P1_totalNum == pointNum)
+                {
+                    IsStopUIControl.isStopUI++;
+                    isBoomStopP1 = true;
+                    Destroy(this.gameObject, 2f);
+                }
+            }
+            else 
+            {
+                InsBombControl.isP1InsBomb = true;
             }
         }
         else if (other.tag == "P2")
         {
-            if (DiceControl.P2_totalNum == pointNum)
+            if (!InsBombControl.isP2InsBomb)
             {
-                IsStopUIControl.isStopUI++;
-                isBoomStopP2 = true;
-                Destroy(this.gameObject, 2f);
+                if (DiceControl.P2_totalNum == pointNum)
+                {
+                    IsStopUIControl.isStopUI++;
+                    isBoomStopP2 = true;
+                    Destroy(this.gameObject, 2f);
+                }
+            }
+            else
+            {
+                InsBombControl.isP2InsBomb = true;
             }
         }
         else if (other.tag == "P3")
         {
-            if (DiceControl.P3_totalNum == pointNum)
+            if (!InsBombControl.isP3InsBomb)
             {
-                IsStopUIControl.isStopUI++;
-                isBoomStopP3 = true;
-                Destroy(this.gameObject, 2f);
+                if (DiceControl.P3_totalNum == pointNum)
+                {
+                    IsStopUIControl.isStopUI++;
+                    isBoomStopP3 = true;
+                    Destroy(this.gameObject, 2f);
+                }
+            }
+            else
+            {
+                InsBombControl.isP3InsBomb = true;
             }
         }
         else if (other.tag == "P4")
         {
-            if (DiceControl.P4_totalNum == pointNum)
+            if (!InsBombControl.isP4InsBomb)
             {
-                IsStopUIControl.isStopUI++;
-                isBoomStopP4 = true;
-                Destroy(this.gameObject, 2f);
+                if (DiceControl.P4_totalNum == pointNum)
+                {
+                    IsStopUIControl.isStopUI++;
+                    isBoomStopP4 = true;
+                    Destroy(this.gameObject, 2f);
+                }
+            }
+            else
+            {
+                InsBombControl.isP4InsBomb = true;
             }
         }
     }
