@@ -283,7 +283,7 @@ public class StoreUIControl : MonoBehaviour
             switch (whyProps)
             {
                 case 1:
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 1; i < 7; i++)
                     {
                         if (i == whyProps)
                         {
@@ -317,7 +317,7 @@ public class StoreUIControl : MonoBehaviour
                     break;
 
                 case 2:
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 1; i < 7; i++)
                     {
                         if (i == whyProps)
                         {
@@ -352,7 +352,7 @@ public class StoreUIControl : MonoBehaviour
                     break;
 
                 case 3:
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 1; i < 7; i++)
                     {
                         if (i == whyProps)
                         {
@@ -387,7 +387,7 @@ public class StoreUIControl : MonoBehaviour
                     break;
 
                 case 4:
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 1; i < 7; i++)
                     {
                         if (i == whyProps)
                         {
@@ -422,7 +422,7 @@ public class StoreUIControl : MonoBehaviour
                     break;
 
                 case 5:
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 1; i < 7; i++)
                     {
                         if (i == whyProps)
                         {
@@ -457,7 +457,7 @@ public class StoreUIControl : MonoBehaviour
                     break;
 
                 case 6:
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 1; i < 7; i++)
                     {
                         if (i == whyProps)
                         {
