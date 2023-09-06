@@ -87,12 +87,12 @@ public class StoreUIControl : MonoBehaviour
                     }
                     if (CoinControl.P1CoinTotal < totalCoin)
                     {
-                        group3Text[4].color = Color.red;
+                        group3Text[2].color = Color.red;
                         buyOK = false;
                     }
                     else
                     {
-                        group3Text[4].color = Color.green;
+                        group3Text[2].color = Color.green;
                         buyOK = true;
                     }
                     break;
@@ -148,12 +148,12 @@ public class StoreUIControl : MonoBehaviour
                     }
                     if (CoinControl.P2CoinTotal < totalCoin)
                     {
-                        group3Text[4].color = Color.red;
+                        group3Text[2].color = Color.red;
                         buyOK = false;
                     }
                     else
                     {
-                        group3Text[4].color = Color.green;
+                        group3Text[2].color = Color.green;
                         buyOK = true;
                     }
                     break;
@@ -209,12 +209,12 @@ public class StoreUIControl : MonoBehaviour
                     }
                     if (CoinControl.P3CoinTotal < totalCoin)
                     {
-                        group3Text[4].color = Color.red;
+                        group3Text[2].color = Color.red;
                         buyOK = false;
                     }
                     else
                     {
-                        group3Text[4].color = Color.green;
+                        group3Text[2].color = Color.green;
                         buyOK = true;
                     }
                     break;
@@ -270,12 +270,12 @@ public class StoreUIControl : MonoBehaviour
                     }
                     if (CoinControl.P4CoinTotal < totalCoin)
                     {
-                        group3Text[4].color = Color.red;
+                        group3Text[2].color = Color.red;
                         buyOK = false;
                     }
                     else
                     {
-                        group3Text[4].color = Color.green;
+                        group3Text[2].color = Color.green;
                         buyOK = true;
                     }
                     break;
