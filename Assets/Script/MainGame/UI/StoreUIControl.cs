@@ -11,7 +11,7 @@ public class StoreUIControl : MonoBehaviour
     public GameObject[] StoreUI = new GameObject[4];
     public Text[] PorpsCoin = new Text[6];
     public Text[] group3Text = new Text[3];
-    public GameObject[] propsImage = new GameObject[6];
+    public GameObject[] propsImage = new GameObject[7];
     public Button buttonBuy;
 
     public static bool isStore = false, isBuying = false;
@@ -283,6 +283,17 @@ public class StoreUIControl : MonoBehaviour
             switch (whyProps)
             {
                 case 1:
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i == whyProps)
+                        {
+                            propsImage[i].SetActive(true);
+                        }
+                        else
+                        {
+                            propsImage[i].SetActive(false);
+                        }
+                    }
                     switch (StoreColliderControl.who)
                     {
                         case 1:
@@ -301,12 +312,22 @@ public class StoreUIControl : MonoBehaviour
                             group3Text[0].text = PropsControl.P4Props[0].ToString();
                             break;
                     }
-
                     group3Text[1].text = buyQuantity.ToString() + " / " + limitQuantity.ToString();
                     group3Text[2].text = totalCoin.ToString();
                     break;
 
                 case 2:
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i == whyProps)
+                        {
+                            propsImage[i].SetActive(true);
+                        }
+                        else
+                        {
+                            propsImage[i].SetActive(false);
+                        }
+                    }
                     switch (StoreColliderControl.who)
                     {
                         case 1:
@@ -331,6 +352,17 @@ public class StoreUIControl : MonoBehaviour
                     break;
 
                 case 3:
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i == whyProps)
+                        {
+                            propsImage[i].SetActive(true);
+                        }
+                        else
+                        {
+                            propsImage[i].SetActive(false);
+                        }
+                    }
                     switch (StoreColliderControl.who)
                     {
                         case 1:
@@ -355,6 +387,17 @@ public class StoreUIControl : MonoBehaviour
                     break;
 
                 case 4:
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i == whyProps)
+                        {
+                            propsImage[i].SetActive(true);
+                        }
+                        else
+                        {
+                            propsImage[i].SetActive(false);
+                        }
+                    }
                     switch (StoreColliderControl.who)
                     {
                         case 1:
@@ -379,6 +422,17 @@ public class StoreUIControl : MonoBehaviour
                     break;
 
                 case 5:
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i == whyProps)
+                        {
+                            propsImage[i].SetActive(true);
+                        }
+                        else
+                        {
+                            propsImage[i].SetActive(false);
+                        }
+                    }
                     switch (StoreColliderControl.who)
                     {
                         case 1:
@@ -403,6 +457,17 @@ public class StoreUIControl : MonoBehaviour
                     break;
 
                 case 6:
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i == whyProps)
+                        {
+                            propsImage[i].SetActive(true);
+                        }
+                        else
+                        {
+                            propsImage[i].SetActive(false);
+                        }
+                    }
                     switch (StoreColliderControl.who)
                     {
                         case 1:
