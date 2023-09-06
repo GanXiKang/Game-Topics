@@ -11,8 +11,7 @@ public class StoreUIControl : MonoBehaviour
     public GameObject[] StoreUI = new GameObject[4];
     public Text[] PorpsCoin = new Text[6];
     public Text[] group3Text = new Text[3];
-    public Image propsImage;
-    public GameObject[] propsIntroduce = new GameObject[6];
+    public Image[] propsImage = new Image[6];
     public Button buttonBuy;
 
     public static bool isStore = false, isBuying = false;
@@ -20,16 +19,11 @@ public class StoreUIControl : MonoBehaviour
     bool haveBuy = false, buyOK = false;
     int whyProps, totalCoin, buyQuantity = 1, limitQuantity = 3;
     int[] howMuchCoin = new int[6];
-    string[] propsName = new string[6];
-    string[] propsUse = new string[6];
 
     void Start()
     {
         BGM = GetComponent<AudioSource>();
-        //道具數量和書包系統一同製作
         InitialHowMuchCoin();
-        InitialPropsName();
-        InitialPropsUse();
     }
     void Update()
     {
@@ -740,23 +734,5 @@ public class StoreUIControl : MonoBehaviour
         howMuchCoin[3] = 15;
         howMuchCoin[4] = 25;
         howMuchCoin[5] = 50;
-    }
-    void InitialPropsName()
-    {
-        propsName[0] = "重來骰子";
-        propsName[1] = "雙倍骰子";
-        propsName[2] = "自訂骰子";
-        propsName[3] = "定格炸彈";
-        propsName[4] = "搶奪魔杖";
-        propsName[5] = "換位魔杖";
-    }
-    void InitialPropsUse()
-    {
-        propsUse[0] = "可決定是否重新擲一次骰子。";
-        propsUse[1] = "骰子點數變為雙倍。";
-        propsUse[2] = "自行決定骰子投出的數字。";
-        propsUse[3] = "其他玩家經過時會爆炸，令其損失10金幣。";
-        propsUse[4] = "隨機搶奪一位玩家的一個道具。";
-        propsUse[5] = "指定一名玩家互相交換位置。";
     }
 }
