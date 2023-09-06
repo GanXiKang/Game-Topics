@@ -12,7 +12,7 @@ public class StoreUIControl : MonoBehaviour
     public Text[] PorpsCoin = new Text[6];
     public Text[] group3Text = new Text[3];
     public Image propsImage;
-    public Image[] propsIntroduce = new Image[6];
+    public GameObject[] propsIntroduce = new GameObject[6];
     public Button buttonBuy;
 
     public static bool isStore = false, isBuying = false;
