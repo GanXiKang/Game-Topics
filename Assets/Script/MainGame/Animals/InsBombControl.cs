@@ -6,7 +6,7 @@ public class InsBombControl : MonoBehaviour
 {
     public GameObject bombProps;
     public Transform insBombPoint;
-    public static bool isP1InsBomb, isP2InsBomb, isP3InsBomb, isP4InsBomb;
+    public static bool isP1InsBomb = false, isP2InsBomb = false, isP3InsBomb = false, isP4InsBomb = false;
 
     void Update()
     {
