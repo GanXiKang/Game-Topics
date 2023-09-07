@@ -7,11 +7,11 @@ public class IsStopUIControl : MonoBehaviour
 {
     public Text systemText;
 
-    public static int isStopUI = 0;
+    public static int isStopUI = 0, isBombStopUI = 0;
 
     void Update()
     {
-        if (isStopUI != 0)
+        if (isStopUI != 0 || isBombStopUI != 0)
         {
             switch (ChangeCameraControl.changeCameraNum)
             {
@@ -55,7 +55,14 @@ public class IsStopUIControl : MonoBehaviour
     }
     IEnumerator StopThisRound()
     {
-        isStopUI--;
+        if (isStopUI != 0)
+        {
+            isStopUI--;
+        }
+        if (isBombStopUI != 0)
+        {
+            isBombStopUI--;
+        }
         DiceUIControl.isDiceUI = false;
         systemText.text = "�˻غϕ�ͣ";
         systemText.color = Color.cyan;

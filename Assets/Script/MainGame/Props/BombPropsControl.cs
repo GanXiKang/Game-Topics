@@ -76,6 +76,6 @@ public class BombPropsControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
         yield return new WaitForSeconds(3f);
-        IsStopUIControl.isStopUI++;
+        IsStopUIControl.isBombStopUI++;
     }
 }
