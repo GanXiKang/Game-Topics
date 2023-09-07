@@ -8,7 +8,6 @@ public class BagUIControl : MonoBehaviour
     AudioSource BGM;
 
     public GameObject bagUI;
-    public GameObject interactiveUI;
     public Button[] use = new Button[7];
 
     public static bool isRenewDice, isDoubleDice, isCustomDice, isBomb, isSnatch, isTransposition, isThief;
@@ -402,12 +401,12 @@ public class BagUIControl : MonoBehaviour
     public void Button_Bag()
     {
         bagUI.SetActive(true);
-        interactiveUI.SetActive(false);
+        DiceUIControl.isDiceUI = false;
     }
     public void Button_Close()
     {
         bagUI.SetActive(false);
-        interactiveUI.SetActive(true);
+        DiceUIControl.isDiceUI = true;
     }
     public void Button_Use(int why)
     {
@@ -450,6 +449,6 @@ public class BagUIControl : MonoBehaviour
                 break;
         }
         bagUI.SetActive(false);
-        interactiveUI.SetActive(true);
+        DiceUIControl.isDiceUI = true;
     }
 }
