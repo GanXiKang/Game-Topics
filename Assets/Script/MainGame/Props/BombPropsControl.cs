@@ -14,7 +14,6 @@ public class BombPropsControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Enter");
         if (other.tag == "P1")
         {
             if (!InsBombControl.isP1InsBomb)
