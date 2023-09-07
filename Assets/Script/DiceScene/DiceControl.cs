@@ -193,11 +193,9 @@ public class DiceControl : MonoBehaviour
         randomNum = Num;
         if (isRoll)
         {
+            isRoll = false;
+            AnimalsAnimatorControl.isJump = true;
             StartCoroutine(GoMainGame());
-        }
-        else
-        {
-            isRoll = true;
         }
     }
     public void Button_Renew()
