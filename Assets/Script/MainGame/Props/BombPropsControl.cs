@@ -9,6 +9,7 @@ public class BombPropsControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Enter");
         if (other.tag == "P1")
         {
             if (!InsBombControl.isP1InsBomb)
@@ -21,7 +22,7 @@ public class BombPropsControl : MonoBehaviour
             }
             else 
             {
-                InsBombControl.isP1InsBomb = true;
+                InsBombControl.isP1InsBomb = false;
             }
         }
         else if (other.tag == "P2")
@@ -36,7 +37,7 @@ public class BombPropsControl : MonoBehaviour
             }
             else
             {
-                InsBombControl.isP2InsBomb = true;
+                InsBombControl.isP2InsBomb = false;
             }
         }
         else if (other.tag == "P3")
@@ -51,7 +52,7 @@ public class BombPropsControl : MonoBehaviour
             }
             else
             {
-                InsBombControl.isP3InsBomb = true;
+                InsBombControl.isP3InsBomb = false;
             }
         }
         else if (other.tag == "P4")
@@ -66,7 +67,7 @@ public class BombPropsControl : MonoBehaviour
             }
             else
             {
-                InsBombControl.isP4InsBomb = true;
+                InsBombControl.isP4InsBomb = false;
             }
         }
     }
