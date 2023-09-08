@@ -5,11 +5,15 @@ using UnityEngine;
 public class BombPropsControl : MonoBehaviour
 {
     public static int pointNum;
-    public static bool isBoomStopP1, isBoomStopP2, isBoomStopP3, isBoomStopP4;
+
+    bool r = true;
 
     private void FixedUpdate()
     {
-        transform.Rotate(0, 1, 0);
+        if (r)
+        {
+            transform.Rotate(0, 1, 0);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,7 +24,7 @@ public class BombPropsControl : MonoBehaviour
             {
                 if (DiceControl.P1_totalNum == pointNum)
                 {
-                    isBoomStopP1 = true;
+                    IsStopUIControl.isBombStopP1 = true;
                     StartCoroutine(StopTiming());
                 }
             }
@@ -35,7 +39,7 @@ public class BombPropsControl : MonoBehaviour
             {
                 if (DiceControl.P2_totalNum == pointNum)
                 {
-                    isBoomStopP2 = true;
+                    IsStopUIControl.isBombStopP2 = true;
                     StartCoroutine(StopTiming());
                 }
             }
@@ -50,7 +54,7 @@ public class BombPropsControl : MonoBehaviour
             {
                 if (DiceControl.P3_totalNum == pointNum)
                 {
-                    isBoomStopP3 = true;
+                    IsStopUIControl.isBombStopP3 = true;
                     StartCoroutine(StopTiming());
                 }
             }
@@ -65,7 +69,7 @@ public class BombPropsControl : MonoBehaviour
             {
                 if (DiceControl.P4_totalNum == pointNum)
                 {
-                    isBoomStopP4 = true;
+                    IsStopUIControl.isBombStopP4 = true;
                     StartCoroutine(StopTiming());
                 }
             }
@@ -77,7 +81,9 @@ public class BombPropsControl : MonoBehaviour
     }
     IEnumerator StopTiming()
     {
-        yield return new WaitForSeconds(1f);
-        Destroy(this.gameObject);
+        r = false;
+        yield return new WaitForSeconds(3f);
+        IsStopUIControl.isBombStopUI++;
+        Destroy(this.gameObject);  
     }
 }

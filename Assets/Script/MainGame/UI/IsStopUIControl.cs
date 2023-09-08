@@ -7,7 +7,8 @@ public class IsStopUIControl : MonoBehaviour
 {
     public Text systemText;
 
-    public static int isStopUI = 0;
+    public static int isStopUI = 0, isBombStopUI = 0;
+    public static bool isBombStopP1, isBombStopP2, isBombStopP3, isBombStopP4;
 
     void Update()
     {
@@ -48,13 +49,58 @@ public class IsStopUIControl : MonoBehaviour
                     break;
             }
         }
+        else if (isBombStopUI != 0)
+        {
+            switch (ChangeCameraControl.changeCameraNum)
+            {
+                case 1:
+                    if (isBombStopP1)
+                    {
+                        StartCoroutine(BombStopThisRound());
+                        isBombStopP1 = false;
+                    }
+                    break;
+
+                case 2:
+                    if (isBombStopP2)
+                    {
+                        StartCoroutine(BombStopThisRound());
+                        isBombStopP2 = false;
+                    }
+                    break;
+
+                case 3:
+                    if (isBombStopP3)
+                    {
+                        StartCoroutine(BombStopThisRound());
+                        isBombStopP3 = false;
+                    }
+                    break;
+
+                case 4:
+                    if (isBombStopP4)
+                    {
+                        StartCoroutine(BombStopThisRound());
+                        isBombStopP4 = false;
+                    }
+                    break;
+            }
+        }
     }
     IEnumerator StopThisRound()
     {
-        if (isStopUI != 0)
-        {
-            isStopUI--;
-        }
+        isStopUI--;
+        DiceUIControl.isDiceUI = false;
+        systemText.text = "此回合暫停";
+        systemText.color = Color.cyan;
+        SystemTestTextControl.isTimer = true;
+        yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+    }
+    IEnumerator BombStopThisRound()
+    {
+        isBombStopUI--;
         DiceUIControl.isDiceUI = false;
         systemText.text = "此回合暫停";
         systemText.color = Color.cyan;
