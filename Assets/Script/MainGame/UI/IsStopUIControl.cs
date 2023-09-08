@@ -49,7 +49,7 @@ public class IsStopUIControl : MonoBehaviour
                     break;
             }
         }
-        else if (isBombStopUI != 0)
+        if (isBombStopUI != 0)
         {
             switch (ChangeCameraControl.changeCameraNum)
             {
