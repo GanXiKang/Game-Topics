@@ -13,6 +13,7 @@ public class IsStopUIControl : MonoBehaviour
     {
         if (isStopUI != 0 || isBombStopUI != 0)
         {
+            print("true");
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
@@ -27,6 +28,7 @@ public class IsStopUIControl : MonoBehaviour
                 case 2:
                     if (EventControl.isStopP2 || BombPropsControl.isBoomStopP2)
                     {
+                        print("Enter true");
                         StartCoroutine(StopThisRound());
                         EventControl.isStopP2 = false;
                         BombPropsControl.isBoomStopP2 = false;
