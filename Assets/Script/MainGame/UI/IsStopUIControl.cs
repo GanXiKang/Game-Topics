@@ -7,49 +7,43 @@ public class IsStopUIControl : MonoBehaviour
 {
     public Text systemText;
 
-    public static int isStopUI = 0, isBombStopUI = 0;
+    public static int isStopUI = 0;
 
     void Update()
     {
-        if (isStopUI != 0 || isBombStopUI != 0)
+        if (isStopUI != 0)
         {
-            print("true");
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
-                    if (EventControl.isStopP1 || BombPropsControl.isBoomStopP1)
+                    if (EventControl.isStopP1)
                     {
                         StartCoroutine(StopThisRound());
                         EventControl.isStopP1 = false;
-                        BombPropsControl.isBoomStopP1 = false;
                     }
                     break;
 
                 case 2:
-                    if (EventControl.isStopP2 || BombPropsControl.isBoomStopP2)
+                    if (EventControl.isStopP2)
                     {
-                        print("Enter true");
                         StartCoroutine(StopThisRound());
                         EventControl.isStopP2 = false;
-                        BombPropsControl.isBoomStopP2 = false;
                     }
                     break;
 
                 case 3:
-                    if (EventControl.isStopP3 || BombPropsControl.isBoomStopP3)
+                    if (EventControl.isStopP3)
                     {
                         StartCoroutine(StopThisRound());
                         EventControl.isStopP3 = false;
-                        BombPropsControl.isBoomStopP3 = false;
                     }
                     break;
 
                 case 4:
-                    if (EventControl.isStopP4 || BombPropsControl.isBoomStopP4)
+                    if (EventControl.isStopP4)
                     {
                         StartCoroutine(StopThisRound());
                         EventControl.isStopP4 = false;
-                        BombPropsControl.isBoomStopP4 = false;
                     }
                     break;
             }
@@ -60,10 +54,6 @@ public class IsStopUIControl : MonoBehaviour
         if (isStopUI != 0)
         {
             isStopUI--;
-        }
-        if (isBombStopUI != 0)
-        {
-            isBombStopUI--;
         }
         DiceUIControl.isDiceUI = false;
         systemText.text = "�˻غϕ�ͣ";
