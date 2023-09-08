@@ -417,7 +417,7 @@ public class BagUIControl : MonoBehaviour
     IEnumerator UseProps()
     {
         useProps = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         switch (whyUseProps)
         {
             case 1:
