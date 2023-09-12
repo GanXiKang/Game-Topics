@@ -12,7 +12,7 @@ public class IsStopUIControl : MonoBehaviour
 
     void Update()
     {
-        if (isStopUI != 0)
+        if (isStopUI != 0 && PlayerMoveControl.isMove)
         {
             switch (ChangeCameraControl.changeCameraNum)
             {
@@ -49,7 +49,7 @@ public class IsStopUIControl : MonoBehaviour
                     break;
             }
         }
-        if (isBombStopUI != 0)
+        if (isBombStopUI != 0 && PlayerMoveControl.isMove)
         {
             switch (ChangeCameraControl.changeCameraNum)
             {
