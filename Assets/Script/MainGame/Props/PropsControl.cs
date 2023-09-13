@@ -515,6 +515,7 @@ public class PropsControl : MonoBehaviour
             systemText.text = "≤»µΩ’®èó";
             systemText.color = Color.red;
             BombPropsControl.iscolliderBombText = false;
+            SystemTestTextControl.isTimer = true;
         }
     }
 
