@@ -13,33 +13,41 @@ public class EventControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "P1")
+        if (!PropsControl.isTrans)
         {
-            if (DiceControl.P1_totalNum == EventPoint)
+            print("Event Enter");
+            if (other.tag == "P1")
             {
-                StartCoroutine(P1_EventHappened());
+                if (DiceControl.P1_totalNum == EventPoint)
+                {
+                    StartCoroutine(P1_EventHappened());
+                }
+            }
+            else if (other.tag == "P2")
+            {
+                if (DiceControl.P2_totalNum == EventPoint)
+                {
+                    StartCoroutine(P2_EventHappened());
+                }
+            }
+            else if (other.tag == "P3")
+            {
+                if (DiceControl.P3_totalNum == EventPoint)
+                {
+                    StartCoroutine(P3_EventHappened());
+                }
+            }
+            else if (other.tag == "P4")
+            {
+                if (DiceControl.P4_totalNum == EventPoint)
+                {
+                    StartCoroutine(P4_EventHappened());
+                }
             }
         }
-        else if (other.tag == "P2")
+        else
         {
-            if (DiceControl.P2_totalNum == EventPoint)
-            {
-                StartCoroutine(P2_EventHappened());
-            }
-        }
-        else if (other.tag == "P3")
-        {
-            if (DiceControl.P3_totalNum == EventPoint)
-            {
-                StartCoroutine(P3_EventHappened());
-            }
-        }
-        else if (other.tag == "P4")
-        {
-            if (DiceControl.P4_totalNum == EventPoint)
-            {
-                StartCoroutine(P4_EventHappened());
-            }
+            PropsControl.isTrans = true;
         }
     }
     IEnumerator P1_EventHappened()

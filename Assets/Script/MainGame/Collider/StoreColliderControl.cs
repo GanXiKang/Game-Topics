@@ -11,43 +11,51 @@ public class StoreColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "P1")
+        if (!PropsControl.isTrans)
         {
-            if (DiceControl.P1_totalNum == pointNum)
+            print("Store Enter");
+            if (other.tag == "P1")
             {
-                print("P1");
-                who = 1;
-                AnimatorControl.isP1Move = false;
-                StartCoroutine(LookTarget());
+                if (DiceControl.P1_totalNum == pointNum)
+                {
+                    print("P1");
+                    who = 1;
+                    AnimatorControl.isP1Move = false;
+                    StartCoroutine(LookTarget());
+                }
+            }
+            else if (other.tag == "P2")
+            {
+                if (DiceControl.P2_totalNum == pointNum)
+                {
+                    print("P2");
+                    who = 2;
+                    AnimatorControl.isP2Move = false;
+                    StartCoroutine(LookTarget());
+                }
+            }
+            else if (other.tag == "P3")
+            {
+                if (DiceControl.P3_totalNum == pointNum)
+                {
+                    who = 3;
+                    AnimatorControl.isP3Move = false;
+                    StartCoroutine(LookTarget());
+                }
+            }
+            else if (other.tag == "P4")
+            {
+                if (DiceControl.P4_totalNum == pointNum)
+                {
+                    who = 4;
+                    AnimatorControl.isP4Move = false;
+                    StartCoroutine(LookTarget());
+                }
             }
         }
-        else if (other.tag == "P2")
+        else
         {
-            if (DiceControl.P2_totalNum == pointNum)
-            {
-                print("P2");
-                who = 2;
-                AnimatorControl.isP2Move = false;
-                StartCoroutine(LookTarget());
-            }
-        }
-        else if (other.tag == "P3")
-        {
-            if (DiceControl.P3_totalNum == pointNum)
-            {
-                who = 3;
-                AnimatorControl.isP3Move = false;
-                StartCoroutine(LookTarget());
-            }
-        }
-        else if (other.tag == "P4")
-        {
-            if (DiceControl.P4_totalNum == pointNum)
-            {
-                who = 4;
-                AnimatorControl.isP4Move = false;
-                StartCoroutine(LookTarget());
-            }
+            PropsControl.isTrans = true;
         }
     }
     private void OnTriggerStay(Collider other)

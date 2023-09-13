@@ -13,41 +13,49 @@ public class MiniGameColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "P1" && P1_playGame)
+        if (!PropsControl.isTrans)
         {
-            if (DiceControl.P1_totalNum == MGPoint)
+            print("MG Enter");
+            if (other.tag == "P1" && P1_playGame)
             {
-                p = 1;
-                AnimatorControl.isP1Move = false;
-                StartCoroutine(StartMiniGame());
+                if (DiceControl.P1_totalNum == MGPoint)
+                {
+                    p = 1;
+                    AnimatorControl.isP1Move = false;
+                    StartCoroutine(StartMiniGame());
+                }
+            }
+            else if (other.tag == "P2" && P2_playGame)
+            {
+                if (DiceControl.P2_totalNum == MGPoint)
+                {
+                    p = 2;
+                    AnimatorControl.isP2Move = false;
+                    StartCoroutine(StartMiniGame());
+                }
+            }
+            else if (other.tag == "P3" && P3_playGame)
+            {
+                if (DiceControl.P3_totalNum == MGPoint)
+                {
+                    p = 3;
+                    AnimatorControl.isP3Move = false;
+                    StartCoroutine(StartMiniGame());
+                }
+            }
+            else if (other.tag == "P4" && P4_playGame)
+            {
+                if (DiceControl.P4_totalNum == MGPoint)
+                {
+                    p = 4;
+                    AnimatorControl.isP4Move = false;
+                    StartCoroutine(StartMiniGame());
+                }
             }
         }
-        else if (other.tag == "P2" && P2_playGame)
+        else
         {
-            if (DiceControl.P2_totalNum == MGPoint)
-            {
-                p = 2;
-                AnimatorControl.isP2Move = false;
-                StartCoroutine(StartMiniGame());
-            }
-        }
-        else if (other.tag == "P3" && P3_playGame)
-        {
-            if (DiceControl.P3_totalNum == MGPoint)
-            {
-                p = 3;
-                AnimatorControl.isP3Move = false;
-                StartCoroutine(StartMiniGame());
-            }
-        }
-        else if (other.tag == "P4" && P4_playGame)
-        {
-            if (DiceControl.P4_totalNum == MGPoint)
-            {
-                p = 4;
-                AnimatorControl.isP4Move = false;
-                StartCoroutine(StartMiniGame());
-            }
+            PropsControl.isTrans = true;
         }
     }
     private void OnTriggerStay(Collider other)
