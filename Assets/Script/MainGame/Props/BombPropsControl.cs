@@ -5,10 +5,10 @@ using UnityEngine;
 public class BombPropsControl : MonoBehaviour
 {
     public static int pointNum;
-
+    public static bool iscolliderBombText = false;
     bool r = true;
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         if (r)
         {
@@ -82,6 +82,7 @@ public class BombPropsControl : MonoBehaviour
     IEnumerator StopTiming()
     {
         r = false;
+        iscolliderBombText = true;
         yield return new WaitForSeconds(3f);
         IsStopUIControl.isBombStopUI++;
         Destroy(this.gameObject);  
