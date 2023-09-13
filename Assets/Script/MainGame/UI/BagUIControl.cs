@@ -457,7 +457,7 @@ public class BagUIControl : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
             DiceUIControl.isDiceUI = true;
             ChangeCameraControl.changeCameraNum++;
         }
