@@ -15,38 +15,45 @@ public class ChestColliderControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        print("Chest Enter");
-        if (other.tag == "P1")
+        if (!PropsControl.isTrans)
         {
-            if (DiceControl.P1_totalNum == boxPoint)
+            print("Chest Enter");
+            if (other.tag == "P1")
             {
-                AnimatorControl.isP1Move = false;
-                StartCoroutine(ChangeCamera());
+                if (DiceControl.P1_totalNum == boxPoint)
+                {
+                    AnimatorControl.isP1Move = false;
+                    StartCoroutine(ChangeCamera());
+                }
+            }
+            else if (other.tag == "P2")
+            {
+                if (DiceControl.P2_totalNum == boxPoint)
+                {
+                    AnimatorControl.isP2Move = false;
+                    StartCoroutine(ChangeCamera());
+                }
+            }
+            else if (other.tag == "P3")
+            {
+                if (DiceControl.P3_totalNum == boxPoint)
+                {
+                    AnimatorControl.isP3Move = false;
+                    StartCoroutine(ChangeCamera());
+                }
+            }
+            else if (other.tag == "P4")
+            {
+                if (DiceControl.P4_totalNum == boxPoint)
+                {
+                    AnimatorControl.isP4Move = false;
+                    StartCoroutine(ChangeCamera());
+                }
             }
         }
-        else if (other.tag == "P2")
+        else
         {
-            if (DiceControl.P2_totalNum == boxPoint)
-            {
-                AnimatorControl.isP2Move = false;
-                StartCoroutine(ChangeCamera());
-            }
-        }
-        else if (other.tag == "P3")
-        {
-            if (DiceControl.P3_totalNum == boxPoint)
-            {
-                AnimatorControl.isP3Move = false;
-                StartCoroutine(ChangeCamera());
-            }
-        }
-        else if (other.tag == "P4")
-        {
-            if (DiceControl.P4_totalNum == boxPoint)
-            {
-                AnimatorControl.isP4Move = false;
-                StartCoroutine(ChangeCamera());
-            }
+            PropsControl.isTrans = true;
         }
     }
     private void OnTriggerStay(Collider other)
