@@ -53,7 +53,7 @@ public class ChestColliderControl : MonoBehaviour
         }
         else
         {
-            PropsControl.isTrans = false;
+            StartCoroutine(Transposition());
         }
     }
     private void OnTriggerStay(Collider other)
@@ -116,5 +116,10 @@ public class ChestColliderControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+    }
+    IEnumerator Transposition()
+    {
+        yield return new WaitForSeconds(1f);
+        PropsControl.isTrans = false;
     }
 }

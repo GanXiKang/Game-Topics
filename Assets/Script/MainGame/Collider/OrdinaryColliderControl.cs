@@ -46,7 +46,7 @@ public class OrdinaryColliderControl : MonoBehaviour
         }
         else
         {
-            PropsControl.isTrans = false;
+            StartCoroutine(Transposition());
         }
     }
     IEnumerator ChangeCamera()
@@ -54,5 +54,10 @@ public class OrdinaryColliderControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+    }
+    IEnumerator Transposition()
+    {
+        yield return new WaitForSeconds(1f);
+        PropsControl.isTrans = false;
     }
 }
