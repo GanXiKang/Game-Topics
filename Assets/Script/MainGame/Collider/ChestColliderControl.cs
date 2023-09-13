@@ -17,7 +17,6 @@ public class ChestColliderControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
-            print("Chest Enter");
             if (other.tag == "P1")
             {
                 if (DiceControl.P1_totalNum == boxPoint)

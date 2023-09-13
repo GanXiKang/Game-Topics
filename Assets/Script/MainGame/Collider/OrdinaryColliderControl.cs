@@ -10,7 +10,6 @@ public class OrdinaryColliderControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
-            print("Ordinary Enter");
             if (other.tag == "P1")
             {
                 if (DiceControl.P1_totalNum == pointNum)
