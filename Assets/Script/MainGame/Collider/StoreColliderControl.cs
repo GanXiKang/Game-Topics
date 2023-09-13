@@ -55,7 +55,7 @@ public class StoreColliderControl : MonoBehaviour
         }
         else
         {
-            PropsControl.isTrans = true;
+            PropsControl.isTrans = false;
         }
     }
     private void OnTriggerStay(Collider other)

@@ -46,7 +46,7 @@ public class OrdinaryColliderControl : MonoBehaviour
         }
         else
         {
-            PropsControl.isTrans = true;
+            PropsControl.isTrans = false;
         }
     }
     IEnumerator ChangeCamera()

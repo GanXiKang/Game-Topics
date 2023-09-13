@@ -47,7 +47,7 @@ public class EventControl : MonoBehaviour
         }
         else
         {
-            PropsControl.isTrans = true;
+            PropsControl.isTrans = false;
         }
     }
     IEnumerator P1_EventHappened()

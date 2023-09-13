@@ -53,7 +53,7 @@ public class ChestColliderControl : MonoBehaviour
         }
         else
         {
-            PropsControl.isTrans = true;
+            PropsControl.isTrans = false;
         }
     }
     private void OnTriggerStay(Collider other)
