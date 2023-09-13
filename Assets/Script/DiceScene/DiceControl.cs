@@ -85,7 +85,6 @@ public class DiceControl : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, 100f, 0f);
                 break;
         }
-        print(randomNum);
     }
     void Calculate()
     {
