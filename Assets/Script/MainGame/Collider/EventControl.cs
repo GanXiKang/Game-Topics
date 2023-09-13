@@ -15,7 +15,6 @@ public class EventControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
-            print("Event Enter");
             if (other.tag == "P1")
             {
                 if (DiceControl.P1_totalNum == EventPoint)
@@ -47,7 +46,7 @@ public class EventControl : MonoBehaviour
         }
         else
         {
-            PropsControl.isTrans = false;
+            StartCoroutine(Transposition());
         }
     }
     IEnumerator P1_EventHappened()
@@ -189,5 +188,10 @@ public class EventControl : MonoBehaviour
             isStopP4 = true;
             IsStopUIControl.isStopUI += stop;
         }
+    }
+    IEnumerator Transposition()
+    {
+        yield return new WaitForSeconds(1f);
+        PropsControl.isTrans = false;
     }
 }

@@ -13,7 +13,6 @@ public class StoreColliderControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
-            print("Store Enter");
             if (other.tag == "P1")
             {
                 if (DiceControl.P1_totalNum == pointNum)
@@ -55,7 +54,7 @@ public class StoreColliderControl : MonoBehaviour
         }
         else
         {
-            PropsControl.isTrans = false;
+            StartCoroutine(Transposition());
         }
     }
     private void OnTriggerStay(Collider other)
@@ -151,6 +150,11 @@ public class StoreColliderControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         PlayerMoveControl.isMove = false;
         StoreUIControl.isStore = true;
+    }
+    IEnumerator Transposition()
+    {
+        yield return new WaitForSeconds(1f);
+        PropsControl.isTrans = false;
     }
 }
 

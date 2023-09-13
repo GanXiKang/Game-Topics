@@ -15,7 +15,6 @@ public class MiniGameColliderControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
-            print("MG Enter");
             if (other.tag == "P1" && P1_playGame)
             {
                 if (DiceControl.P1_totalNum == MGPoint)
@@ -55,7 +54,7 @@ public class MiniGameColliderControl : MonoBehaviour
         }
         else
         {
-            PropsControl.isTrans = false;
+            StartCoroutine(Transposition());
         }
     }
     private void OnTriggerStay(Collider other)
@@ -145,5 +144,10 @@ public class MiniGameColliderControl : MonoBehaviour
         isMiniGame = true;
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+    }
+    IEnumerator Transposition()
+    {
+        yield return new WaitForSeconds(1f);
+        PropsControl.isTrans = false;
     }
 }
