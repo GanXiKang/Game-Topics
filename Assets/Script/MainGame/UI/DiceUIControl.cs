@@ -10,7 +10,6 @@ public class DiceUIControl : MonoBehaviour
 
     public AudioClip dice;
     public GameObject interactiveUI;
-    public Text systemText;
 
     public static bool isDiceUI = true, isDiceScene = false;
 
