@@ -509,6 +509,13 @@ public class PropsControl : MonoBehaviour
             }
             BagUIControl.isTransposition = false;
         }
+
+        if (BombPropsControl.iscolliderBombText)
+        {
+            systemText.text = "≤»µΩ’®èó";
+            systemText.color = Color.red;
+            BombPropsControl.iscolliderBombText = false;
+        }
     }
 
     void Initial()
