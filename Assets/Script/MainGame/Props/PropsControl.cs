@@ -9,6 +9,7 @@ public class PropsControl : MonoBehaviour
     public static int[] P2Props = new int[7];
     public static int[] P3Props = new int[7];
     public static int[] P4Props = new int[7];
+    public static bool isTrans = false;
 
     public Text[] PropsQuantity = new Text[7];
     public Text systemText;
@@ -359,6 +360,7 @@ public class PropsControl : MonoBehaviour
         if (BagUIControl.isTransposition)
         {
             FindPlayer();
+            isTrans = true;
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
