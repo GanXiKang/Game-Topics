@@ -372,9 +372,9 @@ public class PropsControl : MonoBehaviour
                             P1.transform.position = P2.transform.position;
                             P2.transform.position = transposition;
 
-                            totalNum = DiceControl.P2_totalNum;
-                            DiceControl.P2_totalNum = DiceControl.P1_totalNum;
-                            DiceControl.P1_totalNum = totalNum;
+                            totalNum = DiceControl.P1_totalNum;
+                            DiceControl.P1_totalNum = DiceControl.P2_totalNum;
+                            DiceControl.P2_totalNum = totalNum;
                             break;
 
                         case 2:
