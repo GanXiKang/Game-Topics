@@ -15,6 +15,7 @@ public class ChestColliderControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        print("Chest Enter");
         if (other.tag == "P1")
         {
             if (DiceControl.P1_totalNum == boxPoint)

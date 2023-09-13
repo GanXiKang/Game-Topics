@@ -8,6 +8,7 @@ public class OrdinaryColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Ordinary Enter");
         if (other.tag == "P1")
         {
             if (DiceControl.P1_totalNum == pointNum)
