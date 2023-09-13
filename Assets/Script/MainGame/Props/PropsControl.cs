@@ -368,9 +368,9 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
-                            transposition = P1.transform.position;
-                            P1.transform.position = P2.transform.position;
-                            P2.transform.position = transposition;
+                            transposition = P2.transform.position;
+                            P2.transform.position = P1.transform.position;
+                            P1.transform.position = transposition;
 
                             totalNum = DiceControl.P1_totalNum;
                             DiceControl.P1_totalNum = DiceControl.P2_totalNum;
