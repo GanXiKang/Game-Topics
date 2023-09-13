@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BagUIControl : MonoBehaviour
 {
@@ -449,6 +450,16 @@ public class BagUIControl : MonoBehaviour
                 break;
         }
         bagUI.SetActive(false);
-        DiceUIControl.isDiceUI = true;
+        if (whyUseProps <= 3)
+        {
+            SceneManager.LoadScene(9);
+            DiceUIControl.isDiceScene = true;
+        }
+        else
+        {
+            yield return new WaitForSeconds(3f);
+            DiceUIControl.isDiceUI = true;
+            ChangeCameraControl.changeCameraNum++;
+        }
     }
 }
