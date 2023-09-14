@@ -17,7 +17,6 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (DiceControl.P1_totalNum == pointNum)
                 {
-                    print("P1");
                     who = 1;
                     AnimatorControl.isP1Move = false;
                     StartCoroutine(LookTarget());
@@ -27,7 +26,6 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (DiceControl.P2_totalNum == pointNum)
                 {
-                    print("P2");
                     who = 2;
                     AnimatorControl.isP2Move = false;
                     StartCoroutine(LookTarget());
