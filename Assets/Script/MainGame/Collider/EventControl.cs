@@ -91,7 +91,7 @@ public class EventControl : MonoBehaviour
         }
         else if (lossCoin != 0)
         {
-            systemTest.text = "ìp ß" + getCoin + "ÂX£°";
+            systemTest.text = "ìp ß" + lossCoin + "ÂX£°";
             systemTest.color = Color.yellow;
             CoinControl.P1CoinTotal -= lossCoin;
         }
