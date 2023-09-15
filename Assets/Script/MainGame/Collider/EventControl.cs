@@ -286,8 +286,8 @@ public class EventControl : MonoBehaviour
     {
         if (EventPoint == 4)
         {
-            forward = 2;
-            backward = 0;
+            forward = 0;
+            backward = 2;
             stop = 0;
             getCoin = 0;
             lossCoin = 0;
