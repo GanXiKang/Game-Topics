@@ -29,7 +29,6 @@ public class EventControl : MonoBehaviour
                     else
                     {
                         r = Random.Range(1, 3);
-                        print(r);
                         switch (r)
                         {
                             case 1:
@@ -55,7 +54,26 @@ public class EventControl : MonoBehaviour
             {
                 if (DiceControl.P2_totalNum == EventPoint)
                 {
-                    StartCoroutine(P2_EventHappened());
+                    if (!eventAB)
+                    {
+                        StartCoroutine(P2_EventHappened());
+                    }
+                    else
+                    {
+                        r = Random.Range(1, 3);
+                        switch (r)
+                        {
+                            case 1:
+                                EventA();
+                                StartCoroutine(P2_EventHappened());
+                                break;
+
+                            case 2:
+                                EventB();
+                                StartCoroutine(P2_EventHappened());
+                                break;
+                        }
+                    }
                 }
             }
             else if (other.tag == "P3")
@@ -151,21 +169,41 @@ public class EventControl : MonoBehaviour
             systemTest.text = "Õ£¡Ù" + stop + "ªÿ∫œ£°";
             systemTest.color = Color.cyan;
         }
+        else if (getCoin != 0)
+        {
+            systemTest.text = "´@µ√" + getCoin + "ÂX£°";
+            systemTest.color = Color.yellow;
+            CoinControl.P2CoinTotal += getCoin;
+        }
+        else if (lossCoin != 0)
+        {
+            systemTest.text = "ìp ß" + lossCoin + "ÂX£°";
+            systemTest.color = Color.yellow;
+            CoinControl.P2CoinTotal -= lossCoin;
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        DiceControl.P2_totalNum += forward;
-        DiceControl.P2_totalNum -= backward;
-        if (stop == 0)
-        {
-            AnimatorControl.isP2Move = true;
-        }
-        yield return new WaitForSeconds(1f);
-        if (stop != 0)
+        if (getCoin != 0 || lossCoin != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
-            isStopP2 = true;
-            IsStopUIControl.isStopUI += stop;
+        }
+        else
+        {
+            DiceControl.P2_totalNum += forward;
+            DiceControl.P2_totalNum -= backward;
+            if (stop == 0)
+            {
+                AnimatorControl.isP2Move = true;
+            }
+            yield return new WaitForSeconds(1f);
+            if (stop != 0)
+            {
+                ChangeCameraControl.changeCameraNum++;
+                DiceUIControl.isDiceUI = true;
+                isStopP2 = true;
+                IsStopUIControl.isStopUI += stop;
+            }
         }
     }
     IEnumerator P3_EventHappened()
@@ -242,5 +280,20 @@ public class EventControl : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         PropsControl.isTrans = false;
+    }
+
+    void EventA()
+    {
+        if (EventPoint == 4)
+        {
+            forward = 2;
+        }
+    }
+    void EventB()
+    {
+        if (EventPoint == 4)
+        {
+            backward = 1;
+        }
     }
 }
