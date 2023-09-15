@@ -30,9 +30,19 @@ public class EventControl : MonoBehaviour
                         switch (r)
                         {
                             case 1:
+                                if(EventPoint == 4)
+                                {
+                                    forward = 1;
+                                }
+                                StartCoroutine(P1_EventHappened());
                                 break;
 
                             case 2:
+                                if (EventPoint == 4)
+                                {
+                                    getCoin = 10;
+                                }
+                                StartCoroutine(P1_EventHappened());
                                 break;
                         }
                     }
