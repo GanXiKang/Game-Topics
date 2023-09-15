@@ -50,6 +50,7 @@ public class OrdinaryColliderControl : MonoBehaviour
             if (Trans == 2)
             {
                 PropsControl.isTrans = false;
+                print(PropsControl.isTrans);
             }
         }
     }
