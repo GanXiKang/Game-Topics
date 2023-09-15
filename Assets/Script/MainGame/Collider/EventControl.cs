@@ -32,7 +32,7 @@ public class EventControl : MonoBehaviour
                             case 1:
                                 if(EventPoint == 4)
                                 {
-                                    forward = 1;
+                                    forward = 2;
                                 }
                                 StartCoroutine(P1_EventHappened());
                                 break;
@@ -40,7 +40,7 @@ public class EventControl : MonoBehaviour
                             case 2:
                                 if (EventPoint == 4)
                                 {
-                                    getCoin = 10;
+                                    backward = 1;
                                 }
                                 StartCoroutine(P1_EventHappened());
                                 break;
