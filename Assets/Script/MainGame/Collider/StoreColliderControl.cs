@@ -52,7 +52,7 @@ public class StoreColliderControl : MonoBehaviour
         }
         else
         {
-            
+            StartCoroutine(Transposition());
         }
     }
     private void OnTriggerStay(Collider other)
@@ -148,6 +148,11 @@ public class StoreColliderControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         PlayerMoveControl.isMove = false;
         StoreUIControl.isStore = true;
+    }
+    IEnumerator Transposition()
+    {
+        yield return new WaitForSeconds(1f);
+        PropsControl.isTrans = false;
     }
 }
 

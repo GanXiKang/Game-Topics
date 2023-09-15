@@ -9,7 +9,6 @@ public class PropsControl : MonoBehaviour
     public static int[] P2Props = new int[7];
     public static int[] P3Props = new int[7];
     public static int[] P4Props = new int[7];
-    public static int TransNum = 0;
     public static bool isTrans = false;
 
     public Text[] PropsQuantity = new Text[7];
