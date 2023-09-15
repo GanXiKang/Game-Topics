@@ -537,14 +537,14 @@ public class PropsControl : MonoBehaviour
         P2Props[6] = 0;
         P3Props[0] = 0;
         P3Props[1] = 0;
-        P3Props[2] = 0;
+        P3Props[2] = 5;
         P3Props[3] = 0;
         P3Props[4] = 0;
         P3Props[5] = 0;
         P3Props[6] = 0;
         P4Props[0] = 0;
         P4Props[1] = 0;
-        P4Props[2] = 0;
+        P4Props[2] = 5;
         P4Props[3] = 0;
         P4Props[4] = 0;
         P4Props[5] = 0;
