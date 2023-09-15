@@ -7,7 +7,8 @@ public class EventControl : MonoBehaviour
 {
     public Text systemTest;
     public int EventPoint;
-    public int forward, backward, stop;
+    public int forward, backward, stop, getCoin, lossCoin;
+    public bool eventAB;
 
     public static bool isStopP1 = false, isStopP2 = false, isStopP3 = false, isStopP4 = false;
 
@@ -19,7 +20,22 @@ public class EventControl : MonoBehaviour
             {
                 if (DiceControl.P1_totalNum == EventPoint)
                 {
-                    StartCoroutine(P1_EventHappened());
+                    if (!eventAB)
+                    {
+                        StartCoroutine(P1_EventHappened());
+                    }
+                    else
+                    {
+                        int r = Random.Range(1, 3);
+                        switch (r)
+                        {
+                            case 1:
+                                break;
+
+                            case 2:
+                                break;
+                        }
+                    }
                 }
             }
             else if (other.tag == "P2")
@@ -67,21 +83,41 @@ public class EventControl : MonoBehaviour
             systemTest.text = "Õ£¡Ù" + stop + "ªÿ∫œ£°";
             systemTest.color = Color.cyan;
         }
+        else if (getCoin != 0)
+        {
+            systemTest.text = "´@µ√" + getCoin + "ÂX£°";
+            systemTest.color = Color.yellow;
+            CoinControl.P1CoinTotal += getCoin;
+        }
+        else if (lossCoin != 0)
+        {
+            systemTest.text = "ìp ß" + getCoin + "ÂX£°";
+            systemTest.color = Color.yellow;
+            CoinControl.P1CoinTotal -= lossCoin;
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        DiceControl.P1_totalNum += forward;
-        DiceControl.P1_totalNum -= backward;
-        if (stop == 0)
-        {
-            AnimatorControl.isP1Move = true;
-        }
-        yield return new WaitForSeconds(1f);
-        if (stop != 0)
+        if (getCoin != 0 || lossCoin != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
-            isStopP1 = true;
-            IsStopUIControl.isStopUI += stop;
+        }
+        else
+        {
+            DiceControl.P1_totalNum += forward;
+            DiceControl.P1_totalNum -= backward;
+            if (stop == 0)
+            {
+                AnimatorControl.isP1Move = true;
+            }
+            yield return new WaitForSeconds(1f);
+            if (stop != 0)
+            {
+                ChangeCameraControl.changeCameraNum++;
+                DiceUIControl.isDiceUI = true;
+                isStopP1 = true;
+                IsStopUIControl.isStopUI += stop;
+            }
         }
     }
     IEnumerator P2_EventHappened()
