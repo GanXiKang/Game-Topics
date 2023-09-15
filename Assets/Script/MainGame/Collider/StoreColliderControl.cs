@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class StoreColliderControl : MonoBehaviour
 {
+    public static int who;
+
     public int pointNum;
     public Transform target, buying;
 
-    public static int who;
+    int Trans;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -52,7 +54,11 @@ public class StoreColliderControl : MonoBehaviour
         }
         else
         {
-            StartCoroutine(Transposition());
+            Trans++;
+            if (Trans == 2)
+            {
+                PropsControl.isTrans = false;
+            }
         }
     }
     private void OnTriggerStay(Collider other)
@@ -148,11 +154,6 @@ public class StoreColliderControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         PlayerMoveControl.isMove = false;
         StoreUIControl.isStore = true;
-    }
-    IEnumerator Transposition()
-    {
-        yield return new WaitForSeconds(1f);
-        PropsControl.isTrans = false;
     }
 }
 

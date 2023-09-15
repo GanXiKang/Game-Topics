@@ -6,6 +6,7 @@ public class OrdinaryColliderControl : MonoBehaviour
 {
     public int pointNum;
 
+    int Trans;
     private void OnTriggerEnter(Collider other)
     {
         if (!PropsControl.isTrans)
@@ -45,7 +46,11 @@ public class OrdinaryColliderControl : MonoBehaviour
         }
         else
         {
-            StartCoroutine(Transposition());
+            Trans++;
+            if (Trans == 2)
+            {
+                PropsControl.isTrans = false;
+            }
         }
     }
     IEnumerator ChangeCamera()
@@ -53,10 +58,5 @@ public class OrdinaryColliderControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
-    }
-    IEnumerator Transposition()
-    {
-        yield return new WaitForSeconds(1f);
-        PropsControl.isTrans = false;
     }
 }
