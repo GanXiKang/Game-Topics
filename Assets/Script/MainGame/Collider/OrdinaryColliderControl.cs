@@ -46,6 +46,7 @@ public class OrdinaryColliderControl : MonoBehaviour
         else
         {
             PropsControl.TransNum++;
+            print(PropsControl.TransNum);
             if (PropsControl.TransNum == 2)
             {
                 PropsControl.isTrans = false;
