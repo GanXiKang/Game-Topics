@@ -12,6 +12,8 @@ public class EventControl : MonoBehaviour
 
     public static bool isStopP1 = false, isStopP2 = false, isStopP3 = false, isStopP4 = false;
 
+    int r;
+
     private void OnTriggerEnter(Collider other)
     {
         if (!PropsControl.isTrans)
@@ -26,7 +28,8 @@ public class EventControl : MonoBehaviour
                     }
                     else
                     {
-                        int r = Random.Range(1, 3);
+                        r = Random.Range(1, 3);
+                        print(r);
                         switch (r)
                         {
                             case 1:
