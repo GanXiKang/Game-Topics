@@ -9,8 +9,6 @@ public class StoreColliderControl : MonoBehaviour
     public int pointNum;
     public Transform target, buying;
 
-    int Trans;
-
     private void OnTriggerEnter(Collider other)
     {
         if (!PropsControl.isTrans)
@@ -54,11 +52,7 @@ public class StoreColliderControl : MonoBehaviour
         }
         else
         {
-            Trans++;
-            if (Trans == 2)
-            {
-                PropsControl.isTrans = false;
-            }
+            
         }
     }
     private void OnTriggerStay(Collider other)
