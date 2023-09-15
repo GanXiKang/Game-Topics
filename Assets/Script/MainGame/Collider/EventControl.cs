@@ -32,18 +32,12 @@ public class EventControl : MonoBehaviour
                         switch (r)
                         {
                             case 1:
-                                if(EventPoint == 4)
-                                {
-                                    forward = 2;
-                                }
+                                EventA();
                                 StartCoroutine(P1_EventHappened());
                                 break;
 
                             case 2:
-                                if (EventPoint == 4)
-                                {
-                                    backward = 1;
-                                }
+                                EventB();
                                 StartCoroutine(P1_EventHappened());
                                 break;
                         }
