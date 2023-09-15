@@ -6,7 +6,6 @@ public class OrdinaryColliderControl : MonoBehaviour
 {
     public int pointNum;
 
-    int Trans;
     private void OnTriggerEnter(Collider other)
     {
         if (!PropsControl.isTrans)
@@ -46,10 +45,11 @@ public class OrdinaryColliderControl : MonoBehaviour
         }
         else
         {
-            Trans++;
-            if (Trans == 2)
+            PropsControl.TransNum++;
+            if (PropsControl.TransNum == 2)
             {
                 PropsControl.isTrans = false;
+                PropsControl.TransNum = 0;
                 print(PropsControl.isTrans);
             }
         }
