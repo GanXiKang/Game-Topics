@@ -16,6 +16,7 @@ public class EventControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Enter");
         if (!PropsControl.isTrans)
         {
             if (other.tag == "P1")
