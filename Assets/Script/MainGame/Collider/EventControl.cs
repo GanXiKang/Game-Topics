@@ -388,7 +388,7 @@ public class EventControl : MonoBehaviour
         if (EventPoint == 4)
         {
             PropsControl.P1Props[4] += 1;
-            print(PropsControl.P1Props[4]);
+            print("Props" + PropsControl.P1Props[4]);
         }
         else if (EventPoint == 2)
         {
