@@ -74,14 +74,52 @@ public class EventControl : MonoBehaviour
             {
                 if (DiceControl.P3_totalNum == EventPoint)
                 {
-                    StartCoroutine(P3_EventHappened());
+                    if (!eventAB)
+                    {
+                        StartCoroutine(P3_EventHappened());
+                    }
+                    else
+                    {
+                        r = Random.Range(1, 3);
+                        switch (r)
+                        {
+                            case 1:
+                                EventA();
+                                StartCoroutine(P3_EventHappened());
+                                break;
+
+                            case 2:
+                                EventB();
+                                StartCoroutine(P3_EventHappened());
+                                break;
+                        }
+                    }
                 }
             }
             else if (other.tag == "P4")
             {
                 if (DiceControl.P4_totalNum == EventPoint)
                 {
-                    StartCoroutine(P4_EventHappened());
+                    if (!eventAB)
+                    {
+                        StartCoroutine(P4_EventHappened());
+                    }
+                    else
+                    {
+                        r = Random.Range(1, 3);
+                        switch (r)
+                        {
+                            case 1:
+                                EventA();
+                                StartCoroutine(P4_EventHappened());
+                                break;
+
+                            case 2:
+                                EventB();
+                                StartCoroutine(P4_EventHappened());
+                                break;
+                        }
+                    }
                 }
             }
         }
@@ -218,21 +256,41 @@ public class EventControl : MonoBehaviour
             systemTest.text = "停留" + stop + "回合！";
             systemTest.color = Color.cyan;
         }
+        else if (getCoin != 0)
+        {
+            systemTest.text = "獲得" + getCoin + "錢！";
+            systemTest.color = Color.yellow;
+            CoinControl.P3CoinTotal += getCoin;
+        }
+        else if (lossCoin != 0)
+        {
+            systemTest.text = "損失" + lossCoin + "錢！";
+            systemTest.color = Color.yellow;
+            CoinControl.P3CoinTotal -= lossCoin;
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        DiceControl.P3_totalNum += forward;
-        DiceControl.P3_totalNum -= backward;
-        if (stop == 0)
-        {
-            AnimatorControl.isP3Move = true;
-        }
-        yield return new WaitForSeconds(1f);
-        if (stop != 0)
+        if (getCoin != 0 || lossCoin != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
-            isStopP3 = true;
-            IsStopUIControl.isStopUI += stop;
+        }
+        else
+        {
+            DiceControl.P3_totalNum += forward;
+            DiceControl.P3_totalNum -= backward;
+            if (stop == 0)
+            {
+                AnimatorControl.isP3Move = true;
+            }
+            yield return new WaitForSeconds(1f);
+            if (stop != 0)
+            {
+                ChangeCameraControl.changeCameraNum++;
+                DiceUIControl.isDiceUI = true;
+                isStopP3 = true;
+                IsStopUIControl.isStopUI += stop;
+            }
         }
     }
     IEnumerator P4_EventHappened()
@@ -253,21 +311,41 @@ public class EventControl : MonoBehaviour
             systemTest.text = "停留" + stop + "回合！";
             systemTest.color = Color.cyan;
         }
+        else if (getCoin != 0)
+        {
+            systemTest.text = "獲得" + getCoin + "錢！";
+            systemTest.color = Color.yellow;
+            CoinControl.P4CoinTotal += getCoin;
+        }
+        else if (lossCoin != 0)
+        {
+            systemTest.text = "損失" + lossCoin + "錢！";
+            systemTest.color = Color.yellow;
+            CoinControl.P4CoinTotal -= lossCoin;
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        DiceControl.P4_totalNum += forward;
-        DiceControl.P4_totalNum -= backward;
-        if (stop == 0)
-        {
-            AnimatorControl.isP2Move = true;
-        }
-        yield return new WaitForSeconds(1f);
-        if (stop != 0)
+        if (getCoin != 0 || lossCoin != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
-            isStopP4 = true;
-            IsStopUIControl.isStopUI += stop;
+        }
+        else
+        {
+            DiceControl.P4_totalNum += forward;
+            DiceControl.P4_totalNum -= backward;
+            if (stop == 0)
+            {
+                AnimatorControl.isP2Move = true;
+            }
+            yield return new WaitForSeconds(1f);
+            if (stop != 0)
+            {
+                ChangeCameraControl.changeCameraNum++;
+                DiceUIControl.isDiceUI = true;
+                isStopP4 = true;
+                IsStopUIControl.isStopUI += stop;
+            }
         }
     }
     IEnumerator Transposition()
