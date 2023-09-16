@@ -151,6 +151,7 @@ public class EventControl : MonoBehaviour
             systemTest.text = "«@µÃ" + getCoin + "åX£¡";
             systemTest.color = Color.yellow;
             CoinControl.P1CoinTotal += getCoin;
+            print("coin");
         }
         else if (lossCoin != 0)
         {
