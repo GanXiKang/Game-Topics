@@ -16,7 +16,6 @@ public class EventControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Enter");
         if (!PropsControl.isTrans)
         {
             if (other.tag == "P1")
@@ -152,7 +151,6 @@ public class EventControl : MonoBehaviour
             systemTest.text = "«@µÃ" + getCoin + "åX£¡";
             systemTest.color = Color.yellow;
             CoinControl.P1CoinTotal += getCoin;
-            print("coin");
         }
         else if (lossCoin != 0)
         {
