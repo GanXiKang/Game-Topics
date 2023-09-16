@@ -186,7 +186,27 @@ public class EventControl : MonoBehaviour
         {
             systemTest.text = "獲得道具！";
             systemTest.color = Color.blue;
-            EventGetProps();
+            if (getPorps == 1)
+            {
+                PropsControl.P1Props[4] += 1;
+                print("Props" + PropsControl.P1Props[4]);
+            }
+            else if (getPorps == 2)
+            {
+                p = Random.Range(1, 3);
+                switch (p)
+                {
+                    case 1:
+                        PropsControl.P1Props[1] += 1;
+                        print("A");
+                        break;
+
+                    case 2:
+                        PropsControl.P1Props[2] += 1;
+                        print("B");
+                        break;
+                }
+            }
         }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
@@ -243,9 +263,32 @@ public class EventControl : MonoBehaviour
             systemTest.color = Color.yellow;
             CoinControl.P2CoinTotal -= lossCoin;
         }
+        else if (getPorps != 0)
+        {
+            systemTest.text = "獲得道具！";
+            systemTest.color = Color.blue;
+            if (getPorps == 1)
+            {
+                PropsControl.P2Props[4] += 1;
+            }
+            else if (getPorps == 2)
+            {
+                p = Random.Range(1, 3);
+                switch (p)
+                {
+                    case 1:
+                        PropsControl.P2Props[1] += 1;
+                        break;
+
+                    case 2:
+                        PropsControl.P2Props[2] += 1;
+                        break;
+                }
+            }
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        if (getCoin != 0 || lossCoin != 0)
+        if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
@@ -298,9 +341,32 @@ public class EventControl : MonoBehaviour
             systemTest.color = Color.yellow;
             CoinControl.P3CoinTotal -= lossCoin;
         }
+        else if (getPorps != 0)
+        {
+            systemTest.text = "獲得道具！";
+            systemTest.color = Color.blue;
+            if (getPorps == 1)
+            {
+                PropsControl.P3Props[4] += 1;
+            }
+            else if (getPorps == 2)
+            {
+                p = Random.Range(1, 3);
+                switch (p)
+                {
+                    case 1:
+                        PropsControl.P3Props[1] += 1;
+                        break;
+
+                    case 2:
+                        PropsControl.P3Props[2] += 1;
+                        break;
+                }
+            }
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        if (getCoin != 0 || lossCoin != 0)
+        if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
@@ -353,9 +419,32 @@ public class EventControl : MonoBehaviour
             systemTest.color = Color.yellow;
             CoinControl.P4CoinTotal -= lossCoin;
         }
+        else if (getPorps != 0)
+        {
+            systemTest.text = "獲得道具！";
+            systemTest.color = Color.blue;
+            if (getPorps == 1)
+            {
+                PropsControl.P2Props[4] += 1;
+            }
+            else if (getPorps == 2)
+            {
+                p = Random.Range(1, 3);
+                switch (p)
+                {
+                    case 1:
+                        PropsControl.P2Props[1] += 1;
+                        break;
+
+                    case 2:
+                        PropsControl.P2Props[2] += 1;
+                        break;
+                }
+            }
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        if (getCoin != 0 || lossCoin != 0)
+        if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
@@ -404,30 +493,6 @@ public class EventControl : MonoBehaviour
             stop = 0;
             getCoin = 0;
             lossCoin = 0;
-        }
-    }
-    void EventGetProps()
-    {
-        if (EventPoint == 4)
-        {
-            PropsControl.P1Props[4] += 1;
-            print("Props" + PropsControl.P1Props[4]);
-        }
-        else if (EventPoint == 2)
-        {
-            p = Random.Range(1, 3);
-            switch (p)
-            {
-                case 1:
-                    PropsControl.P1Props[1] += 1;
-                    print("A");
-                    break;
-
-                case 2:
-                    PropsControl.P1Props[2] += 1;
-                    print("B");
-                    break;
-            }
         }
     }
 }
