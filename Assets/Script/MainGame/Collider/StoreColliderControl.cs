@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StoreColliderControl : MonoBehaviour
 {
+    public static bool P1_EnterStore = true, P2_EnterStore = true, P3_EnterStore = true, P4_EnterStore = true;
     public static int who;
 
     public int pointNum;
@@ -13,38 +14,42 @@ public class StoreColliderControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
-            if (other.tag == "P1")
+            if (other.tag == "P1" && P1_EnterStore)
             {
                 if (DiceControl.P1_totalNum == pointNum)
                 {
                     who = 1;
+                    P1_EnterStore = false;
                     AnimatorControl.isP1Move = false;
                     StartCoroutine(LookTarget());
                 }
             }
-            else if (other.tag == "P2")
+            else if (other.tag == "P2" && P2_EnterStore)
             {
                 if (DiceControl.P2_totalNum == pointNum)
                 {
                     who = 2;
+                    P2_EnterStore = false;
                     AnimatorControl.isP2Move = false;
                     StartCoroutine(LookTarget());
                 }
             }
-            else if (other.tag == "P3")
+            else if (other.tag == "P3" && P3_EnterStore)
             {
                 if (DiceControl.P3_totalNum == pointNum)
                 {
                     who = 3;
+                    P3_EnterStore = false;
                     AnimatorControl.isP3Move = false;
                     StartCoroutine(LookTarget());
                 }
             }
-            else if (other.tag == "P4")
+            else if (other.tag == "P4" && P4_EnterStore)
             {
                 if (DiceControl.P4_totalNum == pointNum)
                 {
                     who = 4;
+                    P4_EnterStore = false;
                     AnimatorControl.isP4Move = false;
                     StartCoroutine(LookTarget());
                 }
@@ -140,6 +145,25 @@ public class StoreColliderControl : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "P1")
+        {
+            P1_EnterStore = true;
+        }
+        if (other.tag == "P2")
+        {
+            P2_EnterStore = true;
+        }
+        if (other.tag == "P3")
+        {
+            P3_EnterStore = true;
+        }
+        if (other.tag == "P4")
+        {
+            P4_EnterStore = true;
         }
     }
 

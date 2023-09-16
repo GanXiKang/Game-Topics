@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChestColliderControl : MonoBehaviour
 {
+    public static bool P1_EnterBox = true, P2_EnterBox = true, P3_EnterBox = true, P4_EnterBox = true;
     public int boxPoint, isOpenNumber;
     public Transform target;
 
@@ -17,34 +18,38 @@ public class ChestColliderControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
-            if (other.tag == "P1")
+            if (other.tag == "P1" && P1_EnterBox)
             {
                 if (DiceControl.P1_totalNum == boxPoint)
                 {
+                    P1_EnterBox = false;
                     AnimatorControl.isP1Move = false;
                     StartCoroutine(ChangeCamera());
                 }
             }
-            else if (other.tag == "P2")
+            else if (other.tag == "P2" && P2_EnterBox)
             {
                 if (DiceControl.P2_totalNum == boxPoint)
                 {
+                    P2_EnterBox = false;
                     AnimatorControl.isP2Move = false;
                     StartCoroutine(ChangeCamera());
                 }
             }
-            else if (other.tag == "P3")
+            else if (other.tag == "P3" && P3_EnterBox)
             {
                 if (DiceControl.P3_totalNum == boxPoint)
                 {
+                    P3_EnterBox = false;
                     AnimatorControl.isP3Move = false;
                     StartCoroutine(ChangeCamera());
                 }
             }
-            else if (other.tag == "P4")
+            else if (other.tag == "P4" && P4_EnterBox)
             {
                 if (DiceControl.P4_totalNum == boxPoint)
                 {
+                    P4_EnterBox = false;
                     AnimatorControl.isP4Move = false;
                     StartCoroutine(ChangeCamera());
                 }
@@ -104,6 +109,25 @@ public class ChestColliderControl : MonoBehaviour
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
                 }
             }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "P1")
+        {
+            P1_EnterBox = true;
+        }
+        if (other.tag == "P2")
+        {
+            P2_EnterBox = true;
+        }
+        if (other.tag == "P3")
+        {
+            P3_EnterBox = true;
+        }
+        if (other.tag == "P4")
+        {
+            P4_EnterBox = true;
         }
     }
     IEnumerator ChangeCamera()

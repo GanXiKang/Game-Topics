@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class EventControl : MonoBehaviour
 {
+    public static bool P1_EnterEvent = true, P2_EnterEvent = true, P3_EnterEvent = true, P4_EnterEvent = true;
+    public static bool isStopP1 = false, isStopP2 = false, isStopP3 = false, isStopP4 = false;
+
     public Text systemTest;
     public int EventPoint;
     public int forward, backward, stop, getCoin, lossCoin, getPorps;
     public bool eventAB;
-
-    public static bool isStopP1 = false, isStopP2 = false, isStopP3 = false, isStopP4 = false;
 
     int r,p;
 
@@ -18,10 +19,11 @@ public class EventControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
-            if (other.tag == "P1")
+            if (other.tag == "P1" && P1_EnterEvent)
             {
                 if (DiceControl.P1_totalNum == EventPoint)
                 {
+                    P1_EnterEvent = false;
                     if (!eventAB)
                     {
                         StartCoroutine(P1_EventHappened());
@@ -44,10 +46,11 @@ public class EventControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P2")
+            else if (other.tag == "P2" && P2_EnterEvent)
             {
                 if (DiceControl.P2_totalNum == EventPoint)
                 {
+                    P2_EnterEvent = false;
                     if (!eventAB)
                     {
                         StartCoroutine(P2_EventHappened());
@@ -70,10 +73,11 @@ public class EventControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P3")
+            else if (other.tag == "P3" && P3_EnterEvent)
             {
                 if (DiceControl.P3_totalNum == EventPoint)
                 {
+                    P3_EnterEvent = false;
                     if (!eventAB)
                     {
                         StartCoroutine(P3_EventHappened());
@@ -96,10 +100,11 @@ public class EventControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P4")
+            else if (other.tag == "P4" && P4_EnterEvent)
             {
                 if (DiceControl.P4_totalNum == EventPoint)
                 {
+                    P4_EnterEvent = false;
                     if (!eventAB)
                     {
                         StartCoroutine(P4_EventHappened());
@@ -126,6 +131,25 @@ public class EventControl : MonoBehaviour
         else
         {
             StartCoroutine(Transposition());
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "P1")
+        {
+            P1_EnterEvent = true;
+        }
+        if (other.tag == "P2")
+        {
+            P2_EnterEvent = true;
+        }
+        if (other.tag == "P3")
+        {
+            P3_EnterEvent = true;
+        }
+        if (other.tag == "P4")
+        {
+            P4_EnterEvent = true;
         }
     }
     IEnumerator P1_EventHappened()
