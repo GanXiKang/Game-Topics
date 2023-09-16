@@ -7,12 +7,12 @@ public class EventControl : MonoBehaviour
 {
     public Text systemTest;
     public int EventPoint;
-    public int forward, backward, stop, getCoin, lossCoin;
+    public int forward, backward, stop, getCoin, lossCoin, getPorps;
     public bool eventAB;
 
     public static bool isStopP1 = false, isStopP2 = false, isStopP3 = false, isStopP4 = false;
 
-    int r;
+    int r,p;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -158,9 +158,32 @@ public class EventControl : MonoBehaviour
             systemTest.color = Color.yellow;
             CoinControl.P1CoinTotal -= lossCoin;
         }
+        else if (getPorps != 0)
+        {
+            systemTest.text = "«@µÃµÀ¾ß£¡";
+            systemTest.color = Color.blue;
+            if (getPorps == 1)
+            {
+                PropsControl.P1Props[4] += 1;
+            }
+            else if (getPorps == 2)
+            {
+                p = Random.Range(1, 3);
+                switch (p)
+                {
+                    case 1:
+                        PropsControl.P1Props[1] += 1;
+                        break;
+
+                    case 2:
+                        PropsControl.P1Props[2] += 1;
+                        break;
+                }
+            }
+        }
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        if (getCoin != 0 || lossCoin != 0)
+        if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
