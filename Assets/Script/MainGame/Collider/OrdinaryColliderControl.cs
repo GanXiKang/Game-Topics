@@ -8,14 +8,17 @@ public class OrdinaryColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Enter");
         if (!PropsControl.isTrans)
         {
+            print("Yes");
             if (other.tag == "P1")
             {
                 if (DiceControl.P1_totalNum == pointNum)
                 {
                     AnimatorControl.isP1Move = false;
                     StartCoroutine(ChangeCamera());
+                    print("P1");
                 }
             }
             else if (other.tag == "P2")
@@ -24,6 +27,7 @@ public class OrdinaryColliderControl : MonoBehaviour
                 {
                     AnimatorControl.isP2Move = false;
                     StartCoroutine(ChangeCamera());
+                    print("P2");
                 }
             }
             else if (other.tag == "P3")
