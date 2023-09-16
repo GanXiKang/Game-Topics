@@ -153,7 +153,10 @@ public class DiceControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Calculate();
         SceneManager.LoadScene(7);
-        PlayerMoveControl.isMove = true;
+        if (!PlayerMoveControl.isMove)
+        {
+            PlayerMoveControl.isMove = true;
+        }
         DiceUIControl.isDiceScene = false;
     }
     IEnumerator BackMainGame()
