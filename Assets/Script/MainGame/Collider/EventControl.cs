@@ -174,10 +174,12 @@ public class EventControl : MonoBehaviour
                 {
                     case 1:
                         PropsControl.P1Props[1] += 1;
+                        print("A");
                         break;
 
                     case 2:
                         PropsControl.P1Props[2] += 1;
+                        print("B");
                         break;
                 }
             }
