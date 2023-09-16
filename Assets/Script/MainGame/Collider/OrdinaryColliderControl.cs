@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OrdinaryColliderControl : MonoBehaviour
 {
-    public bool P1_Enter = true, P2_Enter = true, P3_Enter = true, P4_Enter = true;
+    public static bool P1_Enter = true, P2_Enter = true, P3_Enter = true, P4_Enter = true;
     public int pointNum;
 
     private void OnTriggerEnter(Collider other)
