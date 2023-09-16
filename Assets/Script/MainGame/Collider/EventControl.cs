@@ -165,6 +165,7 @@ public class EventControl : MonoBehaviour
             if (getPorps == 1)
             {
                 PropsControl.P1Props[4] += 1;
+                print(PropsControl.P1Props[4]);
             }
             else if (getPorps == 2)
             {
