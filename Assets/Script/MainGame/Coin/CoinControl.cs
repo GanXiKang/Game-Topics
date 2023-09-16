@@ -22,6 +22,8 @@ public class CoinControl : MonoBehaviour
 
     void Update()
     {
+        Limit();
+
         if (BagUIControl.isThief)
         {
             howMuchSteal = Random.Range(3, 6);
@@ -161,6 +163,25 @@ public class CoinControl : MonoBehaviour
                     break;
             }
             BagUIControl.isThief = false;
+        }
+    }
+    void Limit()
+    {
+        if (P1CoinTotal < 0)
+        {
+            P1CoinTotal = 0;
+        }
+        else if(P2CoinTotal < 0)
+        {
+            P2CoinTotal = 0;
+        }
+        else if (P3CoinTotal < 0)
+        {
+            P3CoinTotal = 0;
+        }
+        else if (P4CoinTotal < 0)
+        {
+            P4CoinTotal = 0;
         }
     }
 }
