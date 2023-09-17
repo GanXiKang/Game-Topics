@@ -16,7 +16,7 @@ public class RoundUIControl : MonoBehaviour
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
-                    for (int i = 0; i < 4; i++)
+                    for (int i = 0; i < 12; i++)
                     {
                         if (i == Menu_ChoosePlayer.whyP1)
                         {
@@ -33,7 +33,7 @@ public class RoundUIControl : MonoBehaviour
                     break;
 
                 case 2:
-                    for (int i = 0; i < 4; i++)
+                    for (int i = 0; i < 12; i++)
                     {
                         if (i == Menu_ChoosePlayer.whyP2)
                         {
@@ -50,7 +50,7 @@ public class RoundUIControl : MonoBehaviour
                     break;
 
                 case 3:
-                    for (int i = 0; i < 4; i++)
+                    for (int i = 0; i < 12; i++)
                     {
                         if (i == Menu_ChoosePlayer.whyP3)
                         {
@@ -67,7 +67,7 @@ public class RoundUIControl : MonoBehaviour
                     break;
 
                 case 4:
-                    for (int i = 0; i < 4; i++)
+                    for (int i = 0; i < 12; i++)
                     {
                         if (i == Menu_ChoosePlayer.whyP4)
                         {
