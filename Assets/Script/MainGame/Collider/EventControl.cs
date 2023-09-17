@@ -24,6 +24,8 @@ public class EventControl : MonoBehaviour
                 if (DiceControl.P1_totalNum == EventPoint)
                 {
                     P1_EnterEvent = false;
+                    EventImageUIControl.isTimer = true;
+                    EventImageUIControl.eventPointNum = EventPoint;
                     if (!eventAB)
                     {
                         StartCoroutine(P1_EventHappened());
