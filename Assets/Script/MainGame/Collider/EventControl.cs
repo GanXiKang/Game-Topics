@@ -53,6 +53,8 @@ public class EventControl : MonoBehaviour
                 if (DiceControl.P2_totalNum == EventPoint)
                 {
                     P2_EnterEvent = false;
+                    EventImageUIControl.isTimer = true;
+                    EventImageUIControl.eventPointNum = EventPoint;
                     if (!eventAB)
                     {
                         StartCoroutine(P2_EventHappened());
@@ -80,6 +82,8 @@ public class EventControl : MonoBehaviour
                 if (DiceControl.P3_totalNum == EventPoint)
                 {
                     P3_EnterEvent = false;
+                    EventImageUIControl.isTimer = true;
+                    EventImageUIControl.eventPointNum = EventPoint;
                     if (!eventAB)
                     {
                         StartCoroutine(P3_EventHappened());
@@ -107,6 +111,8 @@ public class EventControl : MonoBehaviour
                 if (DiceControl.P4_totalNum == EventPoint)
                 {
                     P4_EnterEvent = false;
+                    EventImageUIControl.isTimer = true;
+                    EventImageUIControl.eventPointNum = EventPoint;
                     if (!eventAB)
                     {
                         StartCoroutine(P4_EventHappened());
