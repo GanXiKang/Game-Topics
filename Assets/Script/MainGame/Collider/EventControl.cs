@@ -24,8 +24,6 @@ public class EventControl : MonoBehaviour
                 if (DiceControl.P1_totalNum == EventPoint)
                 {
                     P1_EnterEvent = false;
-                    EventImageUIControl.isTimer = true;
-                    EventImageUIControl.eventPointNum = EventPoint;
                     if (!eventAB)
                     {
                         StartCoroutine(P1_EventHappened());
@@ -53,8 +51,6 @@ public class EventControl : MonoBehaviour
                 if (DiceControl.P2_totalNum == EventPoint)
                 {
                     P2_EnterEvent = false;
-                    EventImageUIControl.isTimer = true;
-                    EventImageUIControl.eventPointNum = EventPoint;
                     if (!eventAB)
                     {
                         StartCoroutine(P2_EventHappened());
@@ -82,8 +78,6 @@ public class EventControl : MonoBehaviour
                 if (DiceControl.P3_totalNum == EventPoint)
                 {
                     P3_EnterEvent = false;
-                    EventImageUIControl.isTimer = true;
-                    EventImageUIControl.eventPointNum = EventPoint;
                     if (!eventAB)
                     {
                         StartCoroutine(P3_EventHappened());
@@ -111,8 +105,6 @@ public class EventControl : MonoBehaviour
                 if (DiceControl.P4_totalNum == EventPoint)
                 {
                     P4_EnterEvent = false;
-                    EventImageUIControl.isTimer = true;
-                    EventImageUIControl.eventPointNum = EventPoint;
                     if (!eventAB)
                     {
                         StartCoroutine(P4_EventHappened());
@@ -163,6 +155,8 @@ public class EventControl : MonoBehaviour
     IEnumerator P1_EventHappened()
     {
         AnimatorControl.isP1Move = false;
+        EventImageUIControl.isTimer = true;
+        EventImageUIControl.eventPointNum = EventPoint;
         yield return new WaitForSeconds(2f);
         if (getCoin != 0)
         {
@@ -193,7 +187,6 @@ public class EventControl : MonoBehaviour
                 }
             }
         }
-        SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(0.5f);
         if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
         {
@@ -221,31 +214,19 @@ public class EventControl : MonoBehaviour
     IEnumerator P2_EventHappened()
     {
         AnimatorControl.isP2Move = false;
-        if (forward != 0)
+        EventImageUIControl.isTimer = true;
+        EventImageUIControl.eventPointNum = EventPoint;
+        yield return new WaitForSeconds(2f);
+        if (getCoin != 0)
         {
-            systemTest.text = "前進" + forward + "格！";
-        }
-        else if (backward != 0)
-        {
-            systemTest.text = "后退" + backward + "格！";
-        }
-        else if (stop != 0)
-        {
-            systemTest.text = "停留" + stop + "回合！";
-        }
-        else if (getCoin != 0)
-        {
-            systemTest.text = "獲得" + getCoin + "錢！";
             CoinControl.P2CoinTotal += getCoin;
         }
         else if (lossCoin != 0)
         {
-            systemTest.text = "損失" + lossCoin + "錢！";
             CoinControl.P2CoinTotal -= lossCoin;
         }
         else if (getPorps != 0)
         {
-            systemTest.text = "獲得道具！";
             if (getPorps == 1)
             {
                 PropsControl.P2Props[4] += 1;
@@ -265,8 +246,7 @@ public class EventControl : MonoBehaviour
                 }
             }
         }
-        SystemTestTextControl.isTimer = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
         {
             ChangeCameraControl.changeCameraNum++;
@@ -293,31 +273,19 @@ public class EventControl : MonoBehaviour
     IEnumerator P3_EventHappened()
     {
         AnimatorControl.isP3Move = false;
-        if (forward != 0)
+        EventImageUIControl.isTimer = true;
+        EventImageUIControl.eventPointNum = EventPoint;
+        yield return new WaitForSeconds(2f);
+        if (getCoin != 0)
         {
-            systemTest.text = "前進" + forward + "格！";
-        }
-        else if (backward != 0)
-        {
-            systemTest.text = "后退" + backward + "格！";
-        }
-        else if (stop != 0)
-        {
-            systemTest.text = "停留" + stop + "回合！";
-        }
-        else if (getCoin != 0)
-        {
-            systemTest.text = "獲得" + getCoin + "錢！";
             CoinControl.P3CoinTotal += getCoin;
         }
         else if (lossCoin != 0)
         {
-            systemTest.text = "損失" + lossCoin + "錢！";
             CoinControl.P3CoinTotal -= lossCoin;
         }
         else if (getPorps != 0)
         {
-            systemTest.text = "獲得道具！";
             if (getPorps == 1)
             {
                 PropsControl.P3Props[4] += 1;
@@ -337,8 +305,7 @@ public class EventControl : MonoBehaviour
                 }
             }
         }
-        SystemTestTextControl.isTimer = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
         {
             ChangeCameraControl.changeCameraNum++;
@@ -365,31 +332,19 @@ public class EventControl : MonoBehaviour
     IEnumerator P4_EventHappened()
     {
         AnimatorControl.isP4Move = false;
-        if (forward != 0)
+        EventImageUIControl.isTimer = true;
+        EventImageUIControl.eventPointNum = EventPoint;
+        yield return new WaitForSeconds(2f);
+        if (getCoin != 0)
         {
-            systemTest.text = "前進" + forward + "格！";
-        }
-        else if (backward != 0)
-        {
-            systemTest.text = "后退" + backward + "格！";
-        }
-        else if (stop != 0)
-        {
-            systemTest.text = "停留" + stop + "回合！";
-        }
-        else if (getCoin != 0)
-        {
-            systemTest.text = "獲得" + getCoin + "錢！";
             CoinControl.P4CoinTotal += getCoin;
         }
         else if (lossCoin != 0)
         {
-            systemTest.text = "損失" + lossCoin + "錢！";
             CoinControl.P4CoinTotal -= lossCoin;
         }
         else if (getPorps != 0)
         {
-            systemTest.text = "獲得道具！";
             if (getPorps == 1)
             {
                 PropsControl.P2Props[4] += 1;
@@ -409,8 +364,7 @@ public class EventControl : MonoBehaviour
                 }
             }
         }
-        SystemTestTextControl.isTimer = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
         {
             ChangeCameraControl.changeCameraNum++;
