@@ -183,7 +183,6 @@ public class EventControl : MonoBehaviour
             if (getPorps == 1)
             {
                 PropsControl.P1Props[4] += 1;
-                print("Props" + PropsControl.P1Props[4]);
             }
             else if (getPorps == 2)
             {
@@ -192,12 +191,10 @@ public class EventControl : MonoBehaviour
                 {
                     case 1:
                         PropsControl.P1Props[1] += 1;
-                        print("A");
                         break;
 
                     case 2:
                         PropsControl.P1Props[2] += 1;
-                        print("B");
                         break;
                 }
             }
