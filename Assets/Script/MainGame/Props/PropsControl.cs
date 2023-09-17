@@ -96,7 +96,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -113,7 +112,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -130,7 +128,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -140,7 +137,6 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "偷盜失敗！";
-                        systemText.color = Color.blue;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -164,7 +160,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -181,7 +176,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -198,7 +192,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -208,7 +201,6 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "偷盜失敗！";
-                        systemText.color = Color.blue;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -232,7 +224,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -249,7 +240,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -266,7 +256,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -276,7 +265,6 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "偷盜失敗！";
-                        systemText.color = Color.blue;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -300,7 +288,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -317,7 +304,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -334,7 +320,6 @@ public class PropsControl : MonoBehaviour
                                     isStealProps = true;
                                     systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
                                     systemText.fontSize = 15;
-                                    systemText.color = Color.blue;
                                     SystemTestTextControl.isTimer = true;
                                     break;
                                 }
@@ -344,7 +329,6 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "偷盜失敗！";
-                        systemText.color = Color.blue;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -513,7 +497,6 @@ public class PropsControl : MonoBehaviour
         if (BombPropsControl.iscolliderBombText)
         {
             systemText.text = "踩到炸彈";
-            systemText.color = Color.red;
             BombPropsControl.iscolliderBombText = false;
             SystemTestTextControl.isTimer = true;
         }

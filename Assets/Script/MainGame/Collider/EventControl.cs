@@ -158,34 +158,28 @@ public class EventControl : MonoBehaviour
         if (forward != 0)
         {
             systemTest.text = "前進" + forward + "格！";
-            systemTest.color = Color.green;
         }
         else if (backward != 0)
         {
             systemTest.text = "后退" + backward + "格！";
-            systemTest.color = Color.red;
         }
         else if (stop != 0)
         {
             systemTest.text = "停留" + stop + "回合！";
-            systemTest.color = Color.cyan;
         }
         else if (getCoin != 0)
         {
             systemTest.text = "獲得" + getCoin + "錢！";
-            systemTest.color = Color.yellow;
             CoinControl.P1CoinTotal += getCoin;
         }
         else if (lossCoin != 0)
         {
             systemTest.text = "損失" + lossCoin + "錢！";
-            systemTest.color = Color.yellow;
             CoinControl.P1CoinTotal -= lossCoin;
         }
         else if (getPorps != 0)
         {
             systemTest.text = "獲得道具！";
-            systemTest.color = Color.blue;
             if (getPorps == 1)
             {
                 PropsControl.P1Props[4] += 1;
@@ -239,34 +233,28 @@ public class EventControl : MonoBehaviour
         if (forward != 0)
         {
             systemTest.text = "前進" + forward + "格！";
-            systemTest.color = Color.green;
         }
         else if (backward != 0)
         {
             systemTest.text = "后退" + backward + "格！";
-            systemTest.color = Color.red;
         }
         else if (stop != 0)
         {
             systemTest.text = "停留" + stop + "回合！";
-            systemTest.color = Color.cyan;
         }
         else if (getCoin != 0)
         {
             systemTest.text = "獲得" + getCoin + "錢！";
-            systemTest.color = Color.yellow;
             CoinControl.P2CoinTotal += getCoin;
         }
         else if (lossCoin != 0)
         {
             systemTest.text = "損失" + lossCoin + "錢！";
-            systemTest.color = Color.yellow;
             CoinControl.P2CoinTotal -= lossCoin;
         }
         else if (getPorps != 0)
         {
             systemTest.text = "獲得道具！";
-            systemTest.color = Color.blue;
             if (getPorps == 1)
             {
                 PropsControl.P2Props[4] += 1;
@@ -317,34 +305,28 @@ public class EventControl : MonoBehaviour
         if (forward != 0)
         {
             systemTest.text = "前進" + forward + "格！";
-            systemTest.color = Color.green;
         }
         else if (backward != 0)
         {
             systemTest.text = "后退" + backward + "格！";
-            systemTest.color = Color.red;
         }
         else if (stop != 0)
         {
             systemTest.text = "停留" + stop + "回合！";
-            systemTest.color = Color.cyan;
         }
         else if (getCoin != 0)
         {
             systemTest.text = "獲得" + getCoin + "錢！";
-            systemTest.color = Color.yellow;
             CoinControl.P3CoinTotal += getCoin;
         }
         else if (lossCoin != 0)
         {
             systemTest.text = "損失" + lossCoin + "錢！";
-            systemTest.color = Color.yellow;
             CoinControl.P3CoinTotal -= lossCoin;
         }
         else if (getPorps != 0)
         {
             systemTest.text = "獲得道具！";
-            systemTest.color = Color.blue;
             if (getPorps == 1)
             {
                 PropsControl.P3Props[4] += 1;
@@ -395,34 +377,28 @@ public class EventControl : MonoBehaviour
         if (forward != 0)
         {
             systemTest.text = "前進" + forward + "格！";
-            systemTest.color = Color.green;
         }
         else if (backward != 0)
         {
             systemTest.text = "后退" + backward + "格！";
-            systemTest.color = Color.red;
         }
         else if (stop != 0)
         {
             systemTest.text = "停留" + stop + "回合！";
-            systemTest.color = Color.cyan;
         }
         else if (getCoin != 0)
         {
             systemTest.text = "獲得" + getCoin + "錢！";
-            systemTest.color = Color.yellow;
             CoinControl.P4CoinTotal += getCoin;
         }
         else if (lossCoin != 0)
         {
             systemTest.text = "損失" + lossCoin + "錢！";
-            systemTest.color = Color.yellow;
             CoinControl.P4CoinTotal -= lossCoin;
         }
         else if (getPorps != 0)
         {
             systemTest.text = "獲得道具！";
-            systemTest.color = Color.blue;
             if (getPorps == 1)
             {
                 PropsControl.P2Props[4] += 1;

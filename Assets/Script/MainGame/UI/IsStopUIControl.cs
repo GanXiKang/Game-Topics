@@ -92,7 +92,6 @@ public class IsStopUIControl : MonoBehaviour
         isStopUI--;
         DiceUIControl.isDiceUI = false;
         systemText.text = "此回合暫停";
-        systemText.color = Color.cyan;
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
@@ -103,7 +102,6 @@ public class IsStopUIControl : MonoBehaviour
         isBombStopUI--;
         DiceUIControl.isDiceUI = false;
         systemText.text = "此回合暫停";
-        systemText.color = Color.cyan;
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;

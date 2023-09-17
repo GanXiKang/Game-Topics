@@ -41,7 +41,6 @@ public class Chest1AnimationControl : MonoBehaviour
                     case 5:
                         randomCoin = Random.Range(10, 20);
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P1CoinTotal += randomCoin;
                         break;
@@ -50,19 +49,16 @@ public class Chest1AnimationControl : MonoBehaviour
                     case 8:
                         randomCoin = Random.Range(20, 30);
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P1CoinTotal += randomCoin;
                         break;
                     case 9:
                         systemTest.text = "獲得一個黃金竊手道具！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         PropsControl.P1Props[6] += 1;
                         break;
                     case 10:
                         systemTest.text = "空！";
-                        systemTest.color = Color.black;
                         SystemTestTextControl.isTimer = true;
                         break;
                 }
@@ -78,7 +74,6 @@ public class Chest1AnimationControl : MonoBehaviour
                     case 5:
                         randomCoin = Random.Range(10, 20);
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P2CoinTotal += randomCoin;
                         break;
@@ -87,19 +82,16 @@ public class Chest1AnimationControl : MonoBehaviour
                     case 8:
                         randomCoin = Random.Range(20, 30);
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P2CoinTotal += randomCoin;
                         break;
                     case 9:
                         systemTest.text = "獲得一個黃金竊手道具！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         PropsControl.P2Props[6] += 1;
                         break;
                     case 10:
                         systemTest.text = "空！";
-                        systemTest.color = Color.black;
                         SystemTestTextControl.isTimer = true;
                         break;
                 }
@@ -115,7 +107,6 @@ public class Chest1AnimationControl : MonoBehaviour
                     case 5:
                         randomCoin = Random.Range(10, 20);
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P3CoinTotal += randomCoin;
                         break;
@@ -124,19 +115,16 @@ public class Chest1AnimationControl : MonoBehaviour
                     case 8:
                         randomCoin = Random.Range(20, 30);
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P3CoinTotal += randomCoin;
                         break;
                     case 9:
                         systemTest.text = "獲得一個黃金竊手道具！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         PropsControl.P3Props[6] += 1;
                         break;
                     case 10:
                         systemTest.text = "空！";
-                        systemTest.color = Color.black;
                         SystemTestTextControl.isTimer = true;
                         break;
                 }
@@ -152,7 +140,6 @@ public class Chest1AnimationControl : MonoBehaviour
                     case 5:
                         randomCoin = Random.Range(10, 20);
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P4CoinTotal += randomCoin;
                         break;
@@ -161,19 +148,16 @@ public class Chest1AnimationControl : MonoBehaviour
                     case 8:
                         randomCoin = Random.Range(20, 30);
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P4CoinTotal += randomCoin;
                         break;
                     case 9:
                         systemTest.text = "獲得一個黃金竊手道具！";
-                        systemTest.color = Color.yellow;
                         SystemTestTextControl.isTimer = true;
                         PropsControl.P4Props[6] += 1;
                         break;
                     case 10:
                         systemTest.text = "空！";
-                        systemTest.color = Color.black;
                         SystemTestTextControl.isTimer = true;
                         break;
                 }
