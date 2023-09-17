@@ -11,7 +11,7 @@ public class DiceControl : MonoBehaviour
 
     public int MinNum, MaxNum;
     public float rotationForce;
-    public GameObject normalUI, renewUI, doubleUI, customUI;
+    public GameObject normalUI, renewUI, renewWindowsUI , doubleUI, customUI;
 
     int randomNum;
     bool isRoll, result;
@@ -22,6 +22,10 @@ public class DiceControl : MonoBehaviour
 
         isRoll = true;
 
+        if (BagUIControl.isRenewDice)
+        {
+            renewUI.SetActive(true);
+        }
         if (BagUIControl.isDoubleDice)
         {
             doubleUI.SetActive(true);
@@ -184,7 +188,7 @@ public class DiceControl : MonoBehaviour
             }
             else 
             {
-                renewUI.SetActive(true);
+                renewWindowsUI.SetActive(true);
             }
         }
         normalUI.SetActive(false);
