@@ -163,31 +163,17 @@ public class EventControl : MonoBehaviour
     IEnumerator P1_EventHappened()
     {
         AnimatorControl.isP1Move = false;
-        if (forward != 0)
+        yield return new WaitForSeconds(2f);
+        if (getCoin != 0)
         {
-            systemTest.text = "前進" + forward + "格！";
-        }
-        else if (backward != 0)
-        {
-            systemTest.text = "后退" + backward + "格！";
-        }
-        else if (stop != 0)
-        {
-            systemTest.text = "停留" + stop + "回合！";
-        }
-        else if (getCoin != 0)
-        {
-            systemTest.text = "獲得" + getCoin + "錢！";
             CoinControl.P1CoinTotal += getCoin;
         }
         else if (lossCoin != 0)
         {
-            systemTest.text = "損失" + lossCoin + "錢！";
             CoinControl.P1CoinTotal -= lossCoin;
         }
         else if (getPorps != 0)
         {
-            systemTest.text = "獲得道具！";
             if (getPorps == 1)
             {
                 PropsControl.P1Props[4] += 1;
@@ -208,7 +194,7 @@ public class EventControl : MonoBehaviour
             }
         }
         SystemTestTextControl.isTimer = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
         {
             ChangeCameraControl.changeCameraNum++;
