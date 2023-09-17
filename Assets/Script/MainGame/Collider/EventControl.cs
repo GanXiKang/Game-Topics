@@ -475,6 +475,7 @@ public class EventControl : MonoBehaviour
 
     void EventA()
     {
+        EventImageUIControl.eventAB = 1;
         if (EventPoint == 4)
         {
             forward = 0;
@@ -486,6 +487,7 @@ public class EventControl : MonoBehaviour
     }
     void EventB()
     {
+        EventImageUIControl.eventAB = 2;
         if (EventPoint == 4)
         {
             forward = 0;
