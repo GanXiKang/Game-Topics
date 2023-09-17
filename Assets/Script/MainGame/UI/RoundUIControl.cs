@@ -190,7 +190,7 @@ public class RoundUIControl : MonoBehaviour
                     }
                     p[1].SetActive(true);
                     p[4].SetActive(false);
-                    CoinTotal.text = "Coin : " + CoinControl.P1CoinTotal.ToString();
+                    CoinTotal.text = CoinControl.P1CoinTotal.ToString();
                     break;
 
                 case 2:
@@ -207,7 +207,7 @@ public class RoundUIControl : MonoBehaviour
                     }
                     p[2].SetActive(true);
                     p[1].SetActive(false);
-                    CoinTotal.text = "Coin : " + CoinControl.P2CoinTotal.ToString();
+                    CoinTotal.text = CoinControl.P2CoinTotal.ToString();
                     break;
 
                 case 3:
@@ -224,7 +224,7 @@ public class RoundUIControl : MonoBehaviour
                     }
                     p[3].SetActive(true);
                     p[2].SetActive(false);
-                    CoinTotal.text = "Coin : " + CoinControl.P3CoinTotal.ToString();
+                    CoinTotal.text = CoinControl.P3CoinTotal.ToString();
                     break;
 
                 case 4:
@@ -241,7 +241,7 @@ public class RoundUIControl : MonoBehaviour
                     }
                     p[4].SetActive(true);
                     p[3].SetActive(false);
-                    CoinTotal.text = "Coin : " + CoinControl.P4CoinTotal.ToString();
+                    CoinTotal.text = CoinControl.P4CoinTotal.ToString();
                     break;
             }
         }
