@@ -6,7 +6,7 @@ public class EventImageUIControl : MonoBehaviour
 {
     float Timer = 0;
 
-    public GameObject[] eventImage = new GameObject[11];
+    public GameObject[] eventImage = new GameObject[13];
 
     public static int eventPointNum, eventAB;
     public static bool isTimer;
@@ -68,7 +68,7 @@ public class EventImageUIControl : MonoBehaviour
                 }
                 Timing();
             }
-            if (eventPointNum == 23)
+            if (eventPointNum == 26)
             {
                 if (eventAB == 1)
                 {
@@ -78,6 +78,16 @@ public class EventImageUIControl : MonoBehaviour
                 {
                     eventImage[10].SetActive(true);
                 }
+                Timing();
+            }
+            if (eventPointNum == 34)
+            {
+                eventImage[11].SetActive(true);
+                Timing();
+            }
+            if (eventPointNum == 39)
+            {
+                eventImage[12].SetActive(true);
                 Timing();
             }
         }
