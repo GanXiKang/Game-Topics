@@ -357,22 +357,22 @@ public class EventControl : MonoBehaviour
     void EventA()
     {
         EventImageUIControl.eventAB = 1;
-        if (EventPoint == 4)
+        if (EventPoint == 6)
         {
             forward = 0;
-            backward = 2;
+            backward = 0;
             stop = 0;
-            getCoin = 0;
+            getCoin = 5;
             lossCoin = 0;
         }
     }
     void EventB()
     {
         EventImageUIControl.eventAB = 2;
-        if (EventPoint == 4)
+        if (EventPoint == 6)
         {
-            forward = 0;
-            backward = 1;
+            forward = 1;
+            backward = 0;
             stop = 0;
             getCoin = 0;
             lossCoin = 0;
