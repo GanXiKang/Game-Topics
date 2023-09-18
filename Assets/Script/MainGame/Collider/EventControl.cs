@@ -376,6 +376,24 @@ public class EventControl : MonoBehaviour
             lossCoin = 0;
             getPorps = 0;
         }
+        if (EventPoint == 22)
+        {
+            forward = 3;
+            backward = 0;
+            stop = 0;
+            getCoin = 0;
+            lossCoin = 0;
+            getPorps = 0;
+        }
+        if (EventPoint == 26)
+        {
+            forward = 0;
+            backward = 3;
+            stop = 0;
+            getCoin = 0;
+            lossCoin = 0;
+            getPorps = 0;
+        }
     }
     void EventB()
     {
@@ -398,6 +416,24 @@ public class EventControl : MonoBehaviour
             getCoin = 0;
             lossCoin = 0;
             getPorps = 1;
+        }
+        if (EventPoint == 22)
+        {
+            forward = 0;
+            backward = 0;
+            stop = 1;
+            getCoin = 0;
+            lossCoin = 0;
+            getPorps = 0;
+        }
+        if (EventPoint == 26)
+        {
+            forward = 0;
+            backward = 0;
+            stop = 0;
+            getCoin = 0;
+            lossCoin = 10;
+            getPorps = 0;
         }
     }
 }
