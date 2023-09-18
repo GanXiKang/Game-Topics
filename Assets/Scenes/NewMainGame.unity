@@ -5438,9 +5438,9 @@ GameObject:
   m_Component:
   - component: {fileID: 294109963}
   - component: {fileID: 294109965}
-  - component: {fileID: 294109964}
+  - component: {fileID: 294109966}
   m_Layer: 0
-  m_Name: OrdinaryCollider
+  m_Name: EventCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5461,19 +5461,6 @@ Transform:
   m_Father: {fileID: 1383607185}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294109964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294109962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb2062665cfc4b243a1a74afc28d7198, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointNum: 22
 --- !u!65 &294109965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5487,6 +5474,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &294109966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294109962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc59b744d1f61e4cb7a1c428e6efce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  systemTest: {fileID: 462964630}
+  EventPoint: 22
+  forward: 0
+  backward: 0
+  stop: 0
+  getCoin: 0
+  lossCoin: 0
+  getPorps: 0
+  eventAB: 1
 --- !u!1001 &295578508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16474,9 +16482,9 @@ GameObject:
   m_Component:
   - component: {fileID: 827314682}
   - component: {fileID: 827314684}
-  - component: {fileID: 827314683}
+  - component: {fileID: 827314685}
   m_Layer: 0
-  m_Name: OrdinaryCollider
+  m_Name: EventCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16497,19 +16505,6 @@ Transform:
   m_Father: {fileID: 474141933}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &827314683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827314681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb2062665cfc4b243a1a74afc28d7198, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointNum: 26
 --- !u!65 &827314684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16523,6 +16518,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &827314685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827314681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc59b744d1f61e4cb7a1c428e6efce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  systemTest: {fileID: 462964630}
+  EventPoint: 26
+  forward: 0
+  backward: 0
+  stop: 0
+  getCoin: 0
+  lossCoin: 0
+  getPorps: 0
+  eventAB: 1
 --- !u!1001 &828554202
 PrefabInstance:
   m_ObjectHideFlags: 0
