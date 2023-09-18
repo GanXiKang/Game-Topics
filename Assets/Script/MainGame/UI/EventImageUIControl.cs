@@ -51,6 +51,7 @@ public class EventImageUIControl : MonoBehaviour
         if (Timer > 2)
         {
             isTimer = false;
+            Timer = 0;
             eventPointNum = 0;
             eventAB = 0;
             for (int i = 0; i < eventImage.Length; i++)
