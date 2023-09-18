@@ -34,6 +34,16 @@ public class EventImageUIControl : MonoBehaviour
                 }
                 Timing();
             }
+            if (eventPointNum == 11)
+            {
+                eventImage[3].SetActive(true);
+                Timing();
+            }
+            if (eventPointNum == 13)
+            {
+                eventImage[4].SetActive(true);
+                Timing();
+            }
         }
     }
     void Timing()
