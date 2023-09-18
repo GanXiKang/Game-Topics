@@ -17,7 +17,7 @@ public class EventImageUIControl : MonoBehaviour
         {
             Timer += 1 * Time.deltaTime;
 
-            if (eventPointNum == 4)
+            if (eventPointNum == 2)
             {
                 eventImage[0].SetActive(true);
                 Timing();
