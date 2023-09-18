@@ -13,7 +13,7 @@ public class EventControl : MonoBehaviour
     public int forward, backward, stop, getCoin, lossCoin, getPorps;
     public bool eventAB;
 
-    int r,p;
+    int r;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -174,17 +174,7 @@ public class EventControl : MonoBehaviour
             }
             else if (getPorps == 2)
             {
-                p = Random.Range(1, 3);
-                switch (p)
-                {
-                    case 1:
-                        PropsControl.P1Props[1] += 1;
-                        break;
-
-                    case 2:
-                        PropsControl.P1Props[2] += 1;
-                        break;
-                }
+                PropsControl.P1Props[2] += 1;
             }
         }
         yield return new WaitForSeconds(0.5f);
@@ -233,17 +223,7 @@ public class EventControl : MonoBehaviour
             }
             else if (getPorps == 2)
             {
-                p = Random.Range(1, 3);
-                switch (p)
-                {
-                    case 1:
-                        PropsControl.P2Props[1] += 1;
-                        break;
-
-                    case 2:
-                        PropsControl.P2Props[2] += 1;
-                        break;
-                }
+                PropsControl.P1Props[2] += 1;
             }
         }
         yield return new WaitForSeconds(0.5f);
@@ -292,17 +272,7 @@ public class EventControl : MonoBehaviour
             }
             else if (getPorps == 2)
             {
-                p = Random.Range(1, 3);
-                switch (p)
-                {
-                    case 1:
-                        PropsControl.P3Props[1] += 1;
-                        break;
-
-                    case 2:
-                        PropsControl.P3Props[2] += 1;
-                        break;
-                }
+                PropsControl.P1Props[2] += 1;
             }
         }
         yield return new WaitForSeconds(0.5f);
@@ -351,17 +321,7 @@ public class EventControl : MonoBehaviour
             }
             else if (getPorps == 2)
             {
-                p = Random.Range(1, 3);
-                switch (p)
-                {
-                    case 1:
-                        PropsControl.P2Props[1] += 1;
-                        break;
-
-                    case 2:
-                        PropsControl.P2Props[2] += 1;
-                        break;
-                }
+                PropsControl.P1Props[2] += 1;
             }
         }
         yield return new WaitForSeconds(0.5f);
