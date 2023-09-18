@@ -356,6 +356,7 @@ public class EventControl : MonoBehaviour
 
     void EventA()
     {
+        print("A");
         EventImageUIControl.eventAB = 1;
         if (EventPoint == 6)
         {
@@ -378,6 +379,7 @@ public class EventControl : MonoBehaviour
     }
     void EventB()
     {
+        print("B");
         EventImageUIControl.eventAB = 2;
         if (EventPoint == 6)
         {
