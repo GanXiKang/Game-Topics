@@ -21,7 +21,7 @@ public class Menu_VolumeSetting : MonoBehaviour
 
         sliderBGM.value = VolumeBGM;
         quality.value = index_record;
-        fullScreen.isOn = isFullS_record;
+        fullScreen.isOn = Screen.fullScreen;
     }
     public void Volume_BGM()
     {
