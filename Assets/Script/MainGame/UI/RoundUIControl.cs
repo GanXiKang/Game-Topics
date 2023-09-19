@@ -189,6 +189,8 @@ public class RoundUIControl : MonoBehaviour
                         }
                     }
                     p[1].SetActive(true);
+                    p[2].SetActive(false);
+                    p[3].SetActive(false);
                     p[4].SetActive(false);
                     CoinTotal.text = CoinControl.P1CoinTotal.ToString();
                     break;
@@ -205,8 +207,10 @@ public class RoundUIControl : MonoBehaviour
                             animals[i].SetActive(false);
                         }
                     }
-                    p[2].SetActive(true);
                     p[1].SetActive(false);
+                    p[2].SetActive(true);
+                    p[3].SetActive(false);
+                    p[4].SetActive(false);
                     CoinTotal.text = CoinControl.P2CoinTotal.ToString();
                     break;
 
@@ -222,8 +226,10 @@ public class RoundUIControl : MonoBehaviour
                             animals[i].SetActive(false);
                         }
                     }
-                    p[3].SetActive(true);
+                    p[1].SetActive(false);
                     p[2].SetActive(false);
+                    p[3].SetActive(true);
+                    p[4].SetActive(false);
                     CoinTotal.text = CoinControl.P3CoinTotal.ToString();
                     break;
 
@@ -239,8 +245,10 @@ public class RoundUIControl : MonoBehaviour
                             animals[i].SetActive(false);
                         }
                     }
-                    p[4].SetActive(true);
+                    p[1].SetActive(false);
+                    p[2].SetActive(false);
                     p[3].SetActive(false);
+                    p[4].SetActive(true);
                     CoinTotal.text = CoinControl.P4CoinTotal.ToString();
                     break;
             }
