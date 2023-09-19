@@ -136,7 +136,7 @@ public class ChestColliderControl : MonoBehaviour
         PlayerMoveControl.isMove = false;
         yield return new WaitForSeconds(1f);
         OpenBoxJudge();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
     }
