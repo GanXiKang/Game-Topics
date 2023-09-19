@@ -21,7 +21,7 @@ public class CatAnimatorControl : MonoBehaviour
         if (isHappy)
         {
             ani.SetBool("Happy", true);
-            isHappy = false;
+            StartCoroutine(Timing());
         }
         else 
         {
@@ -31,7 +31,7 @@ public class CatAnimatorControl : MonoBehaviour
         if (isSad)
         {
             ani.SetBool("Sad", true);
-            isSad = false;
+            StartCoroutine(Timing());
         }
         else
         {
@@ -50,11 +50,18 @@ public class CatAnimatorControl : MonoBehaviour
         if (isBye)
         {
             ani.SetBool("Bye", true);
-            isBye = false;
+            StartCoroutine(Timing());
         }
         else
         {
             ani.SetBool("Bye", false);
         }
+    }
+    IEnumerator Timing()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isHappy = false;
+        isSad = false;
+        isBye = false;
     }
 }
