@@ -137,13 +137,11 @@ public class ChestColliderControl : MonoBehaviour
         if (!isOpened)
         {
             PlayerMoveControl.isMove = false;
+            yield return new WaitForSeconds(1f);
+            OpenBoxJudge();
+            yield return new WaitForSeconds(1f);
         }
         yield return new WaitForSeconds(1f);
-        if (!isOpened)
-        {
-            OpenBoxJudge();
-        }
-        yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
         isOpened = true;
