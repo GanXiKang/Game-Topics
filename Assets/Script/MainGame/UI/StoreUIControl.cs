@@ -541,6 +541,7 @@ public class StoreUIControl : MonoBehaviour
         BGM.PlayOneShot(cancel);
         StoreUI[2].SetActive(true);
         StoreUI[3].SetActive(false);
+        buyQuantity = 1;
     }
     public void Button_Buy()
     {
@@ -687,6 +688,7 @@ public class StoreUIControl : MonoBehaviour
         }
         haveBuy = true;
         CatAnimatorControl.isHappy = true;
+        buyQuantity = 1;
     }
     IEnumerator ChangeCamera()
     {
