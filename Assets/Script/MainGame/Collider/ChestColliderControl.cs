@@ -10,6 +10,7 @@ public class ChestColliderControl : MonoBehaviour
 
     public static int isOpen;
 
+    bool isOpened = false;
     void OpenBoxJudge()
     {
         isOpen = isOpenNumber;
@@ -23,7 +24,7 @@ public class ChestColliderControl : MonoBehaviour
                 if (DiceControl.P1_totalNum == boxPoint)
                 {
                     P1_EnterBox = false;
-                    AnimatorControl.isP1Move = false;
+                    AnimatorControl.isP3Move = false;
                     StartCoroutine(ChangeCamera());
                 }
             }
@@ -32,7 +33,7 @@ public class ChestColliderControl : MonoBehaviour
                 if (DiceControl.P2_totalNum == boxPoint)
                 {
                     P2_EnterBox = false;
-                    AnimatorControl.isP2Move = false;
+                    AnimatorControl.isP3Move = false;
                     StartCoroutine(ChangeCamera());
                 }
             }
@@ -133,12 +134,19 @@ public class ChestColliderControl : MonoBehaviour
     IEnumerator ChangeCamera()
     {
         yield return new WaitForSeconds(1f);
-        PlayerMoveControl.isMove = false;
+        if (!isOpened)
+        {
+            PlayerMoveControl.isMove = false;
+        }
         yield return new WaitForSeconds(1f);
-        OpenBoxJudge();
+        if (!isOpened)
+        {
+            OpenBoxJudge();
+        }
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+        isOpened = true;
     }
     IEnumerator Transposition()
     {
