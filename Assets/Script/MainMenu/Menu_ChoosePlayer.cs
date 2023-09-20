@@ -31,6 +31,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
+            if (whoPlay == 4)
+            {
+                whyP4 = 0;
+                isDestoryP4++;
+            }
+            if (whoPlay == 3)
+            {
+                whyP3 = 0;
+                isDestoryP3++;
+            }
             whoPlay--;
             Limit();
         }
