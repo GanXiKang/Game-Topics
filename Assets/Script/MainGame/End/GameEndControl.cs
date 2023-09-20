@@ -46,7 +46,7 @@ public class GameEndControl : MonoBehaviour
     }
     IEnumerator BackMainMenu()
     {
-        systemTest.text = "ÓÎ‘ò½YÊø£¡";
+        systemTest.text = "ß[‘ò½YÊø£¡";
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(8);
