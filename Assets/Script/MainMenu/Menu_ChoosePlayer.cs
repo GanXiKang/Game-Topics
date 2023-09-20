@@ -27,6 +27,14 @@ public class Menu_ChoosePlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             whoPlay++;
+            if (whoPlay == 4)
+            {
+                isDestoryP4 = 0;
+            }
+            if (whoPlay == 3)
+            {
+                isDestoryP3 = 0;
+            } 
             Limit();
         }
         if (Input.GetKeyDown(KeyCode.D))
