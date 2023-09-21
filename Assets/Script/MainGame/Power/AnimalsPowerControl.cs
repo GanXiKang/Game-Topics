@@ -15,6 +15,27 @@ public class AnimalsPowerControl : MonoBehaviour
 
     void Update()
     {
-        
+        if (isCowPower)
+        {
+            switch (ChangeCameraControl.changeCameraNum)
+            {
+                case 1:
+                    DiceControl.P1_totalNum += 3;
+                    break;
+
+                case 2:
+                    DiceControl.P2_totalNum += 3;
+                    break;
+
+                case 3:
+                    DiceControl.P3_totalNum += 3;
+                    break;
+
+                case 4:
+                    DiceControl.P4_totalNum += 3;
+                    break;
+            }
+            isCowPower = false;
+        }
     }
 }
