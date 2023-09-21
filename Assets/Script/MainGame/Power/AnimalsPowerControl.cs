@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class AnimalsPowerControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static bool isMousePower = false, isCowPower = false, isTIgerPower = false, isRabbitPower = false;
+    public static bool isDragonPower = false, isSnakePower = false, isHousePower = false, isSheepPower = false;
+    public static bool isMonkeyPower = false, isChickenPower = false, isDogPower = false, isPigPower = false;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
