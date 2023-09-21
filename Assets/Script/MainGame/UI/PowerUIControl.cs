@@ -32,22 +32,18 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 AnimalsPowerControl.isMousePower = true;
-                                print("Mouse");
                                 break;
 
                             case 2:
                                 AnimalsPowerControl.isCowPower = true;
-                                print("Cow");
                                 break;
 
                             case 3:
                                 AnimalsPowerControl.isTigerPower = true;
-                                print("Tiger");
                                 break;
 
                             case 4:
                                 AnimalsPowerControl.isRabbitPower = true;
-                                print("Rabbit");
                                 break;
 
                             case 5:
@@ -95,22 +91,18 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 AnimalsPowerControl.isMousePower = true;
-                                print("Mouse");
                                 break;
 
                             case 2:
                                 AnimalsPowerControl.isCowPower = true;
-                                print("Cow");
                                 break;
 
                             case 3:
                                 AnimalsPowerControl.isTigerPower = true;
-                                print("Tiger");
                                 break;
 
                             case 4:
                                 AnimalsPowerControl.isRabbitPower = true;
-                                print("Rabbit");
                                 break;
 
                             case 5:
@@ -158,22 +150,18 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 AnimalsPowerControl.isMousePower = true;
-                                print("Mouse");
                                 break;
 
                             case 2:
                                 AnimalsPowerControl.isCowPower = true;
-                                print("Cow");
                                 break;
 
                             case 3:
                                 AnimalsPowerControl.isTigerPower = true;
-                                print("Tiger");
                                 break;
 
                             case 4:
                                 AnimalsPowerControl.isRabbitPower = true;
-                                print("Rabbit");
                                 break;
 
                             case 5:
@@ -221,22 +209,18 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 AnimalsPowerControl.isMousePower = true;
-                                print("Mouse");
                                 break;
 
                             case 2:
                                 AnimalsPowerControl.isCowPower = true;
-                                print("Cow");
                                 break;
 
                             case 3:
                                 AnimalsPowerControl.isTigerPower = true;
-                                print("Tiger");
                                 break;
 
                             case 4:
                                 AnimalsPowerControl.isRabbitPower = true;
-                                print("Rabbit");
                                 break;
 
                             case 5:
