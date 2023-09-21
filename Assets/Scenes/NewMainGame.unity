@@ -8130,7 +8130,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 397210749}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414603054}
+        m_TargetAssemblyTypeName: PowerUIControl, Assembly-CSharp
+        m_MethodName: Power_Button
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &397210749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30300,6 +30312,8 @@ GameObject:
   - component: {fileID: 1414603050}
   - component: {fileID: 1414603051}
   - component: {fileID: 1414603052}
+  - component: {fileID: 1414603054}
+  - component: {fileID: 1414603053}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -30689,6 +30703,30 @@ MonoBehaviour:
   - {fileID: 857031521}
   - {fileID: 647467338}
   - {fileID: 2078760148}
+--- !u!114 &1414603053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414603034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdea6c9785403c34eb8dcc6044be1083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1414603054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414603034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d2fa04a578c224b9d3afb959bf2785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1414846722
 GameObject:
   m_ObjectHideFlags: 0
