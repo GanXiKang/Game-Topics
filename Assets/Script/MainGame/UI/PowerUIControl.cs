@@ -652,7 +652,7 @@ public class PowerUIControl : MonoBehaviour
     }
     void Initial()
     {
-        animalsPowerUseNum[1] = 2;
+        animalsPowerUseNum[1] = 0;
         animalsPowerUseNum[2] = 3;
         animalsPowerUseNum[3] = 2;
         animalsPowerUseNum[4] = 2;
