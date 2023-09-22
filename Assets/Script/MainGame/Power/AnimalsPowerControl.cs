@@ -35,6 +35,7 @@ public class AnimalsPowerControl : MonoBehaviour
                     DiceControl.P4_totalNum += 3;
                     break;
             }
+            PowerUIControl.animalsPowerUseNum[2]--;
             isCowPower = false;
         }
     }
