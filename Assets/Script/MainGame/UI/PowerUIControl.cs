@@ -281,12 +281,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 2:
                                 if (animalsPowerUseNum[2] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -295,12 +303,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 4:
                                 if (animalsPowerUseNum[4] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -309,12 +325,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 6:
                                 if (animalsPowerUseNum[6] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -323,12 +347,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 8:
                                 if (animalsPowerUseNum[8] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -337,12 +369,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 10:
                                 if (animalsPowerUseNum[10] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -351,12 +391,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 12:
                                 if (animalsPowerUseNum[12] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
                         }
@@ -376,12 +424,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 2:
                                 if (animalsPowerUseNum[2] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -390,12 +446,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 4:
                                 if (animalsPowerUseNum[4] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -404,12 +468,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 6:
                                 if (animalsPowerUseNum[6] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -418,12 +490,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 8:
                                 if (animalsPowerUseNum[8] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -432,12 +512,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 10:
                                 if (animalsPowerUseNum[10] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -446,12 +534,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 12:
                                 if (animalsPowerUseNum[12] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
                         }
@@ -471,12 +567,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 2:
                                 if (animalsPowerUseNum[2] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -485,12 +589,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 4:
                                 if (animalsPowerUseNum[4] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -499,12 +611,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 6:
                                 if (animalsPowerUseNum[6] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -513,12 +633,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 8:
                                 if (animalsPowerUseNum[8] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -527,12 +655,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 10:
                                 if (animalsPowerUseNum[10] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -541,12 +677,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 12:
                                 if (animalsPowerUseNum[12] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
                         }
@@ -566,12 +710,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 2:
                                 if (animalsPowerUseNum[2] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -580,12 +732,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 4:
                                 if (animalsPowerUseNum[4] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -594,12 +754,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 6:
                                 if (animalsPowerUseNum[6] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -608,12 +776,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 8:
                                 if (animalsPowerUseNum[8] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -622,12 +798,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 10:
                                 if (animalsPowerUseNum[10] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
 
@@ -636,12 +820,20 @@ public class PowerUIControl : MonoBehaviour
                                 {
                                     power.interactable = false;
                                 }
+                                else
+                                {
+                                    power.interactable = true;
+                                }
                                 break;
 
                             case 12:
                                 if (animalsPowerUseNum[12] == 0)
                                 {
                                     power.interactable = false;
+                                }
+                                else
+                                {
+                                    power.interactable = true;
                                 }
                                 break;
                         }
