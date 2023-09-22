@@ -8,9 +8,10 @@ public class PowerUIControl : MonoBehaviour
     public Button power;
     public Text powerUseNum;
 
+    public static int[] animalsPowerUseNum = new int[13];
     void Start()
     {
-        
+        Initial();
     }
 
 
@@ -263,5 +264,20 @@ public class PowerUIControl : MonoBehaviour
                 }
                 break;
         }
+    }
+    void Initial()
+    {
+        animalsPowerUseNum[1] = 2;
+        animalsPowerUseNum[2] = 3;
+        animalsPowerUseNum[3] = 2;
+        animalsPowerUseNum[4] = 2;
+        animalsPowerUseNum[5] = 2;
+        animalsPowerUseNum[6] = 2;
+        animalsPowerUseNum[7] = 1;
+        animalsPowerUseNum[8] = 3;
+        animalsPowerUseNum[9] = 2;
+        animalsPowerUseNum[10] = 1;
+        animalsPowerUseNum[11] = 2;
+        animalsPowerUseNum[12] = 2;
     }
 }
