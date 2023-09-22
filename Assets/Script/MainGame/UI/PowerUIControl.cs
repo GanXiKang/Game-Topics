@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PowerUIControl : MonoBehaviour
 {
+    public Button power;
+    public Text powerUseNum;
+
     void Start()
     {
         
