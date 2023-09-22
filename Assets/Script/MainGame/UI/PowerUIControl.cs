@@ -17,7 +17,7 @@ public class PowerUIControl : MonoBehaviour
 
     void Update()
     {
-        
+        ButtonDisable();
     }
 
     public void Power_Button()
@@ -258,6 +258,391 @@ public class PowerUIControl : MonoBehaviour
 
                             case 12:
                                 AnimalsPowerControl.isPigPower = true;
+                                break;
+                        }
+                    }
+                }
+                break;
+        }
+    }
+    void ButtonDisable()
+    {
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP1)
+                    {
+                        switch (i)
+                        {
+                            case 1:
+                                if (animalsPowerUseNum[1] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 2:
+                                if (animalsPowerUseNum[2] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 3:
+                                if (animalsPowerUseNum[3] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 4:
+                                if (animalsPowerUseNum[4] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 5:
+                                if (animalsPowerUseNum[5] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 6:
+                                if (animalsPowerUseNum[6] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 7:
+                                if (animalsPowerUseNum[7] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 8:
+                                if (animalsPowerUseNum[8] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 9:
+                                if (animalsPowerUseNum[9] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 10:
+                                if (animalsPowerUseNum[10] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 11:
+                                if (animalsPowerUseNum[11] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 12:
+                                if (animalsPowerUseNum[12] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+                        }
+                    }
+                }
+                break;
+
+            case 2:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP2)
+                    {
+                        switch (i)
+                        {
+                            case 1:
+                                if (animalsPowerUseNum[1] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 2:
+                                if (animalsPowerUseNum[2] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 3:
+                                if (animalsPowerUseNum[3] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 4:
+                                if (animalsPowerUseNum[4] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 5:
+                                if (animalsPowerUseNum[5] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 6:
+                                if (animalsPowerUseNum[6] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 7:
+                                if (animalsPowerUseNum[7] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 8:
+                                if (animalsPowerUseNum[8] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 9:
+                                if (animalsPowerUseNum[9] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 10:
+                                if (animalsPowerUseNum[10] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 11:
+                                if (animalsPowerUseNum[11] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 12:
+                                if (animalsPowerUseNum[12] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+                        }
+                    }
+                }
+                break;
+
+            case 3:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP3)
+                    {
+                        switch (i)
+                        {
+                            case 1:
+                                if (animalsPowerUseNum[1] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 2:
+                                if (animalsPowerUseNum[2] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 3:
+                                if (animalsPowerUseNum[3] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 4:
+                                if (animalsPowerUseNum[4] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 5:
+                                if (animalsPowerUseNum[5] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 6:
+                                if (animalsPowerUseNum[6] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 7:
+                                if (animalsPowerUseNum[7] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 8:
+                                if (animalsPowerUseNum[8] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 9:
+                                if (animalsPowerUseNum[9] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 10:
+                                if (animalsPowerUseNum[10] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 11:
+                                if (animalsPowerUseNum[11] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 12:
+                                if (animalsPowerUseNum[12] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+                        }
+                    }
+                }
+                break;
+
+            case 4:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP4)
+                    {
+                        switch (i)
+                        {
+                            case 1:
+                                if (animalsPowerUseNum[1] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 2:
+                                if (animalsPowerUseNum[2] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 3:
+                                if (animalsPowerUseNum[3] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 4:
+                                if (animalsPowerUseNum[4] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 5:
+                                if (animalsPowerUseNum[5] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 6:
+                                if (animalsPowerUseNum[6] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 7:
+                                if (animalsPowerUseNum[7] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 8:
+                                if (animalsPowerUseNum[8] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 9:
+                                if (animalsPowerUseNum[9] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 10:
+                                if (animalsPowerUseNum[10] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 11:
+                                if (animalsPowerUseNum[11] == 0)
+                                {
+                                    power.interactable = false;
+                                }
+                                break;
+
+                            case 12:
+                                if (animalsPowerUseNum[12] == 0)
+                                {
+                                    power.interactable = false;
+                                }
                                 break;
                         }
                     }
