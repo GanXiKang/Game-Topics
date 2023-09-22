@@ -432,7 +432,8 @@ public class PowerUIControl : MonoBehaviour
                         switch (i)
                         {
                             case 1:
-                                if (animalsPowerUseNum[1] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -443,7 +444,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 2:
-                                if (animalsPowerUseNum[2] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -454,7 +456,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 3:
-                                if (animalsPowerUseNum[3] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -465,7 +468,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 4:
-                                if (animalsPowerUseNum[4] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -476,7 +480,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 5:
-                                if (animalsPowerUseNum[5] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -487,7 +492,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 6:
-                                if (animalsPowerUseNum[6] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -498,7 +504,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 7:
-                                if (animalsPowerUseNum[7] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -509,7 +516,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 8:
-                                if (animalsPowerUseNum[8] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -520,7 +528,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 9:
-                                if (animalsPowerUseNum[9] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -531,7 +540,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 10:
-                                if (animalsPowerUseNum[10] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -542,7 +552,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 11:
-                                if (animalsPowerUseNum[11] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -553,7 +564,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 12:
-                                if (animalsPowerUseNum[12] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -575,7 +587,8 @@ public class PowerUIControl : MonoBehaviour
                         switch (i)
                         {
                             case 1:
-                                if (animalsPowerUseNum[1] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -586,7 +599,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 2:
-                                if (animalsPowerUseNum[2] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -597,7 +611,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 3:
-                                if (animalsPowerUseNum[3] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -608,7 +623,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 4:
-                                if (animalsPowerUseNum[4] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -619,7 +635,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 5:
-                                if (animalsPowerUseNum[5] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -630,7 +647,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 6:
-                                if (animalsPowerUseNum[6] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -641,7 +659,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 7:
-                                if (animalsPowerUseNum[7] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -652,7 +671,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 8:
-                                if (animalsPowerUseNum[8] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -663,7 +683,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 9:
-                                if (animalsPowerUseNum[9] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -674,7 +695,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 10:
-                                if (animalsPowerUseNum[10] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -685,7 +707,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 11:
-                                if (animalsPowerUseNum[11] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -696,7 +719,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 12:
-                                if (animalsPowerUseNum[12] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -718,7 +742,8 @@ public class PowerUIControl : MonoBehaviour
                         switch (i)
                         {
                             case 1:
-                                if (animalsPowerUseNum[1] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -729,7 +754,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 2:
-                                if (animalsPowerUseNum[2] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -740,7 +766,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 3:
-                                if (animalsPowerUseNum[3] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -751,7 +778,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 4:
-                                if (animalsPowerUseNum[4] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -762,7 +790,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 5:
-                                if (animalsPowerUseNum[5] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -773,7 +802,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 6:
-                                if (animalsPowerUseNum[6] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -784,7 +814,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 7:
-                                if (animalsPowerUseNum[7] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -795,7 +826,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 8:
-                                if (animalsPowerUseNum[8] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -806,7 +838,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 9:
-                                if (animalsPowerUseNum[9] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -817,7 +850,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 10:
-                                if (animalsPowerUseNum[10] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -828,7 +862,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 11:
-                                if (animalsPowerUseNum[11] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
@@ -839,7 +874,8 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 12:
-                                if (animalsPowerUseNum[12] == 0)
+                                powerUseNum.text = animalsPowerUseNum[i].ToString();
+                                if (animalsPowerUseNum[i] == 0)
                                 {
                                     power.interactable = false;
                                 }
