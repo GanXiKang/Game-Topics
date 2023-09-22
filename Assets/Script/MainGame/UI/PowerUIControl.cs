@@ -22,6 +22,7 @@ public class PowerUIControl : MonoBehaviour
 
     public void Power_Button()
     {
+        DiceUIControl.isDiceUI = false;
         FindWhoUsePower();
     }
     void FindWhoUsePower()
