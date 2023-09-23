@@ -115,7 +115,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator MousePower()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
