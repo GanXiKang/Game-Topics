@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PropsControl : MonoBehaviour
 {
+    public static string[] propsName = new string[7];
     public static int[] P1Props = new int[7];
     public static int[] P2Props = new int[7];
     public static int[] P3Props = new int[7];
@@ -20,7 +21,6 @@ public class PropsControl : MonoBehaviour
     bool[] isHavePropsP2 = new bool[7];
     bool[] isHavePropsP3 = new bool[7];
     bool[] isHavePropsP4 = new bool[7];
-    string[] propsName = new string[7];
     Vector3 transposition;
     GameObject P1, P2, P3, P4;
 
