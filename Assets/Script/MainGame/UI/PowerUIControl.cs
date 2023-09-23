@@ -9,6 +9,8 @@ public class PowerUIControl : MonoBehaviour
     public Text powerUseNum;
 
     public static int[] animalsPowerUseNum = new int[13];
+    public static bool isMouseCanUsePower = false;
+
     void Start()
     {
         Initial();
@@ -279,7 +281,7 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0)
+                                if (animalsPowerUseNum[i] == 0 && isMouseCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -434,7 +436,7 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0)
+                                if (animalsPowerUseNum[i] == 0 && isMouseCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -589,7 +591,7 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0)
+                                if (animalsPowerUseNum[i] == 0 && isMouseCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -744,7 +746,7 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0)
+                                if (animalsPowerUseNum[i] == 0 && isMouseCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
