@@ -19,6 +19,7 @@ public class ChestColliderControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
+            PowerUIControl.isMouseCanUsePower = true;
             if (other.tag == "P1" && P1_EnterBox)
             {
                 if (DiceControl.P1_totalNum == boxPoint)

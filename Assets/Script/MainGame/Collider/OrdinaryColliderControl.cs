@@ -11,6 +11,7 @@ public class OrdinaryColliderControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
+            PowerUIControl.isMouseCanUsePower = false;
             if (other.tag == "P1" && P1_Enter)
             {
                 if (DiceControl.P1_totalNum == pointNum)
