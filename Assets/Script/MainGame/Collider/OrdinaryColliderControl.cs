@@ -18,6 +18,10 @@ public class OrdinaryColliderControl : MonoBehaviour
                     P1_Enter = false;
                     AnimatorControl.isP1Move = false;
                     StartCoroutine(ChangeCamera());
+                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
                 }
             }
             else if (other.tag == "P2" && P2_Enter)
@@ -27,6 +31,10 @@ public class OrdinaryColliderControl : MonoBehaviour
                     P2_Enter = false;
                     AnimatorControl.isP2Move = false;
                     StartCoroutine(ChangeCamera());
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
                 }
             }
             else if (other.tag == "P3" && P3_Enter)
@@ -36,6 +44,10 @@ public class OrdinaryColliderControl : MonoBehaviour
                     P3_Enter = false;
                     AnimatorControl.isP3Move = false;
                     StartCoroutine(ChangeCamera());
+                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
                 }
             }
             else if (other.tag == "P4" && P4_Enter)
@@ -45,6 +57,10 @@ public class OrdinaryColliderControl : MonoBehaviour
                     P4_Enter = false;
                     AnimatorControl.isP4Move = false;
                     StartCoroutine(ChangeCamera());
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
                 }
             }
         }
@@ -75,11 +91,6 @@ public class OrdinaryColliderControl : MonoBehaviour
     IEnumerator ChangeCamera()
     {
         yield return new WaitForSeconds(1f);
-        if (Menu_ChoosePlayer.whyP1 == 1 || Menu_ChoosePlayer.whyP2 == 1 || Menu_ChoosePlayer.whyP3 == 1 || Menu_ChoosePlayer.whyP4 == 1)
-        {
-            PowerUIControl.isMouseCanUsePower = true;
-            print(PowerUIControl.isMouseCanUsePower);
-        }
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
     }

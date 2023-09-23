@@ -26,6 +26,11 @@ public class ChestColliderControl : MonoBehaviour
                     P1_EnterBox = false;
                     AnimatorControl.isP3Move = false;
                     StartCoroutine(ChangeCamera());
+                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                        print(PowerUIControl.isMouseCanUsePower);
+                    }
                 }
             }
             else if (other.tag == "P2" && P2_EnterBox)
@@ -35,6 +40,10 @@ public class ChestColliderControl : MonoBehaviour
                     P2_EnterBox = false;
                     AnimatorControl.isP3Move = false;
                     StartCoroutine(ChangeCamera());
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                    }
                 }
             }
             else if (other.tag == "P3" && P3_EnterBox)
@@ -44,6 +53,10 @@ public class ChestColliderControl : MonoBehaviour
                     P3_EnterBox = false;
                     AnimatorControl.isP3Move = false;
                     StartCoroutine(ChangeCamera());
+                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                    }
                 }
             }
             else if (other.tag == "P4" && P4_EnterBox)
@@ -53,6 +66,10 @@ public class ChestColliderControl : MonoBehaviour
                     P4_EnterBox = false;
                     AnimatorControl.isP4Move = false;
                     StartCoroutine(ChangeCamera());
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                    }
                 }
             }
         }
@@ -140,11 +157,6 @@ public class ChestColliderControl : MonoBehaviour
             yield return new WaitForSeconds(1f);
             OpenBoxJudge();
             yield return new WaitForSeconds(1f);
-        }
-        if (Menu_ChoosePlayer.whyP1 == 1 || Menu_ChoosePlayer.whyP2 == 1 || Menu_ChoosePlayer.whyP3 == 1 || Menu_ChoosePlayer.whyP4 == 1)
-        {
-            PowerUIControl.isMouseCanUsePower = true;
-            print(PowerUIControl.isMouseCanUsePower);
         }
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;

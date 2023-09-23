@@ -44,6 +44,10 @@ public class EventControl : MonoBehaviour
                                 break;
                         }
                     }
+                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
                 }
             }
             else if (other.tag == "P2" && P2_EnterEvent)
@@ -70,6 +74,10 @@ public class EventControl : MonoBehaviour
                                 StartCoroutine(P2_EventHappened());
                                 break;
                         }
+                    }
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
                     }
                 }
             }
@@ -99,6 +107,10 @@ public class EventControl : MonoBehaviour
                         }
                     }
                 }
+                if (Menu_ChoosePlayer.whyP3 == 1)
+                {
+                    PowerUIControl.isMouseCanUsePower = false;
+                }
             }
             else if (other.tag == "P4" && P4_EnterEvent)
             {
@@ -125,6 +137,10 @@ public class EventControl : MonoBehaviour
                                 break;
                         }
                     }
+                }
+                if (Menu_ChoosePlayer.whyP4 == 1)
+                {
+                    PowerUIControl.isMouseCanUsePower = false;
                 }
             }
         }

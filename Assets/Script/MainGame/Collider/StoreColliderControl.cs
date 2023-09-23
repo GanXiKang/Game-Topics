@@ -22,6 +22,10 @@ public class StoreColliderControl : MonoBehaviour
                     P1_EnterStore = false;
                     AnimatorControl.isP1Move = false;
                     StartCoroutine(LookTarget());
+                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower =true;
+                    }
                 }
             }
             else if (other.tag == "P2" && P2_EnterStore)
@@ -32,6 +36,10 @@ public class StoreColliderControl : MonoBehaviour
                     P2_EnterStore = false;
                     AnimatorControl.isP2Move = false;
                     StartCoroutine(LookTarget());
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                    }
                 }
             }
             else if (other.tag == "P3" && P3_EnterStore)
@@ -42,6 +50,10 @@ public class StoreColliderControl : MonoBehaviour
                     P3_EnterStore = false;
                     AnimatorControl.isP3Move = false;
                     StartCoroutine(LookTarget());
+                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                    }
                 }
             }
             else if (other.tag == "P4" && P4_EnterStore)
@@ -52,6 +64,10 @@ public class StoreColliderControl : MonoBehaviour
                     P4_EnterStore = false;
                     AnimatorControl.isP4Move = false;
                     StartCoroutine(LookTarget());
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                    }
                 }
             }
         }

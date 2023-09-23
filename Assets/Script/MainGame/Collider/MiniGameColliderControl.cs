@@ -22,6 +22,10 @@ public class MiniGameColliderControl : MonoBehaviour
                     p = 1;
                     AnimatorControl.isP1Move = false;
                     StartCoroutine(StartMiniGame());
+                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
                 }
             }
             else if (other.tag == "P2" && P2_playGame)
@@ -31,6 +35,10 @@ public class MiniGameColliderControl : MonoBehaviour
                     p = 2;
                     AnimatorControl.isP2Move = false;
                     StartCoroutine(StartMiniGame());
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
                 }
             }
             else if (other.tag == "P3" && P3_playGame)
@@ -41,6 +49,10 @@ public class MiniGameColliderControl : MonoBehaviour
                     AnimatorControl.isP3Move = false;
                     StartCoroutine(StartMiniGame());
                 }
+                if (Menu_ChoosePlayer.whyP3 == 1)
+                {
+                    PowerUIControl.isMouseCanUsePower = false;
+                }
             }
             else if (other.tag == "P4" && P4_playGame)
             {
@@ -49,6 +61,10 @@ public class MiniGameColliderControl : MonoBehaviour
                     p = 4;
                     AnimatorControl.isP4Move = false;
                     StartCoroutine(StartMiniGame());
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
                 }
             }
         }
