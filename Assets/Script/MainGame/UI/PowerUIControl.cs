@@ -16,7 +16,6 @@ public class PowerUIControl : MonoBehaviour
         Initial();
     }
 
-
     void Update()
     {
         ButtonDisable();

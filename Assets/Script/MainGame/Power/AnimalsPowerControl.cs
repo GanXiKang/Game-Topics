@@ -12,11 +12,6 @@ public class AnimalsPowerControl : MonoBehaviour
 
     public Text systemText;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (isCowPower)
