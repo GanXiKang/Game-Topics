@@ -48,6 +48,10 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
+        if (DiceControl.P1_totalNum < 1)
+        {
+            agent.SetDestination(p[1].transform.position);
+        }
         if (DiceControl.P1_totalNum > 60)
         {
             agent.SetDestination(p[60].transform.position);
@@ -63,6 +67,10 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
+        if (DiceControl.P2_totalNum < 1)
+        {
+            agent.SetDestination(p[1].transform.position);
+        }
         if (DiceControl.P2_totalNum > 60)
         {
             agent.SetDestination(p[60].transform.position);
@@ -78,6 +86,10 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
+        if (DiceControl.P3_totalNum < 1)
+        {
+            agent.SetDestination(p[1].transform.position);
+        }
         if (DiceControl.P3_totalNum > 60)
         {
             agent.SetDestination(p[60].transform.position);
@@ -93,6 +105,10 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
 
+        if (DiceControl.P4_totalNum < 1)
+        {
+            agent.SetDestination(p[1].transform.position);
+        }
         if (DiceControl.P4_totalNum > 60)
         {
             agent.SetDestination(p[60].transform.position);
