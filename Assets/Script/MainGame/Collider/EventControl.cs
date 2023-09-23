@@ -19,7 +19,6 @@ public class EventControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
-            PowerUIControl.isMouseCanUsePower = false;
             if (other.tag == "P1" && P1_EnterEvent)
             {
                 if (DiceControl.P1_totalNum == EventPoint)

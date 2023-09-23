@@ -14,7 +14,6 @@ public class StoreColliderControl : MonoBehaviour
     {
         if (!PropsControl.isTrans)
         {
-            PowerUIControl.isMouseCanUsePower = true;
             if (other.tag == "P1" && P1_EnterStore)
             {
                 if (DiceControl.P1_totalNum == pointNum)

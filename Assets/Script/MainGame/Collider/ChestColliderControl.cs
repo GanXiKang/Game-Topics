@@ -17,8 +17,6 @@ public class ChestColliderControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        PowerUIControl.isMouseCanUsePower = true;
-        print(PowerUIControl.isMouseCanUsePower);
         if (!PropsControl.isTrans)
         {
             if (other.tag == "P1" && P1_EnterBox)
@@ -142,6 +140,11 @@ public class ChestColliderControl : MonoBehaviour
             yield return new WaitForSeconds(1f);
             OpenBoxJudge();
             yield return new WaitForSeconds(1f);
+        }
+        if (Menu_ChoosePlayer.whyP1 == 1 || Menu_ChoosePlayer.whyP2 == 1 || Menu_ChoosePlayer.whyP3 == 1 || Menu_ChoosePlayer.whyP4 == 1)
+        {
+            PowerUIControl.isMouseCanUsePower = true;
+            print(PowerUIControl.isMouseCanUsePower);
         }
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
