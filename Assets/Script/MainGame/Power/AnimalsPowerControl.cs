@@ -8,6 +8,7 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool isMousePower = false, isCowPower = false, isTigerPower = false, isRabbitPower = false;
     public static bool isDragonPower = false, isSnakePower = false, isHorsePower = false, isSheepPower = false;
     public static bool isMonkeyPower = false, isChickenPower = false, isDogPower = false, isPigPower = false;
+    public static int mouseIsThisPoint;
 
     public Text systemText;
 
@@ -18,6 +19,32 @@ public class AnimalsPowerControl : MonoBehaviour
 
     void Update()
     {
+        if (isCowPower)
+        {
+            systemText.text = "老鼠發動技能！";
+            SystemTestTextControl.isTimer = true;
+            switch (ChangeCameraControl.changeCameraNum)
+            {
+                case 1:
+                    
+                    break;
+
+                case 2:
+                    
+                    break;
+
+                case 3:
+                    
+                    break;
+
+                case 4:
+                    
+                    break;
+            }
+            PowerUIControl.animalsPowerUseNum[1]--;
+            isMousePower = false;
+        }
+
         if (isCowPower)
         {
             systemText.text = "牛發動技能！";
@@ -42,6 +69,40 @@ public class AnimalsPowerControl : MonoBehaviour
             }
             PowerUIControl.animalsPowerUseNum[2]--;
             isCowPower = false;
+        }
+
+        if (isTigerPower)
+        {
+            systemText.text = "老虎發動技能！";
+            SystemTestTextControl.isTimer = true;
+            switch (ChangeCameraControl.changeCameraNum)
+            {
+                case 1:
+                    DiceControl.P2_totalNum -= 2;
+                    DiceControl.P3_totalNum -= 2;
+                    DiceControl.P4_totalNum -= 2;
+                    break;
+
+                case 2:
+                    DiceControl.P1_totalNum -= 2;
+                    DiceControl.P3_totalNum -= 2;
+                    DiceControl.P4_totalNum -= 2;
+                    break;
+
+                case 3:
+                    DiceControl.P1_totalNum -= 2;
+                    DiceControl.P2_totalNum -= 2;
+                    DiceControl.P4_totalNum -= 2;
+                    break;
+
+                case 4:
+                    DiceControl.P1_totalNum -= 2;
+                    DiceControl.P2_totalNum -= 2;
+                    DiceControl.P3_totalNum -= 2;
+                    break;
+            }
+            PowerUIControl.animalsPowerUseNum[3]--;
+            isTigerPower = false;
         }
 
         if (isRabbitPower)
