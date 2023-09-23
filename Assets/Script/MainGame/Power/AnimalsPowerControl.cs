@@ -212,7 +212,6 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
-        print(ChangeCameraControl.changeCameraNum);
         DiceUIControl.isDiceUI = true;
     }
 }
