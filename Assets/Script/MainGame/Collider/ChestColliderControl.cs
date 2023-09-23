@@ -151,9 +151,9 @@ public class ChestColliderControl : MonoBehaviour
     IEnumerator ChangeCamera()
     {
         yield return new WaitForSeconds(1f);
+        PlayerMoveControl.isMove = false;
         if (!isOpened)
         {
-            PlayerMoveControl.isMove = false;
             yield return new WaitForSeconds(1f);
             OpenBoxJudge();
             yield return new WaitForSeconds(1f);
