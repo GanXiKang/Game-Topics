@@ -20,52 +20,7 @@ public class AnimalsPowerControl : MonoBehaviour
         {
             systemText.text = "老鼠發動技能！";
             SystemTestTextControl.isTimer = true;
-            switch (ChangeCameraControl.changeCameraNum)
-            {
-                case 1:
-                    if (mouseIsThisPoint == 1)
-                    {
-                        r = Random.Range(5, 16);
-                    }
-                    else 
-                    {
-
-                    }
-                    break;
-
-                case 2:
-                    if (mouseIsThisPoint == 1)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
-                    break;
-
-                case 3:
-                    if (mouseIsThisPoint == 1)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
-                    break;
-
-                case 4:
-                    if (mouseIsThisPoint == 1)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
-                    break;
-            }
+            StartCoroutine(MousePower());
             PowerUIControl.animalsPowerUseNum[1]--;
             isMousePower = false;
         }
@@ -155,6 +110,59 @@ public class AnimalsPowerControl : MonoBehaviour
             }
             PowerUIControl.animalsPowerUseNum[4]--;
             isRabbitPower = false;
+        }
+    }
+
+    IEnumerator MousePower()
+    {
+        yield return new WaitForSeconds(2f);
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                if (mouseIsThisPoint == 1)
+                {
+                    r = Random.Range(5, 16);
+                    systemText.text = "老鼠尋找到" + r + "錢！";
+                    SystemTestTextControl.isTimer = true;
+                }
+                else
+                {
+
+                }
+                break;
+
+            case 2:
+                if (mouseIsThisPoint == 1)
+                {
+
+                }
+                else
+                {
+
+                }
+                break;
+
+            case 3:
+                if (mouseIsThisPoint == 1)
+                {
+
+                }
+                else
+                {
+
+                }
+                break;
+
+            case 4:
+                if (mouseIsThisPoint == 1)
+                {
+
+                }
+                else
+                {
+
+                }
+                break;
         }
     }
 }
