@@ -29,7 +29,6 @@ public class ChestColliderControl : MonoBehaviour
                     if (Menu_ChoosePlayer.whyP1 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
-                        print(PowerUIControl.isMouseCanUsePower);
                     }
                 }
             }
