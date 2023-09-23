@@ -281,7 +281,7 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 && !isMouseCanUsePower)
+                                if (animalsPowerUseNum[i] == 0 || !isMouseCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -436,7 +436,7 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 && !isMouseCanUsePower)
+                                if (animalsPowerUseNum[i] == 0 || !isMouseCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -591,7 +591,7 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 && !isMouseCanUsePower)
+                                if (animalsPowerUseNum[i] == 0 || !isMouseCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -746,7 +746,7 @@ public class PowerUIControl : MonoBehaviour
                         {
                             case 1:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 && !isMouseCanUsePower)
+                                if (animalsPowerUseNum[i] == 0 || !isMouseCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
