@@ -12,6 +12,8 @@ public class AnimalsPowerControl : MonoBehaviour
 
     public Text systemText;
 
+    int r, p;
+
     void Update()
     {
         if (isCowPower)
@@ -21,19 +23,47 @@ public class AnimalsPowerControl : MonoBehaviour
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
-                    
+                    if (mouseIsThisPoint == 1)
+                    {
+                        r = Random.Range(5, 16);
+                    }
+                    else 
+                    {
+
+                    }
                     break;
 
                 case 2:
-                    
+                    if (mouseIsThisPoint == 1)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
                     break;
 
                 case 3:
-                    
+                    if (mouseIsThisPoint == 1)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
                     break;
 
                 case 4:
-                    
+                    if (mouseIsThisPoint == 1)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
                     break;
             }
             PowerUIControl.animalsPowerUseNum[1]--;
