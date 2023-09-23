@@ -211,7 +211,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
         }
         yield return new WaitForSeconds(2f);
-        ChangeCameraControl.changeCameraNum++;
+        ChangeCameraControl.changeCameraNum += 1;
         DiceUIControl.isDiceScene = true;
     }
 }
