@@ -16,7 +16,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     void Update()
     {
-        if (isCowPower)
+        if (isMousePower)
         {
             systemText.text = "¿œ Û∞lÑ”ººƒ‹£°";
             SystemTestTextControl.isTimer = true;
