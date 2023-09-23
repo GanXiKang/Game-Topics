@@ -9,9 +9,10 @@ public class OrdinaryColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        PowerUIControl.isMouseCanUsePower = false;
+        print(PowerUIControl.isMouseCanUsePower);
         if (!PropsControl.isTrans)
         {
-            PowerUIControl.isMouseCanUsePower = false;
             if (other.tag == "P1" && P1_Enter)
             {
                 if (DiceControl.P1_totalNum == pointNum)
