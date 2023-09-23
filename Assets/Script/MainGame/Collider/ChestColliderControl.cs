@@ -29,6 +29,7 @@ public class ChestColliderControl : MonoBehaviour
                     if (Menu_ChoosePlayer.whyP1 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 1;
                     }
                 }
             }
@@ -42,6 +43,7 @@ public class ChestColliderControl : MonoBehaviour
                     if (Menu_ChoosePlayer.whyP2 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 1;
                     }
                 }
             }
@@ -55,6 +57,7 @@ public class ChestColliderControl : MonoBehaviour
                     if (Menu_ChoosePlayer.whyP3 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 1;
                     }
                 }
             }
@@ -68,6 +71,7 @@ public class ChestColliderControl : MonoBehaviour
                     if (Menu_ChoosePlayer.whyP4 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 1;
                     }
                 }
             }

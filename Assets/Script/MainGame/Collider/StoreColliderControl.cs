@@ -24,7 +24,8 @@ public class StoreColliderControl : MonoBehaviour
                     StartCoroutine(LookTarget());
                     if (Menu_ChoosePlayer.whyP1 == 1)
                     {
-                        PowerUIControl.isMouseCanUsePower =true;
+                        PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 2;
                     }
                 }
             }
@@ -39,6 +40,7 @@ public class StoreColliderControl : MonoBehaviour
                     if (Menu_ChoosePlayer.whyP2 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 2;
                     }
                 }
             }
@@ -53,6 +55,7 @@ public class StoreColliderControl : MonoBehaviour
                     if (Menu_ChoosePlayer.whyP3 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 2;
                     }
                 }
             }
@@ -67,6 +70,7 @@ public class StoreColliderControl : MonoBehaviour
                     if (Menu_ChoosePlayer.whyP4 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 2;
                     }
                 }
             }
