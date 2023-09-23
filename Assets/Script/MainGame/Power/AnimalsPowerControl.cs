@@ -122,47 +122,96 @@ public class AnimalsPowerControl : MonoBehaviour
                 if (mouseIsThisPoint == 1)
                 {
                     r = Random.Range(5, 16);
-                    systemText.text = "老鼠尋找到" + r + "錢！";
+                    CoinControl.P1CoinTotal += r;
+                    systemText.text = "尋找到" + r + "錢！";
                     SystemTestTextControl.isTimer = true;
                 }
                 else
                 {
-
+                    p = Random.Range(0, 7);
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i == p)
+                        {
+                            PropsControl.P1Props[i] += 1;
+                        }
+                    }
+                    systemText.text = "偷走" + PropsControl.propsName[p] + "道具！";
+                    SystemTestTextControl.isTimer = true;
                 }
                 break;
 
             case 2:
                 if (mouseIsThisPoint == 1)
                 {
-
+                    r = Random.Range(5, 16);
+                    CoinControl.P2CoinTotal += r;
+                    systemText.text = "老鼠尋找到" + r + "錢！";
+                    SystemTestTextControl.isTimer = true;
                 }
                 else
                 {
-
+                    p = Random.Range(0, 7);
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i == p)
+                        {
+                            PropsControl.P2Props[i] += 1;
+                        }
+                    }
+                    systemText.text = "偷走" + PropsControl.propsName[p] + "道具！";
+                    SystemTestTextControl.isTimer = true;
                 }
                 break;
 
             case 3:
                 if (mouseIsThisPoint == 1)
                 {
-
+                    r = Random.Range(5, 16);
+                    CoinControl.P3CoinTotal += r;
+                    systemText.text = "老鼠尋找到" + r + "錢！";
+                    SystemTestTextControl.isTimer = true;
                 }
                 else
                 {
-
+                    p = Random.Range(0, 7);
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i == p)
+                        {
+                            PropsControl.P3Props[i] += 1;
+                        }
+                    }
+                    systemText.text = "偷走" + PropsControl.propsName[p] + "道具！";
+                    SystemTestTextControl.isTimer = true;
                 }
                 break;
 
             case 4:
                 if (mouseIsThisPoint == 1)
                 {
-
+                    r = Random.Range(5, 16);
+                    CoinControl.P4CoinTotal += r;
+                    systemText.text = "老鼠尋找到" + r + "錢！";
+                    SystemTestTextControl.isTimer = true;
                 }
                 else
                 {
-
+                    p = Random.Range(0, 7);
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (i == p)
+                        {
+                            PropsControl.P4Props[i] += 1;
+                        }
+                    }
+                    systemText.text = "偷走" + PropsControl.propsName[p] + "道具！";
+                    SystemTestTextControl.isTimer = true;
                 }
                 break;
         }
+        yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceScene = true;
     }
 }
