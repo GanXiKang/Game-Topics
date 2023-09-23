@@ -18,11 +18,7 @@ public class AnimalsPowerControl : MonoBehaviour
     {
         if (isMousePower)
         {
-            systemText.text = "老鼠發動技能！";
-            SystemTestTextControl.isTimer = true;
-            StartCoroutine(MousePower());
-            PowerUIControl.animalsPowerUseNum[1]--;
-            isMousePower = false;
+            StartCoroutine(MousePower());  
         }
 
         if (isCowPower)
@@ -115,6 +111,10 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator MousePower()
     {
+        systemText.text = "老鼠發動技能！";
+        SystemTestTextControl.isTimer = true;
+        PowerUIControl.animalsPowerUseNum[1]--;
+        isMousePower = false;
         yield return new WaitForSeconds(1f);
         switch (ChangeCameraControl.changeCameraNum)
         {
