@@ -24,7 +24,7 @@ public class ChestColliderControl : MonoBehaviour
                 if (DiceControl.P1_totalNum == boxPoint)
                 {
                     P1_EnterBox = false;
-                    AnimatorControl.isP3Move = false;
+                    AnimatorControl.isP1Move = false;
                     StartCoroutine(ChangeCamera());
                     if (Menu_ChoosePlayer.whyP1 == 1)
                     {
@@ -38,7 +38,7 @@ public class ChestColliderControl : MonoBehaviour
                 if (DiceControl.P2_totalNum == boxPoint)
                 {
                     P2_EnterBox = false;
-                    AnimatorControl.isP3Move = false;
+                    AnimatorControl.isP2Move = false;
                     StartCoroutine(ChangeCamera());
                     if (Menu_ChoosePlayer.whyP2 == 1)
                     {
@@ -154,9 +154,9 @@ public class ChestColliderControl : MonoBehaviour
     IEnumerator ChangeCamera()
     {
         yield return new WaitForSeconds(1f);
-        PlayerMoveControl.isMove = false;
         if (!isOpened)
         {
+            PlayerMoveControl.isMove = false;
             yield return new WaitForSeconds(1f);
             OpenBoxJudge();
             yield return new WaitForSeconds(1f);
