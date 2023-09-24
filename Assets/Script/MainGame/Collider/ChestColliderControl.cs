@@ -17,7 +17,7 @@ public class ChestColliderControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (!PropsControl.isTrans)
+        if (!PropsControl.isTrans || !AnimalsPowerControl.tigerUsePower)
         {
             if (other.tag == "P1" && P1_EnterBox)
             {
@@ -170,5 +170,6 @@ public class ChestColliderControl : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         PropsControl.isTrans = false;
+        AnimalsPowerControl.tigerUsePower = false;
     }
 }
