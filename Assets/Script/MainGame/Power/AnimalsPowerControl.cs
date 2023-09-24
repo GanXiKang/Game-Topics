@@ -8,6 +8,8 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool isMousePower = false, isCowPower = false, isTigerPower = false, isRabbitPower = false;
     public static bool isDragonPower = false, isSnakePower = false, isHorsePower = false, isSheepPower = false;
     public static bool isMonkeyPower = false, isChickenPower = false, isDogPower = false, isPigPower = false;
+
+    public static bool tigerUsePower = false;
     public static int mouseIsThisPoint;
 
     public Text systemText;
@@ -51,6 +53,7 @@ public class AnimalsPowerControl : MonoBehaviour
         {
             systemText.text = "ÀÏ»¢°l„Ó¼¼ÄÜ£¡";
             SystemTestTextControl.isTimer = true;
+            tigerUsePower = true;
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
