@@ -229,23 +229,22 @@ public class AnimalsPowerControl : MonoBehaviour
     {
         systemText.text = "ÍÃ×Ó°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
-        int d = Random.Range(1, 7);
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
-                DiceControl.P1_totalNum += d;
+                DiceControl.P1_totalNum += PowerUIControl.rabbitPowerChooseNum;
                 break;
 
             case 2:
-                DiceControl.P2_totalNum += d;
+                DiceControl.P2_totalNum += PowerUIControl.rabbitPowerChooseNum;
                 break;
 
             case 3:
-                DiceControl.P3_totalNum += d;
+                DiceControl.P3_totalNum += PowerUIControl.rabbitPowerChooseNum;
                 break;
 
             case 4:
-                DiceControl.P4_totalNum += d;
+                DiceControl.P4_totalNum += PowerUIControl.rabbitPowerChooseNum;
                 break;
         }
         PowerUIControl.animalsPowerUseNum[4]--;
