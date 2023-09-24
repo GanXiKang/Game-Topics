@@ -170,6 +170,5 @@ public class ChestColliderControl : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         PropsControl.isTrans = false;
-        AnimalsPowerControl.tigerUsePower = false;
     }
 }
