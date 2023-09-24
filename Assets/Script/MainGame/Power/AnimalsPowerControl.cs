@@ -169,6 +169,11 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[2]--;
         isCowPower = false;
         yield return new WaitForSeconds(2f);
+        print("1");
+        yield return new WaitForSeconds(1f);
+        print("2");
+        yield return new WaitForSeconds(1f);
+        print("3");
     }
     IEnumerator TigerPower()
     {
