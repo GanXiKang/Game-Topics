@@ -24,20 +24,6 @@ public class CowPowerControl : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (AnimalsPowerControl.cowUsePower)
-        {
-            if (collision.gameObject.tag == "P1")
-            {
-                print("1");
-            }
-            if (collision.gameObject.tag == "P2")
-            {
-                print("2");
-            }
-        }
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (AnimalsPowerControl.cowUsePower)
