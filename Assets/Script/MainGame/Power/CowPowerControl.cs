@@ -28,11 +28,11 @@ public class CowPowerControl : MonoBehaviour
     {
         if (AnimalsPowerControl.cowUsePower)
         {
-            if (collision.tag == "P1")
+            if (collision.gameObject.tag == "P1")
             {
                 print("1");
             }
-            if (other.tag == "P2")
+            if (collision.gameObject.tag == "P2")
             {
                 print("2");
             }
