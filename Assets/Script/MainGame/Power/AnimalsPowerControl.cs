@@ -51,37 +51,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
         if (isTigerPower)
         {
-            systemText.text = "老虎發動技能！";
-            SystemTestTextControl.isTimer = true;
-            tigerUsePower = true;
-            switch (ChangeCameraControl.changeCameraNum)
-            {
-                case 1:
-                    DiceControl.P2_totalNum -= 2;
-                    DiceControl.P3_totalNum -= 2;
-                    DiceControl.P4_totalNum -= 2;
-                    break;
-
-                case 2:
-                    DiceControl.P1_totalNum -= 2;
-                    DiceControl.P3_totalNum -= 2;
-                    DiceControl.P4_totalNum -= 2;
-                    break;
-
-                case 3:
-                    DiceControl.P1_totalNum -= 2;
-                    DiceControl.P2_totalNum -= 2;
-                    DiceControl.P4_totalNum -= 2;
-                    break;
-
-                case 4:
-                    DiceControl.P1_totalNum -= 2;
-                    DiceControl.P2_totalNum -= 2;
-                    DiceControl.P3_totalNum -= 2;
-                    break;
-            }
-            PowerUIControl.animalsPowerUseNum[3]--;
-            isTigerPower = false;
+            StartCoroutine(TigerPower());
         }
 
         if (isRabbitPower)
@@ -214,6 +184,43 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
         }
         yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+    }
+    IEnumerator TigerPower()
+    {
+        tigerUsePower = true;
+        systemText.text = "老虎發動技能！";
+        SystemTestTextControl.isTimer = true;
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                DiceControl.P2_totalNum -= 2;
+                DiceControl.P3_totalNum -= 2;
+                DiceControl.P4_totalNum -= 2;
+                break;
+
+            case 2:
+                DiceControl.P1_totalNum -= 2;
+                DiceControl.P3_totalNum -= 2;
+                DiceControl.P4_totalNum -= 2;
+                break;
+
+            case 3:
+                DiceControl.P1_totalNum -= 2;
+                DiceControl.P2_totalNum -= 2;
+                DiceControl.P4_totalNum -= 2;
+                break;
+
+            case 4:
+                DiceControl.P1_totalNum -= 2;
+                DiceControl.P2_totalNum -= 2;
+                DiceControl.P3_totalNum -= 2;
+                break;
+        }
+        PowerUIControl.animalsPowerUseNum[3]--;
+        isTigerPower = false;
+        yield return new WaitForSeconds(3f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
     }
