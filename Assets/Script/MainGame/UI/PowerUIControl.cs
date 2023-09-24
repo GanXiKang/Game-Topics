@@ -27,6 +27,7 @@ public class PowerUIControl : MonoBehaviour
     {
         DiceUIControl.isDiceUI = false;
         powerUI.SetActive(true);
+        FindWhoPower();
     }
     public void Button_Use()
     {
@@ -38,6 +39,67 @@ public class PowerUIControl : MonoBehaviour
     {
         DiceUIControl.isDiceUI = true;
         powerUI.SetActive(false);
+    }
+    void FindWhoPower()
+    {
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP1)
+                    {
+                        animalsPowerImage[i].SetActive(true);
+                    }
+                    else 
+                    {
+                        animalsPowerImage[i].SetActive(false);
+                    }
+                }
+                break;
+
+            case 2:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP2)
+                    {
+                        animalsPowerImage[i].SetActive(true);
+                    }
+                    else
+                    {
+                        animalsPowerImage[i].SetActive(false);
+                    }
+                }
+                break;
+
+            case 3:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP3)
+                    {
+                        animalsPowerImage[i].SetActive(true);
+                    }
+                    else
+                    {
+                        animalsPowerImage[i].SetActive(false);
+                    }
+                }
+                break;
+
+            case 4:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP4)
+                    {
+                        animalsPowerImage[i].SetActive(true);
+                    }
+                    else
+                    {
+                        animalsPowerImage[i].SetActive(false);
+                    }
+                }
+                break;
+        }
     }
     void FindWhoUsePower()
     {
