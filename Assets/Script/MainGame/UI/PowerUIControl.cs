@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PowerUIControl : MonoBehaviour
 {
+    public GameObject powerUI;
+    public GameObject[] animalsPowerImage = new GameObject[13];
     public Button power;
     public Text powerUseNum;
 
@@ -24,15 +26,18 @@ public class PowerUIControl : MonoBehaviour
     public void Button_Power()
     {
         DiceUIControl.isDiceUI = false;
-        FindWhoUsePower();
+        powerUI.SetActive(true);
     }
     public void Button_Use()
     {
-        
+        DiceUIControl.isDiceUI = false;
+        powerUI.SetActive(false);
+        FindWhoUsePower();
     }
     public void Button_Cancel()
     {
-
+        DiceUIControl.isDiceUI = true;
+        powerUI.SetActive(false);
     }
     void FindWhoUsePower()
     {
