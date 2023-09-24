@@ -17,130 +17,133 @@ public class EventControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!PropsControl.isTrans || !AnimalsPowerControl.tigerUsePower)
+        if (!PropsControl.isTrans)
         {
-            if (other.tag == "P1" && P1_EnterEvent)
+            if (!AnimalsPowerControl.tigerUsePower)
             {
-                if (DiceControl.P1_totalNum == EventPoint)
+                if (other.tag == "P1" && P1_EnterEvent)
                 {
-                    P1_EnterEvent = false;
-                    if (!eventAB)
+                    if (DiceControl.P1_totalNum == EventPoint)
                     {
-                        StartCoroutine(P1_EventHappened());
-                    }
-                    else
-                    {
-                        r = Random.Range(1, 3);
-                        switch (r)
+                        P1_EnterEvent = false;
+                        if (!eventAB)
                         {
-                            case 1:
-                                EventA();
-                                StartCoroutine(P1_EventHappened());
-                                break;
+                            StartCoroutine(P1_EventHappened());
+                        }
+                        else
+                        {
+                            r = Random.Range(1, 3);
+                            switch (r)
+                            {
+                                case 1:
+                                    EventA();
+                                    StartCoroutine(P1_EventHappened());
+                                    break;
 
-                            case 2:
-                                EventB();
-                                StartCoroutine(P1_EventHappened());
-                                break;
+                                case 2:
+                                    EventB();
+                                    StartCoroutine(P1_EventHappened());
+                                    break;
+                            }
+                        }
+                        if (Menu_ChoosePlayer.whyP1 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
                         }
                     }
-                    if (Menu_ChoosePlayer.whyP1 == 1)
+                }
+                else if (other.tag == "P2" && P2_EnterEvent)
+                {
+                    if (DiceControl.P2_totalNum == EventPoint)
+                    {
+                        P2_EnterEvent = false;
+                        if (!eventAB)
+                        {
+                            StartCoroutine(P2_EventHappened());
+                        }
+                        else
+                        {
+                            r = Random.Range(1, 3);
+                            switch (r)
+                            {
+                                case 1:
+                                    EventA();
+                                    StartCoroutine(P2_EventHappened());
+                                    break;
+
+                                case 2:
+                                    EventB();
+                                    StartCoroutine(P2_EventHappened());
+                                    break;
+                            }
+                        }
+                        if (Menu_ChoosePlayer.whyP2 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
+                    }
+                }
+                else if (other.tag == "P3" && P3_EnterEvent)
+                {
+                    if (DiceControl.P3_totalNum == EventPoint)
+                    {
+                        P3_EnterEvent = false;
+                        if (!eventAB)
+                        {
+                            StartCoroutine(P3_EventHappened());
+                        }
+                        else
+                        {
+                            r = Random.Range(1, 3);
+                            switch (r)
+                            {
+                                case 1:
+                                    EventA();
+                                    StartCoroutine(P3_EventHappened());
+                                    break;
+
+                                case 2:
+                                    EventB();
+                                    StartCoroutine(P3_EventHappened());
+                                    break;
+                            }
+                        }
+                    }
+                    if (Menu_ChoosePlayer.whyP3 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = false;
                     }
                 }
-            }
-            else if (other.tag == "P2" && P2_EnterEvent)
-            {
-                if (DiceControl.P2_totalNum == EventPoint)
+                else if (other.tag == "P4" && P4_EnterEvent)
                 {
-                    P2_EnterEvent = false;
-                    if (!eventAB)
+                    if (DiceControl.P4_totalNum == EventPoint)
                     {
-                        StartCoroutine(P2_EventHappened());
-                    }
-                    else
-                    {
-                        r = Random.Range(1, 3);
-                        switch (r)
+                        P4_EnterEvent = false;
+                        if (!eventAB)
                         {
-                            case 1:
-                                EventA();
-                                StartCoroutine(P2_EventHappened());
-                                break;
+                            StartCoroutine(P4_EventHappened());
+                        }
+                        else
+                        {
+                            r = Random.Range(1, 3);
+                            switch (r)
+                            {
+                                case 1:
+                                    EventA();
+                                    StartCoroutine(P4_EventHappened());
+                                    break;
 
-                            case 2:
-                                EventB();
-                                StartCoroutine(P2_EventHappened());
-                                break;
+                                case 2:
+                                    EventB();
+                                    StartCoroutine(P4_EventHappened());
+                                    break;
+                            }
                         }
                     }
-                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    if (Menu_ChoosePlayer.whyP4 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = false;
                     }
-                }
-            }
-            else if (other.tag == "P3" && P3_EnterEvent)
-            {
-                if (DiceControl.P3_totalNum == EventPoint)
-                {
-                    P3_EnterEvent = false;
-                    if (!eventAB)
-                    {
-                        StartCoroutine(P3_EventHappened());
-                    }
-                    else
-                    {
-                        r = Random.Range(1, 3);
-                        switch (r)
-                        {
-                            case 1:
-                                EventA();
-                                StartCoroutine(P3_EventHappened());
-                                break;
-
-                            case 2:
-                                EventB();
-                                StartCoroutine(P3_EventHappened());
-                                break;
-                        }
-                    }
-                }
-                if (Menu_ChoosePlayer.whyP3 == 1)
-                {
-                    PowerUIControl.isMouseCanUsePower = false;
-                }
-            }
-            else if (other.tag == "P4" && P4_EnterEvent)
-            {
-                if (DiceControl.P4_totalNum == EventPoint)
-                {
-                    P4_EnterEvent = false;
-                    if (!eventAB)
-                    {
-                        StartCoroutine(P4_EventHappened());
-                    }
-                    else
-                    {
-                        r = Random.Range(1, 3);
-                        switch (r)
-                        {
-                            case 1:
-                                EventA();
-                                StartCoroutine(P4_EventHappened());
-                                break;
-
-                            case 2:
-                                EventB();
-                                StartCoroutine(P4_EventHappened());
-                                break;
-                        }
-                    }
-                }
-                if (Menu_ChoosePlayer.whyP4 == 1)
-                {
-                    PowerUIControl.isMouseCanUsePower = false;
                 }
             }
         }

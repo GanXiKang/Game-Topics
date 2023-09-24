@@ -17,61 +17,64 @@ public class ChestColliderControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (!PropsControl.isTrans || !AnimalsPowerControl.tigerUsePower)
+        if (!PropsControl.isTrans)
         {
-            if (other.tag == "P1" && P1_EnterBox)
+            if (!AnimalsPowerControl.tigerUsePower)
             {
-                if (DiceControl.P1_totalNum == boxPoint)
+                if (other.tag == "P1" && P1_EnterBox)
                 {
-                    P1_EnterBox = false;
-                    AnimatorControl.isP1Move = false;
-                    StartCoroutine(ChangeCamera());
-                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    if (DiceControl.P1_totalNum == boxPoint)
                     {
-                        PowerUIControl.isMouseCanUsePower = true;
-                        AnimalsPowerControl.mouseIsThisPoint = 1;
+                        P1_EnterBox = false;
+                        AnimatorControl.isP1Move = false;
+                        StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP1 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = true;
+                            AnimalsPowerControl.mouseIsThisPoint = 1;
+                        }
                     }
                 }
-            }
-            else if (other.tag == "P2" && P2_EnterBox)
-            {
-                if (DiceControl.P2_totalNum == boxPoint)
+                else if (other.tag == "P2" && P2_EnterBox)
                 {
-                    P2_EnterBox = false;
-                    AnimatorControl.isP2Move = false;
-                    StartCoroutine(ChangeCamera());
-                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    if (DiceControl.P2_totalNum == boxPoint)
                     {
-                        PowerUIControl.isMouseCanUsePower = true;
-                        AnimalsPowerControl.mouseIsThisPoint = 1;
+                        P2_EnterBox = false;
+                        AnimatorControl.isP2Move = false;
+                        StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP2 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = true;
+                            AnimalsPowerControl.mouseIsThisPoint = 1;
+                        }
                     }
                 }
-            }
-            else if (other.tag == "P3" && P3_EnterBox)
-            {
-                if (DiceControl.P3_totalNum == boxPoint)
+                else if (other.tag == "P3" && P3_EnterBox)
                 {
-                    P3_EnterBox = false;
-                    AnimatorControl.isP3Move = false;
-                    StartCoroutine(ChangeCamera());
-                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    if (DiceControl.P3_totalNum == boxPoint)
                     {
-                        PowerUIControl.isMouseCanUsePower = true;
-                        AnimalsPowerControl.mouseIsThisPoint = 1;
+                        P3_EnterBox = false;
+                        AnimatorControl.isP3Move = false;
+                        StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP3 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = true;
+                            AnimalsPowerControl.mouseIsThisPoint = 1;
+                        }
                     }
                 }
-            }
-            else if (other.tag == "P4" && P4_EnterBox)
-            {
-                if (DiceControl.P4_totalNum == boxPoint)
+                else if (other.tag == "P4" && P4_EnterBox)
                 {
-                    P4_EnterBox = false;
-                    AnimatorControl.isP4Move = false;
-                    StartCoroutine(ChangeCamera());
-                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    if (DiceControl.P4_totalNum == boxPoint)
                     {
-                        PowerUIControl.isMouseCanUsePower = true;
-                        AnimalsPowerControl.mouseIsThisPoint = 1;
+                        P4_EnterBox = false;
+                        AnimatorControl.isP4Move = false;
+                        StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP4 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = true;
+                            AnimalsPowerControl.mouseIsThisPoint = 1;
+                        }
                     }
                 }
             }

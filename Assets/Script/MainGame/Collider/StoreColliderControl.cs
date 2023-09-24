@@ -12,65 +12,68 @@ public class StoreColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!PropsControl.isTrans || !AnimalsPowerControl.tigerUsePower)
+        if (!PropsControl.isTrans)
         {
-            if (other.tag == "P1" && P1_EnterStore)
+            if (!AnimalsPowerControl.tigerUsePower)
             {
-                if (DiceControl.P1_totalNum == pointNum)
+                if (other.tag == "P1" && P1_EnterStore)
                 {
-                    who = 1;
-                    P1_EnterStore = false;
-                    AnimatorControl.isP1Move = false;
-                    StartCoroutine(LookTarget());
-                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    if (DiceControl.P1_totalNum == pointNum)
                     {
-                        PowerUIControl.isMouseCanUsePower = true;
-                        AnimalsPowerControl.mouseIsThisPoint = 2;
+                        who = 1;
+                        P1_EnterStore = false;
+                        AnimatorControl.isP1Move = false;
+                        StartCoroutine(LookTarget());
+                        if (Menu_ChoosePlayer.whyP1 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = true;
+                            AnimalsPowerControl.mouseIsThisPoint = 2;
+                        }
                     }
                 }
-            }
-            else if (other.tag == "P2" && P2_EnterStore)
-            {
-                if (DiceControl.P2_totalNum == pointNum)
+                else if (other.tag == "P2" && P2_EnterStore)
                 {
-                    who = 2;
-                    P2_EnterStore = false;
-                    AnimatorControl.isP2Move = false;
-                    StartCoroutine(LookTarget());
-                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    if (DiceControl.P2_totalNum == pointNum)
                     {
-                        PowerUIControl.isMouseCanUsePower = true;
-                        AnimalsPowerControl.mouseIsThisPoint = 2;
+                        who = 2;
+                        P2_EnterStore = false;
+                        AnimatorControl.isP2Move = false;
+                        StartCoroutine(LookTarget());
+                        if (Menu_ChoosePlayer.whyP2 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = true;
+                            AnimalsPowerControl.mouseIsThisPoint = 2;
+                        }
                     }
                 }
-            }
-            else if (other.tag == "P3" && P3_EnterStore)
-            {
-                if (DiceControl.P3_totalNum == pointNum)
+                else if (other.tag == "P3" && P3_EnterStore)
                 {
-                    who = 3;
-                    P3_EnterStore = false;
-                    AnimatorControl.isP3Move = false;
-                    StartCoroutine(LookTarget());
-                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    if (DiceControl.P3_totalNum == pointNum)
                     {
-                        PowerUIControl.isMouseCanUsePower = true;
-                        AnimalsPowerControl.mouseIsThisPoint = 2;
+                        who = 3;
+                        P3_EnterStore = false;
+                        AnimatorControl.isP3Move = false;
+                        StartCoroutine(LookTarget());
+                        if (Menu_ChoosePlayer.whyP3 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = true;
+                            AnimalsPowerControl.mouseIsThisPoint = 2;
+                        }
                     }
                 }
-            }
-            else if (other.tag == "P4" && P4_EnterStore)
-            {
-                if (DiceControl.P4_totalNum == pointNum)
+                else if (other.tag == "P4" && P4_EnterStore)
                 {
-                    who = 4;
-                    P4_EnterStore = false;
-                    AnimatorControl.isP4Move = false;
-                    StartCoroutine(LookTarget());
-                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    if (DiceControl.P4_totalNum == pointNum)
                     {
-                        PowerUIControl.isMouseCanUsePower = true;
-                        AnimalsPowerControl.mouseIsThisPoint = 2;
+                        who = 4;
+                        P4_EnterStore = false;
+                        AnimatorControl.isP4Move = false;
+                        StartCoroutine(LookTarget());
+                        if (Menu_ChoosePlayer.whyP4 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = true;
+                            AnimalsPowerControl.mouseIsThisPoint = 2;
+                        }
                     }
                 }
             }
