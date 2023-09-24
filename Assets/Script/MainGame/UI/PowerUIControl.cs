@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class PowerUIControl : MonoBehaviour
 {
-    public GameObject powerUI;
+    public GameObject powerUI, rabbitUsePowerUI;
     public GameObject[] animalsPowerImage = new GameObject[13];
     public Button power;
     public Text powerUseNum;
 
     public static int[] animalsPowerUseNum = new int[13];
+    public static int rabbitPowerChooseNum;
     public static bool isMouseCanUsePower = false;
+
+    bool isRabbitPowerChoose;
 
     void Start()
     {
@@ -21,6 +24,15 @@ public class PowerUIControl : MonoBehaviour
     void Update()
     {
         ButtonDisable();
+
+        if (isRabbitPowerChoose)
+        {
+            rabbitUsePowerUI.SetActive(true);
+        }
+        else
+        {
+            rabbitUsePowerUI.SetActive(false);
+        }
     }
 
     public void Button_Power()
@@ -40,6 +52,13 @@ public class PowerUIControl : MonoBehaviour
         DiceUIControl.isDiceUI = true;
         powerUI.SetActive(false);
     }
+    public void Button_RabbitPowerChoose(int d)
+    {
+        rabbitPowerChooseNum = d;
+        isRabbitPowerChoose = false;
+        AnimalsPowerControl.isRabbitPower = true;
+    }
+
     void FindWhoPower()
     {
         switch (ChangeCameraControl.changeCameraNum)
@@ -125,7 +144,7 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 4:
-                                AnimalsPowerControl.isRabbitPower = true;
+                                isRabbitPowerChoose = true;
                                 break;
 
                             case 5:
@@ -184,7 +203,7 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 4:
-                                AnimalsPowerControl.isRabbitPower = true;
+                                isRabbitPowerChoose = true;
                                 break;
 
                             case 5:
@@ -243,7 +262,7 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 4:
-                                AnimalsPowerControl.isRabbitPower = true;
+                                isRabbitPowerChoose = true;
                                 break;
 
                             case 5:
@@ -302,7 +321,7 @@ public class PowerUIControl : MonoBehaviour
                                 break;
 
                             case 4:
-                                AnimalsPowerControl.isRabbitPower = true;
+                                isRabbitPowerChoose = true;
                                 break;
 
                             case 5:
