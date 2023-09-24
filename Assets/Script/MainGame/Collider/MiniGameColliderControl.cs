@@ -13,57 +13,60 @@ public class MiniGameColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!PropsControl.isTrans || !AnimalsPowerControl.tigerUsePower)
+        if (!PropsControl.isTrans)
         {
-            if (other.tag == "P1" && P1_playGame)
+            if (!AnimalsPowerControl.tigerUsePower)
             {
-                if (DiceControl.P1_totalNum == MGPoint)
+                if (other.tag == "P1" && P1_playGame)
                 {
-                    p = 1;
-                    AnimatorControl.isP1Move = false;
-                    StartCoroutine(StartMiniGame());
-                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    if (DiceControl.P1_totalNum == MGPoint)
+                    {
+                        p = 1;
+                        AnimatorControl.isP1Move = false;
+                        StartCoroutine(StartMiniGame());
+                        if (Menu_ChoosePlayer.whyP1 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
+                    }
+                }
+                else if (other.tag == "P2" && P2_playGame)
+                {
+                    if (DiceControl.P2_totalNum == MGPoint)
+                    {
+                        p = 2;
+                        AnimatorControl.isP2Move = false;
+                        StartCoroutine(StartMiniGame());
+                        if (Menu_ChoosePlayer.whyP2 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
+                    }
+                }
+                else if (other.tag == "P3" && P3_playGame)
+                {
+                    if (DiceControl.P3_totalNum == MGPoint)
+                    {
+                        p = 3;
+                        AnimatorControl.isP3Move = false;
+                        StartCoroutine(StartMiniGame());
+                    }
+                    if (Menu_ChoosePlayer.whyP3 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = false;
                     }
                 }
-            }
-            else if (other.tag == "P2" && P2_playGame)
-            {
-                if (DiceControl.P2_totalNum == MGPoint)
+                else if (other.tag == "P4" && P4_playGame)
                 {
-                    p = 2;
-                    AnimatorControl.isP2Move = false;
-                    StartCoroutine(StartMiniGame());
-                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    if (DiceControl.P4_totalNum == MGPoint)
                     {
-                        PowerUIControl.isMouseCanUsePower = false;
-                    }
-                }
-            }
-            else if (other.tag == "P3" && P3_playGame)
-            {
-                if (DiceControl.P3_totalNum == MGPoint)
-                {
-                    p = 3;
-                    AnimatorControl.isP3Move = false;
-                    StartCoroutine(StartMiniGame());
-                }
-                if (Menu_ChoosePlayer.whyP3 == 1)
-                {
-                    PowerUIControl.isMouseCanUsePower = false;
-                }
-            }
-            else if (other.tag == "P4" && P4_playGame)
-            {
-                if (DiceControl.P4_totalNum == MGPoint)
-                {
-                    p = 4;
-                    AnimatorControl.isP4Move = false;
-                    StartCoroutine(StartMiniGame());
-                    if (Menu_ChoosePlayer.whyP4 == 1)
-                    {
-                        PowerUIControl.isMouseCanUsePower = false;
+                        p = 4;
+                        AnimatorControl.isP4Move = false;
+                        StartCoroutine(StartMiniGame());
+                        if (Menu_ChoosePlayer.whyP4 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
                     }
                 }
             }

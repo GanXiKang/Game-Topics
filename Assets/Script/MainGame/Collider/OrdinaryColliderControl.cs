@@ -9,57 +9,60 @@ public class OrdinaryColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!PropsControl.isTrans || !AnimalsPowerControl.tigerUsePower)
+        if (!PropsControl.isTrans)
         {
-            if (other.tag == "P1" && P1_Enter)
+            if (!AnimalsPowerControl.tigerUsePower)
             {
-                if (DiceControl.P1_totalNum == pointNum)
+                if (other.tag == "P1" && P1_Enter)
                 {
-                    P1_Enter = false;
-                    AnimatorControl.isP1Move = false;
-                    StartCoroutine(ChangeCamera());
-                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    if (DiceControl.P1_totalNum == pointNum)
                     {
-                        PowerUIControl.isMouseCanUsePower = false;
+                        P1_Enter = false;
+                        AnimatorControl.isP1Move = false;
+                        StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP1 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
                     }
                 }
-            }
-            else if (other.tag == "P2" && P2_Enter)
-            {
-                if (DiceControl.P2_totalNum == pointNum)
+                else if (other.tag == "P2" && P2_Enter)
                 {
-                    P2_Enter = false;
-                    AnimatorControl.isP2Move = false;
-                    StartCoroutine(ChangeCamera());
-                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    if (DiceControl.P2_totalNum == pointNum)
                     {
-                        PowerUIControl.isMouseCanUsePower = false;
+                        P2_Enter = false;
+                        AnimatorControl.isP2Move = false;
+                        StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP2 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
                     }
                 }
-            }
-            else if (other.tag == "P3" && P3_Enter)
-            {
-                if (DiceControl.P3_totalNum == pointNum)
+                else if (other.tag == "P3" && P3_Enter)
                 {
-                    P3_Enter = false;
-                    AnimatorControl.isP3Move = false;
-                    StartCoroutine(ChangeCamera());
-                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    if (DiceControl.P3_totalNum == pointNum)
                     {
-                        PowerUIControl.isMouseCanUsePower = false;
+                        P3_Enter = false;
+                        AnimatorControl.isP3Move = false;
+                        StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP3 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
                     }
                 }
-            }
-            else if (other.tag == "P4" && P4_Enter)
-            {
-                if (DiceControl.P4_totalNum == pointNum)
+                else if (other.tag == "P4" && P4_Enter)
                 {
-                    P4_Enter = false;
-                    AnimatorControl.isP4Move = false;
-                    StartCoroutine(ChangeCamera());
-                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    if (DiceControl.P4_totalNum == pointNum)
                     {
-                        PowerUIControl.isMouseCanUsePower = false;
+                        P4_Enter = false;
+                        AnimatorControl.isP4Move = false;
+                        StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP4 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
                     }
                 }
             }
