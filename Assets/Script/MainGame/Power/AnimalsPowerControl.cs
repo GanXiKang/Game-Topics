@@ -192,6 +192,7 @@ public class AnimalsPowerControl : MonoBehaviour
         tigerUsePower = true;
         systemText.text = "老虎發動技能！";
         SystemTestTextControl.isTimer = true;
+        yield return new WaitForSeconds(2f);
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
@@ -218,6 +219,8 @@ public class AnimalsPowerControl : MonoBehaviour
                 DiceControl.P3_totalNum -= 2;
                 break;
         }
+        systemText.text = "全部玩家后退！";
+        SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[3]--;
         isTigerPower = false;
         yield return new WaitForSeconds(3f);
