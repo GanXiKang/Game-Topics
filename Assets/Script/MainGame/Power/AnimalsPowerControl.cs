@@ -241,6 +241,7 @@ public class AnimalsPowerControl : MonoBehaviour
         DiceUIControl.isDiceUI = true;
         print(tigerUsePower);
         yield return new WaitForSeconds(2f);
-        //tigerUsePower = false;
+        tigerUsePower = false;
+        print(tigerUsePower);
     }
 }
