@@ -220,10 +220,23 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         PowerUIControl.animalsPowerUseNum[3]--;
         isTigerPower = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         systemText.text = "全部玩家后退！";
-        SystemTestTextControl.isTimer = true;
-        yield return new WaitForSeconds(3f);
+        SystemTestTextControl.isTimer = true; 
+        ChangeCameraControl.changeCameraNum++;
+        yield return new WaitForSeconds(1f);
+        ChangeCameraControl.changeCameraNum++;
+        yield return new WaitForSeconds(1f);
+        if (Menu_ChoosePlayer.whoPlay >= 3)
+        {
+            ChangeCameraControl.changeCameraNum++;
+        }
+        yield return new WaitForSeconds(1f);
+        if (Menu_ChoosePlayer.whoPlay >= 4)
+        {
+            ChangeCameraControl.changeCameraNum++;
+        }
+        yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
         tigerUsePower = false;
