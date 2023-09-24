@@ -16,7 +16,6 @@ public class CowPowerControl : MonoBehaviour
     {
         if (AnimalsPowerControl.cowUsePower)
         {
-            print("OK");
             agent.speed = 20;
         }
         else 
