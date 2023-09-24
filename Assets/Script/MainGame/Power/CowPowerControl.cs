@@ -28,7 +28,6 @@ public class CowPowerControl : MonoBehaviour
     {
         if (AnimalsPowerControl.cowUsePower)
         {
-            print("ok");
             if (other.tag == "P1")
             {
                 print("1");
