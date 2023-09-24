@@ -23,4 +23,27 @@ public class CowPowerControl : MonoBehaviour
             agent.speed = 10;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (AnimalsPowerControl.cowUsePower)
+        {
+            if (other.tag == "P1")
+            {
+                print("1");
+            }
+            if (other.tag == "P2")
+            {
+                print("2");
+            }
+            if (other.tag == "P3")
+            { 
+                print("3");
+            }
+            if (other.tag == "P4")
+            {
+                print("4");
+            }
+        }
+    }
 }
