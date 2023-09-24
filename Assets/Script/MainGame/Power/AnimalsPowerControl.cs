@@ -9,6 +9,7 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool isDragonPower = false, isSnakePower = false, isHorsePower = false, isSheepPower = false;
     public static bool isMonkeyPower = false, isChickenPower = false, isDogPower = false, isPigPower = false;
 
+    public static bool cowUsePower = false;
     public static bool tigerUsePower = false;
     public static int mouseIsThisPoint;
 
@@ -168,12 +169,9 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         PowerUIControl.animalsPowerUseNum[2]--;
         isCowPower = false;
-        yield return new WaitForSeconds(2f);
-        print("1");
-        yield return new WaitForSeconds(1f);
-        print("2");
-        yield return new WaitForSeconds(1f);
-        print("3");
+        cowUsePower = true;
+        yield return new WaitForSeconds(5f);
+        cowUsePower = false;
     }
     IEnumerator TigerPower()
     {
