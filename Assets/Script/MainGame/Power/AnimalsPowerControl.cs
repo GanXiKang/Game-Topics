@@ -25,28 +25,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
         if (isCowPower)
         {
-            systemText.text = "牛發動技能！";
-            SystemTestTextControl.isTimer = true;
-            switch (ChangeCameraControl.changeCameraNum)
-            {
-                case 1:
-                    DiceControl.P1_totalNum += 3;
-                    break;
-
-                case 2:
-                    DiceControl.P2_totalNum += 3;
-                    break;
-
-                case 3:
-                    DiceControl.P3_totalNum += 3;
-                    break;
-
-                case 4:
-                    DiceControl.P4_totalNum += 3;
-                    break;
-            }
-            PowerUIControl.animalsPowerUseNum[2]--;
-            isCowPower = false;
+            StartCoroutine(CowPower());
         }
 
         if (isTigerPower)
@@ -56,29 +35,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
         if (isRabbitPower)
         {
-            systemText.text = "兔子發動技能！";
-            SystemTestTextControl.isTimer = true;
-            int d = Random.Range(1, 7);
-            switch (ChangeCameraControl.changeCameraNum)
-            {
-                case 1:
-                    DiceControl.P1_totalNum += d;
-                    break;
-
-                case 2:
-                    DiceControl.P2_totalNum += d;
-                    break;
-
-                case 3:
-                    DiceControl.P3_totalNum += d;
-                    break;
-
-                case 4:
-                    DiceControl.P4_totalNum += d;
-                    break;
-            }
-            PowerUIControl.animalsPowerUseNum[4]--;
-            isRabbitPower = false;
+            StartCoroutine(RabbitPower());
         }
     }
 
@@ -187,6 +144,32 @@ public class AnimalsPowerControl : MonoBehaviour
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
     }
+    IEnumerator CowPower()
+    {
+        systemText.text = "牛發動技能！";
+        SystemTestTextControl.isTimer = true;
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                DiceControl.P1_totalNum += 3;
+                break;
+
+            case 2:
+                DiceControl.P2_totalNum += 3;
+                break;
+
+            case 3:
+                DiceControl.P3_totalNum += 3;
+                break;
+
+            case 4:
+                DiceControl.P4_totalNum += 3;
+                break;
+        }
+        PowerUIControl.animalsPowerUseNum[2]--;
+        isCowPower = false;
+        yield return new WaitForSeconds(2f);
+    }
     IEnumerator TigerPower()
     {
         tigerUsePower = true;
@@ -241,5 +224,32 @@ public class AnimalsPowerControl : MonoBehaviour
         DiceUIControl.isDiceUI = true;
         yield return new WaitForSeconds(2f);
         tigerUsePower = false;
+    }
+    IEnumerator RabbitPower()
+    {
+        systemText.text = "兔子發動技能！";
+        SystemTestTextControl.isTimer = true;
+        int d = Random.Range(1, 7);
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                DiceControl.P1_totalNum += d;
+                break;
+
+            case 2:
+                DiceControl.P2_totalNum += d;
+                break;
+
+            case 3:
+                DiceControl.P3_totalNum += d;
+                break;
+
+            case 4:
+                DiceControl.P4_totalNum += d;
+                break;
+        }
+        PowerUIControl.animalsPowerUseNum[4]--;
+        isRabbitPower = false;
+        yield return new WaitForSeconds(2f);
     }
 }
