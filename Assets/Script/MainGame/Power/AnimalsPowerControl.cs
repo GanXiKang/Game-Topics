@@ -239,6 +239,7 @@ public class AnimalsPowerControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+        print(tigerUsePower);
         yield return new WaitForSeconds(2f);
         //tigerUsePower = false;
     }
