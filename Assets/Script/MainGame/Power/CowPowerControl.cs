@@ -7,6 +7,8 @@ public class CowPowerControl : MonoBehaviour
 {
     public NavMeshAgent agent;
 
+    public static bool isCowPowerStopP1 = false, isCowPowerStopP2 = false, isCowPowerStopP3 = false, isCowPowerStopP4 = false;
+
     void Update()
     {
         if (AnimalsPowerControl.cowUsePower)
@@ -25,19 +27,23 @@ public class CowPowerControl : MonoBehaviour
         {
             if (other.tag == "P1")
             {
-                
+                IsStopUIControl.isCowPowerStopUI++;
+                isCowPowerStopP1 = true;
             }
             if (other.tag == "P2")
             {
-                
+                IsStopUIControl.isCowPowerStopUI++;
+                isCowPowerStopP2 = true;
             }
             if (other.tag == "P3")
-            { 
-                
+            {
+                IsStopUIControl.isCowPowerStopUI++;
+                isCowPowerStopP3 = true;
             }
             if (other.tag == "P4")
             {
-                
+                IsStopUIControl.isCowPowerStopUI++;
+                isCowPowerStopP4 = true;
             }
         }
     }

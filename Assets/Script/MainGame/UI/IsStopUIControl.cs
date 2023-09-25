@@ -7,7 +7,7 @@ public class IsStopUIControl : MonoBehaviour
 {
     public Text systemText;
 
-    public static int isStopUI = 0, isBombStopUI = 0;
+    public static int isStopUI = 0, isBombStopUI = 0, isCowPowerStopUI;
     public static bool isBombStopP1, isBombStopP2, isBombStopP3, isBombStopP4;
 
     void Update()
@@ -86,6 +86,43 @@ public class IsStopUIControl : MonoBehaviour
                     break;
             }
         }
+        if (isCowPowerStopUI != 0 && PlayerMoveControl.isMove)
+        {
+            switch (ChangeCameraControl.changeCameraNum)
+            {
+                case 1:
+                    if (CowPowerControl.isCowPowerStopP1)
+                    {
+                        StartCoroutine(CowPowerStopThisRound());
+                        CowPowerControl.isCowPowerStopP1 = false;
+                    }
+                    break;
+
+                case 2:
+                    if (CowPowerControl.isCowPowerStopP2)
+                    {
+                        StartCoroutine(CowPowerStopThisRound());
+                        CowPowerControl.isCowPowerStopP2 = false;
+                    }
+                    break;
+
+                case 3:
+                    if (CowPowerControl.isCowPowerStopP3)
+                    {
+                        StartCoroutine(CowPowerStopThisRound());
+                        isBombStopP3 = false;
+                    }
+                    break;
+
+                case 4:
+                    if (CowPowerControl.isCowPowerStopP4)
+                    {
+                        StartCoroutine(CowPowerStopThisRound());
+                        isBombStopP4 = false;
+                    }
+                    break;
+            }
+        }
     }
     IEnumerator StopThisRound()
     {
@@ -100,6 +137,16 @@ public class IsStopUIControl : MonoBehaviour
     IEnumerator BombStopThisRound()
     {
         isBombStopUI--;
+        DiceUIControl.isDiceUI = false;
+        systemText.text = "此回合暫停";
+        SystemTestTextControl.isTimer = true;
+        yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+    }
+    IEnumerator CowPowerStopThisRound()
+    {
+        isCowPowerStopUI--;
         DiceUIControl.isDiceUI = false;
         systemText.text = "此回合暫停";
         SystemTestTextControl.isTimer = true;
