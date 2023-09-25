@@ -5,6 +5,7 @@ using UnityEngine;
 public class StoreColliderControl : MonoBehaviour
 {
     public static bool P1_EnterStore = true, P2_EnterStore = true, P3_EnterStore = true, P4_EnterStore = true;
+    public static bool isStoreNotStopUI = false;
     public static int who;
 
     public int pointNum;
@@ -195,6 +196,7 @@ public class StoreColliderControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         PlayerMoveControl.isMove = false;
         StoreUIControl.isStore = true;
+        isStoreNotStopUI = true;
     }
     IEnumerator Transposition()
     {
