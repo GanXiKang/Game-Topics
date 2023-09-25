@@ -17,6 +17,7 @@ public class SystemTestTextControl : MonoBehaviour
         timer += 1 * Time.deltaTime;
         if (timer > 2f)
         {
+            timer = 0;
             systemText.text = " ";
             backGround.SetActive(false);
         }
