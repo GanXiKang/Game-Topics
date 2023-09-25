@@ -7,11 +7,6 @@ public class CowPowerControl : MonoBehaviour
 {
     public NavMeshAgent agent;
 
-    void Start()
-    {
-        //agent = GetComponent<NavMeshAgent>();
-    }
-
     void Update()
     {
         if (AnimalsPowerControl.cowUsePower)
