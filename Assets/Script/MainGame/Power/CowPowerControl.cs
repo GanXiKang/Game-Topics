@@ -30,19 +30,19 @@ public class CowPowerControl : MonoBehaviour
         {
             if (other.tag == "P1")
             {
-                print("1");
+                
             }
             if (other.tag == "P2")
             {
-                print("2");
+                
             }
             if (other.tag == "P3")
             { 
-                print("3");
+                
             }
             if (other.tag == "P4")
             {
-                print("4");
+                
             }
         }
     }
