@@ -14,17 +14,15 @@ public class SystemTestTextControl : MonoBehaviour
     void FixedUpdate()
     {
         timer += 1 * Time.deltaTime;
-        if (timer > 2f)
-        {
-            timer = 0;
-            backGround.SetActive(false);
-        }
-        
         
         if (isTimer)
         {
             backGround.SetActive(true);
             timer = 0;
+            if (timer > 2f)
+            {
+                backGround.SetActive(false);
+            }
             isTimer = false;
         }
     }
