@@ -12,115 +12,118 @@ public class IsStopUIControl : MonoBehaviour
 
     void Update()
     {
-        if (isStopUI != 0 && PlayerMoveControl.isMove)
+        if (AnimalsPowerControl.tigerUsePower == false)
         {
-            switch (ChangeCameraControl.changeCameraNum)
+            if (isStopUI != 0)
             {
-                case 1:
-                    if (EventControl.isStopP1)
-                    {
-                        StartCoroutine(StopThisRound());
-                        EventControl.isStopP1 = false;
-                    }
-                    break;
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        if (EventControl.isStopP1)
+                        {
+                            StartCoroutine(StopThisRound());
+                            EventControl.isStopP1 = false;
+                        }
+                        break;
 
-                case 2:
-                    if (EventControl.isStopP2)
-                    {
-                        StartCoroutine(StopThisRound());
-                        EventControl.isStopP2 = false;
-                    }
-                    break;
+                    case 2:
+                        if (EventControl.isStopP2)
+                        {
+                            StartCoroutine(StopThisRound());
+                            EventControl.isStopP2 = false;
+                        }
+                        break;
 
-                case 3:
-                    if (EventControl.isStopP3)
-                    {
-                        StartCoroutine(StopThisRound());
-                        EventControl.isStopP3 = false;
-                    }
-                    break;
+                    case 3:
+                        if (EventControl.isStopP3)
+                        {
+                            StartCoroutine(StopThisRound());
+                            EventControl.isStopP3 = false;
+                        }
+                        break;
 
-                case 4:
-                    if (EventControl.isStopP4)
-                    {
-                        StartCoroutine(StopThisRound());
-                        EventControl.isStopP4 = false;
-                    }
-                    break;
+                    case 4:
+                        if (EventControl.isStopP4)
+                        {
+                            StartCoroutine(StopThisRound());
+                            EventControl.isStopP4 = false;
+                        }
+                        break;
+                }
             }
-        }
-        if (isBombStopUI != 0 && PlayerMoveControl.isMove)
-        {
-            switch (ChangeCameraControl.changeCameraNum)
+            if (isBombStopUI != 0)
             {
-                case 1:
-                    if (isBombStopP1)
-                    {
-                        StartCoroutine(BombStopThisRound());
-                        isBombStopP1 = false;
-                    }
-                    break;
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        if (isBombStopP1)
+                        {
+                            StartCoroutine(BombStopThisRound());
+                            isBombStopP1 = false;
+                        }
+                        break;
 
-                case 2:
-                    if (isBombStopP2)
-                    {
-                        StartCoroutine(BombStopThisRound());
-                        isBombStopP2 = false;
-                    }
-                    break;
+                    case 2:
+                        if (isBombStopP2)
+                        {
+                            StartCoroutine(BombStopThisRound());
+                            isBombStopP2 = false;
+                        }
+                        break;
 
-                case 3:
-                    if (isBombStopP3)
-                    {
-                        StartCoroutine(BombStopThisRound());
-                        isBombStopP3 = false;
-                    }
-                    break;
+                    case 3:
+                        if (isBombStopP3)
+                        {
+                            StartCoroutine(BombStopThisRound());
+                            isBombStopP3 = false;
+                        }
+                        break;
 
-                case 4:
-                    if (isBombStopP4)
-                    {
-                        StartCoroutine(BombStopThisRound());
-                        isBombStopP4 = false;
-                    }
-                    break;
+                    case 4:
+                        if (isBombStopP4)
+                        {
+                            StartCoroutine(BombStopThisRound());
+                            isBombStopP4 = false;
+                        }
+                        break;
+                }
             }
-        }
-        if (isCowPowerStopUI != 0)
-        {
-            switch (ChangeCameraControl.changeCameraNum)
+            if (isCowPowerStopUI != 0)
             {
-                case 1:
-                    if (CowPowerControl.isCowPowerStopP1)
-                    {
-                        StartCoroutine(CowPowerStopThisRound());
-                        CowPowerControl.isCowPowerStopP1 = false;
-                    }
-                    break;
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        if (CowPowerControl.isCowPowerStopP1)
+                        {
+                            StartCoroutine(CowPowerStopThisRound());
+                            CowPowerControl.isCowPowerStopP1 = false;
+                        }
+                        break;
 
-                case 2:
-                    if (CowPowerControl.isCowPowerStopP2)
-                    {
-                        StartCoroutine(CowPowerStopThisRound());
-                        CowPowerControl.isCowPowerStopP2 = false;
-                    }
-                    break;
+                    case 2:
+                        if (CowPowerControl.isCowPowerStopP2)
+                        {
+                            StartCoroutine(CowPowerStopThisRound());
+                            CowPowerControl.isCowPowerStopP2 = false;
+                        }
+                        break;
 
-                case 3:
-                    if (CowPowerControl.isCowPowerStopP3)
-                    {
-                        StartCoroutine(CowPowerStopThisRound());
-                        isBombStopP3 = false;
-                    }
-                    break;
+                    case 3:
+                        if (CowPowerControl.isCowPowerStopP3)
+                        {
+                            StartCoroutine(CowPowerStopThisRound());
+                            isBombStopP3 = false;
+                        }
+                        break;
 
-                case 4:
-                    if (CowPowerControl.isCowPowerStopP4)
-                    {
-                        StartCoroutine(CowPowerStopThisRound());
-                        isBombStopP4 = false;
-                    }
-                    break;
+                    case 4:
+                        if (CowPowerControl.isCowPowerStopP4)
+                        {
+                            StartCoroutine(CowPowerStopThisRound());
+                            isBombStopP4 = false;
+                        }
+                        break;
+                }
             }
         }
     }
