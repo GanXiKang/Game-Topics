@@ -86,7 +86,7 @@ public class IsStopUIControl : MonoBehaviour
                     break;
             }
         }
-        if (isCowPowerStopUI != 0 && PlayerMoveControl.isMove)
+        if (isCowPowerStopUI != 0)
         {
             switch (ChangeCameraControl.changeCameraNum)
             {
