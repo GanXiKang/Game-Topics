@@ -35,23 +35,35 @@ public class CowPowerControl : MonoBehaviour
         {
             if (other.tag == "P1")
             {
-                IsStopUIControl.isCowPowerStopUI++;
-                isCowPowerStopP1 = true;
+                if (Menu_ChoosePlayer.whyP1 != 2)
+                {
+                    IsStopUIControl.isCowPowerStopUI++;
+                    isCowPowerStopP1 = true;
+                }
             }
             if (other.tag == "P2")
             {
-                IsStopUIControl.isCowPowerStopUI++;
-                isCowPowerStopP2 = true;
+                if (Menu_ChoosePlayer.whyP2 != 2)
+                {
+                    IsStopUIControl.isCowPowerStopUI++;
+                    isCowPowerStopP2 = true;
+                }
             }
             if (other.tag == "P3")
             {
-                IsStopUIControl.isCowPowerStopUI++;
-                isCowPowerStopP3 = true;
+                if (Menu_ChoosePlayer.whyP3 != 2)
+                {
+                    IsStopUIControl.isCowPowerStopUI++;
+                    isCowPowerStopP3 = true;
+                }
             }
             if (other.tag == "P4")
             {
-                IsStopUIControl.isCowPowerStopUI++;
-                isCowPowerStopP4 = true;
+                if (Menu_ChoosePlayer.whyP4 != 2)
+                {
+                    IsStopUIControl.isCowPowerStopUI++;
+                    isCowPowerStopP4 = true;
+                }
             }
         }
     }
