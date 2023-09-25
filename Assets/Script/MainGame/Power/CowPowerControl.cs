@@ -5,19 +5,27 @@ using UnityEngine.AI;
 
 public class CowPowerControl : MonoBehaviour
 {
+    BoxCollider bc;
+
     public NavMeshAgent agent;
 
     public static bool isCowPowerStopP1 = false, isCowPowerStopP2 = false, isCowPowerStopP3 = false, isCowPowerStopP4 = false;
 
+    void Start()
+    {
+        bc = GetComponent<BoxCollider>();
+    }
     void Update()
     {
         if (AnimalsPowerControl.cowUsePower)
         {
             agent.speed = 20;
+            bc.enabled = true;
         }
         else 
         {
             agent.speed = 10;
+            bc.enabled = false;
         }
     }
 
