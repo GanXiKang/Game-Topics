@@ -12,7 +12,7 @@ public class IsStopUIControl : MonoBehaviour
 
     void Update()
     {
-        if (AnimalsPowerControl.tigerUsePower == false)
+        if (!AnimalsPowerControl.tigerUsePower)
         {
             if (isStopUI != 0)
             {
