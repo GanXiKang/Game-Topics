@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 public class CowPowerControl : MonoBehaviour
 {
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        //agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
