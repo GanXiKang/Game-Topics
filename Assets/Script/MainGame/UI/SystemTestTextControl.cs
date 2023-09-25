@@ -7,7 +7,6 @@ public class SystemTestTextControl : MonoBehaviour
 {
     float timer = 0;
 
-    public Text systemText;
     public GameObject backGround;
 
     public static bool isTimer = false;
