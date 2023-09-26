@@ -758,11 +758,11 @@ public class StoreUIControl : MonoBehaviour
     }
     void InitialHowMuchCoin()
     {
-        howMuchCoin[0] = 10;
-        howMuchCoin[1] = 30;
-        howMuchCoin[2] = 30;
-        howMuchCoin[3] = 15;
-        howMuchCoin[4] = 25;
+        howMuchCoin[0] = 15;
+        howMuchCoin[1] = 25;
+        howMuchCoin[2] = 35;
+        howMuchCoin[3] = 30;
+        howMuchCoin[4] = 20;
         howMuchCoin[5] = 50;
     }
 }
