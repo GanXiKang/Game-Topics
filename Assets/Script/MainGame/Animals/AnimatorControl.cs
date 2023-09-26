@@ -136,6 +136,7 @@ public class AnimatorControl : MonoBehaviour
             if (isP1Dizziness)
             {
                 anim.SetBool("Dizziness", true);
+                isP1Dizziness = false;
             }
             else
             {
@@ -147,6 +148,7 @@ public class AnimatorControl : MonoBehaviour
             if (isP2Dizziness)
             {
                 anim.SetBool("Dizziness", true);
+                isP2Dizziness = false;
             }
             else
             {
@@ -158,6 +160,7 @@ public class AnimatorControl : MonoBehaviour
             if (isP3Dizziness)
             {
                 anim.SetBool("Dizziness", true);
+                isP3Dizziness = false;
             }
             else
             {
@@ -169,6 +172,7 @@ public class AnimatorControl : MonoBehaviour
             if (isP4Dizziness)
             {
                 anim.SetBool("Dizziness", true);
+                isP4Dizziness = false;
             }
             else
             {
