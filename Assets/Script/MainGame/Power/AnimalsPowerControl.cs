@@ -175,7 +175,6 @@ public class AnimalsPowerControl : MonoBehaviour
         AnimalsSkillAnimator();
         yield return new WaitForSeconds(5f);
         cowUsePower = false;
-        AnimalsSkillAnimator();
     }
     IEnumerator TigerPower()
     {
@@ -222,12 +221,12 @@ public class AnimalsPowerControl : MonoBehaviour
         {
             ChangeCameraControl.changeCameraNum++;
         }
+        AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
         if (Menu_ChoosePlayer.whoPlay >= 4)
         {
             ChangeCameraControl.changeCameraNum++;
         }
-        AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
@@ -259,8 +258,7 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[4]--;
         isRabbitPower = false;
         AnimalsSkillAnimator();
-        yield return new WaitForSeconds(4f);
-        AnimalsSkillAnimator();
+        yield return new WaitForSeconds(1f);
     }
 
     void AnimalsSkillAnimator()
