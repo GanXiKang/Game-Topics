@@ -16,11 +16,12 @@ public class AnimatorControl : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    void FixedUpdate()
+    void Update()
     {
         Wave();
-
         Move();
+        Skill();
+        Dizziness();
     }
 
     void Wave()
@@ -80,6 +81,14 @@ public class AnimatorControl : MonoBehaviour
                 anim.SetBool("Walk", false);
             }
         }
+    }
+    void Skill()
+    {
+        
+    }
+    void Dizziness()
+    {
+        
     }
     IEnumerator NotWave()
     {
