@@ -25,6 +25,7 @@ public class BombPropsControl : MonoBehaviour
                 if (DiceControl.P1_totalNum == pointNum)
                 {
                     IsStopUIControl.isBombStopP1 = true;
+                    AnimatorControl.isP1Dizziness = true;
                     StartCoroutine(StopTiming());
                 }
             }
@@ -40,6 +41,7 @@ public class BombPropsControl : MonoBehaviour
                 if (DiceControl.P2_totalNum == pointNum)
                 {
                     IsStopUIControl.isBombStopP2 = true;
+                    AnimatorControl.isP2Dizziness = true;
                     StartCoroutine(StopTiming());
                 }
             }
@@ -55,6 +57,7 @@ public class BombPropsControl : MonoBehaviour
                 if (DiceControl.P3_totalNum == pointNum)
                 {
                     IsStopUIControl.isBombStopP3 = true;
+                    AnimatorControl.isP3Dizziness = true;
                     StartCoroutine(StopTiming());
                 }
             }
@@ -70,6 +73,7 @@ public class BombPropsControl : MonoBehaviour
                 if (DiceControl.P4_totalNum == pointNum)
                 {
                     IsStopUIControl.isBombStopP4 = true;
+                    AnimatorControl.isP4Dizziness = true;
                     StartCoroutine(StopTiming());
                 }
             }
