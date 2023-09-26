@@ -6,7 +6,11 @@ public class AnimatorControl : MonoBehaviour
 {
     Animator anim;
 
-    public static bool isP1Move, isP2Move, isP3Move, isP4Move, isWave;
+    public static bool isWave;
+    public static bool isP1Move, isP2Move, isP3Move, isP4Move;
+    public static bool isP1Skill, isP2Skill, isP3Skill, isP4Skill;
+    public static bool isP1Dizziness, isP2Dizziness, isP3Dizziness, isP4Dizziness;
+
 
     void Start()
     {
