@@ -48,6 +48,7 @@ public class CowPowerControl : MonoBehaviour
                 {
                     IsStopUIControl.isCowPowerStopUI++;
                     isCowPowerStopP2 = true;
+                    AnimatorControl.isP2Dizziness = true;
                 }
             }
             if (other.tag == "P3")
@@ -56,6 +57,7 @@ public class CowPowerControl : MonoBehaviour
                 {
                     IsStopUIControl.isCowPowerStopUI++;
                     isCowPowerStopP3 = true;
+                    AnimatorControl.isP3Dizziness = true;
                 }
             }
             if (other.tag == "P4")
@@ -64,6 +66,7 @@ public class CowPowerControl : MonoBehaviour
                 {
                     IsStopUIControl.isCowPowerStopUI++;
                     isCowPowerStopP4 = true;
+                    AnimatorControl.isP4Dizziness = true;
                 }
             }
         }
