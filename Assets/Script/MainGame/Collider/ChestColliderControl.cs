@@ -27,6 +27,7 @@ public class ChestColliderControl : MonoBehaviour
                     {
                         P1_EnterBox = false;
                         AnimatorControl.isP1Move = false;
+                        AnimatorControl.isP1Skill = false;
                         StartCoroutine(ChangeCamera());
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
@@ -41,6 +42,7 @@ public class ChestColliderControl : MonoBehaviour
                     {
                         P2_EnterBox = false;
                         AnimatorControl.isP2Move = false;
+                        AnimatorControl.isP2Skill = false;
                         StartCoroutine(ChangeCamera());
                         if (Menu_ChoosePlayer.whyP2 == 1)
                         {
@@ -55,6 +57,7 @@ public class ChestColliderControl : MonoBehaviour
                     {
                         P3_EnterBox = false;
                         AnimatorControl.isP3Move = false;
+                        AnimatorControl.isP3Skill = false;
                         StartCoroutine(ChangeCamera());
                         if (Menu_ChoosePlayer.whyP3 == 1)
                         {
@@ -69,6 +72,7 @@ public class ChestColliderControl : MonoBehaviour
                     {
                         P4_EnterBox = false;
                         AnimatorControl.isP4Move = false;
+                        AnimatorControl.isP4Skill = false;
                         StartCoroutine(ChangeCamera());
                         if (Menu_ChoosePlayer.whyP4 == 1)
                         {

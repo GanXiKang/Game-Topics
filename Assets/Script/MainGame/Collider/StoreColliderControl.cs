@@ -24,6 +24,7 @@ public class StoreColliderControl : MonoBehaviour
                         who = 1;
                         P1_EnterStore = false;
                         AnimatorControl.isP1Move = false;
+                        AnimatorControl.isP1Skill = false;
                         StartCoroutine(LookTarget());
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
@@ -39,6 +40,7 @@ public class StoreColliderControl : MonoBehaviour
                         who = 2;
                         P2_EnterStore = false;
                         AnimatorControl.isP2Move = false;
+                        AnimatorControl.isP2Skill = false;
                         StartCoroutine(LookTarget());
                         if (Menu_ChoosePlayer.whyP2 == 1)
                         {
@@ -54,6 +56,7 @@ public class StoreColliderControl : MonoBehaviour
                         who = 3;
                         P3_EnterStore = false;
                         AnimatorControl.isP3Move = false;
+                        AnimatorControl.isP3Skill = false;
                         StartCoroutine(LookTarget());
                         if (Menu_ChoosePlayer.whyP3 == 1)
                         {
@@ -69,6 +72,7 @@ public class StoreColliderControl : MonoBehaviour
                         who = 4;
                         P4_EnterStore = false;
                         AnimatorControl.isP4Move = false;
+                        AnimatorControl.isP4Skill = false;
                         StartCoroutine(LookTarget());
                         if (Menu_ChoosePlayer.whyP4 == 1)
                         {

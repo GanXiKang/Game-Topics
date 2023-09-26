@@ -23,6 +23,7 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 1;
                         AnimatorControl.isP1Move = false;
+                        AnimatorControl.isP2Skill = false;
                         StartCoroutine(StartMiniGame());
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
@@ -36,6 +37,7 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 2;
                         AnimatorControl.isP2Move = false;
+                        AnimatorControl.isP2Skill = false;
                         StartCoroutine(StartMiniGame());
                         if (Menu_ChoosePlayer.whyP2 == 1)
                         {
@@ -49,6 +51,7 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 3;
                         AnimatorControl.isP3Move = false;
+                        AnimatorControl.isP3Skill = false;
                         StartCoroutine(StartMiniGame());
                     }
                     if (Menu_ChoosePlayer.whyP3 == 1)
@@ -62,6 +65,7 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 4;
                         AnimatorControl.isP4Move = false;
+                        AnimatorControl.isP4Skill = false;
                         StartCoroutine(StartMiniGame());
                         if (Menu_ChoosePlayer.whyP4 == 1)
                         {
