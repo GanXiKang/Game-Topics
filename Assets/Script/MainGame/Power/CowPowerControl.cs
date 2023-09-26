@@ -39,6 +39,7 @@ public class CowPowerControl : MonoBehaviour
                 {
                     IsStopUIControl.isCowPowerStopUI++;
                     isCowPowerStopP1 = true;
+                    AnimatorControl.isP1Dizziness = true;
                 }
             }
             if (other.tag == "P2")
