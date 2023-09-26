@@ -990,7 +990,7 @@ public class PowerUIControl : MonoBehaviour
     {
         animalsPowerUseNum[1] = 2;
         animalsPowerUseNum[2] = 3;
-        animalsPowerUseNum[3] = 2;
+        animalsPowerUseNum[3] = 3;
         animalsPowerUseNum[4] = 2;
         animalsPowerUseNum[5] = 2;
         animalsPowerUseNum[6] = 2;
