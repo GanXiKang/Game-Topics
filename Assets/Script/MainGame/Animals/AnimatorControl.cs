@@ -84,11 +84,97 @@ public class AnimatorControl : MonoBehaviour
     }
     void Skill()
     {
-        
+        if (gameObject.tag == "P1")
+        {
+            if (isP1Skill)
+            {
+                anim.SetBool("Skill", true);
+            }
+            else
+            {
+                anim.SetBool("Skill", false);
+            }
+        }
+        else if (gameObject.tag == "P2")
+        {
+            if (isP2Skill)
+            {
+                anim.SetBool("Skill", true);
+            }
+            else
+            {
+                anim.SetBool("Skill", false);
+            }
+        }
+        else if (gameObject.tag == "P3")
+        {
+            if (isP3Skill)
+            {
+                anim.SetBool("Skill", true);
+            }
+            else
+            {
+                anim.SetBool("Skill", false);
+            }
+        }
+        else if (gameObject.tag == "P4")
+        {
+            if (isP4Skill)
+            {
+                anim.SetBool("Skill", true);
+            }
+            else
+            {
+                anim.SetBool("Skill", false);
+            }
+        }
     }
     void Dizziness()
     {
-        
+        if (gameObject.tag == "P1")
+        {
+            if (isP1Dizziness)
+            {
+                anim.SetBool("Dizziness", true);
+            }
+            else
+            {
+                anim.SetBool("Dizziness", false);
+            }
+        }
+        else if (gameObject.tag == "P2")
+        {
+            if (isP2Dizziness)
+            {
+                anim.SetBool("Dizziness", true);
+            }
+            else
+            {
+                anim.SetBool("Dizziness", false);
+            }
+        }
+        else if (gameObject.tag == "P3")
+        {
+            if (isP3Dizziness)
+            {
+                anim.SetBool("Dizziness", true);
+            }
+            else
+            {
+                anim.SetBool("Dizziness", false);
+            }
+        }
+        else if (gameObject.tag == "P4")
+        {
+            if (isP4Dizziness)
+            {
+                anim.SetBool("Dizziness", true);
+            }
+            else
+            {
+                anim.SetBool("Dizziness", false);
+            }
+        }
     }
     IEnumerator NotWave()
     {
