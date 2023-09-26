@@ -46,6 +46,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[1]--;
         isMousePower = false;
+        AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
         switch (ChangeCameraControl.changeCameraNum)
         {
@@ -141,6 +142,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 }
                 break;
         }
+        AnimalsSkillAnimator();
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
@@ -170,8 +172,10 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[2]--;
         isCowPower = false;
         cowUsePower = true;
+        AnimalsSkillAnimator();
         yield return new WaitForSeconds(5f);
         cowUsePower = false;
+        AnimalsSkillAnimator();
     }
     IEnumerator TigerPower()
     {
@@ -206,6 +210,7 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         PowerUIControl.animalsPowerUseNum[3]--;
         isTigerPower = false;
+        AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
         systemText.text = "全部玩家后退！";
         SystemTestTextControl.isTimer = true; 
@@ -222,6 +227,7 @@ public class AnimalsPowerControl : MonoBehaviour
         {
             ChangeCameraControl.changeCameraNum++;
         }
+        AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
@@ -252,6 +258,58 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         PowerUIControl.animalsPowerUseNum[4]--;
         isRabbitPower = false;
-        yield return new WaitForSeconds(2f);
+        AnimalsSkillAnimator();
+        yield return new WaitForSeconds(4f);
+        AnimalsSkillAnimator();
+    }
+
+    void AnimalsSkillAnimator()
+    {
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                if (!AnimatorControl.isP1Skill)
+                {
+                    AnimatorControl.isP1Skill = true;
+                }
+                else
+                {
+                    AnimatorControl.isP1Skill = false;
+                }
+                break;
+
+            case 2:
+                if (!AnimatorControl.isP2Skill)
+                {
+                    AnimatorControl.isP2Skill = true;
+                }
+                else
+                {
+                    AnimatorControl.isP2Skill = false;
+                }
+                break;
+
+            case 3:
+                if (!AnimatorControl.isP3Skill)
+                {
+                    AnimatorControl.isP3Skill = true;
+                }
+                else
+                {
+                    AnimatorControl.isP3Skill = false;
+                }
+                break;
+
+            case 4:
+                if (!AnimatorControl.isP4Skill)
+                {
+                    AnimatorControl.isP4Skill = true;
+                }
+                else
+                {
+                    AnimatorControl.isP4Skill = false;
+                }
+                break;
+        }
     }
 }
