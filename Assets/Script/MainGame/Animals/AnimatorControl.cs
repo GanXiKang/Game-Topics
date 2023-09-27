@@ -135,49 +135,33 @@ public class AnimatorControl : MonoBehaviour
         {
             if (isP1Dizziness)
             {
-                anim.SetBool("Dizziness", true);
-                isP1Dizziness = false;
-            }
-            else
-            {
-                anim.SetBool("Dizziness", false);
+                StartCoroutine(DizzinessAnimator());
             }
         }
         else if (gameObject.tag == "P2")
         {
             if (isP2Dizziness)
             {
-                anim.SetBool("Dizziness", true);
-                isP2Dizziness = false;
-            }
-            else
-            {
-                anim.SetBool("Dizziness", false);
+                StartCoroutine(DizzinessAnimator());
             }
         }
         else if (gameObject.tag == "P3")
         {
             if (isP3Dizziness)
             {
-                anim.SetBool("Dizziness", true);
-                isP3Dizziness = false;
-            }
-            else
-            {
-                anim.SetBool("Dizziness", false);
+                StartCoroutine(DizzinessAnimator());
             }
         }
         else if (gameObject.tag == "P4")
         {
             if (isP4Dizziness)
             {
-                anim.SetBool("Dizziness", true);
-                isP4Dizziness = false;
+                StartCoroutine(DizzinessAnimator());
             }
-            else
-            {
-                anim.SetBool("Dizziness", false);
-            }
+            //else
+            //{
+            //    anim.SetBool("Dizziness", false);
+            //}
         }
     }
     IEnumerator NotWave()
@@ -185,5 +169,27 @@ public class AnimatorControl : MonoBehaviour
         anim.SetBool("Wave", true);
         yield return new WaitForSeconds(4f);
         isWave = false;
+    }
+    IEnumerator DizzinessAnimator()
+    {
+        anim.SetBool("Dizziness", true);
+        if (isP1Dizziness)
+        {
+            isP1Dizziness = false;
+        }
+        else if (isP2Dizziness)
+        {
+            isP2Dizziness = false;
+        }
+        else if (isP3Dizziness)
+        {
+            isP3Dizziness = false;
+        }
+        else if (isP4Dizziness)
+        {
+            isP4Dizziness = false;
+        }
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("Dizziness", false);
     }
 }
