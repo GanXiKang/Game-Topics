@@ -160,6 +160,7 @@ public class AnimatorControl : MonoBehaviour
             }
         }
     }
+
     IEnumerator NotWave()
     {
         anim.SetBool("Wave", true);
