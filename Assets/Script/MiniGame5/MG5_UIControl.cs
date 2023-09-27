@@ -6,14 +6,17 @@ using UnityEngine.UI;
 public class MG5_UIControl : MonoBehaviour
 {
     public GameObject startUI;
-    public Text timer, score;
+    public Image time;
+    public Text score;
     public AudioSource BGM;
     public AudioClip button, throwM, receiveM, move;
 
-    public static float gameTime = 45f;
+    public static float timer = 0;
     public static bool isStart = false;
 
     bool throwMusia = true, receiveMusia = true, moveMusia = true ;
+    float t, gameTime = 45;
+
     public void Button_Start()
     {
         startUI.SetActive(false);
