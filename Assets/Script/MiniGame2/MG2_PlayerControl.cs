@@ -17,7 +17,7 @@ public class MG2_PlayerControl : MonoBehaviour
 
         if (MG2_StartButtonControl.isStart == true)
         {
-            if (MG2_UIControl.timer > 0)
+            if (MG2_UIControl.timer <= 45)
             {
                 if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
                 {
