@@ -158,10 +158,6 @@ public class AnimatorControl : MonoBehaviour
             {
                 StartCoroutine(DizzinessAnimator());
             }
-            //else
-            //{
-            //    anim.SetBool("Dizziness", false);
-            //}
         }
     }
     IEnumerator NotWave()
