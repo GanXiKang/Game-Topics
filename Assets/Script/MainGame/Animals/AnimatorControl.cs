@@ -10,6 +10,7 @@ public class AnimatorControl : MonoBehaviour
     public static bool isP1Move, isP2Move, isP3Move, isP4Move;
     public static bool isP1Skill, isP2Skill, isP3Skill, isP4Skill;
     public static bool isP1Dizziness, isP2Dizziness, isP3Dizziness, isP4Dizziness;
+    public static bool isP1Confusion, isP2Confusion, isP3Confusion, isP4Confusion;
 
 
     void Start()
@@ -22,6 +23,7 @@ public class AnimatorControl : MonoBehaviour
         Move();
         Skill();
         Dizziness();
+        Confusion();
     }
 
     void Wave()
@@ -157,6 +159,53 @@ public class AnimatorControl : MonoBehaviour
             if (isP4Dizziness)
             {
                 StartCoroutine(DizzinessAnimator());
+            }
+        }
+    }
+    void Confusion()
+    {
+        if (gameObject.tag == "P1")
+        {
+            if (isP1Confusion)
+            {
+                anim.SetBool("Confusion", true);
+            }
+            else
+            {
+                anim.SetBool("Confusion", false);
+            }
+        }
+        else if (gameObject.tag == "P2")
+        {
+            if (isP2Confusion)
+            {
+                anim.SetBool("Confusion", true);
+            }
+            else
+            {
+                anim.SetBool("Confusion", false);
+            }
+        }
+        else if (gameObject.tag == "P3")
+        {
+            if (isP3Confusion)
+            {
+                anim.SetBool("Confusion", true);
+            }
+            else
+            {
+                anim.SetBool("Confusion", false);
+            }
+        }
+        else if (gameObject.tag == "P4")
+        {
+            if (isP4Confusion)
+            {
+                anim.SetBool("Confusion", true);
+            }
+            else
+            {
+                anim.SetBool("Confusion", false);
             }
         }
     }
