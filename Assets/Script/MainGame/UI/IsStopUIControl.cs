@@ -166,7 +166,7 @@ public class IsStopUIControl : MonoBehaviour
         {
             AnimatorControl.isP1Confusion = true;
         }
-        if (EventControl.isStopP1 && isBombStopP1 && CowPowerControl.isCowPowerStopP1)
+        if (!EventControl.isStopP1 && !isBombStopP1 && !CowPowerControl.isCowPowerStopP1)
         {
             AnimatorControl.isP1Confusion = false;
         }
@@ -175,7 +175,7 @@ public class IsStopUIControl : MonoBehaviour
         {
             AnimatorControl.isP2Confusion = true;
         }
-        if (EventControl.isStopP2 && isBombStopP2 && CowPowerControl.isCowPowerStopP2)
+        if (!EventControl.isStopP2 && !isBombStopP2 && !CowPowerControl.isCowPowerStopP2)
         {
             AnimatorControl.isP2Confusion = false;
         }
@@ -184,7 +184,7 @@ public class IsStopUIControl : MonoBehaviour
         {
             AnimatorControl.isP3Confusion = true;
         }
-        if (EventControl.isStopP3 && isBombStopP3 && CowPowerControl.isCowPowerStopP3)
+        if (!EventControl.isStopP3 && !isBombStopP3 && !CowPowerControl.isCowPowerStopP3)
         {
             AnimatorControl.isP3Confusion = false;
         }
@@ -193,7 +193,7 @@ public class IsStopUIControl : MonoBehaviour
         {
             AnimatorControl.isP4Confusion = true;
         }
-        if (EventControl.isStopP4 && isBombStopP4 && CowPowerControl.isCowPowerStopP4)
+        if (!EventControl.isStopP4 && !isBombStopP4 && !CowPowerControl.isCowPowerStopP4)
         {
             AnimatorControl.isP4Confusion = false;
         }
