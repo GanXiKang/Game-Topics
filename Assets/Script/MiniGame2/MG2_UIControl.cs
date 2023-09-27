@@ -9,9 +9,9 @@ public class MG2_UIControl : MonoBehaviour
     public Text Score;
     public GameObject teach;
 
-    public static float gameTime = 45f;
+    
 
-    float t, timer;
+    float t, timer, gameTime = 45f;
 
     void Update()
     {
@@ -22,11 +22,9 @@ public class MG2_UIControl : MonoBehaviour
                 teach.SetActive(false);
             }
 
-            if (gameTime >= 0)
-            {
-                gameTime -= 1 * Time.deltaTime;
-                
-            }
+            timer += 1 * Time.deltaTime;
+            t = timer / gameTime;
+            
             Score.text = "Score : " + MG2_CollectScoreControl.score.ToString();
         }
     }
