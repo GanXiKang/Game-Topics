@@ -16,7 +16,7 @@ public class MG5_PlayerMoveControl : MonoBehaviour
         x = transform.position.x;
         ani.SetBool("Boat", true);
 
-        if (MG5_UIControl.gameTime > 0)
+        if (MG5_UIControl.timer <= 45)
         {
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {

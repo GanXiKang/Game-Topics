@@ -15,7 +15,7 @@ public class MG5_HookControl : MonoBehaviour
     {
         y = transform.position.y;
 
-        if (MG5_UIControl.gameTime > 0)
+        if (MG5_UIControl.timer < 45)
         {
             if (Input.GetMouseButton(0))
             {

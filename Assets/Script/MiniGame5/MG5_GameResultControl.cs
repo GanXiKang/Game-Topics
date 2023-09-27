@@ -11,7 +11,7 @@ public class MG5_GameResultControl : MonoBehaviour
     public AudioClip gameWin, gameLose;
     void Update()
     {
-        if (MG5_UIControl.gameTime <= 0)
+        if (MG5_UIControl.timer >= 45)
         {
             if (MG5_HookControl.score >= 15)
             {
@@ -55,7 +55,7 @@ public class MG5_GameResultControl : MonoBehaviour
         PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
         MG5_HookControl.score = 0;
-        MG5_UIControl.gameTime = 45;
+        MG5_UIControl.timer = 0;
         MG5_UIControl.isStart = false;
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
