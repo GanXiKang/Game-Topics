@@ -12,6 +12,8 @@ public class IsStopUIControl : MonoBehaviour
 
     void Update()
     {
+        AnimalsConfusion();
+
         if (!AnimalsPowerControl.tigerUsePower)
         {
             if (isStopUI != 0)
@@ -156,5 +158,44 @@ public class IsStopUIControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+    }
+
+    void AnimalsConfusion()
+    {
+        if (EventControl.isStopP1 || isBombStopP1 || CowPowerControl.isCowPowerStopP1)
+        {
+            AnimatorControl.isP1Confusion = true;
+        }
+        if (EventControl.isStopP1 && isBombStopP1 && CowPowerControl.isCowPowerStopP1)
+        {
+            AnimatorControl.isP1Confusion = false;
+        }
+
+        if (EventControl.isStopP2 || isBombStopP2 || CowPowerControl.isCowPowerStopP2)
+        {
+            AnimatorControl.isP2Confusion = true;
+        }
+        if (EventControl.isStopP2 && isBombStopP2 && CowPowerControl.isCowPowerStopP2)
+        {
+            AnimatorControl.isP2Confusion = false;
+        }
+
+        if (EventControl.isStopP3 || isBombStopP3 || CowPowerControl.isCowPowerStopP3)
+        {
+            AnimatorControl.isP3Confusion = true;
+        }
+        if (EventControl.isStopP3 && isBombStopP3 && CowPowerControl.isCowPowerStopP3)
+        {
+            AnimatorControl.isP3Confusion = false;
+        }
+
+        if (EventControl.isStopP4 || isBombStopP4 || CowPowerControl.isCowPowerStopP4)
+        {
+            AnimatorControl.isP4Confusion = true;
+        }
+        if (EventControl.isStopP4 && isBombStopP4 && CowPowerControl.isCowPowerStopP4)
+        {
+            AnimatorControl.isP4Confusion = false;
+        }
     }
 }
