@@ -27,10 +27,20 @@ public class MG5_UIControl : MonoBehaviour
     {
         if (isStart)
         {
-            if (gameTime >= 0)
+            if (timer != gameTime)
             {
-                gameTime -= 1 * Time.deltaTime;
-                timer.text = "Time:" + gameTime.ToString("f0") + "s";
+                timer += 1 * Time.deltaTime;
+                t = timer / gameTime;
+                time.fillAmount = 1 - t;
+
+                if (timer > gameTime - 10)
+                {
+                    time.color = Color.red;
+                }
+                else
+                {
+                    time.color = Color.green;
+                }
 
                 if (MG5_HookControl.isFishing && throwMusia)
                 {
