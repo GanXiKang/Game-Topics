@@ -9,7 +9,8 @@ public class MG2_UIControl : MonoBehaviour
     public Text Score;
     public GameObject teach;
 
-    float t, timer, gameTime = 45f;
+    public static float timer = 0;
+    float t, gameTime = 45;
 
     void Update()
     {

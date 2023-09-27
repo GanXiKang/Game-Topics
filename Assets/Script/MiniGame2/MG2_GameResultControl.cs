@@ -15,7 +15,7 @@ public class MG2_GameResultControl : MonoBehaviour
 
     void Update()
     {
-        if (MG2_UIControl.gameTime <= 0 && gameResult)
+        if (MG2_UIControl.timer >= 45 && gameResult)
         {
             if (MG2_CollectScoreControl.score >= 30)
             {
@@ -77,7 +77,7 @@ public class MG2_GameResultControl : MonoBehaviour
         lose = false;
         MG2_StartButtonControl.isStart = false;
         MG2_CollectScoreControl.score = 0;
-        MG2_UIControl.gameTime = 45;
+        MG2_UIControl.timer = 0;
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
     }

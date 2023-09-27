@@ -12,7 +12,7 @@ public class MG2_InstantiateControl : MonoBehaviour
     {
         if (MG2_StartButtonControl.isStart == true)
         {
-            if (MG2_UIControl.gameTime > 2)
+            if (MG2_UIControl.timer < 42)
             {
                 appleTimer += Time.deltaTime;
                 boomTimer += Time.deltaTime;
