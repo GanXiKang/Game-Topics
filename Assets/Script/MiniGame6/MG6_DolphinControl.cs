@@ -38,9 +38,6 @@ public class MG6_DolphinControl : MonoBehaviour
         if (MG6_EndControl.back)
         {
             anim.SetBool("Wave", true);
-            yield return new WaitForSeconds(1f);
-            anim.SetBool("Wave", false);
-            anim.SetBool("Bye", true);
         }
     }
 }
