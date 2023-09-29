@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class MG6_DolphinControl : MonoBehaviour
 {
-    Animator anim;
+    public Animator anim;
 
-    float speed = 45;
-
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
+    float speed = -45;
 
     void Update()
     {
@@ -22,9 +17,15 @@ public class MG6_DolphinControl : MonoBehaviour
 
         if (MG6_PlayerMoveControl.dolphinHappy)
         {
-            anim.SetBool("Win", true);
-            MG6_PlayerMoveControl.dolphinHappy = false;
-            anim.SetBool("Win", false);
+            StartCoroutine(DolphinAnimator());
         }
+    }
+
+    IEnumerator DolphinAnimator()
+    {
+        anim.SetBool("Win", true);
+        MG6_PlayerMoveControl.dolphinHappy = false;
+        yield return new WaitForSeconds(1f);
+        anim.SetBool("Win", false);
     }
 }
