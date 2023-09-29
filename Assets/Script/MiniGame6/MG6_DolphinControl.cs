@@ -25,7 +25,7 @@ public class MG6_DolphinControl : MonoBehaviour
         }
         if (MG6_EndControl.back)
         {
-            anim.SetBool("Win", true);
+            StartCoroutine(DolphinAnimator());
         }
     }
 
@@ -35,5 +35,14 @@ public class MG6_DolphinControl : MonoBehaviour
         MG6_PlayerMoveControl.dolphinHappy = false;
         yield return new WaitForSeconds(1f);
         anim.SetBool("Win", false);
+        if (MG6_EndControl.back)
+        {
+            anim.SetBool("Wave", true);
+            yield return new WaitForSeconds(1f);
+            anim.SetBool("Wave", false);
+            anim.SetBool("Bye", true);
+            yield return new WaitForSeconds(1f);
+            anim.SetBool("Bye", false);
+        }
     }
 }
