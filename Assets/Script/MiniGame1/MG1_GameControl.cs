@@ -124,7 +124,6 @@ public class MG1_GameControl : MonoBehaviour
             cameraEnd = true;
             if (win >= 3)
             {
-                isEffects = true;
                 playerAniWin = true;
                 MG1_AIAnimatorControl.isLose = true;
                 BGM.PlayOneShot(gameWin);
