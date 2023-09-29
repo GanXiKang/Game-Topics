@@ -23,14 +23,24 @@ public class MG6_FireWorkControl : MonoBehaviour
     {
         openEffects = false;
         Instantiate(fireWork, transform.position, transform.rotation);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(fireWork, transform.position, transform.rotation);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(fireWork, transform.position, transform.rotation);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(fireWork, transform.position, transform.rotation);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(fireWork, transform.position, transform.rotation);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(fireWork, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(fireWork, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(fireWork, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(fireWork, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(fireWork, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
     }
 }
