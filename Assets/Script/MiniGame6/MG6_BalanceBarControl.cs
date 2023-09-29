@@ -59,7 +59,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
             }
             else
             {
-                value -= 0.5f;
+                value -= 0.4f;
             }
         }
         Judgment();
