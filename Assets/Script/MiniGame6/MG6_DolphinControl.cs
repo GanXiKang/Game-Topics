@@ -19,6 +19,10 @@ public class MG6_DolphinControl : MonoBehaviour
         {
             StartCoroutine(DolphinAnimator());
         }
+        if (MG6_BalanceBarControl.gameover)
+        {
+            anim.SetBool("Lose", true);
+        }
     }
 
     IEnumerator DolphinAnimator()
