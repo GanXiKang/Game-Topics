@@ -9,6 +9,7 @@ public class MG6_EndControl : MonoBehaviour
     public AudioSource BGM;
     public AudioClip gameWin;
 
+    public static bool back = false;
     public static bool isEffects = false;
 
     void Update()
@@ -18,6 +19,18 @@ public class MG6_EndControl : MonoBehaviour
             StartCoroutine(BackMainGame());
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            gameWinUI.SetActive(true);
+            BGM.PlayOneShot(gameWin);
+            isEffects = true;
+            back = true;
+        }
+    }
+
     void PlayerPlayGameControl()
     {
         if (MiniGameColliderControl.p == 1)
@@ -37,15 +50,7 @@ public class MG6_EndControl : MonoBehaviour
             MiniGameColliderControl.P4_playGame = false;
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            gameWinUI.SetActive(true);
-            BGM.PlayOneShot(gameWin);
-            isEffects = true;
-        }
-    }
+   
     IEnumerator BackMainGame()
     {
         PlayerPlayGameControl();
@@ -54,6 +59,7 @@ public class MG6_EndControl : MonoBehaviour
         MG6_UIControl.isStart = false;
         MG6_BalanceBarControl.gameover = false;
         isEffects = false;
+        back = false;
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
     }
