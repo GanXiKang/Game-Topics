@@ -5,12 +5,32 @@ using UnityEngine;
 public class MG5_GameEffectsControl : MonoBehaviour
 {
     public GameObject effects;
-    void FixedUpdate()
+
+    bool isEffects = true;
+
+    void Update()
     {
-        if (MG5_GameResultControl.isEffects)
+        if (MG5_GameResultControl.win)
         {
-            Instantiate(effects, transform.position, transform.rotation);
-            MG5_GameResultControl.isEffects = false;
+            if (isEffects)
+            {
+                StartCoroutine(OpenEffects());
+            }
         }
+    }
+
+    IEnumerator OpenEffects()
+    {
+        isEffects = false;
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
     }
 }
