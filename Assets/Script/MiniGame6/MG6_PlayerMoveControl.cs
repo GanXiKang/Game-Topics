@@ -9,6 +9,7 @@ public class MG6_PlayerMoveControl : MonoBehaviour
     float speed = 45;
 
     public static int j = 1;
+    public static bool dolphinHappy = false;
 
     void Start()
     {
@@ -39,6 +40,7 @@ public class MG6_PlayerMoveControl : MonoBehaviour
         if (other.tag == "JudgmentBox")
         {
             j++;
+            dolphinHappy = true;
             MG6_JudgmentBoxControl.musia = true;
         }
     }
