@@ -6,7 +6,7 @@ public class MG6_TeachingControl : MonoBehaviour
 {
     public GameObject teach, mouse1, mouse2;
 
-    void Start()
+    void Update()
     {
         StartCoroutine(CloseTeach());
     }
