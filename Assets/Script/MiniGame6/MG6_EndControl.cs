@@ -9,7 +9,8 @@ public class MG6_EndControl : MonoBehaviour
     public AudioSource BGM;
     public AudioClip gameWin;
 
-    public static bool back = false;
+    public static bool isEffects = false;
+
     void Update()
     {
         if (back || MG6_BalanceBarControl.gameover)
@@ -42,7 +43,7 @@ public class MG6_EndControl : MonoBehaviour
         {
             gameWinUI.SetActive(true);
             BGM.PlayOneShot(gameWin);
-            back = true;
+            isEffects = true;
         }
     }
     IEnumerator BackMainGame()
@@ -52,7 +53,7 @@ public class MG6_EndControl : MonoBehaviour
         MG6_PlayerMoveControl.j = 1;
         MG6_UIControl.isStart = false;
         MG6_BalanceBarControl.gameover = false;
-        back = false;
+        isEffects = false;
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
     }
