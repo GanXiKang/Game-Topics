@@ -9,7 +9,6 @@ public class MG6_UIControl : MonoBehaviour
     public AudioClip button;
     public static bool isStart = false;
     
-
     public void Button_Start()
     {
         startUI.SetActive(false);
