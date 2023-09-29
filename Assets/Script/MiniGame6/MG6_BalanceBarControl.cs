@@ -39,7 +39,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
             }
             power.rectTransform.localScale = new Vector3(value, 0.5f, 1);
 
-            if (MG6_EndControl.back == true)
+            if (MG6_EndControl.back)
             {
                 balanceBar.SetActive(false);
             }
@@ -53,7 +53,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
     {
         if (MG6_UIControl.isStart)
         {
-            if (isAdd == true)
+            if (isAdd)
             {
                 value += 0.2f;
             }
@@ -153,7 +153,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
         if (MG6_UIControl.isStart)
         {
             timer += Time.deltaTime;
-            if (isJudgment == false && MG6_EndControl.back == false)
+            if (!isJudgment && !MG6_EndControl.back)
             {
                 if (timer > 2f)
                 {
