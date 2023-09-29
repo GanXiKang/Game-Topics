@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MG5_GameResultControl : MonoBehaviour
 {
-    public static bool isEffects = false;
+    public static bool win = false;
     public GameObject gameWinUI, gameLoseUI;
     public AudioSource BGM;
     public AudioClip gameWin, gameLose;
+
     void Update()
     {
         if (MG5_UIControl.timer >= 45)
         {
             if (MG5_HookControl.score >= 15)
             {
-                isEffects = true;
+                win = true;
                 gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
             }
@@ -59,5 +60,6 @@ public class MG5_GameResultControl : MonoBehaviour
         MG5_UIControl.isStart = false;
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
+        win = false;
     }
 }
