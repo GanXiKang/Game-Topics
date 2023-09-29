@@ -21,7 +21,7 @@ public class MG1_GameEffectsControl : MonoBehaviour
 
     IEnumerator OpenEffects()
     {
-        MG1_GameControl.isEffects = false;
+        isEffects = false;
         Instantiate(effects, transform.position, transform.rotation);
         yield return new WaitForSeconds(1f);
         Instantiate(effects, transform.position, transform.rotation);
