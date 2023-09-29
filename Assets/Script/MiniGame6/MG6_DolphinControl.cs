@@ -23,6 +23,10 @@ public class MG6_DolphinControl : MonoBehaviour
         {
             anim.SetBool("Lose", true);
         }
+        if (MG6_EndControl.back)
+        {
+            anim.SetBool("Win", true);
+        }
     }
 
     IEnumerator DolphinAnimator()
