@@ -10,7 +10,7 @@ public class MG6_DolphinControl : MonoBehaviour
 
     void Update()
     {
-        if (MG6_UIControl.isStart && !MG6_EndControl.back)
+        if (MG6_UIControl.isStart)
         {
             transform.Translate(0, 0, speed * Time.deltaTime);
         }
