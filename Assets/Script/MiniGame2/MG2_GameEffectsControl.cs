@@ -8,7 +8,7 @@ public class MG2_GameEffectsControl : MonoBehaviour
 
     bool isEffects = true;
 
-    void Update()
+    void FixedUpdate()
     {
         if (MG2_GameResultControl.win)
         {

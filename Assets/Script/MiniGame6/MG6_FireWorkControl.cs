@@ -8,7 +8,7 @@ public class MG6_FireWorkControl : MonoBehaviour
 
     bool openEffects = true;
 
-    void Update()
+    void FixedUpdate()
     {
         if (MG6_EndControl.isEffects)
         {

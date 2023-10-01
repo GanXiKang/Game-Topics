@@ -9,7 +9,7 @@ public class MG4_GameEffectsControl : MonoBehaviour
 
     bool isEffects = true;
 
-    void Update()
+    void FixedUpdate()
     {
         if (isEffects)
         {
