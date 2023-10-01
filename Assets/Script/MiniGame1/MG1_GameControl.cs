@@ -126,6 +126,7 @@ public class MG1_GameControl : MonoBehaviour
             {
                 playerAniWin = true;
                 MG1_AIAnimatorControl.isLose = true;
+                MGFinishAwardControl.isWin = true;
                 BGM.PlayOneShot(gameWin);
             }
             else
@@ -196,5 +197,7 @@ public class MG1_GameControl : MonoBehaviour
         cameraEnd = false;
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
+        MGFinishAwardControl.miniGame = 1;
+        MGFinishAwardControl.isFinishMG = true;
     }
 }
