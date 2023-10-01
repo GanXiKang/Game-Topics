@@ -23,14 +23,24 @@ public class MG5_GameEffectsControl : MonoBehaviour
     {
         isEffects = false;
         Instantiate(effects, transform.position, transform.rotation);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(effects, transform.position, transform.rotation);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(effects, transform.position, transform.rotation);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(effects, transform.position, transform.rotation);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(effects, transform.position, transform.rotation);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
     }
 }
