@@ -15,11 +15,12 @@ public class MG4_TeachingControl : MonoBehaviour
             {
                 StartCoroutine(CloseTeach());
             }
-        }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            teach.SetActive(false);
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                teach.SetActive(false);
+            }
         }
     }
     IEnumerator CloseTeach()
