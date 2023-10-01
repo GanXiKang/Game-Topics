@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class MG2_SlothControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator anim;
+
+    public static bool isWin, isLose;
+
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        isWin = false;
+        isLose = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isWin)
+        {
+            anim.SetBool("Win", true);
+        }
+        if (isLose)
+        {
+            anim.SetBool("Lose", true);
+        }
     }
 }
