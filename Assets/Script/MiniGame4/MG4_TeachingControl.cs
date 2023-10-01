@@ -6,12 +6,13 @@ public class MG4_TeachingControl : MonoBehaviour
 {
     public GameObject teach, space1, space2;
 
-    private void Start()
-    {
-        StartCoroutine(CloseTeach());
-    }
     void Update()
     {
+        if (MG4_UIControl.isStart)
+        {
+            StartCoroutine(CloseTeach());
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             teach.SetActive(false);
