@@ -5,14 +5,18 @@ using UnityEngine;
 public class MG5_TeachingControl : MonoBehaviour
 {
     public GameObject TeachGroup,teach, mouse1, mouse2, mouse3;
-    void Start()
-    {
-        StartCoroutine(CloseTeach());
-    }
+
+    bool isTeach = true;
+
     void Update()
     {
         if (MG5_UIControl.isStart)
         {
+            if (isTeach)
+            {
+                StartCoroutine(CloseTeach());
+            }
+
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 teach.SetActive(false);
@@ -21,7 +25,7 @@ public class MG5_TeachingControl : MonoBehaviour
     }
     IEnumerator CloseTeach()
     {
-
+        isTeach = false;
         yield return new WaitForSeconds(0.5f);
         mouse1.SetActive(false);
         mouse2.SetActive(true);
