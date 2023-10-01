@@ -6,22 +6,18 @@ public class MG2_SlothControl : MonoBehaviour
 {
     Animator anim;
 
-    public static bool isWin, isLose;
-
     void Start()
     {
         anim = GetComponent<Animator>();
-        isWin = false;
-        isLose = false;
     }
 
     void Update()
     {
-        if (isWin)
+        if (MG2_GameResultControl.win)
         {
             anim.SetBool("Win", true);
         }
-        if (isLose)
+        if (MG2_GameResultControl.lose)
         {
             anim.SetBool("Lose", true);
         }
