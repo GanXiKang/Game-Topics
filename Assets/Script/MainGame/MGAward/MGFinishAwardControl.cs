@@ -131,35 +131,40 @@ public class MGFinishAwardControl : MonoBehaviour
                                 {
                                     PropsControl.P1Props[1] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[1];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 else
                                 {
                                     PropsControl.P1Props[2] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[2];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 break;
 
                             case 3:
+                                PropsControl.P1Props[6] += 1;
+                                systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[6];
+                                systemText.fontSize = 15;
+                                SystemTestTextControl.isTimer = true;
+                                break;
+
+                            case 5:
                                 if (p == 1)
                                 {
                                     PropsControl.P1Props[4] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[4];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 else
                                 {
                                     PropsControl.P1Props[5] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[5];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
-                                break;
-
-                            case 5:
-                                PropsControl.P1Props[6] += 1;
-                                systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[6];
-                                SystemTestTextControl.isTimer = true;
                                 break;
                         }
                     }
@@ -180,35 +185,40 @@ public class MGFinishAwardControl : MonoBehaviour
                                 {
                                     PropsControl.P2Props[1] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[1];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 else
                                 {
                                     PropsControl.P2Props[2] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[2];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 break;
 
                             case 3:
+                                PropsControl.P2Props[6] += 1;
+                                systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[6];
+                                systemText.fontSize = 15;
+                                SystemTestTextControl.isTimer = true;
+                                break;
+
+                            case 5:
                                 if (p == 1)
                                 {
                                     PropsControl.P2Props[4] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[4];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 else
                                 {
                                     PropsControl.P2Props[5] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[5];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
-                                break;
-
-                            case 5:
-                                PropsControl.P2Props[6] += 1;
-                                systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[6];
-                                SystemTestTextControl.isTimer = true;
                                 break;
                         }
                     }
@@ -229,35 +239,40 @@ public class MGFinishAwardControl : MonoBehaviour
                                 {
                                     PropsControl.P3Props[1] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[1];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 else
                                 {
                                     PropsControl.P3Props[2] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[2];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 break;
 
                             case 3:
+                                PropsControl.P3Props[6] += 1;
+                                systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[6];
+                                systemText.fontSize = 15;
+                                SystemTestTextControl.isTimer = true;
+                                break;
+
+                            case 5:
                                 if (p == 1)
                                 {
                                     PropsControl.P3Props[4] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[4];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 else
                                 {
                                     PropsControl.P3Props[5] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[5];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
-                                break;
-
-                            case 5:
-                                PropsControl.P3Props[6] += 1;
-                                systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[6];
-                                SystemTestTextControl.isTimer = true;
                                 break;
                         }
                     }
@@ -278,35 +293,40 @@ public class MGFinishAwardControl : MonoBehaviour
                                 {
                                     PropsControl.P4Props[1] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[1];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 else
                                 {
                                     PropsControl.P4Props[2] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[2];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 break;
 
                             case 3:
+                                PropsControl.P4Props[6] += 1;
+                                systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[6];
+                                systemText.fontSize = 15;
+                                SystemTestTextControl.isTimer = true;
+                                break;
+
+                            case 5:
                                 if (p == 1)
                                 {
                                     PropsControl.P4Props[4] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[4];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
                                 else
                                 {
                                     PropsControl.P4Props[5] += 1;
                                     systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[5];
+                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
-                                break;
-
-                            case 5:
-                                PropsControl.P4Props[6] += 1;
-                                systemText.text = "小遊戲勝利獲得" + PropsControl.propsName[6];
-                                SystemTestTextControl.isTimer = true;
                                 break;
                         }
                     }
