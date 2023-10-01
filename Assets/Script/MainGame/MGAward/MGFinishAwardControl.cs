@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MGFinishAwardControl : MonoBehaviour
 {
     public static int miniGame;
-    public static bool isFinishMG = false, isWin;
+    public static bool isFinishMG = false, isWin = false;
 
     public Text systemText;
 
@@ -325,6 +325,7 @@ public class MGFinishAwardControl : MonoBehaviour
     {
         Award();
         yield return new WaitForSeconds(2f);
+        isWin = false;
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
     }
