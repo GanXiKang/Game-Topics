@@ -85,6 +85,7 @@ public class MG4_EndControl : MonoBehaviour
         if (other.tag == "AI")
         {
             win = true;                         //PlayerÏÈµ½½Küc
+            MGFinishAwardControl.isWin = true;
             arriveEnd++;
             BGM.PlayOneShot(end);
         }
@@ -98,5 +99,7 @@ public class MG4_EndControl : MonoBehaviour
         move = false;
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
+        MGFinishAwardControl.miniGame = 4;
+        MGFinishAwardControl.isFinishMG = true;
     }
 }

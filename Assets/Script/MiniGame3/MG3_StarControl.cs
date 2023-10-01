@@ -54,6 +54,7 @@ public class MG3_StarControl : MonoBehaviour
         {
             if (win >= 2)
             {
+                MGFinishAwardControl.isWin = true;
                 gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
             }
@@ -114,5 +115,7 @@ public class MG3_StarControl : MonoBehaviour
         MG3_ButtonControl.destoryStarNum = 0;
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
+        MGFinishAwardControl.miniGame = 3;
+        MGFinishAwardControl.isFinishMG = true;
     }
 }

@@ -28,6 +28,7 @@ public class MG6_EndControl : MonoBehaviour
             BGM.PlayOneShot(gameWin);
             isEffects = true;
             back = true;
+            MGFinishAwardControl.isWin = true;
         }
     }
 
@@ -62,5 +63,7 @@ public class MG6_EndControl : MonoBehaviour
         back = false;
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
+        MGFinishAwardControl.miniGame = 6;
+        MGFinishAwardControl.isFinishMG = true;
     }
 }

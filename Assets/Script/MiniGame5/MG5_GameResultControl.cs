@@ -17,6 +17,7 @@ public class MG5_GameResultControl : MonoBehaviour
             if (MG5_HookControl.score >= 15)
             {
                 win = true;
+                MGFinishAwardControl.isWin = true;
                 gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
             }
@@ -59,7 +60,9 @@ public class MG5_GameResultControl : MonoBehaviour
         MG5_UIControl.timer = 0;
         MG5_UIControl.isStart = false;
         SceneManager.LoadScene(7);
-        MiniGameColliderControl.isMiniGame = false;
         win = false;
+        MiniGameColliderControl.isMiniGame = false;
+        MGFinishAwardControl.miniGame = 5;
+        MGFinishAwardControl.isFinishMG = true;
     }
 }

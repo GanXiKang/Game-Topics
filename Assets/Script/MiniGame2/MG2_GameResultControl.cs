@@ -20,6 +20,7 @@ public class MG2_GameResultControl : MonoBehaviour
             if (MG2_CollectScoreControl.score >= 30)
             {
                 win = true;
+                MGFinishAwardControl.isWin = true;
                 gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
             }
@@ -80,5 +81,7 @@ public class MG2_GameResultControl : MonoBehaviour
         MG2_UIControl.timer = 0;
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
+        MGFinishAwardControl.miniGame = 2;
+        MGFinishAwardControl.isFinishMG = true;
     }
 }
