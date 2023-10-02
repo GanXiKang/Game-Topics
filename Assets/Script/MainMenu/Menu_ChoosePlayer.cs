@@ -257,13 +257,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     public void OK_1p()
     {
-        confirm++;
-        isOkP1 = true;
-        OK[0].SetActive(false);
-        NO[0].SetActive(true);
-        button[0].SetActive(false);
-        button[1].SetActive(false);
-        BGM.PlayOneShot(ok);
+        if (whyP1 != 0)
+        {
+            confirm++;
+            isOkP1 = true;
+            OK[0].SetActive(false);
+            NO[0].SetActive(true);
+            button[0].SetActive(false);
+            button[1].SetActive(false);
+            BGM.PlayOneShot(ok);
+        }
     }
     public void Cancel_1p()
     {
@@ -295,13 +298,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     public void OK_2p()
     {
-        confirm++;
-        isOkP2 = true;
-        OK[1].SetActive(false);
-        NO[1].SetActive(true);
-        button[2].SetActive(false);
-        button[3].SetActive(false);
-        BGM.PlayOneShot(ok);
+        if (whyP2 != 0)
+        {
+            confirm++;
+            isOkP2 = true;
+            OK[1].SetActive(false);
+            NO[1].SetActive(true);
+            button[2].SetActive(false);
+            button[3].SetActive(false);
+            BGM.PlayOneShot(ok);
+        }
     }
     public void Cancel_2p()
     {
@@ -333,13 +339,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     public void OK_3p()
     {
-        confirm++;
-        isOkP3 = true;
-        OK[2].SetActive(false);
-        NO[2].SetActive(true);
-        button[4].SetActive(false);
-        button[5].SetActive(false);
-        BGM.PlayOneShot(ok);
+        if (whyP3 != 0)
+        {
+            confirm++;
+            isOkP3 = true;
+            OK[2].SetActive(false);
+            NO[2].SetActive(true);
+            button[4].SetActive(false);
+            button[5].SetActive(false);
+            BGM.PlayOneShot(ok);
+        }
     }
     public void Cancel_3p()
     {
@@ -371,13 +380,16 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     public void OK_4p()
     {
-        confirm++;
-        isOkP4 = true;
-        OK[3].SetActive(false);
-        NO[3].SetActive(true);
-        button[6].SetActive(false);
-        button[7].SetActive(false);
-        BGM.PlayOneShot(ok);
+        if (whyP4 != 0)
+        {
+            confirm++;
+            isOkP4 = true;
+            OK[3].SetActive(false);
+            NO[3].SetActive(true);
+            button[6].SetActive(false);
+            button[7].SetActive(false);
+            BGM.PlayOneShot(ok);
+        }
     }
     public void Cancel_4p()
     {
