@@ -25,9 +25,9 @@ public class Menu_AnimalsTagControl : MonoBehaviour
                 Destroy(this.gameObject);
                 Menu_ChoosePlayer.isDestoryP1 = 1;
             }
-            if(Menu_ChoosePlayer.isOkP1)
+            if(Menu_ChoosePlayer.isJumpP1)
             {
-                Menu_ChoosePlayer.isOkP1 = false;
+                Menu_ChoosePlayer.isJumpP1 = false;
                 StartCoroutine(AnimatorJumpControl());
             }
         }
@@ -38,9 +38,9 @@ public class Menu_AnimalsTagControl : MonoBehaviour
                 Destroy(this.gameObject);
                 Menu_ChoosePlayer.isDestoryP2 = 1;
             }
-            if (Menu_ChoosePlayer.isOkP2)
+            if (Menu_ChoosePlayer.isJumpP2)
             {
-                Menu_ChoosePlayer.isOkP2 = false;
+                Menu_ChoosePlayer.isJumpP2 = false;
                 StartCoroutine(AnimatorJumpControl());
             }
         }
@@ -51,9 +51,9 @@ public class Menu_AnimalsTagControl : MonoBehaviour
                 Destroy(this.gameObject);
                 Menu_ChoosePlayer.isDestoryP3 = 1;
             }
-            if (Menu_ChoosePlayer.isOkP3)
+            if (Menu_ChoosePlayer.isJumpP3)
             {
-                Menu_ChoosePlayer.isOkP3 = false;
+                Menu_ChoosePlayer.isJumpP3 = false;
                 StartCoroutine(AnimatorJumpControl());
             }
         }
@@ -64,9 +64,9 @@ public class Menu_AnimalsTagControl : MonoBehaviour
                 Destroy(this.gameObject);
                 Menu_ChoosePlayer.isDestoryP4 = 1;
             }
-            if (Menu_ChoosePlayer.isOkP4)
+            if (Menu_ChoosePlayer.isJumpP4)
             {
-                Menu_ChoosePlayer.isOkP4 = false;
+                Menu_ChoosePlayer.isJumpP4 = false;
                 StartCoroutine(AnimatorJumpControl());
             }
         }

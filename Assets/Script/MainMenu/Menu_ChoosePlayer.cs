@@ -7,7 +7,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
 {
     public static int whoPlay = 0, whyP1 = 0, whyP2 = 0, whyP3 = 0, whyP4 = 0;
     public static int isDestoryP1 = 0, isDestoryP2 = 0, isDestoryP3 = 0, isDestoryP4 = 0;
-    public static bool isOkP1, isOkP2, isOkP3, isOkP4;
+    public static bool isJumpP1, isJumpP2, isJumpP3, isJumpP4;
 
     public GameObject[] Group = new GameObject[2];
     public GameObject[] animals = new GameObject[4];
@@ -20,7 +20,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public AudioSource BGM;
     public AudioClip ok, cancel, change, error, close;
 
-    float confirm;
+    bool isP1OK, isP2OK, isP3OK, isP4OK;
 
     void Update()
     {
@@ -42,11 +42,13 @@ public class Menu_ChoosePlayer : MonoBehaviour
             if (whoPlay == 4)
             {
                 whyP4 = 0;
+                isP4OK = false;
                 isDestoryP4++;
             }
             if (whoPlay == 3)
             {
                 whyP3 = 0;
+                isP3OK = false;
                 isDestoryP3++;
             }
             whoPlay--;
@@ -77,7 +79,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             Group[0].SetActive(false);
             Group[1].SetActive(false);
 
-            if (confirm == 2)
+            if (isP1OK && isP2OK)
             {
                 if (whyP1 != whyP2)
                 {
@@ -95,7 +97,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
             Group[0].SetActive(true);
             Group[1].SetActive(false);
 
-            if (confirm == 3)
+            if (isP1OK && isP2OK && isP3OK)
             {
                 if (whyP1 != whyP2 && whyP1 != whyP3 && whyP2 != whyP3)
                 {
@@ -112,7 +114,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         {
             Group[1].SetActive(true);
 
-            if (confirm == 4)
+            if (isP1OK && isP2OK && isP3OK && isP4OK)
             {
                 if (whyP1 != whyP2 && whyP1 != whyP3 && whyP1 != whyP4 && whyP2 != whyP3 && whyP2 != whyP4 && whyP3 != whyP4)
                 {
@@ -259,8 +261,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (whyP1 != 0)
         {
-            confirm++;
-            isOkP1 = true;
+            isP1OK = true;
+            isJumpP1 = true;
             OK[0].SetActive(false);
             NO[0].SetActive(true);
             button[0].SetActive(false);
@@ -270,7 +272,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Cancel_1p()
     {
-        confirm--;
+        isP1OK = false;
         OK[0].SetActive(true);
         NO[0].SetActive(false);
         button[0].SetActive(true);
@@ -300,8 +302,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (whyP2 != 0)
         {
-            confirm++;
-            isOkP2 = true;
+            isP2OK = true;
+            isJumpP2 = true;
             OK[1].SetActive(false);
             NO[1].SetActive(true);
             button[2].SetActive(false);
@@ -312,6 +314,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public void Cancel_2p()
     {
         confirm--;
+        isP2OK = false;
         OK[1].SetActive(true);
         NO[1].SetActive(false);
         button[2].SetActive(true);
@@ -341,8 +344,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (whyP3 != 0)
         {
-            confirm++;
-            isOkP3 = true;
+            isP3OK = true;
+            isJumpP3 = true;
             OK[2].SetActive(false);
             NO[2].SetActive(true);
             button[4].SetActive(false);
@@ -352,7 +355,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Cancel_3p()
     {
-        confirm--;
+        isP3OK = false;
         OK[2].SetActive(true);
         NO[2].SetActive(false);
         button[4].SetActive(true);
@@ -382,8 +385,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (whyP4 != 0)
         {
-            confirm++;
-            isOkP4 = true;
+            isP4OK = true;
+            isJumpP4 = true;
             OK[3].SetActive(false);
             NO[3].SetActive(true);
             button[6].SetActive(false);
@@ -393,7 +396,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Cancel_4p()
     {
-        confirm--;
+        isP4OK = false;
         OK[3].SetActive(true);
         NO[3].SetActive(false);
         button[6].SetActive(true);
