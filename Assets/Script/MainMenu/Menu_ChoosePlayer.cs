@@ -313,7 +313,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     public void Cancel_2p()
     {
-        confirm--;
         isP2OK = false;
         OK[1].SetActive(true);
         NO[1].SetActive(false);
@@ -424,8 +423,11 @@ public class Menu_ChoosePlayer : MonoBehaviour
 
     public void Close_ErrorMenu()
     {
+        isP1OK = false;
+        isP2OK = false;
+        isP3OK = false;
+        isP4OK = false;
         ErrorMenu.SetActive(false);
-        confirm = 0;
         BGM.PlayOneShot(close);
         button[0].SetActive(true);
         button[1].SetActive(true);
