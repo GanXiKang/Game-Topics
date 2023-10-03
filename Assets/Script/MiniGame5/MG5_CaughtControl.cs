@@ -11,6 +11,7 @@ public class MG5_CaughtControl : MonoBehaviour
 
     bool isCaught;
     float speed = 35;
+
     void Start()
     {
         col = GetComponent<Collider>();
@@ -29,7 +30,7 @@ public class MG5_CaughtControl : MonoBehaviour
         {
             isCaught = true;
             col.enabled = false;
-            transform.Rotate(0, 0, -70);
+            //transform.Rotate(0, 0, -70);
             BGM.PlayOneShot(caught);
         }
     }
