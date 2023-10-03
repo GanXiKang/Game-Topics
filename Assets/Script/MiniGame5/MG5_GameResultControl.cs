@@ -18,11 +18,13 @@ public class MG5_GameResultControl : MonoBehaviour
             {
                 win = true;
                 MGFinishAwardControl.isWin = true;
+                MG5_BrownBearControl.isWin = true;
                 gameWinUI.SetActive(true);
                 BGM.PlayOneShot(gameWin);
             }
             else
             {
+                MG5_BrownBearControl.isLose = true;
                 gameLoseUI.SetActive(true);
                 BGM.PlayOneShot(gameLose);
             }
