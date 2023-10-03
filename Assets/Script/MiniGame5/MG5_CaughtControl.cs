@@ -29,6 +29,7 @@ public class MG5_CaughtControl : MonoBehaviour
         {
             isCaught = true;
             col.enabled = false;
+            transform.Rotate(0, 0, -70);
             BGM.PlayOneShot(caught);
         }
     }
