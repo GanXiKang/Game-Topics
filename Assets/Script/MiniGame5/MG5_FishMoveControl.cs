@@ -34,12 +34,12 @@ public class MG5_FishMoveControl : MonoBehaviour
         {
             transform.Translate(-2f * Time.deltaTime, 0, 0);
 
-            Quaternion targetR = Quaternion.Euler(0, 0, 0);
+            Quaternion targetR = Quaternion.Euler(0, -90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 8f && timer < 16f)
         {
-            transform.Translate(-2f * Time.deltaTime, 0, 0);
+            transform.Translate(-2f * Time.deltaTime, 90, 0);
 
             Quaternion targetR = Quaternion.Euler(0, 180, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
@@ -55,14 +55,14 @@ public class MG5_FishMoveControl : MonoBehaviour
         {
             transform.Translate(-1.5f * Time.deltaTime, 0, 0);
 
-            Quaternion targetR = Quaternion.Euler(0, 180, 0);
+            Quaternion targetR = Quaternion.Euler(0, 90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 7f && timer < 14f)
         {
             transform.Translate(-1.5f * Time.deltaTime, 0, 0);
 
-            Quaternion targetR = Quaternion.Euler(0, 0, 0);
+            Quaternion targetR = Quaternion.Euler(0, -90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 14f)
@@ -76,14 +76,14 @@ public class MG5_FishMoveControl : MonoBehaviour
         {
             transform.Translate(-1f * Time.deltaTime, 0, 0);
 
-            Quaternion targetR = Quaternion.Euler(0, 180, 0);
+            Quaternion targetR = Quaternion.Euler(0, 90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 5f && timer < 10f)
         {
             transform.Translate(-1f * Time.deltaTime, 0, 0);
 
-            Quaternion targetR = Quaternion.Euler(0, 0, 0);
+            Quaternion targetR = Quaternion.Euler(0, -90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 10f)
