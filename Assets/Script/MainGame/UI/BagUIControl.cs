@@ -450,7 +450,7 @@ public class BagUIControl : MonoBehaviour
                 break;
         }
         bagUI.SetActive(false);
-        if (whyUseProps <= 3)
+        if (whyUseProps <= 4)
         {
             SceneManager.LoadScene(9);
             DiceUIControl.isDiceScene = true;
