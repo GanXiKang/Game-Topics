@@ -15,7 +15,7 @@ public class MG5_HookControl : MonoBehaviour
     {
         y = transform.position.y;
 
-        if (MG5_UIControl.timer < 45)
+        if (MG5_UIControl.timer <= 45)
         {
             if (Input.GetMouseButton(0))
             {
@@ -38,31 +38,34 @@ public class MG5_HookControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (hookDown == true && takeBack == false)
+        if (MG5_UIControl.timer <= 45)
         {
-            if (y > 72)
+            if (hookDown == true && takeBack == false)
             {
-                transform.Translate(0, 0, speed * Time.deltaTime);
-                fishingLine.transform.Translate(0, -10 * Time.deltaTime, 0);
-                fishingLine.transform.localScale += new Vector3(0, 0.065f, 0);
+                if (y > 72)
+                {
+                    transform.Translate(0, 0, speed * Time.deltaTime);
+                    fishingLine.transform.Translate(0, -10 * Time.deltaTime, 0);
+                    fishingLine.transform.localScale += new Vector3(0, 0.065f, 0);
+                }
             }
-        }
-        if (hookUp == true && takeBack == false)
-        {
-            if (y < 155)
+            if (hookUp == true && takeBack == false)
             {
-                transform.Translate(0, 0, -speed * Time.deltaTime);
-                fishingLine.transform.Translate(0, 10 * Time.deltaTime, 0);
-                fishingLine.transform.localScale -= new Vector3(0, 0.065f, 0);
+                if (y < 155)
+                {
+                    transform.Translate(0, 0, -speed * Time.deltaTime);
+                    fishingLine.transform.Translate(0, 10 * Time.deltaTime, 0);
+                    fishingLine.transform.localScale -= new Vector3(0, 0.065f, 0);
+                }
             }
-        }
-        if (takeBack == true)
-        {
-            if (y < 155)
+            if (takeBack == true)
             {
-                transform.Translate(0, 0, -speed * 2 * Time.deltaTime);
-                fishingLine.transform.Translate(0, 10 * 2 * Time.deltaTime, 0);
-                fishingLine.transform.localScale -= new Vector3(0, 0.065f * 2, 0);
+                if (y < 155)
+                {
+                    transform.Translate(0, 0, -speed * 2 * Time.deltaTime);
+                    fishingLine.transform.Translate(0, 10 * 2 * Time.deltaTime, 0);
+                    fishingLine.transform.localScale -= new Vector3(0, 0.065f * 2, 0);
+                }
             }
         }
     }
