@@ -21,7 +21,7 @@ public class MG5_CaughtControl : MonoBehaviour
     {
         if (isCaught == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, receiveFish.position, 3f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, receiveFish.position, 1f * Time.deltaTime);
             //transform.Translate(0, speed * Time.deltaTime, 0);
             Destroy(gameObject, 3f);
         }
