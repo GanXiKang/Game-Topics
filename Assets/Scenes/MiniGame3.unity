@@ -1201,6 +1201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811307949}
   - component: {fileID: 811307950}
+  - component: {fileID: 811307951}
   m_Layer: 0
   m_Name: InsPlayer
   m_TagString: Untagged
@@ -1236,6 +1237,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &811307951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811307948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205ea8e3c3166404393475300e5b6041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animals:
+  - {fileID: 4224175311226989997, guid: ebd499fb2b8d3ba47aa5848251b3cc57, type: 3}
+  - {fileID: 8199635326109563581, guid: 5d38a41336e3bc543ba29f6426e86f7d, type: 3}
+  - {fileID: 5541231027825705250, guid: 7ba92bf932e9afa44862a479ad51d830, type: 3}
+  - {fileID: 5959989952592436711, guid: 7edf931ba0b939a4db48b7ce1b0e3611, type: 3}
 --- !u!1 &834902301
 GameObject:
   m_ObjectHideFlags: 0
