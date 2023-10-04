@@ -5,6 +5,7 @@ using UnityEngine;
 public class MG1_AnimatorControl : MonoBehaviour
 {
     Animator ani;
+
     void Start()
     {
         ani = GetComponent<Animator>();
