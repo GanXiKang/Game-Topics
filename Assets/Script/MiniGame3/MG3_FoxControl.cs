@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class MG3_FoxControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator anim;
+
+    public static bool isWin, isLose, isBye;
+
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isWin)
+        {
+            anim.SetBool("Win", true);
+            Invoke("FalseByAnimator", 0.5f);
+        }
+
+        if (isLose)
+        {
+            anim.SetBool("Lose", true);
+            Invoke("FalseByAnimator", 0.5f);
+        }
+
+        if (isBye)
+        {
+            anim.SetBool("Bye", true);
+            Invoke("FalseByAnimator", 0.5f);
+        }
+    }
+
+    void FalseByAnimator()
+    {
+        isWin = false;
+        isLose = false;
+        isBye = false;
     }
 }
