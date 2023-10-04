@@ -21,6 +21,7 @@ public class MG5_CaughtControl : MonoBehaviour
         if (isCaught == true)
         {
             transform.Translate(0, speed * Time.deltaTime, 0);
+            transform.Rotate(-70, 0, 0);
             Destroy(gameObject, 3f);
         }
     }
@@ -30,7 +31,6 @@ public class MG5_CaughtControl : MonoBehaviour
         {
             isCaught = true;
             col.enabled = false;
-            transform.Rotate(-70, 0, 0);
             BGM.PlayOneShot(caught);
         }
     }
