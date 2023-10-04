@@ -8,6 +8,7 @@ public class MG5_CaughtControl : MonoBehaviour
 
     public AudioSource BGM;
     public AudioClip caught;
+    public Transform receiveFish;
 
     bool isCaught;
     float speed = 35;
@@ -20,7 +21,8 @@ public class MG5_CaughtControl : MonoBehaviour
     {
         if (isCaught == true)
         {
-            transform.Translate(0, speed * Time.deltaTime, 0);
+            transform.position = Vector3.MoveTowards(transform.position, receiveFish.position, 3f);
+            //transform.Translate(0, speed * Time.deltaTime, 0);
             Destroy(gameObject, 3f);
         }
     }
