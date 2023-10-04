@@ -50,13 +50,4 @@ public class MG3_InsPlayerControl : MonoBehaviour
             }
         }
     }
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }
