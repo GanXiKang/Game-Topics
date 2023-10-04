@@ -60,8 +60,8 @@ public class AnimalsPowerControl : MonoBehaviour
                 }
                 else
                 {
-                    p = Random.Range(0, 7);
-                    for (int i = 0; i < 7; i++)
+                    p = Random.Range(0, 6);
+                    for (int i = 0; i < 6; i++)
                     {
                         if (i == p)
                         {
@@ -83,8 +83,8 @@ public class AnimalsPowerControl : MonoBehaviour
                 }
                 else
                 {
-                    p = Random.Range(0, 7);
-                    for (int i = 0; i < 7; i++)
+                    p = Random.Range(0, 6);
+                    for (int i = 0; i < 6; i++)
                     {
                         if (i == p)
                         {
@@ -106,8 +106,8 @@ public class AnimalsPowerControl : MonoBehaviour
                 }
                 else
                 {
-                    p = Random.Range(0, 7);
-                    for (int i = 0; i < 7; i++)
+                    p = Random.Range(0, 6);
+                    for (int i = 0; i < 6; i++)
                     {
                         if (i == p)
                         {
@@ -129,8 +129,8 @@ public class AnimalsPowerControl : MonoBehaviour
                 }
                 else
                 {
-                    p = Random.Range(0, 7);
-                    for (int i = 0; i < 7; i++)
+                    p = Random.Range(0, 6);
+                    for (int i = 0; i < 6; i++)
                     {
                         if (i == p)
                         {
