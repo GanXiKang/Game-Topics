@@ -6,7 +6,7 @@ public class MG5_HookControl : MonoBehaviour
 {
     public GameObject fishingLine;
     public static bool isFishing = false, takeBack = false;
-    public static float score = 0;
+
 
     float y, speed = 20;
     bool hookDown, hookUp;
@@ -74,22 +74,18 @@ public class MG5_HookControl : MonoBehaviour
         if (other.tag == "SmallFish")
         {
             takeBack = true;
-            score++;
         }
         else if (other.tag == "MidFish")
         {
             takeBack = true;
-            score += 3;
         }
         else if (other.tag == "BigFish")
         {
             takeBack = true;
-            score += 5;
         }
         else if (other.tag == "Rubbish")
         {
             takeBack = true;
-            score -= 3;
         }
     }
     private void OnTriggerStay(Collider other)
