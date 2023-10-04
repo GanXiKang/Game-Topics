@@ -8,6 +8,7 @@ public class MG5_ReceiveFishControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("YES");
         if (other.tag == "SmallFish")
         {
             score += 1;
