@@ -34,14 +34,14 @@ public class MG5_FishMoveControl : MonoBehaviour
         {
             transform.Translate(0, 0, 2f * Time.deltaTime);
 
-            Quaternion targetR = Quaternion.Euler(0, 90, transform.position.z);
+            Quaternion targetR = Quaternion.Euler(transform.position.x, 90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 8f && timer < 16f)
         {
             transform.Translate(0, 0, 2f * Time.deltaTime);
 
-            Quaternion targetR = Quaternion.Euler(0, -90, transform.position.z);
+            Quaternion targetR = Quaternion.Euler(transform.position.x, -90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 16f)
@@ -55,14 +55,14 @@ public class MG5_FishMoveControl : MonoBehaviour
         {
             transform.Translate(0, 0, 1.5f * Time.deltaTime);
 
-            Quaternion targetR = Quaternion.Euler(0, -90, transform.position.z);
+            Quaternion targetR = Quaternion.Euler(transform.position.x, -90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 7f && timer < 14f)
         {
             transform.Translate(0, 0, 1.5f * Time.deltaTime);
 
-            Quaternion targetR = Quaternion.Euler(0, 90, transform.position.z);
+            Quaternion targetR = Quaternion.Euler(transform.position.x, 90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 14f)
@@ -76,14 +76,14 @@ public class MG5_FishMoveControl : MonoBehaviour
         {
             transform.Translate(0, 0, 1 * Time.deltaTime);
 
-            Quaternion targetR = Quaternion.Euler(0, -90, transform.position.z);
+            Quaternion targetR = Quaternion.Euler(transform.position.x, -90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 5f && timer < 10f)
         {
             transform.Translate(0, 0, 1f * Time.deltaTime);
 
-            Quaternion targetR = Quaternion.Euler(0, 90, transform.position.z);
+            Quaternion targetR = Quaternion.Euler(transform.position.x, 90, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetR, 10f);
         }
         if (timer > 10f)
