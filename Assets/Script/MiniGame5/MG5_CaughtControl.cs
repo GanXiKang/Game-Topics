@@ -22,7 +22,7 @@ public class MG5_CaughtControl : MonoBehaviour
         if (isCaught == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, receiveFish.position, 30f * Time.deltaTime);
-            Destroy(gameObject, 3f);
+            //Destroy(gameObject, 3f);
         }
     }
     private void OnTriggerEnter(Collider other)
