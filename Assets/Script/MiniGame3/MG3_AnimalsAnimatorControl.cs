@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class MG3_AnimalsAnimatorControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator ani;
+
+    public static bool isWin, isLose;
+
     void Start()
     {
-        
+        ani = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isWin)
+        {
+            ani.SetBool("Win", true);
+            Invoke("FalseByAnimator", 0.5f);
+        }
+        if (isLose)
+        {
+            ani.SetBool("Lose", true);
+            Invoke("FalseByAnimator", 0.5f);
+        }
+    }
+    void FalseByAnimator()
+    {
+        isWin = false;
+        isLose = false;
     }
 }
