@@ -14,7 +14,7 @@ public class MG5_GameResultControl : MonoBehaviour
     {
         if (MG5_UIControl.timer >= 45)
         {
-            if (MG5_HookControl.score >= 15)
+            if (MG5_ReceiveFishControl.score >= 15)
             {
                 win = true;
                 MGFinishAwardControl.isWin = true;
@@ -58,7 +58,7 @@ public class MG5_GameResultControl : MonoBehaviour
     {
         PlayerPlayGameControl();
         yield return new WaitForSeconds(5f);
-        MG5_HookControl.score = 0;
+        MG5_ReceiveFishControl.score = 0;
         MG5_UIControl.timer = 0;
         MG5_UIControl.isStart = false;
         SceneManager.LoadScene(7);

@@ -73,7 +73,7 @@ public class MG5_UIControl : MonoBehaviour
                     moveMusia = true;
                 }
             }
-            score.text = "Score:" + MG5_HookControl.score;
+            score.text = "Score:" + MG5_ReceiveFishControl.score;
         }
     }
 }

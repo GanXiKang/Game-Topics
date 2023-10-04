@@ -62,7 +62,7 @@ public class MG5_PlayerMoveControl : MonoBehaviour
         else
         {
             ani.SetBool("Boat", false);
-            if (MG5_HookControl.score >= 15)
+            if (MG5_ReceiveFishControl.score >= 15)
             {
                 ani.SetBool("Win", true);
             }
