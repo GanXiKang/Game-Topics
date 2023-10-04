@@ -22,7 +22,6 @@ public class MG5_CaughtControl : MonoBehaviour
         if (isCaught == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, receiveFish.position, 30f * Time.deltaTime);
-            //transform.Translate(0, speed * Time.deltaTime, 0);
             Destroy(gameObject, 3f);
         }
     }
@@ -31,7 +30,7 @@ public class MG5_CaughtControl : MonoBehaviour
         if (other.tag == "Hook")
         {
             isCaught = true;
-            col.enabled = false;
+            //col.enabled = false;
             BGM.PlayOneShot(caught);
         }
     }
