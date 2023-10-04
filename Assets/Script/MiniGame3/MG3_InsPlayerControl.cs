@@ -5,7 +5,6 @@ using UnityEngine;
 public class MG3_InsPlayerControl : MonoBehaviour
 {
     public GameObject[] animals = new GameObject[4];
-    public Transform playerIns;
 
     void Start()
     {
@@ -15,7 +14,7 @@ public class MG3_InsPlayerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP1 == i)
                 {
-                    Instantiate(animals[i - 1], playerIns.transform.position, playerIns.transform.rotation);
+                    Instantiate(animals[i - 1], transform.position, transform.rotation);
                 }
             }
         }
@@ -25,7 +24,7 @@ public class MG3_InsPlayerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP2 == i)
                 {
-                    Instantiate(animals[i - 1], playerIns.transform.position, playerIns.transform.rotation);
+                    Instantiate(animals[i - 1], transform.position, transform.rotation);
                 }
             }
         }
@@ -35,7 +34,7 @@ public class MG3_InsPlayerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP3 == i)
                 {
-                    Instantiate(animals[i - 1], playerIns.transform.position, playerIns.transform.rotation);
+                    Instantiate(animals[i - 1], transform.position, transform.rotation);
                 }
             }
         }
@@ -45,7 +44,7 @@ public class MG3_InsPlayerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP4 == i)
                 {
-                    Instantiate(animals[i - 1], playerIns.transform.position, playerIns.transform.rotation);
+                    Instantiate(animals[i - 1], transform.position, transform.rotation);
                 }
             }
         }
