@@ -26,6 +26,7 @@ public class MG3_ButtonControl : MonoBehaviour
     {
         B_Next.SetActive(false);
         MG3_GameControl.round++;
+        DownCup = true;
         Invoke("TrueByisMove", 0.3f);
     }
     public void OpenWhyCup(int i)

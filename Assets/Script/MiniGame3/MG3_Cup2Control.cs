@@ -12,6 +12,10 @@ public class MG3_Cup2Control : MonoBehaviour
 
     void Update()
     {
+        if (MG3_ButtonControl.DownCup)
+        {
+            transform.position = targetB.position;
+        }
         if (MG3_GameControl.isMove && isNewRound)
         {
             StartCoroutine(MoveSemiCircleRound1());
