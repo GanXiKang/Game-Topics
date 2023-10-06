@@ -26,7 +26,7 @@ public class MG3_Cup3Control : MonoBehaviour
                     break;
 
                 case 3:
-                    //transform.position = targetA.position;
+                    transform.position = targetB.position;
                     break;
             }
         }
