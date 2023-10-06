@@ -19,13 +19,13 @@ public class MG3_ButtonControl : MonoBehaviour
     {
         startUI.SetActive(false);
         MG3_GameControl.round++;
-        Invoke("DownCup", 0.5f);
+        Invoke("DownCup", 1f);
     }
     public void NextRound()
     {
         B_Next.SetActive(false);
         MG3_GameControl.round++;
-        Invoke("DownCup", 0.3f);
+        Invoke("DownCup", 0.5f);
     }
     public void OpenWhyCup(int i)
     {
