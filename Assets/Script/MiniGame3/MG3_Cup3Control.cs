@@ -7,8 +7,8 @@ public class MG3_Cup3Control : MonoBehaviour
     public Transform targetA, targetB, targetC;
 
     int nowPosition;
-    bool isNewRound = true;
-    float elapsedTime; 
+    bool isNewRound = true, isOpenStarCup = true;
+    float elapsedTime;
     Vector3 startPosition;
 
     void Update()
@@ -45,6 +45,14 @@ public class MG3_Cup3Control : MonoBehaviour
                 case 3:
                     StartCoroutine(MoveSemiCircleRound3());
                     break;
+            }
+        }
+        if (MG3_ButtonControl.isOpenCup)
+        {
+            if (nowPosition == MG3_ButtonControl.openWhyCup)
+            {
+                transform.position += Vector3.up * 3f;
+                MG3_ButtonControl.isOpenCup = false;
             }
         }
     }

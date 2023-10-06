@@ -30,6 +30,7 @@ public class MG3_ButtonControl : MonoBehaviour
     public void OpenWhyCup(int i)
     {
         isGuess = false;
+        isOpenCup = true;
         openWhyCup = i;
     }
     
