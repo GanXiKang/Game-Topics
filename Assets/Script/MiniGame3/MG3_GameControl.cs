@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MG3_GameControl : MonoBehaviour
 {
-    
     void Start()
     {
         
