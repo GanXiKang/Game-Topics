@@ -134,6 +134,26 @@ public class MG3_Cup1Control : MonoBehaviour
         }
         transform.position = targetC.position;
 
+        yield return new WaitForSeconds(MG3_GameControl.duration);
+
+        yield return new WaitForSeconds(MG3_GameControl.duration);
+
+        startPosition = transform.position;
+        elapsedTime = 0;
+        while (elapsedTime < MG3_GameControl.duration)
+        {
+            float t = elapsedTime / MG3_GameControl.duration;
+
+            float sinValue = Mathf.Sin(t * Mathf.PI);
+            float y = Mathf.Lerp(0, 2, (sinValue + 1) / 2);
+
+            transform.position = Vector3.Lerp(startPosition, targetA.position, t) + new Vector3(0, 0, -2) * y;
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = targetA.position;
+
         isNewRound = true;
     }
     private IEnumerator MoveSemiCircleRound3()
