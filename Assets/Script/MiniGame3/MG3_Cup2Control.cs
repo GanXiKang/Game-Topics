@@ -18,7 +18,20 @@ public class MG3_Cup2Control : MonoBehaviour
         }
         if (MG3_GameControl.isCupMove && isNewRound)
         {
-            StartCoroutine(MoveSemiCircleRound1());
+            switch (MG3_GameControl.round)
+            {
+                case 1:
+                    StartCoroutine(MoveSemiCircleRound1());
+                    break;
+
+                case 2:
+                    StartCoroutine(MoveSemiCircleRound2());
+                    break;
+
+                case 3:
+                    StartCoroutine(MoveSemiCircleRound3());
+                    break;
+            }
         }
     }
     private IEnumerator MoveSemiCircleRound1()
@@ -61,4 +74,19 @@ public class MG3_Cup2Control : MonoBehaviour
 
         isNewRound = true;
     }
+    private IEnumerator MoveSemiCircleRound2()
+    {
+        isNewRound = false;
+
+        yield return null;
+
+        isNewRound = true;
+    }
+    private IEnumerator MoveSemiCircleRound3()
+    {
+        isNewRound = false;
+
+        yield return null;
+    }
+
 }
