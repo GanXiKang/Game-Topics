@@ -11,6 +11,7 @@ public class MG3_ButtonControl : MonoBehaviour
     public AudioClip button, openCup, closeCup;
 
     public static int openWhyCup;
+    public static bool DownCup;
 
     bool startActive;
 
@@ -18,7 +19,8 @@ public class MG3_ButtonControl : MonoBehaviour
     {
         startUI.SetActive(false);
         MG3_GameControl.round++;
-        Invoke("TrueByisMove", 0.5f);
+        DownCup = true;
+        Invoke("BeforeMoveCup", 0.5f);
     }
     public void NextRound()
     {
@@ -39,8 +41,9 @@ public class MG3_ButtonControl : MonoBehaviour
 
     }
 
-    void TrueByisMove()
+    void BeforeMoveCup()
     {
+        DownCup = false;
         MG3_GameControl.isMove = true;
     }
 }
