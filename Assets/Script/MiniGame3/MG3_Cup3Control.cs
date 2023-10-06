@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MG3_Cup3Control : MonoBehaviour
 {
-    public Transform targetA, targetB, targetC; 
+    public Transform targetA, targetB, targetC;
 
+    bool isNewRound = true;
     float elapsedTime; 
     Vector3 startPosition;
 
@@ -15,7 +16,7 @@ public class MG3_Cup3Control : MonoBehaviour
         {
             transform.position = targetC.position;
         }
-        if (MG3_GameControl.isCupMove)
+        if (MG3_GameControl.isCupMove && isNewRound)
         {
             StartCoroutine(MoveSemiCircleRound1());
         }
@@ -23,6 +24,8 @@ public class MG3_Cup3Control : MonoBehaviour
 
     private IEnumerator MoveSemiCircleRound1()
     {
+        isNewRound = false;
+
         yield return new WaitForSeconds(MG3_GameControl.duration);
 
         startPosition = transform.position;
@@ -56,5 +59,7 @@ public class MG3_Cup3Control : MonoBehaviour
             yield return null;
         }
         transform.position = targetA.position;
+
+        isNewRound = true;
     }
 }
