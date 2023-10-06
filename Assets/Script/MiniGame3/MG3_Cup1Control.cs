@@ -6,17 +6,16 @@ public class MG3_Cup1Control : MonoBehaviour
 {
     public Transform targetA, targetB, targetC; 
 
-    bool isNewRound = true;
     float elapsedTime; 
     Vector3 startPosition;
 
     void Update()
     {
-        if (MG3_ButtonControl.DownCup)
+        if (MG3_GameControl.DownCup)
         {
             transform.position = targetA.position;
         }
-        if (MG3_GameControl.isMove && isNewRound)
+        if (MG3_GameControl.isCupMove)
         {
             StartCoroutine(MoveSemiCircleRound1());
         }
@@ -24,8 +23,6 @@ public class MG3_Cup1Control : MonoBehaviour
 
     private IEnumerator MoveSemiCircleRound1()
     {
-        isNewRound = false;
-
         startPosition = transform.position;
         elapsedTime = 0;
         while (elapsedTime < MG3_GameControl.duration)
@@ -59,7 +56,5 @@ public class MG3_Cup1Control : MonoBehaviour
         transform.position = targetC.position;
 
         yield return new WaitForSeconds(MG3_GameControl.duration);
-
-        isNewRound = true;
     }
 }
