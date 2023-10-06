@@ -86,6 +86,7 @@ public class MG3_Cup2Control : MonoBehaviour
         }
         transform.position = targetB.position;
 
+        MG3_ButtonControl.isGuess = true;
         isNewRound = true;
     }
     private IEnumerator MoveSemiCircleRound2()
@@ -94,6 +95,7 @@ public class MG3_Cup2Control : MonoBehaviour
 
         yield return null;
 
+        MG3_ButtonControl.isGuess = true;
         isNewRound = true;
     }
     private IEnumerator MoveSemiCircleRound3()
@@ -101,6 +103,8 @@ public class MG3_Cup2Control : MonoBehaviour
         isNewRound = false;
 
         yield return null;
+
+        MG3_ButtonControl.isGuess = true;
     }
 
     private void OnTriggerEnter(Collider other)
