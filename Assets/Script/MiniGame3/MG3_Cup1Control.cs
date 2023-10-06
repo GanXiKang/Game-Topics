@@ -13,7 +13,7 @@ public class MG3_Cup1Control : MonoBehaviour
 
     void Update()
     {
-        if (MG3_GameControl.DownCup)
+        if (MG3_GameControl.isDownCup)
         {
             switch (MG3_GameControl.round)
             {

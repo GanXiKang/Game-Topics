@@ -50,6 +50,6 @@ public class MG3_ButtonControl : MonoBehaviour
 
     void DownCup()
     {
-        MG3_GameControl.DownCup = true;
+        MG3_GameControl.isDownCup = true;
     }
 }
