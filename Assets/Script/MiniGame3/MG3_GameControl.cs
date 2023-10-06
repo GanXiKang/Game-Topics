@@ -29,7 +29,7 @@ public class MG3_GameControl : MonoBehaviour
         if (DownCup)
         {
             Invoke("BeforeisCupMove", 0.5f);
-            Invoke("FalseByisCupMove", 0.5f);
+            Invoke("FalseByisCupMove", 1f);
         }
     }
 
