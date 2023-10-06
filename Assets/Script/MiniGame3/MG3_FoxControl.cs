@@ -18,26 +18,31 @@ public class MG3_FoxControl : MonoBehaviour
         if (isWin)
         {
             anim.SetBool("Win", true);
-            Invoke("FalseByAnimator", 0.5f);
+            isWin = false;
+        }
+        else 
+        {
+            anim.SetBool("Win", false);
         }
 
         if (isLose)
         {
             anim.SetBool("Lose", true);
-            Invoke("FalseByAnimator", 0.5f);
+            isLose = false;
+        }
+        else
+        {
+            anim.SetBool("Lose", false);
         }
 
         if (isBye)
         {
             anim.SetBool("Bye", true);
-            Invoke("FalseByAnimator", 0.5f);
+            isBye = false;
         }
-    }
-
-    void FalseByAnimator()
-    {
-        isWin = false;
-        isLose = false;
-        isBye = false;
+        else
+        {
+            anim.SetBool("Bye", false);
+        }
     }
 }
