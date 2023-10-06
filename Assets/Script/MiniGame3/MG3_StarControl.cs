@@ -18,23 +18,23 @@ public class MG3_StarControl : MonoBehaviour
     {
         if (MG3_ButtonControl.round <= 3)
         {
-            if (insStar == true)
-            {
-                x = Random.Range(1, 4);
-                switch (x)
-                {
-                    case 1:
-                        Instantiate(star, insPoint1.transform.position, insPoint1.transform.rotation);
-                        break;
-                    case 2:
-                        Instantiate(star, insPoint2.transform.position, insPoint2.transform.rotation);
-                        break;
-                    case 3:
-                        Instantiate(star, insPoint3.transform.position, insPoint3.transform.rotation);
-                        break;
-                }
-                insStar = false;
-            }
+            //if (insStar == true)
+            //{
+            //    x = Random.Range(1, 4);
+            //    switch (x)
+            //    {
+            //        case 1:
+            //            Instantiate(star, insPoint1.transform.position, insPoint1.transform.rotation);
+            //            break;
+            //        case 2:
+            //            Instantiate(star, insPoint2.transform.position, insPoint2.transform.rotation);
+            //            break;
+            //        case 3:
+            //            Instantiate(star, insPoint3.transform.position, insPoint3.transform.rotation);
+            //            break;
+            //    }
+            //    insStar = false;
+            //}
             if (MG3_ButtonControl.openBox)
             {
                 if (MG3_ButtonControl.openWhyBox == x)
