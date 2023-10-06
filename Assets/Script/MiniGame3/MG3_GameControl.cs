@@ -6,7 +6,8 @@ public class MG3_GameControl : MonoBehaviour
 {
     public static int round;
     public static bool isCupMove = false;
-    public static bool DownCup;
+    public static bool isDownCup;
+    public static bool isWin = true;
     public static float duration;
 
     void Update()
@@ -26,7 +27,7 @@ public class MG3_GameControl : MonoBehaviour
                 break;
         }
 
-        if (DownCup)
+        if (isDownCup)
         {
             Invoke("BeforeisCupMove", 0.5f);
             Invoke("FalseByisCupMove", 1f);
@@ -35,7 +36,7 @@ public class MG3_GameControl : MonoBehaviour
 
     void BeforeisCupMove()
     {
-        DownCup = false;
+        isDownCup = false;
         isCupMove = true;
     }
     void FalseByisCupMove()

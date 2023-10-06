@@ -13,7 +13,7 @@ public class MG3_Cup2Control : MonoBehaviour
 
     void Update()
     {
-        if (MG3_GameControl.DownCup)
+        if (MG3_GameControl.isDownCup)
         {
             switch (MG3_GameControl.round)
             {
@@ -56,6 +56,7 @@ public class MG3_Cup2Control : MonoBehaviour
             }
             else
             {
+                MG3_GameControl.isWin = false;
                 MG3_ButtonControl.isOpenCup = false;
                 Invoke("OpenStarCup", 1f);
             }
