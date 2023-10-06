@@ -9,7 +9,7 @@ public class MG3_ButtonControl : MonoBehaviour
     public AudioClip button, openCup, closeCup;
 
     public static int openWhyCup;
-    public static bool isGuess = false, isOpenCup = false;
+    public static bool isGuess = false, isOpenCup = false, isNextRound = false;
 
     bool startActive;
 
@@ -21,7 +21,7 @@ public class MG3_ButtonControl : MonoBehaviour
     }
     public void NextRound()
     {
-        B_Next.SetActive(false);
+        isNextRound = false;
         MG3_GameControl.round++;
         Invoke("DownCup", 0.5f);
     }
@@ -45,6 +45,15 @@ public class MG3_ButtonControl : MonoBehaviour
             B_Cup1.SetActive(false);
             B_Cup2.SetActive(false);
             B_Cup3.SetActive(false);
+        }
+
+        if (isNextRound)
+        {
+            B_Next.SetActive(true);
+        }
+        else
+        {
+            B_Next.SetActive(false);
         }
     }
 

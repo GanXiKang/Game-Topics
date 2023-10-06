@@ -5,11 +5,17 @@ using UnityEngine;
 public class MG3_GameControl : MonoBehaviour
 {
     public static int round;
-    public static bool isCupMove = false;
-    public static bool isDownCup;
-    public static bool isWin = true;
+    public static bool isCupMove, isDownCup, isEnd, isWin;
     public static float duration;
 
+    void Start()
+    {
+        round = 0;
+        isCupMove = false;
+        isDownCup = false;
+        isEnd = false;
+        isWin = true;
+    }
     void Update()
     {
         switch (round)

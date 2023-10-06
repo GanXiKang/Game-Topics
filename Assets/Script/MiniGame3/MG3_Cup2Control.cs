@@ -54,6 +54,7 @@ public class MG3_Cup2Control : MonoBehaviour
                 transform.position += Vector3.up * 3f;
                 MG3_ButtonControl.isOpenCup = false;
                 MG3_FoxControl.isLose = true;
+                GameRound();
             }
             else
             {
@@ -142,5 +143,17 @@ public class MG3_Cup2Control : MonoBehaviour
     void OpenStarCup()
     {
         transform.position += Vector3.up * 3f;
+        GameRound();
+    }
+    void GameRound()
+    {
+        if (MG3_GameControl.round < 3)
+        {
+            MG3_ButtonControl.isNextRound = true;
+        }
+        else
+        {
+            MG3_GameControl.isEnd = true;
+        }
     }
 }
