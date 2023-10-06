@@ -7,7 +7,7 @@ public class MG3_Cup1Control : MonoBehaviour
     public Transform targetA, targetB, targetC;
 
     int nowPosition;
-    bool isNewRound = true, isOpenStarCup = true;
+    bool isNewRound = true;
     float elapsedTime;
     Vector3 startPosition;
 
