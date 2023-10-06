@@ -30,7 +30,7 @@ public class MG3_Cup1Control : MonoBehaviour
     //        float sinValue = Mathf.Sin(t * Mathf.PI);
     //        float y = Mathf.Lerp(0, 2, (sinValue + 1) / 2);
 
-    //        transform.position = Vector3.Lerp(startPosition, targetB.position, t) + new Vector3(0, 0, 2) * y;
+    //        transform.position = Vector3.Lerp(startPosition, targetB.position, t) + new Vector3(0, 0, -2) * y;
 
     //        elapsedTime += Time.deltaTime;
     //        yield return null;
@@ -46,7 +46,7 @@ public class MG3_Cup1Control : MonoBehaviour
     //        float sinValue = Mathf.Sin(t * Mathf.PI);
     //        float y = Mathf.Lerp(0, 2, (sinValue + 1) / 2);
 
-    //        transform.position = Vector3.Lerp(startPosition, targetC.position, t) + new Vector3(0, 0, 2) * y;
+    //        transform.position = Vector3.Lerp(startPosition, targetC.position, t) + new Vector3(0, 0, -2) * y;
 
     //        elapsedTime += Time.deltaTime;
     //        yield return null;
