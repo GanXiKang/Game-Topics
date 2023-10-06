@@ -6,6 +6,7 @@ public class MG3_Cup2Control : MonoBehaviour
 {
     public Transform targetA, targetB, targetC;
 
+    int nowPosition;
     bool isNewRound = true;
     float elapsedTime; 
     Vector3 startPosition;
@@ -14,7 +15,6 @@ public class MG3_Cup2Control : MonoBehaviour
     {
         if (MG3_GameControl.DownCup)
         {
-
             switch (MG3_GameControl.round)
             {
                 case 1:
@@ -101,6 +101,23 @@ public class MG3_Cup2Control : MonoBehaviour
         isNewRound = false;
 
         yield return null;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("OK");
+        if (other.tag == "CupPointA")
+        {
+            nowPosition = 1;
+        }
+        else if (other.tag == "CupPointB")
+        {
+            nowPosition = 2;
+        }
+        else if (other.tag == "CupPointC")
+        {
+            nowPosition = 3;
+        }
     }
 
 }
