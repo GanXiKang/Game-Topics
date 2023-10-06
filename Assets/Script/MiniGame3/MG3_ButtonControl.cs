@@ -11,7 +11,7 @@ public class MG3_ButtonControl : MonoBehaviour
     public AudioClip button, openCup, closeCup;
 
     public static int openWhyCup;
-    public static bool isGuess = false;
+    public static bool isGuess = false, isOpenCup = false;
 
     bool startActive;
 
