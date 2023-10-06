@@ -24,5 +24,15 @@ public class MG3_GameControl : MonoBehaviour
                 duration = 0.5f;
                 break;
         }
+
+        if (isMove)
+        {
+            Invoke("FalseByisMove()", 0.5f);
+        }
+    }
+
+    void FalseByisMove()
+    {
+        isMove = false;
     }
 }
