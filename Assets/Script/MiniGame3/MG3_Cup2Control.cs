@@ -53,11 +53,13 @@ public class MG3_Cup2Control : MonoBehaviour
             {
                 transform.position += Vector3.up * 3f;
                 MG3_ButtonControl.isOpenCup = false;
+                MG3_FoxControl.isLose = true;
             }
             else
             {
                 MG3_GameControl.isWin = false;
                 MG3_ButtonControl.isOpenCup = false;
+                MG3_FoxControl.isWin = true;
                 Invoke("OpenStarCup", 1f);
             }
         }
