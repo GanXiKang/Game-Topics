@@ -14,7 +14,20 @@ public class MG3_Cup1Control : MonoBehaviour
     {
         if (MG3_GameControl.DownCup)
         {
-            transform.position = targetA.position;
+            switch (MG3_GameControl.round)
+            {
+                case 1:
+                    transform.position = targetA.position;
+                    break;
+
+                case 2:
+                    transform.position = targetC.position;
+                    break;
+
+                case 3:
+                    //transform.position = targetA.position;
+                    break;
+            }
         }
         if (MG3_GameControl.isCupMove && isNewRound)
         {
