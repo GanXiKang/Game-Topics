@@ -4,57 +4,57 @@ using UnityEngine;
 
 public class MG3_Cup2Control : MonoBehaviour
 {
-    public Transform targetA, targetB, targetC; // Ä¿˜ËÎ»ÖÃ
+    public Transform targetA, targetB, targetC;
 
     bool isNewRound = true;
-    float elapsedTime; // ß\„Ó³ÖÀm•rég
+    float elapsedTime; 
     Vector3 startPosition;
 
     void Update()
     {
-        //if (ObjectMoveControl.isMove && isNewRound)
-        //{
-        //    StartCoroutine(MoveSemiCircleRound1());
-        //}
+        if (MG3_GameControl.isMove && isNewRound)
+        {
+            StartCoroutine(MoveSemiCircleRound1());
+        }
     }
-    //private IEnumerator MoveSemiCircleRound1()
-    //{
-    //    isNewRound = false;
+    private IEnumerator MoveSemiCircleRound1()
+    {
+        isNewRound = false;
 
-    //    startPosition = transform.position;
-    //    elapsedTime = 0;
-    //    while (elapsedTime < ObjectMoveControl.duration)
-    //    {
-    //        float t = elapsedTime / ObjectMoveControl.duration;
+        startPosition = transform.position;
+        elapsedTime = 0;
+        while (elapsedTime < MG3_GameControl.duration)
+        {
+            float t = elapsedTime / MG3_GameControl.duration;
 
-    //        float sinValue = Mathf.Sin(t * Mathf.PI);
-    //        float y = Mathf.Lerp(0, 2, (sinValue + 1) / 2);
+            float sinValue = Mathf.Sin(t * Mathf.PI);
+            float y = Mathf.Lerp(0, 2, (sinValue + 1) / 2);
 
-    //        transform.position = Vector3.Lerp(startPosition, targetA.position, t) + new Vector3(0, 0, 2) * y;
+            transform.position = Vector3.Lerp(startPosition, targetA.position, t) + new Vector3(0, 0, 2) * y;
 
-    //        elapsedTime += Time.deltaTime;
-    //        yield return null;
-    //    }
-    //    transform.position = targetA.position;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = targetA.position;
 
-    //    yield return new WaitForSeconds(ObjectMoveControl.duration);
+        yield return new WaitForSeconds(MG3_GameControl.duration);
 
-    //    startPosition = transform.position;
-    //    elapsedTime = 0;
-    //    while (elapsedTime < ObjectMoveControl.duration)
-    //    {
-    //        float t = elapsedTime / ObjectMoveControl.duration;
+        startPosition = transform.position;
+        elapsedTime = 0;
+        while (elapsedTime < MG3_GameControl.duration)
+        {
+            float t = elapsedTime / MG3_GameControl.duration;
 
-    //        float sinValue = Mathf.Sin(t * Mathf.PI);
-    //        float y = Mathf.Lerp(0, 2, (sinValue + 1) / 2);
+            float sinValue = Mathf.Sin(t * Mathf.PI);
+            float y = Mathf.Lerp(0, 2, (sinValue + 1) / 2);
 
-    //        transform.position = Vector3.Lerp(startPosition, targetB.position, t) + new Vector3(0, 0, -2) * y;
+            transform.position = Vector3.Lerp(startPosition, targetB.position, t) + new Vector3(0, 0, -2) * y;
 
-    //        elapsedTime += Time.deltaTime;
-    //        yield return null;
-    //    }
-    //    transform.position = targetB.position;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = targetB.position;
 
-    //    isNewRound = true;
-    //}
+        isNewRound = true;
+    }
 }
