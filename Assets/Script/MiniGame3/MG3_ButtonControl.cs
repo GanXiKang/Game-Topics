@@ -17,65 +17,44 @@ public class MG3_ButtonControl : MonoBehaviour
 
     public void Button_Start()
     {
-        BGM.PlayOneShot(button);
-        startUI.SetActive(false);
-        B_Box1.gameObject.SetActive(true);
-        B_Box2.gameObject.SetActive(true);
-        B_Box3.gameObject.SetActive(true);
-        MG3_StarControl.insStar = true;
-        downCup = true;
-        BGM.PlayOneShot(closeCup);
-        destoryStarNum++;
-        round++;
-        print("Round" + round);
+        //BGM.PlayOneShot(button);
+        //startUI.SetActive(false);
+        //B_Box1.gameObject.SetActive(true);
+        //B_Box2.gameObject.SetActive(true);
+        //B_Box3.gameObject.SetActive(true);
+        //MG3_StarControl.insStar = true;
+        //downCup = true;
+        //BGM.PlayOneShot(closeCup);
+        //destoryStarNum++;
+        //round++;
+        //print("Round" + round);
     }
     public void NextRound()
     {
-        B_Next.gameObject.SetActive(false);
-        B_Box1.gameObject.SetActive(true);
-        B_Box2.gameObject.SetActive(true);
-        B_Box3.gameObject.SetActive(true);
-        MG3_StarControl.insStar = true;
-        downCup = true;
-        BGM.PlayOneShot(closeCup);
-        destoryStar = true;
-        destoryStarNum++;
-        round++;
-        print("Round" + round);
+        //B_Next.gameObject.SetActive(false);
+        //B_Box1.gameObject.SetActive(true);
+        //B_Box2.gameObject.SetActive(true);
+        //B_Box3.gameObject.SetActive(true);
+        //MG3_StarControl.insStar = true;
+        //downCup = true;
+        //BGM.PlayOneShot(closeCup);
+        //destoryStar = true;
+        //destoryStarNum++;
+        //round++;
+        //print("Round" + round);
     }
-    public void OpenBox1()
+    public void OpenWhyCup(int i)
     {
-        MG3_BoxMoveControl.openBox1 = true;
+        //MG3_BoxMoveControl.openBox1 = true;
         openBox = true;
-        openWhyBox = 1;
+        openWhyBox = i;
         B_Box1.gameObject.SetActive(false);
         B_Box2.gameObject.SetActive(false);
         B_Box3.gameObject.SetActive(false);
         startActive = true;
         BGM.PlayOneShot(openCup);
     }
-    public void OpenBox2()
-    {
-        MG3_BoxMoveControl.openBox2 = true;
-        openBox = true;
-        openWhyBox = 2;
-        B_Box1.gameObject.SetActive(false);
-        B_Box2.gameObject.SetActive(false);
-        B_Box3.gameObject.SetActive(false);
-        startActive = true;
-        BGM.PlayOneShot(openCup);
-    }
-    public void OpenBox3()
-    {
-        MG3_BoxMoveControl.openBox3 = true;
-        openBox = true;
-        openWhyBox = 3;
-        B_Box1.gameObject.SetActive(false);
-        B_Box2.gameObject.SetActive(false);
-        B_Box3.gameObject.SetActive(false);
-        startActive = true;
-        BGM.PlayOneShot(openCup);
-    }
+    
     void Update()
     {
         if (round <= 3)
