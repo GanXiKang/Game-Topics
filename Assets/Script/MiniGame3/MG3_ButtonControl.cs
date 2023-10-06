@@ -17,7 +17,8 @@ public class MG3_ButtonControl : MonoBehaviour
 
     public void Button_Start()
     {
-        
+        startUI.SetActive(false);
+        MG3_GameControl.round++;
     }
     public void NextRound()
     {
