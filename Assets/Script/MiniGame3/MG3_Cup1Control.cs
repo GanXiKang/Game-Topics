@@ -160,7 +160,55 @@ public class MG3_Cup1Control : MonoBehaviour
     {
         isNewRound = false;
 
-        yield return null;
+        startPosition = transform.position;
+        elapsedTime = 0;
+        while (elapsedTime < MG3_GameControl.duration)
+        {
+            float t = elapsedTime / MG3_GameControl.duration;
+
+            float sinValue = Mathf.Sin(t * Mathf.PI);
+            float y = Mathf.Lerp(0, 2, (sinValue + 1) / 2);
+
+            transform.position = Vector3.Lerp(startPosition, targetB.position, t) + new Vector3(0, 0, 2) * y;
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = targetB.position;
+
+        startPosition = transform.position;
+        elapsedTime = 0;
+        while (elapsedTime < MG3_GameControl.duration)
+        {
+            float t = elapsedTime / MG3_GameControl.duration;
+
+            float sinValue = Mathf.Sin(t * Mathf.PI);
+            float y = Mathf.Lerp(0, 2, (sinValue + 1) / 2);
+
+            transform.position = Vector3.Lerp(startPosition, targetC.position, t) + new Vector3(0, 0, 2) * y;
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = targetC.position;
+
+        startPosition = transform.position;
+        elapsedTime = 0;
+        while (elapsedTime < MG3_GameControl.duration)
+        {
+            float t = elapsedTime / MG3_GameControl.duration;
+
+            float sinValue = Mathf.Sin(t * Mathf.PI);
+            float y = Mathf.Lerp(0, 2, (sinValue + 1) / 2);
+
+            transform.position = Vector3.Lerp(startPosition, targetB.position, t) + new Vector3(0, 0, -2) * y;
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = targetB.position;
+
+        yield return new WaitForSeconds(MG3_GameControl.duration);
     }
 
     private void OnTriggerEnter(Collider other)
