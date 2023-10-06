@@ -7,7 +7,7 @@ public class MG3_Cup2Control : MonoBehaviour
     public Transform targetA, targetB, targetC;
 
     int nowPosition;
-    bool isNewRound = true, isOpenStarCup = true;
+    bool isNewRound = true;
     float elapsedTime; 
     Vector3 startPosition;
 
@@ -53,6 +53,10 @@ public class MG3_Cup2Control : MonoBehaviour
             {
                 transform.position += Vector3.up * 3f;
                 MG3_ButtonControl.isOpenCup = false;
+            }
+            else
+            {
+                Invoke("OpenStarCup", 1f);
             }
         }
     }
@@ -129,5 +133,10 @@ public class MG3_Cup2Control : MonoBehaviour
         {
             nowPosition = 3;
         }
+    }
+
+    void OpenStarCup()
+    {
+        transform.position += Vector3.up * 3f;
     }
 }
