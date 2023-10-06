@@ -52,7 +52,6 @@ public class MG3_Cup1Control : MonoBehaviour
             if (nowPosition == MG3_ButtonControl.openWhyCup)
             {
                 transform.position += Vector3.up * 3f;
-                MG3_ButtonControl.isOpenCup = false;
             }
         }
     }

@@ -56,6 +56,7 @@ public class MG3_Cup2Control : MonoBehaviour
             }
             else
             {
+                MG3_ButtonControl.isOpenCup = false;
                 Invoke("OpenStarCup", 1f);
             }
         }
