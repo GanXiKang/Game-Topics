@@ -5,7 +5,8 @@ using UnityEngine;
 public class MG3_GameControl : MonoBehaviour
 {
     public static int round;
-    public static bool isMove = false;
+    public static bool isCupMove = false;
+    public static bool DownCup;
     public static float duration;
 
     void Update()
@@ -25,14 +26,20 @@ public class MG3_GameControl : MonoBehaviour
                 break;
         }
 
-        if (isMove)
+        if (DownCup)
         {
-            Invoke("FalseByisMove()", 0.5f);
+            Invoke("BeforeisCupMove", 0.5f);
+            Invoke("FalseByisCupMove", 0.5f);
         }
     }
 
-    void FalseByisMove()
+    void BeforeisCupMove()
     {
-        isMove = false;
+        DownCup = false;
+        isCupMove = true;
+    }
+    void FalseByisCupMove()
+    {
+        isCupMove = false;
     }
 }
