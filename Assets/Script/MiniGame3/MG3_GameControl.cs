@@ -25,11 +25,11 @@ public class MG3_GameControl : MonoBehaviour
                 break;
 
             case 2:
-                duration = 1f;
+                duration = 1.2f;
                 break;
 
             case 3:
-                duration = 0.5f;
+                duration = 0.8f;
                 break;
         }
 
