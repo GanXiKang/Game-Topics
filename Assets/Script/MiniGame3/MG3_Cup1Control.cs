@@ -106,7 +106,6 @@ public class MG3_Cup1Control : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("OK");
         if (other.tag == "CupPointA")
         {
             nowPosition = 1;

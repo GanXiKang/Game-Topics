@@ -105,7 +105,6 @@ public class MG3_Cup2Control : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("OK");
         if (other.tag == "CupPointA")
         {
             nowPosition = 1;
@@ -119,5 +118,4 @@ public class MG3_Cup2Control : MonoBehaviour
             nowPosition = 3;
         }
     }
-
 }
