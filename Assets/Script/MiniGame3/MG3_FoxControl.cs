@@ -38,11 +38,15 @@ public class MG3_FoxControl : MonoBehaviour
         if (isBye)
         {
             anim.SetBool("Bye", true);
-            isBye = false;
+            Invoke("FalseByisBye", 5f);
         }
         else
         {
             anim.SetBool("Bye", false);
         }
+    }
+    void FalseByisBye()
+    {
+        isBye = false;
     }
 }
