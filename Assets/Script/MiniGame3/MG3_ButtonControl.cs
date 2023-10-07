@@ -11,8 +11,6 @@ public class MG3_ButtonControl : MonoBehaviour
     public static int openWhyCup;
     public static bool isGuess = false, isOpenCup = false, isNextRound = false;
 
-    bool startActive;
-
     public void Button_Start()
     {
         startUI.SetActive(false);
