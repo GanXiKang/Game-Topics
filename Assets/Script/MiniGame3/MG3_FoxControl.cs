@@ -18,7 +18,7 @@ public class MG3_FoxControl : MonoBehaviour
         if (isWin)
         {
             anim.SetBool("Win", true);
-            //isWin = false;
+            Invoke("FalseByisGuessCup", 1f);
         }
         else 
         {
@@ -28,7 +28,7 @@ public class MG3_FoxControl : MonoBehaviour
         if (isLose)
         {
             anim.SetBool("Lose", true);
-            isLose = false;
+            Invoke("FalseByisGuessCup", 1f);
         }
         else
         {
@@ -44,6 +44,11 @@ public class MG3_FoxControl : MonoBehaviour
         {
             anim.SetBool("Bye", false);
         }
+    }
+    void FalseByisGuessCup()
+    {
+        isWin = false;
+        isLose = false;
     }
     void FalseByisBye()
     {
