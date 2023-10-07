@@ -88,6 +88,7 @@ public class MG3_GameControl : MonoBehaviour
     IEnumerator BackMainGame()
     {
         isEnd = false;
+        EndCamera.SetActive(true);
         if (isWin)
         {
             MGFinishAwardControl.isWin = true;
