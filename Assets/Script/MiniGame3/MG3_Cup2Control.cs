@@ -54,7 +54,6 @@ public class MG3_Cup2Control : MonoBehaviour
             if (nowPosition == MG3_ButtonControl.openWhyCup)
             {
                 transform.position += Vector3.up * 3f;
-                MG3_ButtonControl.isOpenCup = false;
                 MG3_FoxControl.isLose = true;
                 GameRound();
                 BGM.PlayOneShot(guessStar);
@@ -62,11 +61,11 @@ public class MG3_Cup2Control : MonoBehaviour
             else
             {
                 MG3_GameControl.isWin = false;
-                MG3_ButtonControl.isOpenCup = false;
                 MG3_FoxControl.isWin = true;
                 Invoke("OpenStarCup", 1f);
                 BGM.PlayOneShot(notGuessStar);
             }
+            MG3_ButtonControl.isOpenCup = false;
         }
     }
     private IEnumerator MoveSemiCircleRound1()
