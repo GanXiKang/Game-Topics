@@ -90,6 +90,7 @@ public class MG3_GameControl : MonoBehaviour
         isEnd = false;
         if (isWin)
         {
+            MGFinishAwardControl.isWin = true;
             WinUI.SetActive(true);
             BGM.PlayOneShot(gameWin);
         }
