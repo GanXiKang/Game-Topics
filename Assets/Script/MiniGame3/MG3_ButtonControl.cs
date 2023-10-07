@@ -36,10 +36,6 @@ public class MG3_ButtonControl : MonoBehaviour
         isOpenCup = true;
         openWhyCup = i;
         BGM.PlayOneShot(openCup);
-        if (MG3_GameControl.round >= 3)
-        {
-            MG3_GameControl.isEnd = true;
-        }
     }
     
     void Update()
