@@ -11,23 +11,31 @@ public class MG3_ButtonControl : MonoBehaviour
     public static int openWhyCup;
     public static bool isGuess = false, isOpenCup = false, isNextRound = false;
 
+    void Start()
+    {
+        BGM = GetComponent<AudioSource>();
+    }
+
     public void Button_Start()
     {
         startUI.SetActive(false);
         MG3_GameControl.round++;
         Invoke("DownCup", 1f);
+        BGM.PlayOneShot(button);
     }
     public void NextRound()
     {
         isNextRound = false;
         MG3_GameControl.round++;
         Invoke("DownCup", 0.5f);
+        BGM.PlayOneShot(button);
     }
     public void OpenWhyCup(int i)
     {
         isGuess = false;
         isOpenCup = true;
         openWhyCup = i;
+        BGM.PlayOneShot(openCup);
     }
     
     void Update()
@@ -58,5 +66,6 @@ public class MG3_ButtonControl : MonoBehaviour
     void DownCup()
     {
         MG3_GameControl.isDownCup = true;
+        BGM.PlayOneShot(closeCup);
     }
 }
