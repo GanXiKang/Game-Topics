@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MG3_Cup2Control : MonoBehaviour
 {
+    public static bool isAnnountStarCup = false;
+
     public Transform targetA, targetB, targetC;
     public AudioSource BGM;
     public AudioClip guessStar, notGuessStar;
@@ -54,18 +56,19 @@ public class MG3_Cup2Control : MonoBehaviour
             if (nowPosition == MG3_ButtonControl.openWhyCup)
             {
                 transform.position += Vector3.up * 3f;
+                MG3_ButtonControl.isOpenCup = false;
                 MG3_FoxControl.isLose = true;
                 GameRound();
                 BGM.PlayOneShot(guessStar);
             }
-            else
-            {
-                MG3_GameControl.isWin = false;
-                MG3_FoxControl.isWin = true;
-                Invoke("OpenStarCup", 1f);
-                BGM.PlayOneShot(notGuessStar);
-            }
-            MG3_ButtonControl.isOpenCup = false;
+        }
+        if (isAnnountStarCup)
+        {
+            isAnnountStarCup = false;
+            MG3_GameControl.isWin = false;
+            MG3_FoxControl.isWin = true;
+            Invoke("OpenStarCup", 1f);
+            BGM.PlayOneShot(notGuessStar);
         }
     }
     private IEnumerator MoveSemiCircleRound1()
