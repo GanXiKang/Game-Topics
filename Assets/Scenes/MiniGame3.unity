@@ -1776,6 +1776,9 @@ MonoBehaviour:
   targetA: {fileID: 1982689568}
   targetB: {fileID: 11393085}
   targetC: {fileID: 1578275489}
+  BGM: {fileID: 0}
+  guessStar: {fileID: 0}
+  notGuessStar: {fileID: 0}
 --- !u!54 &1109076855
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1802,8 +1805,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1158425039}
   - component: {fileID: 1158425040}
-  - component: {fileID: 1158425041}
-  - component: {fileID: 1158425042}
   - component: {fileID: 1158425043}
   - component: {fileID: 1158425044}
   - component: {fileID: 1158425045}
@@ -1846,34 +1847,9 @@ MonoBehaviour:
   B_Cup1: {fileID: 195361302}
   B_Cup2: {fileID: 723800750}
   B_Cup3: {fileID: 689842206}
-  BGM: {fileID: 1158425043}
   button: {fileID: 8300000, guid: b3da8f6d66219914cbb5689c3e028d5a, type: 3}
   openCup: {fileID: 8300000, guid: f9c0c38a6903d84478abb6e04c2fc501, type: 3}
   closeCup: {fileID: 8300000, guid: 0ee0d362120ebc549a41251de7aa6443, type: 3}
---- !u!114 &1158425041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158425038}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea37777b588b453418329d87c4f66d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1158425042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158425038}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd4814bb2829ef4cab568f811270676, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1158425043
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1994,6 +1970,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 906055d681d544546b3c1115f77ba2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinUI: {fileID: 546382763}
+  LoseUI: {fileID: 459815799}
+  gameWin: {fileID: 8300000, guid: b81f66bc17853cb4dbb3927febc10259, type: 3}
+  gameLose: {fileID: 8300000, guid: 36ea3eea9ee59944abdc5469490155cf, type: 3}
 --- !u!1 &1213905841
 GameObject:
   m_ObjectHideFlags: 0
