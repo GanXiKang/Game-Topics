@@ -19,10 +19,9 @@ public class MG3_GameEffectsControl : MonoBehaviour
 
     IEnumerator OpenEffects()
     {
-        yield return new WaitForSeconds(0.2f);
         isEffects = false;
         Instantiate(effects, transform.position, transform.rotation);
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1f);
         Instantiate(effects, transform.position, transform.rotation);
         yield return new WaitForSeconds(1f);
         Instantiate(effects, transform.position, transform.rotation);
