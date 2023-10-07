@@ -88,7 +88,6 @@ public class MG3_GameControl : MonoBehaviour
     IEnumerator BackMainGame()
     {
         isEnd = false;
-        EndCamera.SetActive(true);
         if (isWin)
         {
             MGFinishAwardControl.isWin = true;
@@ -102,9 +101,11 @@ public class MG3_GameControl : MonoBehaviour
             LoseUI.SetActive(false);
             BGM.PlayOneShot(gameLose);
         }
+        yield return new WaitForSeconds(2f);
+        EndCamera.SetActive(true);
         MG3_FoxControl.isBye = true;
         PlayerPlayGameControl();
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(7);
         MiniGameColliderControl.isMiniGame = false;
         MGFinishAwardControl.miniGame = 3;
