@@ -98,7 +98,7 @@ public class MG3_GameControl : MonoBehaviour
         else
         {
             MG3_AnimalsAnimatorControl.isLose = true;
-            LoseUI.SetActive(false);
+            LoseUI.SetActive(true);
             BGM.PlayOneShot(gameLose);
         }
         yield return new WaitForSeconds(2f);
