@@ -91,11 +91,13 @@ public class MG3_GameControl : MonoBehaviour
         if (isWin)
         {
             MGFinishAwardControl.isWin = true;
+            MG3_AnimalsAnimatorControl.isWin = true;
             WinUI.SetActive(true);
             BGM.PlayOneShot(gameWin);
         }
         else
         {
+            MG3_AnimalsAnimatorControl.isLose = true;
             LoseUI.SetActive(false);
             BGM.PlayOneShot(gameLose);
         }

@@ -17,12 +17,12 @@ public class MG3_AnimalsAnimatorControl : MonoBehaviour
         if (isWin)
         {
             ani.SetBool("Win", true);
-            Invoke("FalseByAnimator", 0.5f);
+            Invoke("FalseByAnimator", 5f);
         }
         if (isLose)
         {
             ani.SetBool("Lose", true);
-            Invoke("FalseByAnimator", 0.5f);
+            Invoke("FalseByAnimator", 5f);
         }
     }
     void FalseByAnimator()
