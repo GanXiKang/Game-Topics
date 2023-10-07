@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MG3_GameControl : MonoBehaviour
 {
     AudioSource BGM;
 
-    public GameObject WinUI, LoseUI;
+    public GameObject WinUI, LoseUI, EndCamera;
     public AudioClip gameWin, gameLose;
 
     public static int round;
@@ -47,16 +48,7 @@ public class MG3_GameControl : MonoBehaviour
 
         if (isEnd)
         {
-            if (isWin)
-            {
-                WinUI.SetActive(true);
-                BGM.PlayOneShot(gameWin);
-            }
-            else
-            {
-                LoseUI.SetActive(false);
-                BGM.PlayOneShot(gameLose);
-            }
+            StartCoroutine(BackMainGame());
         }
     }
 
@@ -91,5 +83,27 @@ public class MG3_GameControl : MonoBehaviour
             MiniGameColliderControl.P4_playGame = false;
             MiniGameColliderControl.p = 0;
         }
+    }
+
+    IEnumerator BackMainGame()
+    {
+        isEnd = false;
+        if (isWin)
+        {
+            WinUI.SetActive(true);
+            BGM.PlayOneShot(gameWin);
+        }
+        else
+        {
+            LoseUI.SetActive(false);
+            BGM.PlayOneShot(gameLose);
+        }
+        MG3_FoxControl.isBye = true;
+        PlayerPlayGameControl();
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(7);
+        MiniGameColliderControl.isMiniGame = false;
+        MGFinishAwardControl.miniGame = 3;
+        MGFinishAwardControl.isFinishMG = true;
     }
 }
