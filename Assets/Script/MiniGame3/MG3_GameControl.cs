@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class MG3_GameControl : MonoBehaviour
 {
+    AudioSource BGM;
+
     public GameObject WinUI, LoseUI;
+    public AudioClip gameWin, gameLose;
 
     public static int round;
     public static bool isCupMove, isDownCup, isEnd, isWin;
@@ -12,6 +15,7 @@ public class MG3_GameControl : MonoBehaviour
 
     void Start()
     {
+        BGM = GetComponent<AudioSource>();
         round = 0;
         isCupMove = false;
         isDownCup = false;
@@ -46,10 +50,12 @@ public class MG3_GameControl : MonoBehaviour
             if (isWin)
             {
                 WinUI.SetActive(true);
+                BGM.PlayOneShot(gameWin);
             }
             else
             {
                 LoseUI.SetActive(false);
+                BGM.PlayOneShot(gameLose);
             }
         }
     }
@@ -62,5 +68,28 @@ public class MG3_GameControl : MonoBehaviour
     void FalseByisCupMove()
     {
         isCupMove = false;
+    }
+    void PlayerPlayGameControl()
+    {
+        if (MiniGameColliderControl.p == 1)
+        {
+            MiniGameColliderControl.P1_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 2)
+        {
+            MiniGameColliderControl.P2_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 3)
+        {
+            MiniGameColliderControl.P3_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
+        if (MiniGameColliderControl.p == 4)
+        {
+            MiniGameColliderControl.P4_playGame = false;
+            MiniGameColliderControl.p = 0;
+        }
     }
 }

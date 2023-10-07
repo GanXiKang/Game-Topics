@@ -5,6 +5,8 @@ using UnityEngine;
 public class MG3_Cup2Control : MonoBehaviour
 {
     public Transform targetA, targetB, targetC;
+    public AudioSource BGM;
+    public AudioClip guessStar, notGuessStar;
 
     int nowPosition;
     bool isNewRound = true;
@@ -55,6 +57,7 @@ public class MG3_Cup2Control : MonoBehaviour
                 MG3_ButtonControl.isOpenCup = false;
                 MG3_FoxControl.isLose = true;
                 GameRound();
+                BGM.PlayOneShot(guessStar);
             }
             else
             {
@@ -62,6 +65,7 @@ public class MG3_Cup2Control : MonoBehaviour
                 MG3_ButtonControl.isOpenCup = false;
                 MG3_FoxControl.isWin = true;
                 Invoke("OpenStarCup", 1f);
+                BGM.PlayOneShot(notGuessStar);
             }
         }
     }

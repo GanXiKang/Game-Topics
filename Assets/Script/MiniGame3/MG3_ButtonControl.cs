@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MG3_ButtonControl : MonoBehaviour
-{ 
+{
+    AudioSource BGM;
+
     public GameObject startUI, B_Next, B_Cup1, B_Cup2, B_Cup3;
-    public AudioSource BGM;
     public AudioClip button, openCup, closeCup;
 
     public static int openWhyCup;
     public static bool isGuess = false, isOpenCup = false, isNextRound = false;
-
     void Start()
     {
         BGM = GetComponent<AudioSource>();
