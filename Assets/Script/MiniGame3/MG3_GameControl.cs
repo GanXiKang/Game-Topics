@@ -92,6 +92,7 @@ public class MG3_GameControl : MonoBehaviour
         {
             MGFinishAwardControl.isWin = true;
             MG3_AnimalsAnimatorControl.isWin = true;
+            MG3_GameEffectsControl.isEffects = true;
             WinUI.SetActive(true);
             BGM.PlayOneShot(gameWin);
         }
