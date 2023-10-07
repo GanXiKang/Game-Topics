@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class MG3_GameEffectsControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject effects;
+
+    bool isEffects = true;
+
+    void FixedUpdate()
     {
-        
+        if (MG3_GameControl.isWin)
+        {
+            if (isEffects)
+            {
+                StartCoroutine(OpenEffects());
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator OpenEffects()
     {
-        
+        isEffects = false;
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        Instantiate(effects, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
     }
 }
