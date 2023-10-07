@@ -18,7 +18,7 @@ public class MG3_FoxControl : MonoBehaviour
         if (isWin)
         {
             anim.SetBool("Win", true);
-            isWin = false;
+            //isWin = false;
         }
         else 
         {
