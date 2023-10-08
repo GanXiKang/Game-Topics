@@ -17,7 +17,6 @@ public class CameraMoveControl : MonoBehaviour
             case 1:
                 if (gameObject.tag == "P1Camera")
                 {
-                    CameraRotate();
                     CameraMove();
                 }
                 break;
@@ -25,7 +24,6 @@ public class CameraMoveControl : MonoBehaviour
             case 2:
                 if (gameObject.tag == "P2Camera")
                 {
-                    CameraRotate();
                     CameraMove();
                 }
                 break;
@@ -33,7 +31,6 @@ public class CameraMoveControl : MonoBehaviour
             case 3:
                 if (gameObject.tag == "P3Camera")
                 {
-                    CameraRotate();
                     CameraMove();
                 }
                 break;
@@ -41,16 +38,20 @@ public class CameraMoveControl : MonoBehaviour
             case 4:
                 if (gameObject.tag == "P4Camera")
                 {
-                    CameraRotate();
                     CameraMove();
                 }
                 break;
         }
     }
-    void CameraRotate()
+    void CameraMove()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
         {
+            isMove = !isMove;
+        }
+
+        if(isMove)
+        { 
             float srollInput = Input.GetAxis("Mouse ScrollWheel");
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
@@ -58,49 +59,15 @@ public class CameraMoveControl : MonoBehaviour
             transform.Translate(Vector3.forward * srollInput * speed);
             transform.Rotate(Vector3.up * mouseX * sensitivity);
             transform.Rotate(Vector3.left * mouseY * sensitivity);
+
+            DiceUIControl.isDiceUI = false;
         }
         else
         {
+            transform.position = cameraOriginalLocation.position;
             transform.rotation = cameraOriginalLocation.rotation;
+
+            DiceUIControl.isDiceUI = true;
         }
-    }
-
-    void CameraMove()
-    {
-        //    if (Input.GetKeyDown(KeyCode.LeftControl))
-        //    {
-        //        isMove = !isMove;
-        //    }
-
-        //    if (isMove)
-        //    {
-        //        float h = Input.GetAxis("Horizontal");
-        //        float v = Input.GetAxis("Vertical");
-
-        //        Vector3 moveDirection = new Vector3(h, 0, v);
-
-        //        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        //        {
-        //            transform.Translate(moveDirection * speed * Time.deltaTime);
-        //        }
-        //        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        //        {
-        //            transform.Translate(-moveDirection * speed * Time.deltaTime);
-        //        }
-        //        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        //        {
-        //            transform.Translate(-transform.right * speed * Time.deltaTime);
-        //        }
-        //        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        //        {
-        //            transform.Translate(transform.right * speed * Time.deltaTime);
-        //        }
-        //        DiceUIControl.isDiceUI = false;
-        //    }
-        //    else
-        //    {
-        //        transform.position = cameraOriginalLocation.position;
-        //        DiceUIControl.isDiceUI = true;
-        //    }
     }
 }
