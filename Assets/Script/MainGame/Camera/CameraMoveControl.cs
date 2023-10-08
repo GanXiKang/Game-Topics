@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class CameraMoveControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Transform originalLocation, originalRotation;
+
     void Start()
     {
-        
+        originalLocation.position = transform.position;
+        originalRotation.rotation = transform.rotation;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
