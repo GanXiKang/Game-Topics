@@ -5,11 +5,12 @@ using UnityEngine;
 public class CameraMoveControl : MonoBehaviour
 {
     Vector3 originalLocation;
+    Quaternion originalRotation;
 
     void Start()
     {
         originalLocation = transform.position;
-        //original.rotation = transform.rotation;
+        originalRotation = transform.rotation;
     }
 
     void FixedUpdate()
@@ -49,12 +50,12 @@ public class CameraMoveControl : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            transform.position += Vector3.up;
+            
         }
         else
         {
             transform.position = originalLocation;
-            //transform.rotation = original.rotation;
+            transform.rotation = originalRotation;
         }
     }
 }
