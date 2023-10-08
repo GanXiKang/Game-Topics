@@ -68,10 +68,6 @@ public class CameraMoveControl : MonoBehaviour
             {
                 transform.Translate(Vector3.forward * srollInput * speed);
             }
-            else
-            {
-                cameraDistance -= 1;
-            }
 
             transform.Rotate(Vector3.up * mouseX * sensitivity);
             transform.Rotate(Vector3.left * mouseY * sensitivity);
