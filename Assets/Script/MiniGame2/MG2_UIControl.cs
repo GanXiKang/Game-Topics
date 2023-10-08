@@ -37,7 +37,7 @@ public class MG2_UIControl : MonoBehaviour
                 }
             }
             
-            Score.text = "Score : " + MG2_CollectScoreControl.score.ToString();
+            Score.text = MG2_CollectScoreControl.score.ToString();
         }
     }
 }
