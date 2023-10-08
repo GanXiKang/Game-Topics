@@ -70,7 +70,7 @@ public class CameraMoveControl : MonoBehaviour
             }
             else
             {
-                cameraDistance = maxDistance;
+                cameraDistance -= 1;
             }
 
             transform.Rotate(Vector3.up * mouseX * sensitivity);
