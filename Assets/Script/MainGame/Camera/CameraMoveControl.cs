@@ -4,19 +4,10 @@ using UnityEngine;
 
 public class CameraMoveControl : MonoBehaviour
 {
-    Vector3 originalLocation;
-    Quaternion originalRotation;
-
     public Transform cameraOriginalLocation;
 
     float speed = 5f;
     float sensitivity = 2f;
-
-    void Start()
-    {
-        originalLocation = transform.position;
-        originalRotation = transform.rotation;
-    }
 
     void FixedUpdate()
     {
