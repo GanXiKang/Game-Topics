@@ -64,10 +64,15 @@ public class CameraMoveControl : MonoBehaviour
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
 
-            if (cameraDistance < maxDistance)
+            if (cameraDistance <= maxDistance)
             {
                 transform.Translate(Vector3.forward * srollInput * speed);
             }
+            else
+            {
+                cameraDistance = maxDistance;
+            }
+
             transform.Rotate(Vector3.up * mouseX * sensitivity);
             transform.Rotate(Vector3.left * mouseY * sensitivity);
 
