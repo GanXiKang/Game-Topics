@@ -7,8 +7,10 @@ public class CameraMoveControl : MonoBehaviour
     Vector3 originalLocation;
     Quaternion originalRotation;
 
-    public float speed = 5f;
-    public float sensitivity = 2f;
+    public GameObject cameraOriginalLocation;
+
+    float speed = 5f;
+    float sensitivity = 2f;
 
     void Start()
     {
