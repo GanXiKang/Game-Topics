@@ -6,9 +6,15 @@ public class CameraMoveControl : MonoBehaviour
 {
     public Transform cameraOriginalLocation;
 
-    float speed = 5f;
-    float sensitivity = 2f;
-    bool isMove = false;
+    float speed, sensitivity, maxDistance, minDistance;
+    bool isMove;
+
+    void Start()
+    {
+        speed = 5f;
+        sensitivity = 2f;
+        isMove = false;
+    }
 
     void FixedUpdate()
     {
@@ -53,6 +59,7 @@ public class CameraMoveControl : MonoBehaviour
         if(isMove)
         { 
             float srollInput = Input.GetAxis("Mouse ScrollWheel");
+            print(srollInput);
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
 
