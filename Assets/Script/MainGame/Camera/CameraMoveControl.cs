@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CameraMoveControl : MonoBehaviour
 {
-    Transform originalLocation, originalRotation;
+    Transform original;
 
     void Start()
     {
-        originalLocation.position = transform.position;
-        originalRotation.rotation = transform.rotation;
+        original.position = transform.position;
+        original.rotation = transform.rotation;
     }
 
     void FixedUpdate()
@@ -19,30 +19,42 @@ public class CameraMoveControl : MonoBehaviour
             case 1:
                 if (gameObject.tag == "P1Camera")
                 {
-                    
+                    CameraMove();
                 }
                 break;
 
             case 2:
                 if (gameObject.tag == "P2Camera")
                 {
-
+                    CameraMove();
                 }
                 break;
 
             case 3:
                 if (gameObject.tag == "P3Camera")
                 {
-
+                    CameraMove();
                 }
                 break;
 
             case 4:
                 if (gameObject.tag == "P4Camera")
                 {
-
+                    CameraMove();
                 }
                 break;
+        }
+    }
+    void CameraMove()
+    {
+        if (Input.GetMouseButton(1))
+        {
+            transform.position += Vector3.up;
+        }
+        else
+        {
+            transform.position = original.position;
+            transform.rotation = original.rotation;
         }
     }
 }
