@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 158453704782057837}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &226561220251728886
 GameObject:
@@ -237,6 +237,7 @@ Transform:
   m_Children:
   - {fileID: 9115889951526535667}
   - {fileID: 4401084573916868395}
+  - {fileID: 565704620747693350}
   - {fileID: 6651286585594585221}
   - {fileID: 290881085}
   - {fileID: 4303668977469036287}
@@ -1688,7 +1689,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 158453704782057837}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!20 &7128821566121654957
 Camera:
@@ -1810,6 +1811,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32bc7bd7cc809a443aa849879c891957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOriginalLocation: {fileID: 565704620747693350}
+--- !u!1 &7491022631037449691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565704620747693350}
+  m_Layer: 0
+  m_Name: CameraPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565704620747693350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7491022631037449691}
+  m_LocalRotation: {x: 0.13052616, y: -0, z: -0, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 4, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 158453704782057837}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7762509515462061476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2263,7 +2296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_LocalScale.x
