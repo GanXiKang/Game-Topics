@@ -56,13 +56,10 @@ public class CameraMoveControl : MonoBehaviour
 
             transform.Rotate(Vector3.up * mouseX * sensitivity);
             transform.Rotate(Vector3.left * mouseY * sensitivity);
-
-            DiceUIControl.isDiceUI = false;
         }
         else
         {
             transform.rotation = cameraOriginalLocation.rotation;
-            DiceUIControl.isDiceUI = true;
         }
     }
 
