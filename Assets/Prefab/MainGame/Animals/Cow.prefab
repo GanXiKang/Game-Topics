@@ -122,6 +122,38 @@ Transform:
   m_Father: {fileID: 4986245872820595813}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &235262199531809177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580685938348730084}
+  m_Layer: 0
+  m_Name: CameraPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580685938348730084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235262199531809177}
+  m_LocalRotation: {x: 0.13052616, y: -0, z: -0, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 4, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5398617333106803398}
+  m_Father: {fileID: 5575742905522458663}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &273272196214875981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1207,7 @@ Transform:
   m_Children:
   - {fileID: 3589881221682413753}
   - {fileID: 8232649892837142113}
-  - {fileID: 5398617333106803398}
+  - {fileID: 580685938348730084}
   - {fileID: 1934494756}
   - {fileID: 1397608720}
   - {fileID: 4303668978540545947}
@@ -1481,13 +1513,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5398617333106803417}
-  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 4, z: -5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5575742905522458663}
-  m_RootOrder: 2
+  m_Father: {fileID: 580685938348730084}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!20 &5398617333106803397
 Camera:
@@ -1609,6 +1641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32bc7bd7cc809a443aa849879c891957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOriginalLocation: {fileID: 235262199531809177}
 --- !u!1 &5509903821121829564
 GameObject:
   m_ObjectHideFlags: 0
