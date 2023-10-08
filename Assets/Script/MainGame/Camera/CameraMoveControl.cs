@@ -12,8 +12,37 @@ public class CameraMoveControl : MonoBehaviour
         originalRotation.rotation = transform.rotation;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                if (gameObject.tag == "P1Camera")
+                {
+                    
+                }
+                break;
+
+            case 2:
+                if (gameObject.tag == "P2Camera")
+                {
+
+                }
+                break;
+
+            case 3:
+                if (gameObject.tag == "P3Camera")
+                {
+
+                }
+                break;
+
+            case 4:
+                if (gameObject.tag == "P4Camera")
+                {
+
+                }
+                break;
+        }
     }
 }
