@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CameraMoveControl : MonoBehaviour
 {
-    Transform original;
+    Vector3 originalLocation;
 
     void Start()
     {
-        //original.position = transform.position;
+        originalLocation = transform.position;
         //original.rotation = transform.rotation;
     }
 
@@ -49,11 +49,11 @@ public class CameraMoveControl : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            
+            transform.position += Vector3.up;
         }
         else
         {
-            //transform.position = original.position;
+            transform.position = originalLocation;
             //transform.rotation = original.rotation;
         }
     }
