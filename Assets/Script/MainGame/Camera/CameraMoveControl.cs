@@ -6,13 +6,14 @@ public class CameraMoveControl : MonoBehaviour
 {
     public Transform cameraOriginalLocation;
 
-    float speed, sensitivity, maxDistance, minDistance;
+    float speed, sensitivity, maxDistance;
     bool isMove;
 
     void Start()
     {
         speed = 5f;
         sensitivity = 2f;
+        maxDistance = 10f;
         isMove = false;
     }
 
@@ -57,13 +58,16 @@ public class CameraMoveControl : MonoBehaviour
         }
 
         if(isMove)
-        { 
+        {
+            float cameraDistance = Vector3.Distance(transform.position, cameraOriginalLocation.position);
             float srollInput = Input.GetAxis("Mouse ScrollWheel");
-            print(srollInput);
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
 
-            transform.Translate(Vector3.forward * srollInput * speed);
+            if (cameraDistance < maxDistance)
+            {
+                transform.Translate(Vector3.forward * srollInput * speed);
+            }
             transform.Rotate(Vector3.up * mouseX * sensitivity);
             transform.Rotate(Vector3.left * mouseY * sensitivity);
 
