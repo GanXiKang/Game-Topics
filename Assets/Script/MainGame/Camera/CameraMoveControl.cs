@@ -8,6 +8,7 @@ public class CameraMoveControl : MonoBehaviour
 
     float speed = 5f;
     float sensitivity = 2f;
+    bool isMove = false;
 
     void FixedUpdate()
     {
@@ -16,6 +17,7 @@ public class CameraMoveControl : MonoBehaviour
             case 1:
                 if (gameObject.tag == "P1Camera")
                 {
+                    CameraRotate();
                     CameraMove();
                 }
                 break;
@@ -23,6 +25,7 @@ public class CameraMoveControl : MonoBehaviour
             case 2:
                 if (gameObject.tag == "P2Camera")
                 {
+                    CameraRotate();
                     CameraMove();
                 }
                 break;
@@ -30,6 +33,7 @@ public class CameraMoveControl : MonoBehaviour
             case 3:
                 if (gameObject.tag == "P3Camera")
                 {
+                    CameraRotate();
                     CameraMove();
                 }
                 break;
@@ -37,12 +41,13 @@ public class CameraMoveControl : MonoBehaviour
             case 4:
                 if (gameObject.tag == "P4Camera")
                 {
+                    CameraRotate();
                     CameraMove();
                 }
                 break;
         }
     }
-    void CameraMove()
+    void CameraRotate()
     {
         if (Input.GetMouseButton(1))
         {
@@ -51,7 +56,22 @@ public class CameraMoveControl : MonoBehaviour
 
             transform.Rotate(Vector3.up * mouseX * sensitivity);
             transform.Rotate(Vector3.left * mouseY * sensitivity);
+        }
+        else
+        {
+            transform.rotation = cameraOriginalLocation.rotation;
+        }
+    }
 
+    void CameraMove()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            isMove = !isMove;
+        }
+
+        if (isMove)
+        {
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
 
@@ -77,7 +97,6 @@ public class CameraMoveControl : MonoBehaviour
         else
         {
             transform.position = cameraOriginalLocation.position;
-            transform.rotation = cameraOriginalLocation.rotation;
         }
     }
 }
