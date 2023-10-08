@@ -8,8 +8,8 @@ public class CameraMoveControl : MonoBehaviour
 
     void Start()
     {
-        original.position = transform.position;
-        original.rotation = transform.rotation;
+        //original.position = transform.position;
+        //original.rotation = transform.rotation;
     }
 
     void FixedUpdate()
@@ -49,12 +49,12 @@ public class CameraMoveControl : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            transform.position += Vector3.up;
+            
         }
         else
         {
-            transform.position = original.position;
-            transform.rotation = original.rotation;
+            //transform.position = original.position;
+            //transform.rotation = original.rotation;
         }
     }
 }
