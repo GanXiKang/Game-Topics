@@ -7,6 +7,9 @@ public class CameraMoveControl : MonoBehaviour
     Vector3 originalLocation;
     Quaternion originalRotation;
 
+    public float speed = 5f;
+    public float sensitivity = 2f;
+
     void Start()
     {
         originalLocation = transform.position;
@@ -50,7 +53,11 @@ public class CameraMoveControl : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
+
+            transform.Rotate(Vector3.up * mouseX * sensitivity);
+            transform.Rotate(Vector3.left * mouseY * sensitivity);
         }
         else
         {
