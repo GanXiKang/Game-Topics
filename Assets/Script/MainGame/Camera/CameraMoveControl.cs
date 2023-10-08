@@ -7,7 +7,7 @@ public class CameraMoveControl : MonoBehaviour
     Vector3 originalLocation;
     Quaternion originalRotation;
 
-    public GameObject cameraOriginalLocation;
+    public Transform cameraOriginalLocation;
 
     float speed = 5f;
     float sensitivity = 2f;
@@ -85,8 +85,8 @@ public class CameraMoveControl : MonoBehaviour
         }
         else
         {
-            transform.position = originalLocation;
-            transform.rotation = originalRotation;
+            transform.position = cameraOriginalLocation.position;
+            transform.rotation = cameraOriginalLocation.rotation;
         }
     }
 }
