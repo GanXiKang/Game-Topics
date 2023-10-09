@@ -52,24 +52,25 @@ public class CameraMoveControl : MonoBehaviour
     }
     void CameraMove()
     {
-        if (DiceUIControl.isDiceUI)
+        if (Input.GetMouseButtonDown(1))
         {
-            if (Input.GetMouseButtonDown(1))
+            if (DiceUIControl.isDiceUI)
             {
                 print("ok");
                 isMove = true;
                 DiceUIControl.isDiceUI = false;
             }
+
+            if (isMove)
+            {
+                print("not");
+                isMove = false;
+                DiceUIControl.isDiceUI = true;
+            }
         }
 
         if (isMove)
         {
-            //if (Input.GetMouseButtonDown(1))
-            //{
-            //    isMove = false;
-            //    DiceUIControl.isDiceUI = true;
-            //}
-
             float cameraDistance = Vector3.Distance(transform.position, cameraOriginalLocation.position);
             float srollInput = Input.GetAxis("Mouse ScrollWheel");
             float mouseX = Input.GetAxis("Mouse X");
