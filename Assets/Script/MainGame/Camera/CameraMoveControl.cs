@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraMoveControl : MonoBehaviour
 {
+    public static bool isCanMove;
+
     public Transform cameraOriginalLocation;
     
     float speed, sensitivity, maxDistance;
@@ -15,6 +17,7 @@ public class CameraMoveControl : MonoBehaviour
         sensitivity = 2f;
         maxDistance = 10f;
         isMove = false;
+        isCanMove = true;
     }
 
     void Update()
@@ -52,7 +55,7 @@ public class CameraMoveControl : MonoBehaviour
     }
     void CameraMove()
     {
-        if (DiceUIControl.isDiceUI)
+        if (DiceUIControl.isDiceUI && isCanMove)
         {
             if (Input.GetMouseButtonDown(1))
             {

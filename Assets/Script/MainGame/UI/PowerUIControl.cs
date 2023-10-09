@@ -38,18 +38,21 @@ public class PowerUIControl : MonoBehaviour
     public void Button_Power()
     {
         DiceUIControl.isDiceUI = false;
+        CameraMoveControl.isCanMove = false;
         powerUI.SetActive(true);
         FindWhoPower();
     }
     public void Button_Use()
     {
         DiceUIControl.isDiceUI = false;
+        CameraMoveControl.isCanMove = true;
         powerUI.SetActive(false);
         FindWhoUsePower();
     }
     public void Button_Cancel()
     {
         DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isCanMove = true;
         powerUI.SetActive(false);
     }
     public void Button_RabbitPowerChoose(int d)
