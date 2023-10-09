@@ -57,6 +57,7 @@ public class CameraMoveControl : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 isMove = true;
+                DiceUIControl.isDiceUI = false;
             }
         }
         else
@@ -64,6 +65,7 @@ public class CameraMoveControl : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 isMove = false;
+                DiceUIControl.isDiceUI = true;
             }
         }
 
@@ -80,16 +82,12 @@ public class CameraMoveControl : MonoBehaviour
             }
 
             transform.Rotate(Vector3.up * mouseX * sensitivity);
-            transform.Rotate(Vector3.left * mouseY * sensitivity);
-
-            DiceUIControl.isDiceUI = false;
+            transform.Rotate(Vector3.left * mouseY * sensitivity);   
         }
         else
         {
             transform.position = cameraOriginalLocation.position;
             transform.rotation = cameraOriginalLocation.rotation;
-
-            DiceUIControl.isDiceUI = true;
         }
     }
 }
