@@ -56,6 +56,7 @@ public class CameraMoveControl : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(1))
             {
+                print("ok");
                 isMove = true;
                 DiceUIControl.isDiceUI = false;
             }
