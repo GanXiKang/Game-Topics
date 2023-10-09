@@ -403,13 +403,11 @@ public class BagUIControl : MonoBehaviour
     {
         bagUI.SetActive(true);
         DiceUIControl.isDiceUI = false;
-        CameraMoveControl.isCanMove = false;
     }
     public void Button_Close()
     {
         bagUI.SetActive(false);
         DiceUIControl.isDiceUI = true;
-        CameraMoveControl.isCanMove = true;
     }
     public void Button_Use(int why)
     {

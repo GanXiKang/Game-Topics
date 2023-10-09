@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CameraMoveControl : MonoBehaviour
 {
-    public static bool isCanMove;
-
     public Transform cameraOriginalLocation;
     
     float speed, sensitivity, maxDistance;
@@ -55,7 +53,7 @@ public class CameraMoveControl : MonoBehaviour
     }
     void CameraMove()
     {
-        if (DiceUIControl.isDiceUI && isCanMove)
+        if (DiceUIControl.isDiceUI)
         {
             if (Input.GetMouseButtonDown(1))
             {
@@ -63,17 +61,15 @@ public class CameraMoveControl : MonoBehaviour
                 DiceUIControl.isDiceUI = false;
             }
         }
-        else
+
+        if (isMove)
         {
             if (Input.GetMouseButtonDown(1))
             {
                 isMove = false;
                 DiceUIControl.isDiceUI = true;
             }
-        }
 
-        if (isMove)
-        {
             float cameraDistance = Vector3.Distance(transform.position, cameraOriginalLocation.position);
             float srollInput = Input.GetAxis("Mouse ScrollWheel");
             float mouseX = Input.GetAxis("Mouse X");
