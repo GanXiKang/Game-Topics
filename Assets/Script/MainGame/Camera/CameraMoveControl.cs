@@ -60,8 +60,7 @@ public class CameraMoveControl : MonoBehaviour
                 isMove = true;
                 DiceUIControl.isDiceUI = false;
             }
-
-            if (isMove)
+            else if (isMove)
             {
                 print("not");
                 isMove = false;
