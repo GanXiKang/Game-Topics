@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMoveControl : MonoBehaviour
 {
     public Transform cameraOriginalLocation;
-
+    
     float speed, sensitivity, maxDistance;
     bool isMove;
 
@@ -56,11 +56,18 @@ public class CameraMoveControl : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(1))
             {
-                isMove = !isMove;
+                isMove = true;
+            }
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                isMove = false;
             }
         }
 
-        if(isMove)
+        if (isMove)
         {
             float cameraDistance = Vector3.Distance(transform.position, cameraOriginalLocation.position);
             float srollInput = Input.GetAxis("Mouse ScrollWheel");
