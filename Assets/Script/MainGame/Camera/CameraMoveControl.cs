@@ -17,7 +17,7 @@ public class CameraMoveControl : MonoBehaviour
         isMove = false;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         switch (ChangeCameraControl.changeCameraNum)
         {
