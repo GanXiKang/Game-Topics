@@ -52,9 +52,12 @@ public class CameraMoveControl : MonoBehaviour
     }
     void CameraMove()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (DiceUIControl.isDiceUI)
         {
-            isMove = !isMove;
+            if (Input.GetMouseButtonDown(1))
+            {
+                isMove = !isMove;
+            }
         }
 
         if(isMove)
