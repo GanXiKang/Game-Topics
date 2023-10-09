@@ -450,7 +450,6 @@ public class BagUIControl : MonoBehaviour
                 break;
         }
         bagUI.SetActive(false);
-        CameraMoveControl.isCanMove = true;
         if (whyUseProps <= 4)
         {
             SceneManager.LoadScene(9);

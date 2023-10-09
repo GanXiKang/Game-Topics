@@ -15,7 +15,6 @@ public class CameraMoveControl : MonoBehaviour
         sensitivity = 2f;
         maxDistance = 10f;
         isMove = false;
-        isCanMove = true;
     }
 
     void Update()
