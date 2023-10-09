@@ -64,11 +64,11 @@ public class CameraMoveControl : MonoBehaviour
 
         if (isMove)
         {
-            if (Input.GetMouseButtonDown(1))
-            {
-                isMove = false;
-                DiceUIControl.isDiceUI = true;
-            }
+            //if (Input.GetMouseButtonDown(1))
+            //{
+            //    isMove = false;
+            //    DiceUIControl.isDiceUI = true;
+            //}
 
             float cameraDistance = Vector3.Distance(transform.position, cameraOriginalLocation.position);
             float srollInput = Input.GetAxis("Mouse ScrollWheel");
