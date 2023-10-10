@@ -200,9 +200,9 @@ public class ChestColliderControl : MonoBehaviour
         {
             AnimatorControl.isP3Wave = true;
         }
-        else if (!P3_EnterBox)
+        else if (!P4_EnterBox)
         {
-            AnimatorControl.isP3Wave = true;
+            AnimatorControl.isP4Wave = true;
         }
     }
     void FalseByAnimator()
