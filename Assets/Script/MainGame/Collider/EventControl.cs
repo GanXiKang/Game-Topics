@@ -181,13 +181,16 @@ public class EventControl : MonoBehaviour
         if (getCoin != 0)
         {
             CoinControl.P1CoinTotal += getCoin;
+            AnimatorControl.isP1Win = true;
         }
         else if (lossCoin != 0)
         {
             CoinControl.P1CoinTotal -= lossCoin;
+            AnimatorControl.isP1Lose = true;
         }
         else if (getPorps != 0)
         {
+            AnimatorControl.isP1Win = true;
             if (getPorps == 1)
             {
                 PropsControl.P1Props[4] += 1;
@@ -202,6 +205,8 @@ public class EventControl : MonoBehaviour
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
+            AnimatorControl.isP1Win = false;
+            AnimatorControl.isP1Lose = false;
         }
         else
         {
@@ -231,13 +236,16 @@ public class EventControl : MonoBehaviour
         if (getCoin != 0)
         {
             CoinControl.P2CoinTotal += getCoin;
+            AnimatorControl.isP2Win = true;
         }
         else if (lossCoin != 0)
         {
             CoinControl.P2CoinTotal -= lossCoin;
+            AnimatorControl.isP2Lose = true;
         }
         else if (getPorps != 0)
         {
+            AnimatorControl.isP2Win = true;
             if (getPorps == 1)
             {
                 PropsControl.P2Props[4] += 1;
@@ -252,6 +260,8 @@ public class EventControl : MonoBehaviour
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
+            AnimatorControl.isP2Win = false;
+            AnimatorControl.isP2Lose = false;
         }
         else
         {
@@ -281,13 +291,16 @@ public class EventControl : MonoBehaviour
         if (getCoin != 0)
         {
             CoinControl.P3CoinTotal += getCoin;
+            AnimatorControl.isP3Win = true;
         }
         else if (lossCoin != 0)
         {
             CoinControl.P3CoinTotal -= lossCoin;
+            AnimatorControl.isP3Lose = true;
         }
         else if (getPorps != 0)
         {
+            AnimatorControl.isP3Win = true;
             if (getPorps == 1)
             {
                 PropsControl.P3Props[4] += 1;
@@ -302,6 +315,8 @@ public class EventControl : MonoBehaviour
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
+            AnimatorControl.isP3Win = false;
+            AnimatorControl.isP3Lose = false;
         }
         else
         {
@@ -331,13 +346,16 @@ public class EventControl : MonoBehaviour
         if (getCoin != 0)
         {
             CoinControl.P4CoinTotal += getCoin;
+            AnimatorControl.isP4Win = true;
         }
         else if (lossCoin != 0)
         {
             CoinControl.P4CoinTotal -= lossCoin;
+            AnimatorControl.isP4Lose = true;
         }
         else if (getPorps != 0)
         {
+            AnimatorControl.isP4Win = true;
             if (getPorps == 1)
             {
                 PropsControl.P2Props[4] += 1;
@@ -352,6 +370,8 @@ public class EventControl : MonoBehaviour
         {
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
+            AnimatorControl.isP4Win = false;
+            AnimatorControl.isP4Lose = false;
         }
         else
         {
