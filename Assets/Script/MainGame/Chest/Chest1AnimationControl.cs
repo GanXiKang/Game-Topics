@@ -43,6 +43,7 @@ public class Chest1AnimationControl : MonoBehaviour
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P1CoinTotal += randomCoin;
+                        AnimatorControl.isP1Win = true;
                         break;
                     case 6:
                     case 7:
@@ -51,15 +52,18 @@ public class Chest1AnimationControl : MonoBehaviour
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P1CoinTotal += randomCoin;
+                        AnimatorControl.isP1Win = true;
                         break;
                     case 9:
                         systemTest.text = "獲得一個黃金竊手道具！";
                         SystemTestTextControl.isTimer = true;
                         PropsControl.P1Props[6] += 1;
+                        AnimatorControl.isP1Jump = true;
                         break;
                     case 10:
                         systemTest.text = "空！";
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP1Lose = true;
                         break;
                 }
                 break;
@@ -76,6 +80,7 @@ public class Chest1AnimationControl : MonoBehaviour
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P2CoinTotal += randomCoin;
+                        AnimatorControl.isP2Win = true;
                         break;
                     case 6:
                     case 7:
@@ -84,15 +89,18 @@ public class Chest1AnimationControl : MonoBehaviour
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P2CoinTotal += randomCoin;
+                        AnimatorControl.isP2Win = true;
                         break;
                     case 9:
                         systemTest.text = "獲得一個黃金竊手道具！";
                         SystemTestTextControl.isTimer = true;
                         PropsControl.P2Props[6] += 1;
+                        AnimatorControl.isP2Jump = true;
                         break;
                     case 10:
                         systemTest.text = "空！";
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP2Lose = true;
                         break;
                 }
                 break;
@@ -109,6 +117,7 @@ public class Chest1AnimationControl : MonoBehaviour
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P3CoinTotal += randomCoin;
+                        AnimatorControl.isP3Win = true;
                         break;
                     case 6:
                     case 7:
@@ -117,15 +126,18 @@ public class Chest1AnimationControl : MonoBehaviour
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P3CoinTotal += randomCoin;
+                        AnimatorControl.isP3Win = true;
                         break;
                     case 9:
                         systemTest.text = "獲得一個黃金竊手道具！";
                         SystemTestTextControl.isTimer = true;
                         PropsControl.P3Props[6] += 1;
+                        AnimatorControl.isP3Jump = true;
                         break;
                     case 10:
                         systemTest.text = "空！";
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP3Lose = true;
                         break;
                 }
                 break;
@@ -142,6 +154,7 @@ public class Chest1AnimationControl : MonoBehaviour
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P4CoinTotal += randomCoin;
+                        AnimatorControl.isP4Win = true;
                         break;
                     case 6:
                     case 7:
@@ -150,15 +163,18 @@ public class Chest1AnimationControl : MonoBehaviour
                         systemTest.text = "獲得" + randomCoin.ToString() + "個貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                         CoinControl.P4CoinTotal += randomCoin;
+                        AnimatorControl.isP4Win = true;
                         break;
                     case 9:
                         systemTest.text = "獲得一個黃金竊手道具！";
                         SystemTestTextControl.isTimer = true;
                         PropsControl.P4Props[6] += 1;
+                        AnimatorControl.isP4Jump = true;
                         break;
                     case 10:
                         systemTest.text = "空！";
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP4Lose = true;
                         break;
                 }
                 break;
@@ -171,7 +187,25 @@ public class Chest1AnimationControl : MonoBehaviour
         BGM.PlayOneShot(open);
         Instantiate(effects, pointEff.transform.position, pointEff.transform.rotation);
         ChestColliderControl.isOpen = 0;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
+        FalseByAnimator();
+        yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
+    }
+
+    void FalseByAnimator()
+    {
+        AnimatorControl.isP1Win = false;
+        AnimatorControl.isP2Win = false;
+        AnimatorControl.isP3Win = false;
+        AnimatorControl.isP4Win = false;
+        AnimatorControl.isP1Lose = false;
+        AnimatorControl.isP2Lose = false;
+        AnimatorControl.isP3Lose = false;
+        AnimatorControl.isP4Lose = false;
+        AnimatorControl.isP1Jump = false;
+        AnimatorControl.isP2Jump = false;
+        AnimatorControl.isP3Jump = false;
+        AnimatorControl.isP4Jump = false;
     }
 }
