@@ -20,6 +20,7 @@ public class OrdinaryColliderControl : MonoBehaviour
                         P1_Enter = false;
                         AnimatorControl.isP1Move = false;
                         AnimatorControl.isP1Skill = false;
+                        AnimatorControl.isP1Wave = true;
                         StartCoroutine(ChangeCamera());
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
@@ -97,13 +98,23 @@ public class OrdinaryColliderControl : MonoBehaviour
     }
     IEnumerator ChangeCamera()
     {
+        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+        FalseByisWaveAnimator();
     }
     IEnumerator Transposition()
     {
         yield return new WaitForSeconds(1f);
         PropsControl.isTrans = false;
+    }
+
+    void FalseByisWaveAnimator()
+    {
+        AnimatorControl.isP1Wave = false;
+        AnimatorControl.isP2Wave = false;
+        AnimatorControl.isP3Wave = false;
+        AnimatorControl.isP4Wave = false;
     }
 }
