@@ -69,7 +69,7 @@ public class CameraMoveControl : MonoBehaviour
 
         if (isMove)
         {
-            float cameraDistance = Vector3.Distance(transform.position, cameraOriginalLocation.position);
+            float cameraDistance = Vector3.Distance(transform.position, cameraPointA.position);
             float srollInput = Input.GetAxis("Mouse ScrollWheel");
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
