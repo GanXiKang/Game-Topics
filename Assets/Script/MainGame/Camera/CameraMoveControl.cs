@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CameraMoveControl : MonoBehaviour
 {
-    public Transform cameraPointA, cameraPointB;
-    
+    public Transform cameraPointA;
+    public Transform cameraPointB;
+
+
     float speed, sensitivity, maxDistance;
     bool isMove;
 
