@@ -79,7 +79,7 @@ public class CameraMoveControl : MonoBehaviour
             }
 
             transform.Rotate(Vector3.up * mouseX * sensitivity);
-            transform.Rotate(Vector3.left * mouseY * sensitivity);   
+            transform.Rotate(Vector3.left * mouseY * sensitivity);
         }
         else
         {
