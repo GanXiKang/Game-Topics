@@ -18,6 +18,7 @@ public class CameraMoveControl : MonoBehaviour
         sensitivity = 2f;
         maxDistance = 10f;
         isMove = false;
+        isChangeCameraPoint = false;
     }
 
     void Update()
@@ -28,6 +29,7 @@ public class CameraMoveControl : MonoBehaviour
                 if (gameObject.tag == "P1Camera")
                 {
                     CameraMove();
+                    ChangeCameraPoint();
                 }
                 break;
 
@@ -35,6 +37,7 @@ public class CameraMoveControl : MonoBehaviour
                 if (gameObject.tag == "P2Camera")
                 {
                     CameraMove();
+                    ChangeCameraPoint();
                 }
                 break;
 
@@ -42,6 +45,7 @@ public class CameraMoveControl : MonoBehaviour
                 if (gameObject.tag == "P3Camera")
                 {
                     CameraMove();
+                    ChangeCameraPoint();
                 }
                 break;
 
@@ -49,6 +53,7 @@ public class CameraMoveControl : MonoBehaviour
                 if (gameObject.tag == "P4Camera")
                 {
                     CameraMove();
+                    ChangeCameraPoint();
                 }
                 break;
         }
@@ -85,6 +90,19 @@ public class CameraMoveControl : MonoBehaviour
             transform.Rotate(Vector3.left * mouseY * sensitivity);
         }
         else
+        {
+            transform.position = cameraPointA.position;
+            transform.rotation = cameraPointA.rotation;
+        }
+    }
+    void ChangeCameraPoint()
+    {
+        if (isChangeCameraPoint)
+        {
+            transform.position = cameraPointB.position;
+            transform.rotation = cameraPointB.rotation;
+        }
+        else if (!isChangeCameraPoint && !isMove)
         {
             transform.position = cameraPointA.position;
             transform.rotation = cameraPointA.rotation;
