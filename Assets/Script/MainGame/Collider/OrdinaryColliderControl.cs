@@ -102,7 +102,7 @@ public class OrdinaryColliderControl : MonoBehaviour
     IEnumerator ChangeCamera()
     {
         CameraMoveControl.isChangeCameraPoint = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
