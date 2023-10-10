@@ -9,6 +9,7 @@ public class AnimatorControl : MonoBehaviour
     public static bool isP1Move, isP2Move, isP3Move, isP4Move;
     public static bool isP1Wave, isP2Wave, isP3Wave, isP4Wave;
     public static bool isP1Jump, isP2Jump, isP3Jump, isP4Jump;
+    public static bool isP1Win, isP2Win, isP3Win, isP4Win;
     public static bool isP1Lose, isP2Lose, isP3Lose, isP4Lose;
     public static bool isP1Skill, isP2Skill, isP3Skill, isP4Skill;
     public static bool isP1Dizziness, isP2Dizziness, isP3Dizziness, isP4Dizziness;
@@ -23,6 +24,7 @@ public class AnimatorControl : MonoBehaviour
         Move();
         Wave();
         Jump();
+        Win();
         Lose();
         Skill();
         Dizziness();
@@ -167,6 +169,53 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Jump", false);
+            }
+        }
+    }
+    void Win()
+    {
+        if (gameObject.tag == "P1")
+        {
+            if (isP1Win)
+            {
+                anim.SetBool("Win", true);
+            }
+            else
+            {
+                anim.SetBool("Win", false);
+            }
+        }
+        else if (gameObject.tag == "P2")
+        {
+            if (isP2Win)
+            {
+                anim.SetBool("Win", true);
+            }
+            else
+            {
+                anim.SetBool("Win", false);
+            }
+        }
+        else if (gameObject.tag == "P3")
+        {
+            if (isP3Win)
+            {
+                anim.SetBool("Win", true);
+            }
+            else
+            {
+                anim.SetBool("Win", false);
+            }
+        }
+        else if (gameObject.tag == "P4")
+        {
+            if (isP4Win)
+            {
+                anim.SetBool("Win", true);
+            }
+            else
+            {
+                anim.SetBool("Win", false);
             }
         }
     }
