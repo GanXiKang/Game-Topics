@@ -344,9 +344,75 @@ public class MGFinishAwardControl : MonoBehaviour
     IEnumerator AfterReceivingAward()
     {
         Award();
+        TrueByAnimator();
+        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
         isWin = false;
+        FalseByAnimator();
+        CameraMoveControl.isChangeCameraPoint = false;
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
     }
+
+    void TrueByAnimator()
+    {
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                if (isWin)
+                {
+                    AnimatorControl.isP1Win = true;
+                }
+                else
+                {
+                    AnimatorControl.isP1Lose = true;
+                }
+                break;
+
+            case 2:
+                if (isWin)
+                {
+                    AnimatorControl.isP2Win = true;
+                }
+                else
+                {
+                    AnimatorControl.isP2Lose = true;
+                }
+                break;
+
+            case 3:
+                if (isWin)
+                {
+                    AnimatorControl.isP3Win = true;
+                }
+                else
+                {
+                    AnimatorControl.isP3Lose = true;
+                }
+                break;
+
+            case 4:
+                if (isWin)
+                {
+                    AnimatorControl.isP4Win = true;
+                }
+                else
+                {
+                    AnimatorControl.isP4Lose = true;
+                }
+                break;
+        }
+    }
+    void FalseByAnimator()
+    {
+        AnimatorControl.isP1Win = false;
+        AnimatorControl.isP2Win = false;
+        AnimatorControl.isP3Win = false;
+        AnimatorControl.isP4Win = false;
+        AnimatorControl.isP1Lose = false;
+        AnimatorControl.isP2Lose = false;
+        AnimatorControl.isP3Lose = false;
+        AnimatorControl.isP4Lose = false;
+    }
 }
+
