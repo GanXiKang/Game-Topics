@@ -106,7 +106,7 @@ public class OrdinaryColliderControl : MonoBehaviour
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
-        FalseByisWaveAnimator();
+        FalseByAnimator();
     }
     IEnumerator Transposition()
     {
@@ -114,7 +114,26 @@ public class OrdinaryColliderControl : MonoBehaviour
         PropsControl.isTrans = false;
     }
 
-    void FalseByisWaveAnimator()
+    void TrueByAnimator()
+    {
+        if (!P1_Enter)
+        {
+            AnimatorControl.isP1Wave = true;
+        }
+        else if (!P2_Enter)
+        {
+            AnimatorControl.isP2Wave = true;
+        }
+        else if (!P3_Enter)
+        {
+            AnimatorControl.isP3Wave = true;
+        }
+        else if (!P4_Enter)
+        {
+            AnimatorControl.isP4Wave = true;
+        }
+    }
+    void FalseByAnimator()
     {
         AnimatorControl.isP1Wave = false;
         AnimatorControl.isP2Wave = false;
