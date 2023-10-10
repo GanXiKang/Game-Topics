@@ -6,8 +6,10 @@ public class AnimatorControl : MonoBehaviour
 {
     Animator anim;
 
-    public static bool isP1Wave, isP2Wave, isP3Wave, isP4Wave;
     public static bool isP1Move, isP2Move, isP3Move, isP4Move;
+    public static bool isP1Wave, isP2Wave, isP3Wave, isP4Wave;
+    public static bool isP1Jump, isP2Jump, isP3Jump, isP4Jump;
+    public static bool isP1Lose, isP2Lose, isP3Lose, isP4Lose;
     public static bool isP1Skill, isP2Skill, isP3Skill, isP4Skill;
     public static bool isP1Dizziness, isP2Dizziness, isP3Dizziness, isP4Dizziness;
     public static bool isP1Confusion, isP2Confusion, isP3Confusion, isP4Confusion;
@@ -19,13 +21,62 @@ public class AnimatorControl : MonoBehaviour
     }
     void Update()
     {
-        Wave();
         Move();
+        Wave();
+        Jump();
+        Lose();
         Skill();
         Dizziness();
         Confusion();
     }
 
+    void Move()
+    {
+        if (gameObject.tag == "P1")
+        {
+            if (isP1Move)
+            {
+                anim.SetBool("Walk", true);
+            }
+            else
+            {
+                anim.SetBool("Walk", false);
+            }
+        }
+        else if (gameObject.tag == "P2")
+        {
+            if (isP2Move)
+            {
+                anim.SetBool("Walk", true);
+            }
+            else
+            {
+                anim.SetBool("Walk", false);
+            }
+        }
+        else if (gameObject.tag == "P3")
+        {
+            if (isP3Move)
+            {
+                anim.SetBool("Walk", true);
+            }
+            else
+            {
+                anim.SetBool("Walk", false);
+            }
+        }
+        else if (gameObject.tag == "P4")
+        {
+            if (isP4Move)
+            {
+                anim.SetBool("Walk", true);
+            }
+            else
+            {
+                anim.SetBool("Walk", false);
+            }
+        }
+    }
     void Wave()
     {
         if (gameObject.tag == "P1")
@@ -73,50 +124,97 @@ public class AnimatorControl : MonoBehaviour
             }
         }
     }
-    void Move()
+    void Jump()
     {
         if (gameObject.tag == "P1")
         {
-            if (isP1Move)
+            if (isP1Jump)
             {
-                anim.SetBool("Walk", true);
+                anim.SetBool("Jump", true);
             }
             else
             {
-                anim.SetBool("Walk", false);
+                anim.SetBool("Jump", false);
             }
         }
         else if (gameObject.tag == "P2")
         {
-            if (isP2Move)
+            if (isP2Jump)
             {
-                anim.SetBool("Walk", true);
+                anim.SetBool("Jump", true);
             }
             else
             {
-                anim.SetBool("Walk", false);
+                anim.SetBool("Jump", false);
             }
         }
         else if (gameObject.tag == "P3")
         {
-            if (isP3Move)
+            if (isP3Jump)
             {
-                anim.SetBool("Walk", true);
+                anim.SetBool("Jump", true);
             }
             else
             {
-                anim.SetBool("Walk", false);
+                anim.SetBool("Jump", false);
             }
         }
         else if (gameObject.tag == "P4")
         {
-            if (isP4Move)
+            if (isP4Jump)
             {
-                anim.SetBool("Walk", true);
+                anim.SetBool("Jump", true);
             }
             else
             {
-                anim.SetBool("Walk", false);
+                anim.SetBool("Jump", false);
+            }
+        }
+    }
+    void Lose()
+    {
+        if (gameObject.tag == "P1")
+        {
+            if (isP1Lose)
+            {
+                anim.SetBool("Lose", true);
+            }
+            else
+            {
+                anim.SetBool("Lose", false);
+            }
+        }
+        else if (gameObject.tag == "P2")
+        {
+            if (isP2Lose)
+            {
+                anim.SetBool("Lose", true);
+            }
+            else
+            {
+                anim.SetBool("Lose", false);
+            }
+        }
+        else if (gameObject.tag == "P3")
+        {
+            if (isP3Lose)
+            {
+                anim.SetBool("Lose", true);
+            }
+            else
+            {
+                anim.SetBool("Lose", false);
+            }
+        }
+        else if (gameObject.tag == "P4")
+        {
+            if (isP4Lose)
+            {
+                anim.SetBool("Lose", true);
+            }
+            else
+            {
+                anim.SetBool("Lose", false);
             }
         }
     }
