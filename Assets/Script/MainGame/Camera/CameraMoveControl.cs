@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMoveControl : MonoBehaviour
 {
-    public Transform cameraOriginalLocation;
+    public Transform cameraPointA, cameraPointB;
     
     float speed, sensitivity, maxDistance;
     bool isMove;
@@ -83,8 +83,8 @@ public class CameraMoveControl : MonoBehaviour
         }
         else
         {
-            transform.position = cameraOriginalLocation.position;
-            transform.rotation = cameraOriginalLocation.rotation;
+            transform.position = cameraPointA.position;
+            transform.rotation = cameraPointA.rotation;
         }
     }
 }
