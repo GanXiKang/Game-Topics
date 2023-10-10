@@ -14,7 +14,6 @@ public class AnimatorControl : MonoBehaviour
     public static bool isP1Dizziness, isP2Dizziness, isP3Dizziness, isP4Dizziness;
     public static bool isP1Confusion, isP2Confusion, isP3Confusion, isP4Confusion;
 
-
     void Start()
     {
         anim = GetComponent<Animator>();
