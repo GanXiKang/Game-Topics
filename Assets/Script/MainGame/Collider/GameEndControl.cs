@@ -20,6 +20,7 @@ public class GameEndControl : MonoBehaviour
             if (DiceControl.P1_totalNum >= endPoint)
             {
                 whoWin = 1;
+                AnimatorControl.isP1Win = true;
             }
         }
         else if (other.tag == "P2")
@@ -27,6 +28,7 @@ public class GameEndControl : MonoBehaviour
             if (DiceControl.P2_totalNum >= endPoint)
             {
                 whoWin = 2;
+                AnimatorControl.isP2Win = true;
             }
         }
         else if (other.tag == "P3")
@@ -34,6 +36,7 @@ public class GameEndControl : MonoBehaviour
             if (DiceControl.P3_totalNum >= endPoint)
             {
                 whoWin = 3;
+                AnimatorControl.isP3Win = true;
             }
         }
         else if (other.tag == "P4")
@@ -41,6 +44,7 @@ public class GameEndControl : MonoBehaviour
             if (DiceControl.P4_totalNum >= endPoint)
             {
                 whoWin = 4;
+                AnimatorControl.isP4Win = true;
             }
         }
     }
@@ -48,13 +52,10 @@ public class GameEndControl : MonoBehaviour
     {
         systemTest.text = "ß[‘ò½YÊø£¡";
         SystemTestTextControl.isTimer = true;
+        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(8);
         isEnd = true;
-        Menu_ChoosePlayer.whoPlay = 0;
-        DiceControl.P1_totalNum = 0;
-        DiceControl.P2_totalNum = 0;
-        DiceControl.P3_totalNum = 0;
-        DiceControl.P4_totalNum = 0;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
 }
