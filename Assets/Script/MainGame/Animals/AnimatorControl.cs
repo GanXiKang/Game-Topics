@@ -30,7 +30,8 @@ public class AnimatorControl : MonoBehaviour
     {
         if (isWave)
         {
-            StartCoroutine(NotWave());
+            anim.SetBool("Wave", true);
+            Invoke("StopWave", 2f);
         }
         else
         {
@@ -210,10 +211,8 @@ public class AnimatorControl : MonoBehaviour
         }
     }
 
-    IEnumerator NotWave()
+    void StopWave()
     {
-        anim.SetBool("Wave", true);
-        yield return new WaitForSeconds(4f);
         isWave = false;
     }
     IEnumerator DizzinessAnimator()
