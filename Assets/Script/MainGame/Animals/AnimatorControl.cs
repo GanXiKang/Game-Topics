@@ -31,7 +31,7 @@ public class AnimatorControl : MonoBehaviour
         if (isWave)
         {
             anim.SetBool("Wave", true);
-            Invoke("StopWave", 1f);
+            Invoke("StopWave", 2f);
         }
         else
         {
