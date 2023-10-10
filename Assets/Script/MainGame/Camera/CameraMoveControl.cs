@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraMoveControl : MonoBehaviour
 {
+    public static bool isChangeCameraPoint;
+
     public Transform cameraPointA;
     public Transform cameraPointB;
 
