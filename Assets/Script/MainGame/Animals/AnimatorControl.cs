@@ -6,7 +6,7 @@ public class AnimatorControl : MonoBehaviour
 {
     Animator anim;
 
-    public static bool isWave;
+    public static bool isP1Wave, isP2Wave, isP3Wave, isP4Wave;
     public static bool isP1Move, isP2Move, isP3Move, isP4Move;
     public static bool isP1Skill, isP2Skill, isP3Skill, isP4Skill;
     public static bool isP1Dizziness, isP2Dizziness, isP3Dizziness, isP4Dizziness;
@@ -28,14 +28,49 @@ public class AnimatorControl : MonoBehaviour
 
     void Wave()
     {
-        if (isWave)
+        if (gameObject.tag == "P1")
         {
-            anim.SetBool("Wave", true);
-            Invoke("StopWave", 2f);
+            if (isP1Wave)
+            {
+                anim.SetBool("Wave", true);
+            }
+            else
+            {
+                anim.SetBool("Wave", false);
+            }
         }
-        else
+        else if (gameObject.tag == "P2")
         {
-            anim.SetBool("Wave", false);
+            if (isP2Wave)
+            {
+                anim.SetBool("Wave", true);
+            }
+            else
+            {
+                anim.SetBool("Wave", false);
+            }
+        }
+        else if (gameObject.tag == "P3")
+        {
+            if (isP3Wave)
+            {
+                anim.SetBool("Wave", true);
+            }
+            else
+            {
+                anim.SetBool("Wave", false);
+            }
+        }
+        else if (gameObject.tag == "P4")
+        {
+            if (isP4Wave)
+            {
+                anim.SetBool("Wave", true);
+            }
+            else
+            {
+                anim.SetBool("Wave", false);
+            }
         }
     }
     void Move()
@@ -211,10 +246,6 @@ public class AnimatorControl : MonoBehaviour
         }
     }
 
-    void StopWave()
-    {
-        isWave = false;
-    }
     IEnumerator DizzinessAnimator()
     {
         anim.SetBool("Dizziness", true);
