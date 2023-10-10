@@ -7,7 +7,6 @@ public class CameraMoveControl : MonoBehaviour
     public Transform cameraPointA;
     public Transform cameraPointB;
 
-
     float speed, sensitivity, maxDistance;
     bool isMove;
 
