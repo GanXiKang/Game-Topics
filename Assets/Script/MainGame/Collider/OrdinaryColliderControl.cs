@@ -105,6 +105,7 @@ public class OrdinaryColliderControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
         FalseByisWaveAnimator();
     }
     IEnumerator Transposition()
