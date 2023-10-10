@@ -25,6 +25,7 @@ public class StoreColliderControl : MonoBehaviour
                         P1_EnterStore = false;
                         AnimatorControl.isP1Move = false;
                         AnimatorControl.isP1Skill = false;
+                        AnimatorControl.isP1Wave = true;
                         StartCoroutine(LookTarget());
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
@@ -41,6 +42,7 @@ public class StoreColliderControl : MonoBehaviour
                         P2_EnterStore = false;
                         AnimatorControl.isP2Move = false;
                         AnimatorControl.isP2Skill = false;
+                        AnimatorControl.isP2Wave = true;
                         StartCoroutine(LookTarget());
                         if (Menu_ChoosePlayer.whyP2 == 1)
                         {
@@ -57,6 +59,7 @@ public class StoreColliderControl : MonoBehaviour
                         P3_EnterStore = false;
                         AnimatorControl.isP3Move = false;
                         AnimatorControl.isP3Skill = false;
+                        AnimatorControl.isP3Wave = true;
                         StartCoroutine(LookTarget());
                         if (Menu_ChoosePlayer.whyP3 == 1)
                         {
@@ -73,6 +76,7 @@ public class StoreColliderControl : MonoBehaviour
                         P4_EnterStore = false;
                         AnimatorControl.isP4Move = false;
                         AnimatorControl.isP4Skill = false;
+                        AnimatorControl.isP4Wave = true;
                         StartCoroutine(LookTarget());
                         if (Menu_ChoosePlayer.whyP4 == 1)
                         {
@@ -201,11 +205,20 @@ public class StoreColliderControl : MonoBehaviour
         PlayerMoveControl.isMove = false;
         StoreUIControl.isStore = true;
         isStoreNotStopUI = true;
+        FalseByAnimator();
     }
     IEnumerator Transposition()
     {
         yield return new WaitForSeconds(1f);
         PropsControl.isTrans = false;
+    }
+
+    void FalseByAnimator()
+    {
+        AnimatorControl.isP1Wave = false;
+        AnimatorControl.isP2Wave = false;
+        AnimatorControl.isP3Wave = false;
+        AnimatorControl.isP4Wave = false;
     }
 }
 
