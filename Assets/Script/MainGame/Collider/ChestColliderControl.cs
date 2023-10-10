@@ -166,18 +166,50 @@ public class ChestColliderControl : MonoBehaviour
             PlayerMoveControl.isMove = false;
             yield return new WaitForSeconds(1f);
             OpenBoxJudge();
-            yield return new WaitForSeconds(1f);
-            CameraMoveControl.isChangeCameraPoint = true;
+            yield return new WaitForSeconds(0.5f);
         }
-        yield return new WaitForSeconds(1f);
+        else
+        {
+            TrueByAnimator();
+        }
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(1.5f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
         isOpened = true;
         CameraMoveControl.isChangeCameraPoint = false;
+        FalseByAnimator();
     }
     IEnumerator Transposition()
     {
         yield return new WaitForSeconds(1f);
         PropsControl.isTrans = false;
+    }
+
+    void TrueByAnimator()
+    {
+        if (!P1_EnterBox)
+        {
+            AnimatorControl.isP1Wave = true;
+        }
+        else if (!P2_EnterBox)
+        {
+            AnimatorControl.isP2Wave = true;
+        }
+        else if (!P3_EnterBox)
+        {
+            AnimatorControl.isP3Wave = true;
+        }
+        else if (!P3_EnterBox)
+        {
+            AnimatorControl.isP3Wave = true;
+        }
+    }
+    void FalseByAnimator()
+    {
+        AnimatorControl.isP1Wave = false;
+        AnimatorControl.isP2Wave = false;
+        AnimatorControl.isP3Wave = false;
+        AnimatorControl.isP4Wave = false;
     }
 }
