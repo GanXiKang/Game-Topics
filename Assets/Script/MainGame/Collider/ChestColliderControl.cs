@@ -167,11 +167,13 @@ public class ChestColliderControl : MonoBehaviour
             yield return new WaitForSeconds(1f);
             OpenBoxJudge();
             yield return new WaitForSeconds(1f);
+            CameraMoveControl.isChangeCameraPoint = true;
         }
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
         isOpened = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
     IEnumerator Transposition()
     {
