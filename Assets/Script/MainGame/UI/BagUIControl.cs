@@ -419,47 +419,67 @@ public class BagUIControl : MonoBehaviour
     {
         useProps = true;
         yield return new WaitForSeconds(0.2f);
+        bagUI.SetActive(false);
         switch (whyUseProps)
         {
             case 1:
                 isRenewDice = true;
+                GoDiceScene();
                 break;
 
             case 2:
                 isDoubleDice = true;
+                GoDiceScene();
                 break;
 
             case 3:
                 isCustomDice = true;
+                GoDiceScene();
                 break;
 
             case 4:
                 isBomb = true;
+                CameraMoveControl.isChangeCameraPoint = true;
+                yield return new WaitForSeconds(2f);
+                GoDiceScene();
+                CameraMoveControl.isChangeCameraPoint = false;
                 break;
 
             case 5:
                 isSnatch = true;
+                CameraMoveControl.isChangeCameraPoint = true;
+                yield return new WaitForSeconds(2f);
+                ChangeCamera();
+                CameraMoveControl.isChangeCameraPoint = false;
                 break;
 
             case 6:
                 isTransposition = true;
+                CameraMoveControl.isChangeCameraPoint = true;
+                yield return new WaitForSeconds(2f);
+                ChangeCamera();
+                CameraMoveControl.isChangeCameraPoint = false;
+                
                 break;
 
             case 7:
                 isThief = true;
+                CameraMoveControl.isChangeCameraPoint = true;
+                yield return new WaitForSeconds(2f);
+                ChangeCamera();
+                CameraMoveControl.isChangeCameraPoint = false;
                 break;
         }
-        bagUI.SetActive(false);
-        if (whyUseProps <= 4)
-        {
-            SceneManager.LoadScene(9);
-            DiceUIControl.isDiceScene = true;
-        }
-        else
-        {
-            yield return new WaitForSeconds(2f);
-            DiceUIControl.isDiceUI = true;
-            ChangeCameraControl.changeCameraNum++;
-        }
+    }
+
+    void GoDiceScene()
+    {
+        SceneManager.LoadScene(9);
+        DiceUIControl.isDiceScene = true;
+    }
+    void ChangeCamera()
+    {
+        DiceUIControl.isDiceUI = true;
+        ChangeCameraControl.changeCameraNum++;
     }
 }
