@@ -21,13 +21,11 @@ public class CowPowerControl : MonoBehaviour
         {
             agent.speed = 20;
             bc.enabled = true;
-            CameraMoveControl.isChangeCameraPoint = true;
         }
         else 
         {
             agent.speed = 10;
             bc.enabled = false;
-            CameraMoveControl.isChangeCameraPoint = false;
         }
     }
 
