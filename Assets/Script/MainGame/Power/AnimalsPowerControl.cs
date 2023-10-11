@@ -46,6 +46,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[1]--;
         isMousePower = false;
+        CameraMoveControl.isChangeCameraPoint = true;
         AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
         switch (ChangeCameraControl.changeCameraNum)
@@ -144,6 +145,7 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         AnimalsSkillAnimator();
         yield return new WaitForSeconds(2f);
+        CameraMoveControl.isChangeCameraPoint = false;
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
     }
@@ -210,6 +212,7 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[3]--;
         isTigerPower = false;
         AnimalsSkillAnimator();
+        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(1f);
         systemText.text = "全部玩家后退！";
         SystemTestTextControl.isTimer = true; 
@@ -230,6 +233,7 @@ public class AnimalsPowerControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
         yield return new WaitForSeconds(2f);
         tigerUsePower = false;
     }
