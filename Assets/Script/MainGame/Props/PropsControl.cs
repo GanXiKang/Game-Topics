@@ -84,6 +84,7 @@ public class PropsControl : MonoBehaviour
             {
                 case 1:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP1Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -148,6 +149,7 @@ public class PropsControl : MonoBehaviour
 
                 case 2:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP2Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -212,6 +214,7 @@ public class PropsControl : MonoBehaviour
 
                 case 3:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP3Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -276,6 +279,7 @@ public class PropsControl : MonoBehaviour
 
                 case 4:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP4Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -339,6 +343,7 @@ public class PropsControl : MonoBehaviour
                     break;
             }
             BagUIControl.isSnatch = false;
+            Invoke("FalseByAnimator", 1f);
         }
 
         if (BagUIControl.isTransposition)
@@ -349,6 +354,7 @@ public class PropsControl : MonoBehaviour
             {
                 case 1:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP1Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -385,6 +391,7 @@ public class PropsControl : MonoBehaviour
 
                 case 2:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP2Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -421,6 +428,7 @@ public class PropsControl : MonoBehaviour
 
                 case 3:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP3Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -457,6 +465,7 @@ public class PropsControl : MonoBehaviour
 
                 case 4:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP4Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -492,6 +501,7 @@ public class PropsControl : MonoBehaviour
                     break;
             }
             BagUIControl.isTransposition = false;
+            Invoke("FalseByAnimator", 1f);
         }
 
         if (BombPropsControl.iscolliderBombText)
@@ -587,5 +597,13 @@ public class PropsControl : MonoBehaviour
         P2 = GameObject.FindGameObjectWithTag("P2");
         P3 = GameObject.FindGameObjectWithTag("P3");
         P4 = GameObject.FindGameObjectWithTag("P4");
+    }
+    void FalseByAnimator()
+    {
+        AnimatorControl.isP1Win = false;
+        AnimatorControl.isP2Win = false;
+        AnimatorControl.isP3Win = false;
+        AnimatorControl.isP4Win = false;
+
     }
 }
