@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class FishAnimatorControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator anim;
+
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        anim.SetBool("Jump", true);
+        Invoke("FalseByAnimator", 1f);
     }
 
-    // Update is called once per frame
-    void Update()
+    void FalseByAnimator()
     {
-        
+        anim.SetBool("Jump", false);
     }
 }
