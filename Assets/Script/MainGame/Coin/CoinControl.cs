@@ -32,6 +32,7 @@ public class CoinControl : MonoBehaviour
             {
                 case 1:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP1Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -62,6 +63,7 @@ public class CoinControl : MonoBehaviour
 
                 case 2:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP2Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -92,6 +94,7 @@ public class CoinControl : MonoBehaviour
 
                 case 3:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP3Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -122,6 +125,7 @@ public class CoinControl : MonoBehaviour
 
                 case 4:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                    AnimatorControl.isP4Win = true;
                     switch (stealWho)
                     {
                         case 1:
@@ -151,8 +155,10 @@ public class CoinControl : MonoBehaviour
                     break;
             }
             BagUIControl.isThief = false;
+            Invoke("FalseByAnimtor", 1f);
         }
     }
+
     void Limit()
     {
         if (P1CoinTotal < 0)
@@ -171,5 +177,12 @@ public class CoinControl : MonoBehaviour
         {
             P4CoinTotal = 0;
         }
+    }
+    void FalseByAnimtor()
+    {
+        AnimatorControl.isP1Win = false;
+        AnimatorControl.isP2Win = false;
+        AnimatorControl.isP3Win = false;
+        AnimatorControl.isP4Win = false;
     }
 }
