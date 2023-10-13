@@ -86,7 +86,7 @@ public class CameraMoveControl : MonoBehaviour
             float srollInput = Input.GetAxis("Mouse ScrollWheel");
             if (cameraDistance <= maxDistance)
             {
-                transform.position.x += -srollInput;
+                transform.Translate(-srollInput, 0, 0);
             }
         }
         else
