@@ -143,9 +143,9 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (whyP1 < 1)
         {
-            whyP1 = 4;
+            whyP1 = 12;
         }
-        if (whyP1 > 4)
+        if (whyP1 > 12)
         {
             whyP1 = 1;
         }
@@ -154,9 +154,9 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (whyP2 < 1)
         {
-            whyP2 = 4;
+            whyP2 = 12;
         }
-        if (whyP2 > 4)
+        if (whyP2 > 12)
         {
             whyP2 = 1;
         }
@@ -165,9 +165,9 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (whyP3 < 1)
         {
-            whyP3 = 4;
+            whyP3 = 12;
         }
-        if (whyP3 > 4)
+        if (whyP3 > 12)
         {
             whyP3 = 1;
         }
@@ -176,9 +176,9 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         if (whyP4 < 1)
         {
-            whyP4 = 4;
+            whyP4 = 12;
         }
-        if (whyP4 > 4)
+        if (whyP4 > 12)
         {
             whyP4 = 1;
         }
