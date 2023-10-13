@@ -190,57 +190,15 @@ public class Menu_ChoosePlayer : MonoBehaviour
     }
     void Choose2P()
     {
-        switch (whyP2)
-        {
-            case 1:
-                Instantiate(animals[0], insPoint[2].transform.position, insPoint[2].transform.rotation);
-                break;
-            case 2:
-                Instantiate(animals[1], insPoint[2].transform.position, insPoint[2].transform.rotation);
-                break;
-            case 3:
-                Instantiate(animals[2], insPoint[2].transform.position, insPoint[2].transform.rotation);
-                break;
-            case 4:
-                Instantiate(animals[3], insPoint[2].transform.position, insPoint[2].transform.rotation);
-                break;
-        }
+        Instantiate(animals[whyP2 - 1], insPoint[2].transform.position, insPoint[2].transform.rotation);
     }
     void Choose3P()
     {
-        switch (whyP3)
-        {
-            case 1:
-                Instantiate(animals[0], insPoint[3].transform.position, insPoint[3].transform.rotation);
-                break;
-            case 2:
-                Instantiate(animals[1], insPoint[3].transform.position, insPoint[3].transform.rotation);
-                break;
-            case 3:
-                Instantiate(animals[2], insPoint[3].transform.position, insPoint[3].transform.rotation);
-                break;
-            case 4:
-                Instantiate(animals[3], insPoint[3].transform.position, insPoint[3].transform.rotation);
-                break;
-        }
+        Instantiate(animals[whyP3 - 1], insPoint[3].transform.position, insPoint[3].transform.rotation);
     }
     void Choose4P()
     {
-        switch (whyP4)
-        {
-            case 1:
-                Instantiate(animals[0], insPoint[4].transform.position, insPoint[4].transform.rotation);
-                break;
-            case 2:
-                Instantiate(animals[1], insPoint[4].transform.position, insPoint[4].transform.rotation);
-                break;
-            case 3:
-                Instantiate(animals[2], insPoint[4].transform.position, insPoint[4].transform.rotation);
-                break;
-            case 4:
-                Instantiate(animals[3], insPoint[4].transform.position, insPoint[4].transform.rotation);
-                break;
-        }
+        Instantiate(animals[whyP4 - 1], insPoint[4].transform.position, insPoint[4].transform.rotation);
     }
 
     public void OK_1p()
