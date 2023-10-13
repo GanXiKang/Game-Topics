@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 158453704782057837}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &226561220251728886
 GameObject:
@@ -240,6 +240,7 @@ Transform:
   - {fileID: 6651286585594585221}
   - {fileID: 565704620747693350}
   - {fileID: 2764822506984242367}
+  - {fileID: 7690577395257981639}
   - {fileID: 290881085}
   - {fileID: 4303668977469036287}
   m_Father: {fileID: 0}
@@ -1495,6 +1496,37 @@ Transform:
   m_Father: {fileID: 2409958459715209096}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6439396585738934908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7690577395257981639}
+  m_Layer: 0
+  m_Name: CameraPointC
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7690577395257981639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6439396585738934908}
+  m_LocalRotation: {x: 0.052402586, y: 0.7051624, z: -0.052402586, w: 0.7051624}
+  m_LocalPosition: {x: -9.31, y: 4.1000004, z: 1.5207672}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 158453704782057837}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 8.5, y: 90, z: 0}
 --- !u!1 &6591598740768568694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,6 +1877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPointA: {fileID: 565704620747693350}
   cameraPointB: {fileID: 2764822506984242367}
+  cameraPointC: {fileID: 7690577395257981639}
 --- !u!1 &7491022631037449691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,7 +2362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_LocalScale.x

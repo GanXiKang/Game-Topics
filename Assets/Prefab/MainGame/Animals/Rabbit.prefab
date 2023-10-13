@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3720288323304270595}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &107294138864151475
 GameObject:
@@ -65,6 +65,37 @@ Transform:
   m_Father: {fileID: 5847387813201471775}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &256784969695640849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4267493758931644137}
+  m_Layer: 0
+  m_Name: CameraPointC
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4267493758931644137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256784969695640849}
+  m_LocalRotation: {x: 0.052402586, y: 0.7051624, z: -0.052402586, w: 0.7051624}
+  m_LocalPosition: {x: -9.31, y: 4.1000004, z: 1.5207672}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3720288323304270595}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 8.5, y: 90, z: 0}
 --- !u!1 &265502176322436909
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +839,7 @@ Transform:
   - {fileID: 5227579097858064169}
   - {fileID: 754695924715841412}
   - {fileID: 8016849381833955086}
+  - {fileID: 4267493758931644137}
   - {fileID: 440853502}
   - {fileID: 4303668978950287093}
   m_Father: {fileID: 0}
@@ -1431,6 +1463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPointA: {fileID: 754695924715841412}
   cameraPointB: {fileID: 8016849381833955086}
+  cameraPointC: {fileID: 4267493758931644137}
 --- !u!1 &5187129295142517190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2263,7 +2296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_LocalScale.x
