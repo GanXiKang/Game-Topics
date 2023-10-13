@@ -10,7 +10,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public static bool isJumpP1, isJumpP2, isJumpP3, isJumpP4;
 
     public GameObject[] Group = new GameObject[2];
-    public GameObject[] animals = new GameObject[4];
+    public GameObject[] animals = new GameObject[12];
     public GameObject[] insPoint = new GameObject[5];
     public GameObject[] OK = new GameObject[4];
     public GameObject[] NO = new GameObject[4];
