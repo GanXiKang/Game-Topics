@@ -189,16 +189,40 @@ public class Menu_ChoosePlayer : MonoBehaviour
         switch (whyP1)
         {
             case 1:
-                Instantiate(animals[0], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                Instantiate(animals[whyP1 - 1], insPoint[1].transform.position, insPoint[1].transform.rotation);
                 break;
             case 2:
-                Instantiate(animals[1], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                Instantiate(animals[whyP1 - 1], insPoint[1].transform.position, insPoint[1].transform.rotation);
                 break;
             case 3:
-                Instantiate(animals[2], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                Instantiate(animals[whyP1 - 1], insPoint[1].transform.position, insPoint[1].transform.rotation);
                 break;
             case 4:
                 Instantiate(animals[3], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 5:
+                Instantiate(animals[4], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 6:
+                Instantiate(animals[5], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 7:
+                Instantiate(animals[6], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 8:
+                Instantiate(animals[7], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 9:
+                Instantiate(animals[8], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 10:
+                Instantiate(animals[9], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 11:
+                Instantiate(animals[10], insPoint[1].transform.position, insPoint[1].transform.rotation);
+                break;
+            case 12:
+                Instantiate(animals[11], insPoint[1].transform.position, insPoint[1].transform.rotation);
                 break;
         }
     }
