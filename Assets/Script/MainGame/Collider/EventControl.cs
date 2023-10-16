@@ -242,6 +242,14 @@ public class EventControl : MonoBehaviour
         AnimatorControl.isP2Skill = false;
         EventImageUIControl.isTimer = true;
         EventImageUIControl.eventPointNum = EventPoint;
+        if (getCoin != 0 || getPorps != 0 || forward != 0)
+        {
+            BGM.PlayOneShot(goodE);
+        }
+        else
+        {
+            BGM.PlayOneShot(badE);
+        }
         yield return new WaitForSeconds(2f);
         if (getCoin != 0)
         {
@@ -297,6 +305,14 @@ public class EventControl : MonoBehaviour
         AnimatorControl.isP3Skill = false;
         EventImageUIControl.isTimer = true;
         EventImageUIControl.eventPointNum = EventPoint;
+        if (getCoin != 0 || getPorps != 0 || forward != 0)
+        {
+            BGM.PlayOneShot(goodE);
+        }
+        else
+        {
+            BGM.PlayOneShot(badE);
+        }
         yield return new WaitForSeconds(2f);
         if (getCoin != 0)
         {
@@ -352,6 +368,14 @@ public class EventControl : MonoBehaviour
         AnimatorControl.isP4Skill = false;
         EventImageUIControl.isTimer = true;
         EventImageUIControl.eventPointNum = EventPoint;
+        if (getCoin != 0 || getPorps != 0 || forward != 0)
+        {
+            BGM.PlayOneShot(goodE);
+        }
+        else
+        {
+            BGM.PlayOneShot(badE);
+        }
         yield return new WaitForSeconds(2f);
         if (getCoin != 0)
         {
