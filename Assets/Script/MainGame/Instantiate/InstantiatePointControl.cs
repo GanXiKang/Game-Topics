@@ -12,10 +12,16 @@ public class InstantiatePointControl : MonoBehaviour
     {
         if (isStart)
         {
+            if (Menu_ChoosePlayer.whoPlay == 4)
+            {
+                Instantiate(animals[Menu_ChoosePlayer.whyP4 - 1], insPoint[3].transform.position, insPoint[3].transform.rotation);
+            }
+            else if (Menu_ChoosePlayer.whoPlay == 3)
+            {
+                Instantiate(animals[Menu_ChoosePlayer.whyP3 - 1], insPoint[2].transform.position, insPoint[2].transform.rotation);
+            }
             Instantiate(animals[Menu_ChoosePlayer.whyP1 - 1], insPoint[0].transform.position, insPoint[0].transform.rotation);
             Instantiate(animals[Menu_ChoosePlayer.whyP2 - 1], insPoint[1].transform.position, insPoint[1].transform.rotation);
-            Instantiate(animals[Menu_ChoosePlayer.whyP3 - 1], insPoint[2].transform.position, insPoint[2].transform.rotation);
-            Instantiate(animals[Menu_ChoosePlayer.whyP4 - 1], insPoint[3].transform.position, insPoint[3].transform.rotation);
             isStart = false;
         }
     }
