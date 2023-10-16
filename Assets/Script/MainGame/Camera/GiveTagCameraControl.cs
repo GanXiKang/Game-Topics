@@ -186,7 +186,7 @@ public class GiveTagCameraControl : MonoBehaviour
             }
         }
 
-        else if (this.gameObject.tag == "Chinken")
+        else if (this.gameObject.tag == "Chicken")
         {
             if (Menu_ChoosePlayer.whyP1 == 10)
             {
