@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MG5_HookControl : MonoBehaviour
 {
+    SphereCollider sc;
+
     public GameObject fishingLine;
     public static bool isFishing = false, takeBack = false;
 
@@ -11,6 +13,10 @@ public class MG5_HookControl : MonoBehaviour
     float y, speed = 20;
     bool hookDown, hookUp;
 
+    void Start()
+    {
+        sc = GetComponent<SphereCollider>();
+    }
     void Update()
     {
         y = transform.position.y;
@@ -34,6 +40,10 @@ public class MG5_HookControl : MonoBehaviour
             {
                 hookUp = false;
             }
+        }
+        else
+        {
+            sc.enabled = false; 
         }
     }
     void FixedUpdate()
