@@ -8,6 +8,8 @@ public class EventControl : MonoBehaviour
     public static bool P1_EnterEvent = true, P2_EnterEvent = true, P3_EnterEvent = true, P4_EnterEvent = true;
     public static bool isStopP1 = false, isStopP2 = false, isStopP3 = false, isStopP4 = false;
 
+    public AudioSource BGM;
+    public AudioClip goodE, badE;
     public Text systemTest;
     public int EventPoint;
     public int forward, backward, stop, getCoin, lossCoin, getPorps;
@@ -177,6 +179,14 @@ public class EventControl : MonoBehaviour
         AnimatorControl.isP1Skill = false;
         EventImageUIControl.isTimer = true;
         EventImageUIControl.eventPointNum = EventPoint;
+        if (getCoin != 0 || getPorps != 0 || forward != 0)
+        {
+            BGM.PlayOneShot(goodE);
+        }
+        else
+        {
+            BGM.PlayOneShot(badE);
+        }
         yield return new WaitForSeconds(2f);
         if (getCoin != 0)
         {
