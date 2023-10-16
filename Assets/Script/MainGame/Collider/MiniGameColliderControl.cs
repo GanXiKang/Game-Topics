@@ -23,7 +23,7 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 1;
                         AnimatorControl.isP1Move = false;
-                        AnimatorControl.isP2Skill = false;
+                        AnimatorControl.isP1Skill = false;
                         StartCoroutine(StartMiniGame());
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
