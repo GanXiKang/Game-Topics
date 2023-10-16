@@ -20,6 +20,8 @@ public class GameEndControl : MonoBehaviour
             if (DiceControl.P1_totalNum >= endPoint)
             {
                 whoWin = 1;
+                AnimatorControl.isP1Move = false;
+                AnimatorControl.isP1Skill = false;
                 AnimatorControl.isP1Win = true;
             }
         }
@@ -28,6 +30,8 @@ public class GameEndControl : MonoBehaviour
             if (DiceControl.P2_totalNum >= endPoint)
             {
                 whoWin = 2;
+                AnimatorControl.isP2Move = false;
+                AnimatorControl.isP2Skill = false;
                 AnimatorControl.isP2Win = true;
             }
         }
@@ -36,6 +40,8 @@ public class GameEndControl : MonoBehaviour
             if (DiceControl.P3_totalNum >= endPoint)
             {
                 whoWin = 3;
+                AnimatorControl.isP3Move = false;
+                AnimatorControl.isP3Skill = false;
                 AnimatorControl.isP3Win = true;
             }
         }
@@ -44,6 +50,8 @@ public class GameEndControl : MonoBehaviour
             if (DiceControl.P4_totalNum >= endPoint)
             {
                 whoWin = 4;
+                AnimatorControl.isP4Move = false;
+                AnimatorControl.isP4Skill = false;
                 AnimatorControl.isP4Win = true;
             }
         }
