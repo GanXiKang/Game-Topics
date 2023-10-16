@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class BombPropsControl : MonoBehaviour
 {
+    AudioSource boom;
+
     public static int pointNum;
     public static bool iscolliderBombText = false;
     bool r = true;
 
+    void Start()
+    {
+        boom = GetComponent<AudioSource>();
+    }
     void FixedUpdate()
     {
         if (r)
@@ -86,6 +92,7 @@ public class BombPropsControl : MonoBehaviour
     IEnumerator StopTiming()
     {
         r = false;
+        boom.Play();
         iscolliderBombText = true;
         yield return new WaitForSeconds(3f);
         IsStopUIControl.isBombStopUI++;
