@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class DiceScene_BGMControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    AudioSource BGM;
+
+    public AudioClip[] region = new AudioClip[6];
+
+    public static int isWhyRegion;
+
     void Start()
     {
-        
+        BGM = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
