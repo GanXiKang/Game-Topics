@@ -8,8 +8,8 @@ public class EndInsPlayerControl : MonoBehaviour
     AudioSource audio;
 
     public GameObject[] point = new GameObject[4];
-    public GameObject[] animals = new GameObject[4];
-    public GameObject[] animalsWin = new GameObject[4];
+    public GameObject[] animals = new GameObject[12];
+    public GameObject[] animalsWin = new GameObject[12];
 
     bool isLose1, isLose2;
 

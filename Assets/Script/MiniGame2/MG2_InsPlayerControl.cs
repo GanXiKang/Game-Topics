@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MG2_InsPlayerControl : MonoBehaviour
 {
-    public GameObject[] animals = new GameObject[4];
+    public GameObject[] animals = new GameObject[12];
     public Transform playerIns;
 
     void Start()

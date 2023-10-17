@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DiceInstantionAnimalsControl : MonoBehaviour
 {
-    public GameObject[] animals = new GameObject[4];
+    public GameObject[] animals = new GameObject[12];
 
     void Start()
     {
