@@ -26,9 +26,9 @@ public class AudioControl : MonoBehaviour
             BGM.PlayOneShot(destoryKickboard);
             InsKickboardControl.destoryKickboard = false;
         }
-        if ()
-        {
-            BGM.PlayOneShot(cat);
-        }
+        //if ()
+        //{
+        //    BGM.PlayOneShot(cat);
+        //}
     }
 }
