@@ -96,7 +96,6 @@ public class Menu_AnimalsTagControl : MonoBehaviour
         if (other.tag == "Floor")
         {
             isJump = true;
-            print("yes");
         }
     }
     IEnumerator AnimatorWaveControl()
