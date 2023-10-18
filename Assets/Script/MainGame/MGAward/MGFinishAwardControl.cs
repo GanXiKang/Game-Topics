@@ -7,7 +7,7 @@ public class MGFinishAwardControl : MonoBehaviour
 {
     public static int miniGame;
     public static bool isFinishMG = false, isWin = false;
-    public static bool isBearCall, isSlothCall, isDolphinCall, isFoxCall, isTycoonCall, isOstrichCall;
+    public static bool isRacoonCall, isSlothCall, isFoxCall, isOstrichCall, isBearCall,  isDolphinCall;
 
     public Text systemText;
 
@@ -22,7 +22,7 @@ public class MGFinishAwardControl : MonoBehaviour
             {
                 case 1:
                     isPropsAward = true;
-                    isTycoonCall = true;
+                    isRacoonCall = true;
                     break;
 
                 case 2:
