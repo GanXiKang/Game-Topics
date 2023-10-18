@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class DS_AnimalsSoundControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    AudioSource BGM;
+
+    public AudioClip animalsSound;
+
+    bool isOnce;
+
     void Start()
     {
-        
+        BGM = GetComponent<AudioSource>();
+        isOnce = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (isOnce)
+        {
+            Invoke("PlaySound", 2f);
+        }
         
+    }
+    void PlaySound()
+    {
+        BGM.PlayOneShot(animalsSound);
     }
 }
