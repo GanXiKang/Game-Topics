@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MiniGameColliderControl : MonoBehaviour
 {
     public static bool P1_playGame = true, P2_playGame = true, P3_playGame = true, P4_playGame = true ,isMiniGame = false;
+    public static bool isRacoonCall, isSlothCall, isFoxCall, isOstrichCall, isBearCall, isDolphinCall;
     public static float p;
 
     public int miniGame, MGPoint;
@@ -161,6 +162,7 @@ public class MiniGameColliderControl : MonoBehaviour
     IEnumerator StartMiniGame()
     {
         yield return new WaitForSeconds(1f);
+        AnimalsCall();
         PlayerMoveControl.isMove = false;
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(miniGame);
@@ -170,5 +172,35 @@ public class MiniGameColliderControl : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         PropsControl.isTrans = false;
+    }
+
+    void AnimalsCall()
+    {
+        switch (miniGame)
+        {
+            case 1:
+                isRacoonCall = true;
+                break;
+
+            case 2:
+                isSlothCall = true;
+                break;
+
+            case 3:
+                isFoxCall = true;
+                break;
+
+            case 4:
+                isOstrichCall = true;
+                break;
+
+            case 5:
+                isBearCall = true;
+                break;
+
+            case 6:
+                isDolphinCall = true;
+                break;
+        }
     }
 }
