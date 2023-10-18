@@ -83,10 +83,12 @@ public class CameraMoveControl : MonoBehaviour
             }
 
             float cameraDistance = Vector3.Distance(transform.position, cameraPointA.position);
-            float srollInput = Input.GetAxis("Mouse ScrollWheel");
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
+            //float srollInput = Input.GetAxis("Mouse ScrollWheel");
             if (cameraDistance <= maxDistance)
             {
-                transform.Translate(-srollInput * speed, 0, 0);
+                transform.Translate(mouseX * speed, mouseY * speed, 0);
             }
         }
         else
