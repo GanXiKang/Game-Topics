@@ -15,6 +15,7 @@ public class StoreUIControl : MonoBehaviour
     public Button buttonBuy;
 
     public static bool isStore = false, isBuying = false;
+    public static bool isCatCall = false;
 
     bool haveBuy = false, buyOK = false;
     int whyProps, totalCoin, buyQuantity = 1, limitQuantity = 3;
@@ -31,6 +32,7 @@ public class StoreUIControl : MonoBehaviour
         {
             StoreUI[1].SetActive(true);
             CatAnimatorControl.isWave = true;
+            isCatCall = true;
         }
         else if (isBuying)
         {
