@@ -16,7 +16,7 @@ public class InstantiatePointControl : MonoBehaviour
             {
                 Instantiate(animals[Menu_ChoosePlayer.whyP4 - 1], insPoint[3].transform.position, insPoint[3].transform.rotation);
             }
-            else if (Menu_ChoosePlayer.whoPlay == 3)
+            if (Menu_ChoosePlayer.whoPlay >= 3)
             {
                 Instantiate(animals[Menu_ChoosePlayer.whyP3 - 1], insPoint[2].transform.position, insPoint[2].transform.rotation);
             }
