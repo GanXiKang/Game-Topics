@@ -7,6 +7,7 @@ public class MGFinishAwardControl : MonoBehaviour
 {
     public static int miniGame;
     public static bool isFinishMG = false, isWin = false;
+    public static bool isBearCall, isSlothCall, isDolphinCall, isFoxCall, isTycoonCall, isOstrichCall;
 
     public Text systemText;
 
@@ -21,26 +22,32 @@ public class MGFinishAwardControl : MonoBehaviour
             {
                 case 1:
                     isPropsAward = true;
+                    isTycoonCall = true;
                     break;
 
                 case 2:
                     isCoinAward = true;
+                    isSlothCall = true;
                     break;
 
                 case 3:
                     isPropsAward = true;
+                    isFoxCall = true;
                     break;
 
                 case 4:
                     isCoinAward = true;
+                    isOstrichCall = true;
                     break;
 
                 case 5:
                     isPropsAward = true;
+                    isBearCall = true;
                     break;
 
                 case 6:
                     isCoinAward = true;
+                    isDolphinCall = true;
                     break;
             }
             StartCoroutine(AfterReceivingAward());
