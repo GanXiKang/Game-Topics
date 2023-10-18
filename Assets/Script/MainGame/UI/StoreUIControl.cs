@@ -689,6 +689,7 @@ public class StoreUIControl : MonoBehaviour
                 break;
         }
         haveBuy = true;
+        isCatCall = true;
         CatAnimatorControl.isHappy = true;
         buyQuantity = 1;
     }
@@ -699,6 +700,7 @@ public class StoreUIControl : MonoBehaviour
         isBuying = false;
         StoreUI[1].SetActive(false);
         StoreUI[2].SetActive(false);
+        isCatCall = true;
         if (haveBuy)
         {
             CatAnimatorControl.isBye = true;
