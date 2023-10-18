@@ -20,7 +20,8 @@ public class DS_AnimalsSoundControl : MonoBehaviour
     {
         if (isOnce)
         {
-            Invoke("PlaySound", 2f);
+            Invoke("PlaySound", 1f);
+            isOnce = false;
         }
         
     }
