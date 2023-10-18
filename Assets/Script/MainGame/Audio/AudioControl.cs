@@ -6,8 +6,8 @@ public class AudioControl : MonoBehaviour
 {
     AudioSource BGM;
 
-    public AudioClip insKickboard;
-    public AudioClip destoryKickboard;
+    public AudioClip insKickboard, destoryKickboard;
+    public AudioClip cat;
 
     void Start()
     {
@@ -25,6 +25,10 @@ public class AudioControl : MonoBehaviour
         {
             BGM.PlayOneShot(destoryKickboard);
             InsKickboardControl.destoryKickboard = false;
+        }
+        if ()
+        {
+            BGM.PlayOneShot(cat);
         }
     }
 }
