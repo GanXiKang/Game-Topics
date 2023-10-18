@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StoreUIControl : MonoBehaviour
 {
     AudioSource BGM;
-    public AudioClip buy, cancel, close, getCoin, select, sure;
+    public AudioClip buy, cancel, close, getCoin, select, sure, cat;
 
     public GameObject[] StoreUI = new GameObject[4];
     public Text[] PorpsCoin = new Text[6];
@@ -15,7 +15,6 @@ public class StoreUIControl : MonoBehaviour
     public Button buttonBuy;
 
     public static bool isStore = false, isBuying = false;
-    public static bool isCatCall = false;
 
     bool haveBuy = false, buyOK = false;
     int whyProps, totalCoin, buyQuantity = 1, limitQuantity = 3;
@@ -32,7 +31,6 @@ public class StoreUIControl : MonoBehaviour
         {
             StoreUI[1].SetActive(true);
             CatAnimatorControl.isWave = true;
-            isCatCall = true;
         }
         else if (isBuying)
         {
@@ -508,6 +506,7 @@ public class StoreUIControl : MonoBehaviour
     public void Button_Yes()
     {
         BGM.PlayOneShot(sure);
+        BGM.PlayOneShot(cat);
         isBuying = true;
         isStore = false;
         StoreUI[1].SetActive(false);
@@ -548,6 +547,7 @@ public class StoreUIControl : MonoBehaviour
     public void Button_Buy()
     {
         BGM.PlayOneShot(buy);
+        BGM.PlayOneShot(cat);
         StoreUI[2].SetActive(true);
         StoreUI[3].SetActive(false);
         switch (StoreColliderControl.who)
@@ -689,18 +689,17 @@ public class StoreUIControl : MonoBehaviour
                 break;
         }
         haveBuy = true;
-        isCatCall = true;
         CatAnimatorControl.isHappy = true;
         buyQuantity = 1;
     }
     IEnumerator ChangeCamera()
     {
         BGM.PlayOneShot(close);
+        BGM.PlayOneShot(cat);
         isStore = false;
         isBuying = false;
         StoreUI[1].SetActive(false);
         StoreUI[2].SetActive(false);
-        isCatCall = true;
         if (haveBuy)
         {
             CatAnimatorControl.isBye = true;
