@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 5631363584420922948}
   - component: {fileID: 2036256249164511538}
   m_Layer: 0
-  m_Name: Cube.001
+  m_Name: Cube.skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,7 +283,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8144659372566378498}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &2036256249164511538
 SkinnedMeshRenderer:
@@ -1539,7 +1539,7 @@ GameObject:
   - component: {fileID: 8542516990824066304}
   - component: {fileID: 8542516990824066307}
   m_Layer: 0
-  m_Name: Cube.003
+  m_Name: Cube.bas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1553,12 +1553,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7664960902336820120}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.29, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.05}
   m_LocalScale: {x: 1.5, y: 1.2, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8144659372566378498}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &232609350838319298
 MeshFilter:
@@ -1621,8 +1621,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.3, z: 0.9}
-  m_Center: {x: 0, y: -0.3477844, z: 1.2725674}
+  m_Size: {x: 0.8, y: 0.2, z: 0.8}
+  m_Center: {x: 0, y: -0.15, z: 1.3}
 --- !u!114 &8542516990824066307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,8 +1858,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 988383845704542364}
-  - {fileID: 5631363584420922948}
   - {fileID: 1737875654994306057}
+  - {fileID: 5631363584420922948}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
