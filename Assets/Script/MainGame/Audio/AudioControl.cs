@@ -7,7 +7,7 @@ public class AudioControl : MonoBehaviour
     AudioSource BGM;
 
     public AudioClip insKickboard, destoryKickboard;
-    public AudioClip cat;
+    public AudioClip cat, bear, sloth, dolphin, fox, tycoon, ostrich;
 
     void Start()
     {
