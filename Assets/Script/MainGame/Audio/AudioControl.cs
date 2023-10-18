@@ -7,7 +7,7 @@ public class AudioControl : MonoBehaviour
     AudioSource BGM;
 
     public AudioClip insKickboard, destoryKickboard;
-    public AudioClip cat, bear, sloth, dolphin, fox, tycoon, ostrich;
+    public AudioClip bear, sloth, dolphin, fox, tycoon, ostrich;
 
     void Start()
     {
@@ -25,11 +25,6 @@ public class AudioControl : MonoBehaviour
         {
             BGM.PlayOneShot(destoryKickboard);
             InsKickboardControl.destoryKickboard = false;
-        }
-        if (StoreUIControl.isCatCall)
-        {
-            BGM.PlayOneShot(cat);
-            StoreUIControl.isCatCall = false;
         }
     }
 }
