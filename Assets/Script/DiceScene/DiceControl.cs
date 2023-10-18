@@ -12,6 +12,8 @@ public class DiceControl : MonoBehaviour
     public int MinNum, MaxNum;
     public float rotationForce;
     public GameObject normalUI, renewUI, renewWindowsUI , doubleUI, customUI;
+    public AudioSource BGM;
+    public AudioClip dice;
 
     int randomNum;
     bool isRoll, result;
@@ -89,6 +91,7 @@ public class DiceControl : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, 100f, 0f);
                 break;
         }
+        BGM.PlayOneShot(dice);
     }
     void Calculate()
     {
