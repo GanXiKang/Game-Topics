@@ -14,7 +14,7 @@ public class CameraMoveControl : MonoBehaviour
     void Start()
     {
         speed = 5f;
-        maxDistance = 50f;
+        maxDistance = 100f;
         isMove = false;
         isChangeCameraPoint = false;
     }
