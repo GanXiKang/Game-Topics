@@ -8,7 +8,7 @@ public class AnimalsExpressionControl : MonoBehaviour
 
     public Material[] expression = new Material[4];
 
-    bool isBlink;
+    bool isBlink = true;
 
     void Start()
     {
