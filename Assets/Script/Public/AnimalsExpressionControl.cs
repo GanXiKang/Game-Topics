@@ -27,15 +27,15 @@ public class AnimalsExpressionControl : MonoBehaviour
     {
         isBlink = false;
         smr.material = expression[1];
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         smr.material = expression[2];
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         smr.material = expression[3];
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         smr.material = expression[2];
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         smr.material = expression[1];
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         smr.material = expression[0];
         yield return new WaitForSeconds(10f);
         isBlink = true;
