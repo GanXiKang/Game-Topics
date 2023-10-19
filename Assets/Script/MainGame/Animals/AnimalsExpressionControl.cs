@@ -19,7 +19,6 @@ public class AnimalsExpressionControl : MonoBehaviour
     {
         if (isBlink)
         {
-            print("ok");
             StartCoroutine(AnimalsBlink());
         }
     }
