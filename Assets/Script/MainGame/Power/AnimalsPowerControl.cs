@@ -38,6 +38,46 @@ public class AnimalsPowerControl : MonoBehaviour
         {
             StartCoroutine(RabbitPower());
         }
+
+        if (isDragonPower)
+        {
+            StartCoroutine(DragonPower());
+        }
+
+        if (isSnakePower)
+        {
+            StartCoroutine(SnakePower());
+        }
+
+        if (isHorsePower)
+        {
+            StartCoroutine(HorsePower());
+        }
+
+        if (isSheepPower)
+        {
+            StartCoroutine(SheepPower());
+        }
+
+        if (isMonkeyPower)
+        {
+            StartCoroutine(MonkeyPower());
+        }
+
+        if (isChickenPower)
+        {
+            StartCoroutine(ChickenPower());
+        }
+
+        if (isDogPower)
+        {
+            StartCoroutine(DogPower());
+        }
+
+        if (isPigPower)
+        {
+            StartCoroutine(PigPower());
+        }
     }
 
     IEnumerator MousePower()
@@ -149,8 +189,10 @@ public class AnimalsPowerControl : MonoBehaviour
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
     }
+
     IEnumerator CowPower()
     {
+        isCowPower = false;
         systemText.text = "牛發動技能！";
         SystemTestTextControl.isTimer = true;
         switch (ChangeCameraControl.changeCameraNum)
@@ -172,12 +214,12 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
         }
         PowerUIControl.animalsPowerUseNum[2]--;
-        isCowPower = false;
         cowUsePower = true;
         AnimalsSkillAnimator();
         yield return new WaitForSeconds(5f);
         cowUsePower = false;
     }
+
     IEnumerator TigerPower()
     {
         tigerUsePower = true;
@@ -237,6 +279,7 @@ public class AnimalsPowerControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         tigerUsePower = false;
     }
+
     IEnumerator RabbitPower()
     {
         systemText.text = "兔子發動技能！";
@@ -263,6 +306,71 @@ public class AnimalsPowerControl : MonoBehaviour
         isRabbitPower = false;
         AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
+    }
+
+    IEnumerator DragonPower()
+    {
+        isDragonPower = false;
+        systemText.text = "龍發動技能！";
+        SystemTestTextControl.isTimer = true;
+        PowerUIControl.animalsPowerUseNum[5]--;
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator SnakePower()
+    {
+        systemText.text = "蛇發動技能！";
+        SystemTestTextControl.isTimer = true;
+        PowerUIControl.animalsPowerUseNum[6]--;
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator HorsePower()
+    {
+        systemText.text = "馬發動技能！";
+        SystemTestTextControl.isTimer = true;
+        PowerUIControl.animalsPowerUseNum[7]--;
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator SheepPower()
+    {
+        systemText.text = "羊發動技能！";
+        SystemTestTextControl.isTimer = true;
+        PowerUIControl.animalsPowerUseNum[8]--;
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator MonkeyPower()
+    {
+        systemText.text = "猴子發動技能！";
+        SystemTestTextControl.isTimer = true;
+        PowerUIControl.animalsPowerUseNum[9]--;
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator ChickenPower()
+    {
+        systemText.text = "雞發動技能！";
+        SystemTestTextControl.isTimer = true;
+        PowerUIControl.animalsPowerUseNum[9]--;
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator DogPower()
+    {
+        systemText.text = "狗發動技能！";
+        SystemTestTextControl.isTimer = true;
+        PowerUIControl.animalsPowerUseNum[10]--;
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator PigPower()
+    {
+        systemText.text = "豬發動技能！";
+        SystemTestTextControl.isTimer = true;
+        PowerUIControl.animalsPowerUseNum[12]--;
+        yield return new WaitForSeconds(2f);
     }
 
     void AnimalsSkillAnimator()
