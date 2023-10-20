@@ -15,6 +15,7 @@ public class PowerUIControl : MonoBehaviour
     public static bool isMouseCanUsePower = false;
 
     bool isRabbitPowerChoose;
+    int roundCD = 3;
 
     void Start()
     {
