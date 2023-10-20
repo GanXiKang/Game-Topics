@@ -282,6 +282,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator RabbitPower()
     {
+        isRabbitPower = false;
         systemText.text = "兔子發動技能！";
         SystemTestTextControl.isTimer = true;
         switch (ChangeCameraControl.changeCameraNum)
@@ -303,7 +304,6 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
         }
         PowerUIControl.animalsPowerUseNum[4]--;
-        isRabbitPower = false;
         AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
     }
@@ -319,6 +319,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator SnakePower()
     {
+        isSnakePower = false;
         systemText.text = "蛇發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[6]--;
@@ -327,6 +328,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator HorsePower()
     {
+        isHorsePower = false;
         systemText.text = "馬發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[7]--;
@@ -335,6 +337,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator SheepPower()
     {
+        isSheepPower = false;
         systemText.text = "羊發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[8]--;
@@ -343,6 +346,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator MonkeyPower()
     {
+        isMonkeyPower = false;
         systemText.text = "猴子發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[9]--;
@@ -351,6 +355,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator ChickenPower()
     {
+        isChickenPower = false;
         systemText.text = "雞發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[9]--;
@@ -359,6 +364,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator DogPower()
     {
+        isDogPower = false;
         systemText.text = "狗發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[10]--;
@@ -367,6 +373,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator PigPower()
     {
+        isPigPower = false;
         systemText.text = "豬發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[12]--;
