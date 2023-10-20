@@ -82,10 +82,10 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator MousePower()
     {
+        isMousePower = false;
         systemText.text = "老鼠發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[1]--;
-        isMousePower = false;
         CameraMoveControl.isChangeCameraPoint = true;
         AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
@@ -222,6 +222,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     IEnumerator TigerPower()
     {
+        isTigerPower = false;
         tigerUsePower = true;
         systemText.text = "老虎發動技能！";
         SystemTestTextControl.isTimer = true;
@@ -252,7 +253,6 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
         }
         PowerUIControl.animalsPowerUseNum[3]--;
-        isTigerPower = false;
         AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(1f);
