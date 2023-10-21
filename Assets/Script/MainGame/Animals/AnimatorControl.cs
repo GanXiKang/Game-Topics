@@ -278,6 +278,11 @@ public class AnimatorControl : MonoBehaviour
             {
                 anim.SetBool("Skill", false);
             }
+
+            if (Menu_ChoosePlayer.whyP1 == 7)
+            {
+                Invoke("HorsePowerGO", 2f);
+            }
         }
         else if (gameObject.tag == "P2")
         {
@@ -288,6 +293,11 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Skill", false);
+            }
+
+            if(Menu_ChoosePlayer.whyP2 == 7)
+            {
+                Invoke("HorsePowerGO", 2f);
             }
         }
         else if (gameObject.tag == "P3")
@@ -300,6 +310,11 @@ public class AnimatorControl : MonoBehaviour
             {
                 anim.SetBool("Skill", false);
             }
+
+            if (Menu_ChoosePlayer.whyP3 == 7)
+            {
+                Invoke("HorsePowerGO", 2f);
+            }
         }
         else if (gameObject.tag == "P4")
         {
@@ -310,6 +325,11 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Skill", false);
+            }
+
+            if (Menu_ChoosePlayer.whyP4 == 7)
+            {
+                Invoke("HorsePowerGO", 2f);
             }
         }
     }
@@ -389,6 +409,17 @@ public class AnimatorControl : MonoBehaviour
             {
                 anim.SetBool("Confusion", false);
             }
+        }
+    }
+    void HorsePowerGO()
+    {
+        if (AnimalsPowerControl.horseTriplePower)
+        {
+            anim.SetBool("GO", true);
+        }
+        else 
+        {
+            anim.SetBool("false", true);
         }
     }
 
