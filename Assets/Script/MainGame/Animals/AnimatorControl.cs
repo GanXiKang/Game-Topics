@@ -277,12 +277,10 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Skill", false);
+                AnimalsFalseExtraSkillAnimator();
             }
 
-            if (Menu_ChoosePlayer.whyP1 == 7)
-            {
-                Invoke("HorsePowerGO", 2f);
-            }
+            HorsePowerGO();
         }
         else if (gameObject.tag == "P2")
         {
@@ -293,12 +291,10 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Skill", false);
+                AnimalsFalseExtraSkillAnimator();
             }
 
-            if(Menu_ChoosePlayer.whyP2 == 7)
-            {
-                Invoke("HorsePowerGO", 2f);
-            }
+            HorsePowerGO();
         }
         else if (gameObject.tag == "P3")
         {
@@ -309,12 +305,10 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Skill", false);
+                AnimalsFalseExtraSkillAnimator();
             }
 
-            if (Menu_ChoosePlayer.whyP3 == 7)
-            {
-                Invoke("HorsePowerGO", 2f);
-            }
+            HorsePowerGO();
         }
         else if (gameObject.tag == "P4")
         {
@@ -325,11 +319,56 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Skill", false);
+                AnimalsFalseExtraSkillAnimator();
             }
 
-            if (Menu_ChoosePlayer.whyP4 == 7)
+            HorsePowerGO();
+        }
+    }
+    void HorsePowerGO()
+    {
+        if (Menu_ChoosePlayer.whyP1 == 7)
+        {
+            if (AnimalsPowerControl.horseUsePower)
             {
-                Invoke("HorsePowerGO", 2f);
+                anim.SetBool("GO", true);
+            }
+            else
+            {
+                anim.SetBool("false", true);
+            }
+        }
+        else if (Menu_ChoosePlayer.whyP2 == 7)
+        {
+            if (AnimalsPowerControl.horseUsePower)
+            {
+                anim.SetBool("GO", true);
+            }
+            else
+            {
+                anim.SetBool("false", true);
+            }
+        }
+        else if (Menu_ChoosePlayer.whyP3 == 7)
+        {
+            if (AnimalsPowerControl.horseUsePower)
+            {
+                anim.SetBool("GO", true);
+            }
+            else
+            {
+                anim.SetBool("false", true);
+            }
+        }
+        else if (Menu_ChoosePlayer.whyP4 == 7)
+        {
+            if (AnimalsPowerControl.horseUsePower)
+            {
+                anim.SetBool("GO", true);
+            }
+            else
+            {
+                anim.SetBool("false", true);
             }
         }
     }
@@ -411,17 +450,6 @@ public class AnimatorControl : MonoBehaviour
             }
         }
     }
-    void HorsePowerGO()
-    {
-        if (AnimalsPowerControl.horseTriplePower)
-        {
-            anim.SetBool("GO", true);
-        }
-        else 
-        {
-            anim.SetBool("false", true);
-        }
-    }
 
     IEnumerator DizzinessAnimator()
     {
@@ -444,5 +472,12 @@ public class AnimatorControl : MonoBehaviour
         }
         yield return new WaitForSeconds(2f);
         anim.SetBool("Dizziness", false);
+    }
+
+    void AnimalsFalseExtraSkillAnimator()
+    {
+        AnimalsPowerControl.cowUsePower = false;
+        AnimalsPowerControl.rabbitUsePower = false;
+        AnimalsPowerControl.horseUsePower = false;
     }
 }
