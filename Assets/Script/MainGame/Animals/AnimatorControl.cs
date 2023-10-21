@@ -273,99 +273,131 @@ public class AnimatorControl : MonoBehaviour
             if (isP1Skill)
             {
                 anim.SetBool("Skill", true);
+
+                if (Menu_ChoosePlayer.whyP1 == 7)
+                {
+                    HorsePowerGO();
+                }
             }
             else
             {
                 anim.SetBool("Skill", false);
-            }
+                switch (Menu_ChoosePlayer.whyP1)
+                {
+                    case 2:
+                        AnimalsPowerControl.cowUsePower = false;
+                        break;
 
-            HorsePowerGO();
+                    case 4:
+                        AnimalsPowerControl.rabbitUsePower = false;
+                        break;
+
+                    case 7:
+                        AnimalsPowerControl.horseUsePower = false;
+                        break;
+                }
+            }
         }
         else if (gameObject.tag == "P2")
         {
             if (isP2Skill)
             {
                 anim.SetBool("Skill", true);
+
+                if (Menu_ChoosePlayer.whyP2 == 7)
+                {
+                    HorsePowerGO();
+                }
             }
             else
             {
                 anim.SetBool("Skill", false);
-            }
+                switch (Menu_ChoosePlayer.whyP2)
+                {
+                    case 2:
+                        AnimalsPowerControl.cowUsePower = false;
+                        break;
 
-            HorsePowerGO();
+                    case 4:
+                        AnimalsPowerControl.rabbitUsePower = false;
+                        break;
+
+                    case 7:
+                        AnimalsPowerControl.horseUsePower = false;
+                        break;
+                }
+            }
         }
         else if (gameObject.tag == "P3")
         {
             if (isP3Skill)
             {
                 anim.SetBool("Skill", true);
+
+                if (Menu_ChoosePlayer.whyP3 == 7)
+                {
+                    HorsePowerGO();
+                }
             }
             else
             {
                 anim.SetBool("Skill", false);
-            }
+                switch (Menu_ChoosePlayer.whyP3)
+                {
+                    case 2:
+                        AnimalsPowerControl.cowUsePower = false;
+                        break;
 
-            HorsePowerGO();
+                    case 4:
+                        AnimalsPowerControl.rabbitUsePower = false;
+                        break;
+
+                    case 7:
+                        AnimalsPowerControl.horseUsePower = false;
+                        break;
+                }
+            }
         }
         else if (gameObject.tag == "P4")
         {
             if (isP4Skill)
             {
                 anim.SetBool("Skill", true);
+
+                if (Menu_ChoosePlayer.whyP4 == 7)
+                {
+                    HorsePowerGO();
+                }
             }
             else
             {
                 anim.SetBool("Skill", false);
-            }
+                switch (Menu_ChoosePlayer.whyP4)
+                {
+                    case 2:
+                        AnimalsPowerControl.cowUsePower = false;
+                        break;
 
-            HorsePowerGO();
+                    case 4:
+                        AnimalsPowerControl.rabbitUsePower = false;
+                        break;
+
+                    case 7:
+                        AnimalsPowerControl.horseUsePower = false;
+                        break;
+                }
+            }
         }
     }
     void HorsePowerGO()
     {
-        if (Menu_ChoosePlayer.whyP1 == 7)
+        if (AnimalsPowerControl.horseUsePower)
         {
-            if (AnimalsPowerControl.horseUsePower)
-            {
-                anim.SetBool("GO", true);
-            }
-            else
-            {
-                anim.SetBool("false", true);
-            }
+            anim.SetBool("GO", true);
         }
-        else if (Menu_ChoosePlayer.whyP2 == 7)
+        else
         {
-            if (AnimalsPowerControl.horseUsePower)
-            {
-                anim.SetBool("GO", true);
-            }
-            else
-            {
-                anim.SetBool("false", true);
-            }
-        }
-        else if (Menu_ChoosePlayer.whyP3 == 7)
-        {
-            if (AnimalsPowerControl.horseUsePower)
-            {
-                anim.SetBool("GO", true);
-            }
-            else
-            {
-                anim.SetBool("false", true);
-            }
-        }
-        else if (Menu_ChoosePlayer.whyP4 == 7)
-        {
-            if (AnimalsPowerControl.horseUsePower)
-            {
-                anim.SetBool("GO", true);
-            }
-            else
-            {
-                anim.SetBool("false", true);
-            }
+            anim.SetBool("false", true);
         }
     }
     void Dizziness()
