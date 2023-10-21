@@ -11,7 +11,7 @@ public class DiceControl : MonoBehaviour
 
     public int MinNum, MaxNum;
     public float rotationForce;
-    public GameObject normalUI, renewUI, renewWindowsUI , doubleUI, customUI;
+    public GameObject normalUI, renewUI, renewWindowsUI , doubleUI, customUI, triplePowerUI;
     public AudioSource BGM;
     public AudioClip dice;
 
@@ -35,6 +35,11 @@ public class DiceControl : MonoBehaviour
         if (BagUIControl.isCustomDice)
         {
             customUI.SetActive(true);
+            normalUI.SetActive(false);
+        }
+        if (AnimalsPowerControl.horseTriplePower)
+        {
+            triplePowerUI.SetActive(true);
             normalUI.SetActive(false);
         }
     }
