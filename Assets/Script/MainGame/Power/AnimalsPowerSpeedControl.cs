@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AnimalsPowerSpeedControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    NavMeshAgent agent;
+
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (AnimalsPowerControl.rabbitUsePower || AnimalsPowerControl.horseUsePower)
+        {
+            agent.speed = 15f;
+        }
+        else
+        {
+            agent.speed = 10f;
+        }
     }
 }
