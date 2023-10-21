@@ -360,6 +360,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SceneManager.LoadScene(9);
         DiceUIControl.isDiceScene = true;
         AnimalsSkillAnimator();
+        CameraMoveControl.isChangeCameraPoint = false;
     }
 
     IEnumerator MonkeyPower()
