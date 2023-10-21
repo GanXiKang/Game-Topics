@@ -40,7 +40,6 @@ public class DiceControl : MonoBehaviour
         if (AnimalsPowerControl.horseTriplePower)
         {
             triplePowerUI.SetActive(true);
-            normalUI.SetActive(false);
         }
     }
     void FixedUpdate()
