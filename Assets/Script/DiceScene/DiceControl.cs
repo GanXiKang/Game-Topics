@@ -11,7 +11,7 @@ public class DiceControl : MonoBehaviour
 
     public int MinNum, MaxNum;
     public float rotationForce;
-    public GameObject normalUI, renewUI, renewWindowsUI , doubleUI, customUI, triplePowerUI;
+    public GameObject normalUI, renewUI, renewWindowsUI , doubleUI, customUI, triplePowerUI, LuckyPowerUI;
     public AudioSource BGM;
     public AudioClip dice;
 
@@ -41,9 +41,22 @@ public class DiceControl : MonoBehaviour
         {
             triplePowerUI.SetActive(true);
         }
+        if (AnimalsPowerControl.sheepLuckyPower)
+        {
+            LuckyPowerUI.SetActive(true);
+        }
     }
     void FixedUpdate()
     {
+        if (AnimalsPowerControl.sheepLuckyPower)
+        {
+            MinNum = 4;
+        }
+        else
+        {
+            MinNum = 1;
+        }
+
         if (isRoll)
         {
             rb.AddTorque(Random.insideUnitSphere * rotationForce);
@@ -199,6 +212,10 @@ public class DiceControl : MonoBehaviour
         if (!PlayerMoveControl.isMove)
         {
             PlayerMoveControl.isMove = true;
+        }
+        if (AnimalsPowerControl.sheepLuckyPower)
+        {
+            AnimalsPowerControl.sheepLuckyPower = false;
         }
         DiceUIControl.isDiceScene = false;
     }
