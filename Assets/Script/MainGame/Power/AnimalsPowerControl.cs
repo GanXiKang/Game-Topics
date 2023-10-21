@@ -334,7 +334,6 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator HorsePower()
     {
         isHorsePower = false;
-        horseUsePower = true;
         horseTriplePower = true;
         systemText.text = "ñR°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
@@ -344,6 +343,7 @@ public class AnimalsPowerControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(9);
         DiceUIControl.isDiceScene = true;
+        horseUsePower = true;
         CameraMoveControl.isChangeCameraPoint = false;
     }
 
