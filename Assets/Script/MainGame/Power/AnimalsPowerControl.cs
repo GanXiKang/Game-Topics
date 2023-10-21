@@ -287,6 +287,7 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator RabbitPower()
     {
         isRabbitPower = false;
+        rabbitUsePower = true;
         systemText.text = "兔子發動技能！";
         SystemTestTextControl.isTimer = true;
         switch (ChangeCameraControl.changeCameraNum)
@@ -333,6 +334,7 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator HorsePower()
     {
         isHorsePower = false;
+        horseUsePower = true;
         horseTriplePower = true;
         systemText.text = "馬發動技能！";
         SystemTestTextControl.isTimer = true;
