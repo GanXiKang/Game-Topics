@@ -355,7 +355,8 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[8]--;
         AnimalsSkillAnimator();
-        yield return new WaitForSeconds(2f);
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(9);
         DiceUIControl.isDiceScene = true;
         AnimalsSkillAnimator();
