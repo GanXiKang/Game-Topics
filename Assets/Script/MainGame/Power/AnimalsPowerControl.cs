@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AnimalsPowerControl : MonoBehaviour
 {
@@ -9,9 +10,11 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool isDragonPower = false, isSnakePower = false, isHorsePower = false, isSheepPower = false;
     public static bool isMonkeyPower = false, isChickenPower = false, isDogPower = false, isPigPower = false;
 
+    public static int mouseIsThisPoint;
     public static bool cowUsePower = false;
     public static bool tigerUsePower = false;
-    public static int mouseIsThisPoint;
+    public static bool horseTriplePower = false;
+    
 
     public Text systemText;
 
@@ -329,10 +332,15 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator HorsePower()
     {
         isHorsePower = false;
+        horseTriplePower = true;
         systemText.text = "ñR°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[7]--;
+        AnimalsSkillAnimator();
+        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(9);
+        DiceUIControl.isDiceScene = true;
     }
 
     IEnumerator SheepPower()
