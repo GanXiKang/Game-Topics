@@ -220,8 +220,7 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         PowerUIControl.animalsPowerUseNum[2]--;
         AnimalsSkillAnimator();
-        yield return new WaitForSeconds(5f);
-        cowUsePower = false;
+        yield return new WaitForSeconds(2f);
     }
 
     IEnumerator TigerPower()
