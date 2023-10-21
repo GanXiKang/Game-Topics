@@ -341,6 +341,7 @@ public class AnimalsPowerControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(9);
         DiceUIControl.isDiceScene = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
 
     IEnumerator SheepPower()
