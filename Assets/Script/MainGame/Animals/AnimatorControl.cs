@@ -273,10 +273,11 @@ public class AnimatorControl : MonoBehaviour
             if (isP1Skill)
             {
                 anim.SetBool("Skill", true);
-
-                if (Menu_ChoosePlayer.whyP1 == 7)
+                switch (Menu_ChoosePlayer.whyP1)
                 {
-                    HorsePowerGO();
+                    case 7:
+                        HorsePowerGO();
+                        break;
                 }
             }
             else
@@ -294,6 +295,7 @@ public class AnimatorControl : MonoBehaviour
 
                     case 7:
                         AnimalsPowerControl.horseUsePower = false;
+                        HorsePowerGO();
                         break;
                 }
             }
@@ -303,10 +305,11 @@ public class AnimatorControl : MonoBehaviour
             if (isP2Skill)
             {
                 anim.SetBool("Skill", true);
-
-                if (Menu_ChoosePlayer.whyP2 == 7)
+                switch (Menu_ChoosePlayer.whyP1)
                 {
-                    HorsePowerGO();
+                    case 7:
+                        HorsePowerGO();
+                        break;
                 }
             }
             else
@@ -324,6 +327,7 @@ public class AnimatorControl : MonoBehaviour
 
                     case 7:
                         AnimalsPowerControl.horseUsePower = false;
+                        HorsePowerGO();
                         break;
                 }
             }
@@ -333,10 +337,11 @@ public class AnimatorControl : MonoBehaviour
             if (isP3Skill)
             {
                 anim.SetBool("Skill", true);
-
-                if (Menu_ChoosePlayer.whyP3 == 7)
+                switch (Menu_ChoosePlayer.whyP1)
                 {
-                    HorsePowerGO();
+                    case 7:
+                        HorsePowerGO();
+                        break;
                 }
             }
             else
@@ -354,6 +359,7 @@ public class AnimatorControl : MonoBehaviour
 
                     case 7:
                         AnimalsPowerControl.horseUsePower = false;
+                        HorsePowerGO();
                         break;
                 }
             }
@@ -363,10 +369,11 @@ public class AnimatorControl : MonoBehaviour
             if (isP4Skill)
             {
                 anim.SetBool("Skill", true);
-
-                if (Menu_ChoosePlayer.whyP4 == 7)
+                switch (Menu_ChoosePlayer.whyP1)
                 {
-                    HorsePowerGO();
+                    case 7:
+                        HorsePowerGO();
+                        break;
                 }
             }
             else
@@ -384,6 +391,7 @@ public class AnimatorControl : MonoBehaviour
 
                     case 7:
                         AnimalsPowerControl.horseUsePower = false;
+                        HorsePowerGO();
                         break;
                 }
             }
