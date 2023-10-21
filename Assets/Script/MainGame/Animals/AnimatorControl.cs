@@ -277,7 +277,6 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Skill", false);
-                AnimalsFalseExtraSkillAnimator();
             }
 
             HorsePowerGO();
@@ -291,7 +290,6 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Skill", false);
-                AnimalsFalseExtraSkillAnimator();
             }
 
             HorsePowerGO();
@@ -305,7 +303,6 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Skill", false);
-                AnimalsFalseExtraSkillAnimator();
             }
 
             HorsePowerGO();
@@ -319,7 +316,6 @@ public class AnimatorControl : MonoBehaviour
             else
             {
                 anim.SetBool("Skill", false);
-                AnimalsFalseExtraSkillAnimator();
             }
 
             HorsePowerGO();
@@ -472,12 +468,5 @@ public class AnimatorControl : MonoBehaviour
         }
         yield return new WaitForSeconds(2f);
         anim.SetBool("Dizziness", false);
-    }
-
-    void AnimalsFalseExtraSkillAnimator()
-    {
-        AnimalsPowerControl.cowUsePower = false;
-        AnimalsPowerControl.rabbitUsePower = false;
-        AnimalsPowerControl.horseUsePower = false;
     }
 }
