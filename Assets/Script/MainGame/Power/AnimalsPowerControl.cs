@@ -13,7 +13,8 @@ public class AnimalsPowerControl : MonoBehaviour
     public static int mouseIsThisPoint;
     public static bool cowUsePower = false;
     public static bool tigerUsePower = false;
-    public static bool horseTriplePower = false;
+    public static bool rabbitUsePower = false;
+    public static bool horseUsePower = false, horseTriplePower = false;
     
 
     public Text systemText;
@@ -196,6 +197,7 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator CowPower()
     {
         isCowPower = false;
+        cowUsePower = true;
         systemText.text = "Å£°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
         switch (ChangeCameraControl.changeCameraNum)
@@ -217,7 +219,6 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
         }
         PowerUIControl.animalsPowerUseNum[2]--;
-        cowUsePower = true;
         AnimalsSkillAnimator();
         yield return new WaitForSeconds(5f);
         cowUsePower = false;
