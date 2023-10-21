@@ -352,7 +352,11 @@ public class AnimalsPowerControl : MonoBehaviour
         systemText.text = "Ñò°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[8]--;
+        AnimalsSkillAnimator();
         yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(9);
+        DiceUIControl.isDiceScene = true;
+        AnimalsSkillAnimator();
     }
 
     IEnumerator MonkeyPower()
