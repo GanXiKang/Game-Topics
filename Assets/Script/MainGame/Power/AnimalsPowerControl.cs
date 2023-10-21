@@ -15,7 +15,8 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool tigerUsePower = false;
     public static bool rabbitUsePower = false;
     public static bool horseUsePower = false, horseTriplePower = false;
-    
+    public static bool sheepLuckyPower = false;
+
 
     public Text systemText;
 
@@ -349,6 +350,7 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator SheepPower()
     {
         isSheepPower = false;
+        sheepLuckyPower = true;
         systemText.text = "Ñò°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[8]--;
