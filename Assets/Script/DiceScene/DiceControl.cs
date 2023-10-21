@@ -44,19 +44,11 @@ public class DiceControl : MonoBehaviour
         if (AnimalsPowerControl.sheepLuckyPower)
         {
             LuckyPowerUI.SetActive(true);
+            MinNum = 4;
         }
     }
     void FixedUpdate()
     {
-        if (AnimalsPowerControl.sheepLuckyPower)
-        {
-            MinNum = 4;
-        }
-        else
-        {
-            MinNum = 1;
-        }
-
         if (isRoll)
         {
             rb.AddTorque(Random.insideUnitSphere * rotationForce);
