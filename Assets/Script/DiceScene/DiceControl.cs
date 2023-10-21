@@ -103,11 +103,19 @@ public class DiceControl : MonoBehaviour
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
-                if (BagUIControl.isDoubleDice)
+                if (BagUIControl.isDoubleDice || AnimalsPowerControl.horseTriplePower)
                 {
-                    randomNum *= 2;
+                    if (BagUIControl.isDoubleDice)
+                    {
+                        randomNum *= 2;
+                        BagUIControl.isDoubleDice = false;
+                    }
+                    if (AnimalsPowerControl.horseTriplePower)
+                    {
+                        randomNum *= 3;
+                        AnimalsPowerControl.horseTriplePower = false;
+                    }
                     P1_totalNum += randomNum;
-                    BagUIControl.isDoubleDice = false;
                 }
                 else 
                 {
@@ -117,11 +125,19 @@ public class DiceControl : MonoBehaviour
                 break;
 
             case 2:
-                if (BagUIControl.isDoubleDice)
+                if (BagUIControl.isDoubleDice || AnimalsPowerControl.horseTriplePower)
                 {
-                    randomNum *= 2;
+                    if (BagUIControl.isDoubleDice)
+                    {
+                        randomNum *= 2;
+                        BagUIControl.isDoubleDice = false;
+                    }
+                    if (AnimalsPowerControl.horseTriplePower)
+                    {
+                        randomNum *= 3;
+                        AnimalsPowerControl.horseTriplePower = false;
+                    }
                     P2_totalNum += randomNum;
-                    BagUIControl.isDoubleDice = false;
                 }
                 else
                 {
@@ -131,11 +147,19 @@ public class DiceControl : MonoBehaviour
                 break;
 
             case 3:
-                if (BagUIControl.isDoubleDice)
+                if (BagUIControl.isDoubleDice || AnimalsPowerControl.horseTriplePower)
                 {
-                    randomNum *= 2;
+                    if (BagUIControl.isDoubleDice)
+                    {
+                        randomNum *= 2;
+                        BagUIControl.isDoubleDice = false;
+                    }
+                    if (AnimalsPowerControl.horseTriplePower)
+                    {
+                        randomNum *= 3;
+                        AnimalsPowerControl.horseTriplePower = false;
+                    }
                     P3_totalNum += randomNum;
-                    BagUIControl.isDoubleDice = false;
                 }
                 else
                 {
@@ -145,11 +169,19 @@ public class DiceControl : MonoBehaviour
                 break;
 
             case 4:
-                if (BagUIControl.isDoubleDice)
+                if (BagUIControl.isDoubleDice || AnimalsPowerControl.horseTriplePower)
                 {
-                    randomNum *= 2;
+                    if (BagUIControl.isDoubleDice)
+                    {
+                        randomNum *= 2;
+                        BagUIControl.isDoubleDice = false;
+                    }
+                    if (AnimalsPowerControl.horseTriplePower)
+                    {
+                        randomNum *= 3;
+                        AnimalsPowerControl.horseTriplePower = false;
+                    }
                     P4_totalNum += randomNum;
-                    BagUIControl.isDoubleDice = false;
                 }
                 else
                 {
