@@ -405,7 +405,7 @@ public class AnimatorControl : MonoBehaviour
         }
         else
         {
-            anim.SetBool("false", true);
+            anim.SetBool("Go", false);
         }
     }
     void Dizziness()
