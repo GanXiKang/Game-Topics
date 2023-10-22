@@ -207,7 +207,36 @@ public class DiceControl : MonoBehaviour
         }
         if (AnimalsPowerControl.dragonUsePower)
         {
-            AnimatorControl.isDragonFlyWalk = true;
+            switch (ChangeCameraControl.changeCameraNum)
+            {
+                case 1:
+                    if (Menu_ChoosePlayer.whyP1 == 5)
+                    {
+                        AnimatorControl.isDragonFlyWalk = true;
+                    }
+                    break;
+
+                case 2:
+                    if (Menu_ChoosePlayer.whyP2 == 5)
+                    {
+                        AnimatorControl.isDragonFlyWalk = true;
+                    }
+                    break;
+
+                case 3:
+                    if (Menu_ChoosePlayer.whyP3 == 5)
+                    {
+                        AnimatorControl.isDragonFlyWalk = true;
+                    }
+                    break;
+
+                case 4:
+                    if (Menu_ChoosePlayer.whyP4 == 5)
+                    {
+                        AnimatorControl.isDragonFlyWalk = true;
+                    }
+                    break;
+            }
         }
         if (AnimalsPowerControl.sheepLuckyPower)
         {
