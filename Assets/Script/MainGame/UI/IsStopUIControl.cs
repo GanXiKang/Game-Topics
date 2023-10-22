@@ -115,7 +115,7 @@ public class IsStopUIControl : MonoBehaviour
                         if (CowPowerControl.isCowPowerStopP3)
                         {
                             StartCoroutine(CowPowerStopThisRound());
-                            isBombStopP3 = false;
+                            CowPowerControl.isCowPowerStopP3 = false;
                         }
                         break;
 
@@ -123,7 +123,44 @@ public class IsStopUIControl : MonoBehaviour
                         if (CowPowerControl.isCowPowerStopP4)
                         {
                             StartCoroutine(CowPowerStopThisRound());
-                            isBombStopP4 = false;
+                            CowPowerControl.isCowPowerStopP4 = false;
+                        }
+                        break;
+                }
+            }
+            if (isSnakePowerStopUI != 0)
+            {
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        if (isPoisonStopP1)
+                        {
+                            StartCoroutine(CowPowerStopThisRound());
+                            isPoisonStopP1 = false;
+                        }
+                        break;
+
+                    case 2:
+                        if (isPoisonStopP2)
+                        {
+                            StartCoroutine(CowPowerStopThisRound());
+                            isPoisonStopP2 = false;
+                        }
+                        break;
+
+                    case 3:
+                        if (isPoisonStopP3)
+                        {
+                            StartCoroutine(CowPowerStopThisRound());
+                            isPoisonStopP3 = false;
+                        }
+                        break;
+
+                    case 4:
+                        if (isPoisonStopP4)
+                        {
+                            StartCoroutine(CowPowerStopThisRound());
+                            isPoisonStopP4 = false;
                         }
                         break;
                 }
