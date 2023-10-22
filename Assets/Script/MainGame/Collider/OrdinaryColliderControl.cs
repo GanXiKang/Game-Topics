@@ -18,15 +18,16 @@ public class OrdinaryColliderControl : MonoBehaviour
                     if (DiceControl.P1_totalNum == pointNum)
                     {
                         P1_Enter = false;
+                        AnimatorControl.isP1Move = false;
                         StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP1 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
+
                         if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
                         {
-                            AnimatorControl.isP1Move = false;
-                            AnimatorControl.isP1Skill = false;
-                            if (Menu_ChoosePlayer.whyP1 == 1)
-                            {
-                                PowerUIControl.isMouseCanUsePower = false;
-                            }
+                            AnimatorControl.isP1Skill = false; 
                         }
                         else
                         {
@@ -40,15 +41,16 @@ public class OrdinaryColliderControl : MonoBehaviour
                     if (DiceControl.P2_totalNum == pointNum)
                     {
                         P2_Enter = false;
+                        AnimatorControl.isP2Move = false;
                         StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP2 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
+
                         if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
                         {
-                            AnimatorControl.isP2Move = false;
                             AnimatorControl.isP2Skill = false;
-                            if (Menu_ChoosePlayer.whyP2 == 1)
-                            {
-                                PowerUIControl.isMouseCanUsePower = false;
-                            }
                         }
                         else 
                         {
@@ -62,15 +64,16 @@ public class OrdinaryColliderControl : MonoBehaviour
                     if (DiceControl.P3_totalNum == pointNum)
                     {
                         P3_Enter = false;
+                        AnimatorControl.isP3Move = false;
                         StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP3 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
+
                         if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
                         {
-                            AnimatorControl.isP3Move = false;
                             AnimatorControl.isP3Skill = false;
-                            if (Menu_ChoosePlayer.whyP3 == 1)
-                            {
-                                PowerUIControl.isMouseCanUsePower = false;
-                            }
                         }
                         else
                         {
@@ -84,15 +87,16 @@ public class OrdinaryColliderControl : MonoBehaviour
                     if (DiceControl.P4_totalNum == pointNum)
                     {
                         P4_Enter = false;
+                        AnimatorControl.isP4Move = false;
                         StartCoroutine(ChangeCamera());
+                        if (Menu_ChoosePlayer.whyP4 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
+
                         if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
                         {
-                            AnimatorControl.isP4Move = false;
                             AnimatorControl.isP4Skill = false;
-                            if (Menu_ChoosePlayer.whyP4 == 1)
-                            {
-                                PowerUIControl.isMouseCanUsePower = false;
-                            }
                         }
                         else
                         {
