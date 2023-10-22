@@ -394,92 +394,101 @@ public class AnimalsPowerControl : MonoBehaviour
         AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
+        IsStopUIControl.isSnakePowerStopUI += 1;
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
                 snakePoisonWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                AnimatorControl.isP1Win = true;
                 switch (snakePoisonWho)
                 {
                     case 1:
                         systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP2Dizziness = true;
                         break;
 
                     case 2:
                         systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP3Dizziness = true;
                         break;
 
                     case 3:
                         systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP4Dizziness = true;
                         break;
                 }
                 break;
 
             case 2:
                 snakePoisonWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                AnimatorControl.isP2Win = true;
                 switch (snakePoisonWho)
                 {
                     case 1:
                         systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP1Dizziness = true;
                         break;
 
                     case 2:
                         systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP3Dizziness = true;
                         break;
 
                     case 3:
                         systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP4Dizziness = true;
                         break;
                 }
                 break;
 
             case 3:
                 snakePoisonWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                AnimatorControl.isP3Win = true;
                 switch (snakePoisonWho)
                 {
                     case 1:
                         systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP1Dizziness = true;
                         break;
 
                     case 2:
                         systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP2Dizziness = true;
                         break;
 
                     case 3:
                         systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP4Dizziness = true;
                         break;
                 }
                 break;
 
             case 4:
                 snakePoisonWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                AnimatorControl.isP4Win = true;
                 switch (snakePoisonWho)
                 {
                     case 1:
                         systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP1Dizziness = true;
                         break;
 
                     case 2:
                         systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP2Dizziness = true;
                         break;
 
                     case 3:
                         systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
                         SystemTestTextControl.isTimer = true;
+                        AnimatorControl.isP3Dizziness = true;
                         break;
                 }
                 break;
