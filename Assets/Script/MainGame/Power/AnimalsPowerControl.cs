@@ -394,6 +394,7 @@ public class AnimalsPowerControl : MonoBehaviour
         AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
+        AnimalsSkillAnimator();
         IsStopUIControl.isSnakePowerStopUI += 1;
         switch (ChangeCameraControl.changeCameraNum)
         {
@@ -506,7 +507,6 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
         }
         yield return new WaitForSeconds(2f);
-        AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = false;
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
