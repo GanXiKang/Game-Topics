@@ -14,6 +14,7 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool cowUsePower = false;
     public static bool tigerUsePower = false;
     public static bool rabbitUsePower = false;
+    public static bool dragonUsePower = false;
     public static bool horseUsePower = false, horseTriplePower = false;
     public static bool sheepLuckyPower = false;
 
@@ -316,10 +317,14 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator DragonPower()
     {
         isDragonPower = false;
+        dragonUsePower = true;
         systemText.text = "ýˆ°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[5]--;
+        AnimalsSkillAnimator();
+        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
+        CameraMoveControl.isChangeCameraPoint = true;
     }
 
     IEnumerator SnakePower()
