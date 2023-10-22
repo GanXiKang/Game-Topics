@@ -14,7 +14,7 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool cowUsePower = false;
     public static bool tigerUsePower = false;
     public static bool rabbitUsePower = false;
-    public static int dragonPowerRound;
+    public static int dragonPowerRound = 0;
     public static bool dragonUsePower = false;
     public static int snakePoisonWho;
     public static bool horseUsePower = false, horseTriplePower = false;
@@ -51,6 +51,7 @@ public class AnimalsPowerControl : MonoBehaviour
         {
             StartCoroutine(DragonPower());
         }
+        DragonPowerEnd();
 
         if (isSnakePower)
         {
@@ -319,7 +320,6 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator DragonPower()
     {
         isDragonPower = false;
-        dragonPowerRound = 0;
         systemText.text = "ýˆ°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[5]--;
@@ -629,6 +629,16 @@ public class AnimalsPowerControl : MonoBehaviour
                     AnimatorControl.isP4Skill = false;
                 }
                 break;
+        }
+    }
+
+    void DragonPowerEnd()
+    {
+        if (dragonPowerRound == 2)
+        {
+            dragonUsePower = false;
+            AnimalsSkillAnimator();
+            dragonPowerRound = 0;
         }
     }
 }
