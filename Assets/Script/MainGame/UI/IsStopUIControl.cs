@@ -130,40 +130,8 @@ public class IsStopUIControl : MonoBehaviour
             }
             if (isSnakePowerStopUI != 0)
             {
-                switch (ChangeCameraControl.changeCameraNum)
-                {
-                    case 1:
-                        if (isPoisonStopP1)
-                        {
-                            StartCoroutine(SnakePowerStopThisRound());
-                            isPoisonStopP1 = false;
-                        }
-                        break;
-
-                    case 2:
-                        if (isPoisonStopP2)
-                        {
-                            StartCoroutine(SnakePowerStopThisRound());
-                            isPoisonStopP2 = false;
-                        }
-                        break;
-
-                    case 3:
-                        if (isPoisonStopP3)
-                        {
-                            StartCoroutine(SnakePowerStopThisRound());
-                            isPoisonStopP3 = false;
-                        }
-                        break;
-
-                    case 4:
-                        if (isPoisonStopP4)
-                        {
-                            StartCoroutine(SnakePowerStopThisRound());
-                            isPoisonStopP4 = false;
-                        }
-                        break;
-                }
+                Invoke("SnakePoisonTiming", 2f);
+                isSnakePowerStopUI--;
             }
         }
     }
@@ -199,7 +167,6 @@ public class IsStopUIControl : MonoBehaviour
     }
     IEnumerator SnakePowerStopThisRound()
     {
-        isSnakePowerStopUI--;
         DiceUIControl.isDiceUI = false;
         systemText.text = "�˻غϕ�ͣ";
         SystemTestTextControl.isTimer = true;
@@ -210,40 +177,78 @@ public class IsStopUIControl : MonoBehaviour
 
     void AnimalsConfusion()
     {
-        if (EventControl.isStopP1 || isBombStopP1 || CowPowerControl.isCowPowerStopP1)
+        if (EventControl.isStopP1 || isBombStopP1 || CowPowerControl.isCowPowerStopP1 || isPoisonStopP1)
         {
             AnimatorControl.isP1Confusion = true;
         }
-        if (!EventControl.isStopP1 && !isBombStopP1 && !CowPowerControl.isCowPowerStopP1)
+        if (!EventControl.isStopP1 && !isBombStopP1 && !CowPowerControl.isCowPowerStopP1 && !isPoisonStopP1)
         {
             AnimatorControl.isP1Confusion = false;
         }
 
-        if (EventControl.isStopP2 || isBombStopP2 || CowPowerControl.isCowPowerStopP2)
+        if (EventControl.isStopP2 || isBombStopP2 || CowPowerControl.isCowPowerStopP2 || isPoisonStopP2)
         {
             AnimatorControl.isP2Confusion = true;
         }
-        if (!EventControl.isStopP2 && !isBombStopP2 && !CowPowerControl.isCowPowerStopP2)
+        if (!EventControl.isStopP2 && !isBombStopP2 && !CowPowerControl.isCowPowerStopP2 && !isPoisonStopP2)
         {
             AnimatorControl.isP2Confusion = false;
         }
 
-        if (EventControl.isStopP3 || isBombStopP3 || CowPowerControl.isCowPowerStopP3)
+        if (EventControl.isStopP3 || isBombStopP3 || CowPowerControl.isCowPowerStopP3 || isPoisonStopP3)
         {
             AnimatorControl.isP3Confusion = true;
         }
-        if (!EventControl.isStopP3 && !isBombStopP3 && !CowPowerControl.isCowPowerStopP3)
+        if (!EventControl.isStopP3 && !isBombStopP3 && !CowPowerControl.isCowPowerStopP3 && !isPoisonStopP3)
         {
             AnimatorControl.isP3Confusion = false;
         }
 
-        if (EventControl.isStopP4 || isBombStopP4 || CowPowerControl.isCowPowerStopP4)
+        if (EventControl.isStopP4 || isBombStopP4 || CowPowerControl.isCowPowerStopP4 || isPoisonStopP4)
         {
             AnimatorControl.isP4Confusion = true;
         }
-        if (!EventControl.isStopP4 && !isBombStopP4 && !CowPowerControl.isCowPowerStopP4)
+        if (!EventControl.isStopP4 && !isBombStopP4 && !CowPowerControl.isCowPowerStopP4 && !isPoisonStopP4)
         {
             AnimatorControl.isP4Confusion = false;
+        }
+    }
+
+    void SnakePoisonTiming()
+    {
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                if (isPoisonStopP1)
+                {
+                    StartCoroutine(SnakePowerStopThisRound());
+                    isPoisonStopP1 = false;
+                }
+                break;
+
+            case 2:
+                if (isPoisonStopP2)
+                {
+                    StartCoroutine(SnakePowerStopThisRound());
+                    isPoisonStopP2 = false;
+                }
+                break;
+
+            case 3:
+                if (isPoisonStopP3)
+                {
+                    StartCoroutine(SnakePowerStopThisRound());
+                    isPoisonStopP3 = false;
+                }
+                break;
+
+            case 4:
+                if (isPoisonStopP4)
+                {
+                    StartCoroutine(SnakePowerStopThisRound());
+                    isPoisonStopP4 = false;
+                }
+                break;
         }
     }
 }
