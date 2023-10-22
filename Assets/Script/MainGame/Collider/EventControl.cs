@@ -240,10 +240,10 @@ public class EventControl : MonoBehaviour
         }
         else
         {
-            AnimalsPowerControl.dragonPowerRound++;
             AnimatorControl.isDragonFlyWalk = false;
             CameraMoveControl.isChangeCameraPoint = true;
-            yield return new WaitForSeconds(1f);
+            AnimalsPowerControl.dragonPowerRound++;
+            yield return new WaitForSeconds(2f);
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
             CameraMoveControl.isChangeCameraPoint = false;
@@ -316,10 +316,10 @@ public class EventControl : MonoBehaviour
         }
         else
         {
-            AnimalsPowerControl.dragonPowerRound++;
             AnimatorControl.isDragonFlyWalk = false;
             CameraMoveControl.isChangeCameraPoint = true;
-            yield return new WaitForSeconds(1f);
+            AnimalsPowerControl.dragonPowerRound++;
+            yield return new WaitForSeconds(2f);
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
             CameraMoveControl.isChangeCameraPoint = false;
@@ -392,10 +392,10 @@ public class EventControl : MonoBehaviour
         }
         else
         {
-            AnimalsPowerControl.dragonPowerRound++;
             AnimatorControl.isDragonFlyWalk = false;
             CameraMoveControl.isChangeCameraPoint = true;
-            yield return new WaitForSeconds(1f);
+            AnimalsPowerControl.dragonPowerRound++;
+            yield return new WaitForSeconds(2f);
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
             CameraMoveControl.isChangeCameraPoint = false;
@@ -468,10 +468,10 @@ public class EventControl : MonoBehaviour
         }
         else
         {
-            AnimalsPowerControl.dragonPowerRound++;
             AnimatorControl.isDragonFlyWalk = false;
             CameraMoveControl.isChangeCameraPoint = true;
-            yield return new WaitForSeconds(1f);
+            AnimalsPowerControl.dragonPowerRound++;
+            yield return new WaitForSeconds(2f);
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
             CameraMoveControl.isChangeCameraPoint = false;
