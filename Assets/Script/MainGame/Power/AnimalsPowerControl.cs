@@ -402,17 +402,17 @@ public class AnimalsPowerControl : MonoBehaviour
                 switch (snakePoisonWho)
                 {
                     case 1:
-                        systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
                         SystemTestTextControl.isTimer = true;
                         break;
 
                     case 2:
-                        systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
                         SystemTestTextControl.isTimer = true;
                         break;
 
                     case 3:
-                        systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
                         SystemTestTextControl.isTimer = true;
                         break;
                 }
