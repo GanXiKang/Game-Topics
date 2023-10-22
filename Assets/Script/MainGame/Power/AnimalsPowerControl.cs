@@ -317,14 +317,16 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator DragonPower()
     {
         isDragonPower = false;
-        dragonUsePower = true;
         systemText.text = "龍發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[5]--;
         AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
-        CameraMoveControl.isChangeCameraPoint = true;
+        SceneManager.LoadScene(9);
+        DiceUIControl.isDiceScene = true;
+        dragonUsePower = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
 
     IEnumerator SnakePower()
@@ -333,7 +335,13 @@ public class AnimalsPowerControl : MonoBehaviour
         systemText.text = "蛇發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[6]--;
+        AnimalsSkillAnimator();
+        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
+        AnimalsSkillAnimator();
+        CameraMoveControl.isChangeCameraPoint = false;
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
     }
 
     IEnumerator HorsePower()
