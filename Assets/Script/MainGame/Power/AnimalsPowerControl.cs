@@ -405,18 +405,21 @@ public class AnimalsPowerControl : MonoBehaviour
                         systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP2Dizziness = true;
+                        IsStopUIControl.isPoisonStopP2 = true;
                         break;
 
                     case 2:
                         systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP3Dizziness = true;
+                        IsStopUIControl.isPoisonStopP3 = true;
                         break;
 
                     case 3:
                         systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP4Dizziness = true;
+                        IsStopUIControl.isPoisonStopP3 = true;
                         break;
                 }
                 break;
@@ -429,18 +432,21 @@ public class AnimalsPowerControl : MonoBehaviour
                         systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP1Dizziness = true;
+                        IsStopUIControl.isPoisonStopP1 = true;
                         break;
 
                     case 2:
                         systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP3Dizziness = true;
+                        IsStopUIControl.isPoisonStopP3 = true;
                         break;
 
                     case 3:
                         systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP4Dizziness = true;
+                        IsStopUIControl.isPoisonStopP4 = true;
                         break;
                 }
                 break;
@@ -453,18 +459,21 @@ public class AnimalsPowerControl : MonoBehaviour
                         systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP1Dizziness = true;
+                        IsStopUIControl.isPoisonStopP1 = true;
                         break;
 
                     case 2:
                         systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP2Dizziness = true;
+                        IsStopUIControl.isPoisonStopP2 = true;
                         break;
 
                     case 3:
                         systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP4Dizziness = true;
+                        IsStopUIControl.isPoisonStopP4 = true;
                         break;
                 }
                 break;
@@ -477,18 +486,21 @@ public class AnimalsPowerControl : MonoBehaviour
                         systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP1Dizziness = true;
+                        IsStopUIControl.isPoisonStopP1 = true;
                         break;
 
                     case 2:
                         systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP2Dizziness = true;
+                        IsStopUIControl.isPoisonStopP2 = true;
                         break;
 
                     case 3:
                         systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP3Dizziness = true;
+                        IsStopUIControl.isPoisonStopP3 = true;
                         break;
                 }
                 break;
