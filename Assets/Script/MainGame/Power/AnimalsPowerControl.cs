@@ -14,6 +14,7 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool cowUsePower = false;
     public static bool tigerUsePower = false;
     public static bool rabbitUsePower = false;
+    public static int dragonPowerRound;
     public static bool dragonUsePower = false;
     public static int snakePoisonWho;
     public static bool horseUsePower = false, horseTriplePower = false;
