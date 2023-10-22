@@ -323,6 +323,61 @@ public class AnimalsPowerControl : MonoBehaviour
         AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                p = Random.Range(0, 7);
+                for (int i = 0; i < 7; i++)
+                {
+                    if (i == p)
+                    {
+                        PropsControl.P1Props[i] += 1;
+                    }
+                }
+                systemText.text = "獲得" + PropsControl.propsName[p] + "道具！";
+                SystemTestTextControl.isTimer = true;
+                break;
+
+            case 2:
+                p = Random.Range(0, 7);
+                for (int i = 0; i < 7; i++)
+                {
+                    if (i == p)
+                    {
+                        PropsControl.P2Props[i] += 1;
+                    }
+                }
+                systemText.text = "獲得" + PropsControl.propsName[p] + "道具！";
+                SystemTestTextControl.isTimer = true;
+                break;
+
+            case 3:
+                p = Random.Range(0, 7);
+                for (int i = 0; i < 7; i++)
+                {
+                    if (i == p)
+                    {
+                        PropsControl.P3Props[i] += 1;
+                    }
+                }
+                systemText.text = "獲得" + PropsControl.propsName[p] + "道具！";
+                SystemTestTextControl.isTimer = true;
+                break;
+
+            case 4:
+                p = Random.Range(0, 7);
+                for (int i = 0; i < 7; i++)
+                {
+                    if (i == p)
+                    {
+                        PropsControl.P4Props[i] += 1;
+                    }
+                }
+                systemText.text = "獲得" + PropsControl.propsName[p] + "道具！";
+                SystemTestTextControl.isTimer = true;
+                break;
+        }
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(9);
         DiceUIControl.isDiceScene = true;
         dragonUsePower = true;
