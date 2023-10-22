@@ -7,8 +7,9 @@ public class IsStopUIControl : MonoBehaviour
 {
     public Text systemText;
 
-    public static int isStopUI = 0, isBombStopUI = 0, isCowPowerStopUI;
+    public static int isStopUI = 0, isBombStopUI = 0, isCowPowerStopUI = 0, isSnakePowerStopUI = 0;
     public static bool isBombStopP1, isBombStopP2, isBombStopP3, isBombStopP4;
+    public static bool isPoisonStopP1, isPoisonStopP2, isPoisonStopP3, isPoisonStopP4;
 
     void Update()
     {
