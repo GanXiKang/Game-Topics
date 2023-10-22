@@ -15,6 +15,8 @@ public class AnimatorControl : MonoBehaviour
     public static bool isP1Dizziness, isP2Dizziness, isP3Dizziness, isP4Dizziness;
     public static bool isP1Confusion, isP2Confusion, isP3Confusion, isP4Confusion;
 
+    public static bool isDragonFlyWalk;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -275,6 +277,10 @@ public class AnimatorControl : MonoBehaviour
                 anim.SetBool("Skill", true);
                 switch (Menu_ChoosePlayer.whyP1)
                 {
+                    case 5:
+                        DragonPowerFlyWalk();
+                        break;
+
                     case 7:
                         HorsePowerGO();
                         break;
@@ -395,6 +401,17 @@ public class AnimatorControl : MonoBehaviour
                         break;
                 }
             }
+        }
+    }
+    void DragonPowerFlyWalk()
+    {
+        if (isDragonFlyWalk)
+        {
+            anim.SetBool("FlyWalk", true);
+        }
+        else
+        {
+            anim.SetBool("FlyWalk", false);
         }
     }
     void HorsePowerGO()
