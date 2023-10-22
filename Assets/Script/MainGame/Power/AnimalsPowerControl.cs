@@ -319,6 +319,7 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator DragonPower()
     {
         isDragonPower = false;
+        dragonPowerRound = 0;
         systemText.text = "ýˆ°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[5]--;
