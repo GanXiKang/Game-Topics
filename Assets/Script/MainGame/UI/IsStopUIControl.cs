@@ -135,7 +135,7 @@ public class IsStopUIControl : MonoBehaviour
                     case 1:
                         if (isPoisonStopP1)
                         {
-                            StartCoroutine(CowPowerStopThisRound());
+                            StartCoroutine(SnakePowerStopThisRound());
                             isPoisonStopP1 = false;
                         }
                         break;
@@ -143,7 +143,7 @@ public class IsStopUIControl : MonoBehaviour
                     case 2:
                         if (isPoisonStopP2)
                         {
-                            StartCoroutine(CowPowerStopThisRound());
+                            StartCoroutine(SnakePowerStopThisRound());
                             isPoisonStopP2 = false;
                         }
                         break;
@@ -151,7 +151,7 @@ public class IsStopUIControl : MonoBehaviour
                     case 3:
                         if (isPoisonStopP3)
                         {
-                            StartCoroutine(CowPowerStopThisRound());
+                            StartCoroutine(SnakePowerStopThisRound());
                             isPoisonStopP3 = false;
                         }
                         break;
@@ -159,7 +159,7 @@ public class IsStopUIControl : MonoBehaviour
                     case 4:
                         if (isPoisonStopP4)
                         {
-                            StartCoroutine(CowPowerStopThisRound());
+                            StartCoroutine(SnakePowerStopThisRound());
                             isPoisonStopP4 = false;
                         }
                         break;
@@ -190,6 +190,16 @@ public class IsStopUIControl : MonoBehaviour
     IEnumerator CowPowerStopThisRound()
     {
         isCowPowerStopUI--;
+        DiceUIControl.isDiceUI = false;
+        systemText.text = "此回合暫停";
+        SystemTestTextControl.isTimer = true;
+        yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+    }
+    IEnumerator SnakePowerStopThisRound()
+    {
+        isSnakePowerStopUI--;
         DiceUIControl.isDiceUI = false;
         systemText.text = "此回合暫停";
         SystemTestTextControl.isTimer = true;
