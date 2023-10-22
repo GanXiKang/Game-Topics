@@ -205,6 +205,10 @@ public class DiceControl : MonoBehaviour
         {
             PlayerMoveControl.isMove = true;
         }
+        if (AnimalsPowerControl.dragonUsePower)
+        {
+            AnimatorControl.isDragonFlyWalk = true;
+        }
         if (AnimalsPowerControl.sheepLuckyPower)
         {
             AnimalsPowerControl.sheepLuckyPower = false;
