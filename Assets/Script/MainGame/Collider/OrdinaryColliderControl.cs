@@ -30,7 +30,6 @@ public class OrdinaryColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            print("YES");
                             AnimalsPowerControl.dragonPowerRound++;
                             AnimatorControl.isDragonFlyWalk = false;
                         }
@@ -63,12 +62,20 @@ public class OrdinaryColliderControl : MonoBehaviour
                     if (DiceControl.P3_totalNum == pointNum)
                     {
                         P3_Enter = false;
-                        AnimatorControl.isP3Move = false;
-                        AnimatorControl.isP3Skill = false;
                         StartCoroutine(ChangeCamera());
-                        if (Menu_ChoosePlayer.whyP3 == 1)
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
                         {
-                            PowerUIControl.isMouseCanUsePower = false;
+                            AnimatorControl.isP3Move = false;
+                            AnimatorControl.isP3Skill = false;
+                            if (Menu_ChoosePlayer.whyP3 == 1)
+                            {
+                                PowerUIControl.isMouseCanUsePower = false;
+                            }
+                        }
+                        else
+                        {
+                            AnimalsPowerControl.dragonPowerRound++;
+                            AnimatorControl.isDragonFlyWalk = false;
                         }
                     }
                 }
@@ -77,16 +84,23 @@ public class OrdinaryColliderControl : MonoBehaviour
                     if (DiceControl.P4_totalNum == pointNum)
                     {
                         P4_Enter = false;
-                        AnimatorControl.isP4Move = false;
-                        AnimatorControl.isP4Skill = false;
                         StartCoroutine(ChangeCamera());
-                        if (Menu_ChoosePlayer.whyP4 == 1)
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
                         {
-                            PowerUIControl.isMouseCanUsePower = false;
+                            AnimatorControl.isP4Move = false;
+                            AnimatorControl.isP4Skill = false;
+                            if (Menu_ChoosePlayer.whyP4 == 1)
+                            {
+                                PowerUIControl.isMouseCanUsePower = false;
+                            }
+                        }
+                        else
+                        {
+                            AnimalsPowerControl.dragonPowerRound++;
+                            AnimatorControl.isDragonFlyWalk = false;
                         }
                     }
-                }
-                
+                }  
             }
         }
         else
