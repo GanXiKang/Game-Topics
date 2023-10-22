@@ -313,6 +313,10 @@ public class AnimatorControl : MonoBehaviour
                 anim.SetBool("Skill", true);
                 switch (Menu_ChoosePlayer.whyP1)
                 {
+                    case 5:
+                        DragonPowerFlyWalk();
+                        break;
+
                     case 7:
                         HorsePowerGO();
                         break;
@@ -345,6 +349,10 @@ public class AnimatorControl : MonoBehaviour
                 anim.SetBool("Skill", true);
                 switch (Menu_ChoosePlayer.whyP1)
                 {
+                    case 5:
+                        DragonPowerFlyWalk();
+                        break;
+
                     case 7:
                         HorsePowerGO();
                         break;
@@ -377,6 +385,10 @@ public class AnimatorControl : MonoBehaviour
                 anim.SetBool("Skill", true);
                 switch (Menu_ChoosePlayer.whyP1)
                 {
+                    case 5:
+                        DragonPowerFlyWalk();
+                        break;
+
                     case 7:
                         HorsePowerGO();
                         break;
