@@ -299,6 +299,10 @@ public class AnimatorControl : MonoBehaviour
                         AnimalsPowerControl.rabbitUsePower = false;
                         break;
 
+                    case 5:
+                        DragonPowerFlyWalk();
+                        break;
+
                     case 7:
                         AnimalsPowerControl.horseUsePower = false;
                         HorsePowerGO();
@@ -311,7 +315,7 @@ public class AnimatorControl : MonoBehaviour
             if (isP2Skill)
             {
                 anim.SetBool("Skill", true);
-                switch (Menu_ChoosePlayer.whyP1)
+                switch (Menu_ChoosePlayer.whyP2)
                 {
                     case 5:
                         DragonPowerFlyWalk();
@@ -335,6 +339,10 @@ public class AnimatorControl : MonoBehaviour
                         AnimalsPowerControl.rabbitUsePower = false;
                         break;
 
+                    case 5:
+                        DragonPowerFlyWalk();
+                        break;
+
                     case 7:
                         AnimalsPowerControl.horseUsePower = false;
                         HorsePowerGO();
@@ -347,7 +355,7 @@ public class AnimatorControl : MonoBehaviour
             if (isP3Skill)
             {
                 anim.SetBool("Skill", true);
-                switch (Menu_ChoosePlayer.whyP1)
+                switch (Menu_ChoosePlayer.whyP3)
                 {
                     case 5:
                         DragonPowerFlyWalk();
@@ -371,6 +379,10 @@ public class AnimatorControl : MonoBehaviour
                         AnimalsPowerControl.rabbitUsePower = false;
                         break;
 
+                    case 5:
+                        DragonPowerFlyWalk();
+                        break;
+
                     case 7:
                         AnimalsPowerControl.horseUsePower = false;
                         HorsePowerGO();
@@ -383,7 +395,7 @@ public class AnimatorControl : MonoBehaviour
             if (isP4Skill)
             {
                 anim.SetBool("Skill", true);
-                switch (Menu_ChoosePlayer.whyP1)
+                switch (Menu_ChoosePlayer.whyP4)
                 {
                     case 5:
                         DragonPowerFlyWalk();
@@ -405,6 +417,10 @@ public class AnimatorControl : MonoBehaviour
 
                     case 4:
                         AnimalsPowerControl.rabbitUsePower = false;
+                        break;
+
+                    case 5:
+                        DragonPowerFlyWalk();
                         break;
 
                     case 7:
