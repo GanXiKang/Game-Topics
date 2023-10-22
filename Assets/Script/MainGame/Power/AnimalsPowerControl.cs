@@ -15,6 +15,7 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool tigerUsePower = false;
     public static bool rabbitUsePower = false;
     public static bool dragonUsePower = false;
+    public static int snakePoisonWho;
     public static bool horseUsePower = false, horseTriplePower = false;
     public static bool sheepLuckyPower = false;
 
@@ -392,6 +393,97 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[6]--;
         AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(2f);
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                snakePoisonWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                AnimatorControl.isP1Win = true;
+                switch (snakePoisonWho)
+                {
+                    case 1:
+                        systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+
+                    case 2:
+                        systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+
+                    case 3:
+                        systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                }
+                break;
+
+            case 2:
+                snakePoisonWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                AnimatorControl.isP2Win = true;
+                switch (snakePoisonWho)
+                {
+                    case 1:
+                        systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+
+                    case 2:
+                        systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+
+                    case 3:
+                        systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                }
+                break;
+
+            case 3:
+                snakePoisonWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                AnimatorControl.isP3Win = true;
+                switch (snakePoisonWho)
+                {
+                    case 1:
+                        systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+
+                    case 2:
+                        systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+
+                    case 3:
+                        systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                }
+                break;
+
+            case 4:
+                snakePoisonWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
+                AnimatorControl.isP4Win = true;
+                switch (snakePoisonWho)
+                {
+                    case 1:
+                        systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+
+                    case 2:
+                        systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+
+                    case 3:
+                        systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + " " + stealQuantity.ToString() + "錢！";
+                        SystemTestTextControl.isTimer = true;
+                        break;
+                }
+                break;
+        }
         yield return new WaitForSeconds(2f);
         AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = false;
