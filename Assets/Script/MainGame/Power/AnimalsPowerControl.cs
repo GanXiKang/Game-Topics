@@ -593,7 +593,6 @@ public class AnimalsPowerControl : MonoBehaviour
                 }
                 else
                 {
-                    print("ok");
                     AnimatorControl.isP1Skill = false;
                 }
                 break;
