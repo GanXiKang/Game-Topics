@@ -636,6 +636,7 @@ public class AnimalsPowerControl : MonoBehaviour
     {
         if (dragonPowerRound == 2)
         {
+            print("OK");
             dragonUsePower = false;
             AnimalsSkillAnimator();
             dragonPowerRound = 0;
