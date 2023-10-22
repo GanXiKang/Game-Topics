@@ -175,254 +175,306 @@ public class EventControl : MonoBehaviour
     }
     IEnumerator P1_EventHappened()
     {
-        AnimatorControl.isP1Move = false;
-        AnimatorControl.isP1Skill = false;
-        EventImageUIControl.isTimer = true;
-        EventImageUIControl.eventPointNum = EventPoint;
-        if (getCoin != 0 || getPorps != 0 || forward != 0)
+        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
         {
-            BGM.PlayOneShot(goodE);
-        }
-        else
-        {
-            BGM.PlayOneShot(badE);
-        }
-        yield return new WaitForSeconds(2f);
-        if (getCoin != 0)
-        {
-            CoinControl.P1CoinTotal += getCoin;
-            AnimatorControl.isP1Win = true;
-        }
-        else if (lossCoin != 0)
-        {
-            CoinControl.P1CoinTotal -= lossCoin;
-            AnimatorControl.isP1Lose = true;
-        }
-        else if (getPorps != 0)
-        {
-            AnimatorControl.isP1Win = true;
-            if (getPorps == 1)
+            AnimatorControl.isP1Move = false;
+            AnimatorControl.isP1Skill = false;
+            EventImageUIControl.isTimer = true;
+            EventImageUIControl.eventPointNum = EventPoint;
+            if (getCoin != 0 || getPorps != 0 || forward != 0)
             {
-                PropsControl.P1Props[4] += 1;
+                BGM.PlayOneShot(goodE);
             }
-            else if (getPorps == 2)
+            else
             {
-                PropsControl.P1Props[2] += 1;
+                BGM.PlayOneShot(badE);
             }
-        }
-        yield return new WaitForSeconds(0.5f);
-        if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
-        {
-            ChangeCameraControl.changeCameraNum++;
-            DiceUIControl.isDiceUI = true;
-            AnimatorControl.isP1Win = false;
-            AnimatorControl.isP1Lose = false;
-        }
-        else
-        {
-            DiceControl.P1_totalNum += forward;
-            DiceControl.P1_totalNum -= backward;
-            if (stop == 0)
+            yield return new WaitForSeconds(2f);
+            if (getCoin != 0)
             {
-                AnimatorControl.isP1Move = true;
+                CoinControl.P1CoinTotal += getCoin;
+                AnimatorControl.isP1Win = true;
             }
-            yield return new WaitForSeconds(1f);
-            if (stop != 0)
+            else if (lossCoin != 0)
+            {
+                CoinControl.P1CoinTotal -= lossCoin;
+                AnimatorControl.isP1Lose = true;
+            }
+            else if (getPorps != 0)
+            {
+                AnimatorControl.isP1Win = true;
+                if (getPorps == 1)
+                {
+                    PropsControl.P1Props[4] += 1;
+                }
+                else if (getPorps == 2)
+                {
+                    PropsControl.P1Props[2] += 1;
+                }
+            }
+            yield return new WaitForSeconds(0.5f);
+            if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
             {
                 ChangeCameraControl.changeCameraNum++;
                 DiceUIControl.isDiceUI = true;
-                isStopP1 = true;
-                IsStopUIControl.isStopUI += stop;
+                AnimatorControl.isP1Win = false;
+                AnimatorControl.isP1Lose = false;
             }
+            else
+            {
+                DiceControl.P1_totalNum += forward;
+                DiceControl.P1_totalNum -= backward;
+                if (stop == 0)
+                {
+                    AnimatorControl.isP1Move = true;
+                }
+                yield return new WaitForSeconds(1f);
+                if (stop != 0)
+                {
+                    ChangeCameraControl.changeCameraNum++;
+                    DiceUIControl.isDiceUI = true;
+                    isStopP1 = true;
+                    IsStopUIControl.isStopUI += stop;
+                }
+            }
+        }
+        else
+        {
+            AnimalsPowerControl.dragonPowerRound++;
+            AnimatorControl.isDragonFlyWalk = false;
+            CameraMoveControl.isChangeCameraPoint = true;
+            yield return new WaitForSeconds(1f);
+            ChangeCameraControl.changeCameraNum++;
+            DiceUIControl.isDiceUI = true;
+            CameraMoveControl.isChangeCameraPoint = false;
         }
     }
     IEnumerator P2_EventHappened()
     {
-        AnimatorControl.isP2Move = false;
-        AnimatorControl.isP2Skill = false;
-        EventImageUIControl.isTimer = true;
-        EventImageUIControl.eventPointNum = EventPoint;
-        if (getCoin != 0 || getPorps != 0 || forward != 0)
+        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
         {
-            BGM.PlayOneShot(goodE);
-        }
-        else
-        {
-            BGM.PlayOneShot(badE);
-        }
-        yield return new WaitForSeconds(2f);
-        if (getCoin != 0)
-        {
-            CoinControl.P2CoinTotal += getCoin;
-            AnimatorControl.isP2Win = true;
-        }
-        else if (lossCoin != 0)
-        {
-            CoinControl.P2CoinTotal -= lossCoin;
-            AnimatorControl.isP2Lose = true;
-        }
-        else if (getPorps != 0)
-        {
-            AnimatorControl.isP2Win = true;
-            if (getPorps == 1)
+            AnimatorControl.isP2Move = false;
+            AnimatorControl.isP2Skill = false;
+            EventImageUIControl.isTimer = true;
+            EventImageUIControl.eventPointNum = EventPoint;
+            if (getCoin != 0 || getPorps != 0 || forward != 0)
             {
-                PropsControl.P2Props[4] += 1;
+                BGM.PlayOneShot(goodE);
             }
-            else if (getPorps == 2)
+            else
             {
-                PropsControl.P1Props[2] += 1;
+                BGM.PlayOneShot(badE);
             }
-        }
-        yield return new WaitForSeconds(0.5f);
-        if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
-        {
-            ChangeCameraControl.changeCameraNum++;
-            DiceUIControl.isDiceUI = true;
-            AnimatorControl.isP2Win = false;
-            AnimatorControl.isP2Lose = false;
-        }
-        else
-        {
-            DiceControl.P2_totalNum += forward;
-            DiceControl.P2_totalNum -= backward;
-            if (stop == 0)
+            yield return new WaitForSeconds(2f);
+            if (getCoin != 0)
             {
-                AnimatorControl.isP2Move = true;
+                CoinControl.P2CoinTotal += getCoin;
+                AnimatorControl.isP2Win = true;
             }
-            yield return new WaitForSeconds(1f);
-            if (stop != 0)
+            else if (lossCoin != 0)
+            {
+                CoinControl.P2CoinTotal -= lossCoin;
+                AnimatorControl.isP2Lose = true;
+            }
+            else if (getPorps != 0)
+            {
+                AnimatorControl.isP2Win = true;
+                if (getPorps == 1)
+                {
+                    PropsControl.P2Props[4] += 1;
+                }
+                else if (getPorps == 2)
+                {
+                    PropsControl.P1Props[2] += 1;
+                }
+            }
+            yield return new WaitForSeconds(0.5f);
+            if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
             {
                 ChangeCameraControl.changeCameraNum++;
                 DiceUIControl.isDiceUI = true;
-                isStopP2 = true;
-                IsStopUIControl.isStopUI += stop;
+                AnimatorControl.isP2Win = false;
+                AnimatorControl.isP2Lose = false;
             }
+            else
+            {
+                DiceControl.P2_totalNum += forward;
+                DiceControl.P2_totalNum -= backward;
+                if (stop == 0)
+                {
+                    AnimatorControl.isP2Move = true;
+                }
+                yield return new WaitForSeconds(1f);
+                if (stop != 0)
+                {
+                    ChangeCameraControl.changeCameraNum++;
+                    DiceUIControl.isDiceUI = true;
+                    isStopP2 = true;
+                    IsStopUIControl.isStopUI += stop;
+                }
+            }
+        }
+        else
+        {
+            AnimalsPowerControl.dragonPowerRound++;
+            AnimatorControl.isDragonFlyWalk = false;
+            CameraMoveControl.isChangeCameraPoint = true;
+            yield return new WaitForSeconds(1f);
+            ChangeCameraControl.changeCameraNum++;
+            DiceUIControl.isDiceUI = true;
+            CameraMoveControl.isChangeCameraPoint = false;
         }
     }
     IEnumerator P3_EventHappened()
     {
-        AnimatorControl.isP3Move = false;
-        AnimatorControl.isP3Skill = false;
-        EventImageUIControl.isTimer = true;
-        EventImageUIControl.eventPointNum = EventPoint;
-        if (getCoin != 0 || getPorps != 0 || forward != 0)
+        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
         {
-            BGM.PlayOneShot(goodE);
-        }
-        else
-        {
-            BGM.PlayOneShot(badE);
-        }
-        yield return new WaitForSeconds(2f);
-        if (getCoin != 0)
-        {
-            CoinControl.P3CoinTotal += getCoin;
-            AnimatorControl.isP3Win = true;
-        }
-        else if (lossCoin != 0)
-        {
-            CoinControl.P3CoinTotal -= lossCoin;
-            AnimatorControl.isP3Lose = true;
-        }
-        else if (getPorps != 0)
-        {
-            AnimatorControl.isP3Win = true;
-            if (getPorps == 1)
+            AnimatorControl.isP3Move = false;
+            AnimatorControl.isP3Skill = false;
+            EventImageUIControl.isTimer = true;
+            EventImageUIControl.eventPointNum = EventPoint;
+            if (getCoin != 0 || getPorps != 0 || forward != 0)
             {
-                PropsControl.P3Props[4] += 1;
+                BGM.PlayOneShot(goodE);
             }
-            else if (getPorps == 2)
+            else
             {
-                PropsControl.P1Props[2] += 1;
+                BGM.PlayOneShot(badE);
             }
-        }
-        yield return new WaitForSeconds(0.5f);
-        if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
-        {
-            ChangeCameraControl.changeCameraNum++;
-            DiceUIControl.isDiceUI = true;
-            AnimatorControl.isP3Win = false;
-            AnimatorControl.isP3Lose = false;
-        }
-        else
-        {
-            DiceControl.P3_totalNum += forward;
-            DiceControl.P3_totalNum -= backward;
-            if (stop == 0)
+            yield return new WaitForSeconds(2f);
+            if (getCoin != 0)
             {
-                AnimatorControl.isP3Move = true;
+                CoinControl.P3CoinTotal += getCoin;
+                AnimatorControl.isP3Win = true;
             }
-            yield return new WaitForSeconds(1f);
-            if (stop != 0)
+            else if (lossCoin != 0)
+            {
+                CoinControl.P3CoinTotal -= lossCoin;
+                AnimatorControl.isP3Lose = true;
+            }
+            else if (getPorps != 0)
+            {
+                AnimatorControl.isP3Win = true;
+                if (getPorps == 1)
+                {
+                    PropsControl.P3Props[4] += 1;
+                }
+                else if (getPorps == 2)
+                {
+                    PropsControl.P1Props[2] += 1;
+                }
+            }
+            yield return new WaitForSeconds(0.5f);
+            if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
             {
                 ChangeCameraControl.changeCameraNum++;
                 DiceUIControl.isDiceUI = true;
-                isStopP3 = true;
-                IsStopUIControl.isStopUI += stop;
+                AnimatorControl.isP3Win = false;
+                AnimatorControl.isP3Lose = false;
             }
+            else
+            {
+                DiceControl.P3_totalNum += forward;
+                DiceControl.P3_totalNum -= backward;
+                if (stop == 0)
+                {
+                    AnimatorControl.isP3Move = true;
+                }
+                yield return new WaitForSeconds(1f);
+                if (stop != 0)
+                {
+                    ChangeCameraControl.changeCameraNum++;
+                    DiceUIControl.isDiceUI = true;
+                    isStopP3 = true;
+                    IsStopUIControl.isStopUI += stop;
+                }
+            }
+        }
+        else
+        {
+            AnimalsPowerControl.dragonPowerRound++;
+            AnimatorControl.isDragonFlyWalk = false;
+            CameraMoveControl.isChangeCameraPoint = true;
+            yield return new WaitForSeconds(1f);
+            ChangeCameraControl.changeCameraNum++;
+            DiceUIControl.isDiceUI = true;
+            CameraMoveControl.isChangeCameraPoint = false;
         }
     }
     IEnumerator P4_EventHappened()
     {
-        AnimatorControl.isP4Move = false;
-        AnimatorControl.isP4Skill = false;
-        EventImageUIControl.isTimer = true;
-        EventImageUIControl.eventPointNum = EventPoint;
-        if (getCoin != 0 || getPorps != 0 || forward != 0)
+        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
         {
-            BGM.PlayOneShot(goodE);
-        }
-        else
-        {
-            BGM.PlayOneShot(badE);
-        }
-        yield return new WaitForSeconds(2f);
-        if (getCoin != 0)
-        {
-            CoinControl.P4CoinTotal += getCoin;
-            AnimatorControl.isP4Win = true;
-        }
-        else if (lossCoin != 0)
-        {
-            CoinControl.P4CoinTotal -= lossCoin;
-            AnimatorControl.isP4Lose = true;
-        }
-        else if (getPorps != 0)
-        {
-            AnimatorControl.isP4Win = true;
-            if (getPorps == 1)
+            AnimatorControl.isP4Move = false;
+            AnimatorControl.isP4Skill = false;
+            EventImageUIControl.isTimer = true;
+            EventImageUIControl.eventPointNum = EventPoint;
+            if (getCoin != 0 || getPorps != 0 || forward != 0)
             {
-                PropsControl.P2Props[4] += 1;
+                BGM.PlayOneShot(goodE);
             }
-            else if (getPorps == 2)
+            else
             {
-                PropsControl.P1Props[2] += 1;
+                BGM.PlayOneShot(badE);
             }
-        }
-        yield return new WaitForSeconds(0.5f);
-        if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
-        {
-            ChangeCameraControl.changeCameraNum++;
-            DiceUIControl.isDiceUI = true;
-            AnimatorControl.isP4Win = false;
-            AnimatorControl.isP4Lose = false;
-        }
-        else
-        {
-            DiceControl.P4_totalNum += forward;
-            DiceControl.P4_totalNum -= backward;
-            if (stop == 0)
+            yield return new WaitForSeconds(2f);
+            if (getCoin != 0)
             {
-                AnimatorControl.isP2Move = true;
+                CoinControl.P4CoinTotal += getCoin;
+                AnimatorControl.isP4Win = true;
             }
-            yield return new WaitForSeconds(1f);
-            if (stop != 0)
+            else if (lossCoin != 0)
+            {
+                CoinControl.P4CoinTotal -= lossCoin;
+                AnimatorControl.isP4Lose = true;
+            }
+            else if (getPorps != 0)
+            {
+                AnimatorControl.isP4Win = true;
+                if (getPorps == 1)
+                {
+                    PropsControl.P2Props[4] += 1;
+                }
+                else if (getPorps == 2)
+                {
+                    PropsControl.P1Props[2] += 1;
+                }
+            }
+            yield return new WaitForSeconds(0.5f);
+            if (getCoin != 0 || lossCoin != 0 || getPorps != 0)
             {
                 ChangeCameraControl.changeCameraNum++;
                 DiceUIControl.isDiceUI = true;
-                isStopP4 = true;
-                IsStopUIControl.isStopUI += stop;
+                AnimatorControl.isP4Win = false;
+                AnimatorControl.isP4Lose = false;
             }
+            else
+            {
+                DiceControl.P4_totalNum += forward;
+                DiceControl.P4_totalNum -= backward;
+                if (stop == 0)
+                {
+                    AnimatorControl.isP2Move = true;
+                }
+                yield return new WaitForSeconds(1f);
+                if (stop != 0)
+                {
+                    ChangeCameraControl.changeCameraNum++;
+                    DiceUIControl.isDiceUI = true;
+                    isStopP4 = true;
+                    IsStopUIControl.isStopUI += stop;
+                }
+            }
+        }
+        else
+        {
+            AnimalsPowerControl.dragonPowerRound++;
+            AnimatorControl.isDragonFlyWalk = false;
+            CameraMoveControl.isChangeCameraPoint = true;
+            yield return new WaitForSeconds(1f);
+            ChangeCameraControl.changeCameraNum++;
+            DiceUIControl.isDiceUI = true;
+            CameraMoveControl.isChangeCameraPoint = false;
         }
     }
     IEnumerator Transposition()
