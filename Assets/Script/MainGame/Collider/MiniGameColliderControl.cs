@@ -24,8 +24,15 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 1;
                         AnimatorControl.isP1Move = false;
-                        AnimatorControl.isP1Skill = false;
-                        StartCoroutine(StartMiniGame());
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
+                        {
+                            AnimatorControl.isP1Skill = false;
+                            StartCoroutine(StartMiniGame());
+                        }
+                        else
+                        {
+                            StartCoroutine(DragonFlyNow());
+                        }
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
                             PowerUIControl.isMouseCanUsePower = false;
@@ -38,8 +45,15 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 2;
                         AnimatorControl.isP2Move = false;
-                        AnimatorControl.isP2Skill = false;
-                        StartCoroutine(StartMiniGame());
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
+                        {
+                            AnimatorControl.isP2Skill = false;
+                            StartCoroutine(StartMiniGame());
+                        }
+                        else
+                        {
+                            StartCoroutine(DragonFlyNow());
+                        }
                         if (Menu_ChoosePlayer.whyP2 == 1)
                         {
                             PowerUIControl.isMouseCanUsePower = false;
@@ -52,13 +66,20 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 3;
                         AnimatorControl.isP3Move = false;
-                        AnimatorControl.isP3Skill = false;
-                        StartCoroutine(StartMiniGame());
-                    }
-                    if (Menu_ChoosePlayer.whyP3 == 1)
-                    {
-                        PowerUIControl.isMouseCanUsePower = false;
-                    }
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
+                        {
+                            AnimatorControl.isP3Skill = false;
+                            StartCoroutine(StartMiniGame());
+                        }
+                        else
+                        {
+                            StartCoroutine(DragonFlyNow());
+                        }
+                        if (Menu_ChoosePlayer.whyP3 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
+                    } 
                 }
                 else if (other.tag == "P4" && P4_playGame)
                 {
@@ -66,8 +87,15 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 4;
                         AnimatorControl.isP4Move = false;
-                        AnimatorControl.isP4Skill = false;
-                        StartCoroutine(StartMiniGame());
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
+                        {
+                            AnimatorControl.isP4Skill = false;
+                            StartCoroutine(StartMiniGame());
+                        }
+                        else
+                        {
+                            StartCoroutine(DragonFlyNow());
+                        }
                         if (Menu_ChoosePlayer.whyP4 == 1)
                         {
                             PowerUIControl.isMouseCanUsePower = false;
@@ -167,6 +195,16 @@ public class MiniGameColliderControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(miniGame);
         isMiniGame = true;
+    }
+    IEnumerator DragonFlyNow()
+    {
+        AnimalsPowerControl.dragonPowerRound++;
+        AnimatorControl.isDragonFlyWalk = false;
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
     IEnumerator Transposition()
     {
