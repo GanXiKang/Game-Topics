@@ -27,8 +27,15 @@ public class ChestColliderControl : MonoBehaviour
                     {
                         P1_EnterBox = false;
                         AnimatorControl.isP1Move = false;
-                        AnimatorControl.isP1Skill = false;
-                        StartCoroutine(ChangeCamera());
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
+                        {
+                            AnimatorControl.isP1Skill = false;
+                            StartCoroutine(ChangeCamera());
+                        }
+                        else
+                        {
+                            StartCoroutine(DragonFlyNow());
+                        }
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
                             PowerUIControl.isMouseCanUsePower = true;
@@ -179,6 +186,16 @@ public class ChestColliderControl : MonoBehaviour
         isOpened = true;
         CameraMoveControl.isChangeCameraPoint = false;
         FalseByAnimator();
+    }
+    IEnumerator DragonFlyNow()
+    {
+        AnimalsPowerControl.dragonPowerRound++;
+        AnimatorControl.isDragonFlyWalk = false;
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
     IEnumerator Transposition()
     {
