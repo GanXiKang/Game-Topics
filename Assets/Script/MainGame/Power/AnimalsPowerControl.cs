@@ -411,7 +411,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
                         {
                             dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            AnimatorControl.isP2Skill = false;
                         }
                         break;
 
@@ -423,7 +423,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
                         {
                             dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            AnimatorControl.isP3Skill = false;
                         }
                         break;
 
@@ -435,7 +435,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
                         {
                             dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            AnimatorControl.isP4Skill = false;
                         }
                         break;
                 }
@@ -465,7 +465,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
                         {
                             dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            AnimatorControl.isP3Skill = false;
                         }
                         break;
 
@@ -477,7 +477,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
                         {
                             dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            AnimatorControl.isP4Skill = false;
                         }
                         break;
                 }
@@ -507,7 +507,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
                         {
                             dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            AnimatorControl.isP2Skill = false;
                         }
                         break;
 
@@ -519,7 +519,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
                         {
                             dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            AnimatorControl.isP4Skill = false;
                         }
                         break;
                 }
@@ -549,7 +549,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
                         {
                             dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            AnimatorControl.isP2Skill = false;
                         }
                         break;
 
@@ -561,7 +561,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
                         {
                             dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            AnimatorControl.isP3Skill = false;
                         }
                         break;
                 }
