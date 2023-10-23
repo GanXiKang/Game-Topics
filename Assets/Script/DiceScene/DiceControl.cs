@@ -11,7 +11,7 @@ public class DiceControl : MonoBehaviour
 
     public int MinNum, MaxNum;
     public float rotationForce;
-    public GameObject normalUI, renewUI, renewWindowsUI , doubleUI, customUI, triplePowerUI, LuckyPowerUI;
+    public GameObject diceUI, backUI, renewUI, renewWindowsUI , doubleUI, customUI, triplePowerUI, LuckyPowerUI;
     public AudioSource BGM;
     public AudioClip dice;
 
@@ -35,15 +35,18 @@ public class DiceControl : MonoBehaviour
         if (BagUIControl.isCustomDice)
         {
             customUI.SetActive(true);
-            normalUI.SetActive(false);
+            diceUI.SetActive(false);
+            backUI.SetActive(false);
         }
         if (AnimalsPowerControl.horseTriplePower)
         {
             triplePowerUI.SetActive(true);
+            backUI.SetActive(false);
         }
         if (AnimalsPowerControl.sheepLuckyPower)
         {
             LuckyPowerUI.SetActive(true);
+            backUI.SetActive(false);
             MinNum = 4;
         }
     }
