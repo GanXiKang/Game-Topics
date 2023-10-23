@@ -40,6 +40,10 @@ public class DiceControl : MonoBehaviour
             diceUI.SetActive(false);
             backUI.SetActive(false);
         }
+        if (BagUIControl.putBomb)
+        {
+            backUI.SetActive(false);
+        }
         if (AnimalsPowerControl.horseTriplePower)
         {
             triplePowerUI.SetActive(true);
@@ -247,6 +251,10 @@ public class DiceControl : MonoBehaviour
         {
             AnimalsPowerControl.sheepLuckyPower = false;
         }
+        if (BagUIControl.putBomb)
+        {
+            BagUIControl.putBomb = false;
+        }   
         DiceUIControl.isDiceScene = false;
     }
     IEnumerator BackMainGame()
