@@ -10,7 +10,7 @@ public class MonkeyPowerControl : MonoBehaviour
 
     void Update()
     {
-        if (BagUIControl.isBomb)
+        if (AnimalsPowerControl.monkeyPutBananaPower)
         {
             switch (ChangeCameraControl.changeCameraNum)
             {
@@ -50,7 +50,7 @@ public class MonkeyPowerControl : MonoBehaviour
                     }
                     break;
             }
-            //BagUIControl.isBomb = false;
+            AnimalsPowerControl.monkeyPutBananaPower = false;
         }
     }
 }
