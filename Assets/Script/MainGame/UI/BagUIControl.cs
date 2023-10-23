@@ -12,6 +12,7 @@ public class BagUIControl : MonoBehaviour
     public Button[] use = new Button[7];
 
     public static bool isRenewDice, isDoubleDice, isCustomDice, isBomb, isSnatch, isTransposition, isThief;
+    public static bool putBomb;
 
     int whyUseProps;
     bool useProps;
@@ -439,9 +440,10 @@ public class BagUIControl : MonoBehaviour
 
             case 4:
                 isBomb = true;
+                putBomb = true;
                 CameraMoveControl.isChangeCameraPoint = true;
                 yield return new WaitForSeconds(2f);
-                GoDiceScene();
+                GoDiceScene(); 
                 CameraMoveControl.isChangeCameraPoint = false;
                 break;
 
