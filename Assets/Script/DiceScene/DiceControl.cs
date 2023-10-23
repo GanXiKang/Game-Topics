@@ -249,7 +249,8 @@ public class DiceControl : MonoBehaviour
     }
     IEnumerator BackMainGame()
     {
-        normalUI.SetActive(false);
+        diceUI.SetActive(false);
+        backUI.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         DiceUIControl.isDiceUI = true;
         DiceUIControl.isDiceScene = false;
@@ -275,7 +276,8 @@ public class DiceControl : MonoBehaviour
                 renewWindowsUI.SetActive(true);
             }
         }
-        normalUI.SetActive(false);
+        diceUI.SetActive(false);
+        backUI.SetActive(false);
     }
     public void Button_Custom(int Num)
     {
@@ -292,7 +294,8 @@ public class DiceControl : MonoBehaviour
     {
         isRoll = true;
         BagUIControl.isRenewDice = false;
-        normalUI.SetActive(true);
+        diceUI.SetActive(false);
+        backUI.SetActive(false);
         renewUI.SetActive(false);
     }
     public void Button_Cancel()
