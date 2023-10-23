@@ -40,6 +40,11 @@ public class CowPowerControl : MonoBehaviour
                     IsStopUIControl.isCowPowerStopUI++;
                     isCowPowerStopP1 = true;
                     AnimatorControl.isP1Dizziness = true;
+                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                    {
+                        AnimalsPowerControl.dragonUsePower = false;
+                        AnimatorControl.isP1Skill = false;
+                    }
                 }
             }
             if (other.tag == "P2")
@@ -49,6 +54,11 @@ public class CowPowerControl : MonoBehaviour
                     IsStopUIControl.isCowPowerStopUI++;
                     isCowPowerStopP2 = true;
                     AnimatorControl.isP2Dizziness = true;
+                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                    {
+                        AnimalsPowerControl.dragonUsePower = false;
+                        AnimatorControl.isP2Skill = false;
+                    }
                 }
             }
             if (other.tag == "P3")
@@ -58,6 +68,11 @@ public class CowPowerControl : MonoBehaviour
                     IsStopUIControl.isCowPowerStopUI++;
                     isCowPowerStopP3 = true;
                     AnimatorControl.isP3Dizziness = true;
+                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                    {
+                        AnimalsPowerControl.dragonUsePower = false;
+                        AnimatorControl.isP3Skill = false;
+                    }
                 }
             }
             if (other.tag == "P4")
@@ -67,6 +82,11 @@ public class CowPowerControl : MonoBehaviour
                     IsStopUIControl.isCowPowerStopUI++;
                     isCowPowerStopP4 = true;
                     AnimatorControl.isP4Dizziness = true;
+                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                    {
+                        AnimalsPowerControl.dragonUsePower = false;
+                        AnimatorControl.isP4Skill = false;
+                    }
                 }
             }
         }
