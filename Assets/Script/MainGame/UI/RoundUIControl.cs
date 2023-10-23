@@ -16,157 +16,157 @@ public class RoundUIControl : MonoBehaviour
         switch (Menu_ChoosePlayer.whyP1)
         {
             case 1:
-                Player[1] = "Mouse";
+                Player[1] = "ÀÏÊó";
                 break;
             case 2:
-                Player[1] = "Cow";
+                Player[1] = "Å£";
                 break;
             case 3:
-                Player[1] = "Tiger";
+                Player[1] = "ÀÏ»¢";
                 break;
             case 4:
-                Player[1] = "Rabbit";
+                Player[1] = "ÍÃ×Ó";
                 break;
             case 5:
-                Player[1] = "Dragon";
+                Player[1] = "ýˆ";
                 break;
             case 6:
-                Player[1] = "Snake";
+                Player[1] = "Éß";
                 break;
             case 7:
-                Player[1] = "Horse";
+                Player[1] = "ñR";
                 break;
             case 8:
-                Player[1] = "Sheep";
+                Player[1] = "Ñò";
                 break;
             case 9:
-                Player[1] = "Monkey";
+                Player[1] = "ºï×Ó";
                 break;
             case 10:
-                Player[1] = "Chicken";
+                Player[1] = "ëu";
                 break;
             case 11:
-                Player[1] = "Dog";
+                Player[1] = "¹·";
                 break;
             case 12:
-                Player[1] = "Pig";
+                Player[1] = "Øi";
                 break;
         }
         switch (Menu_ChoosePlayer.whyP2)
         {
             case 1:
-                Player[2] = "Mouse";
+                Player[2] = "ÀÏÊó";
                 break;
             case 2:
-                Player[2] = "Cow";
+                Player[2] = "Å£";
                 break;
             case 3:
-                Player[2] = "Tiger";
+                Player[2] = "ÀÏ»¢";
                 break;
             case 4:
-                Player[2] = "Rabbit";
+                Player[2] = "ÍÃ×Ó";
                 break;
             case 5:
-                Player[2] = "Dragon";
+                Player[2] = "ýˆ";
                 break;
             case 6:
-                Player[2] = "Snake";
+                Player[2] = "Éß";
                 break;
             case 7:
-                Player[2] = "Horse";
+                Player[2] = "ñR";
                 break;
             case 8:
-                Player[2] = "Sheep";
+                Player[2] = "Ñò";
                 break;
             case 9:
-                Player[2] = "Monkey";
+                Player[2] = "ºï×Ó";
                 break;
             case 10:
-                Player[2] = "Chicken";
+                Player[2] = "ëu";
                 break;
             case 11:
-                Player[2] = "Dog";
+                Player[2] = "¹·";
                 break;
             case 12:
-                Player[2] = "Pig";
+                Player[2] = "Øi";
                 break;
         }
         switch (Menu_ChoosePlayer.whyP3)
         {
             case 1:
-                Player[3] = "Mouse";
+                Player[3] = "ÀÏÊó";
                 break;
             case 2:
-                Player[3] = "Cow";
+                Player[3] = "Å£";
                 break;
             case 3:
-                Player[3] = "Tiger";
+                Player[3] = "ÀÏ»¢";
                 break;
             case 4:
-                Player[3] = "Rabbit";
+                Player[3] = "ÍÃ×Ó";
                 break;
             case 5:
-                Player[3] = "Dragon";
+                Player[3] = "ýˆ";
                 break;
             case 6:
-                Player[3] = "Snake";
+                Player[3] = "Éß";
                 break;
             case 7:
-                Player[3] = "Horse";
+                Player[3] = "ñR";
                 break;
             case 8:
-                Player[3] = "Sheep";
+                Player[3] = "Ñò";
                 break;
             case 9:
-                Player[3] = "Monkey";
+                Player[3] = "ºï×Ó";
                 break;
             case 10:
-                Player[3] = "Chicken";
+                Player[3] = "ëu";
                 break;
             case 11:
-                Player[3] = "Dog";
+                Player[3] = "¹·";
                 break;
             case 12:
-                Player[3] = "Pig";
+                Player[3] = "Øi";
                 break;
         }
         switch (Menu_ChoosePlayer.whyP4)
         {
             case 1:
-                Player[4] = "Mouse";
+                Player[4] = "ÀÏÊó";
                 break;
             case 2:
-                Player[4] = "Cow";
+                Player[4] = "Å£";
                 break;
             case 3:
-                Player[4] = "Tiger";
+                Player[4] = "ÀÏ»¢";
                 break;
             case 4:
-                Player[4] = "Rabbit";
+                Player[4] = "ÍÃ×Ó";
                 break;
             case 5:
-                Player[4] = "Dragon";
+                Player[4] = "ýˆ";
                 break;
             case 6:
-                Player[4] = "Snake";
+                Player[4] = "Éß";
                 break;
             case 7:
-                Player[4] = "Horse";
+                Player[4] = "ñR";
                 break;
             case 8:
-                Player[4] = "Sheep";
+                Player[4] = "Ñò";
                 break;
             case 9:
-                Player[4] = "Monkey";
+                Player[4] = "ºï×Ó";
                 break;
             case 10:
-                Player[4] = "Chicken";
+                Player[4] = "ëu";
                 break;
             case 11:
-                Player[4] = "Dog";
+                Player[4] = "¹·";
                 break;
             case 12:
-                Player[4] = "Pig";
+                Player[4] = "Øi";
                 break;
         }
     }
