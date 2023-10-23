@@ -507,8 +507,15 @@ public class PropsControl : MonoBehaviour
         if (BombPropsControl.iscolliderBombText)
         {
             systemText.text = "≤»µΩ’®èó";
-            BombPropsControl.iscolliderBombText = false;
             SystemTestTextControl.isTimer = true;
+            BombPropsControl.iscolliderBombText = false;
+        }
+
+        if (BananaControl.iscolliderBananaText)
+        {
+            systemText.text = "≤»µΩœ„Ω∂";
+            SystemTestTextControl.isTimer = true;
+            BananaControl.iscolliderBananaText = false;
         }
     }
 
