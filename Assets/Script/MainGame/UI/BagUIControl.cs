@@ -461,7 +461,6 @@ public class BagUIControl : MonoBehaviour
                 yield return new WaitForSeconds(2f);
                 ChangeCamera();
                 CameraMoveControl.isChangeCameraPoint = false;
-                
                 break;
 
             case 7:
