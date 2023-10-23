@@ -130,8 +130,40 @@ public class IsStopUIControl : MonoBehaviour
             }
             if (isSnakePowerStopUI != 0)
             {
-                Invoke("SnakePoisonTiming", 2f);
-                isSnakePowerStopUI--;
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        if (isPoisonStopP1)
+                        {
+                            StartCoroutine(SnakePowerStopThisRound());
+                            isPoisonStopP1 = false;
+                        }
+                        break;
+
+                    case 2:
+                        if (isPoisonStopP2)
+                        {
+                            StartCoroutine(SnakePowerStopThisRound());
+                            isPoisonStopP2 = false;
+                        }
+                        break;
+
+                    case 3:
+                        if (isPoisonStopP3)
+                        {
+                            StartCoroutine(SnakePowerStopThisRound());
+                            isPoisonStopP3 = false;
+                        }
+                        break;
+
+                    case 4:
+                        if (isPoisonStopP4)
+                        {
+                            StartCoroutine(SnakePowerStopThisRound());
+                            isPoisonStopP4 = false;
+                        }
+                        break;
+                }
             }
         }
     }
@@ -167,6 +199,7 @@ public class IsStopUIControl : MonoBehaviour
     }
     IEnumerator SnakePowerStopThisRound()
     {
+        isSnakePowerStopUI--;
         DiceUIControl.isDiceUI = false;
         systemText.text = "�˻غϕ�ͣ";
         SystemTestTextControl.isTimer = true;
