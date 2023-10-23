@@ -8,6 +8,7 @@ public class BombPropsControl : MonoBehaviour
 
     public static int pointNum;
     public static bool iscolliderBombText = false;
+
     bool r = true;
 
     void Start()
