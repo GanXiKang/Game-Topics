@@ -166,6 +166,43 @@ public class IsStopUIControl : MonoBehaviour
                         break;
                 }
             }
+            if (isBananaStopUI != 0 && !StoreColliderControl.isStoreNotStopUI)
+            {
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        if (isBananaStopP1)
+                        {
+                            StartCoroutine(BananaStopThisRound());
+                            isBananaStopP1 = false;
+                        }
+                        break;
+
+                    case 2:
+                        if (isBananaStopP2)
+                        {
+                            StartCoroutine(BananaStopThisRound());
+                            isBananaStopP2 = false;
+                        }
+                        break;
+
+                    case 3:
+                        if (isBananaStopP3)
+                        {
+                            StartCoroutine(BananaStopThisRound());
+                            isBananaStopP3 = false;
+                        }
+                        break;
+
+                    case 4:
+                        if (isBananaStopP4)
+                        {
+                            StartCoroutine(BananaStopThisRound());
+                            isBananaStopP4 = false;
+                        }
+                        break;
+                }
+            }
         }
     }
     IEnumerator StopThisRound()
@@ -201,6 +238,16 @@ public class IsStopUIControl : MonoBehaviour
     IEnumerator SnakePowerStopThisRound()
     {
         isSnakePowerStopUI--;
+        DiceUIControl.isDiceUI = false;
+        systemText.text = "此回合暫停";
+        SystemTestTextControl.isTimer = true;
+        yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+    }
+    IEnumerator BananaStopThisRound()
+    {
+        isBananaStopUI--;
         DiceUIControl.isDiceUI = false;
         systemText.text = "此回合暫停";
         SystemTestTextControl.isTimer = true;
