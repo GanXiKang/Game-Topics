@@ -408,6 +408,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP2Dizziness = true;
                         IsStopUIControl.isPoisonStopP2 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
 
                     case 2:
@@ -415,6 +420,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP3Dizziness = true;
                         IsStopUIControl.isPoisonStopP3 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
 
                     case 3:
@@ -422,6 +432,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP4Dizziness = true;
                         IsStopUIControl.isPoisonStopP3 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
                 }
                 break;
@@ -435,6 +450,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP1Dizziness = true;
                         IsStopUIControl.isPoisonStopP1 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
 
                     case 2:
@@ -442,6 +462,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP3Dizziness = true;
                         IsStopUIControl.isPoisonStopP3 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
 
                     case 3:
@@ -449,6 +474,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP4Dizziness = true;
                         IsStopUIControl.isPoisonStopP4 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
                 }
                 break;
@@ -462,6 +492,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP1Dizziness = true;
                         IsStopUIControl.isPoisonStopP1 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
 
                     case 2:
@@ -469,6 +504,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP2Dizziness = true;
                         IsStopUIControl.isPoisonStopP2 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
 
                     case 3:
@@ -476,6 +516,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP4Dizziness = true;
                         IsStopUIControl.isPoisonStopP4 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
                 }
                 break;
@@ -489,6 +534,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP1Dizziness = true;
                         IsStopUIControl.isPoisonStopP1 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
 
                     case 2:
@@ -496,6 +546,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP2Dizziness = true;
                         IsStopUIControl.isPoisonStopP2 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
 
                     case 3:
@@ -503,6 +558,11 @@ public class AnimalsPowerControl : MonoBehaviour
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP3Dizziness = true;
                         IsStopUIControl.isPoisonStopP3 = true;
+                        if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                        {
+                            dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                         break;
                 }
                 break;
