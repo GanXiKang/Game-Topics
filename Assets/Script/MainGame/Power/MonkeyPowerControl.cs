@@ -28,7 +28,7 @@ public class MonkeyPowerControl : MonoBehaviour
                     {
                         isP2InsBanana = true;
                         BananaControl.pointNum = DiceControl.P2_totalNum;
-                        Instantiate(banana, insBananaPoint.position, insbananaPoint.rotation);
+                        Instantiate(banana, insBananaPoint.position, insBananaPoint.rotation);
                     }
                     break;
 
