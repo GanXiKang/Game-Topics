@@ -383,6 +383,7 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         yield return new WaitForSeconds(2f);
         dragonUsePower = true;
+        DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
     }
 
