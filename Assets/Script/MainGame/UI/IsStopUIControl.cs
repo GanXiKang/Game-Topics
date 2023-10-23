@@ -258,38 +258,38 @@ public class IsStopUIControl : MonoBehaviour
 
     void AnimalsConfusion()
     {
-        if (EventControl.isStopP1 || isBombStopP1 || CowPowerControl.isCowPowerStopP1 || isPoisonStopP1)
+        if (EventControl.isStopP1 || isBombStopP1 || CowPowerControl.isCowPowerStopP1 || isPoisonStopP1 || isBananaStopP1)
         {
             AnimatorControl.isP1Confusion = true;
         }
-        if (!EventControl.isStopP1 && !isBombStopP1 && !CowPowerControl.isCowPowerStopP1 && !isPoisonStopP1)
+        if (!EventControl.isStopP1 && !isBombStopP1 && !CowPowerControl.isCowPowerStopP1 && !isPoisonStopP1 && isBananaStopP1)
         {
             AnimatorControl.isP1Confusion = false;
         }
 
-        if (EventControl.isStopP2 || isBombStopP2 || CowPowerControl.isCowPowerStopP2 || isPoisonStopP2)
+        if (EventControl.isStopP2 || isBombStopP2 || CowPowerControl.isCowPowerStopP2 || isPoisonStopP2 || isBananaStopP2)
         {
             AnimatorControl.isP2Confusion = true;
         }
-        if (!EventControl.isStopP2 && !isBombStopP2 && !CowPowerControl.isCowPowerStopP2 && !isPoisonStopP2)
+        if (!EventControl.isStopP2 && !isBombStopP2 && !CowPowerControl.isCowPowerStopP2 && !isPoisonStopP2 && isBananaStopP2)
         {
             AnimatorControl.isP2Confusion = false;
         }
 
-        if (EventControl.isStopP3 || isBombStopP3 || CowPowerControl.isCowPowerStopP3 || isPoisonStopP3)
+        if (EventControl.isStopP3 || isBombStopP3 || CowPowerControl.isCowPowerStopP3 || isPoisonStopP3 || isBananaStopP3)
         {
             AnimatorControl.isP3Confusion = true;
         }
-        if (!EventControl.isStopP3 && !isBombStopP3 && !CowPowerControl.isCowPowerStopP3 && !isPoisonStopP3)
+        if (!EventControl.isStopP3 && !isBombStopP3 && !CowPowerControl.isCowPowerStopP3 && !isPoisonStopP3 && isBananaStopP3)
         {
             AnimatorControl.isP3Confusion = false;
         }
 
-        if (EventControl.isStopP4 || isBombStopP4 || CowPowerControl.isCowPowerStopP4 || isPoisonStopP4)
+        if (EventControl.isStopP4 || isBombStopP4 || CowPowerControl.isCowPowerStopP4 || isPoisonStopP4 || isBananaStopP4)
         {
             AnimatorControl.isP4Confusion = true;
         }
-        if (!EventControl.isStopP4 && !isBombStopP4 && !CowPowerControl.isCowPowerStopP4 && !isPoisonStopP4)
+        if (!EventControl.isStopP4 && !isBombStopP4 && !CowPowerControl.isCowPowerStopP4 && !isPoisonStopP4 && isBananaStopP4)
         {
             AnimatorControl.isP4Confusion = false;
         }
