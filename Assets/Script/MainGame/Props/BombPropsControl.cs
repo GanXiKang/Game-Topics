@@ -33,6 +33,11 @@ public class BombPropsControl : MonoBehaviour
                     AnimatorControl.isP1Dizziness = true;
                     IsStopUIControl.isBombStopP1 = true;
                     StartCoroutine(StopTiming());
+                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                    {
+                        AnimalsPowerControl.dragonUsePower = false;
+                        AnimatorControl.isP1Skill = false;
+                    }
                 }
             }
             else 
@@ -49,6 +54,11 @@ public class BombPropsControl : MonoBehaviour
                     AnimatorControl.isP2Dizziness = true;
                     IsStopUIControl.isBombStopP2 = true;
                     StartCoroutine(StopTiming());
+                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                    {
+                        AnimalsPowerControl.dragonUsePower = false;
+                        AnimatorControl.isP2Skill = false;
+                    }
                 }
             }
             else
@@ -65,6 +75,11 @@ public class BombPropsControl : MonoBehaviour
                     AnimatorControl.isP3Dizziness = true;
                     IsStopUIControl.isBombStopP3 = true;
                     StartCoroutine(StopTiming());
+                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                    {
+                        AnimalsPowerControl.dragonUsePower = false;
+                        AnimatorControl.isP3Skill = false;
+                    }
                 }
             }
             else
@@ -81,6 +96,11 @@ public class BombPropsControl : MonoBehaviour
                     AnimatorControl.isP4Dizziness = true;
                     IsStopUIControl.isBombStopP4 = true;
                     StartCoroutine(StopTiming());
+                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                    {
+                        AnimalsPowerControl.dragonUsePower = false;
+                        AnimatorControl.isP4Skill = false;
+                    }
                 }
             }
             else
