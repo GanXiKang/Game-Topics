@@ -8,21 +8,24 @@ public class MG5_ReceiveFishControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "SmallFish")
+        if (MG5_UIControl.timer < 45)
         {
-            score += 1;
-        }
-        else if (other.tag == "MidFish")
-        {
-            score += 3;
-        }
-        else if (other.tag == "BigFish")
-        {
-            score += 5;
-        }
-        else if (other.tag == "Rubbish")
-        {
-            score -= 3;
+            if (other.tag == "SmallFish")
+            {
+                score += 1;
+            }
+            else if (other.tag == "MidFish")
+            {
+                score += 3;
+            }
+            else if (other.tag == "BigFish")
+            {
+                score += 5;
+            }
+            else if (other.tag == "Rubbish")
+            {
+                score -= 3;
+            }
         }
         Destroy(other.gameObject);
     }
