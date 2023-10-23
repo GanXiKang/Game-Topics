@@ -27,10 +27,12 @@ public class DiceControl : MonoBehaviour
         if (BagUIControl.isRenewDice)
         {
             renewUI.SetActive(true);
+            backUI.SetActive(false);
         }
         if (BagUIControl.isDoubleDice)
         {
             doubleUI.SetActive(true);
+            backUI.SetActive(false);
         }
         if (BagUIControl.isCustomDice)
         {
