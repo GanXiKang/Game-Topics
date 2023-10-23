@@ -19,6 +19,7 @@ public class AnimalsPowerControl : MonoBehaviour
     public static int snakePoisonWho;
     public static bool horseUsePower = false, horseTriplePower = false;
     public static bool sheepLuckyPower = false;
+    public static bool monkeyPutBananaPower = false;
 
 
     public Text systemText;
@@ -612,7 +613,13 @@ public class AnimalsPowerControl : MonoBehaviour
         systemText.text = "ºï×Ó°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[9]--;
+        AnimalsSkillAnimator();
+        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
+        monkeyPutBananaPower = true;
+        AnimalsSkillAnimator();
+        DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
 
     IEnumerator ChickenPower()
