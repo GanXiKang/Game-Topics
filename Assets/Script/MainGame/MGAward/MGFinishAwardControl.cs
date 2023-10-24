@@ -65,13 +65,13 @@ public class MGFinishAwardControl : MonoBehaviour
                     if (isWin)
                     {
                         CoinControl.P1CoinTotal += winCoin;
-                        systemText.text = "勝利獲得" + winCoin + "錢！";
+                        systemText.text = "勝利獲得" + winCoin + "貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                     }
                     else
                     {
                         CoinControl.P1CoinTotal += loseCoin;
-                        systemText.text = "失敗獲得" + loseCoin + "錢！";
+                        systemText.text = "失敗獲得" + loseCoin + "貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                     }
                     break;
@@ -80,13 +80,13 @@ public class MGFinishAwardControl : MonoBehaviour
                     if (isWin)
                     {
                         CoinControl.P2CoinTotal += winCoin;
-                        systemText.text = "勝利獲得" + winCoin + "錢！";
+                        systemText.text = "勝利獲得" + winCoin + "貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                     }
                     else
                     {
                         CoinControl.P2CoinTotal += loseCoin;
-                        systemText.text = "失敗獲得" + loseCoin + "錢！";
+                        systemText.text = "失敗獲得" + loseCoin + "貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                     }
                     break;
@@ -95,13 +95,13 @@ public class MGFinishAwardControl : MonoBehaviour
                     if (isWin)
                     {
                         CoinControl.P3CoinTotal += winCoin;
-                        systemText.text = "勝利獲得" + winCoin + "錢！";
+                        systemText.text = "勝利獲得" + winCoin + "貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                     }
                     else
                     {
                         CoinControl.P3CoinTotal += loseCoin;
-                        systemText.text = "失敗獲得" + loseCoin + "錢！";
+                        systemText.text = "失敗獲得" + loseCoin + "貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                     }
                     break;
@@ -110,13 +110,13 @@ public class MGFinishAwardControl : MonoBehaviour
                     if (isWin)
                     {
                         CoinControl.P4CoinTotal += winCoin;
-                        systemText.text = "勝利獲得" + winCoin + "錢！";
+                        systemText.text = "勝利獲得" + winCoin + "貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                     }
                     else
                     {
                         CoinControl.P4CoinTotal += loseCoin;
-                        systemText.text = "失敗獲得" + loseCoin + "錢！";
+                        systemText.text = "失敗獲得" + loseCoin + "貓貓幣！";
                         SystemTestTextControl.isTimer = true;
                     }
                     break;
