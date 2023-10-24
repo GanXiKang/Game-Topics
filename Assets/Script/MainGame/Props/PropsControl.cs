@@ -620,7 +620,7 @@ public class PropsControl : MonoBehaviour
 
                                 totalNum = DiceControl.P3_totalNum;
                                 DiceControl.P3_totalNum = DiceControl.P4_totalNum;
-                                DiceControl.P4_totalNum = totalNum;¡¢
+                                DiceControl.P4_totalNum = totalNum;
                             }
                             else
                             {
