@@ -37,13 +37,16 @@ public class CowPowerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP1 != 2)
                 {
-                    IsStopUIControl.isCowPowerStopUI++;
-                    isCowPowerStopP1 = true;
-                    AnimatorControl.isP1Dizziness = true;
-                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                     {
-                        AnimalsPowerControl.dragonUsePower = false;
-                        AnimatorControl.isP1Skill = false;
+                        IsStopUIControl.isCowPowerStopUI++;
+                        isCowPowerStopP1 = true;
+                        AnimatorControl.isP1Dizziness = true;
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                        {
+                            AnimalsPowerControl.dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
                     }
                 }
             }
@@ -51,13 +54,16 @@ public class CowPowerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP2 != 2)
                 {
-                    IsStopUIControl.isCowPowerStopUI++;
-                    isCowPowerStopP2 = true;
-                    AnimatorControl.isP2Dizziness = true;
-                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                     {
-                        AnimalsPowerControl.dragonUsePower = false;
-                        AnimatorControl.isP2Skill = false;
+                        IsStopUIControl.isCowPowerStopUI++;
+                        isCowPowerStopP2 = true;
+                        AnimatorControl.isP2Dizziness = true;
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                        {
+                            AnimalsPowerControl.dragonUsePower = false;
+                            AnimatorControl.isP2Skill = false;
+                        }
                     }
                 }
             }
@@ -65,13 +71,16 @@ public class CowPowerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP3 != 2)
                 {
-                    IsStopUIControl.isCowPowerStopUI++;
-                    isCowPowerStopP3 = true;
-                    AnimatorControl.isP3Dizziness = true;
-                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                     {
-                        AnimalsPowerControl.dragonUsePower = false;
-                        AnimatorControl.isP3Skill = false;
+                        IsStopUIControl.isCowPowerStopUI++;
+                        isCowPowerStopP3 = true;
+                        AnimatorControl.isP3Dizziness = true;
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                        {
+                            AnimalsPowerControl.dragonUsePower = false;
+                            AnimatorControl.isP3Skill = false;
+                        }
                     }
                 }
             }
@@ -79,13 +88,16 @@ public class CowPowerControl : MonoBehaviour
             {
                 if (Menu_ChoosePlayer.whyP4 != 2)
                 {
-                    IsStopUIControl.isCowPowerStopUI++;
-                    isCowPowerStopP4 = true;
-                    AnimatorControl.isP4Dizziness = true;
-                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                     {
-                        AnimalsPowerControl.dragonUsePower = false;
-                        AnimatorControl.isP4Skill = false;
+                        IsStopUIControl.isCowPowerStopUI++;
+                        isCowPowerStopP4 = true;
+                        AnimatorControl.isP4Dizziness = true;
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                        {
+                            AnimalsPowerControl.dragonUsePower = false;
+                            AnimatorControl.isP4Skill = false;
+                        }
                     }
                 }
             }
