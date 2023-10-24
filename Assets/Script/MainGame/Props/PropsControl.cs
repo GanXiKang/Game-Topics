@@ -92,12 +92,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP2[i])
                                 {
-                                    P2Props[i]--;
-                                    P1Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                                    {
+                                        P2Props[i]--;
+                                        P1Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else 
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -108,12 +116,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP3[i])
                                 {
-                                    P3Props[i]--;
-                                    P1Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                                    {
+                                        P3Props[i]--;
+                                        P1Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else 
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -124,12 +140,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP4[i])
                                 {
-                                    P4Props[i]--;
-                                    P1Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                                    {
+                                        P4Props[i]--;
+                                        P1Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -137,7 +161,7 @@ public class PropsControl : MonoBehaviour
                     }
                     if (!isStealProps)
                     {
-                        systemText.text = "偷盜失敗！";
+                        systemText.text = "對方沒有道具，偷盜失敗";
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -157,13 +181,21 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP1[i])
                                 {
-                                    P1Props[i]--;
-                                    P2Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
-                                    break;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                                    {
+                                        P1Props[i]--;
+                                        P2Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                 }
                             }
                             break;
@@ -173,12 +205,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP3[i])
                                 {
-                                    P3Props[i]--;
-                                    P2Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                                    {
+                                        P3Props[i]--;
+                                        P2Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -189,12 +229,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP4[i])
                                 {
-                                    P4Props[i]--;
-                                    P2Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                                    {
+                                        P4Props[i]--;
+                                        P2Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -202,7 +250,7 @@ public class PropsControl : MonoBehaviour
                     }
                     if (!isStealProps)
                     {
-                        systemText.text = "偷盜失敗！";
+                        systemText.text = "對方沒有道具，偷盜失敗";
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -222,12 +270,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP1[i])
                                 {
-                                    P1Props[i]--;
-                                    P3Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                                    {
+                                        P1Props[i]--;
+                                        P3Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -238,12 +294,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP2[i])
                                 {
-                                    P2Props[i]--;
-                                    P3Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                                    {
+                                        P2Props[i]--;
+                                        P3Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -254,12 +318,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP4[i])
                                 {
-                                    P4Props[i]--;
-                                    P3Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                                    {
+                                        P4Props[i]--;
+                                        P3Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -267,7 +339,7 @@ public class PropsControl : MonoBehaviour
                     }
                     if (!isStealProps)
                     {
-                        systemText.text = "偷盜失敗！";
+                        systemText.text = "對方沒有道具，偷盜失敗";
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -287,12 +359,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP1[i])
                                 {
-                                    P1Props[i]--;
-                                    P4Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                                    {
+                                        P1Props[i]--;
+                                        P4Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -303,12 +383,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP2[i])
                                 {
-                                    P2Props[i]--;
-                                    P4Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                                    {
+                                        P2Props[i]--;
+                                        P4Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -319,12 +407,20 @@ public class PropsControl : MonoBehaviour
                             {
                                 if (isHavePropsP3[i])
                                 {
-                                    P3Props[i]--;
-                                    P4Props[i]++;
-                                    isStealProps = true;
-                                    systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
-                                    systemText.fontSize = 15;
-                                    SystemTestTextControl.isTimer = true;
+                                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                                    {
+                                        P3Props[i]--;
+                                        P4Props[i]++;
+                                        isStealProps = true;
+                                        systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
+                                        systemText.fontSize = 15;
+                                        SystemTestTextControl.isTimer = true;
+                                    }
+                                    else
+                                    {
+                                        systemText.text = "雞處於無敵狀態，偷盜失敗";
+                                        SystemTestTextControl.isTimer = true;
+                                    }
                                     break;
                                 }
                             }
@@ -332,7 +428,7 @@ public class PropsControl : MonoBehaviour
                     }
                     if (!isStealProps)
                     {
-                        systemText.text = "偷盜失敗！";
+                        systemText.text = "對方沒有道具，偷盜失敗";
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -358,33 +454,57 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
-                            transposition = P1.transform.position;
-                            P1.transform.position = P2.transform.position;
-                            P2.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            {
+                                transposition = P1.transform.position;
+                                P1.transform.position = P2.transform.position;
+                                P2.transform.position = transposition;
 
-                            totalNum = DiceControl.P1_totalNum;
-                            DiceControl.P1_totalNum = DiceControl.P2_totalNum;
-                            DiceControl.P2_totalNum = totalNum;
+                                totalNum = DiceControl.P1_totalNum;
+                                DiceControl.P1_totalNum = DiceControl.P2_totalNum;
+                                DiceControl.P2_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
 
                         case 2:
-                            transposition = P1.transform.position;
-                            P1.transform.position = P3.transform.position;
-                            P3.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                            {
+                                transposition = P1.transform.position;
+                                P1.transform.position = P3.transform.position;
+                                P3.transform.position = transposition;
 
-                            totalNum = DiceControl.P1_totalNum;
-                            DiceControl.P1_totalNum = DiceControl.P3_totalNum;
-                            DiceControl.P3_totalNum = totalNum;
+                                totalNum = DiceControl.P1_totalNum;
+                                DiceControl.P1_totalNum = DiceControl.P3_totalNum;
+                                DiceControl.P3_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
 
                         case 3:
-                            transposition = P1.transform.position;
-                            P1.transform.position = P4.transform.position;
-                            P4.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                            {
+                                transposition = P1.transform.position;
+                                P1.transform.position = P4.transform.position;
+                                P4.transform.position = transposition;
 
-                            totalNum = DiceControl.P1_totalNum;
-                            DiceControl.P1_totalNum = DiceControl.P4_totalNum;
-                            DiceControl.P4_totalNum = totalNum;
+                                totalNum = DiceControl.P1_totalNum;
+                                DiceControl.P1_totalNum = DiceControl.P4_totalNum;
+                                DiceControl.P4_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
                     }
                     break;
@@ -395,33 +515,57 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
-                            transposition = P2.transform.position;
-                            P2.transform.position = P1.transform.position;
-                            P1.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                            {
+                                transposition = P2.transform.position;
+                                P2.transform.position = P1.transform.position;
+                                P1.transform.position = transposition;
 
-                            totalNum = DiceControl.P2_totalNum;
-                            DiceControl.P2_totalNum = DiceControl.P1_totalNum;
-                            DiceControl.P1_totalNum = totalNum;
+                                totalNum = DiceControl.P2_totalNum;
+                                DiceControl.P2_totalNum = DiceControl.P1_totalNum;
+                                DiceControl.P1_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
 
                         case 2:
-                            transposition = P2.transform.position;
-                            P2.transform.position = P3.transform.position;
-                            P3.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                            {
+                                transposition = P2.transform.position;
+                                P2.transform.position = P3.transform.position;
+                                P3.transform.position = transposition;
 
-                            totalNum = DiceControl.P2_totalNum;
-                            DiceControl.P2_totalNum = DiceControl.P3_totalNum;
-                            DiceControl.P3_totalNum = totalNum;
+                                totalNum = DiceControl.P2_totalNum;
+                                DiceControl.P2_totalNum = DiceControl.P3_totalNum;
+                                DiceControl.P3_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
 
                         case 3:
-                            transposition = P2.transform.position;
-                            P2.transform.position = P4.transform.position;
-                            P4.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                            {
+                                transposition = P2.transform.position;
+                                P2.transform.position = P4.transform.position;
+                                P4.transform.position = transposition;
 
-                            totalNum = DiceControl.P2_totalNum;
-                            DiceControl.P2_totalNum = DiceControl.P4_totalNum;
-                            DiceControl.P4_totalNum = totalNum;
+                                totalNum = DiceControl.P2_totalNum;
+                                DiceControl.P2_totalNum = DiceControl.P4_totalNum;
+                                DiceControl.P4_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
                     }
                     break;
@@ -432,33 +576,57 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
-                            transposition = P3.transform.position;
-                            P3.transform.position = P1.transform.position;
-                            P1.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                            {
+                                transposition = P3.transform.position;
+                                P3.transform.position = P1.transform.position;
+                                P1.transform.position = transposition;
 
-                            totalNum = DiceControl.P3_totalNum;
-                            DiceControl.P3_totalNum = DiceControl.P1_totalNum;
-                            DiceControl.P1_totalNum = totalNum;
+                                totalNum = DiceControl.P3_totalNum;
+                                DiceControl.P3_totalNum = DiceControl.P1_totalNum;
+                                DiceControl.P1_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
 
                         case 2:
-                            transposition = P3.transform.position;
-                            P3.transform.position = P2.transform.position;
-                            P2.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            {
+                                transposition = P3.transform.position;
+                                P3.transform.position = P2.transform.position;
+                                P2.transform.position = transposition;
 
-                            totalNum = DiceControl.P3_totalNum;
-                            DiceControl.P3_totalNum = DiceControl.P2_totalNum;
-                            DiceControl.P2_totalNum = totalNum;
+                                totalNum = DiceControl.P3_totalNum;
+                                DiceControl.P3_totalNum = DiceControl.P2_totalNum;
+                                DiceControl.P2_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
 
                         case 3:
-                            transposition = P3.transform.position;
-                            P3.transform.position = P4.transform.position;
-                            P4.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                            {
+                                transposition = P3.transform.position;
+                                P3.transform.position = P4.transform.position;
+                                P4.transform.position = transposition;
 
-                            totalNum = DiceControl.P3_totalNum;
-                            DiceControl.P3_totalNum = DiceControl.P4_totalNum;
-                            DiceControl.P4_totalNum = totalNum;
+                                totalNum = DiceControl.P3_totalNum;
+                                DiceControl.P3_totalNum = DiceControl.P4_totalNum;
+                                DiceControl.P4_totalNum = totalNum;、
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
                     }
                     break;
@@ -469,33 +637,57 @@ public class PropsControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
-                            transposition = P4.transform.position;
-                            P4.transform.position = P1.transform.position;
-                            P1.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                            {
+                                transposition = P4.transform.position;
+                                P4.transform.position = P1.transform.position;
+                                P1.transform.position = transposition;
 
-                            totalNum = DiceControl.P4_totalNum;
-                            DiceControl.P4_totalNum = DiceControl.P1_totalNum;
-                            DiceControl.P1_totalNum = totalNum;
+                                totalNum = DiceControl.P4_totalNum;
+                                DiceControl.P4_totalNum = DiceControl.P1_totalNum;
+                                DiceControl.P1_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
 
                         case 2:
-                            transposition = P4.transform.position;
-                            P4.transform.position = P2.transform.position;
-                            P2.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            {
+                                transposition = P4.transform.position;
+                                P4.transform.position = P2.transform.position;
+                                P2.transform.position = transposition;
 
-                            totalNum = DiceControl.P4_totalNum;
-                            DiceControl.P4_totalNum = DiceControl.P2_totalNum;
-                            DiceControl.P2_totalNum = totalNum;
+                                totalNum = DiceControl.P4_totalNum;
+                                DiceControl.P4_totalNum = DiceControl.P2_totalNum;
+                                DiceControl.P2_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
 
                         case 3:
-                            transposition = P4.transform.position;
-                            P4.transform.position = P3.transform.position;
-                            P3.transform.position = transposition;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                            {
+                                transposition = P4.transform.position;
+                                P4.transform.position = P3.transform.position;
+                                P3.transform.position = transposition;
 
-                            totalNum = DiceControl.P4_totalNum;
-                            DiceControl.P4_totalNum = DiceControl.P3_totalNum;
-                            DiceControl.P3_totalNum = totalNum;
+                                totalNum = DiceControl.P4_totalNum;
+                                DiceControl.P4_totalNum = DiceControl.P3_totalNum;
+                                DiceControl.P3_totalNum = totalNum;
+                            }
+                            else
+                            {
+                                systemText.text = "雞處於無敵狀態，換位失敗";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
                     }
                     break;
