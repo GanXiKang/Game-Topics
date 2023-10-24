@@ -631,6 +631,7 @@ public class AnimalsPowerControl : MonoBehaviour
     {
         isChickenPower = false;
         chickenUsePower = true;
+        chickenPowerRound = 0;
         systemText.text = "ëu°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[10]--;
