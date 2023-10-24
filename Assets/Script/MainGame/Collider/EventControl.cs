@@ -189,7 +189,7 @@ public class EventControl : MonoBehaviour
             {
                 BGM.PlayOneShot(badE);
             }
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(4f);
             if (getCoin != 0)
             {
                 CoinControl.P1CoinTotal += getCoin;
@@ -265,7 +265,7 @@ public class EventControl : MonoBehaviour
             {
                 BGM.PlayOneShot(badE);
             }
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(4f);
             if (getCoin != 0)
             {
                 CoinControl.P2CoinTotal += getCoin;
@@ -341,7 +341,7 @@ public class EventControl : MonoBehaviour
             {
                 BGM.PlayOneShot(badE);
             }
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(4f);
             if (getCoin != 0)
             {
                 CoinControl.P3CoinTotal += getCoin;
@@ -417,7 +417,7 @@ public class EventControl : MonoBehaviour
             {
                 BGM.PlayOneShot(badE);
             }
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(4f);
             if (getCoin != 0)
             {
                 CoinControl.P4CoinTotal += getCoin;
