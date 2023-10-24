@@ -766,7 +766,6 @@ public class AnimalsPowerControl : MonoBehaviour
         if (chickenPowerRound >= 3)
         {
             chickenUsePower = false;
-            AnimalsSkillAnimator();
             chickenPowerRound = 0;
         }
     }
