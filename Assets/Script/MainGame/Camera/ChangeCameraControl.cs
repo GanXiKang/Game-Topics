@@ -13,6 +13,10 @@ public class ChangeCameraControl : MonoBehaviour
         {
             changeCameraNum = 1;
             round++;
+            if (AnimalsPowerControl.chickenUsePower)
+            {
+                AnimalsPowerControl.chickenPowerRound += 1 ;
+            }
         }
     }
 }
