@@ -254,7 +254,11 @@ public class DiceControl : MonoBehaviour
         if (BagUIControl.putBomb)
         {
             BagUIControl.putBomb = false;
-        }   
+        }
+        if (AnimalsPowerControl.monkeyUsePower)
+        {
+            AnimalsPowerControl.monkeyUsePower = false;
+        }
         DiceUIControl.isDiceScene = false;
     }
     IEnumerator BackMainGame()
