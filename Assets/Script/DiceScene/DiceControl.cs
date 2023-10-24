@@ -304,7 +304,7 @@ public class DiceControl : MonoBehaviour
     {
         isRoll = true;
         BagUIControl.isRenewDice = false;
-        diceUI.SetActive(false);
+        diceUI.SetActive(true);
         backUI.SetActive(false);
         renewUI.SetActive(false);
     }
