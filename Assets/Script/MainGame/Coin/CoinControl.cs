@@ -32,12 +32,12 @@ public class CoinControl : MonoBehaviour
             {
                 case 1:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                    AnimatorControl.isP1Win = true;
                     switch (stealWho)
                     {
                         case 1:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
+                                AnimatorControl.isP1Win = true;
                                 stealQuantity = P2CoinTotal * howMuchSteal / 10;
                                 systemText.text = "偷" + RoundUIControl.Player[2].ToString() + stealQuantity.ToString() + "貓貓幣";
                                 SystemTestTextControl.isTimer = true;
@@ -46,25 +46,46 @@ public class CoinControl : MonoBehaviour
                             }
                             else
                             {
+                                AnimatorControl.isP1Lose = true;
                                 systemText.text = "偷不到鷄的貓貓幣";
                                 SystemTestTextControl.isTimer = true;
                             }
                             break;
 
                         case 2:
-                            stealQuantity = P3CoinTotal * howMuchSteal / 10;
-                            systemText.text = "偷" + RoundUIControl.Player[3].ToString() + stealQuantity.ToString() + "貓貓幣";
-                            SystemTestTextControl.isTimer = true;
-                            P3CoinTotal -= stealQuantity;
-                            P1CoinTotal += stealQuantity;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                            {
+                                AnimatorControl.isP1Win = true;
+                                stealQuantity = P3CoinTotal * howMuchSteal / 10;
+                                systemText.text = "偷" + RoundUIControl.Player[3].ToString() + stealQuantity.ToString() + "貓貓幣";
+                                SystemTestTextControl.isTimer = true;
+                                P3CoinTotal -= stealQuantity;
+                                P1CoinTotal += stealQuantity;
+                            }
+                            else
+                            {
+                                AnimatorControl.isP1Lose = true;
+                                systemText.text = "偷不到鷄的貓貓幣";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
 
                         case 3:
-                            stealQuantity = P4CoinTotal * howMuchSteal / 10;
-                            systemText.text = "偷" + RoundUIControl.Player[4].ToString() + stealQuantity.ToString() + "貓貓幣";
-                            SystemTestTextControl.isTimer = true;
-                            P4CoinTotal -= stealQuantity;
-                            P1CoinTotal += stealQuantity;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                            {
+                                AnimatorControl.isP1Win = true;
+                                stealQuantity = P4CoinTotal * howMuchSteal / 10;
+                                systemText.text = "偷" + RoundUIControl.Player[4].ToString() + stealQuantity.ToString() + "貓貓幣";
+                                SystemTestTextControl.isTimer = true;
+                                P4CoinTotal -= stealQuantity;
+                                P1CoinTotal += stealQuantity;
+                            }
+                            else
+                            {
+                                AnimatorControl.isP1Lose = true;
+                                systemText.text = "偷不到鷄的貓貓幣";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
                     }
                     break;
