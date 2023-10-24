@@ -471,7 +471,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 9:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.monkeyUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -626,7 +626,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 9:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.monkeyUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -781,7 +781,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 9:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.monkeyUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -936,7 +936,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 9:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.monkeyUsePower)
                                 {
                                     power.interactable = false;
                                 }
