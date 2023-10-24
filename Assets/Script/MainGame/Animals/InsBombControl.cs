@@ -8,6 +8,8 @@ public class InsBombControl : MonoBehaviour
     public Transform insBombPoint;
     public static bool isP1InsBomb = false, isP2InsBomb = false, isP3InsBomb = false, isP4InsBomb = false;
 
+    bool isInsOnce = true;
+
     void Update()
     {
         switch (ChangeCameraControl.changeCameraNum)
@@ -17,8 +19,13 @@ public class InsBombControl : MonoBehaviour
                 {
                     if (isP1InsBomb)
                     {
-                        BombPropsControl.pointNum = DiceControl.P1_totalNum;
-                        Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
+                        if (isInsOnce)
+                        {
+                            BombPropsControl.pointNum = DiceControl.P1_totalNum;
+                            Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
+                            isInsOnce = false;
+                            Invoke("TrueByIns", 5f);
+                        }
                     }
                 }
                 break;
@@ -28,8 +35,13 @@ public class InsBombControl : MonoBehaviour
                 {
                     if (isP2InsBomb)
                     {
-                        BombPropsControl.pointNum = DiceControl.P2_totalNum;
-                        Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
+                        if (isInsOnce)
+                        {
+                            BombPropsControl.pointNum = DiceControl.P2_totalNum;
+                            Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
+                            isInsOnce = false;
+                            Invoke("TrueByIns", 5f);
+                        }
                     }
                 }
                 break;
@@ -39,8 +51,13 @@ public class InsBombControl : MonoBehaviour
                 {
                     if (isP3InsBomb)
                     {
-                        BombPropsControl.pointNum = DiceControl.P3_totalNum;
-                        Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
+                        if (isInsOnce)
+                        {
+                            BombPropsControl.pointNum = DiceControl.P3_totalNum;
+                            Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
+                            isInsOnce = false;
+                            Invoke("TrueByIns", 5f);
+                        }
                     }
                 }
                 break;
@@ -50,11 +67,20 @@ public class InsBombControl : MonoBehaviour
                 {
                     if (isP4InsBomb)
                     {
-                        BombPropsControl.pointNum = DiceControl.P4_totalNum;
-                        Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
+                        if (isInsOnce)
+                        {
+                            BombPropsControl.pointNum = DiceControl.P4_totalNum;
+                            Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
+                            isInsOnce = false;
+                            Invoke("TrueByIns", 5f);
+                        }
                     }
                 }
                 break;
         }
+    }
+    void TrueByIns()
+    {
+        isInsOnce = true;
     }
 }
