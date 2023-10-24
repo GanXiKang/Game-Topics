@@ -15,13 +15,20 @@ public class BananaControl : MonoBehaviour
             {
                 if (DiceControl.P1_totalNum == pointNum)
                 {
-                    AnimatorControl.isP1Dizziness = true;
-                    IsStopUIControl.isBananaStopP1 = true;
-                    StartCoroutine(StopTiming());
-                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                     {
-                        AnimalsPowerControl.dragonUsePower = false;
-                        AnimatorControl.isP1Skill = false;
+                        AnimatorControl.isP1Dizziness = true;
+                        IsStopUIControl.isBananaStopP1 = true;
+                        StartCoroutine(StopTiming());
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                        {
+                            AnimalsPowerControl.dragonUsePower = false;
+                            AnimatorControl.isP1Skill = false;
+                        }
+                    }
+                    else
+                    {
+                        Destroy(this.gameObject);
                     }
                 }
             }
@@ -36,13 +43,20 @@ public class BananaControl : MonoBehaviour
             {
                 if (DiceControl.P2_totalNum == pointNum)
                 {
-                    AnimatorControl.isP2Dizziness = true;
-                    IsStopUIControl.isBananaStopP2 = true;
-                    StartCoroutine(StopTiming());
-                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                     {
-                        AnimalsPowerControl.dragonUsePower = false;
-                        AnimatorControl.isP2Skill = false;
+                        AnimatorControl.isP2Dizziness = true;
+                        IsStopUIControl.isBananaStopP2 = true;
+                        StartCoroutine(StopTiming());
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                        {
+                            AnimalsPowerControl.dragonUsePower = false;
+                            AnimatorControl.isP2Skill = false;
+                        }
+                    }
+                    else
+                    {
+                        Destroy(this.gameObject);
                     }
                 }
             }
@@ -57,13 +71,20 @@ public class BananaControl : MonoBehaviour
             {
                 if (DiceControl.P3_totalNum == pointNum)
                 {
-                    AnimatorControl.isP3Dizziness = true;
-                    IsStopUIControl.isBananaStopP3 = true;
-                    StartCoroutine(StopTiming());
-                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                     {
-                        AnimalsPowerControl.dragonUsePower = false;
-                        AnimatorControl.isP3Skill = false;
+                        AnimatorControl.isP3Dizziness = true;
+                        IsStopUIControl.isBananaStopP3 = true;
+                        StartCoroutine(StopTiming());
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                        {
+                            AnimalsPowerControl.dragonUsePower = false;
+                            AnimatorControl.isP3Skill = false;
+                        }
+                    }
+                    else
+                    {
+                        Destroy(this.gameObject);
                     }
                 }
             }
@@ -78,13 +99,20 @@ public class BananaControl : MonoBehaviour
             {
                 if (DiceControl.P4_totalNum == pointNum)
                 {
-                    AnimatorControl.isP4Dizziness = true;
-                    IsStopUIControl.isBananaStopP4 = true;
-                    StartCoroutine(StopTiming());
-                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                     {
-                        AnimalsPowerControl.dragonUsePower = false;
-                        AnimatorControl.isP4Skill = false;
+                        AnimatorControl.isP4Dizziness = true;
+                        IsStopUIControl.isBananaStopP4 = true;
+                        StartCoroutine(StopTiming());
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                        {
+                            AnimalsPowerControl.dragonUsePower = false;
+                            AnimatorControl.isP4Skill = false;
+                        }
+                    }
+                    else
+                    {
+                        Destroy(this.gameObject);
                     }
                 }
             }
