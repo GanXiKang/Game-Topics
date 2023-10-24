@@ -37,7 +37,7 @@ public class CoinControl : MonoBehaviour
                     {
                         case 1:
                             stealQuantity = P2CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[2].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P2CoinTotal -= stealQuantity;
                             P1CoinTotal += stealQuantity;
@@ -45,7 +45,7 @@ public class CoinControl : MonoBehaviour
 
                         case 2:
                             stealQuantity = P3CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[3].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[3].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P3CoinTotal -= stealQuantity;
                             P1CoinTotal += stealQuantity;
@@ -53,7 +53,7 @@ public class CoinControl : MonoBehaviour
 
                         case 3:
                             stealQuantity = P4CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[4].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[4].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P4CoinTotal -= stealQuantity;
                             P1CoinTotal += stealQuantity;
@@ -68,7 +68,7 @@ public class CoinControl : MonoBehaviour
                     {
                         case 1:
                             stealQuantity = P1CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[1].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[1].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P1CoinTotal -= stealQuantity;
                             P2CoinTotal += stealQuantity;
@@ -76,7 +76,7 @@ public class CoinControl : MonoBehaviour
 
                         case 2:
                             stealQuantity = P3CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[3].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[3].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P3CoinTotal -= stealQuantity;
                             P2CoinTotal += stealQuantity;
@@ -84,7 +84,7 @@ public class CoinControl : MonoBehaviour
 
                         case 3:
                             stealQuantity = P4CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[4].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[4].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P4CoinTotal -= stealQuantity;
                             P2CoinTotal += stealQuantity;
@@ -99,7 +99,7 @@ public class CoinControl : MonoBehaviour
                     {
                         case 1:
                             stealQuantity = P1CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[1].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[1].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P1CoinTotal -= stealQuantity;
                             P3CoinTotal += stealQuantity;
@@ -107,7 +107,7 @@ public class CoinControl : MonoBehaviour
 
                         case 2:
                             stealQuantity = P2CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[2].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P2CoinTotal -= stealQuantity;
                             P3CoinTotal += stealQuantity;
@@ -115,7 +115,7 @@ public class CoinControl : MonoBehaviour
 
                         case 3:
                             stealQuantity = P4CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[4].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[4].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P4CoinTotal -= stealQuantity;
                             P3CoinTotal += stealQuantity;
@@ -130,7 +130,7 @@ public class CoinControl : MonoBehaviour
                     {
                         case 1:
                             stealQuantity = P1CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[1].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[1].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P1CoinTotal -= stealQuantity;
                             P4CoinTotal += stealQuantity;
@@ -138,7 +138,7 @@ public class CoinControl : MonoBehaviour
 
                         case 2:
                             stealQuantity = P2CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[2].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[2].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P2CoinTotal -= stealQuantity;
                             P4CoinTotal += stealQuantity;
@@ -146,7 +146,7 @@ public class CoinControl : MonoBehaviour
 
                         case 3:
                             stealQuantity = P3CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ×ß" + RoundUIControl.Player[3].ToString() + " " + stealQuantity.ToString() + "åX£¡";
+                            systemText.text = "Íµ" + RoundUIControl.Player[3].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
                             SystemTestTextControl.isTimer = true;
                             P3CoinTotal -= stealQuantity;
                             P4CoinTotal += stealQuantity;
