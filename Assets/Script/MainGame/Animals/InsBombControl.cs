@@ -15,7 +15,6 @@ public class InsBombControl : MonoBehaviour
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
-                    print("ok");
                     if (gameObject.tag == "P1")
                     {
                         print("1");
