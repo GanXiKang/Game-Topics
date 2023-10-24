@@ -35,7 +35,6 @@ public class CoinControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
-                            print("2");
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
                                 AnimatorControl.isP1Win = true;
@@ -54,7 +53,6 @@ public class CoinControl : MonoBehaviour
                             break;
 
                         case 2:
-                            print("3");
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                             {
                                 AnimatorControl.isP1Win = true;
@@ -73,7 +71,6 @@ public class CoinControl : MonoBehaviour
                             break;
 
                         case 3:
-                            print("4");
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                             {
                                 AnimatorControl.isP1Win = true;
