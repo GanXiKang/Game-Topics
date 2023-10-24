@@ -483,7 +483,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 10:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.chickenUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -495,7 +495,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 11:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.dogUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -638,7 +638,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 10:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.chickenUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -650,7 +650,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 11:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.dogUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -793,7 +793,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 10:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.chickenUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -805,7 +805,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 11:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.dogUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -948,7 +948,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 10:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.chickenUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -960,7 +960,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 11:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || AnimalsPowerControl.dogUsePower)
                                 {
                                     power.interactable = false;
                                 }
