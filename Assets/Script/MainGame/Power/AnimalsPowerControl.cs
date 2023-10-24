@@ -20,6 +20,7 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool horseUsePower = false, horseTriplePower = false;
     public static bool sheepLuckyPower = false;
     public static bool monkeyPutBananaPower = false;
+    public static int chickenPowerRound = 0;
     public static bool chickenUsePower = false;
     public static bool dogUsePower = false;
     public static bool pigPowerGood = false, pigPowerBad = false;
@@ -80,6 +81,7 @@ public class AnimalsPowerControl : MonoBehaviour
         {
             StartCoroutine(ChickenPower());
         }
+        ChickenPowerEnd();
 
         if (isDogPower)
         {
@@ -720,6 +722,15 @@ public class AnimalsPowerControl : MonoBehaviour
             dragonUsePower = false;
             AnimalsSkillAnimator();
             dragonPowerRound = 0;
+        }
+    }
+    void ChickenPowerEnd()
+    {
+        if (chickenPowerRound == 3)
+        {
+            chickenUsePower = false;
+            AnimalsSkillAnimator();
+            chickenPowerRound = 0;
         }
     }
 }
