@@ -36,11 +36,19 @@ public class CoinControl : MonoBehaviour
                     switch (stealWho)
                     {
                         case 1:
-                            stealQuantity = P2CoinTotal * howMuchSteal / 10;
-                            systemText.text = "Íµ" + RoundUIControl.Player[2].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
-                            SystemTestTextControl.isTimer = true;
-                            P2CoinTotal -= stealQuantity;
-                            P1CoinTotal += stealQuantity;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            {
+                                stealQuantity = P2CoinTotal * howMuchSteal / 10;
+                                systemText.text = "Íµ" + RoundUIControl.Player[2].ToString() + stealQuantity.ToString() + "ØˆØˆŽÅ";
+                                SystemTestTextControl.isTimer = true;
+                                P2CoinTotal -= stealQuantity;
+                                P1CoinTotal += stealQuantity;
+                            }
+                            else
+                            {
+                                systemText.text = "Íµ²»µ½úaµÄØˆØˆŽÅ";
+                                SystemTestTextControl.isTimer = true;
+                            }
                             break;
 
                         case 2:
