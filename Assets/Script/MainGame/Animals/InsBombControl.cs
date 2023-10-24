@@ -17,6 +17,7 @@ public class InsBombControl : MonoBehaviour
                 case 1:
                     if (gameObject.tag == "P1")
                     {
+                        print("OK");
                         isP1InsBomb = true;
                         BombPropsControl.pointNum = DiceControl.P1_totalNum;
                         Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
