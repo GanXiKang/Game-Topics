@@ -21,7 +21,7 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool sheepLuckyPower = false;
     public static bool monkeyUsePower = false, monkeyPutBananaPower = false;
     public static int chickenPowerRound = 0;
-    public static bool chickenUsePower = true;
+    public static bool chickenUsePower = false;
     public static bool dogUsePower = false;
     public static bool pigPowerGood = false, pigPowerBad = false;
 
