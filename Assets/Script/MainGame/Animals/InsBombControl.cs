@@ -17,7 +17,7 @@ public class InsBombControl : MonoBehaviour
                 case 1:
                     if (gameObject.tag == "P1")
                     {
-                        print("OK");
+                        print("1");
                         isP1InsBomb = true;
                         BombPropsControl.pointNum = DiceControl.P1_totalNum;
                         Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
@@ -27,6 +27,7 @@ public class InsBombControl : MonoBehaviour
                 case 2:
                     if (gameObject.tag == "P2")
                     {
+                        print("2");
                         isP2InsBomb = true;
                         BombPropsControl.pointNum = DiceControl.P2_totalNum;
                         Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
@@ -36,6 +37,7 @@ public class InsBombControl : MonoBehaviour
                 case 3:
                     if (gameObject.tag == "P3")
                     {
+                        print("3");
                         isP3InsBomb = true;
                         BombPropsControl.pointNum = DiceControl.P3_totalNum;
                         Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
@@ -45,6 +47,7 @@ public class InsBombControl : MonoBehaviour
                 case 4:
                     if (gameObject.tag == "P4")
                     {
+                        print("4");
                         isP4InsBomb = true;
                         BombPropsControl.pointNum = DiceControl.P4_totalNum; 
                         Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
