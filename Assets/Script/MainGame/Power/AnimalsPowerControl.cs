@@ -652,7 +652,6 @@ public class AnimalsPowerControl : MonoBehaviour
         AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
-        AnimalsSkillAnimator();
         DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = true;
     }
