@@ -409,38 +409,47 @@ public class AnimalsPowerControl : MonoBehaviour
                 switch (snakePoisonWho)
                 {
                     case 1:
-                        systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP2Dizziness = true;
-                        IsStopUIControl.isPoisonStopP2 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP2Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP2Dizziness = true;
+                            IsStopUIControl.isPoisonStopP2 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP2Skill = false;
+                            }
                         }
                         break;
 
                     case 2:
-                        systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP3Dizziness = true;
-                        IsStopUIControl.isPoisonStopP3 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP3Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP3Dizziness = true;
+                            IsStopUIControl.isPoisonStopP3 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP3Skill = false;
+                            }
                         }
                         break;
 
                     case 3:
-                        systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP4Dizziness = true;
-                        IsStopUIControl.isPoisonStopP3 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP4Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP4Dizziness = true;
+                            IsStopUIControl.isPoisonStopP3 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP4Skill = false;
+                            }
                         }
                         break;
                 }
@@ -451,38 +460,47 @@ public class AnimalsPowerControl : MonoBehaviour
                 switch (snakePoisonWho)
                 {
                     case 1:
-                        systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP1Dizziness = true;
-                        IsStopUIControl.isPoisonStopP1 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP1Dizziness = true;
+                            IsStopUIControl.isPoisonStopP1 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP1Skill = false;
+                            }
                         }
                         break;
 
                     case 2:
-                        systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP3Dizziness = true;
-                        IsStopUIControl.isPoisonStopP3 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP3Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP3Dizziness = true;
+                            IsStopUIControl.isPoisonStopP3 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP3Skill = false;
+                            }
                         }
                         break;
 
                     case 3:
-                        systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP4Dizziness = true;
-                        IsStopUIControl.isPoisonStopP4 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP4Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP4Dizziness = true;
+                            IsStopUIControl.isPoisonStopP4 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP4Skill = false;
+                            }
                         }
                         break;
                 }
@@ -493,38 +511,47 @@ public class AnimalsPowerControl : MonoBehaviour
                 switch (snakePoisonWho)
                 {
                     case 1:
-                        systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP1Dizziness = true;
-                        IsStopUIControl.isPoisonStopP1 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP1Dizziness = true;
+                            IsStopUIControl.isPoisonStopP1 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP1Skill = false;
+                            }
                         }
                         break;
 
                     case 2:
-                        systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP2Dizziness = true;
-                        IsStopUIControl.isPoisonStopP2 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP2Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP2Dizziness = true;
+                            IsStopUIControl.isPoisonStopP2 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP2Skill = false;
+                            }
                         }
                         break;
 
                     case 3:
-                        systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP4Dizziness = true;
-                        IsStopUIControl.isPoisonStopP4 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP4Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP4Dizziness = true;
+                            IsStopUIControl.isPoisonStopP4 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP4Skill = false;
+                            }
                         }
                         break;
                 }
@@ -535,38 +562,47 @@ public class AnimalsPowerControl : MonoBehaviour
                 switch (snakePoisonWho)
                 {
                     case 1:
-                        systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP1Dizziness = true;
-                        IsStopUIControl.isPoisonStopP1 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP1Dizziness = true;
+                            IsStopUIControl.isPoisonStopP1 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP1Skill = false;
+                            }
                         }
                         break;
 
                     case 2:
-                        systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP2Dizziness = true;
-                        IsStopUIControl.isPoisonStopP2 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP2Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP2Dizziness = true;
+                            IsStopUIControl.isPoisonStopP2 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP2Skill = false;
+                            }
                         }
                         break;
 
                     case 3:
-                        systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
-                        SystemTestTextControl.isTimer = true;
-                        AnimatorControl.isP3Dizziness = true;
-                        IsStopUIControl.isPoisonStopP3 = true;
-                        if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                         {
-                            dragonUsePower = false;
-                            AnimatorControl.isP3Skill = false;
+                            systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
+                            SystemTestTextControl.isTimer = true;
+                            AnimatorControl.isP3Dizziness = true;
+                            IsStopUIControl.isPoisonStopP3 = true;
+                            if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                            {
+                                dragonUsePower = false;
+                                AnimatorControl.isP3Skill = false;
+                            }
                         }
                         break;
                 }
