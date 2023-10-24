@@ -439,7 +439,6 @@ public class BagUIControl : MonoBehaviour
 
             case 4:
                 putBomb = true;
-                InsBombControl.InsBomb = true;
                 switch (ChangeCameraControl.changeCameraNum)
                 {
                     case 1:

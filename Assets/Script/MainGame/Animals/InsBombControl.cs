@@ -6,63 +6,59 @@ public class InsBombControl : MonoBehaviour
 {
     public GameObject bombProps;
     public Transform insBombPoint;
-    public static bool InsBomb = false, isP1InsBomb = false, isP2InsBomb = false, isP3InsBomb = false, isP4InsBomb = false;
+    public static bool isP1InsBomb = false, isP2InsBomb = false, isP3InsBomb = false, isP4InsBomb = false;
 
     void Update()
     {
-        if (InsBomb)
+        switch (ChangeCameraControl.changeCameraNum)
         {
-            switch (ChangeCameraControl.changeCameraNum)
-            {
-                case 1:
-                    if (gameObject.tag == "P1")
+            case 1:
+                if (gameObject.tag == "P1")
+                {
+                    if (isP1InsBomb)
                     {
-                        if (isP1InsBomb)
-                        {
-                            print("1");
-                            BombPropsControl.pointNum = DiceControl.P1_totalNum;
-                            Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
-                        }
+                        print("1");
+                        BombPropsControl.pointNum = DiceControl.P1_totalNum;
+                        Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
                     }
-                    break;
+                }
+                break;
 
-                case 2:
-                    if (gameObject.tag == "P2")
+            case 2:
+                if (gameObject.tag == "P2")
+                {
+                    if (isP2InsBomb)
                     {
-                        if (isP2InsBomb)
-                        {
-                            print("2");
-                            BombPropsControl.pointNum = DiceControl.P2_totalNum;
-                            Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
-                        }
+                        print("2");
+                        BombPropsControl.pointNum = DiceControl.P2_totalNum;
+                        Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
                     }
-                    break;
+                }
+                break;
 
-                case 3:
-                    if (gameObject.tag == "P3")
+            case 3:
+                if (gameObject.tag == "P3")
+                {
+                    if (isP3InsBomb)
                     {
-                        if (isP3InsBomb)
-                        {
-                            print("3");
-                            BombPropsControl.pointNum = DiceControl.P3_totalNum;
-                            Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
-                        }
+                        print("3");
+                        BombPropsControl.pointNum = DiceControl.P3_totalNum;
+                        Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
                     }
-                    break;
+                }
+                break;
 
-                case 4:
-                    if (gameObject.tag == "P4")
+            case 4:
+                if (gameObject.tag == "P4")
+                {
+                    if (isP4InsBomb)
                     {
-                        if (isP4InsBomb)
-                        {
-                            print("4");
-                            BombPropsControl.pointNum = DiceControl.P4_totalNum;
-                            Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
-                        }
+                        print("4");
+                        BombPropsControl.pointNum = DiceControl.P4_totalNum;
+                        Instantiate(bombProps, insBombPoint.position, insBombPoint.rotation);
                     }
-                    break;
-            }
-            InsBomb = false;
+                }
+                break;
         }
     }
 }
