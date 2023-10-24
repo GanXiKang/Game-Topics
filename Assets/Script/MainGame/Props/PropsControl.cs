@@ -513,9 +513,7 @@ public class PropsControl : MonoBehaviour
 
         if (BananaControl.iscolliderBananaText)
         {
-            systemText.text = "踩到香蕉";
-            SystemTestTextControl.isTimer = true;
-            BananaControl.iscolliderBananaText = false;
+            StartCoroutine(ColliderBanana());
         }
     }
 
@@ -612,5 +610,43 @@ public class PropsControl : MonoBehaviour
         AnimatorControl.isP3Win = false;
         AnimatorControl.isP4Win = false;
 
+    }
+
+    IEnumerator ColliderBanana()
+    {
+        BananaControl.iscolliderBananaText = false;
+        systemText.text = "踩到香蕉";
+        SystemTestTextControl.isTimer = true;
+        yield return new WaitForSeconds(2f);
+        systemText.text = "身上動物全沒了";
+        SystemTestTextControl.isTimer = true;
+        if (IsStopUIControl.isBananaStopP1)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                P1Props[i] = 0;
+            }
+        }
+        else if (IsStopUIControl.isBananaStopP2)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                P2Props[i] = 0;
+            }
+        }
+        else if (IsStopUIControl.isBananaStopP3)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                P3Props[i] = 0;
+            }
+        }
+        else if (IsStopUIControl.isBananaStopP4)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                P4Props[i] = 0;
+            }
+        }
     }
 }
