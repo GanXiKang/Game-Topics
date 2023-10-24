@@ -20,7 +20,9 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool horseUsePower = false, horseTriplePower = false;
     public static bool sheepLuckyPower = false;
     public static bool monkeyPutBananaPower = false;
-
+    public static bool chickenUsePower = false;
+    public static bool dogUsePower = false;
+    public static bool pigPowerGood = false, pigPowerBad = false;
 
     public Text systemText;
 
@@ -625,19 +627,31 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator ChickenPower()
     {
         isChickenPower = false;
+        chickenUsePower = true;
         systemText.text = "雞發動技能！";
         SystemTestTextControl.isTimer = true;
-        PowerUIControl.animalsPowerUseNum[9]--;
-        yield return new WaitForSeconds(2f);
+        PowerUIControl.animalsPowerUseNum[10]--;
+        AnimalsSkillAnimator();
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(3f);
+        AnimalsSkillAnimator();
+        DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
 
     IEnumerator DogPower()
     {
         isDogPower = false;
+        dogUsePower = true;
         systemText.text = "狗發動技能！";
         SystemTestTextControl.isTimer = true;
-        PowerUIControl.animalsPowerUseNum[10]--;
+        PowerUIControl.animalsPowerUseNum[11]--;
+        AnimalsSkillAnimator();
+        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
+        AnimalsSkillAnimator();
+        DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = true;
     }
 
     IEnumerator PigPower()
