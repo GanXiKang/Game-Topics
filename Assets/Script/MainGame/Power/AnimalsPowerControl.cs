@@ -754,7 +754,7 @@ public class AnimalsPowerControl : MonoBehaviour
 
     void DragonPowerEnd()
     {
-        if (dragonPowerRound == 2)
+        if (dragonPowerRound >= 2)
         {
             dragonUsePower = false;
             AnimalsSkillAnimator();
@@ -763,7 +763,7 @@ public class AnimalsPowerControl : MonoBehaviour
     }
     void ChickenPowerEnd()
     {
-        if (chickenPowerRound == 3)
+        if (chickenPowerRound >= 3)
         {
             chickenUsePower = false;
             AnimalsSkillAnimator();
