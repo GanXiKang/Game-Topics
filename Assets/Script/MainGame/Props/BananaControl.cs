@@ -97,7 +97,7 @@ public class BananaControl : MonoBehaviour
     IEnumerator StopTiming()
     {
         iscolliderBananaText = true;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         IsStopUIControl.isBananaStopUI++;
         Destroy(this.gameObject);
     }
