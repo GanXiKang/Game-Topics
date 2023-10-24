@@ -618,7 +618,7 @@ public class PropsControl : MonoBehaviour
         systemText.text = "踩到香蕉";
         SystemTestTextControl.isTimer = true;
         yield return new WaitForSeconds(2f);
-        systemText.text = "身上動物全沒了";
+        systemText.text = "身上道具全沒了";
         SystemTestTextControl.isTimer = true;
         if (IsStopUIControl.isBananaStopP1)
         {
