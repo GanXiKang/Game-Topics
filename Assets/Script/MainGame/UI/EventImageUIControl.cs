@@ -128,7 +128,7 @@ public class EventImageUIControl : MonoBehaviour
     }
     void Timing()
     {
-        if (Timer > 2)
+        if (Timer > 4)
         {
             isTimer = false;
             Timer = 0;
