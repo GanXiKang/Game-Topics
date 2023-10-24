@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MG6_BalanceBarControl : MonoBehaviour
 {
     public GameObject balanceBar;
-    public GameObject[] gameLoseUI = new GameObject[4];
+    public GameObject[] gameLoseUI = new GameObject[12];
     public Image power;
     public AudioSource BGM;
     public AudioClip gameLose, drowing;
@@ -215,7 +215,6 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 }
             }
         }
-
 
         if (M2)
         {
