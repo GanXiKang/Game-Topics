@@ -134,6 +134,13 @@ public class MGFinishAwardControl : MonoBehaviour
                         switch (miniGame)
                         {
                             case 1:
+                                PropsControl.P1Props[6] += 1;
+                                systemText.text = "勝利獲得" + PropsControl.propsName[6];
+                                systemText.fontSize = 15;
+                                SystemTestTextControl.isTimer = true;
+                                break;
+
+                            case 3:
                                 if (p == 1)
                                 {
                                     PropsControl.P1Props[1] += 1;
@@ -148,13 +155,6 @@ public class MGFinishAwardControl : MonoBehaviour
                                     systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
-                                break;
-
-                            case 3:
-                                PropsControl.P1Props[6] += 1;
-                                systemText.text = "勝利獲得" + PropsControl.propsName[6];
-                                systemText.fontSize = 15;
-                                SystemTestTextControl.isTimer = true;
                                 break;
 
                             case 5:
@@ -188,6 +188,13 @@ public class MGFinishAwardControl : MonoBehaviour
                         switch (miniGame)
                         {
                             case 1:
+                                PropsControl.P2Props[6] += 1;
+                                systemText.text = "勝利獲得" + PropsControl.propsName[6];
+                                systemText.fontSize = 15;
+                                SystemTestTextControl.isTimer = true;
+                                break;
+
+                            case 3:
                                 if (p == 1)
                                 {
                                     PropsControl.P2Props[1] += 1;
@@ -202,13 +209,6 @@ public class MGFinishAwardControl : MonoBehaviour
                                     systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
-                                break;
-
-                            case 3:
-                                PropsControl.P2Props[6] += 1;
-                                systemText.text = "勝利獲得" + PropsControl.propsName[6];
-                                systemText.fontSize = 15;
-                                SystemTestTextControl.isTimer = true;
                                 break;
 
                             case 5:
@@ -242,6 +242,13 @@ public class MGFinishAwardControl : MonoBehaviour
                         switch (miniGame)
                         {
                             case 1:
+                                PropsControl.P3Props[6] += 1;
+                                systemText.text = "勝利獲得" + PropsControl.propsName[6];
+                                systemText.fontSize = 15;
+                                SystemTestTextControl.isTimer = true;
+                                break;
+
+                            case 3:
                                 if (p == 1)
                                 {
                                     PropsControl.P3Props[1] += 1;
@@ -256,13 +263,6 @@ public class MGFinishAwardControl : MonoBehaviour
                                     systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
-                                break;
-
-                            case 3:
-                                PropsControl.P3Props[6] += 1;
-                                systemText.text = "勝利獲得" + PropsControl.propsName[6];
-                                systemText.fontSize = 15;
-                                SystemTestTextControl.isTimer = true;
                                 break;
 
                             case 5:
@@ -296,6 +296,13 @@ public class MGFinishAwardControl : MonoBehaviour
                         switch (miniGame)
                         {
                             case 1:
+                                PropsControl.P4Props[6] += 1;
+                                systemText.text = "勝利獲得" + PropsControl.propsName[6];
+                                systemText.fontSize = 15;
+                                SystemTestTextControl.isTimer = true;
+                                break;
+
+                            case 3:
                                 if (p == 1)
                                 {
                                     PropsControl.P4Props[1] += 1;
@@ -310,13 +317,6 @@ public class MGFinishAwardControl : MonoBehaviour
                                     systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                 }
-                                break;
-
-                            case 3:
-                                PropsControl.P4Props[6] += 1;
-                                systemText.text = "勝利獲得" + PropsControl.propsName[6];
-                                systemText.fontSize = 15;
-                                SystemTestTextControl.isTimer = true;
                                 break;
 
                             case 5:
