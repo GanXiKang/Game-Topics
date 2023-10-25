@@ -23,11 +23,12 @@ public class AnimalsPowerControl : MonoBehaviour
     public static int chickenPowerRound = 0;
     public static bool chickenUsePower = false;
     public static bool dogUsePower = false;
-    public static bool pigPowerGood = false, pigPowerBad = false;
+    public static int pigPowerRound = 0;
+    public static bool pigCanUsePower = true, pigPowerGood = false, pigPowerBad = false;
 
     public Text systemText;
 
-    int r, p;
+    int r, p, e;
 
     void Update()
     {
@@ -696,10 +697,104 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator PigPower()
     {
         isPigPower = false;
+        pigCanUsePower = false;
         systemText.text = "豬發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[12]--;
+        AnimalsSkillAnimator();
+        e = Random.Range(1, 4);
+        switch (e)
+        {
+            case 1:
+                pigPowerGood = true;
+                break;
+
+            case 2:
+                pigPowerGood = true;
+                break;
+
+            case 3:
+                pigPowerBad = true;
+                break;
+        }
+        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
+        switch (e)
+        {
+            case 1:
+                systemText.text = "獲得雙倍骰子";
+                SystemTestTextControl.isTimer = true;
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        PropsControl.P1Props[1] += 1;
+                        break;
+
+                    case 2:
+                        PropsControl.P2Props[1] += 1;
+                        break;
+
+                    case 3:
+                        PropsControl.P3Props[1] += 1;
+                        break;
+
+                    case 4:
+                        PropsControl.P4Props[1] += 1;
+                        break;
+                }
+                break;
+
+            case 2:
+                systemText.text = "獲得了30貓貓幣";
+                SystemTestTextControl.isTimer = true;
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        CoinControl.P1CoinTotal += 30;
+                        break;
+
+                    case 2:
+                        CoinControl.P2CoinTotal += 30;
+                        break;
+
+                    case 3:
+                        CoinControl.P3CoinTotal += 30;
+                        break;
+
+                    case 4:
+                        CoinControl.P4CoinTotal += 30;
+                        break;
+                }
+                break;
+
+            case 3:
+                systemText.text = "損失了25貓貓幣";
+                SystemTestTextControl.isTimer = true;
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        CoinControl.P1CoinTotal -= 25;
+                        break;
+
+                    case 2:
+                        CoinControl.P2CoinTotal -= 25;
+                        break;
+
+                    case 3:
+                        CoinControl.P3CoinTotal -= 25;
+                        break;
+
+                    case 4:
+                        CoinControl.P4CoinTotal -= 25;
+                        break;
+                }
+                break;
+        }
+        yield return new WaitForSeconds(2f);
+        CameraMoveControl.isChangeCameraPoint = false;
+        AnimalsSkillAnimator();
+        pigPowerGood = false;
+        pigPowerBad = false;
     }
 
     void AnimalsSkillAnimator()
