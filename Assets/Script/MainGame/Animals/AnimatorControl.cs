@@ -469,6 +469,26 @@ public class AnimatorControl : MonoBehaviour
             anim.SetBool("GO", false);
         }
     }
+    void PigPowerEat()
+    {
+        if (AnimalsPowerControl.pigPowerGood)
+        {
+            anim.SetBool("SkillGood", true);
+        }
+        else
+        {
+            anim.SetBool("SkillGood", false);
+        }
+
+        if (AnimalsPowerControl.pigPowerBad)
+        {
+            anim.SetBool("SkillBad", true);
+        }
+        else
+        {
+            anim.SetBool("SkillBad", false);
+        }
+    }
     void Dizziness()
     {
         if (gameObject.tag == "P1")
