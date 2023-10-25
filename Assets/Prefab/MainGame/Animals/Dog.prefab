@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1279036051}
   - component: {fileID: 1279036052}
   - component: {fileID: 2987886473866756656}
-  - component: {fileID: 7809561746822762439}
   m_Layer: 0
   m_Name: PowerCollider
   m_TagString: Untagged
@@ -32,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2401238998141959703}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1279036052
 BoxCollider:
@@ -60,22 +59,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 2799078810122557944}
---- !u!54 &7809561746822762439
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279036050}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &214107434984869314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,8 +1057,8 @@ Transform:
   - {fileID: 2799078809949014496}
   - {fileID: 2799078809729131217}
   - {fileID: 2799078808154668008}
-  - {fileID: 2117227814236752706}
   - {fileID: 1279036051}
+  - {fileID: 2117227814236752706}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2455,7 +2438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_LocalScale.y
