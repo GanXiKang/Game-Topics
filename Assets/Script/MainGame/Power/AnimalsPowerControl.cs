@@ -690,7 +690,7 @@ public class AnimalsPowerControl : MonoBehaviour
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
         DiceUIControl.isDiceUI = true;
-        CameraMoveControl.isChangeCameraPoint = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
 
     IEnumerator PigPower()
