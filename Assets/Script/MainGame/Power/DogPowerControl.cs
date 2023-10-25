@@ -30,9 +30,12 @@ public class DogPowerControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Point")
+        if (AnimalsPowerControl.dogUsePower)
         {
-            print("ok");
+            if (other.tag == "Point")
+            {
+                print("ok");
+            }
         }
     }
 }
