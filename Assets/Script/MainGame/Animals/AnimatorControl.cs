@@ -284,6 +284,10 @@ public class AnimatorControl : MonoBehaviour
                     case 7:
                         HorsePowerGO();
                         break;
+
+                    case 12:
+                        PigPowerEat();
+                        break;
                 }
             }
             else
@@ -311,6 +315,10 @@ public class AnimatorControl : MonoBehaviour
                     case 11:
                         AnimalsPowerControl.dogUsePower = false;
                         break;
+
+                    case 12:
+                        PigPowerEat();
+                        break;
                 }
             }
         }
@@ -327,6 +335,10 @@ public class AnimatorControl : MonoBehaviour
 
                     case 7:
                         HorsePowerGO();
+                        break;
+
+                    case 12:
+                        PigPowerEat();
                         break;
                 }
             }
@@ -354,6 +366,10 @@ public class AnimatorControl : MonoBehaviour
 
                     case 11:
                         AnimalsPowerControl.dogUsePower = false;
+                        break;
+
+                    case 12:
+                        PigPowerEat();
                         break;
                 }
             }
@@ -372,6 +388,10 @@ public class AnimatorControl : MonoBehaviour
                     case 7:
                         HorsePowerGO();
                         break;
+
+                    case 12:
+                        PigPowerEat();
+                        break;
                 }
             }
             else
@@ -399,6 +419,10 @@ public class AnimatorControl : MonoBehaviour
                     case 11:
                         AnimalsPowerControl.dogUsePower = false;
                         break;
+
+                    case 12:
+                        PigPowerEat();
+                        break;
                 }
             }
         }
@@ -415,6 +439,10 @@ public class AnimatorControl : MonoBehaviour
 
                     case 7:
                         HorsePowerGO();
+                        break;
+
+                    case 12:
+                        PigPowerEat();
                         break;
                 }
             }
@@ -442,6 +470,10 @@ public class AnimatorControl : MonoBehaviour
 
                     case 11:
                         AnimalsPowerControl.dogUsePower = false;
+                        break;
+
+                    case 12:
+                        PigPowerEat();
                         break;
                 }
             }
