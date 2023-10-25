@@ -507,7 +507,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 12:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || !AnimalsPowerControl.pigCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -662,7 +662,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 12:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || !AnimalsPowerControl.pigCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -817,7 +817,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 12:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || !AnimalsPowerControl.pigCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
@@ -972,7 +972,7 @@ public class PowerUIControl : MonoBehaviour
 
                             case 12:
                                 powerUseNum.text = animalsPowerUseNum[i].ToString();
-                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD)
+                                if (animalsPowerUseNum[i] == 0 || ChangeCameraControl.round < roundCD || !AnimalsPowerControl.pigCanUsePower)
                                 {
                                     power.interactable = false;
                                 }
