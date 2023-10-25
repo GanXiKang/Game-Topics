@@ -16,16 +16,16 @@ public class DogPowerControl : MonoBehaviour
 
     void Update()
     {
-        //if (AnimalsPowerControl.dogUsePower)
-        //{
-        //    agent.speed = 15;
-        //    bc.enabled = true;
-        //}
-        //else
-        //{
-        //    agent.speed = 10;
-        //    bc.enabled = false;
-        //}
+        if (AnimalsPowerControl.dogUsePower)
+        {
+            agent.speed = 15;
+            bc.enabled = true;
+        }
+        else
+        {
+            agent.speed = 10;
+            bc.enabled = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
