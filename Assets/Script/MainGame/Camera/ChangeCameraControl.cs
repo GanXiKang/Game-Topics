@@ -17,6 +17,10 @@ public class ChangeCameraControl : MonoBehaviour
             {
                 AnimalsPowerControl.chickenPowerRound += 1 ;
             }
+            if (!AnimalsPowerControl.pigCanUsePower)
+            {
+                AnimalsPowerControl.pigPowerRound += 1;
+            }
         }
     }
 }

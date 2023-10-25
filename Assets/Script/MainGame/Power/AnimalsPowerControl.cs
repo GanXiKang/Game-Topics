@@ -93,6 +93,7 @@ public class AnimalsPowerControl : MonoBehaviour
         {
             StartCoroutine(PigPower());
         }
+        PigPowerCanUse();
     }
 
     IEnumerator MousePower()
@@ -698,6 +699,7 @@ public class AnimalsPowerControl : MonoBehaviour
     {
         isPigPower = false;
         pigCanUsePower = false;
+        pigPowerRound = 0;
         systemText.text = "Øi°l„Ó¼¼ÄÜ£¡";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[12]--;
@@ -791,10 +793,11 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
         }
         yield return new WaitForSeconds(2f);
-        CameraMoveControl.isChangeCameraPoint = false;
         AnimalsSkillAnimator();
         pigPowerGood = false;
         pigPowerBad = false;
+        DiceUIControl.isDiceUI = true; ;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
 
     void AnimalsSkillAnimator()
@@ -862,6 +865,14 @@ public class AnimalsPowerControl : MonoBehaviour
         {
             chickenUsePower = false;
             chickenPowerRound = 0;
+        }
+    }
+    void PigPowerCanUse()
+    {
+        if (pigPowerRound >= 2)
+        {
+            pigCanUsePower = false;
+            pigPowerRound = 0;
         }
     }
 }
