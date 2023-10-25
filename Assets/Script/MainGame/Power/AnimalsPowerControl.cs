@@ -871,7 +871,7 @@ public class AnimalsPowerControl : MonoBehaviour
     {
         if (pigPowerRound >= 2)
         {
-            pigCanUsePower = false;
+            pigCanUsePower = true;
             pigPowerRound = 0;
         }
     }
