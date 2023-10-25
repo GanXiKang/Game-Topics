@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DogPowerControl : MonoBehaviour
 {
     BoxCollider bc;
 
-    public 
+    public NavMeshAgent agent;
+
     void Start()
     {
         bc = GetComponent<BoxCollider>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (AnimalsPowerControl.dogUsePower)
+        {
+            agent.speed = 15;
+            bc.enabled = true;
+        }
     }
 }
