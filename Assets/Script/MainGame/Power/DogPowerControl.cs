@@ -34,7 +34,24 @@ public class DogPowerControl : MonoBehaviour
         {
             if (other.tag == "Point")
             {
-                CoinControl.P1CoinTotal += 5;
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        CoinControl.P1CoinTotal += 5;
+                        break;
+
+                    case 2:
+                        CoinControl.P2CoinTotal += 5;
+                        break;
+
+                    case 3:
+                        CoinControl.P3CoinTotal += 5;
+                        break;
+
+                    case 4:
+                        CoinControl.P4CoinTotal += 5;
+                        break;
+                }
             }
         }
     }
