@@ -34,7 +34,7 @@ public class DogPowerControl : MonoBehaviour
         {
             if (other.tag == "Point")
             {
-                print("ok");
+                CoinControl.P1CoinTotal += 5;
             }
         }
     }
