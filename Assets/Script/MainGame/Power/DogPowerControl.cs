@@ -21,5 +21,18 @@ public class DogPowerControl : MonoBehaviour
             agent.speed = 15;
             bc.enabled = true;
         }
+        else
+        {
+            agent.speed = 10;
+            bc.enabled = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Point")
+        {
+            print("ok");
+        }
     }
 }
