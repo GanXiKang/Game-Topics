@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1279036051}
   - component: {fileID: 1279036052}
+  - component: {fileID: 2987886473866756656}
   m_Layer: 0
   m_Name: PowerCollider
   m_TagString: Untagged
@@ -45,6 +46,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2987886473866756656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279036050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af1370ed23d6924d9d504bedf5a2c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 2799078810122557944}
 --- !u!1 &214107434984869314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1030,7 @@ GameObject:
   - component: {fileID: 4172022933101659712}
   - component: {fileID: 679838171596164352}
   - component: {fileID: 2005350429340517995}
+  - component: {fileID: 7428810897048096436}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Dog
@@ -1182,6 +1197,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombProps: {fileID: 8482907350630795359, guid: 9e31686979e34b340a2da8fd13f51a52, type: 3}
   insBombPoint: {fileID: 2799078808154668008}
+--- !u!114 &7428810897048096436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3033520184559183021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af1370ed23d6924d9d504bedf5a2c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
 --- !u!1 &3130202203679920944
 GameObject:
   m_ObjectHideFlags: 0
