@@ -307,6 +307,10 @@ public class AnimatorControl : MonoBehaviour
                         AnimalsPowerControl.horseUsePower = false;
                         HorsePowerGO();
                         break;
+
+                    case 11:
+                        AnimalsPowerControl.dogUsePower = false;
+                        break;
                 }
             }
         }
@@ -346,6 +350,10 @@ public class AnimatorControl : MonoBehaviour
                     case 7:
                         AnimalsPowerControl.horseUsePower = false;
                         HorsePowerGO();
+                        break;
+
+                    case 11:
+                        AnimalsPowerControl.dogUsePower = false;
                         break;
                 }
             }
@@ -387,6 +395,10 @@ public class AnimatorControl : MonoBehaviour
                         AnimalsPowerControl.horseUsePower = false;
                         HorsePowerGO();
                         break;
+
+                    case 11:
+                        AnimalsPowerControl.dogUsePower = false;
+                        break;
                 }
             }
         }
@@ -426,6 +438,10 @@ public class AnimatorControl : MonoBehaviour
                     case 7:
                         AnimalsPowerControl.horseUsePower = false;
                         HorsePowerGO();
+                        break;
+
+                    case 11:
+                        AnimalsPowerControl.dogUsePower = false;
                         break;
                 }
             }
