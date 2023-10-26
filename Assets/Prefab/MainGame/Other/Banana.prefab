@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1907771068655984128}
   - component: {fileID: 1907771068655984131}
   - component: {fileID: 1907771068655984130}
-  - component: {fileID: 4780723654046905046}
+  - component: {fileID: 3524270398524344120}
   m_Layer: 0
   m_Name: Banana
   m_TagString: Untagged
@@ -106,21 +106,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa062d578af5b3246a9c0e602ed76320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!111 &4780723654046905046
-Animation:
+--- !u!95 &3524270398524344120
+Animator:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637245915042210645}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: -623603649343465320, guid: 54d82f80fe43b7444bef31d982a1d23a, type: 3}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9611e2df75324e84894fec97b90cd00a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2821094198479182957
 GameObject:
   m_ObjectHideFlags: 0
