@@ -91,8 +91,8 @@ public class CameraMoveControl : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.Lerp(transform.position, cameraPointA.position, Time.deltaTime * 5f);
-            transform.position = cameraPointA.position;
+            transform.position = Vector3.Lerp(transform.position, cameraPointA.position, Time.deltaTime);
+            //transform.position = cameraPointA.position;
             transform.rotation = cameraPointA.rotation;
             isMovetoPointC = true;
         }
