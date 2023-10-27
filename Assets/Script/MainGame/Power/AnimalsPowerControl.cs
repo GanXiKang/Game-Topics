@@ -27,8 +27,8 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool pigCanUsePower = true, pigPowerGood = false, pigPowerBad = false;
 
     AudioSource BGM;
-    public AudioClip mouse, cow, tiger, rabbit, dragon, snake, horse, goat, monkey, chicken, dog, pig;
-
+    public AudioClip mouse, mouseGet, cow, tiger, rabbit, dragon, dragonPorps, snake;
+    public AudioClip horse, goat, monkey, chicken, dog, pig, pigGood, pigBad;
     public Text systemText;
 
     int r, p, e;
