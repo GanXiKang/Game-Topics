@@ -19,7 +19,7 @@ public class AnimalsPowerSpeedControl : MonoBehaviour
         }
         else
         {
-            agent.speed = 10f;
+            agent.speed = 12f;
         }
     }
 }
