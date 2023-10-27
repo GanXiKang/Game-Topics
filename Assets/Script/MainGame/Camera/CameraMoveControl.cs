@@ -79,7 +79,7 @@ public class CameraMoveControl : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, cameraPointC.position, Time.deltaTime);
                 //transform.position = cameraPointC.position;
                 //transform.rotation = cameraPointC.rotation;
-                isMovetoPointC = false;
+                //isMovetoPointC = false;
             }
 
             float cameraDistance = Vector3.Distance(transform.position, cameraPointA.position);
