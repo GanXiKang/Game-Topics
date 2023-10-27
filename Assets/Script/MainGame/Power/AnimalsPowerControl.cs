@@ -27,7 +27,7 @@ public class AnimalsPowerControl : MonoBehaviour
     public static bool pigCanUsePower = true, pigPowerGood = false, pigPowerBad = false;
 
     AudioSource BGM;
-    public AudioClip mouse, mouseGet, cow, tiger, rabbit, dragon, dragonPorps, snake;
+    public AudioClip mouse, mouseGet, cow, tiger, tigerBack, rabbit, dragon, dragonPorps, snake;
     public AudioClip horse, goat, monkey, chicken, dog, pig, pigGood, pigBad;
     public Text systemText;
 
@@ -111,6 +111,7 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[1]--;
         CameraMoveControl.isChangeCameraPoint = true;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(mouse);
         yield return new WaitForSeconds(1f);
         switch (ChangeCameraControl.changeCameraNum)
         {
@@ -207,6 +208,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
         }
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(mouseGet);
         yield return new WaitForSeconds(2f);
         CameraMoveControl.isChangeCameraPoint = false;
         ChangeCameraControl.changeCameraNum++;
@@ -239,6 +241,7 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         PowerUIControl.animalsPowerUseNum[2]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(cow);
         yield return new WaitForSeconds(2f);
     }
 
