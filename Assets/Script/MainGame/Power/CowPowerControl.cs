@@ -8,6 +8,8 @@ public class CowPowerControl : MonoBehaviour
     BoxCollider bc;
 
     public NavMeshAgent agent;
+    public AudioSource BGM;
+    public AudioClip skill;
 
     public static bool isCowPowerStopP1 = false, isCowPowerStopP2 = false, isCowPowerStopP3 = false, isCowPowerStopP4 = false;
 
@@ -42,6 +44,7 @@ public class CowPowerControl : MonoBehaviour
                         IsStopUIControl.isCowPowerStopUI++;
                         isCowPowerStopP1 = true;
                         AnimatorControl.isP1Dizziness = true;
+                        BGM.PlayOneShot(skill);
                         if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
                         {
                             AnimalsPowerControl.dragonUsePower = false;
@@ -59,6 +62,7 @@ public class CowPowerControl : MonoBehaviour
                         IsStopUIControl.isCowPowerStopUI++;
                         isCowPowerStopP2 = true;
                         AnimatorControl.isP2Dizziness = true;
+                        BGM.PlayOneShot(skill);
                         if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
                         {
                             AnimalsPowerControl.dragonUsePower = false;
@@ -76,6 +80,7 @@ public class CowPowerControl : MonoBehaviour
                         IsStopUIControl.isCowPowerStopUI++;
                         isCowPowerStopP3 = true;
                         AnimatorControl.isP3Dizziness = true;
+                        BGM.PlayOneShot(skill);
                         if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
                         {
                             AnimalsPowerControl.dragonUsePower = false;
@@ -93,6 +98,7 @@ public class CowPowerControl : MonoBehaviour
                         IsStopUIControl.isCowPowerStopUI++;
                         isCowPowerStopP4 = true;
                         AnimatorControl.isP4Dizziness = true;
+                        BGM.PlayOneShot(skill);
                         if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
                         {
                             AnimalsPowerControl.dragonUsePower = false;
