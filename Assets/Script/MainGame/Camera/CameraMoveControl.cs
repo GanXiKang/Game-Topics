@@ -100,19 +100,15 @@ public class CameraMoveControl : MonoBehaviour
     {
         if (isChangeCameraPoint)
         {
-            float angle = Mathf.LerpAngle(transform.rotation.y, cameraPointB.rotation.y, Time.deltaTime * 1f);
             transform.position = Vector3.Lerp(transform.position, cameraPointB.position, Time.deltaTime * 1f);
-            transform.eulerAngles = new Vector3(0, angle, 0);
             //transform.position = cameraPointB.position;
-            //transform.rotation = cameraPointB.rotation;
+            transform.rotation = cameraPointB.rotation;
         }
         else if (!isChangeCameraPoint && !isMove)
         {
-            float angle = Mathf.LerpAngle(transform.rotation.y, cameraPointA.rotation.y, Time.deltaTime * 1f);
             transform.position = Vector3.Lerp(transform.position, cameraPointA.position, Time.deltaTime * 1f);
-            transform.eulerAngles = new Vector3(0, angle, 0);
             //transform.position = cameraPointA.position;
-            //transform.rotation = cameraPointA.rotation;
+            transform.rotation = cameraPointA.rotation;
         }
     }
 }
