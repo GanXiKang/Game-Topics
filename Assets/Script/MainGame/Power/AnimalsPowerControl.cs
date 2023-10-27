@@ -279,10 +279,12 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         PowerUIControl.animalsPowerUseNum[3]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(tiger);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(1f);
         systemText.text = "全部玩家后退！";
-        SystemTestTextControl.isTimer = true; 
+        SystemTestTextControl.isTimer = true;
+        BGM.PlayOneShot(tigerBack);
         ChangeCameraControl.changeCameraNum++;
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
@@ -331,6 +333,7 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         PowerUIControl.animalsPowerUseNum[4]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(rabbit);
         yield return new WaitForSeconds(1f);
     }
 
@@ -342,6 +345,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[5]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(dragon);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
         switch (ChangeCameraControl.changeCameraNum)
@@ -398,6 +402,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 SystemTestTextControl.isTimer = true;
                 break;
         }
+        BGM.PlayOneShot(dragonPorps);
         yield return new WaitForSeconds(2f);
         dragonUsePower = true;
         DiceUIControl.isDiceUI = true;
@@ -411,6 +416,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[6]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(snake);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
         IsStopUIControl.isSnakePowerStopUI += 1;
@@ -620,6 +626,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 }
                 break;
         }
+        BGM.PlayOneShot(snake);
         yield return new WaitForSeconds(2f);
         AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = false;
@@ -635,6 +642,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[7]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(horse);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(9);
@@ -651,6 +659,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[8]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(goat);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(9);
@@ -667,6 +676,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[9]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(monkey);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
         monkeyPutBananaPower = true;
@@ -684,6 +694,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[10]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(chicken);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         AnimalsSkillAnimator();
@@ -699,6 +710,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[11]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(dog);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
         DiceUIControl.isDiceUI = true;
@@ -714,6 +726,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[12]--;
         AnimalsSkillAnimator();
+        BGM.PlayOneShot(pig);
         e = Random.Range(1, 4);
         switch (e)
         {
@@ -754,6 +767,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         PropsControl.P4Props[1] += 1;
                         break;
                 }
+                BGM.PlayOneShot(pigGood);
                 break;
 
             case 2:
@@ -777,6 +791,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         CoinControl.P4CoinTotal += 30;
                         break;
                 }
+                BGM.PlayOneShot(pigGood);
                 break;
 
             case 3:
@@ -800,6 +815,7 @@ public class AnimalsPowerControl : MonoBehaviour
                         CoinControl.P4CoinTotal -= 25;
                         break;
                 }
+                BGM.PlayOneShot(pigBad);
                 break;
         }
         yield return new WaitForSeconds(2f);
