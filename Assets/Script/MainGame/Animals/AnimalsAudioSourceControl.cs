@@ -27,8 +27,8 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP1)
                     {
                         BGM.Play();
-                        isPlayP1 = false;
                         Sounds();
+                        isPlayP1 = false;
                     }
                 }
                 break;
@@ -39,8 +39,8 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP2)
                     {
                         BGM.Play();
-                        isPlayP2 = false;
                         Sounds();
+                        isPlayP2 = false;
                     }
                 }
                 break;
@@ -51,8 +51,8 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP3)
                     {
                         BGM.Play();
-                        isPlayP3 = false;
                         Sounds();
+                        isPlayP3 = false;
                     }
                 }
                 break;
@@ -63,8 +63,8 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP4)
                     {
                         BGM.Play();
-                        isPlayP4 = false;
                         Sounds();
+                        isPlayP4 = false;
                     }
                 }
                 break;
