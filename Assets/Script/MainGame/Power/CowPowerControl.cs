@@ -15,7 +15,6 @@ public class CowPowerControl : MonoBehaviour
     void Start()
     {
         bc = GetComponent<BoxCollider>();
-        gc = GameObject.Find("GameControl");    
     }
     void Update()
     {
