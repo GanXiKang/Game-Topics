@@ -63,5 +63,10 @@ public class AudioControl : MonoBehaviour
             MiniGameColliderControl.isDolphinCall = false;
             MGFinishAwardControl.isDolphinCall = false;
         }
+        if (CowPowerControl.isCowSound)
+        {
+            BGM.PlayOneShot(cowSkill);
+            CowPowerControl.isCowSound = false;
+        }
     }
 }
