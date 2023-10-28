@@ -6,15 +6,11 @@ public class AnimalsAudioSourceControl : MonoBehaviour
 {
     AudioSource BGM;
 
-    bool isPlayP1, isPlayP2, isPlayP3, isPlayP4;
+    bool isPlayP1 = true, isPlayP2 = false, isPlayP3 = false, isPlayP4 = false;
 
     void Start()
     {
         BGM = GetComponent<AudioSource>();
-        isPlayP1 = true;
-        isPlayP2 = false;
-        isPlayP3 = false;
-        isPlayP4 = false;
     }
 
     void Update()
@@ -27,10 +23,9 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP1)
                     {
                         BGM.Play();
+                        isPlayP2 = true;
                         print(isPlayP2);
                         isPlayP1 = false;
-                        isPlayP2 = true;
-                        
                     }
                 }
                 break;
