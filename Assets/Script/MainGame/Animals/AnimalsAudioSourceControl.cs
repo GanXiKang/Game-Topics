@@ -39,7 +39,6 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP2)
                     {
                         BGM.Play();
-                        print("P2");
                         isPlayP2 = false;
                         if (Menu_ChoosePlayer.whoPlay >= 3)
                         {
