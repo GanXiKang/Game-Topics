@@ -6,6 +6,7 @@ public class BananaControl : MonoBehaviour
 {
     public static int pointNum;
     public static bool iscolliderBananaText = false;
+    public static bool isBananaSound = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -124,6 +125,7 @@ public class BananaControl : MonoBehaviour
     }
     IEnumerator StopTiming()
     {
+        isBananaSound = true;
         iscolliderBananaText = true;
         yield return new WaitForSeconds(4f);
         IsStopUIControl.isBananaStopUI++;
