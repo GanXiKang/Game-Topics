@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AnimalsAudioSourceControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    AudioSource BGM;
+
     void Start()
     {
-        
+        BGM = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
