@@ -23,9 +23,8 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP1)
                     {
                         BGM.Play();
-                        isPlayP2 = true;
-                        print(isPlayP2);
                         isPlayP1 = false;
+                        isPlayP2 = true;
                     }
                 }
                 break;
