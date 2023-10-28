@@ -8,7 +8,7 @@ public class AudioControl : MonoBehaviour
 
     public AudioClip insKickboard, destoryKickboard;
     public AudioClip racoon, sloth, fox, ostrich, bear, dolphin;
-    public AudioClip cowSkill, monkeySkill;
+    public AudioClip cowSkill, banana;
 
     void Start()
     {
@@ -67,6 +67,11 @@ public class AudioControl : MonoBehaviour
         {
             BGM.PlayOneShot(cowSkill);
             CowPowerControl.isCowSound = false;
+        }
+        if (BananaControl.isBananaSound)
+        {
+            BGM.PlayOneShot(banana);
+            BananaControl.isBananaSound = false;
         }
     }
 }
