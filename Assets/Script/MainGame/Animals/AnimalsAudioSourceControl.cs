@@ -27,8 +27,8 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP1)
                     {
                         BGM.Play();
-                        Sounds();
                         isPlayP1 = false;
+                        isPlayP2 = true;
                     }
                 }
                 break;
@@ -39,8 +39,16 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP2)
                     {
                         BGM.Play();
-                        Sounds();
+                        print("P2");
                         isPlayP2 = false;
+                        if (Menu_ChoosePlayer.whoPlay >= 3)
+                        {
+                            isPlayP3 = true;
+                        }
+                        else
+                        {
+                            isPlayP1 = true;
+                        }
                     }
                 }
                 break;
@@ -51,8 +59,15 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP3)
                     {
                         BGM.Play();
-                        Sounds();
                         isPlayP3 = false;
+                        if (Menu_ChoosePlayer.whoPlay == 3)
+                        {
+                            isPlayP4 = true;
+                        }
+                        else
+                        {
+                            isPlayP1 = true;
+                        }
                     }
                 }
                 break;
@@ -63,46 +78,10 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP4)
                     {
                         BGM.Play();
-                        Sounds();
                         isPlayP4 = false;
+                        isPlayP1 = true;
                     }
                 }
-                break;
-        }
-    }
-
-    void Sounds()
-    {
-        switch (ChangeCameraControl.changeCameraNum)
-        {
-            case 1:
-                isPlayP2 = true;
-                break;
-
-            case 2:
-                if (Menu_ChoosePlayer.whoPlay >= 3)
-                {
-                    isPlayP3 = true;
-                }
-                else
-                {
-                    isPlayP1 = true;
-                }
-                break;
-
-            case 3:
-                if (Menu_ChoosePlayer.whoPlay == 4)
-                {
-                    isPlayP4 = true;
-                }
-                else
-                {
-                    isPlayP1 = true;
-                }
-                break;
-
-            case 4:
-                isPlayP1 = true;
                 break;
         }
     }
