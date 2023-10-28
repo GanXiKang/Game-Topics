@@ -27,8 +27,10 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                     if (isPlayP1)
                     {
                         BGM.Play();
+                        print(isPlayP2);
                         isPlayP1 = false;
                         isPlayP2 = true;
+                        
                     }
                 }
                 break;
@@ -36,8 +38,6 @@ public class AnimalsAudioSourceControl : MonoBehaviour
             case 2:
                 if (gameObject.tag == "P2")
                 {
-                    print("OK");
-                    print(isPlayP2);
                     if (isPlayP2)
                     {
                         BGM.Play();
