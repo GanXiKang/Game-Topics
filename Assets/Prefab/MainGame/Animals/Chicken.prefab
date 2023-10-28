@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 9146233529777780800}
   - component: {fileID: 1430572236307513069}
   - component: {fileID: 6506041902288469057}
+  - component: {fileID: 8176445919105856434}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Chicken
@@ -834,8 +835,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 78594838a8b5650409989a6ff905bf6b, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -920,6 +921,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8176445919105856434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3756001458295966628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ba0a8674fc65142892db4aee1d8581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3916828001245528271
 GameObject:
   m_ObjectHideFlags: 0
