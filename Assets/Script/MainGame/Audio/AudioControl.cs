@@ -8,6 +8,7 @@ public class AudioControl : MonoBehaviour
 
     public AudioClip insKickboard, destoryKickboard;
     public AudioClip racoon, sloth, fox, ostrich, bear, dolphin;
+    public AudioClip cowSkill, monkeySkill;
 
     void Start()
     {
