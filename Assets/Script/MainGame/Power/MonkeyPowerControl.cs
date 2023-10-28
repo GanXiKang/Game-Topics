@@ -6,6 +6,7 @@ public class MonkeyPowerControl : MonoBehaviour
 {
     public GameObject banana;
     public Transform insBananaPoint;
+
     public static bool isP1InsBanana = false, isP2InsBanana = false, isP3InsBanana = false, isP4InsBanana = false;
 
     void Update()
