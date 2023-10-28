@@ -37,7 +37,7 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                 if (gameObject.tag == "P2")
                 {
                     print("OK");
-                    print(isPlayP2)
+                    print(isPlayP2);
                     if (isPlayP2)
                     {
                         BGM.Play();
