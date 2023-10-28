@@ -6,11 +6,12 @@ public class AnimalsAudioSourceControl : MonoBehaviour
 {
     AudioSource BGM;
 
-    public static bool isPlayP1 = true, isPlayP2 = false, isPlayP3 = false, isPlayP4 = false;
+    public static bool isPlayP1 = false, isPlayP2 = false, isPlayP3 = false, isPlayP4 = false;
 
     void Start()
     {
         BGM = GetComponent<AudioSource>();
+        Invoke("WaitOpeningAnimation", 2f);
     }
 
     void Update()
@@ -80,4 +81,10 @@ public class AnimalsAudioSourceControl : MonoBehaviour
                 break;
         }
     }
+
+    void WaitOpeningAnimation()
+    {
+        isPlayP1 = true;
+    }
 }
+        
