@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class MG5_CaughtControl : MonoBehaviour
 {
-    Collider col;
-
     public AudioSource BGM;
     public AudioClip caught;
     public Transform receiveFish;
 
     bool isCaught;
-    float speed = 35;
+    float speed = 30f;
 
-    void Start()
-    {
-        col = GetComponent<Collider>();
-    }
     void Update()
     {
         if (isCaught == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, receiveFish.position, 30f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, receiveFish.position, speed * Time.deltaTime);
         }
     }
     private void OnTriggerEnter(Collider other)
