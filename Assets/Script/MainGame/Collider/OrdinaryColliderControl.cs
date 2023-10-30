@@ -31,7 +31,6 @@ public class OrdinaryColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            AnimalsPowerControl.dragonPowerRound++;
                             AnimatorControl.isDragonFlyWalk = false;
                         }
                     }
@@ -54,7 +53,6 @@ public class OrdinaryColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            AnimalsPowerControl.dragonPowerRound++;
                             AnimatorControl.isDragonFlyWalk = false;
                         }
                     }
@@ -77,7 +75,6 @@ public class OrdinaryColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            AnimalsPowerControl.dragonPowerRound++;
                             AnimatorControl.isDragonFlyWalk = false;
                         }
                     }
@@ -100,7 +97,6 @@ public class OrdinaryColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            AnimalsPowerControl.dragonPowerRound++;
                             AnimatorControl.isDragonFlyWalk = false;
                         }
                     }
