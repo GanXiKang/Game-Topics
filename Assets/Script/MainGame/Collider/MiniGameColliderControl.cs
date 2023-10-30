@@ -52,14 +52,19 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 2;
                         AnimatorControl.isP2Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5 || !isStopProps)
                         {
                             AnimatorControl.isP2Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
-                        else
+
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
                         {
                             StartCoroutine(DragonFlyNow());
+                        }
+                        if (isStopProps)
+                        {
+                            StartCoroutine(StopRound());
                         }
                         if (Menu_ChoosePlayer.whyP2 == 1)
                         {
@@ -73,14 +78,19 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 3;
                         AnimatorControl.isP3Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5 || !isStopProps)
                         {
                             AnimatorControl.isP3Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
-                        else
+
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
                         {
                             StartCoroutine(DragonFlyNow());
+                        }
+                        if (isStopProps)
+                        {
+                            StartCoroutine(StopRound());
                         }
                         if (Menu_ChoosePlayer.whyP3 == 1)
                         {
@@ -94,14 +104,19 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 4;
                         AnimatorControl.isP4Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5 || !isStopProps)
                         {
                             AnimatorControl.isP4Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
-                        else
+
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
                         {
                             StartCoroutine(DragonFlyNow());
+                        }
+                        if (isStopProps)
+                        {
+                            StartCoroutine(StopRound());
                         }
                         if (Menu_ChoosePlayer.whyP4 == 1)
                         {
