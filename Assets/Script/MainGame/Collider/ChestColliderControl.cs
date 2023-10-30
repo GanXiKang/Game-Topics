@@ -210,7 +210,6 @@ public class ChestColliderControl : MonoBehaviour
     }
     IEnumerator DragonFlyNow()
     {
-        //AnimalsPowerControl.dragonPowerRound++;
         AnimatorControl.isDragonFlyWalk = false;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);

@@ -242,7 +242,6 @@ public class EventControl : MonoBehaviour
         {
             AnimatorControl.isDragonFlyWalk = false;
             CameraMoveControl.isChangeCameraPoint = true;
-            //AnimalsPowerControl.dragonPowerRound++;
             yield return new WaitForSeconds(2f);
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
@@ -318,7 +317,6 @@ public class EventControl : MonoBehaviour
         {
             AnimatorControl.isDragonFlyWalk = false;
             CameraMoveControl.isChangeCameraPoint = true;
-            AnimalsPowerControl.dragonPowerRound++;
             yield return new WaitForSeconds(2f);
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
@@ -394,7 +392,6 @@ public class EventControl : MonoBehaviour
         {
             AnimatorControl.isDragonFlyWalk = false;
             CameraMoveControl.isChangeCameraPoint = true;
-            AnimalsPowerControl.dragonPowerRound++;
             yield return new WaitForSeconds(2f);
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
@@ -470,7 +467,6 @@ public class EventControl : MonoBehaviour
         {
             AnimatorControl.isDragonFlyWalk = false;
             CameraMoveControl.isChangeCameraPoint = true;
-            AnimalsPowerControl.dragonPowerRound++;
             yield return new WaitForSeconds(2f);
             ChangeCameraControl.changeCameraNum++;
             DiceUIControl.isDiceUI = true;
