@@ -55,7 +55,7 @@ public class IsStopUIControl : MonoBehaviour
                         break;
                 }
             }
-            if (isBombStopUI != 0 && !StoreColliderControl.isStoreNotStopUI)
+            if (isBombStopUI != 0)
             {
                 switch (ChangeCameraControl.changeCameraNum)
                 {
@@ -166,7 +166,7 @@ public class IsStopUIControl : MonoBehaviour
                         break;
                 }
             }
-            if (isBananaStopUI != 0 && !StoreColliderControl.isStoreNotStopUI)
+            if (isBananaStopUI != 0)
             {
                 switch (ChangeCameraControl.changeCameraNum)
                 {
