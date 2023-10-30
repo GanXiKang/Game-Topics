@@ -80,14 +80,12 @@ public class MiniGameColliderControl : MonoBehaviour
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
                                 StartCoroutine(StopRound());
-                                print("3");
                             }
                             else
                             {
                                 isStopProps = false;
                                 AnimatorControl.isP2Skill = false;
                                 StartCoroutine(StartMiniGame());
-                                print("4");
                             }
                         }
                         if (Menu_ChoosePlayer.whyP2 == 1)
