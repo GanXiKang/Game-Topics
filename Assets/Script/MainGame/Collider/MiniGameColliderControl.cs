@@ -12,6 +12,8 @@ public class MiniGameColliderControl : MonoBehaviour
     public int miniGame, MGPoint;
     public Transform target;
 
+    bool isStopProps = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (!PropsControl.isTrans)
@@ -24,14 +26,19 @@ public class MiniGameColliderControl : MonoBehaviour
                     {
                         p = 1;
                         AnimatorControl.isP1Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5 || !isStopProps)
                         {
                             AnimatorControl.isP1Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
-                        else
+
+                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
                         {
                             StartCoroutine(DragonFlyNow());
+                        }
+                        if (isStopProps)
+                        {
+                            StartCoroutine(StopRound());
                         }
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
@@ -163,6 +170,11 @@ public class MiniGameColliderControl : MonoBehaviour
                 }
             }
         }
+
+        if (other.tag == "StopProps")
+        {
+            isStopProps = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -200,6 +212,15 @@ public class MiniGameColliderControl : MonoBehaviour
     {
         AnimalsPowerControl.dragonPowerRound++;
         AnimatorControl.isDragonFlyWalk = false;
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
+    }
+    IEnumerator StopRound()
+    {
+        isStopProps = false;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
