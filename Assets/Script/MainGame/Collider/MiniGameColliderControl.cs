@@ -32,10 +32,12 @@ public class MiniGameColliderControl : MonoBehaviour
                             {
                                 AnimatorControl.isP1Skill = false;
                                 StartCoroutine(StartMiniGame());
+                                print("1");
                             }
                             else
                             {
                                 StartCoroutine(DragonFlyNow());
+                                print("2");
                             }
                         }
                         else
@@ -43,12 +45,14 @@ public class MiniGameColliderControl : MonoBehaviour
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                             {
                                 StartCoroutine(StopRound());
+                                print("3");
                             }
                             else
                             {
                                 isStopProps = false;
                                 AnimatorControl.isP1Skill = false;
                                 StartCoroutine(StartMiniGame());
+                                print("4");
                             }
                         }
                         if (Menu_ChoosePlayer.whyP1 == 1)
