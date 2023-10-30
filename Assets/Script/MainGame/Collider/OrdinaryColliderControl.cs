@@ -112,7 +112,6 @@ public class OrdinaryColliderControl : MonoBehaviour
                 }
                 else
                 {
-                    print("OK");
                     StartCoroutine(StopRoundCamera());
                 }
             }
