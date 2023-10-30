@@ -67,15 +67,32 @@ public class StoreColliderControl : MonoBehaviour
                         who = 2;
                         P2_EnterStore = false;
                         AnimatorControl.isP2Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
+                        if (!isStopProps)
                         {
-                            AnimatorControl.isP2Skill = false;
-                            AnimatorControl.isP2Wave = true;
-                            StartCoroutine(LookTarget());
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
+                            {
+                                AnimatorControl.isP2Skill = false;
+                                AnimatorControl.isP2Wave = true;
+                                StartCoroutine(LookTarget());
+                            }
+                            else
+                            {
+                                StartCoroutine(DragonFlyNow());
+                            }
                         }
                         else
                         {
-                            StartCoroutine(DragonFlyNow());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                isStopProps = false;
+                                AnimatorControl.isP2Skill = false;
+                                AnimatorControl.isP2Wave = true;
+                                StartCoroutine(LookTarget());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP2 == 1)
                         {
@@ -91,15 +108,32 @@ public class StoreColliderControl : MonoBehaviour
                         who = 3;
                         P3_EnterStore = false;
                         AnimatorControl.isP3Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
+                        if (!isStopProps)
                         {
-                            AnimatorControl.isP3Skill = false;
-                            AnimatorControl.isP3Wave = true;
-                            StartCoroutine(LookTarget());
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
+                            {
+                                AnimatorControl.isP3Skill = false;
+                                AnimatorControl.isP3Wave = true;
+                                StartCoroutine(LookTarget());
+                            }
+                            else
+                            {
+                                StartCoroutine(DragonFlyNow());
+                            }
                         }
                         else
                         {
-                            StartCoroutine(DragonFlyNow());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                isStopProps = false;
+                                AnimatorControl.isP3Skill = false;
+                                AnimatorControl.isP3Wave = true;
+                                StartCoroutine(LookTarget());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP3 == 1)
                         {
@@ -115,15 +149,32 @@ public class StoreColliderControl : MonoBehaviour
                         who = 4;
                         P4_EnterStore = false;
                         AnimatorControl.isP4Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
+                        if (!isStopProps)
                         {
-                            AnimatorControl.isP4Skill = false;
-                            AnimatorControl.isP4Wave = true;
-                            StartCoroutine(LookTarget());
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
+                            {
+                                AnimatorControl.isP4Skill = false;
+                                AnimatorControl.isP4Wave = true;
+                                StartCoroutine(LookTarget());
+                            }
+                            else
+                            {
+                                StartCoroutine(DragonFlyNow());
+                            }
                         }
                         else
                         {
-                            StartCoroutine(DragonFlyNow());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                isStopProps = false;
+                                AnimatorControl.isP4Skill = false;
+                                AnimatorControl.isP4Wave = true;
+                                StartCoroutine(LookTarget());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP4 == 1)
                         {
