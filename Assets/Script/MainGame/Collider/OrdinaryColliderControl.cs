@@ -7,7 +7,7 @@ public class OrdinaryColliderControl : MonoBehaviour
     public static bool P1_Enter = true, P2_Enter = true, P3_Enter = true, P4_Enter = true;
     public int pointNum;
 
-    bool isStopProps;
+    bool isStopProps = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,98 +15,105 @@ public class OrdinaryColliderControl : MonoBehaviour
         {
             if (!AnimalsPowerControl.tigerUsePower)
             {
-                if (other.tag == "P1" && P1_Enter)
+                if (!isStopProps)
                 {
-                    if (DiceControl.P1_totalNum == pointNum)
+                    if (other.tag == "P1" && P1_Enter)
                     {
-                        P1_Enter = false;
-                        AnimatorControl.isP1Move = false;
-                        StartCoroutine(ChangeCamera());
-                        if (Menu_ChoosePlayer.whyP1 == 1)
+                        if (DiceControl.P1_totalNum == pointNum)
                         {
-                            PowerUIControl.isMouseCanUsePower = false;
-                        }
+                            P1_Enter = false;
+                            AnimatorControl.isP1Move = false;
+                            StartCoroutine(ChangeCamera());
+                            if (Menu_ChoosePlayer.whyP1 == 1)
+                            {
+                                PowerUIControl.isMouseCanUsePower = false;
+                            }
 
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
-                        {
-                            AnimatorControl.isP1Skill = false; 
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
+                            {
+                                AnimatorControl.isP1Skill = false;
+                            }
+                            else
+                            {
+                                AnimalsPowerControl.dragonPowerRound++;
+                                AnimatorControl.isDragonFlyWalk = false;
+                            }
                         }
-                        else
+                    }
+                    else if (other.tag == "P2" && P2_Enter)
+                    {
+                        if (DiceControl.P2_totalNum == pointNum)
                         {
-                            AnimalsPowerControl.dragonPowerRound++;
-                            AnimatorControl.isDragonFlyWalk = false;
+                            P2_Enter = false;
+                            AnimatorControl.isP2Move = false;
+                            StartCoroutine(ChangeCamera());
+                            if (Menu_ChoosePlayer.whyP2 == 1)
+                            {
+                                PowerUIControl.isMouseCanUsePower = false;
+                            }
+
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
+                            {
+                                AnimatorControl.isP2Skill = false;
+                            }
+                            else
+                            {
+                                AnimalsPowerControl.dragonPowerRound++;
+                                AnimatorControl.isDragonFlyWalk = false;
+                            }
+                        }
+                    }
+                    else if (other.tag == "P3" && P3_Enter)
+                    {
+                        if (DiceControl.P3_totalNum == pointNum)
+                        {
+                            P3_Enter = false;
+                            AnimatorControl.isP3Move = false;
+                            StartCoroutine(ChangeCamera());
+                            if (Menu_ChoosePlayer.whyP3 == 1)
+                            {
+                                PowerUIControl.isMouseCanUsePower = false;
+                            }
+
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
+                            {
+                                AnimatorControl.isP3Skill = false;
+                            }
+                            else
+                            {
+                                AnimalsPowerControl.dragonPowerRound++;
+                                AnimatorControl.isDragonFlyWalk = false;
+                            }
+                        }
+                    }
+                    else if (other.tag == "P4" && P4_Enter)
+                    {
+                        if (DiceControl.P4_totalNum == pointNum)
+                        {
+                            P4_Enter = false;
+                            AnimatorControl.isP4Move = false;
+                            StartCoroutine(ChangeCamera());
+                            if (Menu_ChoosePlayer.whyP4 == 1)
+                            {
+                                PowerUIControl.isMouseCanUsePower = false;
+                            }
+
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
+                            {
+                                AnimatorControl.isP4Skill = false;
+                            }
+                            else
+                            {
+                                AnimalsPowerControl.dragonPowerRound++;
+                                AnimatorControl.isDragonFlyWalk = false;
+                            }
                         }
                     }
                 }
-                else if (other.tag == "P2" && P2_Enter)
+                else
                 {
-                    if (DiceControl.P2_totalNum == pointNum)
-                    {
-                        P2_Enter = false;
-                        AnimatorControl.isP2Move = false;
-                        StartCoroutine(ChangeCamera());
-                        if (Menu_ChoosePlayer.whyP2 == 1)
-                        {
-                            PowerUIControl.isMouseCanUsePower = false;
-                        }
-
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
-                        {
-                            AnimatorControl.isP2Skill = false;
-                        }
-                        else 
-                        {
-                            AnimalsPowerControl.dragonPowerRound++;
-                            AnimatorControl.isDragonFlyWalk = false;
-                        }
-                    }
+                    StartCoroutine(StopRoundCamera());
                 }
-                else if (other.tag == "P3" && P3_Enter)
-                {
-                    if (DiceControl.P3_totalNum == pointNum)
-                    {
-                        P3_Enter = false;
-                        AnimatorControl.isP3Move = false;
-                        StartCoroutine(ChangeCamera());
-                        if (Menu_ChoosePlayer.whyP3 == 1)
-                        {
-                            PowerUIControl.isMouseCanUsePower = false;
-                        }
-
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
-                        {
-                            AnimatorControl.isP3Skill = false;
-                        }
-                        else
-                        {
-                            AnimalsPowerControl.dragonPowerRound++;
-                            AnimatorControl.isDragonFlyWalk = false;
-                        }
-                    }
-                }
-                else if (other.tag == "P4" && P4_Enter)
-                {
-                    if (DiceControl.P4_totalNum == pointNum)
-                    {
-                        P4_Enter = false;
-                        AnimatorControl.isP4Move = false;
-                        StartCoroutine(ChangeCamera());
-                        if (Menu_ChoosePlayer.whyP4 == 1)
-                        {
-                            PowerUIControl.isMouseCanUsePower = false;
-                        }
-
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
-                        {
-                            AnimatorControl.isP4Skill = false;
-                        }
-                        else
-                        {
-                            AnimalsPowerControl.dragonPowerRound++;
-                            AnimatorControl.isDragonFlyWalk = false;
-                        }
-                    }
-                }  
             }
         }
         else
@@ -119,11 +126,6 @@ public class OrdinaryColliderControl : MonoBehaviour
         if (other.tag == "StopProps")
         {
             isStopProps = true;
-        }
-        else
-        {
-            isStopProps = false;
-            print("2");
         }
     }
     private void OnTriggerExit(Collider other)
@@ -154,6 +156,15 @@ public class OrdinaryColliderControl : MonoBehaviour
         DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
         FalseByAnimator();
+    }
+    IEnumerator StopRoundCamera()
+    {
+        isStopProps = false;
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
     IEnumerator Transposition()
     {
