@@ -143,7 +143,7 @@ public class BombPropsControl : MonoBehaviour
         r = false;
         boom.Play();
         iscolliderBombText = true;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         IsStopUIControl.isBombStopUI++;
         Destroy(this.gameObject);  
     }
