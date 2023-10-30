@@ -40,7 +40,16 @@ public class MiniGameColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            StartCoroutine(StopRound());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                isStopProps = false;
+                                AnimatorControl.isP1Skill = false;
+                                StartCoroutine(StartMiniGame());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
@@ -68,7 +77,16 @@ public class MiniGameColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            StartCoroutine(StopRound());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                isStopProps = false;
+                                AnimatorControl.isP2Skill = false;
+                                StartCoroutine(StartMiniGame());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP2 == 1)
                         {
@@ -96,7 +114,16 @@ public class MiniGameColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            StartCoroutine(StopRound());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                isStopProps = false;
+                                AnimatorControl.isP3Skill = false;
+                                StartCoroutine(StartMiniGame());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP3 == 1)
                         {
@@ -124,7 +151,16 @@ public class MiniGameColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            StartCoroutine(StopRound());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                isStopProps = false;
+                                AnimatorControl.isP4Skill = false;
+                                StartCoroutine(StartMiniGame());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP4 == 1)
                         {
