@@ -11,6 +11,7 @@ public class ChestColliderControl : MonoBehaviour
     public static int isOpen;
 
     bool isOpened = false;
+
     void OpenBoxJudge()
     {
         isOpen = isOpenNumber;
@@ -186,6 +187,7 @@ public class ChestColliderControl : MonoBehaviour
             P4_EnterBox = true;
         }
     }
+
     IEnumerator ChangeCamera()
     {
         yield return new WaitForSeconds(1f);
