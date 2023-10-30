@@ -7,6 +7,8 @@ public class OrdinaryColliderControl : MonoBehaviour
     public static bool P1_Enter = true, P2_Enter = true, P3_Enter = true, P4_Enter = true;
     public int pointNum;
 
+    bool isStopProps;
+
     private void OnTriggerEnter(Collider other)
     {
         if (!PropsControl.isTrans)
@@ -116,7 +118,12 @@ public class OrdinaryColliderControl : MonoBehaviour
     {
         if (other.tag == "StopProps")
         {
-            print("OK");
+            isStopProps = true;
+        }
+        else
+        {
+            isStopProps = false;
+            print("2");
         }
     }
     private void OnTriggerExit(Collider other)
