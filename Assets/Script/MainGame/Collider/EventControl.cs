@@ -29,6 +29,7 @@ public class EventControl : MonoBehaviour
                     if (DiceControl.P1_totalNum == EventPoint)
                     {
                         P1_EnterEvent = false;
+                        AnimatorControl.isP1Move = false;
                         if (!isStopProps)
                         {
                             if (!eventAB)
@@ -93,6 +94,7 @@ public class EventControl : MonoBehaviour
                     if (DiceControl.P2_totalNum == EventPoint)
                     {
                         P2_EnterEvent = false;
+                        AnimatorControl.isP2Move = false;
                         if (!isStopProps)
                         {
                             if (!eventAB)
@@ -157,6 +159,7 @@ public class EventControl : MonoBehaviour
                     if (DiceControl.P3_totalNum == EventPoint)
                     {
                         P3_EnterEvent = false;
+                        AnimatorControl.isP3Move = false;
                         if (!isStopProps)
                         {
                             if (!eventAB)
@@ -221,6 +224,7 @@ public class EventControl : MonoBehaviour
                     if (DiceControl.P4_totalNum == EventPoint)
                     {
                         P4_EnterEvent = false;
+                        AnimatorControl.isP4Move = false;
                         if (!isStopProps)
                         {
                             if (!eventAB)
@@ -315,7 +319,6 @@ public class EventControl : MonoBehaviour
     }
     IEnumerator P1_EventHappened()
     {
-        AnimatorControl.isP1Move = false;
         if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
         {
             AnimatorControl.isP1Skill = false;
@@ -390,7 +393,6 @@ public class EventControl : MonoBehaviour
     }
     IEnumerator P2_EventHappened()
     {
-        AnimatorControl.isP2Move = false;
         if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
         {
             AnimatorControl.isP2Skill = false;
@@ -465,7 +467,6 @@ public class EventControl : MonoBehaviour
     }
     IEnumerator P3_EventHappened()
     {
-        AnimatorControl.isP3Move = false;
         if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
         {
             AnimatorControl.isP3Skill = false;
@@ -540,7 +541,6 @@ public class EventControl : MonoBehaviour
     }
     IEnumerator P4_EventHappened()
     {
-        AnimatorControl.isP4Move = false;
         if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
         {
             AnimatorControl.isP4Skill = false;
