@@ -112,6 +112,13 @@ public class OrdinaryColliderControl : MonoBehaviour
             StartCoroutine(Transposition());
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "StopProps")
+        {
+            print("OK");
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "P1")
