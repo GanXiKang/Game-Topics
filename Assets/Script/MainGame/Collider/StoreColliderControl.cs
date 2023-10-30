@@ -11,6 +11,8 @@ public class StoreColliderControl : MonoBehaviour
     public int pointNum;
     public Transform target, buying;
 
+    bool isStopProps = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (!PropsControl.isTrans)
@@ -24,15 +26,32 @@ public class StoreColliderControl : MonoBehaviour
                         who = 1;
                         P1_EnterStore = false;
                         AnimatorControl.isP1Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
+                        if (!isStopProps)
                         {
-                            AnimatorControl.isP1Skill = false;
-                            AnimatorControl.isP1Wave = true;
-                            StartCoroutine(LookTarget());
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
+                            {
+                                AnimatorControl.isP1Skill = false;
+                                AnimatorControl.isP1Wave = true;
+                                StartCoroutine(LookTarget());
+                            }
+                            else
+                            {
+                                StartCoroutine(DragonFlyNow());
+                            }
                         }
                         else
                         {
-                            StartCoroutine(DragonFlyNow());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                isStopProps = false;
+                                AnimatorControl.isP1Skill = false;
+                                AnimatorControl.isP1Wave = true;
+                                StartCoroutine(LookTarget());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
@@ -206,6 +225,11 @@ public class StoreColliderControl : MonoBehaviour
                 }
             }
         }
+
+        if (other.tag == "StopProps")
+        {
+            isStopProps = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -243,6 +267,13 @@ public class StoreColliderControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
+    }
+    IEnumerator StopRound()
+    {
+        isStopProps = false;
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(4f);
         CameraMoveControl.isChangeCameraPoint = false;
     }
     IEnumerator Transposition()
