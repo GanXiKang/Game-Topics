@@ -32,12 +32,10 @@ public class MiniGameColliderControl : MonoBehaviour
                             {
                                 AnimatorControl.isP1Skill = false;
                                 StartCoroutine(StartMiniGame());
-                                print("1");
                             }
                             else
                             {
                                 StartCoroutine(DragonFlyNow());
-                                print("2");
                             }
                         }
                         else
