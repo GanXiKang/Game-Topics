@@ -16,6 +16,7 @@ public class EventControl : MonoBehaviour
     public bool eventAB;
 
     int r;
+    bool isStopProps = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,24 +29,57 @@ public class EventControl : MonoBehaviour
                     if (DiceControl.P1_totalNum == EventPoint)
                     {
                         P1_EnterEvent = false;
-                        if (!eventAB)
+                        if (!isStopProps)
                         {
-                            StartCoroutine(P1_EventHappened());
+                            if (!eventAB)
+                            {
+                                StartCoroutine(P1_EventHappened());
+                            }
+                            else
+                            {
+                                r = Random.Range(1, 3);
+                                switch (r)
+                                {
+                                    case 1:
+                                        EventA();
+                                        StartCoroutine(P1_EventHappened());
+                                        break;
+
+                                    case 2:
+                                        EventB();
+                                        StartCoroutine(P1_EventHappened());
+                                        break;
+                                }
+                            }
                         }
                         else
                         {
-                            r = Random.Range(1, 3);
-                            switch (r)
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                             {
-                                case 1:
-                                    EventA();
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                if (!eventAB)
+                                {
                                     StartCoroutine(P1_EventHappened());
-                                    break;
+                                }
+                                else
+                                {
+                                    r = Random.Range(1, 3);
+                                    switch (r)
+                                    {
+                                        case 1:
+                                            EventA();
+                                            StartCoroutine(P1_EventHappened());
+                                            break;
 
-                                case 2:
-                                    EventB();
-                                    StartCoroutine(P1_EventHappened());
-                                    break;
+                                        case 2:
+                                            EventB();
+                                            StartCoroutine(P1_EventHappened());
+                                            break;
+                                    }
+                                }
                             }
                         }
                         if (Menu_ChoosePlayer.whyP1 == 1)
@@ -59,24 +93,57 @@ public class EventControl : MonoBehaviour
                     if (DiceControl.P2_totalNum == EventPoint)
                     {
                         P2_EnterEvent = false;
-                        if (!eventAB)
+                        if (!isStopProps)
                         {
-                            StartCoroutine(P2_EventHappened());
+                            if (!eventAB)
+                            {
+                                StartCoroutine(P2_EventHappened());
+                            }
+                            else
+                            {
+                                r = Random.Range(1, 3);
+                                switch (r)
+                                {
+                                    case 1:
+                                        EventA();
+                                        StartCoroutine(P2_EventHappened());
+                                        break;
+
+                                    case 2:
+                                        EventB();
+                                        StartCoroutine(P2_EventHappened());
+                                        break;
+                                }
+                            }
                         }
                         else
                         {
-                            r = Random.Range(1, 3);
-                            switch (r)
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
-                                case 1:
-                                    EventA();
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                if (!eventAB)
+                                {
                                     StartCoroutine(P2_EventHappened());
-                                    break;
+                                }
+                                else
+                                {
+                                    r = Random.Range(1, 3);
+                                    switch (r)
+                                    {
+                                        case 1:
+                                            EventA();
+                                            StartCoroutine(P2_EventHappened());
+                                            break;
 
-                                case 2:
-                                    EventB();
-                                    StartCoroutine(P2_EventHappened());
-                                    break;
+                                        case 2:
+                                            EventB();
+                                            StartCoroutine(P2_EventHappened());
+                                            break;
+                                    }
+                                }
                             }
                         }
                         if (Menu_ChoosePlayer.whyP2 == 1)
@@ -90,30 +157,63 @@ public class EventControl : MonoBehaviour
                     if (DiceControl.P3_totalNum == EventPoint)
                     {
                         P3_EnterEvent = false;
-                        if (!eventAB)
+                        if (!isStopProps)
                         {
-                            StartCoroutine(P3_EventHappened());
+                            if (!eventAB)
+                            {
+                                StartCoroutine(P3_EventHappened());
+                            }
+                            else
+                            {
+                                r = Random.Range(1, 3);
+                                switch (r)
+                                {
+                                    case 1:
+                                        EventA();
+                                        StartCoroutine(P3_EventHappened());
+                                        break;
+
+                                    case 2:
+                                        EventB();
+                                        StartCoroutine(P3_EventHappened());
+                                        break;
+                                }
+                            }
                         }
                         else
                         {
-                            r = Random.Range(1, 3);
-                            switch (r)
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                             {
-                                case 1:
-                                    EventA();
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                if (!eventAB)
+                                {
                                     StartCoroutine(P3_EventHappened());
-                                    break;
+                                }
+                                else
+                                {
+                                    r = Random.Range(1, 3);
+                                    switch (r)
+                                    {
+                                        case 1:
+                                            EventA();
+                                            StartCoroutine(P3_EventHappened());
+                                            break;
 
-                                case 2:
-                                    EventB();
-                                    StartCoroutine(P3_EventHappened());
-                                    break;
+                                        case 2:
+                                            EventB();
+                                            StartCoroutine(P3_EventHappened());
+                                            break;
+                                    }
+                                }
                             }
                         }
-                    }
-                    if (Menu_ChoosePlayer.whyP3 == 1)
-                    {
-                        PowerUIControl.isMouseCanUsePower = false;
+                        if (Menu_ChoosePlayer.whyP3 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
                     }
                 }
                 else if (other.tag == "P4" && P4_EnterEvent)
@@ -121,30 +221,63 @@ public class EventControl : MonoBehaviour
                     if (DiceControl.P4_totalNum == EventPoint)
                     {
                         P4_EnterEvent = false;
-                        if (!eventAB)
+                        if (!isStopProps)
                         {
-                            StartCoroutine(P4_EventHappened());
+                            if (!eventAB)
+                            {
+                                StartCoroutine(P4_EventHappened());
+                            }
+                            else
+                            {
+                                r = Random.Range(1, 3);
+                                switch (r)
+                                {
+                                    case 1:
+                                        EventA();
+                                        StartCoroutine(P4_EventHappened());
+                                        break;
+
+                                    case 2:
+                                        EventB();
+                                        StartCoroutine(P4_EventHappened());
+                                        break;
+                                }
+                            }
                         }
                         else
                         {
-                            r = Random.Range(1, 3);
-                            switch (r)
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                             {
-                                case 1:
-                                    EventA();
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                if (!eventAB)
+                                {
                                     StartCoroutine(P4_EventHappened());
-                                    break;
+                                }
+                                else
+                                {
+                                    r = Random.Range(1, 3);
+                                    switch (r)
+                                    {
+                                        case 1:
+                                            EventA();
+                                            StartCoroutine(P4_EventHappened());
+                                            break;
 
-                                case 2:
-                                    EventB();
-                                    StartCoroutine(P4_EventHappened());
-                                    break;
+                                        case 2:
+                                            EventB();
+                                            StartCoroutine(P4_EventHappened());
+                                            break;
+                                    }
+                                }
                             }
                         }
-                    }
-                    if (Menu_ChoosePlayer.whyP4 == 1)
-                    {
-                        PowerUIControl.isMouseCanUsePower = false;
+                        if (Menu_ChoosePlayer.whyP4 == 1)
+                        {
+                            PowerUIControl.isMouseCanUsePower = false;
+                        }
                     }
                 }
             }
@@ -152,6 +285,13 @@ public class EventControl : MonoBehaviour
         else
         {
             StartCoroutine(Transposition());
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "StopProps")
+        {
+            isStopProps = true;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -472,6 +612,15 @@ public class EventControl : MonoBehaviour
             DiceUIControl.isDiceUI = true;
             CameraMoveControl.isChangeCameraPoint = false;
         }
+    }
+    IEnumerator StopRound()
+    {
+        isStopProps = false;
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(4f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
     IEnumerator Transposition()
     {
