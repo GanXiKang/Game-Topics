@@ -98,6 +98,7 @@ public class CameraMoveControl : MonoBehaviour
     }
     void ChangeCameraPoint()
     {
+        print(isChangeCameraPoint);
         if (isChangeCameraPoint)
         {
             transform.position = cameraPointB.position;
