@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CameraMoveControl : MonoBehaviour
 {
-    public static bool isChangeCameraPoint;
+    public static bool isChangeCameraPoint, isCameraModeUI;
 
     public Transform cameraPointA, cameraPointB, cameraPointC;
-    public GameObject CameraModeUI;
 
     float speed, maxDistance;
     bool isMove, isMovetoPointC;
@@ -65,14 +63,14 @@ public class CameraMoveControl : MonoBehaviour
             if (DiceUIControl.isDiceUI)
             {
                 isMove = true;
+                isCameraModeUI = true;
                 DiceUIControl.isDiceUI = false;
-                CameraModeUI.SetActive(true);
             }
             else if (isMove)
             {
                 isMove = false;
+                isCameraModeUI = false;
                 DiceUIControl.isDiceUI = true;
-                CameraModeUI.SetActive(false);
             }
         }
 
