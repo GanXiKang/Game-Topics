@@ -281,8 +281,6 @@ public class MiniGameColliderControl : MonoBehaviour
         isStopProps = false;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
-        ChangeCameraControl.changeCameraNum++;
-        DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
     }
     IEnumerator Transposition()
