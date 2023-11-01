@@ -462,7 +462,7 @@ public class AnimalsPowerControl : MonoBehaviour
                             systemText.text = "∂æ¡À" + RoundUIControl.Player[4].ToString();
                             SystemTestTextControl.isTimer = true;
                             AnimatorControl.isP4Dizziness = true;
-                            IsStopUIControl.isPoisonStopP3 = true;
+                            IsStopUIControl.isPoisonStopP4 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
                             {
                                 dragonUsePower = false;
