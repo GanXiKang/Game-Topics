@@ -10,6 +10,7 @@ public class DiceUIControl : MonoBehaviour
 
     public AudioClip dice;
     public GameObject interactiveUI;
+    public GameObject cameraModeUI;
 
     public static bool isDiceUI = true, isDiceScene = false;
 
@@ -26,6 +27,15 @@ public class DiceUIControl : MonoBehaviour
         else
         {
             interactiveUI.SetActive(false);
+        }
+
+        if (CameraMoveControl.isCameraModeUI)
+        {
+            cameraModeUI.SetActive(true);
+        }
+        else
+        {
+            cameraModeUI.SetActive(false);
         }
     }
     public void Button_Dice()
