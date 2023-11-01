@@ -221,7 +221,9 @@ public class IsStopUIControl : MonoBehaviour
         DiceUIControl.isDiceUI = false;
         systemText.text = "此回合暫停";
         SystemTestTextControl.isTimer = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
     }
     IEnumerator CowPowerStopThisRound()
     {
@@ -249,7 +251,9 @@ public class IsStopUIControl : MonoBehaviour
         DiceUIControl.isDiceUI = false;
         systemText.text = "此回合暫停";
         SystemTestTextControl.isTimer = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
     }
 
     void AnimalsConfusion()
