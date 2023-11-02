@@ -711,6 +711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8720929711649877778}
   - component: {fileID: 3126153738749612132}
+  - component: {fileID: 4764597407733522455}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -753,10 +754,10 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 8bce228448b32dc4e84cb01ff395d998, type: 3}
-  - {fileID: -6478536213147159724, guid: 8bce228448b32dc4e84cb01ff395d998, type: 3}
-  - {fileID: 4874126678125670354, guid: 8bce228448b32dc4e84cb01ff395d998, type: 3}
-  - {fileID: -6922793697723135513, guid: 8bce228448b32dc4e84cb01ff395d998, type: 3}
+  - {fileID: 2100000, guid: 5a357ceb2aaad3d4fb09646e8f56a45e, type: 2}
+  - {fileID: 2100000, guid: 5a357ceb2aaad3d4fb09646e8f56a45e, type: 2}
+  - {fileID: 2100000, guid: 5a357ceb2aaad3d4fb09646e8f56a45e, type: 2}
+  - {fileID: 2100000, guid: 5a357ceb2aaad3d4fb09646e8f56a45e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -829,6 +830,22 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0004785303, y: 0.054588202, z: -0.0133707095}
     m_Extent: {x: 0.037150517, y: 0.059115928, z: 0.036293134}
   m_DirtyAABB: 0
+--- !u!114 &4764597407733522455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4141911366896547503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3158a32dcd1994ea0bd476a0017c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expression:
+  - {fileID: 2100000, guid: 5a357ceb2aaad3d4fb09646e8f56a45e, type: 2}
+  - {fileID: 2100000, guid: cc1b01decb9a4ce4aa69152a2f382acc, type: 2}
+  - {fileID: 2100000, guid: f1ed4bbfa9d89a449a4f2e5b67d4d031, type: 2}
 --- !u!1 &4219161812015429436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,7 +1231,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5578864990365879278}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 39546.434, y: 105.489235, z: -650.7101}
   m_LocalScale: {x: 6.6, y: 6.6, z: 6.6}
   m_ConstrainProportionsScale: 0
