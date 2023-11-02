@@ -74,6 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5017044731747917377}
   - component: {fileID: 1712701046371918135}
+  - component: {fileID: 4865356879407216015}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -116,7 +117,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: ac73654722f52b54d8fa99acc58bc07c, type: 3}
+  - {fileID: 2100000, guid: bfcb2a0ce23db2949b0be10473ee233c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -188,6 +189,22 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00010106526, y: 0.052551176, z: -0.011427113}
     m_Extent: {x: 0.044001512, y: 0.0570789, z: 0.035720892}
   m_DirtyAABB: 0
+--- !u!114 &4865356879407216015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422756404002768892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3158a32dcd1994ea0bd476a0017c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expression:
+  - {fileID: 2100000, guid: bfcb2a0ce23db2949b0be10473ee233c, type: 2}
+  - {fileID: 2100000, guid: 28f839242a4d61f47aa645e394cf77b6, type: 2}
+  - {fileID: 2100000, guid: 84417f53aca1bf64bbb10d8ae42529a2, type: 2}
 --- !u!1 &444609055131731567
 GameObject:
   m_ObjectHideFlags: 0
