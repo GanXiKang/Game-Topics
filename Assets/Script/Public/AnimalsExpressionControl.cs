@@ -6,7 +6,7 @@ public class AnimalsExpressionControl : MonoBehaviour
 {
     SkinnedMeshRenderer smr;
 
-    public Material[] expression = new Material[4];
+    public Material[] expression = new Material[3];
 
     bool isBlink = true;
 
@@ -27,10 +27,6 @@ public class AnimalsExpressionControl : MonoBehaviour
     {
         isBlink = false;
         smr.material = expression[1];
-        yield return new WaitForSeconds(0.2f);
-        smr.material = expression[2];
-        yield return new WaitForSeconds(0.2f);
-        smr.material = expression[3];
         yield return new WaitForSeconds(0.2f);
         smr.material = expression[2];
         yield return new WaitForSeconds(0.2f);
