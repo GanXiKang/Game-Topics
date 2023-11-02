@@ -678,7 +678,7 @@ public class AnimalsPowerControl : MonoBehaviour
         AnimalsSkillAnimator();
         BGM.PlayOneShot(monkey);
         CameraMoveControl.isChangeCameraPoint = true;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         monkeyPutBananaPower = true;
         AnimalsSkillAnimator();
         DiceUIControl.isDiceUI = true;
