@@ -205,7 +205,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355754490543980168}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 39473.1, y: 157.94194, z: -703.9005}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
@@ -1978,6 +1978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3496217915295455860}
   - component: {fileID: 7125165986179622146}
+  - component: {fileID: 4934565296803931766}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -2020,9 +2021,9 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: b95ed6262b175394f86f3b163536b46a, type: 3}
-  - {fileID: -3846018093981099296, guid: b95ed6262b175394f86f3b163536b46a, type: 3}
-  - {fileID: 4874126678125670354, guid: b95ed6262b175394f86f3b163536b46a, type: 3}
+  - {fileID: 2100000, guid: 680299408e14e38479f9a28118a3ae91, type: 2}
+  - {fileID: 2100000, guid: 680299408e14e38479f9a28118a3ae91, type: 2}
+  - {fileID: 2100000, guid: 680299408e14e38479f9a28118a3ae91, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2098,6 +2099,22 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.001174625, y: 0.05182424, z: -0.0081805745}
     m_Extent: {x: 0.03840729, y: 0.056461852, z: 0.037669517}
   m_DirtyAABB: 0
+--- !u!114 &4934565296803931766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140536169755952073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3158a32dcd1994ea0bd476a0017c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expression:
+  - {fileID: 2100000, guid: 680299408e14e38479f9a28118a3ae91, type: 2}
+  - {fileID: 2100000, guid: 928755f114dca2b429704e104b95080e, type: 2}
+  - {fileID: 2100000, guid: 567d81390a3f36f49b9fcf8398a848a9, type: 2}
 --- !u!1 &8290706513120592474
 GameObject:
   m_ObjectHideFlags: 0
