@@ -35,6 +35,5 @@ public class AnimalsExpressionControl : MonoBehaviour
         smr.material = expression[0];
         yield return new WaitForSeconds(10f);
         isBlink = true;
-
     }
 }
