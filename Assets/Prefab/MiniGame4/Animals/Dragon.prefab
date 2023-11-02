@@ -469,6 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6055338929460784866}
   - component: {fileID: 462817091729150356}
+  - component: {fileID: 5796029859312801187}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -608,6 +609,22 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000000007450581, y: 0.054914746, z: -0.015901139}
     m_Extent: {x: 0.04677385, y: 0.059442464, z: 0.037944004}
   m_DirtyAABB: 0
+--- !u!114 &5796029859312801187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474105910557521759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3158a32dcd1994ea0bd476a0017c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expression:
+  - {fileID: 2100000, guid: 4fd774fc1f9cf9b4d8eba239ed9406f4, type: 2}
+  - {fileID: 2100000, guid: 88fd2839b653e964f9fcd77ffc048bc5, type: 2}
+  - {fileID: 2100000, guid: 5c65ba9c37f4b924c9614a3988719338, type: 2}
 --- !u!1 &1694317328466081484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,7 +2305,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6945124385448512030}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 39533.977, y: 120.35968, z: -676.6924}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
