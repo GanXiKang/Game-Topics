@@ -2206,6 +2206,7 @@ GameObject:
   - component: {fileID: 9089348081074477638}
   - component: {fileID: 8120171536937088117}
   - component: {fileID: 1230763173048242007}
+  - component: {fileID: 1994126424427233421}
   m_Layer: 0
   m_Name: Cube.skin
   m_TagString: Untagged
@@ -2248,7 +2249,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 0de3c00c64ffa8f48bfb46a98de517d7, type: 3}
+  - {fileID: 2100000, guid: f080632cf327f364bbc18380375f182c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2339,9 +2340,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expression:
   - {fileID: 2100000, guid: f080632cf327f364bbc18380375f182c, type: 2}
-  - {fileID: 2100000, guid: 4c7205c208a1e624f8dc6921cd4a3a75, type: 2}
-  - {fileID: 2100000, guid: b288e9e303f00ae4aab4b242836f9df8, type: 2}
-  - {fileID: 2100000, guid: e90ac2b337ef03c4e947933a7f80c71c, type: 2}
+  - {fileID: 2100000, guid: 4b848b5c392aa8d458515be7eedfdb90, type: 2}
+  - {fileID: 2100000, guid: 6dfc4ef4d362ab24d8442d9597801d04, type: 2}
+--- !u!114 &1994126424427233421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8661577641688798006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3158a32dcd1994ea0bd476a0017c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expression:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8808800773664684430
 GameObject:
   m_ObjectHideFlags: 0

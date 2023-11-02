@@ -1286,7 +1286,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4591537162990852069}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -32.274597, y: 17.603462, z: 12.763234}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
@@ -1496,6 +1496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950082987336252498}
   - component: {fileID: 5341629048653894241}
+  - component: {fileID: 8043338346768973126}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1538,7 +1539,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: adb66117b9170dd4493d3a82c81ec009, type: 3}
+  - {fileID: 2100000, guid: f080632cf327f364bbc18380375f182c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1615,6 +1616,22 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0011746269, y: 0.060931776, z: -0.008983608}
     m_Extent: {x: 0.03840729, y: 0.065569386, z: 0.048870984}
   m_DirtyAABB: 0
+--- !u!114 &8043338346768973126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802518722602382626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3158a32dcd1994ea0bd476a0017c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expression:
+  - {fileID: 2100000, guid: f080632cf327f364bbc18380375f182c, type: 2}
+  - {fileID: 2100000, guid: 4b848b5c392aa8d458515be7eedfdb90, type: 2}
+  - {fileID: 2100000, guid: 6dfc4ef4d362ab24d8442d9597801d04, type: 2}
 --- !u!1 &5181694893946142025
 GameObject:
   m_ObjectHideFlags: 0
