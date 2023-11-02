@@ -678,7 +678,7 @@ public class AnimalsPowerControl : MonoBehaviour
         AnimalsSkillAnimator();
         BGM.PlayOneShot(monkey);
         CameraMoveControl.isChangeCameraPoint = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         monkeyPutBananaPower = true;
         AnimalsSkillAnimator();
         DiceUIControl.isDiceUI = true;
@@ -818,7 +818,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 BGM.PlayOneShot(pigBad);
                 break;
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         AnimalsSkillAnimator();
         pigPowerGood = false;
         pigPowerBad = false;
