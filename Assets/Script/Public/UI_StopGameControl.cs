@@ -15,6 +15,7 @@ public class UI_StopGameControl : MonoBehaviour
         OperateUI = GameObject.Find("OperateUI");
        
         stopGameUI.SetActive(false);
+        OperateUI.SetActive(false);
         isOperate = false;
     }
     void Update()
@@ -50,7 +51,7 @@ public class UI_StopGameControl : MonoBehaviour
     {
         Time.timeScale = 1f;
         stopGameUI.SetActive(false);
-
+        isOperate = false;
         if (MiniGameColliderControl.isMiniGame)
         {
             miniGameUI.SetActive(true);
@@ -61,12 +62,11 @@ public class UI_StopGameControl : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         stopGameUI.SetActive(false);
+        isOperate = false;
     }
     public void Operate()
     {
-        print(isOperate);
         isOperate = !isOperate;
         OperateUI.SetActive(isOperate);
-        print(isOperate);
     }
 }
