@@ -64,7 +64,9 @@ public class UI_StopGameControl : MonoBehaviour
     }
     public void Operate()
     {
+        print(isOperate);
         isOperate = !isOperate;
         OperateUI.SetActive(isOperate);
+        print(isOperate);
     }
 }
