@@ -15,11 +15,12 @@ public class UI_StopGameControl : MonoBehaviour
         OperateUI = GameObject.Find("OperateUI");
        
         stopGameUI.SetActive(false);
-        OperateUI.SetActive(false);
         isOperate = false;
     }
     void Update()
     {
+        OperateUI.SetActive(isOperate);
+
         if (MiniGameColliderControl.isMiniGame)
         {
             if (isFind)
@@ -67,6 +68,5 @@ public class UI_StopGameControl : MonoBehaviour
     public void Operate()
     {
         isOperate = !isOperate;
-        OperateUI.SetActive(isOperate);
     }
 }
