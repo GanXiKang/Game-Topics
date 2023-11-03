@@ -5,15 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class UI_StopGameControl : MonoBehaviour
 {
-    GameObject stopGameUI, miniGameUI;
+    GameObject stopGameUI, miniGameUI, OperateUI;
 
-    bool isFind;
+    bool isFind, isOperate;
 
     void Start()
     {
         stopGameUI = GameObject.Find("StopGameUI");
        
         stopGameUI.SetActive(false);
+        isOperate = false;
     }
     void Update()
     {
@@ -43,6 +44,7 @@ public class UI_StopGameControl : MonoBehaviour
             }
         }
     }
+
     public void ContinueGame()
     {
         Time.timeScale = 1f;
@@ -58,5 +60,10 @@ public class UI_StopGameControl : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         stopGameUI.SetActive(false);
+    }
+    public void Operate()
+    {
+        isOperate = !isOperate;
+        OperateUI.SetActive(isOperate);
     }
 }
