@@ -12,6 +12,7 @@ public class UI_StopGameControl : MonoBehaviour
     void Start()
     {
         stopGameUI = GameObject.Find("StopGameUI");
+        OperateUI = GameObject.Find("OperateUI");
        
         stopGameUI.SetActive(false);
         isOperate = false;
