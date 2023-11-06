@@ -130,6 +130,7 @@ public class BananaControl : MonoBehaviour
             }
         }
     }
+
     IEnumerator StopTiming()
     {
         rb.isKinematic = false;

@@ -141,6 +141,7 @@ public class BombPropsControl : MonoBehaviour
             }
         }
     }
+
     IEnumerator StopTiming()
     {
         r = false;
