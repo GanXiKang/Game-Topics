@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class BananaControl : MonoBehaviour
 {
+    Rigidbody rb; 
+
     public static int pointNum;
     public static bool iscolliderBananaText = false;
     public static bool isBananaSound = false;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -125,6 +132,7 @@ public class BananaControl : MonoBehaviour
     }
     IEnumerator StopTiming()
     {
+        rb.isKinematic = false;
         isBananaSound = true;
         iscolliderBananaText = true;
         yield return new WaitForSeconds(5f);

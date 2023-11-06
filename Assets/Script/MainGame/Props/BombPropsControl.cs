@@ -5,6 +5,7 @@ using UnityEngine;
 public class BombPropsControl : MonoBehaviour
 {
     AudioSource boom;
+    Rigidbody rb;
 
     public static int pointNum;
     public static bool iscolliderBombText = false;
@@ -14,7 +15,9 @@ public class BombPropsControl : MonoBehaviour
     void Start()
     {
         boom = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody>();
     }
+
     void FixedUpdate()
     {
         if (r)
@@ -141,6 +144,7 @@ public class BombPropsControl : MonoBehaviour
     IEnumerator StopTiming()
     {
         r = false;
+        rb.isKinematic = false;
         boom.Play();
         iscolliderBombText = true;
         yield return new WaitForSeconds(4f);
