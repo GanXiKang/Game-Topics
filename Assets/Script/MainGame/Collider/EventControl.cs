@@ -290,9 +290,7 @@ public class EventControl : MonoBehaviour
         {
             StartCoroutine(Transposition());
         }
-    }
-    private void OnTriggerStay(Collider other)
-    {
+
         if (other.tag == "StopProps")
         {
             isStopProps = true;

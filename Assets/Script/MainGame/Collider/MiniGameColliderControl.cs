@@ -174,6 +174,11 @@ public class MiniGameColliderControl : MonoBehaviour
         {
             StartCoroutine(Transposition());
         }
+
+        if (other.tag == "StopProps")
+        {
+            isStopProps = true;
+        }
     }
     private void OnTriggerStay(Collider other)
     {
@@ -228,11 +233,6 @@ public class MiniGameColliderControl : MonoBehaviour
                     other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
                 }
             }
-        }
-
-        if (other.tag == "StopProps")
-        {
-            isStopProps = true;
         }
     }
     private void OnTriggerExit(Collider other)

@@ -188,6 +188,11 @@ public class StoreColliderControl : MonoBehaviour
         {
             StartCoroutine(Transposition());
         }
+
+        if (other.tag == "StopProps")
+        {
+            isStopProps = true;
+        }
     }
     private void OnTriggerStay(Collider other)
     {
@@ -274,11 +279,6 @@ public class StoreColliderControl : MonoBehaviour
                     }
                 }
             }
-        }
-
-        if (other.tag == "StopProps")
-        {
-            isStopProps = true;
         }
     }
     private void OnTriggerExit(Collider other)
