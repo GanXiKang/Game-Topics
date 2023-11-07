@@ -713,7 +713,8 @@ public class AnimalsPowerControl : MonoBehaviour
         BGM.PlayOneShot(dog);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
-        DiceUIControl.isDiceUI = true;
+        SceneManager.LoadScene(9);
+        DiceUIControl.isDiceScene = true;
         CameraMoveControl.isChangeCameraPoint = false;
     }
 
