@@ -40,7 +40,7 @@ public class DiceControl : MonoBehaviour
             diceUI.SetActive(false);
             backUI.SetActive(false);
         }
-        if (BagUIControl.putBomb)
+        if (BagUIControl.putBomb || AnimalsPowerControl.dogUsePower)
         {
             backUI.SetActive(false);
         }
