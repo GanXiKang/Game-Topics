@@ -230,6 +230,14 @@ public class ChestColliderControl : MonoBehaviour
         yield return new WaitForSeconds(1f);
         PropsControl.isTrans = false;
     }
+    IEnumerator StopRound()
+    {
+        isStopProps = false;
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(3f);
+        CameraMoveControl.isChangeCameraPoint = false;
+    }
+
 
     void TrueByAnimator()
     {
