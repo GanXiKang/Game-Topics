@@ -28,117 +28,131 @@ public class BombPropsControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "P1")
+        switch (ChangeCameraControl.changeCameraNum)
         {
-            if (!InsBombControl.isP1InsBomb)
-            {
-                if (DiceControl.P1_totalNum == pointNum)
+            case 1:
+                if (other.tag == "P1")
                 {
-                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                    if (!InsBombControl.isP1InsBomb)
                     {
-                        AnimatorControl.isP1Dizziness = true;
-                        IsStopUIControl.isBombStopP1 = true;
-                        StartCoroutine(StopTiming());
-                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                        if (DiceControl.P1_totalNum == pointNum)
                         {
-                            AnimalsPowerControl.dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                            {
+                                AnimatorControl.isP1Dizziness = true;
+                                IsStopUIControl.isBombStopP1 = true;
+                                StartCoroutine(StopTiming());
+                                if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                                {
+                                    AnimalsPowerControl.dragonUsePower = false;
+                                    AnimatorControl.isP1Skill = false;
+                                }
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
+                            }
                         }
                     }
                     else
                     {
-                        Destroy(this.gameObject);
+                        InsBombControl.isP1InsBomb = false;
                     }
                 }
-            }
-            else 
-            {
-                InsBombControl.isP1InsBomb = false;
-            }
-        }
-        else if (other.tag == "P2")
-        {
-            if (!InsBombControl.isP2InsBomb)
-            {
-                if (DiceControl.P2_totalNum == pointNum)
+                break;
+
+            case 2:
+                if (other.tag == "P2")
                 {
-                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                    if (!InsBombControl.isP2InsBomb)
                     {
-                        AnimatorControl.isP2Dizziness = true;
-                        IsStopUIControl.isBombStopP2 = true;
-                        StartCoroutine(StopTiming());
-                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                        if (DiceControl.P2_totalNum == pointNum)
                         {
-                            AnimalsPowerControl.dragonUsePower = false;
-                            AnimatorControl.isP2Skill = false;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            {
+                                AnimatorControl.isP2Dizziness = true;
+                                IsStopUIControl.isBombStopP2 = true;
+                                StartCoroutine(StopTiming());
+                                if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                                {
+                                    AnimalsPowerControl.dragonUsePower = false;
+                                    AnimatorControl.isP2Skill = false;
+                                }
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
+                            }
                         }
                     }
                     else
                     {
-                        Destroy(this.gameObject);
+                        InsBombControl.isP2InsBomb = false;
                     }
                 }
-            }
-            else
-            {
-                InsBombControl.isP2InsBomb = false;
-            }
-        }
-        else if (other.tag == "P3")
-        {
-            if (!InsBombControl.isP3InsBomb)
-            {
-                if (DiceControl.P3_totalNum == pointNum)
+                break;
+
+            case 3:
+                if (other.tag == "P3")
                 {
-                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                    if (!InsBombControl.isP3InsBomb)
                     {
-                        AnimatorControl.isP3Dizziness = true;
-                        IsStopUIControl.isBombStopP3 = true;
-                        StartCoroutine(StopTiming());
-                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                        if (DiceControl.P3_totalNum == pointNum)
                         {
-                            AnimalsPowerControl.dragonUsePower = false;
-                            AnimatorControl.isP3Skill = false;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                            {
+                                AnimatorControl.isP3Dizziness = true;
+                                IsStopUIControl.isBombStopP3 = true;
+                                StartCoroutine(StopTiming());
+                                if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                                {
+                                    AnimalsPowerControl.dragonUsePower = false;
+                                    AnimatorControl.isP3Skill = false;
+                                }
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
+                            }
                         }
                     }
                     else
                     {
-                        Destroy(this.gameObject);
+                        InsBombControl.isP3InsBomb = false;
                     }
                 }
-            }
-            else
-            {
-                InsBombControl.isP3InsBomb = false;
-            }
-        }
-        else if (other.tag == "P4")
-        {
-            if (!InsBombControl.isP4InsBomb)
-            {
-                if (DiceControl.P4_totalNum == pointNum)
+                break;
+
+            case 4:
+                if (other.tag == "P4")
                 {
-                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                    if (!InsBombControl.isP4InsBomb)
                     {
-                        AnimatorControl.isP4Dizziness = true;
-                        IsStopUIControl.isBombStopP4 = true;
-                        StartCoroutine(StopTiming());
-                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                        if (DiceControl.P4_totalNum == pointNum)
                         {
-                            AnimalsPowerControl.dragonUsePower = false;
-                            AnimatorControl.isP4Skill = false;
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                            {
+                                AnimatorControl.isP4Dizziness = true;
+                                IsStopUIControl.isBombStopP4 = true;
+                                StartCoroutine(StopTiming());
+                                if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                                {
+                                    AnimalsPowerControl.dragonUsePower = false;
+                                    AnimatorControl.isP4Skill = false;
+                                }
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
+                            }
                         }
                     }
                     else
                     {
-                        Destroy(this.gameObject);
+                        InsBombControl.isP4InsBomb = false;
                     }
                 }
-            }
-            else
-            {
-                InsBombControl.isP4InsBomb = false;
-            }
+                break;
         }
     }
 
