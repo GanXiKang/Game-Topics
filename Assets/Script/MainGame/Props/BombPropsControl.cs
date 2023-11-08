@@ -54,10 +54,6 @@ public class BombPropsControl : MonoBehaviour
                             }
                         }
                     }
-                    else
-                    {
-                        InsBombControl.isP1InsBomb = false;
-                    }
                 }
                 break;
 
@@ -169,6 +165,5 @@ public class BombPropsControl : MonoBehaviour
         yield return new WaitForSeconds(4f);
         IsStopUIControl.isBombStopUI++;
         Destroy(this.gameObject);
-        once = true;
     }
 }
