@@ -31,28 +31,7 @@ public class BombPropsControl : MonoBehaviour
     {
         if (other.tag == "P1")
         {
-            if (!InsBombControl.isP1InsBomb)
-            {
-                //if (DiceControl.P1_totalNum == pointNum)
-                //{
-                //    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
-                //    {
-                //        AnimatorControl.isP1Dizziness = true;
-                //        IsStopUIControl.isBombStopP1 = true;
-                //        StartCoroutine(StopTiming());
-                //        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
-                //        {
-                //            AnimalsPowerControl.dragonUsePower = false;
-                //            AnimatorControl.isP1Skill = false;
-                //        }
-                //    }
-                //    else
-                //    {
-                //        Destroy(this.gameObject);
-                //    }
-                //}
-            }
-            else
+            if (InsBombControl.isP1InsBomb)
             {
                 whoPut = 1;
                 InsBombControl.isP1InsBomb = false;
@@ -60,28 +39,7 @@ public class BombPropsControl : MonoBehaviour
         }
         else if (other.tag == "P2")
         {
-            if (!InsBombControl.isP2InsBomb)
-            {
-                //if (DiceControl.P2_totalNum == pointNum)
-                //{
-                    //if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
-                    //{
-                    //    AnimatorControl.isP2Dizziness = true;
-                    //    IsStopUIControl.isBombStopP2 = true;
-                    //    StartCoroutine(StopTiming());
-                    //    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
-                    //    {
-                    //        AnimalsPowerControl.dragonUsePower = false;
-                    //        AnimatorControl.isP2Skill = false;
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    Destroy(this.gameObject);
-                    //}
-                //}
-            }
-            else
+            if (InsBombControl.isP2InsBomb)
             {
                 whoPut = 2;
                 InsBombControl.isP2InsBomb = false;
@@ -89,28 +47,7 @@ public class BombPropsControl : MonoBehaviour
         }
         else if (other.tag == "P3")
         {
-            if (!InsBombControl.isP3InsBomb)
-            {
-                //if (DiceControl.P3_totalNum == pointNum)
-                //{
-                //    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
-                //    {
-                //        AnimatorControl.isP3Dizziness = true;
-                //        IsStopUIControl.isBombStopP3 = true;
-                //        StartCoroutine(StopTiming());
-                //        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
-                //        {
-                //            AnimalsPowerControl.dragonUsePower = false;
-                //            AnimatorControl.isP3Skill = false;
-                //        }
-                //    }
-                //    else
-                //    {
-                //        Destroy(this.gameObject);
-                //    }
-                //}
-            }
-            else
+            if (InsBombControl.isP3InsBomb)
             {
                 whoPut = 3;
                 InsBombControl.isP3InsBomb = false;
@@ -118,29 +55,8 @@ public class BombPropsControl : MonoBehaviour
         }
         else if (other.tag == "P4")
         {
-            if (!InsBombControl.isP4InsBomb)
-            {
-                //if (DiceControl.P4_totalNum == pointNum)
-                //{
-                //    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
-                //    {
-                //        AnimatorControl.isP4Dizziness = true;
-                //        IsStopUIControl.isBombStopP4 = true;
-                //        StartCoroutine(StopTiming());
-                //        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
-                //        {
-                //            AnimalsPowerControl.dragonUsePower = false;
-                //            AnimatorControl.isP4Skill = false;
-                //        }
-                //    }
-                //    else
-                //    {
-                //        Destroy(this.gameObject);
-                //    }
-                //}
-            }
-            else
-            {
+            if (InsBombControl.isP4InsBomb)
+            {    
                 whoPut = 4;
                 InsBombControl.isP4InsBomb = false;
             }
