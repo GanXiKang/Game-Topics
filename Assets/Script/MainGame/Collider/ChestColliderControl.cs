@@ -11,6 +11,7 @@ public class ChestColliderControl : MonoBehaviour
     public static int isOpen;
 
     bool isOpened = false;
+    bool isStopProps = false;
 
     void OpenBoxJudge()
     {
@@ -115,6 +116,11 @@ public class ChestColliderControl : MonoBehaviour
         else
         {
             StartCoroutine(Transposition());
+        }
+
+        if (other.tag == "StopProps")
+        {
+            isStopProps = true;
         }
     }
     private void OnTriggerStay(Collider other)
