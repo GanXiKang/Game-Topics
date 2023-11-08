@@ -152,7 +152,6 @@ public class BombPropsControl : MonoBehaviour
         {
             if (once)
             {
-                print("2");
                 switch (ChangeCameraControl.changeCameraNum)
                 {
                     case 1:
