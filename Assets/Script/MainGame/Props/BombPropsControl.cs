@@ -252,11 +252,9 @@ public class BombPropsControl : MonoBehaviour
         boom.Play();
         iscolliderBombText = true;
         DiceUIControl.isDiceUI = false;
-        CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
-        CameraMoveControl.isChangeCameraPoint = false;
         yield return new WaitForSeconds(2f);
         IsStopUIControl.isBombStopUI++;
         Destroy(this.gameObject);
