@@ -62,8 +62,8 @@ public class BombPropsControl : MonoBehaviour
         {
             if (!InsBombControl.isP2InsBomb)
             {
-                if (DiceControl.P2_totalNum == pointNum)
-                {
+                //if (DiceControl.P2_totalNum == pointNum)
+                //{
                     //if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                     //{
                     //    AnimatorControl.isP2Dizziness = true;
@@ -79,7 +79,7 @@ public class BombPropsControl : MonoBehaviour
                     //{
                     //    Destroy(this.gameObject);
                     //}
-                }
+                //}
             }
             else
             {
@@ -150,8 +150,10 @@ public class BombPropsControl : MonoBehaviour
     {
         if (whoPut != ChangeCameraControl.changeCameraNum)
         {
+            print("ok");
             if (once)
             {
+                print("2");
                 switch (ChangeCameraControl.changeCameraNum)
                 {
                     case 1:
