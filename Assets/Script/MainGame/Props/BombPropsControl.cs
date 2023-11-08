@@ -10,7 +10,7 @@ public class BombPropsControl : MonoBehaviour
     public static int pointNum;
     public static bool iscolliderBombText = false;
 
-    bool r = true;
+    bool r = true, once = true;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class BombPropsControl : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         switch (ChangeCameraControl.changeCameraNum)
         {
@@ -68,20 +68,24 @@ public class BombPropsControl : MonoBehaviour
                     {
                         if (DiceControl.P2_totalNum == pointNum)
                         {
-                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            if (once)
                             {
-                                AnimatorControl.isP2Dizziness = true;
-                                IsStopUIControl.isBombStopP2 = true;
-                                StartCoroutine(StopTiming());
-                                if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                                 {
-                                    AnimalsPowerControl.dragonUsePower = false;
-                                    AnimatorControl.isP2Skill = false;
+                                    AnimatorControl.isP2Dizziness = true;
+                                    IsStopUIControl.isBombStopP2 = true;
+                                    StartCoroutine(StopTiming());
+                                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                                    {
+                                        AnimalsPowerControl.dragonUsePower = false;
+                                        AnimatorControl.isP2Skill = false;
+                                    }
                                 }
-                            }
-                            else
-                            {
-                                Destroy(this.gameObject);
+                                else
+                                {
+                                    Destroy(this.gameObject);
+                                }
+                                once = false;
                             }
                         }
                     }
@@ -164,6 +168,7 @@ public class BombPropsControl : MonoBehaviour
         iscolliderBombText = true;
         yield return new WaitForSeconds(4f);
         IsStopUIControl.isBombStopUI++;
-        Destroy(this.gameObject);  
+        Destroy(this.gameObject);
+        once = true;
     }
 }
