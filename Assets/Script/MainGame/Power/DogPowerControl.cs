@@ -18,12 +18,12 @@ public class DogPowerControl : MonoBehaviour
     {
         if (AnimalsPowerControl.dogUsePower)
         {
-            agent.speed = 15f;
+            agent.speed = 17f;
             bc.enabled = true;
         }
         else
         {
-            agent.speed = 12f;
+            agent.speed = 15f;
             bc.enabled = false;
         }
     }

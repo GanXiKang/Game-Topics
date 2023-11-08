@@ -13,13 +13,22 @@ public class AnimalsPowerSpeedControl : MonoBehaviour
     }
     void Update()
     {
-        if (AnimalsPowerControl.rabbitUsePower || AnimalsPowerControl.horseUsePower)
+        if (AnimalsPowerControl.rabbitUsePower)
         {
-            agent.speed = 15f;
+            agent.speed = 18f;
         }
         else
         {
-            agent.speed = 12f;
+            agent.speed = 15f;
+        }
+
+        if (AnimalsPowerControl.horseUsePower)
+        {
+            agent.speed = 20f;
+        }
+        else
+        {
+            agent.speed = 15f;
         }
     }
 }

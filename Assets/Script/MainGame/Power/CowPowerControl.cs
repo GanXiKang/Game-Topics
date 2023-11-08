@@ -20,12 +20,12 @@ public class CowPowerControl : MonoBehaviour
     {
         if (AnimalsPowerControl.cowUsePower)
         {
-            agent.speed = 15f;
+            agent.speed = 20f;
             bc.enabled = true;
         }
         else 
         {
-            agent.speed = 12f;
+            agent.speed = 15f;
             bc.enabled = false;
         }
     }
