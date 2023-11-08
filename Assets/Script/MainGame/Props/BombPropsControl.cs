@@ -152,6 +152,7 @@ public class BombPropsControl : MonoBehaviour
         {
             if (once)
             {
+                print("2");
                 switch (ChangeCameraControl.changeCameraNum)
                 {
                     case 1:
@@ -167,6 +168,7 @@ public class BombPropsControl : MonoBehaviour
                                     AnimalsPowerControl.dragonUsePower = false;
                                     AnimatorControl.isP1Skill = false;
                                 }
+                                once = false;
                             }
                             else
                             {
@@ -188,6 +190,7 @@ public class BombPropsControl : MonoBehaviour
                                     AnimalsPowerControl.dragonUsePower = false;
                                     AnimatorControl.isP2Skill = false;
                                 }
+                                once = false;
                             }
                             else
                             {
@@ -209,6 +212,7 @@ public class BombPropsControl : MonoBehaviour
                                     AnimalsPowerControl.dragonUsePower = false;
                                     AnimatorControl.isP3Skill = false;
                                 }
+                                once = false;
                             }
                             else
                             {
@@ -230,6 +234,7 @@ public class BombPropsControl : MonoBehaviour
                                     AnimalsPowerControl.dragonUsePower = false;
                                     AnimatorControl.isP4Skill = false;
                                 }
+                                once = false;
                             }
                             else
                             {
@@ -238,7 +243,6 @@ public class BombPropsControl : MonoBehaviour
                         }
                         break;
                 }
-                once = false;
             }
         }
     }
