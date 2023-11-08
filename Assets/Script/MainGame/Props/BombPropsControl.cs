@@ -150,10 +150,8 @@ public class BombPropsControl : MonoBehaviour
     {
         if (whoPut != ChangeCameraControl.changeCameraNum)
         {
-            print("ok");
             if (once)
             {
-                print("2");
                 switch (ChangeCameraControl.changeCameraNum)
                 {
                     case 1:
