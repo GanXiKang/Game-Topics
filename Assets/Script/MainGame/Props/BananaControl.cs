@@ -22,7 +22,7 @@ public class BananaControl : MonoBehaviour
     {
         if (other.tag == "P1")
         {
-            if (!MonkeyPowerControl.isP1InsBanana)
+            if (MonkeyPowerControl.isP1InsBanana)
             {
                 whoPut = 1;
                 MonkeyPowerControl.isP1InsBanana = false;
@@ -30,7 +30,7 @@ public class BananaControl : MonoBehaviour
         }
         else if (other.tag == "P2")
         {
-            if (!MonkeyPowerControl.isP2InsBanana)
+            if (MonkeyPowerControl.isP2InsBanana)
             {
                 whoPut = 2;
                 MonkeyPowerControl.isP2InsBanana = false;
@@ -38,7 +38,7 @@ public class BananaControl : MonoBehaviour
         }
         else if (other.tag == "P3")
         {
-            if (!MonkeyPowerControl.isP3InsBanana)
+            if (MonkeyPowerControl.isP3InsBanana)
             {
                 whoPut = 3;
                 MonkeyPowerControl.isP3InsBanana = false;
