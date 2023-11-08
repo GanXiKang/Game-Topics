@@ -33,24 +33,24 @@ public class BombPropsControl : MonoBehaviour
         {
             if (!InsBombControl.isP1InsBomb)
             {
-                if (DiceControl.P1_totalNum == pointNum)
-                {
-                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
-                    {
-                        AnimatorControl.isP1Dizziness = true;
-                        IsStopUIControl.isBombStopP1 = true;
-                        StartCoroutine(StopTiming());
-                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
-                        {
-                            AnimalsPowerControl.dragonUsePower = false;
-                            AnimatorControl.isP1Skill = false;
-                        }
-                    }
-                    else
-                    {
-                        Destroy(this.gameObject);
-                    }
-                }
+                //if (DiceControl.P1_totalNum == pointNum)
+                //{
+                //    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                //    {
+                //        AnimatorControl.isP1Dizziness = true;
+                //        IsStopUIControl.isBombStopP1 = true;
+                //        StartCoroutine(StopTiming());
+                //        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                //        {
+                //            AnimalsPowerControl.dragonUsePower = false;
+                //            AnimatorControl.isP1Skill = false;
+                //        }
+                //    }
+                //    else
+                //    {
+                //        Destroy(this.gameObject);
+                //    }
+                //}
             }
             else
             {
@@ -64,21 +64,21 @@ public class BombPropsControl : MonoBehaviour
             {
                 if (DiceControl.P2_totalNum == pointNum)
                 {
-                    if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
-                    {
-                        AnimatorControl.isP2Dizziness = true;
-                        IsStopUIControl.isBombStopP2 = true;
-                        StartCoroutine(StopTiming());
-                        if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
-                        {
-                            AnimalsPowerControl.dragonUsePower = false;
-                            AnimatorControl.isP2Skill = false;
-                        }
-                    }
-                    else
-                    {
-                        Destroy(this.gameObject);
-                    }
+                    //if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                    //{
+                    //    AnimatorControl.isP2Dizziness = true;
+                    //    IsStopUIControl.isBombStopP2 = true;
+                    //    StartCoroutine(StopTiming());
+                    //    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                    //    {
+                    //        AnimalsPowerControl.dragonUsePower = false;
+                    //        AnimatorControl.isP2Skill = false;
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    Destroy(this.gameObject);
+                    //}
                 }
             }
             else
@@ -146,102 +146,102 @@ public class BombPropsControl : MonoBehaviour
             }
         }
     }
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    if (whoPut != ChangeCameraControl.changeCameraNum)
-    //    {
-    //        if (once)
-    //        {
-    //            switch (ChangeCameraControl.changeCameraNum)
-    //            {
-    //                case 1:
-    //                    if (DiceControl.P1_totalNum == pointNum)
-    //                    {
-    //                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
-    //                        {
-    //                            AnimatorControl.isP1Dizziness = true;
-    //                            IsStopUIControl.isBombStopP1 = true;
-    //                            StartCoroutine(StopTiming());
-    //                            if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
-    //                            {
-    //                                AnimalsPowerControl.dragonUsePower = false;
-    //                                AnimatorControl.isP1Skill = false;
-    //                            }
-    //                        }
-    //                        else
-    //                        {
-    //                            Destroy(this.gameObject);
-    //                        }
-    //                    }
-    //                    break;
+    private void OnTriggerStay(Collider other)
+    {
+        if (whoPut != ChangeCameraControl.changeCameraNum)
+        {
+            if (once)
+            {
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        if (DiceControl.P1_totalNum == pointNum)
+                        {
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                            {
+                                AnimatorControl.isP1Dizziness = true;
+                                IsStopUIControl.isBombStopP1 = true;
+                                StartCoroutine(StopTiming());
+                                if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
+                                {
+                                    AnimalsPowerControl.dragonUsePower = false;
+                                    AnimatorControl.isP1Skill = false;
+                                }
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
+                            }
+                        }
+                        break;
 
-    //                case 2:
-    //                    if (DiceControl.P2_totalNum == pointNum)
-    //                    {
-    //                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
-    //                        {
-    //                            AnimatorControl.isP2Dizziness = true;
-    //                            IsStopUIControl.isBombStopP2 = true;
-    //                            StartCoroutine(StopTiming());
-    //                            if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
-    //                            {
-    //                                AnimalsPowerControl.dragonUsePower = false;
-    //                                AnimatorControl.isP2Skill = false;
-    //                            }
-    //                        }
-    //                        else
-    //                        {
-    //                            Destroy(this.gameObject);
-    //                        }
-    //                    }
-    //                    break;
+                    case 2:
+                        if (DiceControl.P2_totalNum == pointNum)
+                        {
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            {
+                                AnimatorControl.isP2Dizziness = true;
+                                IsStopUIControl.isBombStopP2 = true;
+                                StartCoroutine(StopTiming());
+                                if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
+                                {
+                                    AnimalsPowerControl.dragonUsePower = false;
+                                    AnimatorControl.isP2Skill = false;
+                                }
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
+                            }
+                        }
+                        break;
 
-    //                case 3:
-    //                    if (DiceControl.P3_totalNum == pointNum)
-    //                    {
-    //                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
-    //                        {
-    //                            AnimatorControl.isP3Dizziness = true;
-    //                            IsStopUIControl.isBombStopP3 = true;
-    //                            StartCoroutine(StopTiming());
-    //                            if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
-    //                            {
-    //                                AnimalsPowerControl.dragonUsePower = false;
-    //                                AnimatorControl.isP3Skill = false;
-    //                            }
-    //                        }
-    //                        else
-    //                        {
-    //                            Destroy(this.gameObject);
-    //                        }
-    //                    }
-    //                    break;
+                    case 3:
+                        if (DiceControl.P3_totalNum == pointNum)
+                        {
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                            {
+                                AnimatorControl.isP3Dizziness = true;
+                                IsStopUIControl.isBombStopP3 = true;
+                                StartCoroutine(StopTiming());
+                                if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
+                                {
+                                    AnimalsPowerControl.dragonUsePower = false;
+                                    AnimatorControl.isP3Skill = false;
+                                }
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
+                            }
+                        }
+                        break;
 
-    //                case 4:
-    //                    if (DiceControl.P4_totalNum == pointNum)
-    //                    {
-    //                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
-    //                        {
-    //                            AnimatorControl.isP4Dizziness = true;
-    //                            IsStopUIControl.isBombStopP4 = true;
-    //                            StartCoroutine(StopTiming());
-    //                            if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
-    //                            {
-    //                                AnimalsPowerControl.dragonUsePower = false;
-    //                                AnimatorControl.isP4Skill = false;
-    //                            }
-    //                        }
-    //                        else
-    //                        {
-    //                            Destroy(this.gameObject);
-    //                        }
-    //                    }
-    //                    break;
-    //            }
-    //            once = false;
-    //        }
-    //    }
-    //}
+                    case 4:
+                        if (DiceControl.P4_totalNum == pointNum)
+                        {
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                            {
+                                AnimatorControl.isP4Dizziness = true;
+                                IsStopUIControl.isBombStopP4 = true;
+                                StartCoroutine(StopTiming());
+                                if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
+                                {
+                                    AnimalsPowerControl.dragonUsePower = false;
+                                    AnimatorControl.isP4Skill = false;
+                                }
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
+                            }
+                        }
+                        break;
+                }
+                once = false;
+            }
+        }
+    }
 
     IEnumerator StopTiming()
     {
@@ -249,13 +249,14 @@ public class BombPropsControl : MonoBehaviour
         rb.isKinematic = false;
         boom.Play();
         iscolliderBombText = true;
-        yield return new WaitForSeconds(4f);
+        DiceUIControl.isDiceUI = false;
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(2f);
+        ChangeCameraControl.changeCameraNum++;
+        DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
+        yield return new WaitForSeconds(2f);
         IsStopUIControl.isBombStopUI++;
         Destroy(this.gameObject);
     }
-    //IEnumerator ChangeCamera()
-    //{
-    //    DiceUIControl.isDiceUI = false;
-    //    yield return new WaitForSeconds(2f);
-    //}
 }
