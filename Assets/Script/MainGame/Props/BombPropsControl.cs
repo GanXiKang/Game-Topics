@@ -253,4 +253,9 @@ public class BombPropsControl : MonoBehaviour
         IsStopUIControl.isBombStopUI++;
         Destroy(this.gameObject);
     }
+    //IEnumerator ChangeCamera()
+    //{
+    //    DiceUIControl.isDiceUI = false;
+    //    yield return new WaitForSeconds(2f);
+    //}
 }
