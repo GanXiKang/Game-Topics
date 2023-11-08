@@ -21,7 +21,21 @@ public class OrdinaryColliderControl : MonoBehaviour
                     {
                         P1_Enter = false;
                         AnimatorControl.isP1Move = false;
-                        StartCoroutine(ChangeCamera());
+                        if (!isStopProps)
+                        {
+                            StartCoroutine(ChangeCamera());
+                        }
+                        else
+                        {
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                StartCoroutine(ChangeCamera());
+                            }
+                        }
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
                             PowerUIControl.isMouseCanUsePower = false;
@@ -43,7 +57,21 @@ public class OrdinaryColliderControl : MonoBehaviour
                     {
                         P2_Enter = false;
                         AnimatorControl.isP2Move = false;
-                        StartCoroutine(ChangeCamera());
+                        if (!isStopProps)
+                        {
+                            StartCoroutine(ChangeCamera());
+                        }
+                        else
+                        {
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                StartCoroutine(ChangeCamera());
+                            }
+                        }
                         if (Menu_ChoosePlayer.whyP2 == 1)
                         {
                             PowerUIControl.isMouseCanUsePower = false;
@@ -65,7 +93,21 @@ public class OrdinaryColliderControl : MonoBehaviour
                     {
                         P3_Enter = false;
                         AnimatorControl.isP3Move = false;
-                        StartCoroutine(ChangeCamera());
+                        if (!isStopProps)
+                        {
+                            StartCoroutine(ChangeCamera());
+                        }
+                        else
+                        {
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                StartCoroutine(ChangeCamera());
+                            }
+                        }
                         if (Menu_ChoosePlayer.whyP3 == 1)
                         {
                             PowerUIControl.isMouseCanUsePower = false;
@@ -87,7 +129,21 @@ public class OrdinaryColliderControl : MonoBehaviour
                     {
                         P4_Enter = false;
                         AnimatorControl.isP4Move = false;
-                        StartCoroutine(ChangeCamera());
+                        if (!isStopProps)
+                        {
+                            StartCoroutine(ChangeCamera());
+                        }
+                        else
+                        {
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                StartCoroutine(ChangeCamera());
+                            }
+                        }
                         if (Menu_ChoosePlayer.whyP4 == 1)
                         {
                             PowerUIControl.isMouseCanUsePower = false;

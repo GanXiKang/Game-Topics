@@ -29,14 +29,29 @@ public class ChestColliderControl : MonoBehaviour
                     {
                         P1_EnterBox = false;
                         AnimatorControl.isP1Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
+                        if (!isStopProps)
                         {
-                            AnimatorControl.isP1Skill = false;
-                            StartCoroutine(ChangeCamera());
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
+                            {
+                                AnimatorControl.isP1Skill = false;
+                                StartCoroutine(ChangeCamera());
+                            }
+                            else
+                            {
+                                StartCoroutine(DragonFlyNow());
+                            }
                         }
                         else
                         {
-                            StartCoroutine(DragonFlyNow());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                AnimatorControl.isP1Skill = false;
+                                StartCoroutine(ChangeCamera());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP1 == 1)
                         {
@@ -51,14 +66,29 @@ public class ChestColliderControl : MonoBehaviour
                     {
                         P2_EnterBox = false;
                         AnimatorControl.isP2Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
+                        if (!isStopProps)
                         {
-                            AnimatorControl.isP2Skill = false;
-                            StartCoroutine(ChangeCamera());
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
+                            {
+                                AnimatorControl.isP2Skill = false;
+                                StartCoroutine(ChangeCamera());
+                            }
+                            else
+                            {
+                                StartCoroutine(DragonFlyNow());
+                            }
                         }
                         else
                         {
-                            StartCoroutine(DragonFlyNow());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                AnimatorControl.isP2Skill = false;
+                                StartCoroutine(ChangeCamera());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP2 == 1)
                         {
@@ -73,14 +103,29 @@ public class ChestColliderControl : MonoBehaviour
                     {
                         P3_EnterBox = false;
                         AnimatorControl.isP3Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
+                        if (!isStopProps)
                         {
-                            AnimatorControl.isP3Skill = false;
-                            StartCoroutine(ChangeCamera());
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
+                            {
+                                AnimatorControl.isP3Skill = false;
+                                StartCoroutine(ChangeCamera());
+                            }
+                            else
+                            {
+                                StartCoroutine(DragonFlyNow());
+                            }
                         }
                         else
                         {
-                            StartCoroutine(DragonFlyNow());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                AnimatorControl.isP3Skill = false;
+                                StartCoroutine(ChangeCamera());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP3 == 1)
                         {
@@ -95,14 +140,29 @@ public class ChestColliderControl : MonoBehaviour
                     {
                         P4_EnterBox = false;
                         AnimatorControl.isP4Move = false;
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
+                        if (!isStopProps)
                         {
-                            AnimatorControl.isP4Skill = false;
-                            StartCoroutine(ChangeCamera());
+                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
+                            {
+                                AnimatorControl.isP4Skill = false;
+                                StartCoroutine(ChangeCamera());
+                            }
+                            else
+                            {
+                                StartCoroutine(DragonFlyNow());
+                            }
                         }
                         else
                         {
-                            StartCoroutine(DragonFlyNow());
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                            {
+                                StartCoroutine(StopRound());
+                            }
+                            else
+                            {
+                                AnimatorControl.isP4Skill = false;
+                                StartCoroutine(ChangeCamera());
+                            }
                         }
                         if (Menu_ChoosePlayer.whyP4 == 1)
                         {
