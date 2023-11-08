@@ -26,7 +26,7 @@ public class BombPropsControl : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         switch (ChangeCameraControl.changeCameraNum)
         {
@@ -55,6 +55,10 @@ public class BombPropsControl : MonoBehaviour
                         }
                     }
                 }
+                else
+                {
+                    InsBombControl.isP1InsBomb = false;
+                }
                 break;
 
             case 2:
@@ -64,24 +68,20 @@ public class BombPropsControl : MonoBehaviour
                     {
                         if (DiceControl.P2_totalNum == pointNum)
                         {
-                            if (once)
+                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
-                                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                                AnimatorControl.isP2Dizziness = true;
+                                IsStopUIControl.isBombStopP2 = true;
+                                StartCoroutine(StopTiming());
+                                if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
                                 {
-                                    AnimatorControl.isP2Dizziness = true;
-                                    IsStopUIControl.isBombStopP2 = true;
-                                    StartCoroutine(StopTiming());
-                                    if (AnimalsPowerControl.dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
-                                    {
-                                        AnimalsPowerControl.dragonUsePower = false;
-                                        AnimatorControl.isP2Skill = false;
-                                    }
+                                    AnimalsPowerControl.dragonUsePower = false;
+                                    AnimatorControl.isP2Skill = false;
                                 }
-                                else
-                                {
-                                    Destroy(this.gameObject);
-                                }
-                                once = false;
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
                             }
                         }
                     }
