@@ -419,7 +419,7 @@ public class AnimalsPowerControl : MonoBehaviour
         BGM.PlayOneShot(snake);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
-        IsStopUIControl.isSnakePowerStopUI += 1;
+        BGM.PlayOneShot(snake);
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
@@ -427,10 +427,11 @@ public class AnimalsPowerControl : MonoBehaviour
                 switch (snakePoisonWho)
                 {
                     case 1:
+                        systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP2Dizziness = true;
                             IsStopUIControl.isPoisonStopP2 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
@@ -439,13 +440,20 @@ public class AnimalsPowerControl : MonoBehaviour
                                 AnimatorControl.isP2Skill = false;
                             }
                         }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
+                        }
                         break;
 
                     case 2:
+                        systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP3Dizziness = true;
                             IsStopUIControl.isPoisonStopP3 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
@@ -454,13 +462,20 @@ public class AnimalsPowerControl : MonoBehaviour
                                 AnimatorControl.isP3Skill = false;
                             }
                         }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
+                        }
                         break;
 
                     case 3:
+                        systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP4Dizziness = true;
                             IsStopUIControl.isPoisonStopP4 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
@@ -468,6 +483,12 @@ public class AnimalsPowerControl : MonoBehaviour
                                 dragonUsePower = false;
                                 AnimatorControl.isP4Skill = false;
                             }
+                        }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
                         }
                         break;
                 }
@@ -478,10 +499,11 @@ public class AnimalsPowerControl : MonoBehaviour
                 switch (snakePoisonWho)
                 {
                     case 1:
+                        systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP1Dizziness = true;
                             IsStopUIControl.isPoisonStopP1 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
@@ -490,13 +512,20 @@ public class AnimalsPowerControl : MonoBehaviour
                                 AnimatorControl.isP1Skill = false;
                             }
                         }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
+                        }
                         break;
 
                     case 2:
+                        systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP3Dizziness = true;
                             IsStopUIControl.isPoisonStopP3 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
@@ -505,13 +534,20 @@ public class AnimalsPowerControl : MonoBehaviour
                                 AnimatorControl.isP3Skill = false;
                             }
                         }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
+                        }
                         break;
 
                     case 3:
+                        systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP4Dizziness = true;
                             IsStopUIControl.isPoisonStopP4 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
@@ -519,6 +555,12 @@ public class AnimalsPowerControl : MonoBehaviour
                                 dragonUsePower = false;
                                 AnimatorControl.isP4Skill = false;
                             }
+                        }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
                         }
                         break;
                 }
@@ -529,10 +571,11 @@ public class AnimalsPowerControl : MonoBehaviour
                 switch (snakePoisonWho)
                 {
                     case 1:
+                        systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP1Dizziness = true;
                             IsStopUIControl.isPoisonStopP1 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
@@ -541,13 +584,20 @@ public class AnimalsPowerControl : MonoBehaviour
                                 AnimatorControl.isP1Skill = false;
                             }
                         }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
+                        }
                         break;
 
                     case 2:
+                        systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP2Dizziness = true;
                             IsStopUIControl.isPoisonStopP2 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
@@ -556,13 +606,20 @@ public class AnimalsPowerControl : MonoBehaviour
                                 AnimatorControl.isP2Skill = false;
                             }
                         }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
+                        }
                         break;
 
                     case 3:
+                        systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[4].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP4Dizziness = true;
                             IsStopUIControl.isPoisonStopP4 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP4 == 5)
@@ -570,6 +627,12 @@ public class AnimalsPowerControl : MonoBehaviour
                                 dragonUsePower = false;
                                 AnimatorControl.isP4Skill = false;
                             }
+                        }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
                         }
                         break;
                 }
@@ -580,10 +643,11 @@ public class AnimalsPowerControl : MonoBehaviour
                 switch (snakePoisonWho)
                 {
                     case 1:
+                        systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[1].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP1Dizziness = true;
                             IsStopUIControl.isPoisonStopP1 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP1 == 5)
@@ -592,13 +656,20 @@ public class AnimalsPowerControl : MonoBehaviour
                                 AnimatorControl.isP1Skill = false;
                             }
                         }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
+                        }
                         break;
 
                     case 2:
+                        systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[2].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP2Dizziness = true;
                             IsStopUIControl.isPoisonStopP2 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP2 == 5)
@@ -607,13 +678,20 @@ public class AnimalsPowerControl : MonoBehaviour
                                 AnimatorControl.isP2Skill = false;
                             }
                         }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
+                        }
                         break;
 
                     case 3:
+                        systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
+                        SystemTestTextControl.isTimer = true;
                         if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                         {
-                            systemText.text = "毒了" + RoundUIControl.Player[3].ToString();
-                            SystemTestTextControl.isTimer = true;
+                            IsStopUIControl.isSnakePowerStopUI += 1;
                             AnimatorControl.isP3Dizziness = true;
                             IsStopUIControl.isPoisonStopP3 = true;
                             if (dragonUsePower && Menu_ChoosePlayer.whyP3 == 5)
@@ -622,11 +700,16 @@ public class AnimalsPowerControl : MonoBehaviour
                                 AnimatorControl.isP3Skill = false;
                             }
                         }
+                        else
+                        {
+                            yield return new WaitForSeconds(2f);
+                            systemText.text = "雞處於無敵狀態";
+                            SystemTestTextControl.isTimer = true;
+                        }
                         break;
                 }
                 break;
         }
-        BGM.PlayOneShot(snake);
         yield return new WaitForSeconds(2f);
         AnimalsSkillAnimator();
         CameraMoveControl.isChangeCameraPoint = false;
