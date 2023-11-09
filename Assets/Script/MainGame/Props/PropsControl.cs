@@ -10,6 +10,7 @@ public class PropsControl : MonoBehaviour
     public static int[] P2Props = new int[7];
     public static int[] P3Props = new int[7];
     public static int[] P4Props = new int[7];
+    public static int isTransNum = 0;
     public static bool isTrans = false;
 
     public Text[] PropsQuantity = new Text[7];
@@ -445,21 +446,22 @@ public class PropsControl : MonoBehaviour
         if (BagUIControl.isTransposition)
         {
             FindPlayer();
+            isTransNum = 0;
             isTrans = true;
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                    AnimatorControl.isP1Win = true;
                     switch (stealWho)
                     {
                         case 1:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
-                                transposition = P1.transform.position;
-                                P1.transform.position = P2.transform.position;
-                                P2.transform.position = transposition;
-
+                                //transposition = P1.transform.position;
+                                //P1.transform.position = P2.transform.position;
+                                //P2.transform.position = transposition;
+                                AnimatorControl.isP1Move = true;
+                                AnimatorControl.isP2Move = true;
                                 totalNum = DiceControl.P1_totalNum;
                                 DiceControl.P1_totalNum = DiceControl.P2_totalNum;
                                 DiceControl.P2_totalNum = totalNum;
@@ -474,10 +476,11 @@ public class PropsControl : MonoBehaviour
                         case 2:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                             {
-                                transposition = P1.transform.position;
-                                P1.transform.position = P3.transform.position;
-                                P3.transform.position = transposition;
-
+                                //transposition = P1.transform.position;
+                                //P1.transform.position = P3.transform.position;
+                                //P3.transform.position = transposition;
+                                AnimatorControl.isP1Move = true;
+                                AnimatorControl.isP3Move = true;
                                 totalNum = DiceControl.P1_totalNum;
                                 DiceControl.P1_totalNum = DiceControl.P3_totalNum;
                                 DiceControl.P3_totalNum = totalNum;
@@ -492,10 +495,11 @@ public class PropsControl : MonoBehaviour
                         case 3:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                             {
-                                transposition = P1.transform.position;
-                                P1.transform.position = P4.transform.position;
-                                P4.transform.position = transposition;
-
+                                //transposition = P1.transform.position;
+                                //P1.transform.position = P4.transform.position;
+                                //P4.transform.position = transposition;
+                                AnimatorControl.isP1Move = true;
+                                AnimatorControl.isP4Move = true;
                                 totalNum = DiceControl.P1_totalNum;
                                 DiceControl.P1_totalNum = DiceControl.P4_totalNum;
                                 DiceControl.P4_totalNum = totalNum;
@@ -511,16 +515,16 @@ public class PropsControl : MonoBehaviour
 
                 case 2:
                     stealWho = Random.Range(1, Menu_ChoosePlayer.whoPlay);
-                    AnimatorControl.isP2Win = true;
                     switch (stealWho)
                     {
                         case 1:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                             {
-                                transposition = P2.transform.position;
-                                P2.transform.position = P1.transform.position;
-                                P1.transform.position = transposition;
-
+                                //transposition = P2.transform.position;
+                                //P2.transform.position = P1.transform.position;
+                                //P1.transform.position = transposition;
+                                AnimatorControl.isP2Move = true;
+                                AnimatorControl.isP1Move = true;
                                 totalNum = DiceControl.P2_totalNum;
                                 DiceControl.P2_totalNum = DiceControl.P1_totalNum;
                                 DiceControl.P1_totalNum = totalNum;
@@ -535,10 +539,11 @@ public class PropsControl : MonoBehaviour
                         case 2:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                             {
-                                transposition = P2.transform.position;
-                                P2.transform.position = P3.transform.position;
-                                P3.transform.position = transposition;
-
+                                //transposition = P2.transform.position;
+                                //P2.transform.position = P3.transform.position;
+                                //P3.transform.position = transposition;
+                                AnimatorControl.isP2Move = true;
+                                AnimatorControl.isP3Move = true;
                                 totalNum = DiceControl.P2_totalNum;
                                 DiceControl.P2_totalNum = DiceControl.P3_totalNum;
                                 DiceControl.P3_totalNum = totalNum;
@@ -553,10 +558,11 @@ public class PropsControl : MonoBehaviour
                         case 3:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                             {
-                                transposition = P2.transform.position;
-                                P2.transform.position = P4.transform.position;
-                                P4.transform.position = transposition;
-
+                                //transposition = P2.transform.position;
+                                //P2.transform.position = P4.transform.position;
+                                //P4.transform.position = transposition;
+                                AnimatorControl.isP2Move = true;
+                                AnimatorControl.isP4Move = true;
                                 totalNum = DiceControl.P2_totalNum;
                                 DiceControl.P2_totalNum = DiceControl.P4_totalNum;
                                 DiceControl.P4_totalNum = totalNum;
@@ -693,7 +699,12 @@ public class PropsControl : MonoBehaviour
                     break;
             }
             BagUIControl.isTransposition = false;
-            Invoke("FalseByAnimator", 1f);
+        }
+
+        if (isTransNum >= 2)
+        {
+            isTransNum = 0;
+            isTrans = false;
         }
 
         if (BombPropsControl.iscolliderBombText)
@@ -801,7 +812,6 @@ public class PropsControl : MonoBehaviour
         AnimatorControl.isP2Win = false;
         AnimatorControl.isP3Win = false;
         AnimatorControl.isP4Win = false;
-
     }
 
     IEnumerator ColliderBanana()
