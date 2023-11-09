@@ -529,6 +529,8 @@ public class PropsControl : MonoBehaviour
                                 //transposition = P2.transform.position;
                                 //P2.transform.position = P1.transform.position;
                                 //P1.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[1].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
                                 AnimatorControl.isP2Move = true;
                                 AnimatorControl.isP1Move = true;
                                 totalNum = DiceControl.P2_totalNum;
@@ -548,6 +550,8 @@ public class PropsControl : MonoBehaviour
                                 //transposition = P2.transform.position;
                                 //P2.transform.position = P3.transform.position;
                                 //P3.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[3].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
                                 AnimatorControl.isP2Move = true;
                                 AnimatorControl.isP3Move = true;
                                 totalNum = DiceControl.P2_totalNum;
@@ -567,6 +571,8 @@ public class PropsControl : MonoBehaviour
                                 //transposition = P2.transform.position;
                                 //P2.transform.position = P4.transform.position;
                                 //P4.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[4].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
                                 AnimatorControl.isP2Move = true;
                                 AnimatorControl.isP4Move = true;
                                 totalNum = DiceControl.P2_totalNum;
@@ -590,10 +596,13 @@ public class PropsControl : MonoBehaviour
                         case 1:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                             {
-                                transposition = P3.transform.position;
-                                P3.transform.position = P1.transform.position;
-                                P1.transform.position = transposition;
-
+                                //transposition = P3.transform.position;
+                                //P3.transform.position = P1.transform.position;
+                                //P1.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[1].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
+                                AnimatorControl.isP3Move = true;
+                                AnimatorControl.isP1Move = true;
                                 totalNum = DiceControl.P3_totalNum;
                                 DiceControl.P3_totalNum = DiceControl.P1_totalNum;
                                 DiceControl.P1_totalNum = totalNum;
@@ -608,10 +617,13 @@ public class PropsControl : MonoBehaviour
                         case 2:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
-                                transposition = P3.transform.position;
-                                P3.transform.position = P2.transform.position;
-                                P2.transform.position = transposition;
-
+                                //transposition = P3.transform.position;
+                                //P3.transform.position = P2.transform.position;
+                                //P2.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[2].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
+                                AnimatorControl.isP3Move = true;
+                                AnimatorControl.isP2Move = true;
                                 totalNum = DiceControl.P3_totalNum;
                                 DiceControl.P3_totalNum = DiceControl.P2_totalNum;
                                 DiceControl.P2_totalNum = totalNum;
@@ -626,10 +638,13 @@ public class PropsControl : MonoBehaviour
                         case 3:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                             {
-                                transposition = P3.transform.position;
-                                P3.transform.position = P4.transform.position;
-                                P4.transform.position = transposition;
-
+                                //transposition = P3.transform.position;
+                                //P3.transform.position = P4.transform.position;
+                                //P4.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[4].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
+                                AnimatorControl.isP3Move = true;
+                                AnimatorControl.isP4Move = true;
                                 totalNum = DiceControl.P3_totalNum;
                                 DiceControl.P3_totalNum = DiceControl.P4_totalNum;
                                 DiceControl.P4_totalNum = totalNum;
@@ -651,10 +666,13 @@ public class PropsControl : MonoBehaviour
                         case 1:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                             {
-                                transposition = P4.transform.position;
-                                P4.transform.position = P1.transform.position;
-                                P1.transform.position = transposition;
-
+                                //transposition = P4.transform.position;
+                                //P4.transform.position = P1.transform.position;
+                                //P1.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[1].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
+                                AnimatorControl.isP4Move = true;
+                                AnimatorControl.isP1Move = true;
                                 totalNum = DiceControl.P4_totalNum;
                                 DiceControl.P4_totalNum = DiceControl.P1_totalNum;
                                 DiceControl.P1_totalNum = totalNum;
@@ -669,10 +687,13 @@ public class PropsControl : MonoBehaviour
                         case 2:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
-                                transposition = P4.transform.position;
-                                P4.transform.position = P2.transform.position;
-                                P2.transform.position = transposition;
-
+                                //transposition = P4.transform.position;
+                                //P4.transform.position = P2.transform.position;
+                                //P2.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[2].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
+                                AnimatorControl.isP4Move = true;
+                                AnimatorControl.isP2Move = true;
                                 totalNum = DiceControl.P4_totalNum;
                                 DiceControl.P4_totalNum = DiceControl.P2_totalNum;
                                 DiceControl.P2_totalNum = totalNum;
@@ -687,10 +708,13 @@ public class PropsControl : MonoBehaviour
                         case 3:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                             {
-                                transposition = P4.transform.position;
-                                P4.transform.position = P3.transform.position;
-                                P3.transform.position = transposition;
-
+                                //transposition = P4.transform.position;
+                                //P4.transform.position = P3.transform.position;
+                                //P3.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[3].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
+                                AnimatorControl.isP4Move = true;
+                                AnimatorControl.isP3Move = true;
                                 totalNum = DiceControl.P4_totalNum;
                                 DiceControl.P4_totalNum = DiceControl.P3_totalNum;
                                 DiceControl.P3_totalNum = totalNum;
