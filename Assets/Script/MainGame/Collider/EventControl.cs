@@ -286,10 +286,61 @@ public class EventControl : MonoBehaviour
                 }
             }
         }
-        //else
-        //{
-        //    StartCoroutine(Transposition());
-        //}
+        else
+        {
+            if (other.tag == "P1" && P1_EnterEvent)
+            {
+                if (DiceControl.P1_totalNum == EventPoint)
+                {
+                    P1_EnterEvent = false;
+                    AnimatorControl.isP1Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P2" && P2_EnterEvent)
+            {
+                if (DiceControl.P2_totalNum == EventPoint)
+                {
+                    P2_EnterEvent = false;
+                    AnimatorControl.isP2Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P3" && P3_EnterEvent)
+            {
+                if (DiceControl.P3_totalNum == EventPoint)
+                {
+                    P3_EnterEvent = false;
+                    AnimatorControl.isP3Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P4" && P4_EnterEvent)
+            {
+                if (DiceControl.P4_totalNum == EventPoint)
+                {
+                    P4_EnterEvent = false;
+                    AnimatorControl.isP4Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+        }
 
         if (other.tag == "StopProps")
         {
@@ -617,11 +668,6 @@ public class EventControl : MonoBehaviour
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         CameraMoveControl.isChangeCameraPoint = false;
-    }
-    IEnumerator Transposition()
-    {
-        yield return new WaitForSeconds(1f);
-        PropsControl.isTrans = false;
     }
 
     void EventA()

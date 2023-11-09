@@ -173,10 +173,65 @@ public class ChestColliderControl : MonoBehaviour
                 }
             }
         }
-        //else
-        //{
-        //    StartCoroutine(Transposition());
-        //}
+        else
+        {
+            if (other.tag == "P1" && P1_EnterBox)
+            {
+                if (DiceControl.P1_totalNum == boxPoint)
+                {
+                    P1_EnterBox = false;
+                    AnimatorControl.isP1Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 1;
+                    }
+                }
+            }
+            else if (other.tag == "P2" && P2_EnterBox)
+            {
+                if (DiceControl.P2_totalNum == boxPoint)
+                {
+                    P2_EnterBox = false;
+                    AnimatorControl.isP2Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 1;
+                    }
+                }
+            }
+            else if (other.tag == "P3" && P3_EnterBox)
+            {
+                if (DiceControl.P3_totalNum == boxPoint)
+                {
+                    P3_EnterBox = false;
+                    AnimatorControl.isP3Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 1;
+                    }
+                }
+            }
+            else if (other.tag == "P4" && P4_EnterBox)
+            {
+                if (DiceControl.P4_totalNum == boxPoint)
+                {
+                    P4_EnterBox = false;
+                    AnimatorControl.isP4Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 1;
+                    }
+                }
+            }
+        }
 
         if (other.tag == "StopProps")
         {
@@ -285,11 +340,6 @@ public class ChestColliderControl : MonoBehaviour
         DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
     }
-    IEnumerator Transposition()
-    {
-        yield return new WaitForSeconds(1f);
-        PropsControl.isTrans = false;
-    }
     IEnumerator StopRound()
     {
         isStopProps = false;
@@ -297,7 +347,6 @@ public class ChestColliderControl : MonoBehaviour
         yield return new WaitForSeconds(3f);
         CameraMoveControl.isChangeCameraPoint = false;
     }
-
 
     void TrueByAnimator()
     {
