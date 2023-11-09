@@ -186,7 +186,66 @@ public class StoreColliderControl : MonoBehaviour
         }
         else
         {
-            StartCoroutine(Transposition());
+            if (other.tag == "P1" && P1_EnterStore)
+            {
+                if (DiceControl.P1_totalNum == pointNum)
+                {
+                    who = 1;
+                    P1_EnterStore = false;
+                    AnimatorControl.isP1Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 2;
+                    }
+                }
+            }
+            else if (other.tag == "P2" && P2_EnterStore)
+            {
+                if (DiceControl.P2_totalNum == pointNum)
+                {
+                    who = 2;
+                    P2_EnterStore = false;
+                    AnimatorControl.isP2Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 2;
+                    }
+                }
+            }
+            else if (other.tag == "P3" && P3_EnterStore)
+            {
+                if (DiceControl.P3_totalNum == pointNum)
+                {
+                    who = 3;
+                    P3_EnterStore = false;
+                    AnimatorControl.isP3Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 2;
+                    }
+                }
+            }
+            else if (other.tag == "P4" && P4_EnterStore)
+            {
+                if (DiceControl.P4_totalNum == pointNum)
+                {
+                    who = 4;
+                    P4_EnterStore = false;
+                    AnimatorControl.isP4Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = true;
+                        AnimalsPowerControl.mouseIsThisPoint = 2;
+                    }
+                }
+            }
         }
 
         if (other.tag == "StopProps")
@@ -323,11 +382,6 @@ public class StoreColliderControl : MonoBehaviour
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         CameraMoveControl.isChangeCameraPoint = false;
-    }
-    IEnumerator Transposition()
-    {
-        yield return new WaitForSeconds(1f);
-        PropsControl.isTrans = false;
     }
 
     void FalseByAnimator()

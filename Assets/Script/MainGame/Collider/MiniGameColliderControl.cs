@@ -172,7 +172,58 @@ public class MiniGameColliderControl : MonoBehaviour
         }
         else
         {
-            StartCoroutine(Transposition());
+            if (other.tag == "P1" && P1_playGame)
+            {
+                if (DiceControl.P1_totalNum == MGPoint)
+                {
+                    P1_playGame = false;
+                    AnimatorControl.isP1Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P2" && P2_playGame)
+            {
+                if (DiceControl.P2_totalNum == MGPoint)
+                {
+                    P2_playGame = false;
+                    AnimatorControl.isP2Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P3" && P3_playGame)
+            {
+                if (DiceControl.P3_totalNum == MGPoint)
+                {
+                    P3_playGame = false;
+                    AnimatorControl.isP3Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P4" && P4_playGame)
+            {
+                if (DiceControl.P4_totalNum == MGPoint)
+                {
+                    P4_playGame = false;
+                    AnimatorControl.isP4Move = false;
+                    PropsControl.isTransNum++;
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
         }
 
         if (other.tag == "StopProps")
@@ -282,11 +333,6 @@ public class MiniGameColliderControl : MonoBehaviour
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         CameraMoveControl.isChangeCameraPoint = false;
-    }
-    IEnumerator Transposition()
-    {
-        yield return new WaitForSeconds(1f);
-        PropsControl.isTrans = false;
     }
 
     void AnimalsCall()
