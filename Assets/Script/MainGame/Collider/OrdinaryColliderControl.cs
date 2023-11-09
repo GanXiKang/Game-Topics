@@ -15,7 +15,6 @@ public class OrdinaryColliderControl : MonoBehaviour
         {
             if (!AnimalsPowerControl.tigerUsePower)
             {
-                print("NO");
                 if (other.tag == "P1" && P1_Enter)
                 {
                     if (DiceControl.P1_totalNum == pointNum)
@@ -164,14 +163,13 @@ public class OrdinaryColliderControl : MonoBehaviour
         }
         else
         {
-            PropsControl.isTransNum++;
-            print("yes");
             if (other.tag == "P1" && P1_Enter)
             {
                 if (DiceControl.P1_totalNum == pointNum)
                 {
                     P1_Enter = false;
                     AnimatorControl.isP1Move = false;
+                    PropsControl.isTransNum++;
                     if (Menu_ChoosePlayer.whyP1 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = false;
@@ -184,6 +182,7 @@ public class OrdinaryColliderControl : MonoBehaviour
                 {
                     P2_Enter = false;
                     AnimatorControl.isP2Move = false;
+                    PropsControl.isTransNum++;
                     if (Menu_ChoosePlayer.whyP2 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = false;
@@ -196,6 +195,7 @@ public class OrdinaryColliderControl : MonoBehaviour
                 {
                     P3_Enter = false;
                     AnimatorControl.isP3Move = false;
+                    PropsControl.isTransNum++;
                     if (Menu_ChoosePlayer.whyP3 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = false;
@@ -208,6 +208,7 @@ public class OrdinaryColliderControl : MonoBehaviour
                 {
                     P4_Enter = false;
                     AnimatorControl.isP4Move = false;
+                    PropsControl.isTransNum++;
                     if (Menu_ChoosePlayer.whyP4 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = false;
