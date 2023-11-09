@@ -286,10 +286,10 @@ public class EventControl : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            StartCoroutine(Transposition());
-        }
+        //else
+        //{
+        //    StartCoroutine(Transposition());
+        //}
 
         if (other.tag == "StopProps")
         {

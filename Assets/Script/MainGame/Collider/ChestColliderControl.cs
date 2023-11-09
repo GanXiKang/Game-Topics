@@ -173,10 +173,10 @@ public class ChestColliderControl : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            StartCoroutine(Transposition());
-        }
+        //else
+        //{
+        //    StartCoroutine(Transposition());
+        //}
 
         if (other.tag == "StopProps")
         {
