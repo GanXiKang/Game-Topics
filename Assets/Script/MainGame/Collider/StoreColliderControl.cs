@@ -190,7 +190,6 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (DiceControl.P1_totalNum == pointNum)
                 {
-                    who = 1;
                     P1_EnterStore = false;
                     AnimatorControl.isP1Move = false;
                     PropsControl.isTransNum++;
@@ -205,7 +204,6 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (DiceControl.P2_totalNum == pointNum)
                 {
-                    who = 2;
                     P2_EnterStore = false;
                     AnimatorControl.isP2Move = false;
                     PropsControl.isTransNum++;
@@ -220,7 +218,6 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (DiceControl.P3_totalNum == pointNum)
                 {
-                    who = 3;
                     P3_EnterStore = false;
                     AnimatorControl.isP3Move = false;
                     PropsControl.isTransNum++;
@@ -235,7 +232,6 @@ public class StoreColliderControl : MonoBehaviour
             {
                 if (DiceControl.P4_totalNum == pointNum)
                 {
-                    who = 4;
                     P4_EnterStore = false;
                     AnimatorControl.isP4Move = false;
                     PropsControl.isTransNum++;
