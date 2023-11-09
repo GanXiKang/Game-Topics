@@ -460,6 +460,8 @@ public class PropsControl : MonoBehaviour
                                 //transposition = P1.transform.position;
                                 //P1.transform.position = P2.transform.position;
                                 //P2.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[2].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
                                 AnimatorControl.isP1Move = true;
                                 AnimatorControl.isP2Move = true;
                                 totalNum = DiceControl.P1_totalNum;
@@ -479,6 +481,8 @@ public class PropsControl : MonoBehaviour
                                 //transposition = P1.transform.position;
                                 //P1.transform.position = P3.transform.position;
                                 //P3.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[3].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
                                 AnimatorControl.isP1Move = true;
                                 AnimatorControl.isP3Move = true;
                                 totalNum = DiceControl.P1_totalNum;
@@ -498,6 +502,8 @@ public class PropsControl : MonoBehaviour
                                 //transposition = P1.transform.position;
                                 //P1.transform.position = P4.transform.position;
                                 //P4.transform.position = transposition;
+                                systemText.text = "和" + RoundUIControl.Player[4].ToString() + "換位";
+                                SystemTestTextControl.isTimer = true;
                                 AnimatorControl.isP1Move = true;
                                 AnimatorControl.isP4Move = true;
                                 totalNum = DiceControl.P1_totalNum;
