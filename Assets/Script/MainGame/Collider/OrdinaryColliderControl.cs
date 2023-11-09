@@ -163,7 +163,55 @@ public class OrdinaryColliderControl : MonoBehaviour
         }
         else
         {
-            StartCoroutine(Transposition());
+            PropsControl.isTransNum++;
+            if (other.tag == "P1" && P1_Enter)
+            {
+                if (DiceControl.P1_totalNum == pointNum)
+                {
+                    P1_Enter = false;
+                    AnimatorControl.isP1Move = false;
+                    if (Menu_ChoosePlayer.whyP1 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P2" && P2_Enter)
+            {
+                if (DiceControl.P2_totalNum == pointNum)
+                {
+                    P2_Enter = false;
+                    AnimatorControl.isP2Move = false;
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P3" && P3_Enter)
+            {
+                if (DiceControl.P3_totalNum == pointNum)
+                {
+                    P3_Enter = false;
+                    AnimatorControl.isP3Move = false;
+                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P4" && P4_Enter)
+            {
+                if (DiceControl.P4_totalNum == pointNum)
+                {
+                    P4_Enter = false;
+                    AnimatorControl.isP4Move = false;
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
         }
 
         if (other.tag == "StopProps")
@@ -200,11 +248,6 @@ public class OrdinaryColliderControl : MonoBehaviour
         DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
         FalseByAnimator();
-    }
-    IEnumerator Transposition()
-    {
-        yield return new WaitForSeconds(1f);
-        PropsControl.isTrans = false;
     }
     IEnumerator StopRound()
     {
