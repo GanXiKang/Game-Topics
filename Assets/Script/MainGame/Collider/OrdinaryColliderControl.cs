@@ -15,6 +15,7 @@ public class OrdinaryColliderControl : MonoBehaviour
         {
             if (!AnimalsPowerControl.tigerUsePower)
             {
+                print("NO");
                 if (other.tag == "P1" && P1_Enter)
                 {
                     if (DiceControl.P1_totalNum == pointNum)
@@ -164,6 +165,7 @@ public class OrdinaryColliderControl : MonoBehaviour
         else
         {
             PropsControl.isTransNum++;
+            print("yes");
             if (other.tag == "P1" && P1_Enter)
             {
                 if (DiceControl.P1_totalNum == pointNum)
