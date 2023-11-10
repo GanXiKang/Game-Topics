@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class InsPropsControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] props = new GameObject[6];
+    public Transform insPropsPoint;
 
-    // Update is called once per frame
     void Update()
     {
         
