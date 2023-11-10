@@ -7,48 +7,40 @@ public class InsPropsControl : MonoBehaviour
     public GameObject[] props = new GameObject[6];
     public Transform insPropsPoint;
 
-    public static bool[] isInsProps;
+    public static bool isInsAgainDice = false, isInsDoubleDice = false, isInsCustomDice = false;
+    public static bool isInsSnatch = false, isInsTrans = false, isInsThief = false;
 
-    void Start()
-    {
-        isInsProps[0] = false;
-        isInsProps[1] = false;
-        isInsProps[2] = false;
-        isInsProps[3] = false;
-        isInsProps[4] = false;
-        isInsProps[5] = false;
-    }
     void Update()
     {
-        if (isInsProps[0])
+        if (isInsAgainDice)
         {
             Instantiate(props[0], insPropsPoint.position, insPropsPoint.rotation);
-            isInsProps[0] = false;
+            isInsAgainDice = false;
         }
-        else if (isInsProps[1])
+        else if (isInsDoubleDice)
         {
             Instantiate(props[1], insPropsPoint.position, insPropsPoint.rotation);
-            isInsProps[1] = false;
+            isInsDoubleDice = false;
         }
-        else if (isInsProps[2])
+        else if (isInsCustomDice)
         {
             Instantiate(props[2], insPropsPoint.position, insPropsPoint.rotation);
-            isInsProps[2] = false;
+            isInsCustomDice = false;
         }
-        else if (isInsProps[3])
+        else if (isInsSnatch)
         {
             Instantiate(props[3], insPropsPoint.position, insPropsPoint.rotation);
-            isInsProps[3] = false;
+            isInsSnatch = false;
         }
-        else if (isInsProps[4])
+        else if (isInsTrans)
         {
             Instantiate(props[4], insPropsPoint.position, insPropsPoint.rotation);
-            isInsProps[4] = false;
+            isInsTrans = false;
         }
-        else if (isInsProps[5])
+        else if (isInsThief)
         {
             Instantiate(props[5], insPropsPoint.position, insPropsPoint.rotation);
-            isInsProps[5] = false;
+            isInsThief = false;
         }
     }
 }

@@ -424,19 +424,19 @@ public class BagUIControl : MonoBehaviour
         {
             case 1:
                 isRenewDice = true;
-                InsPropsControl.isInsProps[0] = true;
+                InsPropsControl.isInsAgainDice = true;
                 GoDiceScene();
                 break;
 
             case 2:
                 isDoubleDice = true;
-                InsPropsControl.isInsProps[1] = true;
+                InsPropsControl.isInsDoubleDice = true;
                 GoDiceScene();
                 break;
 
             case 3:
                 isCustomDice = true;
-                InsPropsControl.isInsProps[2] = true;
+                InsPropsControl.isInsCustomDice = true;
                 GoDiceScene();
                 break;
 
@@ -468,7 +468,7 @@ public class BagUIControl : MonoBehaviour
 
             case 5:
                 isSnatch = true;
-                InsPropsControl.isInsProps[3] = true;
+                InsPropsControl.isInsSnatch = true;
                 CameraMoveControl.isChangeCameraPoint = true;
                 yield return new WaitForSeconds(2f);
                 ChangeCamera();
@@ -477,7 +477,7 @@ public class BagUIControl : MonoBehaviour
 
             case 6:
                 isTransposition = true;
-                InsPropsControl.isInsProps[4] = true;
+                InsPropsControl.isInsTrans = true;
                 CameraMoveControl.isChangeCameraPoint = true;
                 yield return new WaitForSeconds(2f);
                 CameraMoveControl.isChangeCameraPoint = false;
@@ -485,7 +485,7 @@ public class BagUIControl : MonoBehaviour
 
             case 7:
                 isThief = true;
-                InsPropsControl.isInsProps[5] = true;
+                InsPropsControl.isInsThief = true;
                 CameraMoveControl.isChangeCameraPoint = true;
                 yield return new WaitForSeconds(2f);
                 ChangeCamera();
