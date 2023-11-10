@@ -12,6 +12,40 @@ public class InsPropsControl : MonoBehaviour
 
     void Update()
     {
+        switch (ChangeCameraControl.changeCameraNum)
+        {
+            case 1:
+                if (gameObject.tag == "P1")
+                {
+                    InsProps();
+                }
+                break;
+
+            case 2:
+                if (gameObject.tag == "P2")
+                {
+                    InsProps();
+                }
+                break;
+
+            case 3:
+                if (gameObject.tag == "P3")
+                {
+                    InsProps();
+                }
+                break;
+
+            case 4:
+                if (gameObject.tag == "P4")
+                {
+                    InsProps();
+                }
+                break;
+        }
+    }
+
+    void InsProps()
+    {
         if (isInsAgainDice)
         {
             Instantiate(props[0], insPropsPoint.position, insPropsPoint.rotation);
