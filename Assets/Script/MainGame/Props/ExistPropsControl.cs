@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class ExistPropsControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed = 2f;
+
     void Start()
     {
-        
+        Invoke("DestoryProps", 2f);
+    }
+    void FixedUpdate()
+    {
+        transform.position += Vector3.up * speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    void DestoryProps()
     {
-        
+        Destroy(this.gameObject);
     }
 }
