@@ -12,7 +12,7 @@ public class ExistPropsControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        transform.position += Vector3.up * s * Time.deltaTime;
+        transform.position += Vector3.up * Time.deltaTime;
         transform.Rotate(0, s, 0);
     }
 
