@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &134508922750626819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731141580311107262}
+  m_Layer: 0
+  m_Name: InsPropsPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1731141580311107262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134508922750626819}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.7999878}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4897638286109033352}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &422881626338717175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,6 +1936,7 @@ GameObject:
   - component: {fileID: 5459150558337214854}
   - component: {fileID: 2792822139701242681}
   - component: {fileID: 398752492}
+  - component: {fileID: 2144099871871266625}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Dragon
@@ -1931,6 +1963,7 @@ Transform:
   - {fileID: 4935190306918303087}
   - {fileID: 4935190307723289002}
   - {fileID: 4935190307507752286}
+  - {fileID: 1731141580311107262}
   - {fileID: 9206735659507485337}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2190,6 +2223,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2367e55abc434148997b9744b9a2706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2144099871871266625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241126455371471154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a45644d4d6b58a4e81aee71e0c6ce6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  props:
+  - {fileID: 965321599755702312, guid: cbc68d5d064126b4194f84ad090d2095, type: 3}
+  - {fileID: 4491359167862502573, guid: 456a73069747d824ba0539c7078d3f32, type: 3}
+  - {fileID: 8115114543808526455, guid: e514c11c686d15d428fc72c97f878a6d, type: 3}
+  - {fileID: 7409438240958869898, guid: 67b8b3f19e3be04478b9430430916f0a, type: 3}
+  - {fileID: 7703601060894012174, guid: b705693a156152e48b067132b3598172, type: 3}
+  - {fileID: 8026943673549316358, guid: 0989d2ecbe474934eb3c14cb66b221a4, type: 3}
+  insPropsPoint: {fileID: 1731141580311107262}
 --- !u!1 &5280614114031033497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3488,7 +3541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_LocalScale.y
