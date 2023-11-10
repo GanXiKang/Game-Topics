@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExistPropsControl : MonoBehaviour
 {
-    public float speed = 2f;
+    public float s = 2f;
 
     void Start()
     {
@@ -12,7 +12,8 @@ public class ExistPropsControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        transform.position += Vector3.up * speed * Time.deltaTime;
+        transform.position += Vector3.up * s * Time.deltaTime;
+        transform.Rotate(0, s, 0);
     }
 
     void DestoryProps()
