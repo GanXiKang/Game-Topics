@@ -474,8 +474,7 @@ public class BagUIControl : MonoBehaviour
             case 6:
                 isTransposition = true;
                 CameraMoveControl.isChangeCameraPoint = true;
-                yield return new WaitForSeconds(3f);
-                ChangeCamera();
+                yield return new WaitForSeconds(2f);
                 CameraMoveControl.isChangeCameraPoint = false;
                 break;
 
