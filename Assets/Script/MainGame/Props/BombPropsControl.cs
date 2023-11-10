@@ -169,6 +169,10 @@ public class BombPropsControl : MonoBehaviour
             }
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        whoPut = 0;
+    }
 
     IEnumerator StopTiming()
     {
