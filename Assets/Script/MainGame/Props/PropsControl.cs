@@ -22,8 +22,6 @@ public class PropsControl : MonoBehaviour
     bool[] isHavePropsP2 = new bool[7];
     bool[] isHavePropsP3 = new bool[7];
     bool[] isHavePropsP4 = new bool[7];
-    Vector3 transposition;
-    GameObject P1, P2, P3, P4;
 
     void Start()
     {
@@ -445,7 +443,6 @@ public class PropsControl : MonoBehaviour
 
         if (BagUIControl.isTransposition)
         {
-            FindPlayer();
             isTransNum = 0;
             isTrans = true;
             switch (ChangeCameraControl.changeCameraNum)
@@ -794,13 +791,6 @@ public class PropsControl : MonoBehaviour
                 isHavePropsP4[i] = false;
             }
         }
-    }
-    void FindPlayer()
-    {
-        P1 = GameObject.FindGameObjectWithTag("P1");
-        P2 = GameObject.FindGameObjectWithTag("P2");
-        P3 = GameObject.FindGameObjectWithTag("P3");
-        P4 = GameObject.FindGameObjectWithTag("P4");
     }
     void FalseByAnimator()
     {
