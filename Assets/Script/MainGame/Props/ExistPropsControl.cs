@@ -12,7 +12,7 @@ public class ExistPropsControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        transform.position += Vector3.up * speed;
+        transform.position += Vector3.up * speed * Time.deltaTime;
     }
 
     void DestoryProps()
