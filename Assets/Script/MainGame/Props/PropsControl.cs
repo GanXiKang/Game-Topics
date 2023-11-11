@@ -466,6 +466,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
 
@@ -484,6 +485,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
 
@@ -502,6 +504,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
                     }
@@ -526,6 +529,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
 
@@ -544,6 +548,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
 
@@ -562,6 +567,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
                     }
@@ -587,6 +593,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
 
@@ -605,6 +612,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
 
@@ -623,6 +631,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
                     }
@@ -648,6 +657,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
 
@@ -666,6 +676,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
 
@@ -684,6 +695,7 @@ public class PropsControl : MonoBehaviour
                             {
                                 systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬“QÎ»Ê§”¡";
                                 SystemTestTextControl.isTimer = true;
+                                Invoke("WaitTransNum", 2f);
                             }
                             break;
                     }
@@ -798,6 +810,10 @@ public class PropsControl : MonoBehaviour
         AnimatorControl.isP2Win = false;
         AnimatorControl.isP3Win = false;
         AnimatorControl.isP4Win = false;
+    }
+    void WaitTransNum()
+    {
+        isTransNum = 2;
     }
 
     IEnumerator ColliderBanana()
