@@ -43,6 +43,7 @@ public class UI_StopGameControl : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Time.timeScale = 0f;
+                DiceUIControl.isDiceUI = false;
                 stopGameUI.SetActive(true);
             }
         }
