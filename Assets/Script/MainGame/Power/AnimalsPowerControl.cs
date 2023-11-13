@@ -254,27 +254,63 @@ public class AnimalsPowerControl : MonoBehaviour
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
-                DiceControl.P2_totalNum -= 2;
-                DiceControl.P3_totalNum -= 2;
-                DiceControl.P4_totalNum -= 2;
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                {
+                    DiceControl.P2_totalNum -= 2;
+                }
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                {
+                    DiceControl.P3_totalNum -= 2;
+                }
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                {
+                    DiceControl.P4_totalNum -= 2;
+                }
                 break;
 
             case 2:
-                DiceControl.P1_totalNum -= 2;
-                DiceControl.P3_totalNum -= 2;
-                DiceControl.P4_totalNum -= 2;
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                {
+                    DiceControl.P1_totalNum -= 2;
+                }
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                {
+                    DiceControl.P3_totalNum -= 2;
+                }
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                {
+                    DiceControl.P4_totalNum -= 2;
+                }
                 break;
 
             case 3:
-                DiceControl.P1_totalNum -= 2;
-                DiceControl.P2_totalNum -= 2;
-                DiceControl.P4_totalNum -= 2;
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                {
+                    DiceControl.P1_totalNum -= 2;
+                }
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                {
+                    DiceControl.P2_totalNum -= 2;
+                }
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                {
+                    DiceControl.P4_totalNum -= 2;
+                }
                 break;
 
             case 4:
-                DiceControl.P1_totalNum -= 2;
-                DiceControl.P2_totalNum -= 2;
-                DiceControl.P3_totalNum -= 2;
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                {
+                    DiceControl.P1_totalNum -= 2;
+                }
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                {
+                    DiceControl.P2_totalNum -= 2;
+                }
+                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                {
+                    DiceControl.P3_totalNum -= 2;
+                }
                 break;
         }
         PowerUIControl.animalsPowerUseNum[3]--;
