@@ -454,17 +454,28 @@ public class PropsControl : MonoBehaviour
                         case 1:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[2].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP1Move = true;
-                                AnimatorControl.isP2Move = true;
-                                totalNum = DiceControl.P1_totalNum;
-                                DiceControl.P1_totalNum = DiceControl.P2_totalNum;
-                                DiceControl.P2_totalNum = totalNum;
+                                if (DiceControl.P1_totalNum != DiceControl.P2_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[2].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP1Move = true;
+                                    AnimatorControl.isP2Move = true;
+                                    totalNum = DiceControl.P1_totalNum;
+                                    DiceControl.P1_totalNum = DiceControl.P2_totalNum;
+                                    DiceControl.P2_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[2].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -473,17 +484,28 @@ public class PropsControl : MonoBehaviour
                         case 2:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[3].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP1Move = true;
-                                AnimatorControl.isP3Move = true;
-                                totalNum = DiceControl.P1_totalNum;
-                                DiceControl.P1_totalNum = DiceControl.P3_totalNum;
-                                DiceControl.P3_totalNum = totalNum;
+                                if (DiceControl.P1_totalNum != DiceControl.P3_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[3].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP1Move = true;
+                                    AnimatorControl.isP3Move = true;
+                                    totalNum = DiceControl.P1_totalNum;
+                                    DiceControl.P1_totalNum = DiceControl.P3_totalNum;
+                                    DiceControl.P3_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[3].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -492,17 +514,28 @@ public class PropsControl : MonoBehaviour
                         case 3:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[4].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP1Move = true;
-                                AnimatorControl.isP4Move = true;
-                                totalNum = DiceControl.P1_totalNum;
-                                DiceControl.P1_totalNum = DiceControl.P4_totalNum;
-                                DiceControl.P4_totalNum = totalNum;
+                                if (DiceControl.P1_totalNum != DiceControl.P4_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[4].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP1Move = true;
+                                    AnimatorControl.isP4Move = true;
+                                    totalNum = DiceControl.P1_totalNum;
+                                    DiceControl.P1_totalNum = DiceControl.P4_totalNum;
+                                    DiceControl.P4_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[4].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -517,17 +550,28 @@ public class PropsControl : MonoBehaviour
                         case 1:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[1].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP2Move = true;
-                                AnimatorControl.isP1Move = true;
-                                totalNum = DiceControl.P2_totalNum;
-                                DiceControl.P2_totalNum = DiceControl.P1_totalNum;
-                                DiceControl.P1_totalNum = totalNum;
+                                if (DiceControl.P2_totalNum != DiceControl.P1_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[1].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP2Move = true;
+                                    AnimatorControl.isP1Move = true;
+                                    totalNum = DiceControl.P2_totalNum;
+                                    DiceControl.P2_totalNum = DiceControl.P1_totalNum;
+                                    DiceControl.P1_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[1].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -536,17 +580,28 @@ public class PropsControl : MonoBehaviour
                         case 2:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[3].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP2Move = true;
-                                AnimatorControl.isP3Move = true;
-                                totalNum = DiceControl.P2_totalNum;
-                                DiceControl.P2_totalNum = DiceControl.P3_totalNum;
-                                DiceControl.P3_totalNum = totalNum;
+                                if (DiceControl.P2_totalNum != DiceControl.P3_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[3].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP2Move = true;
+                                    AnimatorControl.isP3Move = true;
+                                    totalNum = DiceControl.P2_totalNum;
+                                    DiceControl.P2_totalNum = DiceControl.P3_totalNum;
+                                    DiceControl.P3_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[3].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -555,17 +610,28 @@ public class PropsControl : MonoBehaviour
                         case 3:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[4].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP2Move = true;
-                                AnimatorControl.isP4Move = true;
-                                totalNum = DiceControl.P2_totalNum;
-                                DiceControl.P2_totalNum = DiceControl.P4_totalNum;
-                                DiceControl.P4_totalNum = totalNum;
+                                if (DiceControl.P2_totalNum != DiceControl.P4_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[4].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP2Move = true;
+                                    AnimatorControl.isP4Move = true;
+                                    totalNum = DiceControl.P2_totalNum;
+                                    DiceControl.P2_totalNum = DiceControl.P4_totalNum;
+                                    DiceControl.P4_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[4].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -581,17 +647,28 @@ public class PropsControl : MonoBehaviour
                         case 1:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[1].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP3Move = true;
-                                AnimatorControl.isP1Move = true;
-                                totalNum = DiceControl.P3_totalNum;
-                                DiceControl.P3_totalNum = DiceControl.P1_totalNum;
-                                DiceControl.P1_totalNum = totalNum;
+                                if (DiceControl.P3_totalNum != DiceControl.P1_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[1].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP3Move = true;
+                                    AnimatorControl.isP1Move = true;
+                                    totalNum = DiceControl.P3_totalNum;
+                                    DiceControl.P3_totalNum = DiceControl.P1_totalNum;
+                                    DiceControl.P1_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[1].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -600,17 +677,28 @@ public class PropsControl : MonoBehaviour
                         case 2:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[2].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP3Move = true;
-                                AnimatorControl.isP2Move = true;
-                                totalNum = DiceControl.P3_totalNum;
-                                DiceControl.P3_totalNum = DiceControl.P2_totalNum;
-                                DiceControl.P2_totalNum = totalNum;
+                                if (DiceControl.P3_totalNum != DiceControl.P2_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[2].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP3Move = true;
+                                    AnimatorControl.isP2Move = true;
+                                    totalNum = DiceControl.P3_totalNum;
+                                    DiceControl.P3_totalNum = DiceControl.P2_totalNum;
+                                    DiceControl.P2_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[2].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -619,17 +707,28 @@ public class PropsControl : MonoBehaviour
                         case 3:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[4].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP3Move = true;
-                                AnimatorControl.isP4Move = true;
-                                totalNum = DiceControl.P3_totalNum;
-                                DiceControl.P3_totalNum = DiceControl.P4_totalNum;
-                                DiceControl.P4_totalNum = totalNum;
+                                if (DiceControl.P3_totalNum != DiceControl.P4_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[4].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP3Move = true;
+                                    AnimatorControl.isP4Move = true;
+                                    totalNum = DiceControl.P3_totalNum;
+                                    DiceControl.P3_totalNum = DiceControl.P4_totalNum;
+                                    DiceControl.P4_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[4].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -645,17 +744,28 @@ public class PropsControl : MonoBehaviour
                         case 1:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[1].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP4Move = true;
-                                AnimatorControl.isP1Move = true;
-                                totalNum = DiceControl.P4_totalNum;
-                                DiceControl.P4_totalNum = DiceControl.P1_totalNum;
-                                DiceControl.P1_totalNum = totalNum;
+                                if (DiceControl.P4_totalNum != DiceControl.P1_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[1].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP4Move = true;
+                                    AnimatorControl.isP1Move = true;
+                                    totalNum = DiceControl.P4_totalNum;
+                                    DiceControl.P4_totalNum = DiceControl.P1_totalNum;
+                                    DiceControl.P1_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[1].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -664,17 +774,28 @@ public class PropsControl : MonoBehaviour
                         case 2:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[2].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP4Move = true;
-                                AnimatorControl.isP2Move = true;
-                                totalNum = DiceControl.P4_totalNum;
-                                DiceControl.P4_totalNum = DiceControl.P2_totalNum;
-                                DiceControl.P2_totalNum = totalNum;
+                                if (DiceControl.P4_totalNum != DiceControl.P2_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[2].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP4Move = true;
+                                    AnimatorControl.isP2Move = true;
+                                    totalNum = DiceControl.P4_totalNum;
+                                    DiceControl.P4_totalNum = DiceControl.P2_totalNum;
+                                    DiceControl.P2_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[2].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -683,17 +804,28 @@ public class PropsControl : MonoBehaviour
                         case 3:
                             if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                             {
-                                systemText.text = "和" + RoundUIControl.Player[3].ToString() + "換位";
-                                SystemTestTextControl.isTimer = true;
-                                AnimatorControl.isP4Move = true;
-                                AnimatorControl.isP3Move = true;
-                                totalNum = DiceControl.P4_totalNum;
-                                DiceControl.P4_totalNum = DiceControl.P3_totalNum;
-                                DiceControl.P3_totalNum = totalNum;
+                                if (DiceControl.P4_totalNum != DiceControl.P3_totalNum)
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[3].ToString() + "換位";
+                                    SystemTestTextControl.isTimer = true;
+                                    AnimatorControl.isP4Move = true;
+                                    AnimatorControl.isP3Move = true;
+                                    totalNum = DiceControl.P4_totalNum;
+                                    DiceControl.P4_totalNum = DiceControl.P3_totalNum;
+                                    DiceControl.P3_totalNum = totalNum;
+                                }
+                                else
+                                {
+                                    systemText.text = "和" + RoundUIControl.Player[3].ToString() + "在同一個位置上";
+                                    systemText.fontSize = 15;
+                                    SystemTestTextControl.isTimer = true;
+                                    Invoke("WaitTransNum", 2f);
+                                }
                             }
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
+                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
