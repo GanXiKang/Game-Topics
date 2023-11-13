@@ -318,7 +318,7 @@ public class AnimalsPowerControl : MonoBehaviour
         BGM.PlayOneShot(tiger);
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(1f);
-        systemText.text = "全部玩家后退！";
+        systemText.text = "全部玩家後退！";
         SystemTestTextControl.isTimer = true;
         BGM.PlayOneShot(tigerBack);
         ChangeCameraControl.changeCameraNum++;
