@@ -293,13 +293,13 @@ public class AnimalsPowerControl : MonoBehaviour
         {
             ChangeCameraControl.changeCameraNum++;
         }
-        AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
         if (Menu_ChoosePlayer.whoPlay >= 4)
         {
             ChangeCameraControl.changeCameraNum++;
         }
         yield return new WaitForSeconds(1f);
+        AnimalsSkillAnimator();
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
