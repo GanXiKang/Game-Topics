@@ -7,7 +7,7 @@ public class UI_StopGameControl : MonoBehaviour
 {
     GameObject stopGameUI, miniGameUI, OperateUI;
 
-    bool isFind, isOperate;
+    bool isFind, isOperate, isCloseDiceUI;
 
     void Start()
     {
@@ -43,7 +43,11 @@ public class UI_StopGameControl : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Time.timeScale = 0f;
-                DiceUIControl.isDiceUI = false;
+                if (DiceUIControl.isDiceUI)
+                {
+                    DiceUIControl.isDiceUI = false;
+                    isCloseDiceUI = true;
+                }
                 stopGameUI.SetActive(true);
             }
         }
@@ -57,6 +61,10 @@ public class UI_StopGameControl : MonoBehaviour
         if (MiniGameColliderControl.isMiniGame)
         {
             miniGameUI.SetActive(true);
+        }
+        if (isCloseDiceUI)
+        {
+            DiceUIControl.isDiceUI = true;
         }
     }
     public void BackToMenu()
