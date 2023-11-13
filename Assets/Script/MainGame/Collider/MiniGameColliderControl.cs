@@ -16,156 +16,154 @@ public class MiniGameColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!PropsControl.isTrans)
+        if (!PropsControl.isTrans || !AnimalsPowerControl.tigerUsePower)
         {
-            if (!AnimalsPowerControl.tigerUsePower)
+
+            if (other.tag == "P1" && P1_playGame)
             {
-                if (other.tag == "P1" && P1_playGame)
+                if (DiceControl.P1_totalNum == MGPoint)
                 {
-                    if (DiceControl.P1_totalNum == MGPoint)
+                    p = 1;
+                    AnimatorControl.isP1Move = false;
+                    if (!isStopProps)
                     {
-                        p = 1;
-                        AnimatorControl.isP1Move = false;
-                        if (!isStopProps)
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
                         {
-                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
-                            {
-                                AnimatorControl.isP1Skill = false;
-                                StartCoroutine(StartMiniGame());
-                            }
-                            else
-                            {
-                                StartCoroutine(DragonFlyNow());
-                            }
+                            AnimatorControl.isP1Skill = false;
+                            StartCoroutine(StartMiniGame());
                         }
                         else
                         {
-                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
-                            {
-                                StartCoroutine(StopRound());
-                            }
-                            else
-                            {
-                                isStopProps = false;
-                                AnimatorControl.isP1Skill = false;
-                                StartCoroutine(StartMiniGame());
-                            }
-                        }
-                        if (Menu_ChoosePlayer.whyP1 == 1)
-                        {
-                            PowerUIControl.isMouseCanUsePower = false;
+                            StartCoroutine(DragonFlyNow());
                         }
                     }
-                }
-                else if (other.tag == "P2" && P2_playGame)
-                {
-                    if (DiceControl.P2_totalNum == MGPoint)
+                    else
                     {
-                        p = 2;
-                        AnimatorControl.isP2Move = false;
-                        if (!isStopProps)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                         {
-                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
-                            {
-                                AnimatorControl.isP2Skill = false;
-                                StartCoroutine(StartMiniGame());
-                            }
-                            else
-                            {
-                                StartCoroutine(DragonFlyNow());
-                            }
+                            StartCoroutine(StopRound());
                         }
                         else
                         {
-                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
-                            {
-                                StartCoroutine(StopRound());
-                            }
-                            else
-                            {
-                                isStopProps = false;
-                                AnimatorControl.isP2Skill = false;
-                                StartCoroutine(StartMiniGame());
-                            }
-                        }
-                        if (Menu_ChoosePlayer.whyP2 == 1)
-                        {
-                            PowerUIControl.isMouseCanUsePower = false;
+                            isStopProps = false;
+                            AnimatorControl.isP1Skill = false;
+                            StartCoroutine(StartMiniGame());
                         }
                     }
-                }
-                else if (other.tag == "P3" && P3_playGame)
-                {
-                    if (DiceControl.P3_totalNum == MGPoint)
+                    if (Menu_ChoosePlayer.whyP1 == 1)
                     {
-                        p = 3;
-                        AnimatorControl.isP3Move = false;
-                        if (!isStopProps)
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P2" && P2_playGame)
+            {
+                if (DiceControl.P2_totalNum == MGPoint)
+                {
+                    p = 2;
+                    AnimatorControl.isP2Move = false;
+                    if (!isStopProps)
+                    {
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
                         {
-                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
-                            {
-                                AnimatorControl.isP3Skill = false;
-                                StartCoroutine(StartMiniGame());
-                            }
-                            else
-                            {
-                                StartCoroutine(DragonFlyNow());
-                            }
+                            AnimatorControl.isP2Skill = false;
+                            StartCoroutine(StartMiniGame());
                         }
                         else
                         {
-                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
-                            {
-                                StartCoroutine(StopRound());
-                            }
-                            else
-                            {
-                                isStopProps = false;
-                                AnimatorControl.isP3Skill = false;
-                                StartCoroutine(StartMiniGame());
-                            }
+                            StartCoroutine(DragonFlyNow());
                         }
-                        if (Menu_ChoosePlayer.whyP3 == 1)
-                        {
-                            PowerUIControl.isMouseCanUsePower = false;
-                        }
-                    } 
-                }
-                else if (other.tag == "P4" && P4_playGame)
-                {
-                    if (DiceControl.P4_totalNum == MGPoint)
+                    }
+                    else
                     {
-                        p = 4;
-                        AnimatorControl.isP4Move = false;
-                        if (!isStopProps)
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                         {
-                            if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
-                            {
-                                AnimatorControl.isP4Skill = false;
-                                StartCoroutine(StartMiniGame());
-                            }
-                            else
-                            {
-                                StartCoroutine(DragonFlyNow());
-                            }
+                            StartCoroutine(StopRound());
                         }
                         else
                         {
-                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
-                            {
-                                StartCoroutine(StopRound());
-                            }
-                            else
-                            {
-                                isStopProps = false;
-                                AnimatorControl.isP4Skill = false;
-                                StartCoroutine(StartMiniGame());
-                            }
+                            isStopProps = false;
+                            AnimatorControl.isP2Skill = false;
+                            StartCoroutine(StartMiniGame());
                         }
-                        if (Menu_ChoosePlayer.whyP4 == 1)
+                    }
+                    if (Menu_ChoosePlayer.whyP2 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P3" && P3_playGame)
+            {
+                if (DiceControl.P3_totalNum == MGPoint)
+                {
+                    p = 3;
+                    AnimatorControl.isP3Move = false;
+                    if (!isStopProps)
+                    {
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
                         {
-                            PowerUIControl.isMouseCanUsePower = false;
+                            AnimatorControl.isP3Skill = false;
+                            StartCoroutine(StartMiniGame());
                         }
+                        else
+                        {
+                            StartCoroutine(DragonFlyNow());
+                        }
+                    }
+                    else
+                    {
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                        {
+                            StartCoroutine(StopRound());
+                        }
+                        else
+                        {
+                            isStopProps = false;
+                            AnimatorControl.isP3Skill = false;
+                            StartCoroutine(StartMiniGame());
+                        }
+                    }
+                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+                }
+            }
+            else if (other.tag == "P4" && P4_playGame)
+            {
+                if (DiceControl.P4_totalNum == MGPoint)
+                {
+                    p = 4;
+                    AnimatorControl.isP4Move = false;
+                    if (!isStopProps)
+                    {
+                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
+                        {
+                            AnimatorControl.isP4Skill = false;
+                            StartCoroutine(StartMiniGame());
+                        }
+                        else
+                        {
+                            StartCoroutine(DragonFlyNow());
+                        }
+                    }
+                    else
+                    {
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                        {
+                            StartCoroutine(StopRound());
+                        }
+                        else
+                        {
+                            isStopProps = false;
+                            AnimatorControl.isP4Skill = false;
+                            StartCoroutine(StartMiniGame());
+                        }
+                    }
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
                     }
                 }
             }

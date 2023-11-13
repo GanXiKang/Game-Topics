@@ -11,152 +11,149 @@ public class OrdinaryColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!PropsControl.isTrans)
+        if (!PropsControl.isTrans || !AnimalsPowerControl.tigerUsePower)
         {
-            if (!AnimalsPowerControl.tigerUsePower)
+            if (other.tag == "P1" && P1_Enter)
             {
-                if (other.tag == "P1" && P1_Enter)
+                if (DiceControl.P1_totalNum == pointNum)
                 {
-                    if (DiceControl.P1_totalNum == pointNum)
+                    P1_Enter = false;
+                    AnimatorControl.isP1Move = false;
+                    if (!isStopProps)
                     {
-                        P1_Enter = false;
-                        AnimatorControl.isP1Move = false;
-                        if (!isStopProps)
+                        StartCoroutine(ChangeCamera());
+                    }
+                    else
+                    {
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                        {
+                            StartCoroutine(StopRound());
+                        }
+                        else
                         {
                             StartCoroutine(ChangeCamera());
-                        }
-                        else
-                        {
-                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
-                            {
-                                StartCoroutine(StopRound());
-                            }
-                            else
-                            {
-                                StartCoroutine(ChangeCamera());
-                            }
-                        }
-                        if (Menu_ChoosePlayer.whyP1 == 1)
-                        {
-                            PowerUIControl.isMouseCanUsePower = false;
-                        }
-
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
-                        {
-                            AnimatorControl.isP1Skill = false;
-                        }
-                        else
-                        {
-                            AnimatorControl.isDragonFlyWalk = false;
                         }
                     }
-                }
-                else if (other.tag == "P2" && P2_Enter)
-                {
-                    if (DiceControl.P2_totalNum == pointNum)
+                    if (Menu_ChoosePlayer.whyP1 == 1)
                     {
-                        P2_Enter = false;
-                        AnimatorControl.isP2Move = false;
-                        if (!isStopProps)
-                        {
-                            StartCoroutine(ChangeCamera());
-                        }
-                        else
-                        {
-                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
-                            {
-                                StartCoroutine(StopRound());
-                            }
-                            else
-                            {
-                                StartCoroutine(ChangeCamera());
-                            }
-                        }
-                        if (Menu_ChoosePlayer.whyP2 == 1)
-                        {
-                            PowerUIControl.isMouseCanUsePower = false;
-                        }
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
 
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
-                        {
-                            AnimatorControl.isP2Skill = false;
-                        }
-                        else
-                        {
-                            AnimatorControl.isDragonFlyWalk = false;
-                        }
+                    if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)
+                    {
+                        AnimatorControl.isP1Skill = false;
+                    }
+                    else
+                    {
+                        AnimatorControl.isDragonFlyWalk = false;
                     }
                 }
-                else if (other.tag == "P3" && P3_Enter)
+            }
+            else if (other.tag == "P2" && P2_Enter)
+            {
+                if (DiceControl.P2_totalNum == pointNum)
                 {
-                    if (DiceControl.P3_totalNum == pointNum)
+                    P2_Enter = false;
+                    AnimatorControl.isP2Move = false;
+                    if (!isStopProps)
                     {
-                        P3_Enter = false;
-                        AnimatorControl.isP3Move = false;
-                        if (!isStopProps)
+                        StartCoroutine(ChangeCamera());
+                    }
+                    else
+                    {
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                        {
+                            StartCoroutine(StopRound());
+                        }
+                        else
                         {
                             StartCoroutine(ChangeCamera());
-                        }
-                        else
-                        {
-                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
-                            {
-                                StartCoroutine(StopRound());
-                            }
-                            else
-                            {
-                                StartCoroutine(ChangeCamera());
-                            }
-                        }
-                        if (Menu_ChoosePlayer.whyP3 == 1)
-                        {
-                            PowerUIControl.isMouseCanUsePower = false;
-                        }
-
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
-                        {
-                            AnimatorControl.isP3Skill = false;
-                        }
-                        else
-                        {
-                            AnimatorControl.isDragonFlyWalk = false;
                         }
                     }
-                }
-                else if (other.tag == "P4" && P4_Enter)
-                {
-                    if (DiceControl.P4_totalNum == pointNum)
+                    if (Menu_ChoosePlayer.whyP2 == 1)
                     {
-                        P4_Enter = false;
-                        AnimatorControl.isP4Move = false;
-                        if (!isStopProps)
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+
+                    if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP2 != 5)
+                    {
+                        AnimatorControl.isP2Skill = false;
+                    }
+                    else
+                    {
+                        AnimatorControl.isDragonFlyWalk = false;
+                    }
+                }
+            }
+            else if (other.tag == "P3" && P3_Enter)
+            {
+                if (DiceControl.P3_totalNum == pointNum)
+                {
+                    P3_Enter = false;
+                    AnimatorControl.isP3Move = false;
+                    if (!isStopProps)
+                    {
+                        StartCoroutine(ChangeCamera());
+                    }
+                    else
+                    {
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                        {
+                            StartCoroutine(StopRound());
+                        }
+                        else
                         {
                             StartCoroutine(ChangeCamera());
                         }
-                        else
-                        {
-                            if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
-                            {
-                                StartCoroutine(StopRound());
-                            }
-                            else
-                            {
-                                StartCoroutine(ChangeCamera());
-                            }
-                        }
-                        if (Menu_ChoosePlayer.whyP4 == 1)
-                        {
-                            PowerUIControl.isMouseCanUsePower = false;
-                        }
+                    }
+                    if (Menu_ChoosePlayer.whyP3 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
 
-                        if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
+                    if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP3 != 5)
+                    {
+                        AnimatorControl.isP3Skill = false;
+                    }
+                    else
+                    {
+                        AnimatorControl.isDragonFlyWalk = false;
+                    }
+                }
+            }
+            else if (other.tag == "P4" && P4_Enter)
+            {
+                if (DiceControl.P4_totalNum == pointNum)
+                {
+                    P4_Enter = false;
+                    AnimatorControl.isP4Move = false;
+                    if (!isStopProps)
+                    {
+                        StartCoroutine(ChangeCamera());
+                    }
+                    else
+                    {
+                        if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                         {
-                            AnimatorControl.isP4Skill = false;
+                            StartCoroutine(StopRound());
                         }
                         else
                         {
-                            AnimatorControl.isDragonFlyWalk = false;
+                            StartCoroutine(ChangeCamera());
                         }
+                    }
+                    if (Menu_ChoosePlayer.whyP4 == 1)
+                    {
+                        PowerUIControl.isMouseCanUsePower = false;
+                    }
+
+                    if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP4 != 5)
+                    {
+                        AnimatorControl.isP4Skill = false;
+                    }
+                    else
+                    {
+                        AnimatorControl.isDragonFlyWalk = false;
                     }
                 }
             }
