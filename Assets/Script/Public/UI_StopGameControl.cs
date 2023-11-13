@@ -65,6 +65,7 @@ public class UI_StopGameControl : MonoBehaviour
         if (isCloseDiceUI)
         {
             DiceUIControl.isDiceUI = true;
+            isCloseDiceUI = false;
         }
     }
     public void BackToMenu()
