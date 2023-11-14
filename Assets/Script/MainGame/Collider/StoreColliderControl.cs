@@ -189,7 +189,10 @@ public class StoreColliderControl : MonoBehaviour
                 {
                     P1_EnterStore = false;
                     AnimatorControl.isP1Move = false;
-                    PropsControl.isTransNum++;
+                    if (PropsControl.isTrans)
+                    {
+                        PropsControl.isTransNum++;
+                    }
                     if (Menu_ChoosePlayer.whyP1 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
@@ -203,7 +206,10 @@ public class StoreColliderControl : MonoBehaviour
                 {
                     P2_EnterStore = false;
                     AnimatorControl.isP2Move = false;
-                    PropsControl.isTransNum++;
+                    if (PropsControl.isTrans)
+                    {
+                        PropsControl.isTransNum++;
+                    }
                     if (Menu_ChoosePlayer.whyP2 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
@@ -217,7 +223,10 @@ public class StoreColliderControl : MonoBehaviour
                 {
                     P3_EnterStore = false;
                     AnimatorControl.isP3Move = false;
-                    PropsControl.isTransNum++;
+                    if (PropsControl.isTrans)
+                    {
+                        PropsControl.isTransNum++;
+                    }
                     if (Menu_ChoosePlayer.whyP3 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
@@ -231,7 +240,10 @@ public class StoreColliderControl : MonoBehaviour
                 {
                     P4_EnterStore = false;
                     AnimatorControl.isP4Move = false;
-                    PropsControl.isTransNum++;
+                    if (PropsControl.isTrans)
+                    {
+                        PropsControl.isTransNum++;
+                    }
                     if (Menu_ChoosePlayer.whyP4 == 1)
                     {
                         PowerUIControl.isMouseCanUsePower = true;
