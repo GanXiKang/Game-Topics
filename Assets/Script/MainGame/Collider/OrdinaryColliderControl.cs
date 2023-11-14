@@ -11,7 +11,7 @@ public class OrdinaryColliderControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!PropsControl.isTrans || !AnimalsPowerControl.tigerUsePower)
+        if (!PropsControl.isTrans && !AnimalsPowerControl.tigerUsePower)
         {
             if (other.tag == "P1" && P1_Enter)
             {
