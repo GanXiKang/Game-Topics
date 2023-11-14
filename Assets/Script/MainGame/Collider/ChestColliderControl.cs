@@ -348,7 +348,9 @@ public class ChestColliderControl : MonoBehaviour
     {
         AnimatorControl.isDragonFlyWalk = false;
         CameraMoveControl.isChangeCameraPoint = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
+        AnimalsPowerControl.dragonPowerRound += 1;
+        yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
