@@ -21,44 +21,49 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public AudioClip ok, cancel, change, error, close;
 
     bool isP1OK, isP2OK, isP3OK, isP4OK;
+    bool isStopAD = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (!isStopAD)
         {
-            whoPlay++;
-            if (whoPlay == 4)
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                isDestoryP4 = 0;
+                whoPlay++;
+                if (whoPlay == 4)
+                {
+                    isDestoryP4 = 0;
+                }
+                if (whoPlay == 3)
+                {
+                    isDestoryP3 = 0;
+                }
+                Limit();
             }
-            if (whoPlay == 3)
+            if (Input.GetKeyDown(KeyCode.D))
             {
-                isDestoryP3 = 0;
-            } 
-            Limit();
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            if (whoPlay == 4)
-            {
-                whyP4 = 0;
-                isP4OK = false;
-                isDestoryP4++;
+                if (whoPlay == 4)
+                {
+                    whyP4 = 0;
+                    isP4OK = false;
+                    isDestoryP4++;
+                }
+                if (whoPlay == 3)
+                {
+                    whyP3 = 0;
+                    isP3OK = false;
+                    isDestoryP3++;
+                }
+                whoPlay--;
+                Limit();
             }
-            if (whoPlay == 3)
-            {
-                whyP3 = 0;
-                isP3OK = false;
-                isDestoryP3++;
-            }
-            whoPlay--;
-            Limit();
         }
 
         Process();
     }
     IEnumerator GoMainGame()
     {
+        isStopAD = true;
         NO[0].SetActive(false);
         NO[1].SetActive(false);
         NO[2].SetActive(false);
@@ -70,6 +75,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         isDestoryP2 = 0;
         isDestoryP3 = 0;
         isDestoryP4 = 0;
+        isStopAD = false;
     }
 
     void Process()
