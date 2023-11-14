@@ -14,7 +14,6 @@ public class GameEndControl : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(BackMainMenu());
         if (other.tag == "P1")
         {
             if (DiceControl.P1_totalNum >= endPoint)
@@ -23,6 +22,7 @@ public class GameEndControl : MonoBehaviour
                 AnimatorControl.isP1Move = false;
                 AnimatorControl.isP1Skill = false;
                 AnimatorControl.isP1Win = true;
+                StartCoroutine(GOEndScene());
             }
         }
         else if (other.tag == "P2")
@@ -33,6 +33,7 @@ public class GameEndControl : MonoBehaviour
                 AnimatorControl.isP2Move = false;
                 AnimatorControl.isP2Skill = false;
                 AnimatorControl.isP2Win = true;
+                StartCoroutine(GOEndScene());
             }
         }
         else if (other.tag == "P3")
@@ -43,6 +44,7 @@ public class GameEndControl : MonoBehaviour
                 AnimatorControl.isP3Move = false;
                 AnimatorControl.isP3Skill = false;
                 AnimatorControl.isP3Win = true;
+                StartCoroutine(GOEndScene());
             }
         }
         else if (other.tag == "P4")
@@ -53,10 +55,11 @@ public class GameEndControl : MonoBehaviour
                 AnimatorControl.isP4Move = false;
                 AnimatorControl.isP4Skill = false;
                 AnimatorControl.isP4Win = true;
+                StartCoroutine(GOEndScene());
             }
         }
     }
-    IEnumerator BackMainMenu()
+    IEnumerator GOEndScene()
     {
         systemTest.text = "ß[‘ò½YÊø£¡";
         SystemTestTextControl.isTimer = true;
