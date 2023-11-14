@@ -103,6 +103,7 @@ public class PropsControl : MonoBehaviour
                                     else 
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -127,6 +128,7 @@ public class PropsControl : MonoBehaviour
                                     else 
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -151,6 +153,7 @@ public class PropsControl : MonoBehaviour
                                     else
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -161,6 +164,7 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "Œ¦·½›]ÓÐµÀ¾ß£¬Íµ±IÊ§”¡";
+                        systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -193,6 +197,7 @@ public class PropsControl : MonoBehaviour
                                     else
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                 }
@@ -216,6 +221,7 @@ public class PropsControl : MonoBehaviour
                                     else
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -240,6 +246,7 @@ public class PropsControl : MonoBehaviour
                                     else
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -250,6 +257,7 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "Œ¦·½›]ÓÐµÀ¾ß£¬Íµ±IÊ§”¡";
+                        systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -281,6 +289,7 @@ public class PropsControl : MonoBehaviour
                                     else
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -305,6 +314,7 @@ public class PropsControl : MonoBehaviour
                                     else
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -329,6 +339,7 @@ public class PropsControl : MonoBehaviour
                                     else
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -339,6 +350,7 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "Œ¦·½›]ÓÐµÀ¾ß£¬Íµ±IÊ§”¡";
+                        systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -370,6 +382,7 @@ public class PropsControl : MonoBehaviour
                                     else
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -394,6 +407,7 @@ public class PropsControl : MonoBehaviour
                                     else
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -418,6 +432,7 @@ public class PropsControl : MonoBehaviour
                                     else
                                     {
                                         systemText.text = "ëuÌŽì¶Ÿo”³ î‘B£¬Íµ±IÊ§”¡";
+                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -428,6 +443,7 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "Œ¦·½›]ÓÐµÀ¾ß£¬Íµ±IÊ§”¡";
+                        systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
