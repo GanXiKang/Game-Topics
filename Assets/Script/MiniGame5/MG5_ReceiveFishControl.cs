@@ -27,7 +27,7 @@ public class MG5_ReceiveFishControl : MonoBehaviour
             }
             else if (other.tag == "Rubbish")
             {
-                score -= 3;
+                MG5_UIControl.timer += 3;
                 Destroy(other.gameObject);
             }
         }
