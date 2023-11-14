@@ -49,6 +49,7 @@ public class StoreColliderControl : MonoBehaviour
                             AnimatorControl.isP1Wave = true;
                             StartCoroutine(LookTarget());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP1 == 1)
                     {
@@ -90,6 +91,7 @@ public class StoreColliderControl : MonoBehaviour
                             AnimatorControl.isP2Wave = true;
                             StartCoroutine(LookTarget());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP2 == 1)
                     {
@@ -131,6 +133,7 @@ public class StoreColliderControl : MonoBehaviour
                             AnimatorControl.isP3Wave = true;
                             StartCoroutine(LookTarget());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP3 == 1)
                     {
@@ -172,6 +175,7 @@ public class StoreColliderControl : MonoBehaviour
                             AnimatorControl.isP4Wave = true;
                             StartCoroutine(LookTarget());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP4 == 1)
                     {
@@ -383,7 +387,6 @@ public class StoreColliderControl : MonoBehaviour
     }
     IEnumerator StopRound()
     {
-        isStopProps = false;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         CameraMoveControl.isChangeCameraPoint = false;

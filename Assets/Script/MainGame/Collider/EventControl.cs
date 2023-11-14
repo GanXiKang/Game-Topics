@@ -80,6 +80,7 @@ public class EventControl : MonoBehaviour
                                 }
                             }
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP1 == 1)
                     {
@@ -145,6 +146,7 @@ public class EventControl : MonoBehaviour
                                 }
                             }
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP2 == 1)
                     {
@@ -210,6 +212,7 @@ public class EventControl : MonoBehaviour
                                 }
                             }
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP3 == 1)
                     {
@@ -275,6 +278,7 @@ public class EventControl : MonoBehaviour
                                 }
                             }
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP4 == 1)
                     {
@@ -673,7 +677,6 @@ public class EventControl : MonoBehaviour
     }
     IEnumerator StopRound()
     {
-        isStopProps = false;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         CameraMoveControl.isChangeCameraPoint = false;

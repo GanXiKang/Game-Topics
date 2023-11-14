@@ -18,7 +18,6 @@ public class MiniGameColliderControl : MonoBehaviour
     {
         if (!PropsControl.isTrans && !AnimalsPowerControl.tigerUsePower)
         {
-
             if (other.tag == "P1" && P1_playGame)
             {
                 if (DiceControl.P1_totalNum == MGPoint)
@@ -49,6 +48,7 @@ public class MiniGameColliderControl : MonoBehaviour
                             AnimatorControl.isP1Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP1 == 1)
                     {
@@ -86,6 +86,7 @@ public class MiniGameColliderControl : MonoBehaviour
                             AnimatorControl.isP2Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP2 == 1)
                     {
@@ -123,6 +124,7 @@ public class MiniGameColliderControl : MonoBehaviour
                             AnimatorControl.isP3Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP3 == 1)
                     {
@@ -160,6 +162,7 @@ public class MiniGameColliderControl : MonoBehaviour
                             AnimatorControl.isP4Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP4 == 1)
                     {
@@ -339,7 +342,6 @@ public class MiniGameColliderControl : MonoBehaviour
     }
     IEnumerator StopRound()
     {
-        isStopProps = false;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         CameraMoveControl.isChangeCameraPoint = false;

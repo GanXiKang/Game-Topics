@@ -50,6 +50,7 @@ public class ChestColliderControl : MonoBehaviour
                             AnimatorControl.isP1Skill = false;
                             StartCoroutine(ChangeCamera());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP1 == 1)
                     {
@@ -87,6 +88,7 @@ public class ChestColliderControl : MonoBehaviour
                             AnimatorControl.isP2Skill = false;
                             StartCoroutine(ChangeCamera());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP2 == 1)
                     {
@@ -124,6 +126,7 @@ public class ChestColliderControl : MonoBehaviour
                             AnimatorControl.isP3Skill = false;
                             StartCoroutine(ChangeCamera());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP3 == 1)
                     {
@@ -161,6 +164,7 @@ public class ChestColliderControl : MonoBehaviour
                             AnimatorControl.isP4Skill = false;
                             StartCoroutine(ChangeCamera());
                         }
+                        isStopProps = false;
                     }
                     if (Menu_ChoosePlayer.whyP4 == 1)
                     {
@@ -351,7 +355,6 @@ public class ChestColliderControl : MonoBehaviour
     }
     IEnumerator StopRound()
     {
-        isStopProps = false;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         CameraMoveControl.isChangeCameraPoint = false;
