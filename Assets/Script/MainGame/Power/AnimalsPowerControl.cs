@@ -120,7 +120,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 {
                     r = Random.Range(5, 16);
                     CoinControl.P1CoinTotal += r;
-                    systemText.text = "尋找到" + r + "錢！";
+                    systemText.text = "尋找到" + r + "貓貓幣！";
                     SystemTestTextControl.isTimer = true;
                 }
                 else
@@ -143,7 +143,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 {
                     r = Random.Range(5, 16);
                     CoinControl.P2CoinTotal += r;
-                    systemText.text = "老鼠尋找到" + r + "錢！";
+                    systemText.text = "老鼠尋找到" + r + "貓貓幣！";
                     SystemTestTextControl.isTimer = true;
                 }
                 else
@@ -166,7 +166,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 {
                     r = Random.Range(5, 16);
                     CoinControl.P3CoinTotal += r;
-                    systemText.text = "老鼠尋找到" + r + "錢！";
+                    systemText.text = "老鼠尋找到" + r + "貓貓幣！";
                     SystemTestTextControl.isTimer = true;
                 }
                 else
@@ -189,7 +189,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 {
                     r = Random.Range(5, 16);
                     CoinControl.P4CoinTotal += r;
-                    systemText.text = "老鼠尋找到" + r + "錢！";
+                    systemText.text = "老鼠尋找到" + r + "貓貓幣！";
                     SystemTestTextControl.isTimer = true;
                 }
                 else
