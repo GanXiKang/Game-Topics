@@ -251,20 +251,30 @@ public class AnimalsPowerControl : MonoBehaviour
         tigerUsePower = true;
         systemText.text = "老虎發動技能！";
         SystemTestTextControl.isTimer = true;
+        PowerUIControl.animalsPowerUseNum[3]--;
+        AnimalsSkillAnimator();
+        BGM.PlayOneShot(tiger);
+        CameraMoveControl.isChangeCameraPoint = true;
+        yield return new WaitForSeconds(2f);
+        systemText.text = "全部玩家後退！";
+        SystemTestTextControl.isTimer = true;
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                 {
                     DiceControl.P2_totalNum -= 2;
+                    AnimatorControl.isP2Move = true;
                 }
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                 {
                     DiceControl.P3_totalNum -= 2;
+                    AnimatorControl.isP3Move = true;
                 }
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                 {
                     DiceControl.P4_totalNum -= 2;
+                    AnimatorControl.isP4Move = true;
                 }
                 break;
 
@@ -272,14 +282,17 @@ public class AnimalsPowerControl : MonoBehaviour
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                 {
                     DiceControl.P1_totalNum -= 2;
+                    AnimatorControl.isP1Move = true;
                 }
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                 {
                     DiceControl.P3_totalNum -= 2;
+                    AnimatorControl.isP3Move = true;
                 }
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                 {
                     DiceControl.P4_totalNum -= 2;
+                    AnimatorControl.isP4Move = true;
                 }
                 break;
 
@@ -287,14 +300,17 @@ public class AnimalsPowerControl : MonoBehaviour
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                 {
                     DiceControl.P1_totalNum -= 2;
+                    AnimatorControl.isP1Move = true;
                 }
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                 {
                     DiceControl.P2_totalNum -= 2;
+                    AnimatorControl.isP2Move = true;
                 }
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                 {
                     DiceControl.P4_totalNum -= 2;
+                    AnimatorControl.isP4Move = true;
                 }
                 break;
 
@@ -302,24 +318,20 @@ public class AnimalsPowerControl : MonoBehaviour
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                 {
                     DiceControl.P1_totalNum -= 2;
+                    AnimatorControl.isP1Move = true;
                 }
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                 {
                     DiceControl.P2_totalNum -= 2;
+                    AnimatorControl.isP2Move = true;
                 }
                 if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                 {
                     DiceControl.P3_totalNum -= 2;
+                    AnimatorControl.isP3Move = true;
                 }
                 break;
         }
-        PowerUIControl.animalsPowerUseNum[3]--;
-        AnimalsSkillAnimator();
-        BGM.PlayOneShot(tiger);
-        CameraMoveControl.isChangeCameraPoint = true;
-        yield return new WaitForSeconds(1f);
-        systemText.text = "全部玩家後退！";
-        SystemTestTextControl.isTimer = true;
         BGM.PlayOneShot(tigerBack);
         ChangeCameraControl.changeCameraNum++;
         yield return new WaitForSeconds(1f);
