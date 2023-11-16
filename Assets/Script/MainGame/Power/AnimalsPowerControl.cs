@@ -336,6 +336,7 @@ public class AnimalsPowerControl : MonoBehaviour
         ChangeCameraControl.changeCameraNum++;
         yield return new WaitForSeconds(1f);
         ChangeCameraControl.changeCameraNum++;
+        AnimalsSkillAnimator();
         yield return new WaitForSeconds(1f);
         if (Menu_ChoosePlayer.whoPlay >= 3)
         {
@@ -347,7 +348,6 @@ public class AnimalsPowerControl : MonoBehaviour
             ChangeCameraControl.changeCameraNum++;
         }
         yield return new WaitForSeconds(1f);
-        AnimalsSkillAnimator();
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
