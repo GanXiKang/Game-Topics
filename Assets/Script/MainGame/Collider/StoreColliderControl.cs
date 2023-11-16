@@ -58,7 +58,7 @@ public class StoreColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P2" && P2_EnterStore)
+            else if(other.tag == "P2" && P2_EnterStore)
             {
                 if (DiceControl.P2_totalNum == pointNum)
                 {

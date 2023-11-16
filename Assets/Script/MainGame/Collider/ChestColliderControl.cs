@@ -59,7 +59,7 @@ public class ChestColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P2" && P2_EnterBox)
+            else if(other.tag == "P2" && P2_EnterBox)
             {
                 if (DiceControl.P2_totalNum == boxPoint)
                 {
@@ -97,7 +97,7 @@ public class ChestColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P3" && P3_EnterBox)
+            else if(other.tag == "P3" && P3_EnterBox)
             {
                 if (DiceControl.P3_totalNum == boxPoint)
                 {
@@ -135,7 +135,7 @@ public class ChestColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P4" && P4_EnterBox)
+            else if(other.tag == "P4" && P4_EnterBox)
             {
                 if (DiceControl.P4_totalNum == boxPoint)
                 {
@@ -193,7 +193,7 @@ public class ChestColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P2" && P2_EnterBox)
+            else if(other.tag == "P2" && P2_EnterBox)
             {
                 if (DiceControl.P2_totalNum == boxPoint)
                 {
@@ -210,7 +210,7 @@ public class ChestColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P3" && P3_EnterBox)
+            else if(other.tag == "P3" && P3_EnterBox)
             {
                 if (DiceControl.P3_totalNum == boxPoint)
                 {
@@ -227,7 +227,7 @@ public class ChestColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P4" && P4_EnterBox)
+            else if(other.tag == "P4" && P4_EnterBox)
             {
                 if (DiceControl.P4_totalNum == boxPoint)
                 {
@@ -368,15 +368,15 @@ public class ChestColliderControl : MonoBehaviour
         {
             AnimatorControl.isP1Wave = true;
         }
-        else if (!P2_EnterBox)
+        if (!P2_EnterBox)
         {
             AnimatorControl.isP2Wave = true;
         }
-        else if (!P3_EnterBox)
+        if (!P3_EnterBox)
         {
             AnimatorControl.isP3Wave = true;
         }
-        else if (!P4_EnterBox)
+        if (!P4_EnterBox)
         {
             AnimatorControl.isP4Wave = true;
         }

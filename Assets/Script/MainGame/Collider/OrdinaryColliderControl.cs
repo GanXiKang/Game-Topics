@@ -51,7 +51,7 @@ public class OrdinaryColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P2" && P2_Enter)
+            else if(other.tag == "P2" && P2_Enter)
             {
                 if (DiceControl.P2_totalNum == pointNum)
                 {
@@ -89,7 +89,7 @@ public class OrdinaryColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P3" && P3_Enter)
+            else if(other.tag == "P3" && P3_Enter)
             {
                 if (DiceControl.P3_totalNum == pointNum)
                 {
@@ -127,7 +127,7 @@ public class OrdinaryColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P4" && P4_Enter)
+            else if(other.tag == "P4" && P4_Enter)
             {
                 if (DiceControl.P4_totalNum == pointNum)
                 {
@@ -282,15 +282,15 @@ public class OrdinaryColliderControl : MonoBehaviour
         {
             AnimatorControl.isP1Wave = true;
         }
-        else if (!P2_Enter)
+        if (!P2_Enter)
         {
             AnimatorControl.isP2Wave = true;
         }
-        else if (!P3_Enter)
+        if (!P3_Enter)
         {
             AnimatorControl.isP3Wave = true;
         }
-        else if (!P4_Enter)
+        if (!P4_Enter)
         {
             AnimatorControl.isP4Wave = true;
         }

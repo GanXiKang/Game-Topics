@@ -56,7 +56,7 @@ public class MiniGameColliderControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P2" && P2_playGame)
+            else if(other.tag == "P2" && P2_playGame)
             {
                 if (DiceControl.P2_totalNum == MGPoint)
                 {

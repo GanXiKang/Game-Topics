@@ -25,7 +25,7 @@ public class GameEndControl : MonoBehaviour
                 StartCoroutine(GOEndScene());
             }
         }
-        else if (other.tag == "P2")
+        else if(other.tag == "P2")
         {
             if (DiceControl.P2_totalNum >= endPoint)
             {

@@ -88,7 +88,7 @@ public class EventControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P2" && P2_EnterEvent)
+            else if(other.tag == "P2" && P2_EnterEvent)
             {
                 if (DiceControl.P2_totalNum == EventPoint)
                 {
@@ -154,7 +154,7 @@ public class EventControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P3" && P3_EnterEvent)
+            else if(other.tag == "P3" && P3_EnterEvent)
             {
                 if (DiceControl.P3_totalNum == EventPoint)
                 {
@@ -220,7 +220,7 @@ public class EventControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P4" && P4_EnterEvent)
+            else if(other.tag == "P4" && P4_EnterEvent)
             {
                 if (DiceControl.P4_totalNum == EventPoint)
                 {
@@ -305,7 +305,7 @@ public class EventControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P2" && P2_EnterEvent)
+            else if(other.tag == "P2" && P2_EnterEvent)
             {
                 if (DiceControl.P2_totalNum == EventPoint)
                 {
@@ -321,7 +321,7 @@ public class EventControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P3" && P3_EnterEvent)
+            else if(other.tag == "P3" && P3_EnterEvent)
             {
                 if (DiceControl.P3_totalNum == EventPoint)
                 {
@@ -337,7 +337,7 @@ public class EventControl : MonoBehaviour
                     }
                 }
             }
-            else if (other.tag == "P4" && P4_EnterEvent)
+            else if(other.tag == "P4" && P4_EnterEvent)
             {
                 if (DiceControl.P4_totalNum == EventPoint)
                 {
