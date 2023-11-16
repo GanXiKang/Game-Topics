@@ -255,23 +255,22 @@ public class AnimalsPowerControl : MonoBehaviour
         AnimalsSkillAnimator();
         BGM.PlayOneShot(tiger);
         CameraMoveControl.isChangeCameraPoint = true;
-        yield return new WaitForSeconds(2f);
-        systemText.text = "全部玩家後退！";
-        SystemTestTextControl.isTimer = true;
+        yield return new WaitForSeconds(1f);
+        AnimalsSkillAnimator();
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                if (chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                 {
                     DiceControl.P2_totalNum -= 2;
                     AnimatorControl.isP2Move = true;
                 }
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                 {
                     DiceControl.P3_totalNum -= 2;
                     AnimatorControl.isP3Move = true;
                 }
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                 {
                     DiceControl.P4_totalNum -= 2;
                     AnimatorControl.isP4Move = true;
@@ -279,17 +278,17 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
 
             case 2:
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                 {
                     DiceControl.P1_totalNum -= 2;
                     AnimatorControl.isP1Move = true;
                 }
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                 {
                     DiceControl.P3_totalNum -= 2;
                     AnimatorControl.isP3Move = true;
                 }
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                 {
                     DiceControl.P4_totalNum -= 2;
                     AnimatorControl.isP4Move = true;
@@ -297,17 +296,17 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
 
             case 3:
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                 {
                     DiceControl.P1_totalNum -= 2;
                     AnimatorControl.isP1Move = true;
                 }
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                 {
                     DiceControl.P2_totalNum -= 2;
                     AnimatorControl.isP2Move = true;
                 }
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP4 != 10)
                 {
                     DiceControl.P4_totalNum -= 2;
                     AnimatorControl.isP4Move = true;
@@ -315,23 +314,26 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
 
             case 4:
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP1 != 10)
                 {
                     DiceControl.P1_totalNum -= 2;
                     AnimatorControl.isP1Move = true;
                 }
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP2 != 10)
                 {
                     DiceControl.P2_totalNum -= 2;
                     AnimatorControl.isP2Move = true;
                 }
-                if (!AnimalsPowerControl.chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
+                if (!chickenUsePower || Menu_ChoosePlayer.whyP3 != 10)
                 {
                     DiceControl.P3_totalNum -= 2;
                     AnimatorControl.isP3Move = true;
                 }
                 break;
         }
+        yield return new WaitForSeconds(1f);
+        systemText.text = "全部玩家後退！";
+        SystemTestTextControl.isTimer = true;
         BGM.PlayOneShot(tigerBack);
         ChangeCameraControl.changeCameraNum++;
         yield return new WaitForSeconds(1f);
@@ -347,7 +349,6 @@ public class AnimalsPowerControl : MonoBehaviour
             ChangeCameraControl.changeCameraNum++;
         }
         yield return new WaitForSeconds(1f);
-        AnimalsSkillAnimator();
         ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
         CameraMoveControl.isChangeCameraPoint = false;
