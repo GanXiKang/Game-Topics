@@ -8,6 +8,7 @@ public class SystemTestTextControl : MonoBehaviour
     float timer = 0;
 
     public GameObject backGround;
+    public Text systemText;
 
     public static bool isTimer = false;
 
@@ -17,6 +18,7 @@ public class SystemTestTextControl : MonoBehaviour
         if (timer > 2f)
         {
             backGround.SetActive(false);
+            systemText.fontSize = 18;
         }
 
         if (isTimer)
