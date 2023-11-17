@@ -61,7 +61,7 @@ public class Chest1AnimationControl : MonoBehaviour
                         AnimatorControl.isP1Jump = true;
                         break;
                     case 10:
-                        systemTest.text = "¿Õ£¡";
+                        systemTest.text = "Ê²÷á¶¼›]ÓÐ£¡";
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP1Lose = true;
                         break;
@@ -98,7 +98,7 @@ public class Chest1AnimationControl : MonoBehaviour
                         AnimatorControl.isP2Jump = true;
                         break;
                     case 10:
-                        systemTest.text = "¿Õ£¡";
+                        systemTest.text = "Ê²÷á¶¼›]ÓÐ£¡";
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP2Lose = true;
                         break;
@@ -135,7 +135,7 @@ public class Chest1AnimationControl : MonoBehaviour
                         AnimatorControl.isP3Jump = true;
                         break;
                     case 10:
-                        systemTest.text = "¿Õ£¡";
+                        systemTest.text = "Ê²÷á¶¼›]ÓÐ£¡";
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP3Lose = true;
                         break;
@@ -172,7 +172,7 @@ public class Chest1AnimationControl : MonoBehaviour
                         AnimatorControl.isP4Jump = true;
                         break;
                     case 10:
-                        systemTest.text = "¿Õ£¡";
+                        systemTest.text = "Ê²÷á¶¼›]ÓÐ£¡";
                         SystemTestTextControl.isTimer = true;
                         AnimatorControl.isP4Lose = true;
                         break;
