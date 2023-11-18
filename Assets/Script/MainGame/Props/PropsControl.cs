@@ -163,7 +163,7 @@ public class PropsControl : MonoBehaviour
                     }
                     if (!isStealProps)
                     {
-                        systemText.text = "對方沒有道具，偷盜失敗";
+                        systemText.text = "對方沒有道具可偷";
                         systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
@@ -256,7 +256,7 @@ public class PropsControl : MonoBehaviour
                     }
                     if (!isStealProps)
                     {
-                        systemText.text = "對方沒有道具，偷盜失敗";
+                        systemText.text = "對方沒有道具可偷";
                         systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
@@ -349,7 +349,7 @@ public class PropsControl : MonoBehaviour
                     }
                     if (!isStealProps)
                     {
-                        systemText.text = "對方沒有道具，偷盜失敗";
+                        systemText.text = "對方沒有道具可偷";
                         systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
@@ -442,7 +442,7 @@ public class PropsControl : MonoBehaviour
                     }
                     if (!isStealProps)
                     {
-                        systemText.text = "對方沒有道具，偷盜失敗";
+                        systemText.text = "對方沒有道具可偷";
                         systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
