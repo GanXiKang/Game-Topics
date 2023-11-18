@@ -9,6 +9,7 @@ public class StartCameraControl : MonoBehaviour
     void Start()
     {
         StartCoroutine(OpeningShow());
+        print("ok");
     }
 
     IEnumerator OpeningShow()
