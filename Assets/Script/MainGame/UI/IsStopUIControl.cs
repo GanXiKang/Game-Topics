@@ -55,7 +55,7 @@ public class IsStopUIControl : MonoBehaviour
                         break;
                 }
             }
-            if (isBombStopUI != 0)
+            else if (isBombStopUI != 0)
             {
                 switch (ChangeCameraControl.changeCameraNum)
                 {
@@ -92,7 +92,7 @@ public class IsStopUIControl : MonoBehaviour
                         break;
                 }
             }
-            if (isCowPowerStopUI != 0)
+            else if (isCowPowerStopUI != 0)
             {
                 switch (ChangeCameraControl.changeCameraNum)
                 {
@@ -129,7 +129,7 @@ public class IsStopUIControl : MonoBehaviour
                         break;
                 }
             }
-            if (isSnakePowerStopUI != 0)
+            else if (isSnakePowerStopUI != 0)
             {
                 switch (ChangeCameraControl.changeCameraNum)
                 {
@@ -166,7 +166,7 @@ public class IsStopUIControl : MonoBehaviour
                         break;
                 }
             }
-            if (isBananaStopUI != 0)
+            else if (isBananaStopUI != 0)
             {
                 switch (ChangeCameraControl.changeCameraNum)
                 {
