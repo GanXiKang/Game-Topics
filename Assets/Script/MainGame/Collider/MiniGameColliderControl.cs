@@ -44,7 +44,6 @@ public class MiniGameColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            isStopProps = false;
                             AnimatorControl.isP1Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
@@ -82,7 +81,6 @@ public class MiniGameColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            isStopProps = false;
                             AnimatorControl.isP2Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
@@ -120,7 +118,6 @@ public class MiniGameColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            isStopProps = false;
                             AnimatorControl.isP3Skill = false;
                             StartCoroutine(StartMiniGame());
                         }
@@ -158,7 +155,6 @@ public class MiniGameColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            isStopProps = false;
                             AnimatorControl.isP4Skill = false;
                             StartCoroutine(StartMiniGame());
                         }

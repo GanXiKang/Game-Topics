@@ -44,7 +44,6 @@ public class StoreColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            isStopProps = false;
                             AnimatorControl.isP1Skill = false;
                             AnimatorControl.isP1Wave = true;
                             StartCoroutine(LookTarget());
@@ -86,7 +85,6 @@ public class StoreColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            isStopProps = false;
                             AnimatorControl.isP2Skill = false;
                             AnimatorControl.isP2Wave = true;
                             StartCoroutine(LookTarget());
@@ -128,7 +126,6 @@ public class StoreColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            isStopProps = false;
                             AnimatorControl.isP3Skill = false;
                             AnimatorControl.isP3Wave = true;
                             StartCoroutine(LookTarget());
@@ -170,7 +167,6 @@ public class StoreColliderControl : MonoBehaviour
                         }
                         else
                         {
-                            isStopProps = false;
                             AnimatorControl.isP4Skill = false;
                             AnimatorControl.isP4Wave = true;
                             StartCoroutine(LookTarget());
