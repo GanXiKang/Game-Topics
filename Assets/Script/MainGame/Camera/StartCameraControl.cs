@@ -8,16 +8,13 @@ public class StartCameraControl : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(OpeningCameraShow());
+        StartCoroutine(CameraShow());
     }
 
-    IEnumerator OpeningCameraShow()
+    IEnumerator CameraShow()
     {
-        c[7].SetActive(true);
-        DiceUIControl.isDiceUI = false;
-        yield return new WaitForSeconds(1f);
-        c[7].SetActive(false);
         c[6].SetActive(true);
+        DiceUIControl.isDiceUI = false;
         yield return new WaitForSeconds(1f);
         c[6].SetActive(false);
         c[5].SetActive(true);
