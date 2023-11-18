@@ -378,6 +378,11 @@ public class EventControl : MonoBehaviour
         {
             P4_EnterEvent = true;
         }
+
+        if (other.tag == "StopProps")
+        {
+            isStopProps = false;
+        }
     }
     IEnumerator P1_EventHappened()
     {

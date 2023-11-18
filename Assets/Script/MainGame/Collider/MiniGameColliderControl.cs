@@ -321,6 +321,11 @@ public class MiniGameColliderControl : MonoBehaviour
             P4_playGame = true;
             MGAnimalsAnimatorControl.isBye = true;
         }
+
+        if (other.tag == "StopProps")
+        {
+            isStopProps = false;
+        }
     }
     IEnumerator StartMiniGame()
     {

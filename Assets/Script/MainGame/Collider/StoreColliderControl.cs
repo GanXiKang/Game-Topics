@@ -367,6 +367,11 @@ public class StoreColliderControl : MonoBehaviour
         {
             P4_EnterStore = true;
         }
+
+        if (other.tag == "StopProps")
+        {
+            isStopProps = false;
+        }
     }
 
     IEnumerator LookTarget()

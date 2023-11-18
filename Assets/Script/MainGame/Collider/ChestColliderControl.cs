@@ -320,6 +320,11 @@ public class ChestColliderControl : MonoBehaviour
         {
             P4_EnterBox = true;
         }
+
+        if (other.tag == "StopProps")
+        {
+            isStopProps = false;
+        }
     }
 
     IEnumerator ChangeCamera()

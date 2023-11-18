@@ -257,6 +257,11 @@ public class OrdinaryColliderControl : MonoBehaviour
         {
             P4_Enter = true;
         }
+
+        if (other.tag == "StopProps")
+        {
+            isStopProps = false;
+        }
     }
 
     IEnumerator ChangeCamera()
