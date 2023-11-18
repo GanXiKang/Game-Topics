@@ -8,11 +8,10 @@ public class StartCameraControl : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(OpeningShow());
-        print("ok");
+        StartCoroutine(OpeningCameraShow());
     }
 
-    IEnumerator OpeningShow()
+    IEnumerator OpeningCameraShow()
     {
         c[7].SetActive(true);
         DiceUIControl.isDiceUI = false;
