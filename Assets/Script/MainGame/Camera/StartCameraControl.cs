@@ -13,6 +13,7 @@ public class StartCameraControl : MonoBehaviour
 
     IEnumerator CameraShow()
     {
+        yield return new WaitForSeconds(1f);
         c[6].SetActive(true);
         DiceUIControl.isDiceUI = false;
         yield return new WaitForSeconds(1f);

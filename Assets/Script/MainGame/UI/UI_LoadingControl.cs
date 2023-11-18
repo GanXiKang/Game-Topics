@@ -14,7 +14,7 @@ public class UI_LoadingControl : MonoBehaviour
 
     IEnumerator LoadingNow()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         LoadingUI.SetActive(false);
     }
 }
