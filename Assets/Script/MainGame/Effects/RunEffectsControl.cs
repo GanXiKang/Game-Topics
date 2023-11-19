@@ -35,7 +35,7 @@ public class RunEffectsControl : MonoBehaviour
         {
             if (AnimalsPowerControl.cowUsePower)
             {
-                transform.position = new Vector3(cow.transform.position.x, transform.position.y, cow.transform.position.z);
+                transform.position = new Vector3(cow.transform.position.x, transform.position.y, cow.transform.position.z + 1);
             }
             if (AnimalsPowerControl.rabbitUsePower)
             {
@@ -47,7 +47,7 @@ public class RunEffectsControl : MonoBehaviour
             }
             if (AnimalsPowerControl.dogUsePower)
             {
-                transform.position = new Vector3(dog.transform.position.x, transform.position.y, dog.transform.position.z);
+                transform.position = new Vector3(dog.transform.position.x, transform.position.y, dog.transform.position.z + 1);
             }
         }
     }
