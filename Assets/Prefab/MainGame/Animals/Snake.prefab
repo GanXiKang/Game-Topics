@@ -793,6 +793,7 @@ GameObject:
   - component: {fileID: 5769721130590054681}
   - component: {fileID: 1101060230}
   - component: {fileID: 7852010088485067548}
+  - component: {fileID: 1310315312393468406}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Snake
@@ -820,6 +821,7 @@ Transform:
   - {fileID: 2683242967693832878}
   - {fileID: 2683242968287419993}
   - {fileID: 2206054606678926670}
+  - {fileID: 4600222884180018869}
   - {fileID: 2199304047737664827}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1099,6 +1101,20 @@ MonoBehaviour:
   - {fileID: 7703601060894012174, guid: b705693a156152e48b067132b3598172, type: 3}
   - {fileID: 8026943673549316358, guid: 0989d2ecbe474934eb3c14cb66b221a4, type: 3}
   insPropsPoint: {fileID: 2206054606678926670}
+--- !u!114 &1310315312393468406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3025753275759347830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362ddfa9bedceef478efd00ae81093f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects: {fileID: 3402585191354268952, guid: 87dbc904e64169a4e97f59b2bca4ad17, type: 3}
+  point: {fileID: 7412606181399933654}
 --- !u!1 &3066873459214432481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,6 +2246,37 @@ Transform:
   m_Father: {fileID: 7136416222803716022}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7412606181399933654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4600222884180018869}
+  m_Layer: 0
+  m_Name: EffectsPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4600222884180018869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7412606181399933654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2501312254220964556}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7418833473204557862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,7 +2703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_LocalScale.y
