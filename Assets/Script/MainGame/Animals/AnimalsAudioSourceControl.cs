@@ -11,7 +11,7 @@ public class AnimalsAudioSourceControl : MonoBehaviour
     void Start()
     {
         BGM = GetComponent<AudioSource>();
-        Invoke("WaitOpeningAnimation", 3f);
+        Invoke("WaitOpeningAnimation", 8.3f);
     }
 
     void Update()
