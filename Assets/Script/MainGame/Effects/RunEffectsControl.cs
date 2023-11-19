@@ -39,7 +39,7 @@ public class RunEffectsControl : MonoBehaviour
             }
             if (AnimalsPowerControl.rabbitUsePower)
             {
-                transform.position += new Vector3(rabbit.transform.position.x, transform.position.y, rabbit.transform.position.z);
+                transform.position = new Vector3(rabbit.transform.position.x, transform.position.y, rabbit.transform.position.z);
             }
             if (AnimalsPowerControl.horseUsePower)
             {
