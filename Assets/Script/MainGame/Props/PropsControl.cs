@@ -878,7 +878,7 @@ public class PropsControl : MonoBehaviour
         P1Props[0] = 1;
         P1Props[1] = 1;
         P1Props[2] = 1;
-        P1Props[3] = 0;
+        P1Props[3] = 1;
         P1Props[4] = 0;
         P1Props[5] = 0;
         P1Props[6] = 0;
@@ -892,14 +892,14 @@ public class PropsControl : MonoBehaviour
         P3Props[0] = 1;
         P3Props[1] = 1;
         P3Props[2] = 1;
-        P3Props[3] = 0;
+        P3Props[3] = 1;
         P3Props[4] = 0;
         P3Props[5] = 0;
         P3Props[6] = 0;
         P4Props[0] = 1;
         P4Props[1] = 1;
         P4Props[2] = 1;
-        P4Props[3] = 0;
+        P4Props[3] = 1;
         P4Props[4] = 0;
         P4Props[5] = 0;
         P4Props[6] = 0;
