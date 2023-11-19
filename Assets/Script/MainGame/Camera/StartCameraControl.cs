@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class StartCameraControl : MonoBehaviour
 {
-    public GameObject[] c = new GameObject[7]; 
+    public GameObject[] c = new GameObject[7];
+    public GameObject interfaceUI;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class StartCameraControl : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         c[6].SetActive(true);
+        interfaceUI.SetActive(false);
         DiceUIControl.isDiceUI = false;
         yield return new WaitForSeconds(1f);
         c[6].SetActive(false);
@@ -40,6 +42,7 @@ public class StartCameraControl : MonoBehaviour
         AnimatorControl.isP4Wave = true;
         yield return new WaitForSeconds(1.3f);
         c[0].SetActive(false);
+        interfaceUI.SetActive(true);
         DiceUIControl.isDiceUI = true;
         AnimatorControl.isP1Wave = false;
         AnimatorControl.isP2Wave = false;
