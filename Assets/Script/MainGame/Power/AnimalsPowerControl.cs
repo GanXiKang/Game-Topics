@@ -1035,6 +1035,7 @@ public class AnimalsPowerControl : MonoBehaviour
     {
         if (chickenPowerRound >= 3)
         {
+            ChickenEffectsControl.isEffects = false;
             chickenUsePower = false;
             chickenPowerRound = 0;
         }
