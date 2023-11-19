@@ -5,6 +5,7 @@ using UnityEngine;
 public class PowerEffectsControl : MonoBehaviour
 {
     public GameObject effects;
+    public GameObject point
 
     void Update()
     {
@@ -15,7 +16,7 @@ public class PowerEffectsControl : MonoBehaviour
                 case 1:
                     if (gameObject.tag == "P1")
                     {
-                        Instantiate(effects, transform.position, transform.rotation);
+                        Instantiate(effects, point.transform.position, point.transform.rotation);
                         print("ok");
                         AnimalsPowerControl.isPowerEffects = false;
                     }
