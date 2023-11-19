@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerEffectsControl : MonoBehaviour
 {
     public GameObject effects;
-    public GameObject point
+    public GameObject point;
 
     void Update()
     {
