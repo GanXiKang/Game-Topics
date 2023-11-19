@@ -885,7 +885,7 @@ public class PropsControl : MonoBehaviour
         P2Props[0] = 1;
         P2Props[1] = 1;
         P2Props[2] = 0;
-        P2Props[3] = 0;
+        P2Props[3] = 1;
         P2Props[4] = 0;
         P2Props[5] = 0;
         P2Props[6] = 0;
