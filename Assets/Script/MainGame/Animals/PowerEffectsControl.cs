@@ -17,7 +17,6 @@ public class PowerEffectsControl : MonoBehaviour
                     if (gameObject.tag == "P1")
                     {
                         Instantiate(effects, point.transform.position, point.transform.rotation);
-                        print("ok");
                         AnimalsPowerControl.isPowerEffects = false;
                     }
                     break;
@@ -25,21 +24,21 @@ public class PowerEffectsControl : MonoBehaviour
                 case 2:
                     if (gameObject.tag == "P2")
                     {
-                        Instantiate(effects, transform.position, transform.rotation);
+                        Instantiate(effects, point.transform.position, point.transform.rotation);
                     }
                     break;
 
                 case 3:
                     if (gameObject.tag == "P3")
                     {
-                        Instantiate(effects, transform.position, transform.rotation);
+                        Instantiate(effects, point.transform.position, point.transform.rotation);
                     }
                     break;
 
                 case 4:
                     if (gameObject.tag == "P4")
                     {
-                        Instantiate(effects, transform.position, transform.rotation);
+                        Instantiate(effects, point.transform.position, point.transform.rotation);
                     }
                     break;
             }
