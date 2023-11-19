@@ -10,6 +10,8 @@ public class BombPropsControl : MonoBehaviour
     public static int pointNum;
     public static bool iscolliderBombText = false;
 
+    public GameObject effects;
+
     bool r = true, once = true;
     int whoPut;
 
@@ -179,6 +181,7 @@ public class BombPropsControl : MonoBehaviour
         r = false;
         once = false;
         rb.isKinematic = false;
+        Instantiate(effects, transform.position, transform.rotation);
         boom.Play();
         iscolliderBombText = true;
         DiceUIControl.isDiceUI = false;
