@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 349389330}
-  - component: {fileID: 349389331}
   m_Layer: 0
   m_Name: EffectsPoint
   m_TagString: Untagged
@@ -63,19 +62,6 @@ Transform:
   m_Father: {fileID: 158453704782057837}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &349389331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349389329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 362ddfa9bedceef478efd00ae81093f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effects: {fileID: 2747973933506542284, guid: 6e923ec0948d36c4480d191f76d31bfb, type: 3}
 --- !u!1 &226561220251728886
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +251,7 @@ GameObject:
   - component: {fileID: 2708217338640778475}
   - component: {fileID: 343085369}
   - component: {fileID: 5293603230885748741}
+  - component: {fileID: 271302888}
   m_Layer: 0
   m_Name: Tiger
   m_TagString: Tiger
@@ -572,6 +559,20 @@ MonoBehaviour:
   - {fileID: 7703601060894012174, guid: b705693a156152e48b067132b3598172, type: 3}
   - {fileID: 8026943673549316358, guid: 0989d2ecbe474934eb3c14cb66b221a4, type: 3}
   insPropsPoint: {fileID: 1630665472726834498}
+--- !u!114 &271302888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682612426089253847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362ddfa9bedceef478efd00ae81093f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects: {fileID: 2747973933506542284, guid: 6e923ec0948d36c4480d191f76d31bfb, type: 3}
+  point: {fileID: 349389329}
 --- !u!1 &831549845148108346
 GameObject:
   m_ObjectHideFlags: 0
