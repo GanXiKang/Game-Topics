@@ -47,7 +47,7 @@ public class RunEffectsControl : MonoBehaviour
             }
             if (AnimalsPowerControl.dogUsePower)
             {
-                transform.position = new Vector3(dog.transform.position.x, transform.position.y, dog.transform.position.z + 2);
+                transform.position = new Vector3(dog.transform.position.x, transform.position.y, dog.transform.position.z + 1);
             }
         }
     }
