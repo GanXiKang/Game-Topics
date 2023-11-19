@@ -1616,6 +1616,37 @@ Transform:
   m_Father: {fileID: 7831241927179374399}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6985210726071286321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371346205289415023}
+  m_Layer: 0
+  m_Name: EffectsPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1371346205289415023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985210726071286321}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7241108507800749089}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7035152509964591428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,6 +2246,7 @@ GameObject:
   - component: {fileID: 9217850347848100157}
   - component: {fileID: 1522272055}
   - component: {fileID: 5705553099036061128}
+  - component: {fileID: 140296614}
   m_Layer: 0
   m_Name: Goat
   m_TagString: Sheep
@@ -2242,6 +2274,7 @@ Transform:
   - {fileID: 7203275262876991741}
   - {fileID: 7203275263274622710}
   - {fileID: 3222594809527701141}
+  - {fileID: 1371346205289415023}
   - {fileID: 6363191058370335246}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2521,6 +2554,20 @@ MonoBehaviour:
   - {fileID: 7703601060894012174, guid: b705693a156152e48b067132b3598172, type: 3}
   - {fileID: 8026943673549316358, guid: 0989d2ecbe474934eb3c14cb66b221a4, type: 3}
   insPropsPoint: {fileID: 3222594809527701141}
+--- !u!114 &140296614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013668995380387483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362ddfa9bedceef478efd00ae81093f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects: {fileID: 6228910792822415691, guid: 829084da93e43544eae3b6217ad05554, type: 3}
+  point: {fileID: 6985210726071286321}
 --- !u!1 &8128607803715173760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,7 +2835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_LocalScale.y

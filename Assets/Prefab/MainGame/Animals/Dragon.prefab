@@ -1345,6 +1345,37 @@ Transform:
   m_Father: {fileID: 3768068923028415002}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4541197904244481315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3639527553906786153}
+  m_Layer: 0
+  m_Name: EffectsPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3639527553906786153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4541197904244481315}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4897638286109033352}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4565908714503808480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,6 +1968,7 @@ GameObject:
   - component: {fileID: 2792822139701242681}
   - component: {fileID: 398752492}
   - component: {fileID: 2144099871871266625}
+  - component: {fileID: 169709857834541445}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Dragon
@@ -1964,6 +1996,7 @@ Transform:
   - {fileID: 4935190307723289002}
   - {fileID: 4935190307507752286}
   - {fileID: 1731141580311107262}
+  - {fileID: 3639527553906786153}
   - {fileID: 9206735659507485337}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2243,6 +2276,20 @@ MonoBehaviour:
   - {fileID: 7703601060894012174, guid: b705693a156152e48b067132b3598172, type: 3}
   - {fileID: 8026943673549316358, guid: 0989d2ecbe474934eb3c14cb66b221a4, type: 3}
   insPropsPoint: {fileID: 1731141580311107262}
+--- !u!114 &169709857834541445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241126455371471154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362ddfa9bedceef478efd00ae81093f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects: {fileID: 6228910792822415691, guid: 829084da93e43544eae3b6217ad05554, type: 3}
+  point: {fileID: 4541197904244481315}
 --- !u!1 &5280614114031033497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,7 +3588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4303668978572880573, guid: b0a2742d7f6e8854aaeec7446db2dfc8, type: 3}
       propertyPath: m_LocalScale.y
