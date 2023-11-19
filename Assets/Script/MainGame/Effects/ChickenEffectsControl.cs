@@ -11,7 +11,7 @@ public class ChickenEffectsControl : MonoBehaviour
     void Start()
     {
         isEffects = true;
-        chicken = GameObject.Find("Chicken(Clone)");
+        chicken = GameObject.Find("ChickenEffectsPoint");
     }
 
     void Update()

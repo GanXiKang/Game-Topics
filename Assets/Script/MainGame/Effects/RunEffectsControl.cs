@@ -10,7 +10,7 @@ public class RunEffectsControl : MonoBehaviour
     {
         if (AnimalsPowerControl.cowUsePower)
         {
-            cow = GameObject.Find("Cow(Clone)");
+            cow = GameObject.Find("CowEffectsPoint");
         }
         if (AnimalsPowerControl.rabbitUsePower)
         {
@@ -18,11 +18,11 @@ public class RunEffectsControl : MonoBehaviour
         }
         if (AnimalsPowerControl.horseUsePower)
         {
-            horse = GameObject.Find("Horse(Clone)");
+            horse = GameObject.Find("HorseEffectsPoint");
         }
         if (AnimalsPowerControl.dogUsePower)
         {
-            dog = GameObject.Find("Dog(Clone)");
+            dog = GameObject.Find("DogEffectsPoint");
         }
     }
     void Update()
@@ -39,7 +39,7 @@ public class RunEffectsControl : MonoBehaviour
             }
             if (AnimalsPowerControl.rabbitUsePower)
             {
-                transform.position = new Vector3(rabbit.transform.position.x, transform.position.y, rabbit.transform.position.z);
+                transform.position = rabbit.transform.position;
             }
             if (AnimalsPowerControl.horseUsePower)
             {
