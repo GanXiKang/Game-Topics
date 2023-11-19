@@ -10,13 +10,14 @@ public class PowerEffectsControl : MonoBehaviour
     {
         if (AnimalsPowerControl.isPowerEffects)
         {
-            print("ok");
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
                     if (gameObject.tag == "P1")
                     {
                         Instantiate(effects, transform.position, transform.rotation);
+                        print("ok");
+                        AnimalsPowerControl.isPowerEffects = false;
                     }
                     break;
 
@@ -41,7 +42,6 @@ public class PowerEffectsControl : MonoBehaviour
                     }
                     break;
             }
-            AnimalsPowerControl.isPowerEffects = false;
         }
     }
 }
