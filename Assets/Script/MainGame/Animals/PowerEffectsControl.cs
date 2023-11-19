@@ -10,6 +10,7 @@ public class PowerEffectsControl : MonoBehaviour
     {
         if (AnimalsPowerControl.isPowerEffects)
         {
+            print("ok");
             switch (ChangeCameraControl.changeCameraNum)
             {
                 case 1:
