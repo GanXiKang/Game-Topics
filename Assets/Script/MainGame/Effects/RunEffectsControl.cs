@@ -5,6 +5,7 @@ using UnityEngine;
 public class RunEffectsControl : MonoBehaviour
 {
     GameObject cow, rabbit, horse, dog;
+    float x, z;
 
     void Start()
     {
@@ -39,11 +40,13 @@ public class RunEffectsControl : MonoBehaviour
             }
             if (AnimalsPowerControl.rabbitUsePower)
             {
-                transform.position = new Vector3(rabbit.transform.position.x, transform.position.y, rabbit.transform.position.z + 5f);
+                x = transform.position.x - rabbit.transform.position.x;
+                z = transform.position.z - rabbit.transform.position.z;
+                transform.position += new Vector3(x, 0, z);
             }
             if (AnimalsPowerControl.horseUsePower)
             {
-                transform.position = new Vector3(horse.transform.position.x, transform.position.y, horse.transform.position.z + 5f);
+                transform.position = new Vector3(horse.transform.position.x + 2f, transform.position.y, horse.transform.position.z);
             }
             if (AnimalsPowerControl.dogUsePower)
             {
