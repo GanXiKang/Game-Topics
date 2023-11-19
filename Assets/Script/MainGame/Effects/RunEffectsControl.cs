@@ -5,7 +5,6 @@ using UnityEngine;
 public class RunEffectsControl : MonoBehaviour
 {
     GameObject cow, rabbit, horse, dog;
-    float x, z;
 
     void Start()
     {
@@ -15,7 +14,7 @@ public class RunEffectsControl : MonoBehaviour
         }
         if (AnimalsPowerControl.rabbitUsePower)
         {
-            rabbit = GameObject.Find("Rabbit(Clone)");
+            rabbit = GameObject.Find("RabbitEffectPoint");
         }
         if (AnimalsPowerControl.horseUsePower)
         {
@@ -40,9 +39,7 @@ public class RunEffectsControl : MonoBehaviour
             }
             if (AnimalsPowerControl.rabbitUsePower)
             {
-                x = transform.position.x - rabbit.transform.position.x;
-                z = transform.position.z - rabbit.transform.position.z;
-                transform.position += new Vector3(x, 0, z);
+                transform.position += new Vector3(rabbit.transform.position.x, transform.position.y, rabbit.transform.position.z);
             }
             if (AnimalsPowerControl.horseUsePower)
             {
