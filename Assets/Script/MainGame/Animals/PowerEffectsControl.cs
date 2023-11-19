@@ -25,6 +25,7 @@ public class PowerEffectsControl : MonoBehaviour
                     if (gameObject.tag == "P2")
                     {
                         Instantiate(effects, point.transform.position, point.transform.rotation);
+                        AnimalsPowerControl.isPowerEffects = false;
                     }
                     break;
 
@@ -32,6 +33,7 @@ public class PowerEffectsControl : MonoBehaviour
                     if (gameObject.tag == "P3")
                     {
                         Instantiate(effects, point.transform.position, point.transform.rotation);
+                        AnimalsPowerControl.isPowerEffects = false;
                     }
                     break;
 
@@ -39,6 +41,7 @@ public class PowerEffectsControl : MonoBehaviour
                     if (gameObject.tag == "P4")
                     {
                         Instantiate(effects, point.transform.position, point.transform.rotation);
+                        AnimalsPowerControl.isPowerEffects = false;
                     }
                     break;
             }
