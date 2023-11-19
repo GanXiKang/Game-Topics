@@ -18,7 +18,7 @@ public class ChickenEffectsControl : MonoBehaviour
     {
         if (isEffects)
         {
-            transform.position = new Vector3(chicken.transform.position.x, 0, chicken.transform.position.z);
+            transform.position = new Vector3(chicken.transform.position.x, transform.position.y, chicken.transform.position.z);
         }
         else
         {
