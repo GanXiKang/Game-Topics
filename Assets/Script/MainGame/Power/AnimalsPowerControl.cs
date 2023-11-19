@@ -210,6 +210,7 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         AnimalsSkillAnimator();
         BGM.PlayOneShot(mouseGet);
+        isPowerEffects = true;
         yield return new WaitForSeconds(2f);
         CameraMoveControl.isChangeCameraPoint = false;
         ChangeCameraControl.changeCameraNum++;
@@ -243,6 +244,7 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[2]--;
         AnimalsSkillAnimator();
         BGM.PlayOneShot(cow);
+        isPowerEffects = true;
         yield return new WaitForSeconds(2f);
     }
 
@@ -255,6 +257,7 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[3]--;
         AnimalsSkillAnimator();
         BGM.PlayOneShot(tiger);
+        isPowerEffects = true;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(1f);
         AnimalsSkillAnimator();
@@ -384,6 +387,7 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[4]--;
         AnimalsSkillAnimator();
         BGM.PlayOneShot(rabbit);
+        isPowerEffects = true;
         yield return new WaitForSeconds(1f);
     }
 
@@ -453,6 +457,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 break;
         }
         BGM.PlayOneShot(dragonPorps);
+        isPowerEffects = true;
         yield return new WaitForSeconds(2f);
         dragonUsePower = true;
         DiceUIControl.isDiceUI = true;
@@ -470,6 +475,7 @@ public class AnimalsPowerControl : MonoBehaviour
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2f);
         BGM.PlayOneShot(snake);
+        isPowerEffects = true;
         switch (ChangeCameraControl.changeCameraNum)
         {
             case 1:
@@ -781,6 +787,7 @@ public class AnimalsPowerControl : MonoBehaviour
         SceneManager.LoadScene(9);
         DiceUIControl.isDiceScene = true;
         horseUsePower = true;
+        isPowerEffects = true;
         CameraMoveControl.isChangeCameraPoint = false;
     }
 
@@ -793,6 +800,7 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[8]--;
         AnimalsSkillAnimator();
         BGM.PlayOneShot(goat);
+        isPowerEffects = true;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(9);
@@ -810,6 +818,7 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[9]--;
         AnimalsSkillAnimator();
         BGM.PlayOneShot(monkey);
+        isPowerEffects = true;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(2.5f);
         monkeyPutBananaPower = true;
@@ -828,6 +837,7 @@ public class AnimalsPowerControl : MonoBehaviour
         PowerUIControl.animalsPowerUseNum[10]--;
         AnimalsSkillAnimator();
         BGM.PlayOneShot(chicken);
+        isPowerEffects = true;
         CameraMoveControl.isChangeCameraPoint = true;
         yield return new WaitForSeconds(3f);
         AnimalsSkillAnimator();
@@ -848,6 +858,7 @@ public class AnimalsPowerControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(9);
         DiceUIControl.isDiceScene = true;
+        isPowerEffects = true;
         CameraMoveControl.isChangeCameraPoint = false;
     }
 
@@ -952,6 +963,7 @@ public class AnimalsPowerControl : MonoBehaviour
                 BGM.PlayOneShot(pigBad);
                 break;
         }
+        isPowerEffects = true;
         yield return new WaitForSeconds(3f);
         AnimalsSkillAnimator();
         pigPowerGood = false;
