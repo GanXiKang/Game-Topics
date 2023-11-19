@@ -8,35 +8,39 @@ public class PowerEffectsControl : MonoBehaviour
 
     void Update()
     {
-        switch (ChangeCameraControl.changeCameraNum)
+        if (AnimalsPowerControl.isPowerEffects)
         {
-            case 1:
-                if (gameObject.tag == "P1")
-                {
-                    Instantiate(effects, transform.position, transform.rotation);
-                }
-                break;
+            switch (ChangeCameraControl.changeCameraNum)
+            {
+                case 1:
+                    if (gameObject.tag == "P1")
+                    {
+                        Instantiate(effects, transform.position, transform.rotation);
+                    }
+                    break;
 
-            case 2:
-                if (gameObject.tag == "P2")
-                {
-                    Instantiate(effects, transform.position, transform.rotation);
-                }
-                break;
+                case 2:
+                    if (gameObject.tag == "P2")
+                    {
+                        Instantiate(effects, transform.position, transform.rotation);
+                    }
+                    break;
 
-            case 3:
-                if (gameObject.tag == "P3")
-                {
-                    Instantiate(effects, transform.position, transform.rotation);
-                }
-                break;
+                case 3:
+                    if (gameObject.tag == "P3")
+                    {
+                        Instantiate(effects, transform.position, transform.rotation);
+                    }
+                    break;
 
-            case 4:
-                if (gameObject.tag == "P4")
-                {
-                    Instantiate(effects, transform.position, transform.rotation);
-                }
-                break;
+                case 4:
+                    if (gameObject.tag == "P4")
+                    {
+                        Instantiate(effects, transform.position, transform.rotation);
+                    }
+                    break;
+            }
+            AnimalsPowerControl.isPowerEffects = false;
         }
     }
 }
