@@ -44,6 +44,7 @@ public class RunEffectsControl : MonoBehaviour
             if (AnimalsPowerControl.horseUsePower)
             {
                 transform.position = horse.transform.position;
+                transform.rotation = horse.transform.rotation;
             }
             if (AnimalsPowerControl.dogUsePower)
             {
