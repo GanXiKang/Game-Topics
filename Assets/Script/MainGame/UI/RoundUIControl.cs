@@ -16,16 +16,16 @@ public class RoundUIControl : MonoBehaviour
         switch (Menu_ChoosePlayer.whyP1)
         {
             case 1:
-                Player[1] = "¿œ Û";
+                Player[1] = " Û";
                 break;
             case 2:
                 Player[1] = "≈£";
                 break;
             case 3:
-                Player[1] = "¿œª¢";
+                Player[1] = "ª¢";
                 break;
             case 4:
-                Player[1] = "Õ√◊”";
+                Player[1] = "Õ√";
                 break;
             case 5:
                 Player[1] = "˝à";
@@ -40,7 +40,7 @@ public class RoundUIControl : MonoBehaviour
                 Player[1] = "—Ú";
                 break;
             case 9:
-                Player[1] = "∫Ô◊”";
+                Player[1] = "∫Ô";
                 break;
             case 10:
                 Player[1] = "Îu";
@@ -55,16 +55,16 @@ public class RoundUIControl : MonoBehaviour
         switch (Menu_ChoosePlayer.whyP2)
         {
             case 1:
-                Player[2] = "¿œ Û";
+                Player[2] = " Û";
                 break;
             case 2:
                 Player[2] = "≈£";
                 break;
             case 3:
-                Player[2] = "¿œª¢";
+                Player[2] = "ª¢";
                 break;
             case 4:
-                Player[2] = "Õ√◊”";
+                Player[2] = "Õ√";
                 break;
             case 5:
                 Player[2] = "˝à";
@@ -79,7 +79,7 @@ public class RoundUIControl : MonoBehaviour
                 Player[2] = "—Ú";
                 break;
             case 9:
-                Player[2] = "∫Ô◊”";
+                Player[2] = "∫Ô";
                 break;
             case 10:
                 Player[2] = "Îu";
@@ -94,16 +94,16 @@ public class RoundUIControl : MonoBehaviour
         switch (Menu_ChoosePlayer.whyP3)
         {
             case 1:
-                Player[3] = "¿œ Û";
+                Player[3] = " Û";
                 break;
             case 2:
                 Player[3] = "≈£";
                 break;
             case 3:
-                Player[3] = "¿œª¢";
+                Player[3] = "ª¢";
                 break;
             case 4:
-                Player[3] = "Õ√◊”";
+                Player[3] = "Õ√";
                 break;
             case 5:
                 Player[3] = "˝à";
@@ -118,7 +118,7 @@ public class RoundUIControl : MonoBehaviour
                 Player[3] = "—Ú";
                 break;
             case 9:
-                Player[3] = "∫Ô◊”";
+                Player[3] = "∫Ô";
                 break;
             case 10:
                 Player[3] = "Îu";
@@ -133,16 +133,16 @@ public class RoundUIControl : MonoBehaviour
         switch (Menu_ChoosePlayer.whyP4)
         {
             case 1:
-                Player[4] = "¿œ Û";
+                Player[4] = " Û";
                 break;
             case 2:
                 Player[4] = "≈£";
                 break;
             case 3:
-                Player[4] = "¿œª¢";
+                Player[4] = "ª¢";
                 break;
             case 4:
-                Player[4] = "Õ√◊”";
+                Player[4] = "Õ√";
                 break;
             case 5:
                 Player[4] = "˝à";
@@ -157,7 +157,7 @@ public class RoundUIControl : MonoBehaviour
                 Player[4] = "—Ú";
                 break;
             case 9:
-                Player[4] = "∫Ô◊”";
+                Player[4] = "∫Ô";
                 break;
             case 10:
                 Player[4] = "Îu";
