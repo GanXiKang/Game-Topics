@@ -20,21 +20,21 @@ public class Menu_TutorialControl : MonoBehaviour
     {
         if (isButtonDisable)
         {
-            print(buttonNum);
             for (int b = 0; b < 4; b++)
             {
                 if (b == buttonNum)
                 {
-                    buttonShort[buttonNum].SetActive(false);
-                    buttonLong[buttonNum].SetActive(true);
+                    buttonShort[b].SetActive(false);
+                    buttonLong[b].SetActive(true);
                 }
                 else
                 {
-                    buttonShort[buttonNum].SetActive(true);
-                    buttonLong[buttonNum].SetActive(false);
+                    buttonShort[b].SetActive(true);
+                    buttonLong[b].SetActive(false);
                 }
             }
             isButtonDisable = false;
+
         }
     }
 
