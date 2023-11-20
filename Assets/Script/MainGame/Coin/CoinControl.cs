@@ -9,7 +9,7 @@ public class CoinControl : MonoBehaviour
 
     public Text systemText;
 
-    int howMuchSteal, stealWho, stealQuantity = 0, initialCoin = 30;;
+    int howMuchSteal, stealWho, stealQuantity = 0, initialCoin = 30;
 
     private void Start()
     {
