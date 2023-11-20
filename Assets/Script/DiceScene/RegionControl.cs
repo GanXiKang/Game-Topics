@@ -23,7 +23,7 @@ public class RegionControl : MonoBehaviour
                 {
                     region[3].SetActive(true);
                 }
-                else if (DiceControl.P1_totalNum <= 40)
+                else if (DiceControl.P1_totalNum <= 39)
                 {
                     region[4].SetActive(true);
                 }
@@ -50,7 +50,7 @@ public class RegionControl : MonoBehaviour
                 {
                     region[3].SetActive(true);
                 }
-                else if (DiceControl.P2_totalNum <= 40)
+                else if (DiceControl.P2_totalNum <= 39)
                 {
                     region[4].SetActive(true);
                 }
@@ -77,7 +77,7 @@ public class RegionControl : MonoBehaviour
                 {
                     region[3].SetActive(true);
                 }
-                else if (DiceControl.P3_totalNum <= 40)
+                else if (DiceControl.P3_totalNum <= 39)
                 {
                     region[4].SetActive(true);
                 }
@@ -104,7 +104,7 @@ public class RegionControl : MonoBehaviour
                 {
                     region[3].SetActive(true);
                 }
-                else if (DiceControl.P4_totalNum <= 40)
+                else if (DiceControl.P4_totalNum <= 39)
                 {
                     region[4].SetActive(true);
                 }
