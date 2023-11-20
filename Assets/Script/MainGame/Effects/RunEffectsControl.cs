@@ -36,6 +36,7 @@ public class RunEffectsControl : MonoBehaviour
             if (AnimalsPowerControl.cowUsePower)
             {
                 transform.position = cow.transform.position;
+                transform.rotation = cow.transform.rotation;
             }
             if (AnimalsPowerControl.rabbitUsePower)
             {
@@ -50,6 +51,7 @@ public class RunEffectsControl : MonoBehaviour
             if (AnimalsPowerControl.dogUsePower)
             {
                 transform.position = dog.transform.position;
+                transform.rotation = dog.transform.rotation;
             }
         }
     }
