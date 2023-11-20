@@ -823,7 +823,8 @@ public class AnimalsPowerControl : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         monkeyPutBananaPower = true;
         AnimalsSkillAnimator();
-        DiceUIControl.isDiceUI = true;
+        SceneManager.LoadScene(9);
+        DiceUIControl.isDiceScene = true;
         CameraMoveControl.isChangeCameraPoint = false;
     }
 
