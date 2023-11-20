@@ -2162,6 +2162,7 @@ GameObject:
   - component: {fileID: 407475808}
   - component: {fileID: 407475809}
   - component: {fileID: 407475810}
+  - component: {fileID: 407475811}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -2376,6 +2377,28 @@ MonoBehaviour:
   sliderBGM: {fileID: 142055393}
   quality: {fileID: 107410212}
   fullScreen: {fileID: 1648674803}
+--- !u!114 &407475811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407475804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1e564596877354db07071abb63175b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonShort:
+  - {fileID: 1783565786}
+  - {fileID: 1388699399}
+  - {fileID: 1968220973}
+  - {fileID: 1680479290}
+  buttonLong:
+  - {fileID: 1701054407}
+  - {fileID: 373641439}
+  - {fileID: 117835915}
+  - {fileID: 83366139}
 --- !u!1 &411209799
 GameObject:
   m_ObjectHideFlags: 0
