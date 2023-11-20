@@ -807,7 +807,7 @@ public class EventControl : MonoBehaviour
             backward = 1;
             stop = 0;
             getCoin = 0;
-            lossCoin = 5;
+            lossCoin = 0;
             getPorps = 0;
         }
     }
