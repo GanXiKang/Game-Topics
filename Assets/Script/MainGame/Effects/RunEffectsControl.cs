@@ -14,7 +14,7 @@ public class RunEffectsControl : MonoBehaviour
         }
         if (AnimalsPowerControl.rabbitUsePower)
         {
-            rabbit = GameObject.Find("RabbitEffectsPoint");
+            rabbit = GameObject.Find("Rabbit(Clone)");
         }
         if (AnimalsPowerControl.horseUsePower)
         {
