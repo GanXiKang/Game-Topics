@@ -8,6 +8,9 @@ public class Menu_TutorialControl : MonoBehaviour
     public GameObject[] buttonShort = new GameObject[4];
     public GameObject[] buttonLong = new GameObject[4];
 
+    int buttonNum;
+    bool isButtonDisable;
+
     void Start()
     {
         
@@ -15,23 +18,28 @@ public class Menu_TutorialControl : MonoBehaviour
 
     void Update()
     {
-        
+        if (isButtonDisable)
+        {
+            for (int b = 0; b < 4; b++)
+            {
+                if (b == buttonNum)
+                {
+                    buttonShort[buttonNum].SetActive(false);
+                    buttonLong[buttonNum].SetActive(true);
+                }
+                else
+                {
+                    buttonShort[buttonNum].SetActive(true);
+                    buttonLong[buttonNum].SetActive(false);
+                }
+            }
+            isButtonDisable = false;
+        }
     }
 
     public void Button_Beside(int i)
     {
-        for (int b = 0; b < 4; b++)
-        {
-            if (b == i)
-            {
-                buttonShort[i].SetActive(false);
-                buttonLong[i].SetActive(true);
-            }
-            else
-            {
-                buttonShort[i].SetActive(true);
-                buttonLong[i].SetActive(false);
-            }
-        }
+        buttonNum = i;
+        isButtonDisable = true;
     }
 }
