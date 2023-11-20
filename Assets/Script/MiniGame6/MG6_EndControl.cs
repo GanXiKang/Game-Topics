@@ -24,11 +24,14 @@ public class MG6_EndControl : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            gameWinUI.SetActive(true);
-            BGM.PlayOneShot(gameWin);
-            isEffects = true;
-            back = true;
-            MGFinishAwardControl.isWin = true;
+            if (!MG6_BalanceBarControl.gameover)
+            {
+                gameWinUI.SetActive(true);
+                BGM.PlayOneShot(gameWin);
+                isEffects = true;
+                back = true;
+                MGFinishAwardControl.isWin = true;
+            }
         }
     }
 
