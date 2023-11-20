@@ -73,7 +73,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 if (value >= 2 && value <= 6)
                 {
                     isJudgment = true;
-                    power.color = Color.yellow;
+                    power.color = Color.blue;
                 }
                 else
                 {
@@ -86,7 +86,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 if (value >= 1 && value <= 4.5f)
                 {
                     isJudgment = true;
-                    power.color = Color.yellow;
+                    power.color = Color.blue;
                 }
                 else
                 {
@@ -99,7 +99,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 if (value >= 5 && value <= 8)
                 {
                     isJudgment = true;
-                    power.color = Color.yellow;
+                    power.color = Color.blue;
                 }
                 else
                 {
@@ -112,7 +112,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 if (value >= 3.5f && value <= 4.5f)
                 {
                     isJudgment = true;
-                    power.color = Color.yellow;
+                    power.color = Color.blue;
                 }
                 else
                 {
@@ -125,7 +125,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 if (value >= 0.5f && value <= 3)
                 {
                     isJudgment = true;
-                    power.color = Color.yellow;
+                    power.color = Color.blue;
                 }
                 else
                 {
@@ -138,7 +138,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
                 if (value >= 6 && value <= 7.5f)
                 {
                     isJudgment = true;
-                    power.color = Color.yellow;
+                    power.color = Color.blue;
                 }
                 else
                 {
