@@ -820,7 +820,7 @@ public class AnimalsPowerControl : MonoBehaviour
         BGM.PlayOneShot(monkey);
         isPowerEffects = true;
         CameraMoveControl.isChangeCameraPoint = true;
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3.5f);
         monkeyPutBananaPower = true;
         AnimalsSkillAnimator();
         SceneManager.LoadScene(9);
