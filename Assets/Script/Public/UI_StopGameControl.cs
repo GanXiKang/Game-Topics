@@ -21,7 +21,7 @@ public class UI_StopGameControl : MonoBehaviour
     {
         OperateUI.SetActive(isOperate);
 
-        if (MiniGameColliderControl.isMiniGame)
+        if (MiniGameColliderControl.isMiniGame || DiceUIControl.isDiceScene)
         {
             if (isFind)
             {
@@ -58,7 +58,7 @@ public class UI_StopGameControl : MonoBehaviour
         Time.timeScale = 1f;
         stopGameUI.SetActive(false);
         isOperate = false;
-        if (MiniGameColliderControl.isMiniGame)
+        if (MiniGameColliderControl.isMiniGame || DiceUIControl.isDiceScene)
         {
             miniGameUI.SetActive(true);
         }
