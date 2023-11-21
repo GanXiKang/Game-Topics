@@ -17,9 +17,10 @@ public class AnimalsPowerControl : MonoBehaviour
     public static int dragonPowerRound = 0;
     public static bool dragonUsePower = false;
     public static int snakePoisonWho;
+    public static bool snakeUsePower = false;
     public static bool horseUsePower = false, horseTriplePower = false;
     public static bool sheepLuckyPower = false;
-    public static bool monkeyUsePower = false, monkeyPutBananaPower = false;
+    public static bool monkeyPutBananaPower = false;
     public static int chickenPowerRound = 0;
     public static bool chickenUsePower = false;
     public static bool dogUsePower = false;
@@ -467,6 +468,7 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator SnakePower()
     {
         isSnakePower = false;
+        snakeUsePower = true;
         systemText.text = "蛇發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[6]--;
@@ -811,7 +813,6 @@ public class AnimalsPowerControl : MonoBehaviour
     IEnumerator MonkeyPower()
     {
         isMonkeyPower = false;
-        monkeyUsePower = true;
         systemText.text = "猴子發動技能！";
         SystemTestTextControl.isTimer = true;
         PowerUIControl.animalsPowerUseNum[9]--;

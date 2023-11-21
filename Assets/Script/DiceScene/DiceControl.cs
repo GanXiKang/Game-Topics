@@ -255,9 +255,9 @@ public class DiceControl : MonoBehaviour
         {
             BagUIControl.putBomb = false;
         }
-        if (AnimalsPowerControl.monkeyUsePower)
+        if (AnimalsPowerControl.snakeUsePower)
         {
-            AnimalsPowerControl.monkeyUsePower = false;
+            AnimalsPowerControl.snakeUsePower = false;
         }
         DiceUIControl.isDiceScene = false;
     }
