@@ -18,17 +18,17 @@ public class Tutorial_AnimalsControl : MonoBehaviour
         if (isFind)
         {
             Limit();
-            //for (int a = 1; a < 20; a++)
-            //{
-            //    if (a == who)
-            //    {
-            //        introduce[a].SetActive(true);
-            //    }
-            //    else
-            //    {
-            //        introduce[a].SetActive(false);
-            //    }
-            //}
+            for (int a = 1; a < 20; a++)
+            {
+                if (a == who)
+                {
+                    introduce[a].SetActive(true);
+                }
+                else
+                {
+                    introduce[a].SetActive(false);
+                }
+            }
             isFind = false;
         }
     }
