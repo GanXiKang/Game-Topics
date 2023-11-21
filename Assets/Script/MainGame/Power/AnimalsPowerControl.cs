@@ -768,9 +768,8 @@ public class AnimalsPowerControl : MonoBehaviour
         }
         yield return new WaitForSeconds(2f);
         AnimalsSkillAnimator();
-        CameraMoveControl.isChangeCameraPoint = false;
-        ChangeCameraControl.changeCameraNum++;
         DiceUIControl.isDiceUI = true;
+        CameraMoveControl.isChangeCameraPoint = false;
     }
 
     IEnumerator HorsePower()
