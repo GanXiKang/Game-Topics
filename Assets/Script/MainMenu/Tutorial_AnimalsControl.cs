@@ -14,10 +14,11 @@ public class Tutorial_AnimalsControl : MonoBehaviour
     {
         menu1.SetActive(false);
         menu2.SetActive(true);
+        BGM.PlayOneShot(onClick);
     }
     public void Button_Animator()
     {
-       
+        BGM.PlayOneShot(onClick);
     }
     public void Button_Call()
     {
@@ -27,5 +28,6 @@ public class Tutorial_AnimalsControl : MonoBehaviour
     {
         menu1.SetActive(true);
         menu2.SetActive(false);
+        BGM.PlayOneShot(onClick);
     }
 }
