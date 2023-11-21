@@ -18,7 +18,7 @@ public class Tutorial_Scene : MonoBehaviour
         if (isFind)
         {
             Limit();
-            for (int a = 1; a < 20; a++)
+            for (int a = 1; a < 7; a++)
             {
                 if (a == num)
                 {
