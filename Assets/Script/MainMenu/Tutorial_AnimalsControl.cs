@@ -58,11 +58,13 @@ public class Tutorial_AnimalsControl : MonoBehaviour
     {
         who--;
         isFind = true;
+        BGM.PlayOneShot(onClick);
     }
     public void Button_Right()
     {
         who++;
         isFind = true;
+        BGM.PlayOneShot(onClick);
     }
 
     void Limit()
