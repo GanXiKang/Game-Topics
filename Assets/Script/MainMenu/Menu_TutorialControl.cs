@@ -47,6 +47,7 @@ public class Menu_TutorialControl : MonoBehaviour
     {
         buttonNum = i;
         isButtonDisable = true;
+        BGM.PlayOneShot(onClick);
     }
 
     void MenuDisable()
