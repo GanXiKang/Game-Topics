@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Menu_ButtonControl : MonoBehaviour
 {
-    public GameObject[] menu = new GameObject[5];
-
-    public AudioSource BGM;
+    AudioSource BGM;
     public AudioClip onClick, close;
+
+    public GameObject[] menu = new GameObject[5];
 
     void Start()
     {
+        BGM = GetComponent<AudioSource>();
+
         menu[0].SetActive(true);
         menu[1].SetActive(false);
         menu[2].SetActive(false);

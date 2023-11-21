@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu_ChoosePlayer : MonoBehaviour
 {
+    AudioSource BGM;
+
     public static int whoPlay = 0, whyP1 = 0, whyP2 = 0, whyP3 = 0, whyP4 = 0;
     public static int isDestoryP1 = 0, isDestoryP2 = 0, isDestoryP3 = 0, isDestoryP4 = 0;
     public static bool isJumpP1, isJumpP2, isJumpP3, isJumpP4;
@@ -17,11 +19,15 @@ public class Menu_ChoosePlayer : MonoBehaviour
     public GameObject[] button = new GameObject[8];
     public GameObject ErrorMenu;
 
-    public AudioSource BGM;
     public AudioClip ok, cancel, change, error, close;
 
     bool isP1OK, isP2OK, isP3OK, isP4OK;
     bool isStopAD = false;
+
+    void Start()
+    {
+        BGM = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
