@@ -6,9 +6,8 @@ public class Tutorial_MiniGame : MonoBehaviour
 {
     public AudioSource BGM;
     public AudioClip onClick;
-    public GameObject menu1, menuMap, menuPoint;
-    public GameObject[] map = new GameObject[7];
-    public GameObject[] point = new GameObject[7];
+    public GameObject menu1, menu2;
+    public GameObject[] game = new GameObject[7];
 
     int num;
     bool isFind;
@@ -22,40 +21,29 @@ public class Tutorial_MiniGame : MonoBehaviour
             {
                 if (a == num)
                 {
-                    map[a].SetActive(true);
-                    point[a].SetActive(true);
+                    game[a].SetActive(true);
                 }
                 else
                 {
-                    map[a].SetActive(false);
-                    point[a].SetActive(false);
+                    game[a].SetActive(false);
                 }
             }
             isFind = false;
         }
     }
 
-    public void Button_Map(int m)
+    public void Button_Game(int g)
     {
-        num = m;
+        num = g;
         isFind = true;
         menu1.SetActive(false);
-        menuMap.SetActive(true);
-        BGM.PlayOneShot(onClick);
-    }
-    public void Button_Point(int p)
-    {
-        num = p;
-        isFind = true;
-        menu1.SetActive(false);
-        menuPoint.SetActive(true);
+        menu2.SetActive(true);
         BGM.PlayOneShot(onClick);
     }
     public void Button_Back()
     {
         menu1.SetActive(true);
-        menuMap.SetActive(false);
-        menuPoint.SetActive(false);
+        menu2.SetActive(false);
         BGM.PlayOneShot(onClick);
     }
     public void Button_Left()
