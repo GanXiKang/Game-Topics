@@ -7,14 +7,10 @@ public class Menu_TutorialControl : MonoBehaviour
 {
     public GameObject[] buttonShort = new GameObject[4];
     public GameObject[] buttonLong = new GameObject[4];
+    public GameObject frontPage;
 
     int buttonNum;
     bool isButtonDisable;
-
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -33,8 +29,8 @@ public class Menu_TutorialControl : MonoBehaviour
                     buttonLong[b].SetActive(false);
                 }
             }
+            frontPage.SetActive(false);
             isButtonDisable = false;
-
         }
     }
 
