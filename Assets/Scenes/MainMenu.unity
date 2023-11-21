@@ -777,7 +777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &89798020
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1549,8 +1549,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
+      - m_Target: {fileID: 1331394685}
+        m_TargetAssemblyTypeName: Tutorial_MiniGame, Assembly-CSharp
         m_MethodName: Button_Right
         m_Mode: 1
         m_Arguments:
@@ -2517,9 +2517,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3204,9 +3204,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 1331394685}
+        m_TargetAssemblyTypeName: Tutorial_MiniGame, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4192,9 +4192,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4503,8 +4503,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
+      - m_Target: {fileID: 1331394685}
+        m_TargetAssemblyTypeName: Tutorial_MiniGame, Assembly-CSharp
         m_MethodName: Button_Left
         m_Mode: 1
         m_Arguments:
@@ -5038,7 +5038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &385505819
 Transform:
   m_ObjectHideFlags: 0
@@ -5955,8 +5955,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
         m_MethodName: Button_Right
         m_Mode: 1
         m_Arguments:
@@ -8099,9 +8099,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 1331394685}
+        m_TargetAssemblyTypeName: Tutorial_MiniGame, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8517,8 +8517,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
+      - m_Target: {fileID: 1331394685}
+        m_TargetAssemblyTypeName: Tutorial_MiniGame, Assembly-CSharp
         m_MethodName: Button_Back
         m_Mode: 1
         m_Arguments:
@@ -9578,9 +9578,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10554,13 +10554,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 932454989}
+  - component: {fileID: 932454990}
   m_Layer: 5
   m_Name: Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &932454989
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10583,6 +10584,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &932454990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932454988}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6fb0e818bd13f418223577ac81172c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGM: {fileID: 407475809}
+  onClick: {fileID: 8300000, guid: 462e67c85a62691428b730e4f59e9d02, type: 3}
+  menu1: {fileID: 315615894}
+  menu2: {fileID: 1907710936}
+  props:
+  - {fileID: 0}
+  - {fileID: 1312993313}
+  - {fileID: 1485387408}
+  - {fileID: 953390055}
+  - {fileID: 1667465160}
+  - {fileID: 1692291184}
+  - {fileID: 163393781}
+  - {fileID: 310410268}
+  - {fileID: 823022125}
 --- !u!1 &953390055
 GameObject:
   m_ObjectHideFlags: 0
@@ -10666,9 +10693,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12201,9 +12228,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 1331394685}
+        m_TargetAssemblyTypeName: Tutorial_MiniGame, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12752,8 +12779,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
         m_MethodName: Button_Left
         m_Mode: 1
         m_Arguments:
@@ -14476,9 +14503,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14535,6 +14562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1331394684}
+  - component: {fileID: 1331394685}
   m_Layer: 5
   m_Name: MiniGame
   m_TagString: Untagged
@@ -14564,6 +14592,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1331394685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331394683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f04ba87edade247bc00845b62e5f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGM: {fileID: 407475809}
+  onClick: {fileID: 8300000, guid: 462e67c85a62691428b730e4f59e9d02, type: 3}
+  menu1: {fileID: 879492697}
+  menu2: {fileID: 626699988}
+  game:
+  - {fileID: 0}
+  - {fileID: 637529858}
+  - {fileID: 1734957854}
+  - {fileID: 1067630246}
+  - {fileID: 1342084483}
+  - {fileID: 1651770397}
+  - {fileID: 207264061}
 --- !u!4 &1336158866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e2b1a424f918bfd46acdd81a928e8bfa, type: 3}
@@ -14652,9 +14704,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 1331394685}
+        m_TargetAssemblyTypeName: Tutorial_MiniGame, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16433,9 +16485,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16707,7 +16759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1499153203
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17927,9 +17979,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 1331394685}
+        m_TargetAssemblyTypeName: Tutorial_MiniGame, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18231,9 +18283,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18497,9 +18549,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19437,9 +19489,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
-        m_MethodName: Button_Animals
+      - m_Target: {fileID: 1331394685}
+        m_TargetAssemblyTypeName: Tutorial_MiniGame, Assembly-CSharp
+        m_MethodName: Button_Game
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20142,8 +20194,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1075023583}
-        m_TargetAssemblyTypeName: Tutorial_AnimalsControl, Assembly-CSharp
+      - m_Target: {fileID: 932454990}
+        m_TargetAssemblyTypeName: Tutorial_Props, Assembly-CSharp
         m_MethodName: Button_Back
         m_Mode: 1
         m_Arguments:
