@@ -38,11 +38,8 @@ public class Tutorial_PerfabControl : MonoBehaviour
             if (Tutorial_AnimalsControl.isAnimator)
             {
                 anim.SetBool("Wave", true);
+                Invoke("FalseByAnimator", 2f);
                 Tutorial_AnimalsControl.isAnimator = false;
-            }
-            else
-            {
-                anim.SetBool("Wave", false);
             }
 
             if (Tutorial_AnimalsControl.isCall)
@@ -51,5 +48,10 @@ public class Tutorial_PerfabControl : MonoBehaviour
                 Tutorial_AnimalsControl.isCall = false;
             }
         }
+    }
+
+    void FalseByAnimator()
+    {
+        anim.SetBool("Wave", false);
     }
 }
