@@ -8,6 +8,7 @@ public class Menu_ButtonControl : MonoBehaviour
     public AudioClip onClick, close;
 
     public GameObject[] menu = new GameObject[5];
+    public GameObject cam;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class Menu_ButtonControl : MonoBehaviour
     }
     public void B_Tutorial()
     {
+        cam.SetActive(true);
         menu[0].SetActive(false);
         menu[3].SetActive(true);
         BGM.PlayOneShot(onClick);
@@ -44,6 +46,7 @@ public class Menu_ButtonControl : MonoBehaviour
     }
     public void B_Close()
     {
+        cam.SetActive(false);
         menu[0].SetActive(true);
         menu[1].SetActive(false);
         menu[3].SetActive(false);
