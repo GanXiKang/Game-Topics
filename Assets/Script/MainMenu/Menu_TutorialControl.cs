@@ -52,7 +52,7 @@ public class Menu_TutorialControl : MonoBehaviour
         isRenewUI = true;
         isButtonDisable = true;
         BGM.PlayOneShot(onClick);
-        Invoke("FalseByisRenewUI", 0.4f);
+        Invoke("FalseByisRenewUI", 0.2f);
     }
 
     void MenuDisable()
