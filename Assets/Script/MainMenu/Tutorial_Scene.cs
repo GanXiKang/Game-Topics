@@ -20,6 +20,7 @@ public class Tutorial_Scene : MonoBehaviour
             menu1.SetActive(true);
             menuMap.SetActive(false);
             menuPoint.SetActive(false);
+            Menu_TutorialControl.isRenewUI = false;
         }
         if (isFind)
         {

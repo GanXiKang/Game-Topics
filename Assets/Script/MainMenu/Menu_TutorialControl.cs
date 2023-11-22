@@ -52,7 +52,6 @@ public class Menu_TutorialControl : MonoBehaviour
         isRenewUI = true;
         isButtonDisable = true;
         BGM.PlayOneShot(onClick);
-        Invoke("FalseByisRenewUI", 0.2f);
     }
 
     void MenuDisable()
@@ -87,9 +86,5 @@ public class Menu_TutorialControl : MonoBehaviour
                 props.SetActive(true);
                 break;
         }
-    }
-    void FalseByisRenewUI()
-    {
-        isRenewUI = false;
     }
 }

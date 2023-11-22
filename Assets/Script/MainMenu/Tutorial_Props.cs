@@ -21,6 +21,7 @@ public class Tutorial_Props : MonoBehaviour
         {
             menu1.SetActive(true);
             menu2.SetActive(false);
+            Menu_TutorialControl.isRenewUI = false;
         }
         if (isFind)
         {
