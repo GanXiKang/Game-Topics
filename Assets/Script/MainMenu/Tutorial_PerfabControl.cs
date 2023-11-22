@@ -38,7 +38,7 @@ public class Tutorial_PerfabControl : MonoBehaviour
             if (Tutorial_AnimalsControl.isAnimator)
             {
                 anim.SetBool("Wave", true);
-                Invoke("FalseByAnimator", 2.5f);
+                Invoke("FalseByAnimator", 1.7f);
                 Tutorial_AnimalsControl.isAnimator = false;
             }
 
