@@ -10,6 +10,8 @@ public class Tutorial_Props : MonoBehaviour
     public GameObject[] props = new GameObject[9];
     public GameObject[] introduce = new GameObject[9];
 
+    public static bool isDestory;
+
     int num;
     bool isFind;
 
@@ -44,6 +46,7 @@ public class Tutorial_Props : MonoBehaviour
     }
     public void Button_Back()
     {
+        isDestory = true;
         menu1.SetActive(true);
         menu2.SetActive(false);
         BGM.PlayOneShot(onClick);
@@ -51,12 +54,14 @@ public class Tutorial_Props : MonoBehaviour
     public void Button_Left()
     {
         num--;
+        isDestory = true;
         isFind = true;
         BGM.PlayOneShot(onClick);
     }
     public void Button_Right()
     {
         num++;
+        isDestory = true;
         isFind = true;
         BGM.PlayOneShot(onClick);
     }

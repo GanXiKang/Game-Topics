@@ -10,7 +10,7 @@ public class Tutorial_AnimalsControl : MonoBehaviour
     public GameObject[] animals = new GameObject[20];
     public GameObject[] introduce = new GameObject[20];
 
-
+    public static bool isDestory, isAnimator, isCall;
 
     int who;
     bool isFind;
@@ -45,14 +45,16 @@ public class Tutorial_AnimalsControl : MonoBehaviour
     }
     public void Button_Animator()
     {
+        isAnimator = true;
         BGM.PlayOneShot(onClick);
     }
     public void Button_Call()
     {
-        
+        isCall = true;
     }
     public void Button_Back()
     {
+        isDestory = true;
         menu1.SetActive(true);
         menu2.SetActive(false);
         BGM.PlayOneShot(onClick);
@@ -60,12 +62,14 @@ public class Tutorial_AnimalsControl : MonoBehaviour
     public void Button_Left()
     {
         who--;
+        isDestory = true;
         isFind = true;
         BGM.PlayOneShot(onClick);
     }
     public void Button_Right()
     {
         who++;
+        isDestory = true;
         isFind = true;
         BGM.PlayOneShot(onClick);
     }
