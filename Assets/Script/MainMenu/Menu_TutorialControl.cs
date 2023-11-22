@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class Menu_TutorialControl : MonoBehaviour
 {
     AudioSource BGM;
-    public AudioClip onClick;
 
+    public AudioClip onClick;
+    public GameObject frontPage, animals, scene, mg, props;
     public GameObject[] buttonShort = new GameObject[4];
     public GameObject[] buttonLong = new GameObject[4];
-    public GameObject frontPage, animals, scene, mg, props;
+
+    public static int insNum = 0;
 
     int buttonNum;
     bool isButtonDisable;

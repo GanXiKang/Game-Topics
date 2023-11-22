@@ -20,12 +20,14 @@ public class Tutorial_AnimalsControl : MonoBehaviour
         if (isFind)
         {
             Limit();
+            DestroyObject();
             for (int a = 1; a < 20; a++)
             {
                 if (a == who)
                 {
                     introduce[a].SetActive(true);
                     Instantiate(animals[a], insPoint.transform.position, insPoint.transform.rotation);
+                    Menu_TutorialControl.insNum++;
                 }
                 else
                 {
@@ -54,7 +56,6 @@ public class Tutorial_AnimalsControl : MonoBehaviour
     }
     public void Button_Back()
     {
-        isDestory = true;
         menu1.SetActive(true);
         menu2.SetActive(false);
         BGM.PlayOneShot(onClick);
@@ -62,14 +63,12 @@ public class Tutorial_AnimalsControl : MonoBehaviour
     public void Button_Left()
     {
         who--;
-        isDestory = true;
         isFind = true;
         BGM.PlayOneShot(onClick);
     }
     public void Button_Right()
     {
         who++;
-        isDestory = true;
         isFind = true;
         BGM.PlayOneShot(onClick);
     }
@@ -83,6 +82,13 @@ public class Tutorial_AnimalsControl : MonoBehaviour
         if (who < 1)
         {
             who = 19;
+        }
+    }
+    void DestroyObject()
+    {
+        if (Menu_TutorialControl.insNum != 0)
+        {
+            isDestory = true;
         }
     }
 }

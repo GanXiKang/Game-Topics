@@ -20,12 +20,14 @@ public class Tutorial_Props : MonoBehaviour
         if (isFind)
         {
             Limit();
+            DestroyObject();
             for (int a = 1; a < 9; a++)
             {
                 if (a == num)
                 {
                     introduce[a].SetActive(true);
                     Instantiate(props[a], insPoint.transform.position, insPoint.transform.rotation);
+                    Menu_TutorialControl.insNum++;
                 }
                 else
                 {
@@ -46,7 +48,6 @@ public class Tutorial_Props : MonoBehaviour
     }
     public void Button_Back()
     {
-        isDestory = true;
         menu1.SetActive(true);
         menu2.SetActive(false);
         BGM.PlayOneShot(onClick);
@@ -54,14 +55,12 @@ public class Tutorial_Props : MonoBehaviour
     public void Button_Left()
     {
         num--;
-        isDestory = true;
         isFind = true;
         BGM.PlayOneShot(onClick);
     }
     public void Button_Right()
     {
         num++;
-        isDestory = true;
         isFind = true;
         BGM.PlayOneShot(onClick);
     }
@@ -75,6 +74,13 @@ public class Tutorial_Props : MonoBehaviour
         if (num < 1)
         {
             num = 8;
+        }
+    }
+    void DestroyObject()
+    {
+        if (Menu_TutorialControl.insNum != 0)
+        {
+            isDestory = true;
         }
     }
 }
