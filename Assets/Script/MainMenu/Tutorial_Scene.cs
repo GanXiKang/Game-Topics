@@ -15,6 +15,12 @@ public class Tutorial_Scene : MonoBehaviour
 
     void Update()
     {
+        if (Menu_TutorialControl.isRenewUI)
+        {
+            menu1.SetActive(true);
+            menuMap.SetActive(false);
+            menuPoint.SetActive(false);
+        }
         if (isFind)
         {
             Limit();

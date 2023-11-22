@@ -13,6 +13,7 @@ public class Menu_TutorialControl : MonoBehaviour
     public GameObject[] buttonLong = new GameObject[4];
 
     public static int insNum = 0;
+    public static bool isRenewUI;
 
     int buttonNum;
     bool isButtonDisable;
@@ -48,8 +49,10 @@ public class Menu_TutorialControl : MonoBehaviour
     public void Button_Beside(int i)
     {
         buttonNum = i;
+        isRenewUI = true;
         isButtonDisable = true;
         BGM.PlayOneShot(onClick);
+        Invoke("FalseByisRenewUI", 0.4f);
     }
 
     void MenuDisable()
@@ -84,5 +87,9 @@ public class Menu_TutorialControl : MonoBehaviour
                 props.SetActive(true);
                 break;
         }
+    }
+    void FalseByisRenewUI()
+    {
+        isRenewUI = false;
     }
 }

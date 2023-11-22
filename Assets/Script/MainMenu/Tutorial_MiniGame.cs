@@ -14,6 +14,11 @@ public class Tutorial_MiniGame : MonoBehaviour
 
     void Update()
     {
+        if (Menu_TutorialControl.isRenewUI)
+        {
+            menu1.SetActive(true);
+            menu2.SetActive(false);
+        }
         if (isFind)
         {
             Limit();
