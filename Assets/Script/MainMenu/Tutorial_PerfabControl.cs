@@ -13,6 +13,7 @@ public class Tutorial_PerfabControl : MonoBehaviour
         {
             anim.GetComponent<Animator>();
             BGM.GetComponent<AudioSource>();
+            print("1");
         }
     }
 
@@ -35,6 +36,7 @@ public class Tutorial_PerfabControl : MonoBehaviour
 
         if (gameObject.tag == "Animals")
         {
+            print("2");
             if (Tutorial_AnimalsControl.isAnimator)
             {
                 anim.SetBool("Wave", true);
