@@ -6,8 +6,11 @@ public class Tutorial_AnimalsControl : MonoBehaviour
 {
     public AudioSource BGM;
     public AudioClip onClick;
-    public GameObject menu1, menu2;
+    public GameObject menu1, menu2, insPoint;
+    public GameObject[] animals = new GameObject[20];
     public GameObject[] introduce = new GameObject[20];
+
+
 
     int who;
     bool isFind;
@@ -22,6 +25,7 @@ public class Tutorial_AnimalsControl : MonoBehaviour
                 if (a == who)
                 {
                     introduce[a].SetActive(true);
+                    Instantiate(animals[a], insPoint.transform.position, insPoint.transform.rotation);
                 }
                 else
                 {

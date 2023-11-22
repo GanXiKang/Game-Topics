@@ -6,8 +6,9 @@ public class Tutorial_Props : MonoBehaviour
 {
     public AudioSource BGM;
     public AudioClip onClick;
-    public GameObject menu1, menu2;
+    public GameObject menu1, menu2, insPoint;
     public GameObject[] props = new GameObject[9];
+    public GameObject[] introduce = new GameObject[9];
 
     int num;
     bool isFind;
@@ -21,11 +22,12 @@ public class Tutorial_Props : MonoBehaviour
             {
                 if (a == num)
                 {
-                    props[a].SetActive(true);
+                    introduce[a].SetActive(true);
+                    Instantiate(props[a], insPoint.transform.position, insPoint.transform.rotation);
                 }
                 else
                 {
-                    props[a].SetActive(false);
+                    introduce[a].SetActive(false);
                 }
             }
             isFind = false;
