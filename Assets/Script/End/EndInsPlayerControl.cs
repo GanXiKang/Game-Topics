@@ -140,7 +140,7 @@ public class EndInsPlayerControl : MonoBehaviour
     }
     IEnumerator EndGameTime()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(15f);
         SceneManager.LoadScene(0);
     }
 }
