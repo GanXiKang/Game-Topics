@@ -8,9 +8,9 @@ public class Menu_TutorialControl : MonoBehaviour
     AudioSource BGM;
 
     public AudioClip onClick;
-    public GameObject frontPage, animals, scene, mg, props;
-    public GameObject[] buttonShort = new GameObject[4];
-    public GameObject[] buttonLong = new GameObject[4];
+    public GameObject frontPage, animals, scene, mg, props, story;
+    public GameObject[] buttonShort = new GameObject[5];
+    public GameObject[] buttonLong = new GameObject[5];
 
     public static int insNum = 0;
     public static bool isRenewUI;
@@ -63,6 +63,7 @@ public class Menu_TutorialControl : MonoBehaviour
                 scene.SetActive(false);
                 mg.SetActive(false);
                 props.SetActive(false);
+                story.SetActive(false);
                 break;
 
             case 1:
@@ -70,6 +71,7 @@ public class Menu_TutorialControl : MonoBehaviour
                 scene.SetActive(true);
                 mg.SetActive(false);
                 props.SetActive(false);
+                story.SetActive(false);
                 break;
 
             case 2:
@@ -77,6 +79,7 @@ public class Menu_TutorialControl : MonoBehaviour
                 scene.SetActive(false);
                 mg.SetActive(true);
                 props.SetActive(false);
+                story.SetActive(false);
                 break;
 
             case 3:
@@ -84,6 +87,15 @@ public class Menu_TutorialControl : MonoBehaviour
                 scene.SetActive(false);
                 mg.SetActive(false);
                 props.SetActive(true);
+                story.SetActive(false);
+                break;
+
+            case 4:
+                animals.SetActive(false);
+                scene.SetActive(false);
+                mg.SetActive(false);
+                props.SetActive(false);
+                story.SetActive(true);
                 break;
         }
     }
