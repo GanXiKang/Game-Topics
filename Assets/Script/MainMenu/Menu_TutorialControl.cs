@@ -27,7 +27,7 @@ public class Menu_TutorialControl : MonoBehaviour
     {
         if (isButtonDisable)
         {
-            for (int b = 0; b < 4; b++)
+            for (int b = 0; b < 5; b++)
             {
                 if (b == buttonNum)
                 {
