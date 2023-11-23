@@ -8,6 +8,7 @@ public class BagUIControl : MonoBehaviour
 {
     AudioSource BGM;
 
+    public AudioClip insProps;
     public GameObject bagUI;
     public Button[] use = new Button[7];
 
@@ -412,6 +413,7 @@ public class BagUIControl : MonoBehaviour
     public void Button_Use(int why)
     {
         whyUseProps = why;
+        BGM.PlayOneShot(insProps);
         StartCoroutine(UseProps());
     }
 
