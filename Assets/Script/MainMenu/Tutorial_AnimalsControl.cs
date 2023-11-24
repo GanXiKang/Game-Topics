@@ -15,6 +15,11 @@ public class Tutorial_AnimalsControl : MonoBehaviour
     int who;
     bool isFind;
 
+    void Start()
+    {
+        isDestory = false;
+    }
+
     void Update()
     {
         if (Menu_TutorialControl.isRenewUI)
