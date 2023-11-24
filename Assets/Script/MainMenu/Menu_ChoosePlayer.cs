@@ -70,6 +70,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     IEnumerator GoMainGame()
     {
         isStopAD = true;
+        InstantiatePointControl.isStart = true;
         NO[0].SetActive(false);
         NO[1].SetActive(false);
         NO[2].SetActive(false);
