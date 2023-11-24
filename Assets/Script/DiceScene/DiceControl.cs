@@ -7,7 +7,7 @@ public class DiceControl : MonoBehaviour
 {
     Rigidbody rb;
 
-    public static int P1_totalNum = 0, P2_totalNum = 0, P3_totalNum = 0, P4_totalNum = 0;
+    public static int P1_totalNum, P2_totalNum, P3_totalNum, P4_totalNum;
 
     public int MinNum, MaxNum;
     public float rotationForce;
