@@ -72,6 +72,7 @@ public class UI_StopGameControl : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+        EndInsPlayerControl.isGameSceneDestroy = true;
         stopGameUI.SetActive(false);
         isOperate = false;
     }

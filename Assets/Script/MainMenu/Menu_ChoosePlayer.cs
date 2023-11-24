@@ -81,6 +81,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         isStopAD = true;
         InstantiatePointControl.isStart = true;
+        EndInsPlayerControl.isGameSceneDestroy = false;
         NO[0].SetActive(false);
         NO[1].SetActive(false);
         NO[2].SetActive(false);
