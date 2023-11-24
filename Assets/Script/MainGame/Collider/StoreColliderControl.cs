@@ -260,90 +260,105 @@ public class StoreColliderControl : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "P1")
+        switch (ChangeCameraControl.changeCameraNum)
         {
-            if (DiceControl.P1_totalNum == pointNum)
-            {
-                if (!PlayerMoveControl.isMove)
+            case 1:
+                if (other.tag == "P1")
                 {
-                    if (StoreUIControl.isStore)
+                    if (DiceControl.P1_totalNum == pointNum)
                     {
-                        Vector3 targetDirection = target.position - other.transform.position;
-                        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
-                    }
-                    if (StoreUIControl.isBuying)
-                    {
-                        Vector3 buyingDirection = buying.position - other.transform.position;
-                        Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
-                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                        if (!PlayerMoveControl.isMove)
+                        {
+                            if (StoreUIControl.isStore)
+                            {
+                                Vector3 targetDirection = target.position - other.transform.position;
+                                Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                            }
+                            if (StoreUIControl.isBuying)
+                            {
+                                Vector3 buyingDirection = buying.position - other.transform.position;
+                                Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
+                                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                            }
+                        }
                     }
                 }
-            }
-        }
-        else if (other.tag == "P2")
-        {
-            if (DiceControl.P2_totalNum == pointNum)
-            {
-                if (!PlayerMoveControl.isMove)
+                break;
+
+            case 2:
+                if (other.tag == "P2")
                 {
-                    if (!StoreUIControl.isBuying)
+                    if (DiceControl.P2_totalNum == pointNum)
                     {
-                        Vector3 targetDirection = target.position - other.transform.position;
-                        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
-                    }
-                    else
-                    {
-                        Vector3 buyingDirection = buying.position - other.transform.position;
-                        Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
-                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                        if (!PlayerMoveControl.isMove)
+                        {
+                            if (!StoreUIControl.isBuying)
+                            {
+                                Vector3 targetDirection = target.position - other.transform.position;
+                                Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                            }
+                            else
+                            {
+                                Vector3 buyingDirection = buying.position - other.transform.position;
+                                Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
+                                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                            }
+                        }
                     }
                 }
-            }
-        }
-        else if (other.tag == "P3")
-        {
-            if (DiceControl.P3_totalNum == pointNum)
-            {
-                if (!PlayerMoveControl.isMove)
+                break;
+
+            case 3:
+                if (other.tag == "P3")
                 {
-                    if (!StoreUIControl.isBuying)
+                    if (DiceControl.P3_totalNum == pointNum)
                     {
-                        Vector3 targetDirection = target.position - other.transform.position;
-                        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
-                    }
-                    else
-                    {
-                        Vector3 buyingDirection = buying.position - other.transform.position;
-                        Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
-                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                        if (!PlayerMoveControl.isMove)
+                        {
+                            if (!StoreUIControl.isBuying)
+                            {
+                                Vector3 targetDirection = target.position - other.transform.position;
+                                Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                            }
+                            else
+                            {
+                                Vector3 buyingDirection = buying.position - other.transform.position;
+                                Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
+                                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                            }
+                        }
                     }
                 }
-            }
-        }
-        else if (other.tag == "P4")
-        {
-            if (DiceControl.P4_totalNum == pointNum)
-            {
-                if (!PlayerMoveControl.isMove)
+                break;
+
+            case 4:
+                if (other.tag == "P4")
                 {
-                    if (!StoreUIControl.isBuying)
+                    if (DiceControl.P4_totalNum == pointNum)
                     {
-                        Vector3 targetDirection = target.position - other.transform.position;
-                        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
-                    }
-                    else
-                    {
-                        Vector3 buyingDirection = buying.position - other.transform.position;
-                        Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
-                        other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                        if (!PlayerMoveControl.isMove)
+                        {
+                            if (!StoreUIControl.isBuying)
+                            {
+                                Vector3 targetDirection = target.position - other.transform.position;
+                                Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, targetRotation, 5f * Time.deltaTime);
+                            }
+                            else
+                            {
+                                Vector3 buyingDirection = buying.position - other.transform.position;
+                                Quaternion buyingRotation = Quaternion.LookRotation(buyingDirection);
+                                other.transform.rotation = Quaternion.Lerp(other.transform.rotation, buyingRotation, 5f * Time.deltaTime);
+                            }
+                        }
                     }
                 }
-            }
+                break;
         }
+   
     }
     private void OnTriggerExit(Collider other)
     {
