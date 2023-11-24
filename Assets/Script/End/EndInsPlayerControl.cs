@@ -142,13 +142,12 @@ public class EndInsPlayerControl : MonoBehaviour
     }
     IEnumerator EndGameTime()
     {
-        yield return new WaitForSeconds(15f);
         isGameSceneDestroy = true;
         print(isGameSceneDestroy);
-        SceneManager.LoadScene(0);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(15f);
         isGameSceneDestroy = false;
         print(isGameSceneDestroy);
+        SceneManager.LoadScene(0);
     }
 }
 
