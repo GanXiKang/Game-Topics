@@ -12,11 +12,14 @@ public class DiceUIControl : MonoBehaviour
     public GameObject interactiveUI;
     public GameObject cameraModeUI;
 
-    public static bool isDiceUI = true, isDiceScene = false;
+    public static bool isDiceUI, isDiceScene;
 
     void Start()
     {
         BGM = GetComponent<AudioSource>();
+
+        isDiceUI = true;
+        isDiceScene = false;
     }
     void Update()
     {
