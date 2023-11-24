@@ -7,8 +7,8 @@ public class Menu_ChoosePlayer : MonoBehaviour
 {
     AudioSource BGM;
 
-    public static int whoPlay = 0, whyP1 = 0, whyP2 = 0, whyP3 = 0, whyP4 = 0;
-    public static int isDestoryP1 = 0, isDestoryP2 = 0, isDestoryP3 = 0, isDestoryP4 = 0;
+    public static int whoPlay = 0, whyP1, whyP2, whyP3, whyP4;
+    public static int isDestoryP1, isDestoryP2, isDestoryP3, isDestoryP4;
     public static bool isJumpP1, isJumpP2, isJumpP3, isJumpP4;
 
     public GameObject[] Group = new GameObject[2];
@@ -27,6 +27,15 @@ public class Menu_ChoosePlayer : MonoBehaviour
     void Start()
     {
         BGM = GetComponent<AudioSource>();
+
+        whyP1 = 0;
+        whyP2 = 0;
+        whyP3 = 0;
+        whyP4 = 0;
+        isDestoryP1 = 0;
+        isDestoryP2 = 0;
+        isDestoryP3 = 0;
+        isDestoryP4 = 0;
     }
 
     void Update()
@@ -78,10 +87,6 @@ public class Menu_ChoosePlayer : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         InstantiatePointControl.isStart = true;
         SceneManager.LoadScene(7);
-        isDestoryP1 = 0;
-        isDestoryP2 = 0;
-        isDestoryP3 = 0;
-        isDestoryP4 = 0;
         isStopAD = false;
     }
 
