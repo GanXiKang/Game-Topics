@@ -357,8 +357,7 @@ public class StoreColliderControl : MonoBehaviour
                     }
                 }
                 break;
-        }
-   
+        }   
     }
     private void OnTriggerExit(Collider other)
     {
