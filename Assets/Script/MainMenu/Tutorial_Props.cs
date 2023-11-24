@@ -15,11 +15,6 @@ public class Tutorial_Props : MonoBehaviour
     int num;
     bool isFind;
 
-    void Start()
-    {
-        isDestory = false;
-    }
-
     void Update()
     {
         if (Menu_TutorialControl.isRenewUI)

@@ -22,6 +22,8 @@ public class Menu_TutorialControl : MonoBehaviour
     {
         BGM = GetComponent<AudioSource>();
         insNum = 0;
+        Tutorial_Props.isDestory = false;
+        Tutorial_AnimalsControl.isDestory = false;
     }
 
     void Update()
