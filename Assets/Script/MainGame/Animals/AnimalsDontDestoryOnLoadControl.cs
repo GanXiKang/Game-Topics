@@ -8,4 +8,12 @@ public class AnimalsDontDestoryOnLoadControl : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
     }
+
+    void FixedUpdate()
+    {
+        if (EndInsPlayerControl.isGameSceneDestroy)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

@@ -17,4 +17,12 @@ public class DontDestroyOnLoadControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void FixedUpdate()
+    {
+        if (EndInsPlayerControl.isGameSceneDestroy)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

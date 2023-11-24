@@ -11,6 +11,8 @@ public class EndInsPlayerControl : MonoBehaviour
     public GameObject[] animals = new GameObject[12];
     public GameObject[] animalsWin = new GameObject[12];
 
+    public static bool isGameSceneDestroy = false;
+
     bool isLose1, isLose2;
 
     void Start()
@@ -141,7 +143,10 @@ public class EndInsPlayerControl : MonoBehaviour
     IEnumerator EndGameTime()
     {
         yield return new WaitForSeconds(15f);
+        isGameSceneDestroy = true;
         SceneManager.LoadScene(0);
+        yield return new WaitForSeconds(1f);
+        isGameSceneDestroy = false;
     }
 }
 
