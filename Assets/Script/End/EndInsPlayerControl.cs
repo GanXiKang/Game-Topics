@@ -143,10 +143,8 @@ public class EndInsPlayerControl : MonoBehaviour
     IEnumerator EndGameTime()
     {
         isGameSceneDestroy = true;
-        print(isGameSceneDestroy);
         yield return new WaitForSeconds(15f);
         isGameSceneDestroy = false;
-        print(isGameSceneDestroy);
         SceneManager.LoadScene(0);
     }
 }
