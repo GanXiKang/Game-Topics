@@ -59,6 +59,7 @@ public class Menu_ButtonControl : MonoBehaviour
         menu[1].SetActive(false);
         menu[2].SetActive(true);
         BGM.PlayOneShot(onClick);
+        Tutorial_Props.isDestory = true;
     }
     public void B_3p()
     {
@@ -66,6 +67,7 @@ public class Menu_ButtonControl : MonoBehaviour
         menu[1].SetActive(false);
         menu[2].SetActive(true);
         BGM.PlayOneShot(onClick);
+        Tutorial_Props.isDestory = true;
     }
     public void B_4p()
     {
@@ -73,5 +75,6 @@ public class Menu_ButtonControl : MonoBehaviour
         menu[1].SetActive(false);
         menu[2].SetActive(true);
         BGM.PlayOneShot(onClick);
+        Tutorial_Props.isDestory = true;
     }
 }
