@@ -10,8 +10,13 @@ public class GameEndControl : MonoBehaviour
     public int endPoint;
 
     public static int whoWin;
-    public static bool isEnd = false;
-    
+    public static bool isEnd;
+
+    void Start()
+    {
+        isEnd = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "P1")
