@@ -27,6 +27,9 @@ public class GameEndControl : MonoBehaviour
                 AnimatorControl.isP1Move = false;
                 AnimatorControl.isP1Skill = false;
                 AnimatorControl.isP1Win = true;
+                AnimatorControl.isP2Lose = true;
+                AnimatorControl.isP3Lose = true;
+                AnimatorControl.isP4Lose = true;
                 StartCoroutine(GOEndScene());
             }
         }
@@ -38,6 +41,9 @@ public class GameEndControl : MonoBehaviour
                 AnimatorControl.isP2Move = false;
                 AnimatorControl.isP2Skill = false;
                 AnimatorControl.isP2Win = true;
+                AnimatorControl.isP1Lose = true;
+                AnimatorControl.isP3Lose = true;
+                AnimatorControl.isP4Lose = true;
                 StartCoroutine(GOEndScene());
             }
         }
@@ -49,6 +55,9 @@ public class GameEndControl : MonoBehaviour
                 AnimatorControl.isP3Move = false;
                 AnimatorControl.isP3Skill = false;
                 AnimatorControl.isP3Win = true;
+                AnimatorControl.isP1Lose = true;
+                AnimatorControl.isP2Lose = true;
+                AnimatorControl.isP4Lose = true;
                 StartCoroutine(GOEndScene());
             }
         }
@@ -60,6 +69,9 @@ public class GameEndControl : MonoBehaviour
                 AnimatorControl.isP4Move = false;
                 AnimatorControl.isP4Skill = false;
                 AnimatorControl.isP4Win = true;
+                AnimatorControl.isP1Lose = true;
+                AnimatorControl.isP2Lose = true;
+                AnimatorControl.isP3Lose = true;
                 StartCoroutine(GOEndScene());
             }
         }
@@ -72,6 +84,18 @@ public class GameEndControl : MonoBehaviour
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(8);
         isEnd = true;
+        FalseByAnimator();
         CameraMoveControl.isChangeCameraPoint = false;
+    }
+    void FalseByAnimator()
+    {
+        AnimatorControl.isP1Win = false;
+        AnimatorControl.isP2Win = false;
+        AnimatorControl.isP3Win = false;
+        AnimatorControl.isP4Win = false;
+        AnimatorControl.isP1Lose = false;
+        AnimatorControl.isP2Lose = false;
+        AnimatorControl.isP3Lose = false;
+        AnimatorControl.isP4Lose = false;
     }
 }
