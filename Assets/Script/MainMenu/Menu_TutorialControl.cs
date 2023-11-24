@@ -12,7 +12,7 @@ public class Menu_TutorialControl : MonoBehaviour
     public GameObject[] buttonShort = new GameObject[5];
     public GameObject[] buttonLong = new GameObject[5];
 
-    public static int insNum = 0;
+    public static int insNum;
     public static bool isRenewUI;
 
     int buttonNum;
@@ -21,6 +21,7 @@ public class Menu_TutorialControl : MonoBehaviour
     void Start()
     {
         BGM = GetComponent<AudioSource>();
+        insNum = 0;
     }
 
     void Update()
