@@ -7,7 +7,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
 {
     AudioSource BGM;
 
-    public static int whoPlay = 0, whyP1, whyP2, whyP3, whyP4;
+    public static int whoPlay, whyP1, whyP2, whyP3, whyP4;
     public static int isDestoryP1, isDestoryP2, isDestoryP3, isDestoryP4;
     public static bool isJumpP1, isJumpP2, isJumpP3, isJumpP4;
 
@@ -28,6 +28,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
     {
         BGM = GetComponent<AudioSource>();
 
+        whoPlay = 0;
         whyP1 = 0;
         whyP2 = 0;
         whyP3 = 0;
