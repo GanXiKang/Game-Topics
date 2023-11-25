@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class EventControl : MonoBehaviour
 {
-    public static bool P1_EnterEvent = true, P2_EnterEvent = true, P3_EnterEvent = true, P4_EnterEvent = true;
-    public static bool isStopP1 = false, isStopP2 = false, isStopP3 = false, isStopP4 = false;
+    public static bool P1_EnterEvent, P2_EnterEvent, P3_EnterEvent, P4_EnterEvent;
+    public static bool isStopP1, isStopP2, isStopP3, isStopP4;
 
     public AudioSource BGM;
     public AudioClip goodE, badE;
@@ -17,6 +17,18 @@ public class EventControl : MonoBehaviour
 
     int r;
     bool isStopProps = false;
+
+    void Start()
+    {
+        P1_EnterEvent = true;
+        P2_EnterEvent = true;
+        P3_EnterEvent = true;
+        P4_EnterEvent = true;
+        isStopP1 = false;
+        isStopP2 = false;
+        isStopP3 = false;
+        isStopP4 = false;
+}
 
     private void OnTriggerEnter(Collider other)
     {
