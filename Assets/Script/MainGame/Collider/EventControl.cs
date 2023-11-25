@@ -28,7 +28,7 @@ public class EventControl : MonoBehaviour
         isStopP2 = false;
         isStopP3 = false;
         isStopP4 = false;
-}
+    }
 
     private void OnTriggerEnter(Collider other)
     {

@@ -13,7 +13,7 @@ public class GameEndControl : MonoBehaviour
     public static bool isEnd;
 
     void Start()
-    {
+    { 
         isEnd = false;
     }
 

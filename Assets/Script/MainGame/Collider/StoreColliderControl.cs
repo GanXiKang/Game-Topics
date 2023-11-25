@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class StoreColliderControl : MonoBehaviour
 {
-    public static bool P1_EnterStore = true, P2_EnterStore = true, P3_EnterStore = true, P4_EnterStore = true;
+    public static bool P1_EnterStore, P2_EnterStore, P3_EnterStore, P4_EnterStore;
     public static int who;
 
     public int pointNum;
     public Transform target, buying;
 
     bool isStopProps = false;
+
+    void Start()
+    {
+        P1_EnterStore = true; 
+        P2_EnterStore = true;
+        P3_EnterStore = true;
+        P4_EnterStore = true;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
