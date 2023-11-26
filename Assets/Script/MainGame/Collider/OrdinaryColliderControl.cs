@@ -4,22 +4,11 @@ using UnityEngine;
 
 public class OrdinaryColliderControl : MonoBehaviour
 {
-    public static bool P1_Enter, P2_Enter, P3_Enter, P4_Enter;
+    public static bool P1_Enter = true, P2_Enter = true, P3_Enter = true, P4_Enter = true;
     public int pointNum;
 
     bool isStopProps = false;
 
-    void Awake()
-    {
-        print("NOW");
-    }
-    void Start()
-    {
-        P1_Enter = true;
-        P2_Enter = true;
-        P3_Enter = true;
-        P4_Enter = true;
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (!PropsControl.isTrans && !AnimalsPowerControl.tigerUsePower)

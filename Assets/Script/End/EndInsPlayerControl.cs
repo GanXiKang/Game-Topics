@@ -147,5 +147,13 @@ public class EndInsPlayerControl : MonoBehaviour
         isGameSceneDestroy = false;
         SceneManager.LoadScene(0);
     }
+
+    void DataManagement()
+    {
+        OrdinaryColliderControl.P1_Enter = true;
+        OrdinaryColliderControl.P2_Enter = true;
+        OrdinaryColliderControl.P3_Enter = true;
+        OrdinaryColliderControl.P4_Enter = true;
+    }
 }
 
