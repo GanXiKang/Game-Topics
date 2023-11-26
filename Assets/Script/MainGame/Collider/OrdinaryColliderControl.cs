@@ -15,7 +15,6 @@ public class OrdinaryColliderControl : MonoBehaviour
         P2_Enter = true;
         P3_Enter = true;
         P4_Enter = true;
-        print("Ordinary now");
     }
     private void OnTriggerEnter(Collider other)
     {
