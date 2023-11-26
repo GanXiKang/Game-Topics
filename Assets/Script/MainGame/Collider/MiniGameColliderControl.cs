@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MiniGameColliderControl : MonoBehaviour
 {
-    public static bool P1_playGame, P2_playGame, P3_playGame, P4_playGame, isMiniGame;
+    public static bool P1_playGame = true, P2_playGame = true, P3_playGame = true, P4_playGame = true, isMiniGame = false;
     public static bool isRacoonCall, isSlothCall, isFoxCall, isOstrichCall, isBearCall, isDolphinCall;
     public static float p;
 
@@ -14,14 +14,6 @@ public class MiniGameColliderControl : MonoBehaviour
 
     bool isStopProps = false;
 
-    void Start()
-    {
-        P1_playGame = true;
-        P2_playGame = true;
-        P3_playGame = true;
-        P4_playGame = true;
-        isMiniGame = false;
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (!PropsControl.isTrans && !AnimalsPowerControl.tigerUsePower)

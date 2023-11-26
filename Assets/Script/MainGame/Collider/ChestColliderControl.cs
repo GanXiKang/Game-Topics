@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChestColliderControl : MonoBehaviour
 {
-    public static bool P1_EnterBox, P2_EnterBox, P3_EnterBox, P4_EnterBox;
+    public static bool P1_EnterBox = true, P2_EnterBox = true, P3_EnterBox = true, P4_EnterBox = true;
     public int boxPoint, isOpenNumber;
     public Transform target;
 
@@ -12,14 +12,6 @@ public class ChestColliderControl : MonoBehaviour
 
     bool isOpened = false;
     bool isStopProps = false;
-
-    void Start()
-    {
-        P1_EnterBox = true;
-        P2_EnterBox = true;
-        P3_EnterBox = true;
-        P4_EnterBox = true;
-    }
 
     void OpenBoxJudge()
     {
