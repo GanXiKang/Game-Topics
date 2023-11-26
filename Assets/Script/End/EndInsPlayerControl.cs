@@ -155,10 +155,31 @@ public class EndInsPlayerControl : MonoBehaviour
         OrdinaryColliderControl.P2_Enter = true;
         OrdinaryColliderControl.P3_Enter = true;
         OrdinaryColliderControl.P4_Enter = true;
+
+        ChestColliderControl.P1_EnterBox = true;
+        ChestColliderControl.P2_EnterBox = true;
+        ChestColliderControl.P3_EnterBox = true;
+        ChestColliderControl.P4_EnterBox = true;
+
         StoreColliderControl.P1_EnterStore = true;
         StoreColliderControl.P2_EnterStore = true;
         StoreColliderControl.P3_EnterStore = true;
         StoreColliderControl.P4_EnterStore = true;
+
+        MiniGameColliderControl.P1_playGame = true;
+        MiniGameColliderControl.P2_playGame = true;
+        MiniGameColliderControl.P3_playGame = true;
+        MiniGameColliderControl.P4_playGame = true;
+        MiniGameColliderControl.isMiniGame = false;
+
+        EventControl.P1_EnterEvent = true;
+        EventControl.P2_EnterEvent = true;
+        EventControl.P3_EnterEvent = true;
+        EventControl.P4_EnterEvent = true;
+        EventControl.isStopP1 = false;
+        EventControl.isStopP2 = false;
+        EventControl.isStopP3 = false;
+        EventControl.isStopP4 = false;  
     }
 }
 
