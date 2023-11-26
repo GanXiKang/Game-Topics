@@ -143,6 +143,7 @@ public class EndInsPlayerControl : MonoBehaviour
     IEnumerator EndGameTime()
     {
         isGameSceneDestroy = true;
+        //DataManagement();
         yield return new WaitForSeconds(15f);
         isGameSceneDestroy = false;
         SceneManager.LoadScene(0);
@@ -154,6 +155,10 @@ public class EndInsPlayerControl : MonoBehaviour
         OrdinaryColliderControl.P2_Enter = true;
         OrdinaryColliderControl.P3_Enter = true;
         OrdinaryColliderControl.P4_Enter = true;
+        StoreColliderControl.P1_EnterStore = true;
+        StoreColliderControl.P2_EnterStore = true;
+        StoreColliderControl.P3_EnterStore = true;
+        StoreColliderControl.P4_EnterStore = true;
     }
 }
 
