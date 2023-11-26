@@ -9,6 +9,10 @@ public class OrdinaryColliderControl : MonoBehaviour
 
     bool isStopProps = false;
 
+    void Awake()
+    {
+        print("NOW");
+    }
     void Start()
     {
         P1_Enter = true;
