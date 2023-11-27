@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class PowerUIControl : MonoBehaviour
 {
+    AudioSource BGM;
+
+    public AudioClip pow, button;
     public GameObject powerUI, rabbitUsePowerUI;
     public GameObject[] animalsPowerImage = new GameObject[13];
     public Button power;
@@ -19,6 +22,8 @@ public class PowerUIControl : MonoBehaviour
 
     void Start()
     {
+        BGM = GetComponent<AudioSource>();
+
         Initial();
     }
 
@@ -41,17 +46,20 @@ public class PowerUIControl : MonoBehaviour
         DiceUIControl.isDiceUI = false;
         powerUI.SetActive(true);
         FindWhoPower();
+        BGM.PlayOneShot(pow);
     }
     public void Button_Use()
     {
         DiceUIControl.isDiceUI = false;
         powerUI.SetActive(false);
         FindWhoUsePower();
+        BGM.PlayOneShot(button);
     }
     public void Button_Cancel()
     {
         DiceUIControl.isDiceUI = true;
         powerUI.SetActive(false);
+        BGM.PlayOneShot(button);
     }
     public void Button_RabbitPowerChoose(int d)
     {
