@@ -8,7 +8,7 @@ public class BagUIControl : MonoBehaviour
 {
     AudioSource BGM;
 
-    public AudioClip insProps;
+    public AudioClip insProps, bag, button;
     public GameObject bagUI;
     public Button[] use = new Button[7];
 
@@ -404,11 +404,13 @@ public class BagUIControl : MonoBehaviour
     {
         bagUI.SetActive(true);
         DiceUIControl.isDiceUI = false;
+        BGM.PlayOneShot(bag);
     }
     public void Button_Close()
     {
         bagUI.SetActive(false);
         DiceUIControl.isDiceUI = true;
+        BGM.PlayOneShot(button);
     }
     public void Button_Use(int why)
     {
