@@ -11,6 +11,11 @@ public class EventImageUIControl : MonoBehaviour
     public static int eventPointNum, eventAB;
     public static bool isTimer;
 
+    void Start()
+    {
+        isTimer = false;
+    }
+
     void Update()
     {
         if (isTimer)

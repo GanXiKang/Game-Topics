@@ -17,6 +17,7 @@ public class CameraMoveControl : MonoBehaviour
         maxDistance = 100f;
         isMove = false;
         isChangeCameraPoint = false;
+        isCameraModeUI = false;
     }
 
     void Update()
