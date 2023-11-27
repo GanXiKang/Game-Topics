@@ -885,10 +885,10 @@ public class PropsControl : MonoBehaviour
         }
         for (int b = 3; b < 7; b++)
         {
-            P1Props[b] = dicePropsNum;
-            P2Props[b] = dicePropsNum;
-            P3Props[b] = dicePropsNum;
-            P4Props[b] = dicePropsNum;
+            P1Props[b] = propsNum;
+            P2Props[b] = propsNum;
+            P3Props[b] = propsNum;
+            P4Props[b] = propsNum;
         }
         //P1Props[0] = dicePropsNum;
         //P1Props[1] = dicePropsNum;
