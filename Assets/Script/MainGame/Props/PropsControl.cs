@@ -876,34 +876,48 @@ public class PropsControl : MonoBehaviour
 
     void Initial()
     {
-        P1Props[0] = dicePropsNum;
-        P1Props[1] = dicePropsNum;
-        P1Props[2] = dicePropsNum;
-        P1Props[3] = propsNum;
-        P1Props[4] = propsNum;
-        P1Props[5] = propsNum;
-        P1Props[6] = propsNum;
-        P2Props[0] = dicePropsNum;
-        P2Props[1] = dicePropsNum;
-        P2Props[2] = dicePropsNum;
-        P2Props[3] = propsNum;
-        P2Props[4] = propsNum;
-        P2Props[5] = propsNum;
-        P2Props[6] = propsNum;
-        P3Props[0] = dicePropsNum;
-        P3Props[1] = dicePropsNum;
-        P3Props[2] = dicePropsNum;
-        P3Props[3] = propsNum;
-        P3Props[4] = propsNum;
-        P3Props[5] = propsNum;
-        P3Props[6] = propsNum;
-        P4Props[0] = dicePropsNum;
-        P4Props[1] = dicePropsNum;
-        P4Props[2] = dicePropsNum;
-        P4Props[3] = propsNum;
-        P4Props[4] = propsNum;
-        P4Props[5] = propsNum;
-        P4Props[6] = propsNum;
+        for (int a = 0; a < 3; a++)
+        {
+            P1Props[a] = dicePropsNum;
+            P2Props[a] = dicePropsNum;
+            P3Props[a] = dicePropsNum;
+            P4Props[a] = dicePropsNum;
+        }
+        for (int b = 3; b < 7; b++)
+        {
+            P1Props[b] = dicePropsNum;
+            P2Props[b] = dicePropsNum;
+            P3Props[b] = dicePropsNum;
+            P4Props[b] = dicePropsNum;
+        }
+        //P1Props[0] = dicePropsNum;
+        //P1Props[1] = dicePropsNum;
+        //P1Props[2] = dicePropsNum;
+        //P1Props[3] = propsNum;
+        //P1Props[4] = propsNum;
+        //P1Props[5] = propsNum;
+        //P1Props[6] = propsNum;
+        //P2Props[0] = dicePropsNum;
+        //P2Props[1] = dicePropsNum;
+        //P2Props[2] = dicePropsNum;
+        //P2Props[3] = propsNum;
+        //P2Props[4] = propsNum;
+        //P2Props[5] = propsNum;
+        //P2Props[6] = propsNum;
+        //P3Props[0] = dicePropsNum;
+        //P3Props[1] = dicePropsNum;
+        //P3Props[2] = dicePropsNum;
+        //P3Props[3] = propsNum;
+        //P3Props[4] = propsNum;
+        //P3Props[5] = propsNum;
+        //P3Props[6] = propsNum;
+        //P4Props[0] = dicePropsNum;
+        //P4Props[1] = dicePropsNum;
+        //P4Props[2] = dicePropsNum;
+        //P4Props[3] = propsNum;
+        //P4Props[4] = propsNum;
+        //P4Props[5] = propsNum;
+        //P4Props[6] = propsNum;
         propsName[0] = "重來骰子";
         propsName[1] = "雙倍骰子";
         propsName[2] = "自訂骰子";
