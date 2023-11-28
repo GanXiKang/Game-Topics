@@ -8,13 +8,12 @@ public class CameraMoveControl : MonoBehaviour
 
     public Transform cameraPointA, cameraPointB, cameraPointC;
 
-    float speed, maxDistance;
+    float speed;
     bool isMove, isMovetoPointC;
 
     void Start()
     {
         speed = 5f;
-        //maxDistance = 100f;
         isMove = false;
         isChangeCameraPoint = false;
         isCameraModeUI = false;
@@ -87,10 +86,7 @@ public class CameraMoveControl : MonoBehaviour
             float cameraDistance = Vector3.Distance(transform.position, cameraPointA.position);
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
-            //if (cameraDistance <= maxDistance)
-            //{
-                transform.Translate(mouseX * speed, mouseY * speed, 0);
-            //}
+            transform.Translate(mouseX * speed, mouseY * speed, 0);
         }
         else
         {
