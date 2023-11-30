@@ -55,7 +55,7 @@ public class UI_StopGameControl : MonoBehaviour
 
     public void ContinueGame()
     {
-        Time.timeScale = 2f;
+        Time.timeScale = 1f;
         stopGameUI.SetActive(false);
         isOperate = false;
         if (MiniGameColliderControl.isMiniGame || DiceUIControl.isDiceScene)
