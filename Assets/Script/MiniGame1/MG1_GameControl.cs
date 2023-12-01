@@ -11,6 +11,7 @@ public class MG1_GameControl : MonoBehaviour
     public static float playWhat, AIplayWhat; 
     public static bool cameraC, cameraEnd, W, L, D, playerAniWin, playerAniLose;
 
+    public GameObject doublePlaySpeed;
     public GameObject[] aiScore = new GameObject[3];
     public GameObject[] playerScore = new GameObject[3];
 
@@ -137,6 +138,8 @@ public class MG1_GameControl : MonoBehaviour
             }
             StartCoroutine(BackMainGame());
         }
+
+        PlaySpeed();
     }
     void ScoreBoard()
     {
@@ -188,6 +191,18 @@ public class MG1_GameControl : MonoBehaviour
             MiniGameColliderControl.p = 0;
         }
     }
+    void PlaySpeed()
+    {
+        if (UI_StopGameControl.isDoublePlaySpeed)
+        {
+            doublePlaySpeed.SetActive(true);
+        }
+        else
+        {
+            doublePlaySpeed.SetActive(false);
+        }
+    }
+
     IEnumerator BackMainGame()
     {
         PlayerPlayGameControl();
