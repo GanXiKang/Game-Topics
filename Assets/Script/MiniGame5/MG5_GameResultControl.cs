@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MG5_GameResultControl : MonoBehaviour
 {
     public static bool win = false;
-    public GameObject gameWinUI, gameLoseUI;
+    public GameObject gameWinUI, gameLoseUI, doublePlaySpeed;
     public AudioSource BGM;
     public AudioClip gameWin, gameLose;
 
@@ -30,6 +30,8 @@ public class MG5_GameResultControl : MonoBehaviour
             }
             StartCoroutine(BackMainGame());
         }
+
+        PlaySpeed();
     }
     void PlayerPlayGameControl()
     {
@@ -54,6 +56,18 @@ public class MG5_GameResultControl : MonoBehaviour
             MiniGameColliderControl.p = 0;
         }
     }
+    void PlaySpeed()
+    {
+        if (UI_StopGameControl.isDoublePlaySpeed)
+        {
+            doublePlaySpeed.SetActive(true);
+        }
+        else
+        {
+            doublePlaySpeed.SetActive(false);
+        }
+    }
+
     IEnumerator BackMainGame()
     {
         PlayerPlayGameControl();
