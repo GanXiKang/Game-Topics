@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MG4_UIControl : MonoBehaviour
 {
-    public GameObject startUI;
+    public GameObject startUI, doublePlaySpeed;
     public GameObject[] comboImage = new GameObject[10];
     public AudioSource BGM;
     public AudioClip button, hit, jump;
@@ -24,6 +24,7 @@ public class MG4_UIControl : MonoBehaviour
     void Update()
     {
         combo();
+        PlaySpeed();
 
         if (MG4_RoadBlockControl.hit)
         {
@@ -97,6 +98,17 @@ public class MG4_UIControl : MonoBehaviour
             {
                 comboImage[i].SetActive(false);
             }
+        }
+    }
+    void PlaySpeed()
+    {
+        if (UI_StopGameControl.isDoublePlaySpeed)
+        {
+            doublePlaySpeed.SetActive(true);
+        }
+        else
+        {
+            doublePlaySpeed.SetActive(false);
         }
     }
 }
