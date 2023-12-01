@@ -7,7 +7,9 @@ public class UI_StopGameControl : MonoBehaviour
 {
     GameObject stopGameUI, miniGameUI, OperateUI, doublePlaySpeed;
 
-    bool isFind, isOperate, isCloseDiceUI, isDoublePlaySpeed;
+    public static bool isDoublePlaySpeed;
+
+    bool isFind, isOperate, isCloseDiceUI;
 
     void Start()
     {
