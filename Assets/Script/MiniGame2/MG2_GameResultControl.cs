@@ -7,7 +7,7 @@ public class MG2_GameResultControl : MonoBehaviour
 {
     public static bool win, lose;
 
-    public GameObject gameWinUI, gameLoseUI;
+    public GameObject gameWinUI, gameLoseUI, doublePlaySpeed;
     public AudioSource BGM;
     public AudioClip gameWin, gameLose, goodApple, badApple;
 
@@ -45,6 +45,8 @@ public class MG2_GameResultControl : MonoBehaviour
                 MG2_CollectScoreControl.badA = false;
             }
         }
+
+        PlaySpeed();
     }
     void PlayerPlayGameControl()
     {
@@ -69,6 +71,18 @@ public class MG2_GameResultControl : MonoBehaviour
             MiniGameColliderControl.p = 0;
         }
     }
+    void PlaySpeed()
+    {
+        if (UI_StopGameControl.isDoublePlaySpeed)
+        {
+            doublePlaySpeed.SetActive(true);
+        }
+        else
+        {
+            doublePlaySpeed.SetActive(false);
+        }
+    }
+
     IEnumerator BackMainGame()
     {
         gameResult = false;
