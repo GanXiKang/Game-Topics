@@ -17,7 +17,7 @@ public class PropsControl : MonoBehaviour
     public Text systemText;
 
     int stealWho, totalNum; 
-    int dicePropsNum = 1, propsNum = 0;
+    int dicePropsNum = 15, propsNum = 0;
     bool isStealProps;
     bool[] isHavePropsP1 = new bool[7];
     bool[] isHavePropsP2 = new bool[7];
