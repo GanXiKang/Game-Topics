@@ -7,7 +7,7 @@ public class MG3_GameControl : MonoBehaviour
 {
     AudioSource BGM;
 
-    public GameObject WinUI, LoseUI, EndCamera;
+    public GameObject WinUI, LoseUI, EndCamera, doublePlaySpeed;
     public AudioClip gameWin, gameLose;
 
     public static int round;
@@ -50,6 +50,8 @@ public class MG3_GameControl : MonoBehaviour
         {
             StartCoroutine(BackMainGame());
         }
+
+        PlaySpeed();
     }
 
     void BeforeisCupMove()
@@ -82,6 +84,17 @@ public class MG3_GameControl : MonoBehaviour
         {
             MiniGameColliderControl.P4_playGame = false;
             MiniGameColliderControl.p = 0;
+        }
+    }
+    void PlaySpeed()
+    {
+        if (UI_StopGameControl.isDoublePlaySpeed)
+        {
+            doublePlaySpeed.SetActive(true);
+        }
+        else
+        {
+            doublePlaySpeed.SetActive(false);
         }
     }
 
