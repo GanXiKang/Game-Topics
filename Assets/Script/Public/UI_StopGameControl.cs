@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UI_StopGameControl : MonoBehaviour
 {
-    GameObject stopGameUI, miniGameUI, OperateUI;
+    GameObject stopGameUI, miniGameUI, OperateUI, doublePlaySpeed;
 
     bool isFind, isOperate, isCloseDiceUI, isDoublePlaySpeed;
 
@@ -13,10 +13,12 @@ public class UI_StopGameControl : MonoBehaviour
     {
         stopGameUI = GameObject.Find("StopGameUI");
         OperateUI = GameObject.Find("OperateUI");
+        doublePlaySpeed = GameObject.Find("DoublePlaySpeed");
        
         stopGameUI.SetActive(false);
         isOperate = false;
         isDoublePlaySpeed = false;
+        PlaySpeed();
     }
     void Update()
     {
@@ -126,10 +128,12 @@ public class UI_StopGameControl : MonoBehaviour
         if (isDoublePlaySpeed)
         {
             Time.timeScale = 2f;
+            doublePlaySpeed.SetActive(true);
         }
         else
         {
             Time.timeScale = 1f;
+            doublePlaySpeed.SetActive(false);
         }
     }
 }
