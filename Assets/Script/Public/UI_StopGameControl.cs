@@ -7,7 +7,7 @@ public class UI_StopGameControl : MonoBehaviour
 {
     GameObject stopGameUI, miniGameUI, OperateUI;
 
-    bool isFind, isOperate, isCloseDiceUI;
+    bool isFind, isOperate, isCloseDiceUI, isDoublePlaySpeed;
 
     void Start()
     {
@@ -16,6 +16,7 @@ public class UI_StopGameControl : MonoBehaviour
        
         stopGameUI.SetActive(false);
         isOperate = false;
+        isDoublePlaySpeed = false;
     }
     void Update()
     {
@@ -51,11 +52,17 @@ public class UI_StopGameControl : MonoBehaviour
                 stopGameUI.SetActive(true);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            isDoublePlaySpeed = !isDoublePlaySpeed;
+            PlaySpeed();
+        }
     }
 
     public void ContinueGame()
     {
-        Time.timeScale = 1f;
+        PlaySpeed();
         stopGameUI.SetActive(false);
         isOperate = false;
         if (MiniGameColliderControl.isMiniGame || DiceUIControl.isDiceScene)
@@ -113,5 +120,16 @@ public class UI_StopGameControl : MonoBehaviour
         EventControl.isStopP2 = false;
         EventControl.isStopP3 = false;
         EventControl.isStopP4 = false;
+    }
+    void PlaySpeed()
+    {
+        if (isDoublePlaySpeed)
+        {
+            Time.timeScale = 2f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
 }
