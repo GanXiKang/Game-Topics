@@ -20,9 +20,10 @@ public class UI_StopGameControl : MonoBehaviour
         stopGameUI.SetActive(false);
         isOperate = false;
         isDoublePlaySpeed = false;
-        isEnd = false;
+        isEsc = false;
         PlaySpeed();
     }
+
     void Update()
     {
         OperateUI.SetActive(isOperate);
