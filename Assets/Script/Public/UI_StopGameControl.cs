@@ -9,7 +9,7 @@ public class UI_StopGameControl : MonoBehaviour
 
     public static bool isDoublePlaySpeed;
 
-    bool isFind, isOperate, isCloseDiceUI;
+    bool isFind, isOperate, isCloseDiceUI, isEsc;
 
     void Start()
     {
@@ -20,6 +20,7 @@ public class UI_StopGameControl : MonoBehaviour
         stopGameUI.SetActive(false);
         isOperate = false;
         isDoublePlaySpeed = false;
+        isEnd = false;
         PlaySpeed();
     }
     void Update()
@@ -36,6 +37,7 @@ public class UI_StopGameControl : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                isEsc = true;
                 Time.timeScale = 0f;
                 miniGameUI.SetActive(false);
                 stopGameUI.SetActive(true);
@@ -47,6 +49,7 @@ public class UI_StopGameControl : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                isEsc = true;
                 Time.timeScale = 0f;
                 if (DiceUIControl.isDiceUI)
                 {
@@ -57,10 +60,13 @@ public class UI_StopGameControl : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (!isEsc)
         {
-            isDoublePlaySpeed = !isDoublePlaySpeed;
-            PlaySpeed();
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                isDoublePlaySpeed = !isDoublePlaySpeed;
+                PlaySpeed();
+            }
         }
     }
 
@@ -68,6 +74,7 @@ public class UI_StopGameControl : MonoBehaviour
     {
         PlaySpeed();
         stopGameUI.SetActive(false);
+        isEsc = false;
         isOperate = false;
         if (MiniGameColliderControl.isMiniGame || DiceUIControl.isDiceScene)
         {
@@ -81,6 +88,7 @@ public class UI_StopGameControl : MonoBehaviour
     }
     public void BackToMenu()
     {
+        isEsc = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         EndInsPlayerControl.isGameSceneDestroy = true;
