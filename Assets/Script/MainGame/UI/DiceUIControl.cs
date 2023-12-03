@@ -65,4 +65,5 @@ public class DiceUIControl : MonoBehaviour
                 isDiceUI = true;
             }
         }
+    }
 }
