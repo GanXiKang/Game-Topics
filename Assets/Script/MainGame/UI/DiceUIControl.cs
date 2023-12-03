@@ -30,6 +30,7 @@ public class DiceUIControl : MonoBehaviour
         else
         {
             interactiveUI.SetActive(false);
+            CheatDevice();
         }
 
         if (CameraMoveControl.isCameraModeUI)
@@ -41,6 +42,7 @@ public class DiceUIControl : MonoBehaviour
             cameraModeUI.SetActive(false);
         }
     }
+
     public void Button_Dice()
     {
         StartCoroutine(GoDiceScene());
@@ -53,4 +55,14 @@ public class DiceUIControl : MonoBehaviour
         SceneManager.LoadScene(9);
         isDiceScene = true;
     }
+
+    void CheatDevice()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Input.GetKeyDown(KeyCode.U))
+            {
+                isDiceUI = true;
+            }
+        }
 }
