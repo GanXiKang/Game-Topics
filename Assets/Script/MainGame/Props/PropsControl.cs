@@ -872,6 +872,8 @@ public class PropsControl : MonoBehaviour
         {
             StartCoroutine(ColliderBanana());
         }
+
+        CheatDevice();
     }
 
     void Initial()
@@ -949,6 +951,45 @@ public class PropsControl : MonoBehaviour
     void WaitTransNum()
     {
         isTransNum = 2;
+    }
+    void CheatDevice()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            P1Props[i] += 1;
+                        }
+                        break;
+
+                    case 2:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            P2Props[i] += 1;
+                        }
+                        break;
+
+                    case 3:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            P3Props[i] += 1;
+                        }
+                        break;
+
+                    case 4:
+                        for (int i = 0; i < 7; i++)
+                        {
+                            P4Props[i] += 1;
+                        }
+                        break;
+                }
+            }
+        }
     }
 
     IEnumerator ColliderBanana()
