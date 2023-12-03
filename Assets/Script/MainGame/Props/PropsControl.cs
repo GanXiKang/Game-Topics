@@ -989,6 +989,28 @@ public class PropsControl : MonoBehaviour
                         break;
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                switch (ChangeCameraControl.changeCameraNum)
+                {
+                    case 1:
+                        P1Props[2] += 1;
+                        break;
+
+                    case 2:
+                        P2Props[2] += 1;
+                        break;
+
+                    case 3:
+                        P3Props[2] += 1;
+                        break;
+
+                    case 4:
+                        P4Props[2] += 1;
+                        break;
+                }
+            }
         }
     }
 
