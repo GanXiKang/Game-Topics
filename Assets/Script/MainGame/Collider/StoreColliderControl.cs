@@ -264,7 +264,7 @@ public class StoreColliderControl : MonoBehaviour
         {
             if (DiceControl.P1_totalNum == pointNum)
             {
-                if (!PlayerMoveControl.isMove && ChangeCameraControl.changeCameraNum == 1)
+                if (!PlayerMoveControl.isMove)
                 {
                     if (StoreUIControl.isStore)
                     {
@@ -285,7 +285,7 @@ public class StoreColliderControl : MonoBehaviour
         {
             if (DiceControl.P2_totalNum == pointNum)
             {
-                if (!PlayerMoveControl.isMove && ChangeCameraControl.changeCameraNum == 2)
+                if (!PlayerMoveControl.isMove)
                 {
                     if (!StoreUIControl.isBuying)
                     {
