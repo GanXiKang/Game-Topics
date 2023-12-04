@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ChestColliderControl : MonoBehaviour
 {
+    public static int isOpen;
     public static bool P1_EnterBox = true, P2_EnterBox = true, P3_EnterBox = true, P4_EnterBox = true;
+
     public int boxPoint, isOpenNumber;
     public Transform target;
-
-    public static int isOpen;
 
     bool isOpened = false;
     bool isStopProps = false;
@@ -17,6 +17,7 @@ public class ChestColliderControl : MonoBehaviour
     {
         isOpen = isOpenNumber;
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!PropsControl.isTrans && !AnimalsPowerControl.tigerUsePower)
