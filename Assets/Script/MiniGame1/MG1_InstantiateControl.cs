@@ -58,6 +58,7 @@ public class MG1_InstantiateControl : MonoBehaviour
             MG1_GameControl.AIplayWhat = 0;
         }
     }
+
     void InsPlayer()
     {
         if (MiniGameColliderControl.p == 1)
