@@ -172,10 +172,36 @@ public class BombPropsControl : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "P1" || other.tag == "P2" || other.tag == "P3" || other.tag == "P4")
+        switch (whoPut)
         {
-            whoPut = 0;
-        }
+            case 1:
+                if (other.tag == "P1")
+                {
+                    whoPut = 0;
+                }
+                break;
+
+            case 2:
+                if (other.tag == "P2")
+                {
+                    whoPut = 0;
+                }
+                break;
+
+            case 3:
+                if (other.tag == "P3")
+                {
+                    whoPut = 0;
+                }
+                break;
+
+            case 4:
+                if (other.tag == "P4")
+                {
+                    whoPut = 0;
+                }
+                break;
+        } 
     }
 
     IEnumerator StopTiming()
