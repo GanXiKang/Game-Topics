@@ -63,14 +63,7 @@ public class DiceControl : MonoBehaviour
             rb.AddTorque(Random.insideUnitSphere * rotationForce);
             result = true;
 
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                if (Input.GetKeyDown(KeyCode.C))
-                {
-                    MinNum = 60;
-                    MaxNum = 61;
-                }
-            }
+            CheatDevice();
         }
         else
         {
@@ -344,5 +337,17 @@ public class DiceControl : MonoBehaviour
         }
         renewUI.SetActive(false);
         StartCoroutine(GoMainGame());
+    }
+
+    void CheatDevice()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                MinNum = 60;
+                MaxNum = 61;
+            }
+        }
     }
 }
