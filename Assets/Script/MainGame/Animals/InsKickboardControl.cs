@@ -9,6 +9,7 @@ public class InsKickboardControl : MonoBehaviour
     bool isFollow;
 
     public static bool insKickboard, destoryKickboard;
+
     void Start()
     {
         kickboard.SetActive(false);
@@ -24,6 +25,7 @@ public class InsKickboardControl : MonoBehaviour
             kickboard.SetActive(false);
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Ocean")
