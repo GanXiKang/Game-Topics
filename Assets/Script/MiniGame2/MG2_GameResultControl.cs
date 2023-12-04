@@ -5,14 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MG2_GameResultControl : MonoBehaviour
 {
-    public static bool win, lose;
+    AudioSource BGM;
 
-    public GameObject gameWinUI, gameLoseUI, doublePlaySpeed;
-    public AudioSource BGM;
     public AudioClip gameWin, gameLose, goodApple, badApple;
+    public GameObject gameWinUI, gameLoseUI, doublePlaySpeed;
+
+    public static bool win, lose;
 
     bool gameResult = true;
 
+    void Start()
+    {
+        BGM = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (MG2_UIControl.timer >= 45 && gameResult)
@@ -48,6 +53,7 @@ public class MG2_GameResultControl : MonoBehaviour
 
         PlaySpeed();
     }
+
     void PlayerPlayGameControl()
     {
         if (MiniGameColliderControl.p == 1)
