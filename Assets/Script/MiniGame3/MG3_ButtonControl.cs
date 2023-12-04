@@ -11,6 +11,7 @@ public class MG3_ButtonControl : MonoBehaviour
 
     public static int openWhyCup;
     public static bool isGuess = false, isOpenCup = false, isNextRound = false;
+
     void Start()
     {
         BGM = GetComponent<AudioSource>();
