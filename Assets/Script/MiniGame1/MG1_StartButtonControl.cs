@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class MG1_StartButtonControl : MonoBehaviour
 {
-    public GameObject startUI;
-    public AudioSource BGM;
+    AudioSource BGM;
+
     public AudioClip button;
+    public GameObject startUI;
+
+    void Start()
+    {
+        BGM = GetComponent<AudioSource>();
+    }
+
     public void Button_Start()
     {
         startUI.SetActive(false);
