@@ -400,6 +400,7 @@ public class BagUIControl : MonoBehaviour
             useProps = false;
         }
     }
+
     public void Button_Bag()
     {
         bagUI.SetActive(true);

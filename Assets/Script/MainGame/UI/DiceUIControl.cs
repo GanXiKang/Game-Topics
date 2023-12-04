@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class DiceUIControl : MonoBehaviour
@@ -47,6 +46,7 @@ public class DiceUIControl : MonoBehaviour
     {
         StartCoroutine(GoDiceScene());
     }
+
     IEnumerator GoDiceScene()
     {
         BGM.PlayOneShot(dice);
