@@ -36,12 +36,12 @@ public class MG4_UIControl : MonoBehaviour
             BGM.PlayOneShot(hit);
             MG4_RoadBlockControl.hit = false;
         }
-        if (MG4_PlayerMoveControl.isJump == false && jumpMusia)
+        if (!MG4_PlayerMoveControl.isJump && jumpMusia)
         {
             BGM.PlayOneShot(jump);
             jumpMusia = false;
         }
-        if (MG4_PlayerMoveControl.isJump && jumpMusia == false)
+        if (MG4_PlayerMoveControl.isJump && !jumpMusia)
         {
             jumpMusia = true;
         }
