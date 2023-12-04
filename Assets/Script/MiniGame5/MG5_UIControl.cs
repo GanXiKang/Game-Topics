@@ -47,19 +47,21 @@ public class MG5_UIControl : MonoBehaviour
                     BGM.PlayOneShot(throwM);
                     throwMusia = false;
                 }
-                if (MG5_HookControl.isFishing == false && throwMusia == false)
+                if (!MG5_HookControl.isFishing && !throwMusia)
                 {
                     throwMusia = true;
                 }
+
                 if (MG5_HookControl.takeBack && receiveMusia)
                 {
                     BGM.PlayOneShot(receiveM);
                     receiveMusia = false;
                 }
-                if (MG5_HookControl.takeBack == false && receiveMusia == false)
+                if (!MG5_HookControl.takeBack && !receiveMusia)
                 {
                     receiveMusia = true;
                 }
+
                 if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
                 {
                     if (moveMusia)
