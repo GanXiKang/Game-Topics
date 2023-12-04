@@ -692,6 +692,7 @@ public class StoreUIControl : MonoBehaviour
         CatAnimatorControl.isHappy = true;
         buyQuantity = 1;
     }
+
     IEnumerator ChangeCamera()
     {
         BGM.PlayOneShot(close);
