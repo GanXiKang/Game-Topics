@@ -15,7 +15,7 @@ public class MG2_PlayerControl : MonoBehaviour
     {
         x = transform.position.x;
 
-        if (MG2_StartButtonControl.isStart == true)
+        if (MG2_StartButtonControl.isStart)
         {
             if (MG2_UIControl.timer <= 45)
             {
