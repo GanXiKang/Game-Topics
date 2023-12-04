@@ -7,6 +7,7 @@ public class MG4_TeachingControl : MonoBehaviour
     public GameObject teach, space1, space2;
 
     bool isTeach = true;
+
     void Update()
     {
         if (MG4_UIControl.isStart)
@@ -16,13 +17,13 @@ public class MG4_TeachingControl : MonoBehaviour
                 StartCoroutine(CloseTeach());
             }
 
-
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 teach.SetActive(false);
             }
         }
     }
+
     IEnumerator CloseTeach()
     {
         isTeach = false;
