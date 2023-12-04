@@ -15,6 +15,7 @@ public class Chest1AnimationControl : MonoBehaviour
     public int checkIsOpenNum;
 
     int a, randomCoin;
+
     void Start()
     {
         ani = GetComponent<Animation>();
@@ -26,6 +27,7 @@ public class Chest1AnimationControl : MonoBehaviour
             StartCoroutine(ChestActive());
         }
     }
+
     void Award()
     {
         a = Random.Range(1, 10);
@@ -180,6 +182,7 @@ public class Chest1AnimationControl : MonoBehaviour
                 break;
         }
     }
+
     IEnumerator ChestActive()
     {
         Award();
