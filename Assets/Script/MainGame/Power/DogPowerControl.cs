@@ -13,7 +13,6 @@ public class DogPowerControl : MonoBehaviour
     {
         bc = GetComponent<BoxCollider>();
     }
-
     void Update()
     {
         if (AnimalsPowerControl.dogUsePower)
