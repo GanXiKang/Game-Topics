@@ -9,12 +9,11 @@ public class UI_LoadingControl : MonoBehaviour
     void Start()
     {
         LoadingUI = GameObject.Find("Loading");
-        StartCoroutine(LoadingNow());
+        Invoke("LoadingNow",1f);
     }
 
-    IEnumerator LoadingNow()
+    void LoadingNow()
     {
-        yield return new WaitForSeconds(1f);
         LoadingUI.SetActive(false);
     }
 }
