@@ -9,7 +9,7 @@ public class UI_LoadingControl : MonoBehaviour
     void Start()
     {
         LoadingUI = GameObject.Find("Loading");
-        Invoke("LoadingNow",1f);
+        Invoke("LoadingNow", 1.2f);
     }
 
     void LoadingNow()
