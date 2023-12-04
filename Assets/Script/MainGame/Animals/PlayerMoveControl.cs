@@ -38,6 +38,7 @@ public class PlayerMoveControl : MonoBehaviour
             }
         }
     }
+
     void P1MovePoint()
     {
         for (int i = 1; i < p.Length; i++)
