@@ -41,6 +41,7 @@ public class MG4_AIControl : MonoBehaviour
             }
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "RoadBlock")

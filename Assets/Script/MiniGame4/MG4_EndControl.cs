@@ -23,7 +23,7 @@ public class MG4_EndControl : MonoBehaviour
                 clap = false;
                 BGM.PlayOneShot(rewards);
             }
-            if (win == false)
+            if (!win)
             {
                 camera1.SetActive(true);
             }
@@ -52,6 +52,7 @@ public class MG4_EndControl : MonoBehaviour
             StartCoroutine(BackMainGame());
         }
     }
+
     void PlayerPlayGameControl()
     {
         if (MiniGameColliderControl.p == 1)
@@ -75,6 +76,7 @@ public class MG4_EndControl : MonoBehaviour
             MiniGameColliderControl.p = 0;
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {                                           //ÅÐ”àÕl×îºóµ½
         if (other.tag == "Player")              
@@ -90,6 +92,7 @@ public class MG4_EndControl : MonoBehaviour
             BGM.PlayOneShot(end);
         }
     }
+
     IEnumerator BackMainGame()
     {
         PlayerPlayGameControl();
