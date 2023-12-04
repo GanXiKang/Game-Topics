@@ -13,7 +13,6 @@ public class MGAnimalsAnimatorControl : MonoBehaviour
     {
         ani = GetComponent<Animator>();
     }
-
     void Update()
     {
         if (isWave)

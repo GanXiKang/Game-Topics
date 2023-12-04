@@ -15,7 +15,6 @@ public class CatAnimatorControl : MonoBehaviour
     {
         ani = GetComponent<Animator>();
     }
-
     void Update()
     {
         if (isHappy)
@@ -57,6 +56,7 @@ public class CatAnimatorControl : MonoBehaviour
             ani.SetBool("Bye", false);
         }
     }
+
     IEnumerator Timing()
     {
         yield return new WaitForSeconds(0.5f);
