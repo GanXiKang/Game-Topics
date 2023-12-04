@@ -8,6 +8,7 @@ public class InstantiatePointControl : MonoBehaviour
     public GameObject[] animals = new GameObject[12];
 
     public static bool isStart;
+
     void Start()
     {
         if (isStart)
