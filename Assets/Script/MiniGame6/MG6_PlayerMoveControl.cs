@@ -29,12 +29,12 @@ public class MG6_PlayerMoveControl : MonoBehaviour
             }
             if (MG6_BalanceBarControl.gameover)
             {
-                ani.SetBool("Surf", false);
                 transform.Translate(0, -0.5f, 0);
                 transform.Rotate(0, 0, -0.5f);
             }
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "JudgmentBox")
