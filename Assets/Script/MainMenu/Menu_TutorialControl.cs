@@ -25,7 +25,6 @@ public class Menu_TutorialControl : MonoBehaviour
         Tutorial_Props.isDestory = false;
         Tutorial_AnimalsControl.isDestory = false;
     }
-
     void Update()
     {
         if (isButtonDisable)
