@@ -26,6 +26,7 @@ public class EndInsPlayerControl : MonoBehaviour
         insLosePlayer2();
         insLosePlayer3();
     }
+
     void insWinPlayer()
     {
         if (GameEndControl.whoWin == 1)
@@ -140,6 +141,7 @@ public class EndInsPlayerControl : MonoBehaviour
             }
         }
     }
+
     IEnumerator EndGameTime()
     {
         isGameSceneDestroy = true;
