@@ -45,6 +45,7 @@ public class MG3_FoxControl : MonoBehaviour
             anim.SetBool("Bye", false);
         }
     }
+
     void FalseByisGuessCup()
     {
         isWin = false;
