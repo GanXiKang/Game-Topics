@@ -5,6 +5,7 @@ using UnityEngine;
 public class DontDestroyOnLoadControl : MonoBehaviour
 {
     static DontDestroyOnLoadControl instance;
+
     void Start()
     {
         if (instance == null)
@@ -17,7 +18,6 @@ public class DontDestroyOnLoadControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     void FixedUpdate()
     {
         if (EndInsPlayerControl.isGameSceneDestroy)
