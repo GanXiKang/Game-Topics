@@ -43,6 +43,7 @@ public class Tutorial_AnimalsControl : MonoBehaviour
             isFind = false;
         }
     }
+
     public void Button_Animals(int i)
     {
         who = i;
