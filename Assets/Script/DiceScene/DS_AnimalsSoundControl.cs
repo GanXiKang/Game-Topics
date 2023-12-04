@@ -8,24 +8,12 @@ public class DS_AnimalsSoundControl : MonoBehaviour
 
     public AudioClip animalsSound;
 
-    //bool isOnce;
-
     void Start()
     {
         BGM = GetComponent<AudioSource>();
         Invoke("PlaySound", 1f);
-        //isOnce = true;
     }
 
-    //void Update()
-    //{
-    //    if (isOnce)
-    //    {
-    //        Invoke("PlaySound", 1f);
-    //        isOnce = false;
-    //    }
-        
-    //}
     void PlaySound()
     {
         BGM.PlayOneShot(animalsSound);
