@@ -70,6 +70,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
         Judgment();
         GameControl();
     }
+
     void Judgment()
     {
         switch(MG6_PlayerMoveControl.j)
@@ -171,6 +172,7 @@ public class MG6_BalanceBarControl : MonoBehaviour
             }
         }
     }
+
     IEnumerator GameOver()
     {
         if (M1)
