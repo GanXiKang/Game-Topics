@@ -5,7 +5,9 @@ using UnityEngine;
 public class UIIsMiniGameControl : MonoBehaviour
 {
     AudioSource BGM;
+
     public GameObject UI_MainGame;
+
     void Start()
     {
         BGM = GetComponent<AudioSource>();
