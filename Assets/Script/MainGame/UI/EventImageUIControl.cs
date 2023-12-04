@@ -15,7 +15,6 @@ public class EventImageUIControl : MonoBehaviour
     {
         isTimer = false;
     }
-
     void Update()
     {
         if (isTimer)
@@ -131,6 +130,7 @@ public class EventImageUIControl : MonoBehaviour
             }
         }
     }
+
     void Timing()
     {
         if (Timer > 4)
