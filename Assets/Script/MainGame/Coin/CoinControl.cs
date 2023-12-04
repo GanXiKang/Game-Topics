@@ -18,7 +18,6 @@ public class CoinControl : MonoBehaviour
         P3CoinTotal = initialCoin;
         P4CoinTotal = initialCoin;
     }
-
     void Update()
     {
         Limit();
