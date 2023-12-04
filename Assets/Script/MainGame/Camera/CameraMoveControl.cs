@@ -18,7 +18,6 @@ public class CameraMoveControl : MonoBehaviour
         isChangeCameraPoint = false;
         isCameraModeUI = false;
     }
-
     void Update()
     {
         switch (ChangeCameraControl.changeCameraNum)
@@ -56,21 +55,25 @@ public class CameraMoveControl : MonoBehaviour
                 break;
         }
     }
+
     void CameraMove()
     {
         if (Input.GetMouseButtonDown(1))
         {
-            if (DiceUIControl.isDiceUI)
+            if (!MiniGameColliderControl.isMiniGame && !GameEndControl.isEnd && !DiceUIControl.isDiceScene)
             {
-                isMove = true;
-                isCameraModeUI = true;
-                DiceUIControl.isDiceUI = false;
-            }
-            else if (isMove)
-            {
-                isMove = false;
-                isCameraModeUI = false;
-                DiceUIControl.isDiceUI = true;
+                if (DiceUIControl.isDiceUI)
+                {
+                    isMove = true;
+                    isCameraModeUI = true;
+                    DiceUIControl.isDiceUI = false;
+                }
+                else if (isMove)
+                {
+                    isMove = false;
+                    isCameraModeUI = false;
+                    DiceUIControl.isDiceUI = true;
+                }
             }
         }
 
