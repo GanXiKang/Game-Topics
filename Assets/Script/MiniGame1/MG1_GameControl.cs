@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MG1_GameControl : MonoBehaviour
 {
     Animator ani;
+    AudioSource BGM;
+
     float i, win, lose;                                   // 1 = Ότµ¶; 2 = Κ―ξ^; 3 = Ρ
 
     public static float playWhat, AIplayWhat; 
@@ -14,8 +16,6 @@ public class MG1_GameControl : MonoBehaviour
     public GameObject doublePlaySpeed;
     public GameObject[] aiScore = new GameObject[3];
     public GameObject[] playerScore = new GameObject[3];
-
-    public AudioSource BGM;
     public AudioClip button, winM, loseM, gameWin, gameLose;
 
     public void Button_Scissors()
@@ -40,6 +40,7 @@ public class MG1_GameControl : MonoBehaviour
     void Start()
     {
         ani = GetComponent<Animator>();
+        BGM = GetComponent<AudioSource>();
     }
     void Update()
     {
