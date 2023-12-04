@@ -384,6 +384,7 @@ public class EventControl : MonoBehaviour
             isStopProps = false;
         }
     }
+
     IEnumerator P1_EventHappened()
     {
         if (!AnimalsPowerControl.dragonUsePower || Menu_ChoosePlayer.whyP1 != 5)

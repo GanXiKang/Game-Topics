@@ -323,6 +323,7 @@ public class MiniGameColliderControl : MonoBehaviour
             isStopProps = false;
         }
     }
+
     IEnumerator StartMiniGame()
     {
         yield return new WaitForSeconds(1f);
