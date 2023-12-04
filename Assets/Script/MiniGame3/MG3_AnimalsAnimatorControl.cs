@@ -25,6 +25,7 @@ public class MG3_AnimalsAnimatorControl : MonoBehaviour
             Invoke("FalseByAnimator", 5f);
         }
     }
+
     void FalseByAnimator()
     {
         isWin = false;
