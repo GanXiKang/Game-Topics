@@ -132,6 +132,7 @@ public class Menu_ChoosePlayer : MonoBehaviour
         }
         else if (whoPlay == 4)
         {
+            Group[0].SetActive(true);
             Group[1].SetActive(true);
 
             if (isP1OK && isP2OK && isP3OK && isP4OK)
