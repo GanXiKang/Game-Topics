@@ -205,6 +205,7 @@ public class IsStopUIControl : MonoBehaviour
             }
         }
     }
+
     IEnumerator StopThisRound()
     {
         isStopUI--;
