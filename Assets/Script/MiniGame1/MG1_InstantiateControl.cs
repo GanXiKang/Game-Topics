@@ -8,7 +8,7 @@ public class MG1_InstantiateControl : MonoBehaviour
     public GameObject scissorsEffects, stoneEffects, clothEffects;
     public Transform playerBrand, bossBrand , playerEff, bossEff;
 
-    public GameObject[] animals = new GameObject[4];
+    public GameObject[] animals = new GameObject[12];
     public Transform playerIns;
 
     void Start()
