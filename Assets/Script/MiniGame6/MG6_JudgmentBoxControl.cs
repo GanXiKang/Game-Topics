@@ -5,14 +5,19 @@ using UnityEngine.UI;
 
 public class MG6_JudgmentBoxControl : MonoBehaviour
 {
+    AudioSource BGM;
+
+    public AudioClip point;
     public GameObject judgmentBox;
     public Image left;
     public Image right;
 
-    public AudioSource BGM;
-    public AudioClip point;
-
     public static bool musia = true;
+
+    void Start()
+    {
+        BGM = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (MG6_EndControl.back)

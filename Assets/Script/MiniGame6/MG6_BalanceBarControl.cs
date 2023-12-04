@@ -5,17 +5,22 @@ using UnityEngine.UI;
 
 public class MG6_BalanceBarControl : MonoBehaviour
 {
+    AudioSource BGM;
+
+    public AudioClip gameLose, drowing;
     public GameObject balanceBar;
     public GameObject[] gameLoseUI = new GameObject[12];
     public Image power;
-    public AudioSource BGM;
-    public AudioClip gameLose, drowing;
 
     float timer, value = 0;
     bool isJudgment, isAdd = false, M1 = true, M2 = true;
 
     public static bool gameover;
 
+    void Start()
+    {
+        BGM = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (value <= 0)

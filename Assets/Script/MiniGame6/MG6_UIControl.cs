@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class MG6_UIControl : MonoBehaviour
 {
-    public GameObject startUI, doublePlaySpeed;
-    public AudioSource BGM;
+    AudioSource BGM;
+
     public AudioClip button;
+    public GameObject startUI, doublePlaySpeed;
+
     public static bool isStart = false;
     
     public void Button_Start()
@@ -16,6 +18,10 @@ public class MG6_UIControl : MonoBehaviour
         BGM.PlayOneShot(button);
     }
 
+    void Start()
+    {
+        BGM = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (UI_StopGameControl.isDoublePlaySpeed)
