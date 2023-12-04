@@ -7,8 +7,8 @@ public class MG5_HookControl : MonoBehaviour
     SphereCollider sc;
 
     public GameObject fishingLine;
-    public static bool isFishing = false, takeBack = false;
 
+    public static bool isFishing = false, takeBack = false;
 
     float y, speed = 20;
     bool hookDown, hookUp;
@@ -50,7 +50,7 @@ public class MG5_HookControl : MonoBehaviour
     {
         if (MG5_UIControl.timer <= 45)
         {
-            if (hookDown == true && takeBack == false)
+            if (hookDown && !takeBack)
             {
                 if (y > 72)
                 {
@@ -59,7 +59,7 @@ public class MG5_HookControl : MonoBehaviour
                     fishingLine.transform.localScale += new Vector3(0, 0.065f, 0);
                 }
             }
-            if (hookUp == true && takeBack == false)
+            if (hookUp && !takeBack)
             {
                 if (y < 155)
                 {
@@ -68,7 +68,7 @@ public class MG5_HookControl : MonoBehaviour
                     fishingLine.transform.localScale -= new Vector3(0, 0.065f, 0);
                 }
             }
-            if (takeBack == true)
+            if (takeBack)
             {
                 if (y < 155)
                 {
@@ -79,6 +79,7 @@ public class MG5_HookControl : MonoBehaviour
             }
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "SmallFish")

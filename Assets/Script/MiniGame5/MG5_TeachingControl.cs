@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MG5_TeachingControl : MonoBehaviour
 {
-    public GameObject TeachGroup,teach, mouse1, mouse2, mouse3;
+    public GameObject TeachGroup, teach, mouse1, mouse2, mouse3;
 
     bool isTeach = true;
 
