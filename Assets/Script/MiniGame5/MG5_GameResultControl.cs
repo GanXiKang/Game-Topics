@@ -5,11 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MG5_GameResultControl : MonoBehaviour
 {
+    AudioSource BGM;
+
     public static bool win = false;
+
     public GameObject gameWinUI, gameLoseUI, doublePlaySpeed;
-    public AudioSource BGM;
     public AudioClip gameWin, gameLose;
 
+    void Start()
+    {
+        BGM = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (MG5_UIControl.timer >= 45)
@@ -33,6 +39,7 @@ public class MG5_GameResultControl : MonoBehaviour
 
         PlaySpeed();
     }
+
     void PlayerPlayGameControl()
     {
         if (MiniGameColliderControl.p == 1)
