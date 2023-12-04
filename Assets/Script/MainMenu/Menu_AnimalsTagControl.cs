@@ -71,10 +71,12 @@ public class Menu_AnimalsTagControl : MonoBehaviour
             }
         }
     }
+
     void Jump()
     {
         rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "P1InsPoint")
@@ -98,6 +100,7 @@ public class Menu_AnimalsTagControl : MonoBehaviour
             isJump = true;
         }
     }
+
     IEnumerator AnimatorWaveControl()
     {
         anim.SetBool("Wave", true);
