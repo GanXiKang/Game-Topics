@@ -76,6 +76,7 @@ public class GameEndControl : MonoBehaviour
             }
         }
     }
+
     IEnumerator GOEndScene()
     {
         systemTest.text = "ß[‘ò½YÊø£¡";
@@ -87,6 +88,7 @@ public class GameEndControl : MonoBehaviour
         FalseByAnimator();
         CameraMoveControl.isChangeCameraPoint = false;
     }
+
     void FalseByAnimator()
     {
         AnimatorControl.isP1Win = false;
