@@ -675,7 +675,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1993617893}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &259528896
 BoxCollider:
@@ -3345,7 +3345,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1993617893}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &973557741
 BoxCollider:
@@ -3907,6 +3907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4581132e344667a459f1bc7dd2ff0957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 8300000, guid: b3da8f6d66219914cbb5689c3e028d5a, type: 3}
+  hit: {fileID: 8300000, guid: e8732760f2faa674587117c8d38ed705, type: 3}
+  jump: {fileID: 8300000, guid: 8151984f7929f264eb0d8c9bd02170da, type: 3}
   startUI: {fileID: 2032531183}
   doublePlaySpeed: {fileID: 832607234}
   comboImage:
@@ -3920,10 +3923,6 @@ MonoBehaviour:
   - {fileID: 272562143}
   - {fileID: 916642238}
   - {fileID: 1900998331}
-  BGM: {fileID: 1198120883}
-  button: {fileID: 8300000, guid: b3da8f6d66219914cbb5689c3e028d5a, type: 3}
-  hit: {fileID: 8300000, guid: e8732760f2faa674587117c8d38ed705, type: 3}
-  jump: {fileID: 8300000, guid: 8151984f7929f264eb0d8c9bd02170da, type: 3}
 --- !u!4 &1198120881
 Transform:
   m_ObjectHideFlags: 0
@@ -4675,7 +4674,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1993617893}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1433588457
 PrefabInstance:
@@ -4990,7 +4989,6 @@ MonoBehaviour:
   - {fileID: 2227511925957479273, guid: 1fe1c4aff6ed46d479449ceb9c1d3bed, type: 3}
   - {fileID: 154081521406777155, guid: 49ad29b7078e3a041b7cde26fc6f49c9, type: 3}
   - {fileID: 5109432000697440220, guid: 6e70f184a95d1ae4d879b7fa6b9ee69f, type: 3}
-  playerIns: {fileID: 1513380761}
 --- !u!1001 &1513596255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5765,7 +5763,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1993617893}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1837701055
 GameObject:
@@ -6492,10 +6490,10 @@ Transform:
   - {fileID: 22472145}
   - {fileID: 323092375}
   - {fileID: 1392206446}
+  - {fileID: 973557740}
   - {fileID: 1829201306}
   - {fileID: 1420346799}
   - {fileID: 259528895}
-  - {fileID: 973557740}
   - {fileID: 1037229115}
   - {fileID: 802164333}
   - {fileID: 1093773176}
