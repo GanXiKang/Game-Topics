@@ -20,7 +20,6 @@ public class BombPropsControl : MonoBehaviour
         boom = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
     }
-
     void FixedUpdate()
     {
         if (r)
@@ -173,7 +172,10 @@ public class BombPropsControl : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        whoPut = 0;
+        if (other.tag == "P1" || other.tag == "P2" || other.tag == "P3" || other.tag == "P4")
+        {
+            whoPut = 0;
+        }
     }
 
     IEnumerator StopTiming()
