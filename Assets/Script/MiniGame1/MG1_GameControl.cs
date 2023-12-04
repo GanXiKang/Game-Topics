@@ -142,6 +142,7 @@ public class MG1_GameControl : MonoBehaviour
 
         PlaySpeed();
     }
+
     void ScoreBoard()
     {
         if (win == 1)
