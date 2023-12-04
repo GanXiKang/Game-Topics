@@ -57,6 +57,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
             ComboSpeed();
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Floor")
@@ -65,6 +66,7 @@ public class MG4_PlayerMoveControl : MonoBehaviour
             ani.SetBool("Hurdles", false);
         }
     }
+
     void ComboSpeed()
     {
         if (MG4_RoadBlockControl.combo < 3)
