@@ -172,86 +172,83 @@ public class RoundUIControl : MonoBehaviour
     }
     void Update()
     {
-        if (!MiniGameColliderControl.isMiniGame || !GameEndControl.isEnd)
+        switch (ChangeCameraControl.changeCameraNum)
         {
-            switch (ChangeCameraControl.changeCameraNum)
-            {
-                case 1:
-                    for (int i = 1; i <= 12; i++)
+            case 1:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP1)
                     {
-                        if (i == Menu_ChoosePlayer.whyP1)
-                        {
-                            animals[i].SetActive(true);
-                        }
-                        else
-                        {
-                            animals[i].SetActive(false);
-                        }
+                        animals[i].SetActive(true);
                     }
-                    p[1].SetActive(true);
-                    p[2].SetActive(false);
-                    p[3].SetActive(false);
-                    p[4].SetActive(false);
-                    CoinTotal.text = CoinControl.P1CoinTotal.ToString();
-                    break;
+                    else
+                    {
+                        animals[i].SetActive(false);
+                    }
+                }
+                p[1].SetActive(true);
+                p[2].SetActive(false);
+                p[3].SetActive(false);
+                p[4].SetActive(false);
+                CoinTotal.text = CoinControl.P1CoinTotal.ToString();
+                break;
 
-                case 2:
-                    for (int i = 1; i <= 12; i++)
+            case 2:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP2)
                     {
-                        if (i == Menu_ChoosePlayer.whyP2)
-                        {
-                            animals[i].SetActive(true);
-                        }
-                        else
-                        {
-                            animals[i].SetActive(false);
-                        }
+                        animals[i].SetActive(true);
                     }
-                    p[1].SetActive(false);
-                    p[2].SetActive(true);
-                    p[3].SetActive(false);
-                    p[4].SetActive(false);
-                    CoinTotal.text = CoinControl.P2CoinTotal.ToString();
-                    break;
+                    else
+                    {
+                        animals[i].SetActive(false);
+                    }
+                }
+                p[1].SetActive(false);
+                p[2].SetActive(true);
+                p[3].SetActive(false);
+                p[4].SetActive(false);
+                CoinTotal.text = CoinControl.P2CoinTotal.ToString();
+                break;
 
-                case 3:
-                    for (int i = 1; i <= 12; i++)
+            case 3:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP3)
                     {
-                        if (i == Menu_ChoosePlayer.whyP3)
-                        {
-                            animals[i].SetActive(true);
-                        }
-                        else
-                        {
-                            animals[i].SetActive(false);
-                        }
+                        animals[i].SetActive(true);
                     }
-                    p[1].SetActive(false);
-                    p[2].SetActive(false);
-                    p[3].SetActive(true);
-                    p[4].SetActive(false);
-                    CoinTotal.text = CoinControl.P3CoinTotal.ToString();
-                    break;
+                    else
+                    {
+                        animals[i].SetActive(false);
+                    }
+                }
+                p[1].SetActive(false);
+                p[2].SetActive(false);
+                p[3].SetActive(true);
+                p[4].SetActive(false);
+                CoinTotal.text = CoinControl.P3CoinTotal.ToString();
+                break;
 
-                case 4:
-                    for (int i = 1; i <= 12; i++)
+            case 4:
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i == Menu_ChoosePlayer.whyP4)
                     {
-                        if (i == Menu_ChoosePlayer.whyP4)
-                        {
-                            animals[i].SetActive(true);
-                        }
-                        else
-                        {
-                            animals[i].SetActive(false);
-                        }
+                        animals[i].SetActive(true);
                     }
-                    p[1].SetActive(false);
-                    p[2].SetActive(false);
-                    p[3].SetActive(false);
-                    p[4].SetActive(true);
-                    CoinTotal.text = CoinControl.P4CoinTotal.ToString();
-                    break;
-            }
+                    else
+                    {
+                        animals[i].SetActive(false);
+                    }
+                }
+                p[1].SetActive(false);
+                p[2].SetActive(false);
+                p[3].SetActive(false);
+                p[4].SetActive(true);
+                CoinTotal.text = CoinControl.P4CoinTotal.ToString();
+                break;
         }
     }
 }
