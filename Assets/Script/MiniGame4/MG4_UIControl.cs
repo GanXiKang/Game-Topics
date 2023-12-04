@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class MG4_UIControl : MonoBehaviour
 {
+    AudioSource BGM;
+
+    public AudioClip button, hit, jump;
     public GameObject startUI, doublePlaySpeed;
     public GameObject[] comboImage = new GameObject[10];
-    public AudioSource BGM;
-    public AudioClip button, hit, jump;
 
     public static bool isStart;
 
@@ -21,6 +22,10 @@ public class MG4_UIControl : MonoBehaviour
         BGM.PlayOneShot(button);
     }
 
+    void Start()
+    {
+        BGM = GetComponent<AudioSource>();
+    }
     void Update()
     {
         combo();
@@ -41,6 +46,7 @@ public class MG4_UIControl : MonoBehaviour
             jumpMusia = true;
         }
     }
+
     void combo()
     {
         if (MG4_RoadBlockControl.combo == 3)
