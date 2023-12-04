@@ -79,6 +79,7 @@ public class InsBombControl : MonoBehaviour
                 break;
         }
     }
+
     void TrueByIns()
     {
         isInsOnce = true;
