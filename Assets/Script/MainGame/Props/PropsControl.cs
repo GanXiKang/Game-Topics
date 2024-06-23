@@ -98,13 +98,11 @@ public class PropsControl : MonoBehaviour
                                         P1Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else 
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -123,13 +121,11 @@ public class PropsControl : MonoBehaviour
                                         P1Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else 
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -148,13 +144,11 @@ public class PropsControl : MonoBehaviour
                                         P1Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -165,7 +159,6 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "對方沒有道具可偷";
-                        systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -191,14 +184,12 @@ public class PropsControl : MonoBehaviour
                                         P2Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                         break;
                                     }
                                     else
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                 }
@@ -216,13 +207,11 @@ public class PropsControl : MonoBehaviour
                                         P2Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -241,13 +230,11 @@ public class PropsControl : MonoBehaviour
                                         P2Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -258,7 +245,6 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "對方沒有道具可偷";
-                        systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -284,13 +270,11 @@ public class PropsControl : MonoBehaviour
                                         P3Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -309,13 +293,11 @@ public class PropsControl : MonoBehaviour
                                         P3Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -334,13 +316,11 @@ public class PropsControl : MonoBehaviour
                                         P3Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[4].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -351,7 +331,6 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "對方沒有道具可偷";
-                        systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
@@ -377,13 +356,11 @@ public class PropsControl : MonoBehaviour
                                         P4Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[1].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -402,13 +379,11 @@ public class PropsControl : MonoBehaviour
                                         P4Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[2].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -427,13 +402,11 @@ public class PropsControl : MonoBehaviour
                                         P4Props[i]++;
                                         isStealProps = true;
                                         systemText.text = "偷走" + RoundUIControl.Player[3].ToString() + "的" + propsName[i].ToString();
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     else
                                     {
                                         systemText.text = "雞處於無敵狀態，偷盜失敗";
-                                        systemText.fontSize = 15;
                                         SystemTestTextControl.isTimer = true;
                                     }
                                     break;
@@ -444,7 +417,6 @@ public class PropsControl : MonoBehaviour
                     if (!isStealProps)
                     {
                         systemText.text = "對方沒有道具可偷";
-                        systemText.fontSize = 15;
                         SystemTestTextControl.isTimer = true;
                         break;
                     }
