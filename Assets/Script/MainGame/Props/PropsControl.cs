@@ -484,7 +484,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[2].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -492,7 +491,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -514,7 +512,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[3].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -522,7 +519,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -544,7 +540,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[4].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -552,7 +547,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -580,7 +574,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[1].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -588,7 +581,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -610,7 +602,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[3].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -618,7 +609,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -640,7 +630,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[4].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -648,7 +637,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -677,7 +665,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[1].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -685,7 +672,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -707,7 +693,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[2].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -715,7 +700,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -737,7 +721,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[4].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -745,7 +728,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -774,7 +756,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[1].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -782,7 +763,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -804,7 +784,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[2].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -812,7 +791,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
@@ -834,7 +812,6 @@ public class PropsControl : MonoBehaviour
                                 else
                                 {
                                     systemText.text = "和" + RoundUIControl.Player[3].ToString() + "在同一個位置上";
-                                    systemText.fontSize = 15;
                                     SystemTestTextControl.isTimer = true;
                                     Invoke("WaitTransNum", 2f);
                                 }
@@ -842,7 +819,6 @@ public class PropsControl : MonoBehaviour
                             else
                             {
                                 systemText.text = "雞處於無敵狀態，換位失敗";
-                                systemText.fontSize = 15;
                                 SystemTestTextControl.isTimer = true;
                                 Invoke("WaitTransNum", 2f);
                             }
